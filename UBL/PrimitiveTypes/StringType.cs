@@ -13,7 +13,7 @@ namespace UBL.PrimitiveTypes
     /// The string content
     /// </summary>
     [Required]
-    public string Value { get; set; }
+    public string Value { get; set; } = string.Empty;
 
     public static implicit operator string(StringType s) => s.Value;
 

@@ -14,8 +14,8 @@ namespace UBL.Serializers
     {
       return new XElement(UblNames.Cac + nameof(TenderingCriterion),
         criterion.Id?.Serialize(),
-        Element(nameof(criterion.Name), criterion.Name),
-        Elements( nameof(criterion.Description), criterion.Description ),
+        Element(nameof(criterion.Name), criterion?.Name),
+        Elements( nameof(criterion.Description), criterion?.Description ),
         criterion.TenderingCriterionPropertyGroups.Select( g => g.Serialize( nameof( TenderingCriterionPropertyGroup )))
       );
     }

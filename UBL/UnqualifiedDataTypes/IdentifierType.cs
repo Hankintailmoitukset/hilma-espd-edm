@@ -21,6 +21,11 @@ namespace UBL.UnqualifiedDataTypes
     public string? SchemeName { get; set; }
 
     /// <summary>
+    /// The id of the agency that maintains the identification scheme.
+    /// </summary>
+    public string? SchemeAgencyID { get; set; }
+
+    /// <summary>
     /// The name of the agency that maintains the identification scheme.
     /// </summary>
     public string? SchemeAgencyName { get; set; }
@@ -40,9 +45,6 @@ namespace UBL.UnqualifiedDataTypes
     /// </summary>
     public string? SchemeURI { get; set; }
 
-
-    [Required]
-    public string Value { get; set; }
 
     public IdentifierType()
     {
