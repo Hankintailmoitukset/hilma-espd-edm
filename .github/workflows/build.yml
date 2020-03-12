@@ -24,4 +24,4 @@ jobs:
     - name: Setup .NET Core SDK
       uses: actions/setup-dotnet@v1.4.0
     - name: .NET Core Build
-      run: dotnet build
+      run: dotnet build $GITHUB_WORKSPACE
