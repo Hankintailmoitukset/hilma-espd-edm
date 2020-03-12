@@ -1,6 +1,7 @@
 ﻿using System;
 using UBL.UnqualifiedDataTypes;
 using UBL.PrimitiveTypes;
+using System.ComponentModel.DataAnnotations;
 
 namespace UBL.CommonAggregateComponents
 {
