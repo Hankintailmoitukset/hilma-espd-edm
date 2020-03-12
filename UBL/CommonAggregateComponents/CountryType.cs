@@ -12,12 +12,12 @@ namespace UBL.CommonAggregateComponents
     /// </summary>
     /// <remarks>The country of the contracting body must always be specified. Compulsory use of the code list CountryCodeIdentifier (ISO 3166-1 2A:2006).</remarks>
     [Required]
-    public IdentifierType IdentificationCode { get; set; }
+    public IdentifierType? IdentificationCode { get; set; }
 
     /// <summary>
     /// The name of the country.
     /// </summary>
-    public NameType Name { get; set; }
+    public NameType? Name { get; set; }
 
   }
 }

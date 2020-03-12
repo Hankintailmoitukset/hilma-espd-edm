@@ -7,6 +7,6 @@ namespace UBL.CommonAggregateComponents
     /// <summary>
     /// The national identifier of a contracting body as it is legally registered (e.g. VAT identification).
     /// </summary>
-    public IdentifierType ID { get; set; }
+    public IdentifierType? ID { get; set; }
   }
 }

@@ -13,7 +13,7 @@ namespace UBL.CommonAggregateComponents
     /// </summary>
     /// <remarks>Mandatory. Use the official name of the contracting body.</remarks>
     [Required]
-    public NameType Name { get; set; }
+    public NameType? Name { get; set; }
 
   }
 }

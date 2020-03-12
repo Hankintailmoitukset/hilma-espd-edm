@@ -50,7 +50,7 @@ namespace UBL.CommonAggregateComponents
     /// <summary>
     /// Contact of the contracting body
     /// </summary>
-    public ContactType Contact { get; set; }
+    public ContactType? Contact { get; set; }
                  
   }
 }

@@ -5,15 +5,15 @@ namespace UBL.CommonAggregateComponents
 {
   public class TenderingCriterion
   {
-      public IdentifierType Id { get; set; }
+      public IdentifierType? Id { get; set; }
     
-      public CodeType CriterionTypeCode { get; set; }
+      public CodeType? CriterionTypeCode { get; set; }
 
-      public NameType Name { get; set; }
+      public NameType? Name { get; set; }
 
-      public TextType[] Description { get; set; }
+      public TextType[]? Description { get; set; }
 
-      public Legislation[] Legislations { get; set; }
+      public Legislation[]? Legislations { get; set; }
       
       public TenderingCriterion[] SubTenderingTenderingCriteria { get; set; }
 

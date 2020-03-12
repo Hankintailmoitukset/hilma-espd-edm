@@ -46,9 +46,6 @@ namespace UBL.UnqualifiedDataTypes
     public string? SchemeURI { get; set; }
 
 
-    [Required]
-    public string Value { get; set; }
-
     public IdentifierType()
     {
     }

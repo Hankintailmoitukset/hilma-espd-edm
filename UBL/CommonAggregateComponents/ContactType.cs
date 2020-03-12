@@ -10,21 +10,21 @@ namespace UBL.CommonAggregateComponents
     /// <summary>
     /// The name of the contact point.
     /// </summary>
-    public NameType Name { get; set; }
+    public NameType? Name { get; set; }
 
     /// <summary>
     /// A phone number for the contact point.
     /// </summary>
-    public TextType Telephone { get; set; }
+    public TextType? Telephone { get; set; }
 
     /// <summary>
     /// A fax number for the contact point.
     /// </summary>
-    public TextType Telefax { get; set; }
+    public TextType? Telefax { get; set; }
 
     /// <summary>
     /// An e-mail address for the contact point.
     /// </summary>
-    public TextType ElectronicMail { get; set; }
+    public TextType? ElectronicMail { get; set; }
   }
 }

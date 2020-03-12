@@ -7,9 +7,9 @@ namespace UBL.CommonAggregateComponents
     /// <summary>
     /// 
     /// </summary>
-    public CodeType PartyTypeCode { get; set; }
+    public CodeType? PartyTypeCode { get; set; }
 
-    public TextType PartyType { get; set; }
+    public TextType? PartyType { get; set; }
 
   }
 

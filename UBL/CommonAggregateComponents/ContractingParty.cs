@@ -19,7 +19,7 @@ namespace UBL.CommonAggregateComponents
     /// <summary>
     /// Main data placeholder structure for, in this case, the contracting body.
     /// </summary>
-    public PartyType PartyType { get; set; }
+    public PartyType? PartyType { get; set; }
 
   }
 }

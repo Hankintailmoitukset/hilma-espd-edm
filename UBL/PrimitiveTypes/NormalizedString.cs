@@ -1,11 +1,17 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 
 namespace UBL.PrimitiveTypes
 {
+  /// <summary>
+  /// Normalized one line string value that does not contain other whitespace characters than spaces.
+  /// Whitespaces are automatically converted to spaces.
+  /// </summary>
   public abstract class NormalizedString
   {
     private string _value;
 
+    [Required]
     public string Value
     {
       get => _value;
