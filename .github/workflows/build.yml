@@ -25,3 +25,7 @@ jobs:
       uses: actions/setup-dotnet@v1.4.0
     - name: .NET Core Build
       run: dotnet build $GITHUB_WORKSPACE
+    - name: .NET Core CLI 
+      uses: baruchiro/github-actions@0.0.1
+      with: 
+        key: test
