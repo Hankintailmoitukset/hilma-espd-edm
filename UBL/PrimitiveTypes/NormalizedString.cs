@@ -9,7 +9,7 @@ namespace UBL.PrimitiveTypes
   /// </summary>
   public abstract class NormalizedString
   {
-    private string _value;
+    private string _value = string.Empty;
 
     [Required]
     public string Value

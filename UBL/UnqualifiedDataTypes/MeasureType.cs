@@ -13,7 +13,7 @@ namespace UBL.UnqualifiedDataTypes
     /// </summary>
     [MaxLength(3)]
     [Required]
-    public string UnitCode { get; set; }
+    public string? UnitCode { get; set; }
 
     /// <summary>
     /// The quantity unit code list.

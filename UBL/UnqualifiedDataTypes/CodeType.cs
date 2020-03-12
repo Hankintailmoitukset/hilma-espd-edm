@@ -9,7 +9,7 @@ namespace UBL.UnqualifiedDataTypes
   /// <typeparam name="TListEnum"></typeparam>
   public class CodeType<TListEnum> : CodeType where TListEnum : struct
   {
-    private TListEnum ListValue { get; set; }
+    public TListEnum ListValue { get; set; }
 
     public override string Value
     {
