@@ -3,6 +3,30 @@ using System.ComponentModel.DataAnnotations;
 
 namespace UBL.UnqualifiedDataTypes
 {
+  /// <summary>
+  /// Typed CodeType for enums
+  /// </summary>
+  /// <typeparam name="TListEnum"></typeparam>
+  public class CodeType<TListEnum> : CodeType where TListEnum : struct
+  {
+    public TListEnum ListValue { get; set; }
+
+    public override string Value
+    {
+      get => ListValue.ToString();
+      set
+      {
+        if (Enum.TryParse(value, true, out TListEnum listValue))
+        {
+          ListValue = listValue;
+        }
+
+        throw new ArgumentOutOfRangeException($"Not valid argument for {typeof(TListEnum)}");
+      }
+    }
+
+
+  }
 
   /// <summary>
   /// A character string (letters, figures, or symbols) that for brevity and/or language
@@ -70,7 +94,7 @@ namespace UBL.UnqualifiedDataTypes
     /// <summary>
     /// The value of the code
     /// </summary>
-    public string Value { get; set; }
+    public virtual string Value { get; set; }
 
     public static implicit operator string(CodeType c) => c.Value;
 
