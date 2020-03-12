@@ -23,9 +23,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Setup .NET Core SDK
       uses: actions/setup-dotnet@v1.4.0
+      with:
+        dotnet-version: '3.1.100'
     - name: .NET Core Build
       run: dotnet build $GITHUB_WORKSPACE
-    - name: .NET Core CLI 
-      uses: baruchiro/github-actions@0.0.1
-      with: 
-        key: test
+  
