@@ -36,14 +36,14 @@ namespace Espd.Tests
                                 new TenderingCriterionPropertyGroup()
                                 {
                                   Id = "123",
-                                  Name = new [] { "Ryhmä 1." },
-                                  Description = new [] { "Foo" },
+                                  Name = new NameType[] { new NameType() { Value= "Ryhmä 1." }  },
+                                  Description = new TextType [] { "Foo" },
                                   PropertyGroupTypeCode = "C0",
                                   TenderingCriterionProperties = new []{ new TenderingCriterionProperty()
                                   {
                                     Id = "221",
-                                    Name = new [] { "Kysymys x" },
-                                    Description = new []{ "Kuvaus"},
+                                    Name = new NameType(){Value = "Kysymys x" },
+                                    Description = new TextType(){Value= "Kuvaus" },
                                     TypeCode = "F",
                                   }}
                                 }
