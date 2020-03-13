@@ -14,7 +14,6 @@ namespace UBL.CommonAggregateComponents
       /// </remarks>
       [Required]
       public IdentifierType Id { get; set; }
-      
       /// <summary>
       /// A classification code defined by the ESPD-EDM to represent the criterion in the ESPD taxonomy of criteria.
       /// </summary>
@@ -23,7 +22,6 @@ namespace UBL.CommonAggregateComponents
       /// </remarks>
       [Required]
       public CodeType CriterionTypeCode { get; set; }
-      
       /// <summary>
       /// A short and descriptive name for a criterion.
       /// </summary>
@@ -32,7 +30,6 @@ namespace UBL.CommonAggregateComponents
       /// </remarks>
       [Required]
       public NameType Name { get; set; }
-      
       /// <summary>
       /// An extended description of the criterion.
       /// </summary>
@@ -42,7 +39,6 @@ namespace UBL.CommonAggregateComponents
       /// </remarks>
       [Required]
       public TextType[] Description { get; set; }
-
       /// <summary>
       /// A weighting to provide for automatic scoring of the Criterion (normally a percentage, e.g. 0.1, 0.5)
       /// </summary>
@@ -50,7 +46,6 @@ namespace UBL.CommonAggregateComponents
       /// Rule: Used only in Self-contained ESPDs namely for ability and professional selection criteria in procedures organised in two stages.
       /// </remarks>
       public DecimalType? WeightNumeric { get; set; }
-
       /// <summary>
       /// A code to inform about the type of Evaluation, namely for transparency purposes (e.g. PASSFAIL, WEIGHTED)
       /// </summary>
@@ -58,7 +53,6 @@ namespace UBL.CommonAggregateComponents
       /// Rule: Compulsory use of the Code List “EvaluationMethodType”.
       /// </remarks>
       public CodeType? EvaluationMethodTypeCode { get; set; }
-
       /// <summary>
       /// Additional information, comments or considerations about the weighting and the evaluation method, namely for transparency purposes; e.g. '0 Points 0 IT specialists, 30 Points 1 IT specialists, 60 Points 2 IT specialists'. See section about Selection Criteria and sub-section on 'Weighting', for more details.
       /// </summary>

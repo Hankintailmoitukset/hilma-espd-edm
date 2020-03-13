@@ -15,9 +15,10 @@ namespace UBL.CommonAggregateComponents
     /// </remarks>
     [Required]
     public IdentifierType Id { get; set; }
-
+    /// <summary>
+    /// The name of the criterion property.
+    /// </summary>
     public NameType Name { get; set; }
-
     /// <summary>
     /// The text of the caption, requirement or question.
     /// </summary>
@@ -26,7 +27,6 @@ namespace UBL.CommonAggregateComponents
     /// </remarks>
     [Required]
     public TextType Description { get; set; }
-
     /// <summary>
     /// The type of property. Used to verify that structure of the property is correct.
     /// </summary>
@@ -43,7 +43,6 @@ namespace UBL.CommonAggregateComponents
     /// </remarks>
     [Required]
     public CodeType ValueDataTypeCode { get; set; }
-
     /// <summary>
     /// The unit of measure of the numeric value as a quantity or measure in the expected response from the economic operator.
     /// </summary>
@@ -51,7 +50,6 @@ namespace UBL.CommonAggregateComponents
     /// Rule: Verify that the value of cac:TypeCode is set to QUESTION and that the cac:ValueTypeCode is different to NONE.
     /// </remarks>
     public CodeType ValueUnitCode { get; set; }
-    
     /// <summary>
     /// The currency of the numeric value as an amount in the expected response from the economic operator.
     /// </summary>
@@ -59,9 +57,10 @@ namespace UBL.CommonAggregateComponents
     /// Rule: Verify that the value of cac:TypeCode is set to QUESTION and that the cac:ValueTypeCode is different to NONE.
     /// </remarks>
     public CodeType ValueCurrencyCode { get; set; }
-
+    /// <summary>
+    /// The expected amount that the responder has to provide in the criterion response.
+    /// </summary>
     public decimal ExpectedAmount { get; set; }
-
     /// <summary>
     /// The expected identifier that the economic operator has to provide in the criterion response.
     /// </summary>
@@ -69,7 +68,6 @@ namespace UBL.CommonAggregateComponents
     /// Rule: Verify that the value of cac:TypeCode is set to QUESTION and that the cac:ValueTypeCode is different to NONE.
     /// </remarks>
     public IdentifierType ExpectedID { get; set; }
-
     /// <summary>
     /// The expected code that the economic operator has to provide in the Criterion response.
     /// </summary>
@@ -77,7 +75,6 @@ namespace UBL.CommonAggregateComponents
     /// Rule: Verify that the value of cac:TypeCode is set to QUESTION and that the cac:ValueTypeCode is different to NONE.
     /// </remarks>
     public CodeType ExpectedCode { get; set; }
-    
     /// <summary>
     /// The expected value that the economic operator has to provide in the Criterion response.
     /// </summary>
@@ -85,14 +82,18 @@ namespace UBL.CommonAggregateComponents
     /// Rule: Verify that the value of cac:TypeCode is set to QUESTION and that the cac:ValueTypeCode is different to NONE.
     /// </remarks>
     public NumericType ExpectedValueNumeric { get; set; }
-
-       
+    /// <summary>
+    /// The description of the of the expected
+    /// </summary>
     public string ExpectedDescription { get; set; }
-
+    /// <summary>
+    /// The maximum amount the response must have.
+    /// </summary>
     public string MaximumAmount { get; set; }
-
+    /// <summary>
+    /// The minimum amount the response must have.
+    /// </summary>
     public string MinimumAmount { get; set; }
-
     /// <summary>
     /// The maximum value the response must have.
     /// </summary>
@@ -100,7 +101,6 @@ namespace UBL.CommonAggregateComponents
     /// Rule: Verify that the value of cac:TypeCode is set to QUESTION and that the cac:ValueTypeCode is different to NONE.
     /// </remarks>
     public NumericType MaximumValueNumeric { get; set; }
-
     /// <summary>
     /// The minimum value the response must have.
     /// </summary>
@@ -108,9 +108,10 @@ namespace UBL.CommonAggregateComponents
     /// Rule: Verify that the value of cac:TypeCode is set to QUESTION and that the cac:ValueTypeCode is different to NONE.
     /// </remarks>
     public NumericType MinimumValueNumeric { get; set; }
-
+    /// <summary>
+    /// The type of Transation that the requirement shall be translated for example certified translation
+    /// </summary>
     public string TranslationTypeCode { get; set; }
-
     /// <summary>
     /// The description of the level of the expected certification.
     /// </summary>
@@ -118,9 +119,10 @@ namespace UBL.CommonAggregateComponents
     /// Rule: Verify that the value of cac:TypeCode is set to QUESTION and that the cac:ValueTypeCode is different to NONE.
     /// </remarks>
     public TextType[] CertificationLevelDescription { get; set; }
-
+    /// <summary>
+    /// The type of Copy quality, expressed as a code.
+    /// </summary>
     public CodeType CopyQualityTypeCode { get; set; }
-
     /// <summary>
     /// The period to which this criterion property shall apply.
     /// </summary>
@@ -128,7 +130,6 @@ namespace UBL.CommonAggregateComponents
     /// Rule: The ESPD-EDM does only expect start date and end date.
     /// </remarks>
     public PeriodType[] ApplicablePeriod { get; set; }
-
     /// <summary>
     /// A pointer to one or more evidences that support the veracity of this criterion.
     /// </summary>

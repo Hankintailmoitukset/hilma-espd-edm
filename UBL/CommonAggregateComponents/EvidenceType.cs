@@ -10,8 +10,6 @@ namespace UBL.CommonAggregateComponents
         public TextType[] Description { get; set; }
         public TextType[] CandidateStatement { get; set; }
         public CodeType ConfidentialityLevelCode { get; set; }
-
-        //TODOO PartyType
         public PartyType EvidenceIssuingParty { get; set; }
         public DocumentReferenceType[] DocumentReference { get; set; }
         public LanguageType Language { get; set; }
