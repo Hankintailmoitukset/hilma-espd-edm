@@ -39,6 +39,11 @@ namespace UBL.CommonAggregateComponents
     public AddressType? PostalAddress { get; set; }
 
     /// <summary>
+    /// The primary contact for this party.
+    /// </summary>
+    public ContactType Contact { get; set; }
+
+    /// <summary>
     /// The ESPD request may contain information of identification regarding an ESPD service provider: Name, Party Identification, Endpoint ID.
     /// </summary>
     public ServiceProviderPartyType? ServiceProviderParty { get; set; }

@@ -7,57 +7,32 @@ using UBL.UnqualifiedDataTypes;
 
 namespace Espd.Tests
 {
+
+
+
   [TestClass]
   public class EspdSerializerTest
   {
     [TestMethod]
     public void TestSimpleRequest()
     {
-
-      var request = new QualificationApplicationRequest()
-      {
-        ID = "12345",
-        TenderingCriteria = new[] { new TenderingCriterion()
-                            {
-                              Id = "12323",
-                              CriterionTypeCode = "FOO",
-                              Description = new TextType[] { "Kuvaus" },
-                              Legislations = new [] { 
-                                new Legislation()
-                                {
-                                  ID = new IdentifierType("ecertis guid"),
-                                  Descriptions = new TextType[]{ "Lakijuttuja"},
-                                  Titles = new TextType[] { "Lakiperuste x." },
-                                  
-                                }
-                              },
-                              TenderingCriterionPropertyGroups = new []
-                              {
-                                new TenderingCriterionPropertyGroup()
-                                {
-                                  Id = "123",
-                                  Name = new NameType[] { new NameType() { Value= "Ryhmä 1." }  },
-                                  Description = new TextType [] { "Foo" },
-                                  PropertyGroupTypeCode = "C0",
-                                  TenderingCriterionProperties = new []{ new TenderingCriterionProperty()
-                                  {
-                                    Id = "221",
-                                    Name = new NameType(){Value = "Kysymys x" },
-                                    Description = new TextType(){Value= "Kuvaus" },
-                                    TypeCode = "F",
-                                  }}
-                                }
-                              }
-                            }
-        }
-      };
+      var request = EspdDocumentHelpper.SimpleTest;
       var result = request.Serialize();
 
+      Assert.IsNotNull(result);
+      Console.WriteLine(result);
+      Console.WriteLine( JsonConvert.SerializeObject(request, Formatting.Indented, new JsonSerializerSettings(){ NullValueHandling = NullValueHandling.Ignore, DateFormatHandling = DateFormatHandling.IsoDateFormat }));
+
+    }
+
+    [TestMethod]
+    public void TestSCAbilitiesStaffSelfContainedRequest()
+    {
+      var request = EspdDocumentHelpper.SCAbilitiesStaffSelfContainedRequest;
+      var result = request.Serialize();
 
       Assert.IsNotNull(result);
-
       Console.WriteLine(result);
-
       Console.WriteLine( JsonConvert.SerializeObject(request, Formatting.Indented, new JsonSerializerSettings(){ NullValueHandling = NullValueHandling.Ignore, DateFormatHandling = DateFormatHandling.IsoDateFormat }));
 
     }

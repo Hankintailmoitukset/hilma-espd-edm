@@ -23,7 +23,7 @@ namespace UBL.CommonAggregateComponents
     /// A code to describe the object of the project (e.g. works, supplies, services, public work concessions, service concessions, other).
     /// </summary>
     /// <remarks>Compulsory use of the Code List ProjectType.</remarks>
-    public CodeType<ProjectType>? ProcurementTypeCode { get; set; }
+    public CodeType? ProcurementTypeCode { get; set; }
 
     /// <summary>
     /// A class to classify the works, services or supplies. The Self-contained ESPD uses it to assign CPV codes to works and services.

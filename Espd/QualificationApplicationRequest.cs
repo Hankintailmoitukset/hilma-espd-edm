@@ -116,7 +116,7 @@ namespace Espd
     /// Compulsory use of the code list QualificationApplicationType. Compulsory use of attributes listID, listAgencyName and listVersionID.
     /// </remarks>
     [Required]
-    public CodeType<QualificationApplicationTypeCode>? QualificationApplicationTypeCode { get; set; }
+    public CodeType? QualificationApplicationTypeCode { get; set; }
 
     /// <summary>
     /// Free-form text to describing information about Weight Scoring Methodology.
@@ -128,7 +128,7 @@ namespace Espd
     /// A code specifying the type of the Weighting.
     /// </summary>
     /// <remarks>Compulsory use of the code list WeightingType. If this element it is not instantiated and one or more selection criteria are weighted the type defaults to NUMERIC.</remarks>
-    public CodeType<WeightingType>? WeightingTypeCode { get; set; }
+    public CodeType? WeightingTypeCode { get; set; }
 
     /// <summary>
     /// The contracting authority or contracting entity who is buying supplies, services or public works using a tendering procedure as described in the applicable directive (Directives 2014/24/EU, 2014/25/EU).
