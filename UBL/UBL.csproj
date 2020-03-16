@@ -5,9 +5,6 @@
     <Nullable>enable</Nullable>
     <AssemblyName>Hilma.UBL</AssemblyName>
     <RootNamespace>Hilma.UBL</RootNamespace>
-    <ApplicationIcon />
-    <OutputType>Exe</OutputType>
-    <StartupObject />
     <Version>0.1.0</Version>
     <Authors>Hankintailmoitukset.fi</Authors>
     <Product>Hilma UBL</Product>
@@ -20,7 +17,6 @@
 
   <ItemGroup>
     <Folder Include="CommonBasicComponents\" />
-    <Folder Include="CodeLists\" />
   </ItemGroup>
 
 </Project>
