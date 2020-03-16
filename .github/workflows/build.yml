@@ -31,4 +31,4 @@ jobs:
     - name: Create Nuget package
       run: dotnet pack --configuration Release $GITHUB_WORKSPACE
     - name: Publish the package to Azure Artifacts
-      run: dotnet nuget push '$GITHUB_WORKSPACE/bin/Release/*.nupkg'
+      run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg
