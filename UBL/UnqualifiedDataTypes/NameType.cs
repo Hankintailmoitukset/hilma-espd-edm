@@ -5,6 +5,13 @@
   /// </summary>
   public class NameType : TextType
   {
+    public NameType() : base() {
+    }
+
+    public NameType(string value) : base( value ) {
+    }
+
+    public static implicit operator NameType(string t) => new NameType(t);
     
   }
 }

@@ -2,6 +2,15 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
+    <PackageId>Hilma.Epd.EDM</PackageId>
+    <Authors>Tuomas Tolvanen</Authors>
+    <Company>Hankintailmoitukset.fi</Company>
+    <Product>Hilma ESPD EDM DataModel</Product>
+    <Version>0.1.0</Version>
+    <Description>Open data model draft for ESPD version 2.1 EDM data model implemented as .NET Standard 2.1 library. The library will offer in the future support for XML and JSON serialization / deserialization
+</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>

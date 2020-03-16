@@ -7,6 +7,54 @@ using UBL.UnqualifiedDataTypes;
 
 namespace Espd.Tests
 {
+
+  public class EspdDocumentHelper
+  {
+    public static QualificationApplicationRequest SimpleTest =>
+      new QualificationApplicationRequest()
+      {
+        ID = "12345",
+        TenderingCriteria = new[] { new TenderingCriterion()
+          {
+            Id = "12323",
+            CriterionTypeCode = "FOO",
+            Description = new TextType[] { "Kuvaus" },
+            Legislations = new [] {
+              new Legislation()
+              {
+                ID = new IdentifierType("ecertis guid"),
+                Descriptions = new TextType[]{ "Lakijuttuja"},
+                Titles = new TextType[] { "Lakiperuste x." },
+
+              }
+            },
+            TenderingCriterionPropertyGroups = new []
+            {
+              new TenderingCriterionPropertyGroup()
+              {
+                Id = "123",
+                Name = new NameType[] { "RyhmÃ¤ 1." },
+                Description = new TextType [] { "Foo" },
+                PropertyGroupTypeCode = "C0",
+                TenderingCriterionProperties = new []{ new TenderingCriterionProperty()
+                {
+                  Id = "221",
+                  Name = "Kysymys x",
+                  Description = "Kuvaus",
+                  TypeCode = "F",
+                }}
+              }
+            }
+          }
+        }
+      };
+
+    public static QualificationApplicationRequest SCAbilitiesStaffSelfContainedRequest =>
+
+      new QualificationApplicationRequest() { };
+
+  }
+
   [TestClass]
   public class EspdSerializerTest
   {
@@ -36,7 +84,7 @@ namespace Espd.Tests
                                 new TenderingCriterionPropertyGroup()
                                 {
                                   Id = "123",
-                                  Name = new NameType[] { new NameType() { Value= "Ryhmä 1." }  },
+                                  Name = new NameType[] { new NameType() { Value= "Ryhmï¿½ 1." }  },
                                   Description = new TextType [] { "Foo" },
                                   PropertyGroupTypeCode = "C0",
                                   TenderingCriterionProperties = new []{ new TenderingCriterionProperty()
