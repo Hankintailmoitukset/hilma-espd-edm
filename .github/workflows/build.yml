@@ -21,21 +21,14 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    - name: .NET Core Setup
-      uses: actions/setup-dotnet@v1.4.0
+    - uses: actions/setup-dotnet@v1.4.0
       with:
         dotnet-version: '3.1.100'
         source-url: https://pkgs.dev.azure.com/hansel-azure/Hilma/_packaging/hilma/nuget/v3/index.json
       env:
         NUGET_AUTH_TOKEN: ${{secrets.AZURE_DEVOPS_PAT}} # Note, create a secret with this name in Settings
+    - name: .NET Core Setup
     - name: Create Nuget package
       run: dotnet pack --configuration Release $GITHUB_WORKSPACE
-    - name: .NET Core Setup
-      uses: actions/setup-dotnet@v1.4.0
-      with:
-        dotnet-version: '3.1.100'
-        source-url: https://pkgs.dev.azure.com/hansel-azure/Hilma/_packaging/hilma/nuget/v3/index.json
-      env:
-        NUGET_AUTH_TOKEN: ${{secrets.AZURE_DEVOPS_PAT}} # Note, create a secret with this name in Settings
     - name: Publish the package to Azure Artifacts
-      run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg
+      run: dotnet nuget push --apiKey ${{secrets.AZURE_DEVOPS_PAT}} $GITHUB_WORKSPACE/**/*.nupkg 
