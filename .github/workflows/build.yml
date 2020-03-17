@@ -29,8 +29,10 @@ jobs:
         source-url: https://pkgs.dev.azure.com/hansel-azure/Hilma/_packaging/hilma/nuget/v3/index.json
       env:
         NUGET_AUTH_TOKEN: ${{secrets.AZURE_DEVOPS_PAT}} # Note, create a secret with this name in Settings
-    - name: use-actions
-      uses: GitTools/actions@v0.9.2
+    - name: Install GitVersion
+      uses: gittools/actions/gitversion/setup@v0.9
+      with:
+          versionSpec: '5.1.x'
     - name: Use GitVersion
       id: gitversion # step id used as reference for output values
       uses: gittools/actions/gitversion/execute@v0.9
