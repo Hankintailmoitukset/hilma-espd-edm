@@ -6,7 +6,7 @@
     <Authors>Tuomas Tolvanen</Authors>
     <Company>Hankintailmoitukset.fi</Company>
     <Product>Hilma ESPD EDM DataModel</Product>
-    <Version>0.1.1</Version>
+    <Version>0.1.2</Version>
     <Description>Open data model draft for EU ESPD version 2.1 EDM data model implemented as .NET Standard 2.1 library. The library will offer in the future support for XML and JSON serialization / deserialization
 </Description>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
