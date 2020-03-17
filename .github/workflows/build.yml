@@ -35,6 +35,11 @@ jobs:
     - name: Run Git version
       id: gitversion # step id used as reference for output values
       run: dotnet-gitversion $GITHUB_WORKSPACE
+    - run: |
+        echo "Major: ${{ steps.gitversion.outputs.major }}"
+        echo "Minor: ${{ steps.gitversion.outputs.minor }}"
+        echo "Patch: ${{ steps.gitversion.outputs.patch }}"
+      name: Output
     - name: Create Nuget package
       run: dotnet pack --configuration Release -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersion }} $GITHUB_WORKSPACE 
     - name: Publish the package to Azure Artifacts
