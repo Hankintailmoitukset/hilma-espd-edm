@@ -3,6 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
+    <AssemblyName>Hilma.UBL</AssemblyName>
+    <RootNamespace>Hilma.UBL</RootNamespace>
+    <Version>0.1.0</Version>
+    <Authors>Hankintailmoitukset.fi</Authors>
+    <Product>Hilma UBL</Product>
+    <Description>Open project for EU procurements related UBL data model</Description>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,7 +17,6 @@
 
   <ItemGroup>
     <Folder Include="CommonBasicComponents\" />
-    <Folder Include="CodeLists\" />
   </ItemGroup>
 
 </Project>

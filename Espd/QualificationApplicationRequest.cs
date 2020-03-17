@@ -1,5 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using Hilma.UBL.CodeLists;
+using UBL;
 using UBL.CommonAggregateComponents;
 using UBL.CommonExtensionComponents;
 using UBL.UnqualifiedDataTypes;

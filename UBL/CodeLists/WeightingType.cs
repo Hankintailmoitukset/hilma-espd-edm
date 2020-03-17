@@ -1,4 +1,4 @@
-﻿namespace Espd
+﻿namespace Hilma.UBL.CodeLists
 {
   public enum WeightingType
   {
