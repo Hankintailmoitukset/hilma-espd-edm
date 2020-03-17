@@ -8,7 +8,6 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <summary>
     /// An identifier to refer to the legislation.
     /// </summary>
-    [Required]
     public IdentifierType ID { get; set; }
 
     /// <summary>
