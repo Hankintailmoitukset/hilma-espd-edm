@@ -9,7 +9,6 @@ namespace Espd.Tests
 {
 
 
-
   [TestClass]
   public class EspdSerializerTest
   {
