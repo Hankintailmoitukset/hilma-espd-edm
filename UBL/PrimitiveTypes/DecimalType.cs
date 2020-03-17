@@ -1,4 +1,4 @@
-﻿namespace UBL.PrimitiveTypes
+﻿namespace Hilma.UBL.PrimitiveTypes
 {
   public abstract class DecimalType
   {

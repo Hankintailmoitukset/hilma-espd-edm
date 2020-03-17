@@ -1,6 +1,6 @@
-﻿using UBL.PrimitiveTypes;
+﻿using Hilma.UBL.PrimitiveTypes;
 
-namespace UBL.UnqualifiedDataTypes
+namespace Hilma.UBL.UnqualifiedDataTypes
 {
   /// <summary>
   /// A character string (i.e. a finite set of characters) generally in the form of words of a language.

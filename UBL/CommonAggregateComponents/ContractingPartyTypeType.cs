@@ -1,15 +1,15 @@
-﻿using UBL.UnqualifiedDataTypes;
+﻿using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace UBL.CommonAggregateComponents
+namespace Hilma.UBL.CommonAggregateComponents
 {
   public class ContractingPartyTypeType
   {
     /// <summary>
     /// 
     /// </summary>
-    public CodeType? PartyTypeCode { get; set; }
+    public CodeType PartyTypeCode { get; set; }
 
-    public TextType? PartyType { get; set; }
+    public TextType PartyType { get; set; }
 
   }
 

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using UBL.UnqualifiedDataTypes;
+using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace UBL.CommonAggregateComponents
+namespace Hilma.UBL.CommonAggregateComponents
 {
   /// <summary>
   /// The name of the contracting body as it is registered.
@@ -13,7 +13,7 @@ namespace UBL.CommonAggregateComponents
     /// </summary>
     /// <remarks>Mandatory. Use the official name of the contracting body.</remarks>
     [Required]
-    public NameType? Name { get; set; }
+    public NameType Name { get; set; }
 
   }
 }

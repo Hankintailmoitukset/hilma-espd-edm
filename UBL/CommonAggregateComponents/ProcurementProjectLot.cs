@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using UBL.UnqualifiedDataTypes;
+using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace UBL.CommonAggregateComponents
+namespace Hilma.UBL.CommonAggregateComponents
 {
   public class ProcurementProjectLot
   {
@@ -14,6 +14,6 @@ namespace UBL.CommonAggregateComponents
     /// As for the Regulated version,
     /// if only one Lot is specified its ID has to be set to '0' thus indicating that the procurement procedure is not divided into Lots.</remarks>
     [Required]
-    public IdentifierType? ID { get; set; }
+    public IdentifierType ID { get; set; }
   }
 }

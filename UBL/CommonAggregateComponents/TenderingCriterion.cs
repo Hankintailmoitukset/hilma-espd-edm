@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using UBL.UnqualifiedDataTypes;
-using UBL.PrimitiveTypes;
+using Hilma.UBL.PrimitiveTypes;
+using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace UBL.CommonAggregateComponents
+namespace Hilma.UBL.CommonAggregateComponents
 {
   public class TenderingCriterion
   {
@@ -45,21 +45,21 @@ namespace UBL.CommonAggregateComponents
       /// <remarks>
       /// Rule: Used only in Self-contained ESPDs namely for ability and professional selection criteria in procedures organised in two stages.
       /// </remarks>
-      public DecimalType? WeightNumeric { get; set; }
+      public DecimalType WeightNumeric { get; set; }
       /// <summary>
       /// A code to inform about the type of Evaluation, namely for transparency purposes (e.g. PASSFAIL, WEIGHTED)
       /// </summary>
       /// <remarks>
       /// Rule: Compulsory use of the Code List “EvaluationMethodType”.
       /// </remarks>
-      public CodeType? EvaluationMethodTypeCode { get; set; }
+      public CodeType EvaluationMethodTypeCode { get; set; }
       /// <summary>
       /// Additional information, comments or considerations about the weighting and the evaluation method, namely for transparency purposes; e.g. '0 Points 0 IT specialists, 30 Points 1 IT specialists, 60 Points 2 IT specialists'. See section about Selection Criteria and sub-section on 'Weighting', for more details.
       /// </summary>
       /// <remarks>
       /// Rule: Used only in Self-contained ESPDs namely for ability and professional selection criteria in procedures organised in two stages.
       /// </remarks>
-      public TextType? WeightingConsiderationDescription { get; set; }
+      public TextType WeightingConsiderationDescription { get; set; }
 
       /// <summary>
       /// One or more descendant criteria used namely to define a national exclusion criterion that specialises a more generic criterion like a EU exclusion criterion defined in the Directive.

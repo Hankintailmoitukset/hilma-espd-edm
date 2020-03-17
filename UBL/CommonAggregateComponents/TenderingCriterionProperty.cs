@@ -1,9 +1,7 @@
-﻿using System;
-using UBL.UnqualifiedDataTypes;
-using UBL.PrimitiveTypes;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace UBL.CommonAggregateComponents
+namespace Hilma.UBL.CommonAggregateComponents
 {
     public class TenderingCriterionProperty
   {
@@ -60,7 +58,7 @@ namespace UBL.CommonAggregateComponents
     /// <summary>
     /// The expected amount that the responder has to provide in the criterion response.
     /// </summary>
-    public decimal ExpectedAmount { get; set; }
+    public decimal? ExpectedAmount { get; set; }
     /// <summary>
     /// The expected identifier that the economic operator has to provide in the criterion response.
     /// </summary>
@@ -109,7 +107,7 @@ namespace UBL.CommonAggregateComponents
     /// </remarks>
     public NumericType MinimumValueNumeric { get; set; }
     /// <summary>
-    /// The type of Transation that the requirement shall be translated for example certified translation
+    /// The type of Translation that the requirement shall be translated for example certified translation
     /// </summary>
     public string TranslationTypeCode { get; set; }
     /// <summary>

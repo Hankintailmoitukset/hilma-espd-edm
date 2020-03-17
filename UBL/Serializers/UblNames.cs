@@ -1,6 +1,6 @@
 ﻿using System.Xml.Linq;
 
-namespace UBL.Serializers
+namespace Hilma.UBL.Serializers
 {
   public static class UblNames
   {

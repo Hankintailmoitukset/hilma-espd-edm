@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using UBL.PrimitiveTypes;
+using Hilma.UBL.PrimitiveTypes;
 
-namespace UBL.UnqualifiedDataTypes
+namespace Hilma.UBL.UnqualifiedDataTypes
 {
   /// <summary>
   /// A number of monetary units specified using a given unit of currency.
@@ -12,17 +12,17 @@ namespace UBL.UnqualifiedDataTypes
     /// The unit of the quantity
     /// </summary>
     [MaxLength(3)]
-    public string? UnitCode { get; set; }
+    public string UnitCode { get; set; }
 
     /// <summary>
     /// The quantity unit code list.
     /// </summary>
-    public string? UnitCodeListID { get; set; }
+    public string UnitCodeListID { get; set; }
 
     /// <summary>
     /// The name of the agency which maintains the quantity unit code list.
     /// </summary>
-    public string? UnitCodeListAgencyName { get; set; }
+    public string UnitCodeListAgencyName { get; set; }
     
     public QuantityType()
     {

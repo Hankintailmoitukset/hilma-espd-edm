@@ -1,6 +1,6 @@
-﻿using UBL.UnqualifiedDataTypes;
+﻿using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace UBL.QualifiedDataType
+namespace Hilma.UBL.QualifiedDataType
 {
   public class CountryIdentificationCodeType : CodeType
   {

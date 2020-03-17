@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using UBL.PrimitiveTypes;
+using Hilma.UBL.PrimitiveTypes;
 
-namespace UBL.UnqualifiedDataTypes
+namespace Hilma.UBL.UnqualifiedDataTypes
 {
   /// <summary>
   /// A number of monetary units specified using a given unit of currency.
@@ -13,12 +13,12 @@ namespace UBL.UnqualifiedDataTypes
     /// </summary>
     /// <remarks>Reference UNECE Rec 9, using 3-letter alphabetic codes.</remarks>
     [MaxLength(3)]
-    public string? CurrencyID { get; set; }
+    public string CurrencyID { get; set; }
 
     /// <summary>
     /// The VersionID of the UN/ECE Rec9 code list.
     /// </summary>
-    public string? CurrencyCodeListVersionID { get; set; }
+    public string CurrencyCodeListVersionID { get; set; }
 
     public AmountType()
     {

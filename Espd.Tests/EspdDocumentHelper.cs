@@ -1,5 +1,5 @@
-﻿using UBL.CommonAggregateComponents;
-using UBL.UnqualifiedDataTypes;
+﻿using Hilma.UBL.CommonAggregateComponents;
+using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Espd.Tests
 {

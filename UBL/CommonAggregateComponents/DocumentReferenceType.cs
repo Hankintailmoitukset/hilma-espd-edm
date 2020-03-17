@@ -1,6 +1,6 @@
-﻿using UBL.UnqualifiedDataTypes;
+﻿using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace UBL.CommonAggregateComponents
+namespace Hilma.UBL.CommonAggregateComponents
 {
     public class DocumentReferenceType
     {

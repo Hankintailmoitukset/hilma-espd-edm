@@ -2,8 +2,6 @@ using System;
 using Espd.Serializers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
-using UBL.CommonAggregateComponents;
-using UBL.UnqualifiedDataTypes;
 
 namespace Espd.Tests
 {

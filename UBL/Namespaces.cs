@@ -1,6 +1,6 @@
 ﻿using System.Xml.Linq;
 
-namespace UBL
+namespace Hilma.UBL
 {
   public static class Namespaces
   {

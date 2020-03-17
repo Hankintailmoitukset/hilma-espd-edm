@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace UBL.UnqualifiedDataTypes
+namespace Hilma.UBL.UnqualifiedDataTypes
 {
   /// <summary>
   /// Typed CodeType for enums
@@ -38,49 +38,49 @@ namespace UBL.UnqualifiedDataTypes
     /// <summary>
     /// The identification of a list of codes.
     /// </summary>
-    public string? ListID { get; set; }
+    public string ListID { get; set; }
 
     /// <summary>
     /// The name of a list of codes.
     /// </summary>
-    public string? ListName { get; set; }
+    public string ListName { get; set; }
     /// <summary>
     /// An agency that maintains one or more lists of codes.
     /// </summary>
     /// <remarks>Defaults to the UN/EDIFACT data element 3055 code list.</remarks>
-    public string? ListAgencyID { get; set; }
+    public string ListAgencyID { get; set; }
 
     /// <summary>
     /// The name of the agency that maintains the list of codes.
     /// </summary>
-    public string? ListAgencyName { get; set; }
+    public string ListAgencyName { get; set; }
 
     /// <summary>
     /// The version of the list of codes.
     /// </summary>
-    public string? ListVersionID { get; set; }
+    public string ListVersionID { get; set; }
 
     /// <summary>
     /// 
     /// </summary>
-    public Uri? ListURI { get; set; }
+    public Uri ListURI { get; set; }
 
     /// <summary>
     /// 
     /// </summary>
-    public Uri? ListSchemeURI { get; set; }
+    public Uri ListSchemeURI { get; set; }
 
     /// <summary>
     /// The textual equivalent of the code content component.
     /// </summary>
-    public string? Name { get; set; }
+    public string Name { get; set; }
 
 
     /// <summary>
     /// The identifier of the language used in the code name.
     /// </summary>
     [RegularExpression("([a-zA-Z]{2}|[iI]-[a-zA-Z]+|[xX]-[a-zA-Z]{1,8})(-[a-zA-Z]{1,8})*")]
-    public string? LanguageID { get; set; }
+    public string LanguageID { get; set; }
 
     public CodeType()
     {

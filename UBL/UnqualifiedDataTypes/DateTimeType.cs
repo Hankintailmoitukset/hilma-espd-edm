@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UBL.UnqualifiedDataTypes
+namespace Hilma.UBL.UnqualifiedDataTypes
 {
   /// <summary>
   /// A particular point in the progression of time, together with relevant supplementary information.

@@ -1,7 +1,7 @@
 ﻿using System.Xml.Linq;
-using UBL.UnqualifiedDataTypes;
+using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace UBL.Serializers
+namespace Hilma.UBL.Serializers
 {
   public static class CommonBasicComponentsXmlSerializerExtensions
   {

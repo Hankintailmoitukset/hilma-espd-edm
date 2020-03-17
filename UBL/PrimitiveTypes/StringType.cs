@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace UBL.PrimitiveTypes
+namespace Hilma.UBL.PrimitiveTypes
 {
   public abstract class StringType
   {

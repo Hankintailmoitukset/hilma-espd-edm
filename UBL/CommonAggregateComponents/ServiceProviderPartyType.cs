@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using UBL.UnqualifiedDataTypes;
+using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace UBL.CommonAggregateComponents
+namespace Hilma.UBL.CommonAggregateComponents
 {
   /// <summary>
   /// Service providers are officially recognised organisations that can supply ESPD Request documents (on behalf of the contracting body) with pre-filled information about the contracting body and additional information (e.g. liability statements, see tbr070-012)
@@ -10,22 +10,22 @@ namespace UBL.CommonAggregateComponents
   /// </summary>
   public class ServiceProviderPartyType
   {
-    public IdentifierType? ID { get; set; }
+    public IdentifierType ID { get; set; }
 
     /// <summary>
     /// Optional
     /// </summary>
-    public CodeType? ServiceProviderTypeCode { get; set; }
+    public CodeType ServiceProviderTypeCode { get; set; }
 
     /// <summary>
     /// Optional
     /// </summary>
-    public TextType[]? ServiceType { get; set; }
+    public TextType[] ServiceType { get; set; }
 
     /// <summary>
     /// Main information about the service provider.
     /// </summary>
     [Required]
-    public PartyType? Party { get; set; }
+    public PartyType Party { get; set; }
   }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UBL.UnqualifiedDataTypes
+namespace Hilma.UBL.UnqualifiedDataTypes
 {
   /// <summary>
   /// One calendar day according the Gregorian calendar.

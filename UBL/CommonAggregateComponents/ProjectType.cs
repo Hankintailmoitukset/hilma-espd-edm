@@ -1,4 +1,4 @@
-﻿namespace UBL.CommonAggregateComponents
+﻿namespace Hilma.UBL.CommonAggregateComponents
 {
   public enum ProjectType
   {

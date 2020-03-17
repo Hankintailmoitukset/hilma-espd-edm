@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using System.Xml.Linq;
-using UBL.Serializers;
+using Hilma.UBL.Serializers;
 
 namespace Espd.Serializers
 {

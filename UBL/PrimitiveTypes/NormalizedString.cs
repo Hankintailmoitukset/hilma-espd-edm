@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 
-namespace UBL.PrimitiveTypes
+namespace Hilma.UBL.PrimitiveTypes
 {
   /// <summary>
   /// Normalized one line string value that does not contain other whitespace characters than spaces.

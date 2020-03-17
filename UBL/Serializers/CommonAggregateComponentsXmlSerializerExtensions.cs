@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
-using UBL.CommonAggregateComponents;
-using UBL.PrimitiveTypes;
+using Hilma.UBL.CommonAggregateComponents;
+using Hilma.UBL.PrimitiveTypes;
 
-namespace UBL.Serializers
+namespace Hilma.UBL.Serializers
 {
   public static class CommonAggregateComponentsXmlSerializerExtensions
 
