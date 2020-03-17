@@ -15,7 +15,7 @@ namespace Espd.Tests
     [TestMethod]
     public void TestSimpleRequest()
     {
-      var request = EspdDocumentHelpper.SimpleTest;
+      var request = EspdDocumentHelper.SimpleTest;
       var result = request.Serialize();
 
       Assert.IsNotNull(result);
@@ -27,7 +27,7 @@ namespace Espd.Tests
     [TestMethod]
     public void TestSCAbilitiesStaffSelfContainedRequest()
     {
-      var request = EspdDocumentHelpper.SCAbilitiesStaffSelfContainedRequest;
+      var request = EspdDocumentHelper.SCAbilitiesStaffSelfContainedRequest;
       var result = request.Serialize();
 
       Assert.IsNotNull(result);

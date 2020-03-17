@@ -3,7 +3,7 @@ using UBL.UnqualifiedDataTypes;
 
 namespace Espd.Tests
 {
-    public class EspdDocumentHelpper
+    public class EspdDocumentHelper
     {
         public static QualificationApplicationRequest SCAbilitiesStaffSelfContainedRequest =>
             new QualificationApplicationRequest()
@@ -279,8 +279,6 @@ namespace Espd.Tests
                     },
 
                 },
-
-
             };
 
         public static QualificationApplicationRequest SimpleTest =>
