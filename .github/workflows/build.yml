@@ -59,6 +59,6 @@ jobs:
         node-version: 10.0.0
 
     - name: Publish npm to Hilma Azure Artifacts feed
-      uses: pascalgn/npm-publish-action@1.1.
+      uses: pascalgn/npm-publish-action@51fdb4531e99aac1873764ef7271af448dc42ab4
       env: 
         NPM_AUTH_TOKEN: ${{ secrets.AZURE_DEVOPS_PAT }}
