@@ -55,6 +55,6 @@ jobs:
     - name: NPM Publish
       uses: JS-DevTools/npm-publish@v1
       with:
-        package: $GITHUB_WORKSPACE/Espd/package.json
+        package: ./Espd/package.json
         registry: https://pkgs.dev.azure.com/hansel-azure/Hilma/_packaging/hilma/npm/registry/
         token: ${{ secrets.AZURE_DEVOPS_PAT }}
