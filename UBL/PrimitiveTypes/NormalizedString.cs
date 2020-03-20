@@ -7,7 +7,7 @@ namespace Hilma.UBL.PrimitiveTypes
   /// Normalized one line string value that does not contain other whitespace characters than spaces.
   /// Whitespaces are automatically converted to spaces.
   /// </summary>
-  public abstract class NormalizedString
+  public class NormalizedString
   {
     private string _value = string.Empty;
 
@@ -18,10 +18,10 @@ namespace Hilma.UBL.PrimitiveTypes
       set => _value = Regex.Replace(value, @"\s+", " ");
     }
 
-    protected NormalizedString()
+    public NormalizedString()
     {
     }
-    protected NormalizedString(string value)
+    public NormalizedString(string value)
     {
       _value = value;
     }

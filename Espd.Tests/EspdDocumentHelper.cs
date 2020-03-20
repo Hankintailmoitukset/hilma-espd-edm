@@ -21,14 +21,14 @@ namespace Espd.Tests
                 VersionID = new IdentifierType() { Value= "2018.01.01" },
                 ProcedureCode = new CodeType() { Value= "OPEN",ListID= "ProcedureType",ListAgencyID= "EU-COM-OP" },
                 QualificationApplicationTypeCode = new CodeType() {Value= "SELFCONTAINED" },
-                WeightScoringMethodologyNote = new TextType[] { new TextType() { Value = "__WeightingScoringMethodologyNote" } },
+                WeightScoringMethodologyNote = new[] { new TextType() { Value = "__WeightingScoringMethodologyNote" } },
                 WeightingTypeCode = new CodeType() {Value = "PERCENTAGE" },
                 ContractingParty = new ContractingParty()
                 {
                     PartyType = new PartyType()
                     {
                         WebsiteURI = "www.__Procurer.com",
-                        PartyIdentification = new PartyIdentificationType[]
+                        PartyIdentification = new[]
                         {
                             new PartyIdentificationType() { ID = "GR153301872" }
                         },
@@ -74,7 +74,7 @@ namespace Espd.Tests
                         ListID = "ProjectType",
                         ListVersionID = "listVersionID"
                     },
-                    MainCommodityClassifications = new CommodityClassificationType[]
+                    MainCommodityClassifications = new[]
                     {
                         new CommodityClassificationType()
                         {
@@ -82,7 +82,7 @@ namespace Espd.Tests
                         }
                     }
                 },
-                ProcurementProjectLots = new ProcurementProjectLot[] 
+                ProcurementProjectLots = new[] 
                 {
                     new ProcurementProjectLot()
                     {
@@ -97,31 +97,31 @@ namespace Espd.Tests
                         ID = "Lot3"
                     }
                 },
-                TenderingCriteria = new TenderingCriterion[]
+                TenderingCriteria = new[]
                 {
                     new TenderingCriterion()
                     {
                         Id = "6346959b-e097-4ea1-89cd-d1b4c131ea4d",
                         CriterionTypeCode = "CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.MANAGERIAL_STAFF",
-                        Name = new NameType() { Value = "Number of managerial staff" },
-                        Description = new TextType[] { new TextType() { Value = "The economic operator’s number of managerial staff for the last three years were as follows:" } },
-                        Legislations = new Legislation[]
+                        Name =  "Number of managerial staff",
+                        Description = new TextType[] { "The economic operator’s number of managerial staff for the last three years were as follows:" },
+                        Legislations = new[]
                         {
                             new Legislation(){
-                                Titles = new TextType[] { new TextType() { Value = "Public Procurement Directive 2014/24/EU" } },
-                                Descriptions = new TextType[] { new TextType() { Value = "Directive 2014/24/EU of the European Parliament and of the Council of 26 February 2014 on public procurement and repealing Directive 2004/18/EC" } },
-                                JurisdictionLevels = new TextType[] { new TextType() { Value = "eu" } },
-                                Articles = new TextType[] { new TextType() { Value = "Article 58(4)" } },
-                                URIs = new IdentifierType[] { new IdentifierType() { Value = "http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2014.094.01.0065.01.ENG" } }
+                                Titles = new[] { new TextType() { Value = "Public Procurement Directive 2014/24/EU" } },
+                                Descriptions = new[] { new TextType() { Value = "Directive 2014/24/EU of the European Parliament and of the Council of 26 February 2014 on public procurement and repealing Directive 2004/18/EC" } },
+                                JurisdictionLevels = new[] { new TextType() { Value = "eu" } },
+                                Articles = new[] { new TextType() { Value = "Article 58(4)" } },
+                                URIs = new[] { new IdentifierType() { Value = "http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2014.094.01.0065.01.ENG" } }
                             }
                         },
-                        TenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                        TenderingCriterionPropertyGroups = new[]
                         {
                             new TenderingCriterionPropertyGroup()
                             {
                                 Id = "7f7949a8-dbe6-496c-a9f6-6f05b8648bad",
                                 PropertyGroupTypeCode = "ON*",
-                                TenderingCriterionProperties = new TenderingCriterionProperty[]
+                                TenderingCriterionProperties = new[]
                                 {
                                     new TenderingCriterionProperty()
                                     {
@@ -140,13 +140,13 @@ namespace Espd.Tests
                                         ExpectedDescription = "Provide a sufficient description of the manageurial team."
                                     },
                                 },
-                                SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                                SubsidiaryTenderingCriterionPropertyGroups = new[]
                                 {
                                     new TenderingCriterionPropertyGroup()
                                     {
                                         Id = "96defecc-7d32-4957-82e9-aad5f3c5b736",
                                         PropertyGroupTypeCode = "ON*",
-                                        TenderingCriterionProperties = new TenderingCriterionProperty[] {
+                                        TenderingCriterionProperties = new[] {
                                             new TenderingCriterionProperty()
                                             {
                                                 Id = "bd677a81-a394-44de-b7d2-8bf3be5991d8",
@@ -167,7 +167,7 @@ namespace Espd.Tests
                                     {
                                         Id = "7458d42a-e581-4640-9283-34ceb3ad4345",
                                         PropertyGroupTypeCode = "ON*",
-                                        TenderingCriterionProperties = new TenderingCriterionProperty[] {
+                                        TenderingCriterionProperties = new[] {
                                             new TenderingCriterionProperty()
                                             {
                                                 Id = "e4ba8c07-41c0-4caa-8f3f-ced8a264e0d8",
@@ -176,13 +176,13 @@ namespace Espd.Tests
                                                 ValueDataTypeCode = "INDICATOR"
                                             }
                                         },
-                                        SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                                        SubsidiaryTenderingCriterionPropertyGroups = new[]
                                         {
                                             new TenderingCriterionPropertyGroup()
                                             {
                                                 Id = "41dd2e9b-1bfd-44c7-93ee-56bd74a4334b",
                                                 PropertyGroupTypeCode = "ONTRUE",
-                                                TenderingCriterionProperties = new TenderingCriterionProperty[] {
+                                                TenderingCriterionProperties = new[] {
                                                     new TenderingCriterionProperty()
                                                     {
                                                         Id = "824db12c-9a09-49ad-8180-851190077ad7",
@@ -198,7 +198,7 @@ namespace Espd.Tests
                                     {
                                         Id = "96defecc-7d32-4957-82e9-aad5f3c5b736",
                                         PropertyGroupTypeCode = "ON*",
-                                        TenderingCriterionProperties = new TenderingCriterionProperty[] {
+                                        TenderingCriterionProperties = new[] {
                                             new TenderingCriterionProperty()
                                             {
                                                 Id = "0dcb85d0-9c7a-4dc3-b966-48dd8d00a4e4",
@@ -220,7 +220,7 @@ namespace Espd.Tests
                                     {
                                         Id = "96defecc-7d32-4957-82e9-aad5f3c5b736",
                                         PropertyGroupTypeCode = "ON*",
-                                        TenderingCriterionProperties = new TenderingCriterionProperty[] {
+                                        TenderingCriterionProperties = new[] {
                                             new TenderingCriterionProperty()
                                             {
                                                 Id = "783bb2c3-b354-45e4-a75e-0547393ce05a",
@@ -242,7 +242,7 @@ namespace Espd.Tests
                                     {
                                         Id = "7458d42a-e581-4640-9283-34ceb3ad4345",
                                         PropertyGroupTypeCode = "ON*",
-                                        TenderingCriterionProperties = new TenderingCriterionProperty[] {
+                                        TenderingCriterionProperties = new[] {
                                             new TenderingCriterionProperty()
                                             {
                                                 Id = "9c2b9ccd-02a4-4eca-b006-f699a949fb9b",
@@ -252,12 +252,12 @@ namespace Espd.Tests
                                             }
 
                                         },
-                                        SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[] {
+                                        SubsidiaryTenderingCriterionPropertyGroups = new[] {
                                             new TenderingCriterionPropertyGroup()
                                             {
                                                 Id = "41dd2e9b-1bfd-44c7-93ee-56bd74a4334b",
                                                 PropertyGroupTypeCode = "ONTRUE",
-                                                TenderingCriterionProperties = new TenderingCriterionProperty[]
+                                                TenderingCriterionProperties = new[]
                                                 {
                                                     new TenderingCriterionProperty()
                                                     {
@@ -306,7 +306,7 @@ namespace Espd.Tests
                              new TenderingCriterionPropertyGroup()
                              {
                                  Id = "123",
-                                 Name = new NameType[] { new NameType() { Value= "Ryhmä 1." }  },
+                                 Name = new[] { new NameType() { Value= "Ryhmä 1." }  },
                                  Description = new TextType [] { "Foo" },
                                  PropertyGroupTypeCode = "C0",
                                  TenderingCriterionProperties = new []{ new TenderingCriterionProperty()

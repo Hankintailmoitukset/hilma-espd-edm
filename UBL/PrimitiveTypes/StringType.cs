@@ -2,9 +2,9 @@
 
 namespace Hilma.UBL.PrimitiveTypes
 {
-  public abstract class StringType
+  public  class StringType
   {
-    protected StringType()
+    public StringType()
     {
     }
 

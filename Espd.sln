@@ -5,9 +5,15 @@ VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Espd", "Espd\Espd.csproj", "{EFC2A666-FAB5-4669-9D25-5360FB51C393}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UBL", "UBL\UBL.csproj", "{8F84CEC0-E966-4FD5-B48C-E9B17D5632B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UBL", "UBL\UBL.csproj", "{8F84CEC0-E966-4FD5-B48C-E9B17D5632B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Espd.Tests", "Espd.Tests\Espd.Tests.csproj", "{A29F06E1-DCF4-4CDB-A5A8-216BC7E5BAD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Espd.Tests", "Espd.Tests\Espd.Tests.csproj", "{A29F06E1-DCF4-4CDB-A5A8-216BC7E5BAD2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1D9E51DD-FDEB-4A7A-8229-1F5D9AAB48B5}"
+	ProjectSection(SolutionItems) = preProject
+		Espd\package.json = Espd\package.json
+		Espd\tsconfig.json = Espd\tsconfig.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

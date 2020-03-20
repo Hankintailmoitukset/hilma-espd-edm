@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
+    <PackageReference Include="TypeGen" Version="2.4.9" />
   </ItemGroup>
 
   <ItemGroup>
