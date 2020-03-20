@@ -41,12 +41,9 @@ jobs:
     - name: Setup TypeGen 
       run: dotnet tool install --global TypeGen.DotNetCli --version 2.4.7
     
-    - name: Dotnet build 
-      run: dotnet build  --configuration Release $GITHUB_WORKSPACE        
-    
-    - name: Dotnet test
-      run: dotnet test --no-build $GITHUB_WORKSPACE        
-    
+    - name: Dotnet build and test
+      run: dotnet test --configuration Release $GITHUB_WORKSPACE        
+  
     - name: Create Nuget package
       run: dotnet pack --no-build --configuration Release -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersion }} $GITHUB_WORKSPACE     
     
