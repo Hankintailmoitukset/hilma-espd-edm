@@ -49,8 +49,7 @@ jobs:
     
     - name: Publish the package to Hilma Azure Artifacts feed
       run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg -k ${{secrets.AZURE_DEVOPS_PAT}}
-   
-    - name: Publish npm to Hilma Azure Artifacts feed
-      uses: pascalgn/npm-publish-action@51fdb4531e99aac1873764ef7271af448dc42ab4
-      env: 
-        NPM_AUTH_TOKEN: ${{ secrets.AZURE_DEVOPS_PAT }}
+    - name: NPM Publish
+      uses: JS-DevTools/npm-publish@v1
+      with:
+          token: ${{ secrets.AZURE_DEVOPS_PAT }}
