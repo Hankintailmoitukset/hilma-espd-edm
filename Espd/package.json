@@ -1,11 +1,15 @@
 {
   "name": "hilma-espd-edm",
   "version": "0.3.0",
-  "description": "",
+  "description": "Hilma ESPD EDM Version 2.1 compatible typescript classes",
   "main": "index.ts",
   "dependencies": {},
-  "files": [ "typings" ], 
+  "files": [ "typings" ],
   "devDependencies": {},
-  "author": "",
-  "license": "ISC"
+  "author": "Hankintailmoitukset.fi",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://pkgs.dev.azure.com/hansel-azure/Hilma/_packaging/hilma/npm/registry/",
+    "always-auth": true
+  }
 }
