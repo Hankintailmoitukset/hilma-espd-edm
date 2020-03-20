@@ -49,11 +49,11 @@ jobs:
     - name: Replace tokens
       uses: cschleiden/replace-tokens@v1.0
       with:
-        files: '${{GITHUB_WORKSPACE}}/package.json' 
+        files: '$GITHUB_WORKSPACE/package.json'
     - name: Publish the package to Hilma Azure Artifacts feed
       run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg -k ${{secrets.AZURE_DEVOPS_PAT}}
     - name: NPM Publish
       uses: JS-DevTools/npm-publish@v1
       with:
-        package: '${{GITHUB_WORKSPACE}}/package.json'
+        package: $GITHUB_WORKSPACE/package.json
         token: ${{ secrets.AZURE_DEVOPS_PAT }}
