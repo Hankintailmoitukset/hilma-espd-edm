@@ -37,16 +37,7 @@ jobs:
         source-url: https://pkgs.dev.azure.com/hansel-azure/Hilma/_packaging/hilma/nuget/v3/index.json
       env:
         NUGET_AUTH_TOKEN: ${{secrets.AZURE_DEVOPS_PAT}} # Note, create a secret with this name in Settings
-    
-    - uses: actions/setup-dotnet@v1.4.0
-      with:
-        dotnet-version: '2.2.200'
-        
-    - name: Setup and Run TypeGen
-      run: | 
-        dotnet tool install --global TypeGen.DotNetCli --version 2.4.7
-        dotnet-typegen -c $GITHUB_WORKSPACE/Espd/tsconfig.json -v generate $GITHUB_WORKSPACE/Espd/
-        
+         
     - name: Dotnet build and test
       run: dotnet test --configuration Release $GITHUB_WORKSPACE        
   
