@@ -6,11 +6,11 @@ using System.Text;
 
 namespace Espd.CriterionModel
 {
-    public static class CriterionSpecifications
+    public class CriterionSpecification
     {
-        public static ExclusionGroundsSpecification Exclusion { get; set; }
+        public ExclusionGroundsSpecification ExclusionGrounds { get; set; } = new ExclusionGroundsSpecification();
 
-        public static SelectionGroundsSpecification Selection { get; set; }
+        public SelectionCriteriaSpecification SelectionCriteria { get; set; } = new SelectionCriteriaSpecification();
 
     }
 
@@ -712,7 +712,7 @@ namespace Espd.CriterionModel
 
     };
 
-    public class SelectionGroundsSpecification
+    public class SelectionCriteriaSpecification
     {
         public TenderingCriterion[] Suitability { get; set; } = new[]
         {
