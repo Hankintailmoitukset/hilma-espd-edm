@@ -20,4 +20,8 @@
   <ItemGroup>
     <ProjectReference Include="..\UBL\UBL.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="models\" />
+  </ItemGroup>
 </Project>
