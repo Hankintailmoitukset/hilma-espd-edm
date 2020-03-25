@@ -51,9 +51,9 @@ jobs:
       uses: datamonsters/replace-action@v2
       with:
         # Files, comma-separated. Supposed PLACEHOLDER in them
-        files: ${{github.workspace}}/Espd/package.json,${{github.workspace}}/Espd/.npmrc
+        files: '${{github.workspace}}/Espd/package.json,${{github.workspace}}/Espd/.npmrc'
         # Comma-separated pairs PLACEHOLDER=value
-        replacements: AZURE_DEVOPS_PAT_BASE64ENCODED=${{secrets.AZURE_DEVOPS_PAT_BASE64ENCODED}},NPM_VERSION=${{steps.gitversion.outputs.nuGetVersion}}
+        replacements: 'AZURE_DEVOPS_PAT_BASE64ENCODED=${{secrets.AZURE_DEVOPS_PAT_BASE64ENCODED}},NPM_VERSION=${{steps.gitversion.outputs.nuGetVersion}}'
     - name: NPM Publish
       uses: JS-DevTools/npm-publish@v1
       with:
