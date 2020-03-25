@@ -45,8 +45,7 @@ jobs:
   
     - name: Create Nuget package
       run: dotnet pack --no-build --configuration Release -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersion }} $GITHUB_WORKSPACE     
-    - name: Publish the package to Hilma Azure Artifacts feed
-      run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg -k ${{secrets.AZURE_DEVOPS_PAT}}
+  
     - name: Replace configurations
       uses: datamonsters/replace-action@v2
       with:
@@ -60,3 +59,7 @@ jobs:
         package: ./Espd/package.json
         registry: https://pkgs.dev.azure.com/hansel-azure/Hilma/_packaging/hilma/npm/registry/
         token: ${{ secrets.AZURE_DEVOPS_PAT }}
+  
+    - name: Publish the package to Hilma Azure Artifacts feed
+      run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg -k ${{secrets.AZURE_DEVOPS_PAT}}
+
