@@ -1,6 +1,6 @@
 {
   "name": "hilma-espd-edm",
-  "version": "#{steps.gitversion.outputs.nuGetVersion}#",
+  "version": "NPM_VERSION",
   "description": "Hilma ESPD EDM Version 2.1 compatible typescript classes and default translations",
   "main": "index.ts",
   "dependencies": {},
