@@ -19,6 +19,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    - name: Set env
+      run: echo ::set-env name=workspace::$GITHUB_WORKSPACE
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     - name: Fetch all history for all tags and branches
@@ -43,15 +45,15 @@ jobs:
   
     - name: Create Nuget package
       run: dotnet pack --no-build --configuration Release -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersion }} $GITHUB_WORKSPACE     
-    - name: Replace Action
+    - name: Publish the package to Hilma Azure Artifacts feed
+      run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg -k ${{secrets.AZURE_DEVOPS_PAT}}
+    - name: Replace configurations
       uses: datamonsters/replace-action@v2
       with:
         # Files, comma-separated. Supposed PLACEHOLDER in them
-        files: $GITHUB_WORKSPACE/Espd/package.json,$GITHUB_WORKSPACE/Espd/.npmrc
+        files: ${{github.workspace}}/Espd/package.json,${{github.workspace}}/Espd/.npmrc
         # Comma-separated pairs PLACEHOLDER=value
         replacements: AZURE_DEVOPS_PAT_BASE64ENCODED=${{secrets.AZURE_DEVOPS_PAT_BASE64ENCODED}},NPM_VERSION=${{steps.gitversion.outputs.nuGetVersion}}
-    - name: Publish the package to Hilma Azure Artifacts feed
-      run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg -k ${{secrets.AZURE_DEVOPS_PAT}}
     - name: NPM Publish
       uses: JS-DevTools/npm-publish@v1
       with:
