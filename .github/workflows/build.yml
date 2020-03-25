@@ -36,7 +36,7 @@ jobs:
     - name: Replace tokens
       uses: cschleiden/replace-tokens@v1.0
       with:
-        files: '${{github.workspace}}/Espd/package.json,${{github.workspace}}/Espd/.npmrc'
+        files: '["${{github.workspace}}/Espd/package.json","${{github.workspace}}/Espd/.npmrc"]'
       env: 
         AZURE_DEVOPS_PAT_BASE64ENCODED: '${{secrets.AZURE_DEVOPS_PAT_BASE64ENCODED}}'
         NPM_VERSION: '${{steps.gitversion.outputs.nuGetVersion}}'
