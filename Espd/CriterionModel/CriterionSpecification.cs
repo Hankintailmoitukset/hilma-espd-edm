@@ -747,11 +747,6 @@ namespace Espd.CriterionModel
             }
         };
 
-        public IEnumerator<TenderingCriterion> GetEnumerator()
-        {
-            return ((IEnumerable<TenderingCriterion>)Convictions).GetEnumerator();
-        }
-
     };
 
     public class SelectionCriteriaSpecification
