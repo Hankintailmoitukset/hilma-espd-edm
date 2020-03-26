@@ -7,7 +7,9 @@ name: Hilma Espd EDM CI
 on: 
   push:
     branches: [ master, develop ]
-
+  pull_request:
+    branches: [ master, develop ]
+  
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -54,7 +56,7 @@ jobs:
     - name: Publish the package to Hilma Azure Artifacts feed
       run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg -k ${{secrets.AZURE_DEVOPS_PAT}}
 
-    - name: Publish nuget
+    - name: Publish npm
       uses: pascalgn/npm-publish-action@51fdb4531e99aac1873764ef7271af448dc42ab4
       with: # All of theses inputs are optional
         tag_name: "v%s"
