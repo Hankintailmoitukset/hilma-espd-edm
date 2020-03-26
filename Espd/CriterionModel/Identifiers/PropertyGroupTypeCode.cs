@@ -1,6 +1,6 @@
 using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace Espd.CriterionModel.Identifiers
+namespace Hilma.Espd.EDM.CriterionModel.Identifiers
 {
     public class PropertyGroupTypeCode : CodeType {
         public PropertyGroupTypeCode( string code ) : base ( code ) {

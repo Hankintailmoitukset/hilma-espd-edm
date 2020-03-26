@@ -1,6 +1,6 @@
 using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace Espd.CriterionModel.Identifiers
+namespace Hilma.Espd.EDM.CriterionModel.Identifiers
 {
     public class CriterionElementType : CodeType {
         public CriterionElementType( string code ) : base ( code ) {

@@ -1,11 +1,8 @@
-﻿using Espd.CriterionModel.Identifiers;
+﻿using Hilma.Espd.EDM.CriterionModel.Identifiers;
 using Hilma.UBL.CommonAggregateComponents;
 using Hilma.UBL.UnqualifiedDataTypes;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Espd.CriterionModel
+namespace Hilma.Espd.EDM.CriterionModel
 {
     public class CriterionHelper
     {

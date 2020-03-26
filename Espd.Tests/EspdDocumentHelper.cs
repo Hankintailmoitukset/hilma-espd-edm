@@ -1,7 +1,8 @@
-﻿using Hilma.UBL.CommonAggregateComponents;
+﻿using Hilma.Espd.EDM;
+using Hilma.UBL.CommonAggregateComponents;
 using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace Espd.Tests
+namespace Hilma.Espd.Tests
 {
     public class EspdDocumentHelper
     {
