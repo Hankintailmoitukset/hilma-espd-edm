@@ -1,13 +1,11 @@
-﻿using Espd.CriterionModel.Identifiers;
-using Hilma.UBL.CommonAggregateComponents;
-using Hilma.UBL.UnqualifiedDataTypes;
-using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using Hilma.Espd.EDM.CriterionModel.Identifiers;
+using Hilma.UBL.CommonAggregateComponents;
+using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace Espd.CriterionModel
+namespace Hilma.Espd.EDM.CriterionModel
 {
     public class CriterionSpecification : IEnumerable<TenderingCriterion>
     {

@@ -1,9 +1,9 @@
 using System;
-using Espd.Serializers;
+using Hilma.Espd.EDM.Serializers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 
-namespace Espd.Tests
+namespace Hilma.Espd.Tests
 {
 
 
