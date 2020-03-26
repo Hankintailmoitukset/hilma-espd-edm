@@ -1,28 +1,67 @@
-﻿using Hilma.UBL.CommonAggregateComponents;
+﻿using Espd.CriterionModel.Identifiers;
+using Hilma.UBL.CommonAggregateComponents;
 using Hilma.UBL.UnqualifiedDataTypes;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Espd.CriterionModel
 {
-    public class CriterionSpecification
+    public class CriterionSpecification : IEnumerable<TenderingCriterion>
     {
         public ExclusionGroundsSpecification ExclusionGrounds { get; set; } = new ExclusionGroundsSpecification();
 
         public SelectionCriteriaSpecification SelectionCriteria { get; set; } = new SelectionCriteriaSpecification();
 
+        public IEnumerable<TenderingCriterion> AllCriteria => new [] { 
+            ExclusionGrounds.AllCriteria
+
+        }.SelectMany( c => c);
+
+        public IEnumerator<TenderingCriterion> GetEnumerator()
+        {
+            return AllCriteria.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return AllCriteria.GetEnumerator();
+        }
     }
 
-    public class ExclusionGroundsSpecification
-    {
+    public class ExclusionGroundsSpecification : IEnumerable<TenderingCriterion>
+    {    
+        public IEnumerable<TenderingCriterion> AllCriteria => new [] {
+
+            Convictions,
+            Contributions,
+            Social,
+            Business,
+            Misconduct,
+            ConflictOfInterest,
+            EarlyTermination,
+            Misinterpretation
+            
+        }.SelectMany( c => c);
+        public IEnumerator<TenderingCriterion> GetEnumerator()
+        {
+            return AllCriteria.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return AllCriteria.GetEnumerator();
+        }
         public TenderingCriterion[] Convictions { get; set; } = new[]
         {
             new TenderingCriterion()
-            {
+            {   
+                CriterionTypeCode = new CriterionTypeCode( "CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION" ),
                 Name="convictions.participationInCriminalOrganisation.name",
                 Description = new TextType[]{ "convictions.participationInCriminalOrganisation.description" },
-                Id ="e6b21867-95b5-4549-8180-f4673219b179",
+                Id = new CriteriaTaxonomyIdentifier("e6b21867-95b5-4549-8180-f4673219b179"),
                 Legislations = new Legislation[]{},
                 TenderingCriterionPropertyGroups = CriterionHelper.ConvictionsQuestionGroup
             },
@@ -550,7 +589,7 @@ namespace Espd.CriterionModel
             }
         };
 
-        public TenderingCriterion[] Conflict_of_interest { get; set; } = new[]
+        public TenderingCriterion[] ConflictOfInterest { get; set; } = new[]
         {
             new TenderingCriterion()
             {
@@ -570,7 +609,7 @@ namespace Espd.CriterionModel
             }
         };
 
-        public TenderingCriterion[] Early_termination { get; set; } = new[]
+        public TenderingCriterion[] EarlyTermination { get; set; } = new[]
         {
             new TenderingCriterion()
             {
@@ -680,7 +719,7 @@ namespace Espd.CriterionModel
         };
 
         //TODO
-        public TenderingCriterion[] Purely_national { get; set; } = new[]
+        public TenderingCriterion[] PurelyNational { get; set; } = new[]
         {
             new TenderingCriterion()
             {
@@ -708,7 +747,10 @@ namespace Espd.CriterionModel
             }
         };
 
-
+        public IEnumerator<TenderingCriterion> GetEnumerator()
+        {
+            return ((IEnumerable<TenderingCriterion>)Convictions).GetEnumerator();
+        }
 
     };
 

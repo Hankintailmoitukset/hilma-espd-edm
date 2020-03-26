@@ -1,4 +1,5 @@
-﻿using Hilma.UBL.CommonAggregateComponents;
+﻿using Espd.CriterionModel.Identifiers;
+using Hilma.UBL.CommonAggregateComponents;
 using Hilma.UBL.UnqualifiedDataTypes;
 using System;
 using System.Collections.Generic;
@@ -37,12 +38,13 @@ namespace Espd.CriterionModel
                 {
                     new TenderingCriterionPropertyGroup()
                     {
-                        Id ="7c637c0c-7703-4389-ba52-02997a055bd7",
-                        PropertyGroupTypeCode ="ON*",
+                        Id = new CriteriaTaxonomyIdentifier("7c637c0c-7703-4389-ba52-02997a055bd7"),
+                        PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
                         TenderingCriterionProperties = new TenderingCriterionProperty[]
                         {
                            new TenderingCriterionProperty()
                            {
+                             TypeCode = new CriterionElementType("QUESTION"),
                              Description ="common.yourAnswer.description",
                              ValueDataTypeCode ="INDICATOR"
                            }

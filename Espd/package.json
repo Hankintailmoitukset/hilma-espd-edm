@@ -1,6 +1,6 @@
 {
   "name": "hilma-espd-edm",
-  "version": "#{NPM_VERSION}#",
+  "version": "0.3.0-unstable00003",
   "description": "Hilma ESPD EDM Version 2.1 compatible typescript classes and default translations",
   "main": "index.ts",
   "dependencies": {},
