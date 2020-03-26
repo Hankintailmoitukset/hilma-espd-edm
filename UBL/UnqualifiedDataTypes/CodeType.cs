@@ -63,12 +63,12 @@ namespace Hilma.UBL.UnqualifiedDataTypes
     /// <summary>
     /// 
     /// </summary>
-    public Uri ListURI { get; set; }
+    public string ListURI { get; set; }
 
     /// <summary>
     /// 
     /// </summary>
-    public Uri ListSchemeURI { get; set; }
+    public string ListSchemeURI { get; set; }
 
     /// <summary>
     /// The textual equivalent of the code content component.

@@ -7,11 +7,13 @@
     <Version>0.3.0</Version>
     <Authors>Hankintailmoitukset.fi</Authors>
     <Product>Hilma UBL</Product>
+    <PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
     <Description>Open project for EU procurements related UBL data model</Description>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
+    <PackageReference Include="TypeGen" Version="2.4.9" />
   </ItemGroup>
 
   <ItemGroup>

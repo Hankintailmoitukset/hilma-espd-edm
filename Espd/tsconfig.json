@@ -1,0 +1,17 @@
+{
+  "generationSpecs": [ "TypingsGenerationSpec" ],
+  "assemblies": [ "bin/Debug/netstandard2.1/Espd.dll", "bin/Debug/netstandard2.1/Hilma.UBL.dll" ],
+  "outputPath": "typings/",
+  "clearOutputDirectory": true,
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "./lib",
+    "strict": true
+  },
+  "declaration": true,
+  "include": [ "typings" ],
+  "types": "index.d.ts",
+  "exclude": [ "node_modules", "**/__tests__/*" ]
+}
