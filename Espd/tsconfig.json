@@ -10,6 +10,8 @@
     "outDir": "./lib",
     "strict": true
   },
-  "include": [ "src" ],
+  "declaration": true,
+  "include": [ "typings" ],
+  "types": "index.d.ts",
   "exclude": [ "node_modules", "**/__tests__/*" ]
 }

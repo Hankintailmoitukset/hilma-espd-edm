@@ -1,15 +1,10 @@
 {
-  "name": "hilma-espd-edm",
-  "version": "0.3.0-unstable00003",
+  "name": "@hankintailmoitukset.fi/hilma-espd-edm",
+  "version": "#{PACKAGE_VERSION}#",
   "description": "Hilma ESPD EDM Version 2.1 compatible typescript classes and default translations",
-  "main": "index.ts",
-  "dependencies": {},
-  "files": [ "typings" ],
-  "devDependencies": {},
+  "files": [ "typings/*" ],
   "author": "Hankintailmoitukset.fi",
-  "license": "ISC",
-  "publishConfig": {
-    "registry": "https://pkgs.dev.azure.com/hansel-azure/Hilma/_packaging/hilma/npm/registry/",
-    "always-auth": true
-  }
+  "license": "LGPL-3.0-only",
+  "main": "typings/index.ts",
+  "module": "typings/index.ts"
 }

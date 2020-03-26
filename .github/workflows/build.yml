@@ -1,13 +1,11 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Hilma Espd EDM CI
 
 # Controls when the action will run. Triggers the workflow on push or pull request 
 # events but only for the master branch
 on: 
   push:
-    branches: [ master, develop ]
-  pull_request:
     branches: [ master, develop ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -44,7 +42,6 @@ jobs:
     - uses: actions/setup-dotnet@v1.4.0
       with:
         dotnet-version: '3.1.200'
-        source-url: https://pkgs.dev.azure.com/hansel-azure/Hilma/_packaging/hilma/nuget/v3/index.json
       env:
         NUGET_AUTH_TOKEN: ${{secrets.AZURE_DEVOPS_PAT}} # Note, create a secret with this name in Settings
          
@@ -54,14 +51,14 @@ jobs:
     - name: Create Nuget package
       run: dotnet pack --no-build --configuration Release -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersion }} $GITHUB_WORKSPACE     
   
-    - name: NPM Publish
-      uses: JS-DevTools/npm-publish@v1
-      with:
-        package: ${{github.workspace}}/Espd/package.json
-        registry: https://pkgs.dev.azure.com/hansel-azure/Hilma/_packaging/hilma/npm/registry/
-        token: ${{ secrets.AZURE_DEVOPS_PAT }}
-        check-version: false  
-  
     - name: Publish the package to Hilma Azure Artifacts feed
       run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg -k ${{secrets.AZURE_DEVOPS_PAT}}
 
+    - name: Publish nuget
+      uses: pascalgn/npm-publish-action@51fdb4531e99aac1873764ef7271af448dc42ab4
+      with: # All of theses inputs are optional
+        tag_name: "v%s"
+        tag_message: "v%s"
+      env: # More info about the environment variables in the README
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this as is, it's automatically generated
+        NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # You need to set this in your repo settings    

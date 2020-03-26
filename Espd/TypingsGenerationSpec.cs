@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 using TypeGen.Core.SpecGeneration;
 
-namespace Espd
+namespace Hilma.Espd.EDM
 {
   public class TypingsGenerationSpec : GenerationSpec
-  {
+  { 
+    
     public TypingsGenerationSpec()
     {
       AddClass<QualificationApplicationRequest>();
@@ -18,4 +19,5 @@ namespace Espd
       AddBarrel(".");
     }
   }
+
 }
