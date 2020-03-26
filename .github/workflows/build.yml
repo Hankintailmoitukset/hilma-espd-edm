@@ -44,8 +44,9 @@ jobs:
     - uses: actions/setup-dotnet@v1.4.0
       with:
         dotnet-version: '3.1.200'
+        source-url: https://api.nuget.org/v3/index.json
       env:
-        NUGET_AUTH_TOKEN: ${{secrets.AZURE_DEVOPS_PAT}} # Note, create a secret with this name in Settings
+        NUGET_AUTH_TOKEN: ${{secrets.NUGET_AUTH_TOKEN}} # Note, create a secret with this name in Settings
          
     - name: Dotnet build and test
       run: dotnet test --configuration Release $GITHUB_WORKSPACE        
@@ -54,7 +55,7 @@ jobs:
       run: dotnet pack --no-build --configuration Release -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersion }} $GITHUB_WORKSPACE     
   
     - name: Publish the package to Hilma Azure Artifacts feed
-      run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg -k ${{secrets.AZURE_DEVOPS_PAT}}
+      run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg
 
     - name: Publish npm
       uses: pascalgn/npm-publish-action@51fdb4531e99aac1873764ef7271af448dc42ab4
