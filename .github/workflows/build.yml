@@ -56,12 +56,14 @@ jobs:
   
     - name: Publish the package to Nuget.org
       run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg -k ${{secrets.NUGET_AUTH_TOKEN}} -n true
-
-    - name: Publish the package to npmjs.org
-      uses: pascalgn/npm-publish-action@51fdb4531e99aac1873764ef7271af448dc42ab4
-      with: # All of theses inputs are optional
-        tag_name: "v%s"
-        tag_message: "v%s"
-      env: # More info about the environment variables in the README
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this as is, it's automatically generated
-        NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # You need to set this in your repo settings    
+    
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 10
+    - run: npm install
+    - run: npm test
+    - uses: JS-DevTools/npm-publish@v1
+      with:
+        token: ${{ secrets.NPM_AUTH_TOKEN }}
+        package: "${{github.workspace}}/Espd/package.json" 
+ 
