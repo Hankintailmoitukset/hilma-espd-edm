@@ -54,7 +54,7 @@ jobs:
       run: dotnet pack --no-build --configuration Release -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersion }} $GITHUB_WORKSPACE     
   
     - name: Publish the package to Nuget.org
-      run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg -k ${{secrets.NUGET_AUTH_TOKEN}} -n true
+      run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg -k ${{secrets.NUGET_AUTH_TOKEN}} -n true --skip-duplicate true
     
     - uses: actions/setup-node@v1
       with:
