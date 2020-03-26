@@ -2,7 +2,7 @@
 using System.Xml.Linq;
 using Hilma.UBL.Serializers;
 
-namespace Espd.Serializers
+namespace Hilma.Espd.EDM.Serializers
 {
   public static class EspdSerializerExtensions
   {

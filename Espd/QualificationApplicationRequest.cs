@@ -1,11 +1,9 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using Hilma.UBL.CodeLists;
+﻿using System.ComponentModel.DataAnnotations;
 using Hilma.UBL.CommonAggregateComponents;
 using Hilma.UBL.CommonExtensionComponents;
 using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace Espd
+namespace Hilma.Espd.EDM
 {
   public class QualificationApplicationRequest
   {

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Hilma.UBL.UnqualifiedDataTypes
+﻿namespace Hilma.UBL.UnqualifiedDataTypes
 {
   public interface IListValueType
   {
@@ -31,13 +29,13 @@ namespace Hilma.UBL.UnqualifiedDataTypes
     string ListVersionID { get; set; }
 
     /// <summary>
-    /// he Uniform Resource Identifier that identifies where the code list is located.
+    /// The Uniform Resource Identifier that identifies where the code list is located.
     /// </summary>
-    Uri ListURI { get; set; }
+    string ListURI { get; set; }
 
     /// <summary>
     /// The Uniform Resource Identifier that identifies where the code list scheme is located.
     /// </summary>
-    Uri ListSchemeURI { get; set; }
+    string ListSchemeURI { get; set; }
   }
 }

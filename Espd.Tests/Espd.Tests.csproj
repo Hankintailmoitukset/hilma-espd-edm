@@ -4,6 +4,10 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
+
+    <AssemblyName>Hilma.Espd.Tests</AssemblyName>
+
+    <RootNamespace>Hilma.Espd.Tests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

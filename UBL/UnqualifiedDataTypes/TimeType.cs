@@ -19,8 +19,15 @@ namespace Hilma.UBL.UnqualifiedDataTypes
     {
     }
 
+    /// <summary>
+    /// Hour part
+    /// </summary>
     [Range(0,24)]
     public int Hour { get; set; }
+
+    /// <summary>
+    /// Minute part
+    /// </summary>
     [Range(0, 60)]
     public int Minute { get; set; }
 
