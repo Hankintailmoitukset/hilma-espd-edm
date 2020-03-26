@@ -60,6 +60,7 @@ jobs:
         package: ${{github.workspace}}/Espd/package.json
         registry: https://pkgs.dev.azure.com/hansel-azure/Hilma/_packaging/hilma/npm/registry/
         token: ${{ secrets.AZURE_DEVOPS_PAT }}
+        check-version: false  
   
     - name: Publish the package to Hilma Azure Artifacts feed
       run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg -k ${{secrets.AZURE_DEVOPS_PAT}}
