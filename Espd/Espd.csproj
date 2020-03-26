@@ -10,6 +10,8 @@
 </Description>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <RootNamespace>Hilma.Espd.EDM</RootNamespace>
+    <AssemblyName>Hilma.Espd.EDM</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

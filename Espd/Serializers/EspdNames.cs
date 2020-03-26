@@ -1,6 +1,6 @@
 ﻿using System.Xml.Linq;
 
-namespace Espd.Serializers
+namespace Hilma.Espd.EDM.Serializers
 {
   public static class EspdNames
   {
