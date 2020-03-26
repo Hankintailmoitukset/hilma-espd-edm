@@ -3,17 +3,17 @@
   public interface ISchemedType
   {
     /// <summary>
-    /// The identification of the identification scheme.
+    /// The identification of the scheme.
     /// </summary>
     string SchemeID { get; set; }
 
     /// <summary>
-    /// The name of the identification scheme.
+    /// The name of the scheme.
     /// </summary>
     string SchemeName { get; set; }
 
     /// <summary>
-    /// The name of the agency that maintains the identification scheme.
+    /// The name of the agency that maintains the scheme.
     /// </summary>
     string SchemeAgencyName { get; set; }
 

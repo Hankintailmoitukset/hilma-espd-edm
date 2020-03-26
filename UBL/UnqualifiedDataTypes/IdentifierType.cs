@@ -58,4 +58,5 @@ namespace Hilma.UBL.UnqualifiedDataTypes
 
     public static implicit operator IdentifierType(string s) => new IdentifierType(s);
   }
+ 
 }
