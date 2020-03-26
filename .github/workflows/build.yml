@@ -52,10 +52,10 @@ jobs:
       run: dotnet test --configuration Release $GITHUB_WORKSPACE        
   
     - name: Create Nuget package
-      run: dotnet pack --no-build --configuration Release -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersion }} -n $GITHUB_WORKSPACE     
+      run: dotnet pack --no-build --configuration Release -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersion }}$GITHUB_WORKSPACE     
   
     - name: Publish the package to Nuget.org
-      run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg -k ${{secrets.NUGET_AUTH_TOKEN}}
+      run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg -k ${{secrets.NUGET_AUTH_TOKEN}} -n
 
     - name: Publish the package to npmjs.org
       uses: pascalgn/npm-publish-action@51fdb4531e99aac1873764ef7271af448dc42ab4
