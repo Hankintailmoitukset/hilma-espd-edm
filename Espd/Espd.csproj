@@ -27,4 +27,10 @@
   <ItemGroup>
     <Folder Include="models\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Localisation\translations.default.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
