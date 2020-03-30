@@ -5,8 +5,7 @@ using Newtonsoft.Json;
 
 namespace Hilma.Espd.Tests
 {
-
-
+  
   [TestClass]
   public class EspdSerializerTest
   {

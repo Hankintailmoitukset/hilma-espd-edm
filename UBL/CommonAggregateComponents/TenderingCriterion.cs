@@ -1,9 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Hilma.UBL.Attributes;
 using Hilma.UBL.PrimitiveTypes;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
 {
+  [Contract]
   public class TenderingCriterion
   {
       /// <summary>

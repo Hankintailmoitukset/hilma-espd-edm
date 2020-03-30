@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using Hilma.UBL.Attributes;
 
 namespace Hilma.UBL.UnqualifiedDataTypes
 {
@@ -7,6 +8,7 @@ namespace Hilma.UBL.UnqualifiedDataTypes
   /// Typed CodeType for enums
   /// </summary>
   /// <typeparam name="TListEnum"></typeparam>
+  [Contract]
   public class CodeType<TListEnum> : CodeType where TListEnum : struct
   {
     public TListEnum ListValue { get; set; }

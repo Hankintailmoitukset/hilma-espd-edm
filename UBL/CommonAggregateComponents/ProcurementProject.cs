@@ -1,4 +1,5 @@
-﻿using Hilma.UBL.UnqualifiedDataTypes;
+﻿using Hilma.UBL.Attributes;
+using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
 {
@@ -6,6 +7,7 @@ namespace Hilma.UBL.CommonAggregateComponents
   /// <summary>
   /// An overall description of the procurement procedure.
   /// </summary>
+  [Contract]
   public class ProcurementProject
   {
     /// <summary>

@@ -6,6 +6,7 @@ namespace Hilma.UBL.UnqualifiedDataTypes
   /// <summary>
   /// A numeric value determined by measuring an object using a specified unit of measure.
   /// </summary>
+  [Contract]
   public class MeasureType : DecimalType
   {
     /// <summary>

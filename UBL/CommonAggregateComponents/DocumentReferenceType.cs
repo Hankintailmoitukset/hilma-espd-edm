@@ -2,6 +2,7 @@
 
 namespace Hilma.UBL.CommonAggregateComponents
 {
+    [Contract]
     public class DocumentReferenceType
     {
         /// <summary>

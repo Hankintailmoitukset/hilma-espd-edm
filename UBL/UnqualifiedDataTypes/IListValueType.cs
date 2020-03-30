@@ -1,5 +1,8 @@
-﻿namespace Hilma.UBL.UnqualifiedDataTypes
+﻿using Hilma.UBL.Attributes;
+
+namespace Hilma.UBL.UnqualifiedDataTypes
 {
+
   public interface IListValueType
   {
     /// <summary>

@@ -1,4 +1,5 @@
-﻿using Hilma.UBL.PrimitiveTypes;
+﻿using Hilma.UBL.Attributes;
+using Hilma.UBL.PrimitiveTypes;
 
 namespace Hilma.UBL.UnqualifiedDataTypes
 {
@@ -6,7 +7,8 @@ namespace Hilma.UBL.UnqualifiedDataTypes
   /// >A character string to identify and uniquely distinguish one instance of an object in an identification scheme from 
   /// all other objects in the same scheme, together with relevant supplementary information.
   /// </summary>
- public class IdentifierType : NormalizedString, ISchemedType
+  [Contract]
+  public class IdentifierType : NormalizedString, ISchemedType
   {
    
     /// <summary>

@@ -6,6 +6,7 @@ namespace Hilma.UBL.CommonAggregateComponents
   /// <summary>
   /// The name of the contracting body as it is registered.
   /// </summary>
+  [Contract]
   public class PartyNameType
   {
     /// <summary>

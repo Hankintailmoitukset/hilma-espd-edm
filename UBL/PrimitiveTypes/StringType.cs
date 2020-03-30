@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Hilma.UBL.Attributes;
 
 namespace Hilma.UBL.PrimitiveTypes
 {
+  [Contract]
   public  class StringType
   {
     public StringType()
