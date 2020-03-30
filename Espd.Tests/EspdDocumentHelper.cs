@@ -307,7 +307,7 @@ namespace Hilma.Espd.Tests
                              new TenderingCriterionPropertyGroup()
                              {
                                  Id = "123",
-                                 Name = new[] { new NameType() { Value= "Ryhmä 1." }  },
+                                 Name =  new NameType() { Value= "Ryhmä 1." },
                                  Description = new TextType [] { "Foo" },
                                  PropertyGroupTypeCode = "C0",
                                  TenderingCriterionProperties = new []{ new TenderingCriterionProperty()
