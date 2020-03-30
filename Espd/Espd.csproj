@@ -39,6 +39,9 @@
     <None Update="typings\CodeType.ts">
       <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\CodeType.cs</CustomToolNamespace>
     </None>
+    <None Update="typings\CommodityClassificationType.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\CommodityClassificationType.cs</CustomToolNamespace>
+    </None>
     <None Update="typings\ContactType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\ContactType.cs</CustomToolNamespace>
     </None>
@@ -147,11 +150,15 @@
     <None Update="typings\TimeType.ts">
       <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\TimeType.cs</CustomToolNamespace>
     </None>
-    <None Update="typings\UBLExtensionsType.ts">
-      <CustomToolNamespace>..\UBL\CommonExtensionComponents\UBLExtensionsType.cs</CustomToolNamespace>
+    <None Update="typings\UBLExtensionType.ts">
+      <CustomToolNamespace>..\UBL\CommonExtensionComponents\UBLExtensionType.cs</CustomToolNamespace>
     </None>
     <None Update="typings\ValueType.ts">
       <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\ValueType.cs</CustomToolNamespace>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="QualificationApplication\" />
   </ItemGroup>
 </Project>

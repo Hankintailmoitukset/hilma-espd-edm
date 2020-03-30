@@ -2,6 +2,7 @@
 
 import { TextType } from './TextType'
 import { CodeType } from './CodeType'
+import { CommodityClassificationType } from './CommodityClassificationType'
 
 import assign from 'lodash.assign'
 
