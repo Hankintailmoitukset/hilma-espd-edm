@@ -17,7 +17,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <summary>
     /// The name of the group.
     /// </summary>
-    public NameType[] Name { get; set; }
+    public NameType Name { get; set; }
 
     /// <summary>
     /// The textual description for this group.

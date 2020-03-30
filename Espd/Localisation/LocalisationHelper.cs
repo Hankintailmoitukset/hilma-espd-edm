@@ -9,7 +9,7 @@ namespace Hilma.Espd.EDM.Localisation
     public class LocalisationHelper
     {
 
-        public static Dictionary<string, string> ParseLocalisation()
+        public static Dictionary<string, string> ParseDefaultLocalisation()
         {
             string filePath = @"Localisation/translations.default.json";
             try
