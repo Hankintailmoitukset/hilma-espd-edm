@@ -635,8 +635,8 @@ namespace Hilma.Espd.EDM.CriterionModel
             new TenderingCriterion()
             {
                CriterionTypeCode = new CriterionTypeCode( "CRITERION.EXCLUSION.CONFLICT_OF_INTEREST.PROCEDURE_PARTICIPATION" ),
-               Name="conflictOfInterest.conflictOfIinterest.name",
-               Description = new TextType[]{ "conflictOfInterest.conflictOfIinterest.description" },
+               Name="conflictOfInterest.conflictOfInterest.name",
+               Description = new TextType[]{ "conflictOfInterest.conflictOfInterest.description" },
                Id = new CriteriaTaxonomyIdentifier("b1b5ac18-f393-4280-9659-1367943c1a2e"),
                Legislations = new Legislation[]{},
                TenderingCriterionPropertyGroups = CriterionHelper.ConflictOfInterestQuestions
