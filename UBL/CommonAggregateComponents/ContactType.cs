@@ -1,10 +1,12 @@
-﻿using Hilma.UBL.UnqualifiedDataTypes;
+﻿using Hilma.UBL.Attributes;
+using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
 {
   /// <summary>
   /// Used to provide contacting information for a party in general or a person.
   /// </summary>
+  [Contract]
   public class ContactType
   {
     /// <summary>

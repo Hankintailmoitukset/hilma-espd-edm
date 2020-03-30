@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Hilma.UBL.Attributes;
 using Hilma.UBL.PrimitiveTypes;
 
 namespace Hilma.UBL.UnqualifiedDataTypes

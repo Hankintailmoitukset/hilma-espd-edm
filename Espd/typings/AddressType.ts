@@ -1,6 +1,7 @@
 ﻿
 
 import { IdentifierType } from './IdentifierType'
+import { CodeType } from './CodeType'
 import { TextType } from './TextType'
 import { NameType } from './NameType'
 import { CountryType } from './CountryType'
@@ -12,12 +13,12 @@ import assign from 'lodash.assign'
 export class AddressType {
     public constructor(init?:Partial<AddressType>) {
         assign(this, init)
-    }
+    } 
     
     
     id: IdentifierType = new IdentifierType()
-    addressTypeCode: CodeType | undefined
-    addressFormatCode: CodeType | undefined
+    addressTypeCode: CodeType = new CodeType()
+    addressFormatCode: CodeType = new CodeType()
     postbox: TextType = new TextType()
     floor: TextType = new TextType()
     room: TextType = new TextType()
@@ -35,7 +36,7 @@ export class AddressType {
     cityName: NameType = new NameType()
     postalZone: TextType = new TextType()
     countrySubentity: TextType = new TextType()
-    countrySubentityCode: CodeType | undefined
+    countrySubentityCode: CodeType = new CodeType()
     region: TextType = new TextType()
     district: TextType = new TextType()
     timezoneOffset: TextType = new TextType()
@@ -44,4 +45,3 @@ export class AddressType {
     locationCoordinates: LocationCoordinateType[] = []
     contact: ContactType = new ContactType()
 }
- 

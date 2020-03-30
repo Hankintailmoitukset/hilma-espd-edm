@@ -1,4 +1,5 @@
 ﻿using System;
+using Hilma.UBL.Attributes;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonExtensionComponents
@@ -6,6 +7,7 @@ namespace Hilma.UBL.CommonExtensionComponents
   /// <summary>
   ///  A single extension for private use.
   /// </summary>
+  [Contract]
   public class UBLExtensionType
   {
     /// <summary>

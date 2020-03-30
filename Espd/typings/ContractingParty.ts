@@ -1,11 +1,16 @@
-﻿import assign from 'lodash.assign'
+﻿
+
+import { IdentifierType } from './IdentifierType'
+import { PartyType } from './PartyType'
+
+import assign from 'lodash.assign'
 
 export class ContractingParty {
     public constructor(init?:Partial<ContractingParty>) {
         assign(this, init)
-    }
+    } 
     
     
-    buyerProfileUri: IdentifierType | undefined
-    partyType: PartyType | undefined
+    buyerProfileUri: IdentifierType = new IdentifierType()
+    partyType: PartyType = new PartyType()
 }

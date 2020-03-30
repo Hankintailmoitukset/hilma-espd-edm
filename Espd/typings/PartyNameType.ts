@@ -1,10 +1,14 @@
-﻿import assign from 'lodash.assign'
+﻿
+
+import { NameType } from './NameType'
+
+import assign from 'lodash.assign'
 
 export class PartyNameType {
     public constructor(init?:Partial<PartyNameType>) {
         assign(this, init)
-    }
+    } 
     
     
-    name: NameType | undefined
+    name: NameType = new NameType()
 }

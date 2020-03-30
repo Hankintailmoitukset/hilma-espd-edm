@@ -1,17 +1,22 @@
-﻿import assign from 'lodash.assign'
+﻿
+
+import { CodeType } from './CodeType'
+import { MeasureType } from './MeasureType'
+
+import assign from 'lodash.assign'
 
 export class LocationCoordinateType {
     public constructor(init?:Partial<LocationCoordinateType>) {
         assign(this, init)
-    }
+    } 
     
     
-    coordinateSystemCode: CodeType | undefined
-    latitudeDegreesMeasure: MeasureType | undefined
-    latitudeMinutesMeasure: MeasureType | undefined
-    latitudeDirectionCode: CodeType | undefined
-    longitudeDegreesMeasure: MeasureType | undefined
-    longitudeMinutesMeasure: MeasureType | undefined
-    longitudeDirectionCode: CodeType | undefined
-    altitudeMeasure: MeasureType | undefined
+    coordinateSystemCode: CodeType = new CodeType()
+    latitudeDegreesMeasure: MeasureType = new MeasureType()
+    latitudeMinutesMeasure: MeasureType = new MeasureType()
+    latitudeDirectionCode: CodeType = new CodeType()
+    longitudeDegreesMeasure: MeasureType = new MeasureType()
+    longitudeMinutesMeasure: MeasureType = new MeasureType()
+    longitudeDirectionCode: CodeType = new CodeType()
+    altitudeMeasure: MeasureType = new MeasureType()
 }

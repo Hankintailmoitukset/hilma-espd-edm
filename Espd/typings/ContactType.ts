@@ -8,7 +8,7 @@ import assign from 'lodash.assign'
 export class ContactType {
     public constructor(init?:Partial<ContactType>) {
         assign(this, init)
-    }
+    } 
     
     
     name: NameType = new NameType()
@@ -16,4 +16,3 @@ export class ContactType {
     telefax: TextType = new TextType()
     electronicMail: TextType = new TextType()
 }
- 

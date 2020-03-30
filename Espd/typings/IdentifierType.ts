@@ -1,10 +1,14 @@
-﻿import assign from 'lodash.assign'
+﻿
+
+
+import assign from 'lodash.assign'
 
 export class IdentifierType {
     public constructor(init?:Partial<IdentifierType>) {
         assign(this, init)
-    }
+    } 
     
+    value: string = ''
     
     schemeID: string = ''
     schemeName: string = ''

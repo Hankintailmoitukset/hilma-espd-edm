@@ -76,22 +76,9 @@ import assign from 'lodash.assign'
 export class $Name {
     public constructor(init?:Partial<$Name>) {
         assign(this, init)
-    }
+    } 
     $BaseClass[$Properties[
     $name: $Type $Type[$ConvertDefault]]]
     $Properties[
     $name: $Type $Type[$ConvertDefault]]
 }$Name[$Clear]]
-$Classes([Configuration])[
-$Properties[$Type[$ImportType]]
-import assign from 'lodash.assign'
-export class $Name {
-    public constructor(init?:Partial<$Name>) {
-        assign(this, init)
-    }
-    $BaseClass[
-    $Properties[
-    $name: $Type $Type[$ConvertDefault]]]
-    $Properties[
-    $name: $Type $Type[$ConvertDefault]]
-}$Name[$Clear]] 

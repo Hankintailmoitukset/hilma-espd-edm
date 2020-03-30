@@ -6,7 +6,8 @@ import assign from 'lodash.assign'
 export class CodeType {
     public constructor(init?:Partial<CodeType>) {
         assign(this, init)
-    }
+    } 
+    
     
     listID: string = ''
     listName: string = ''
@@ -18,8 +19,4 @@ export class CodeType {
     name: string = ''
     languageID: string = ''
     value: string = ''
-    
-    listValue: TListEnum | undefined
-    value: string = ''
 }
- 

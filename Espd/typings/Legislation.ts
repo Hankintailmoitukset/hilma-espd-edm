@@ -10,7 +10,7 @@ import assign from 'lodash.assign'
 export class Legislation {
     public constructor(init?:Partial<Legislation>) {
         assign(this, init)
-    }
+    } 
     
     
     id: IdentifierType = new IdentifierType()
@@ -22,4 +22,3 @@ export class Legislation {
     languages: LanguageType[] = []
     jurisdictionRegionAddresses: AddressType[] = []
 }
- 

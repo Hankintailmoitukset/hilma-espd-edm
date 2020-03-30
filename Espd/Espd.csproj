@@ -42,9 +42,6 @@
     <None Update="typings\ContactType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\ContactType.cs</CustomToolNamespace>
     </None>
-    <None Update="typings\ContractingActivityType.ts">
-      <CustomToolNamespace>..\UBL\CommonAggregateComponents\ContractingActivityType.cs</CustomToolNamespace>
-    </None>
     <None Update="typings\ContractingParty.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\ContractingParty.cs</CustomToolNamespace>
     </None>
