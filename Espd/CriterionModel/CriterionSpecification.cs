@@ -84,8 +84,8 @@ namespace Hilma.Espd.EDM.CriterionModel
             new TenderingCriterion()
             {
                 CriterionTypeCode = new CriterionTypeCode( "CRITERION.EXCLUSION.CONVICTIONS.TERRORIST_OFFENCES" ),
-                Name="convictions.TerroristActivities.name",
-                Description = new TextType[]{ "convictions.TerroristActivities.description" },
+                Name="convictions.terroristActivities.name",
+                Description = new TextType[]{ "convictions.terroristActivities.description" },
                 Id = new CriteriaTaxonomyIdentifier("d486fb70-86b3-4e75-97f2-0d71b5697c7d"),
                 Legislations = new Legislation[]{},
                 TenderingCriterionPropertyGroups = CriterionHelper.ConvictionsQuestionGroup
