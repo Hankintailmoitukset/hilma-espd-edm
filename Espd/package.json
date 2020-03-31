@@ -1,6 +1,6 @@
 {
   "name": "@hankintailmoitukset.fi/hilma-espd-edm",
-  "version": "0.1.0",
+  "version": "#{PACKAGE_VERSION}#",
   "description": "Hilma ESPD EDM Version 2.1 compatible typescript classes and default translations",
   "files": [
     "typings/*"
