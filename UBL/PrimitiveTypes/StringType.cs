@@ -6,10 +6,6 @@ namespace Hilma.UBL.PrimitiveTypes
   [Contract]
   public  class StringType
   {
-    public StringType()
-    {
-    }
-
 
     /// <summary>
     /// The string content

@@ -33,15 +33,4 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <remarks>Use the element cbc:ItemClassificationCode for the specification of the CPV code. Beware that the cardinality of the basic element is 0..1 but the cardinality of the class is 0..n, thus allowing for multiple CPVs.</remarks>
     public CommodityClassificationType[] MainCommodityClassifications { get; set; }
   }
-
-  /// <summary>
-  /// 
-  /// </summary>
-  public class CommodityClassificationType
-  {
-    /// <summary>
-    /// The code of the classification
-    /// </summary>
-    public CodeType ItemClassificationCode { get; set; }
-  }
 }

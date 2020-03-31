@@ -8,7 +8,8 @@ namespace Hilma.UBL.UnqualifiedDataTypes
   [Contract]
   public class NameType : TextType
   {
-    public NameType() : base() {
+    public NameType()
+    {
     }
 
     public NameType(string value) : base( value ) {
