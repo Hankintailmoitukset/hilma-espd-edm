@@ -9,6 +9,6 @@ export class NumericType {
         assign(this, init)
     } 
     
-    value: number = 0
+    value?: number
     
 }

@@ -10,5 +10,5 @@ export class StringType {
     } 
     
     
-    value: string = ''
+    value?: string
 }

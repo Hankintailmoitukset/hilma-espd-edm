@@ -17,32 +17,32 @@ export class AddressType {
     } 
     
     
-    id: IdentifierType = new IdentifierType()
-    addressTypeCode: CodeType = new CodeType()
-    addressFormatCode: CodeType = new CodeType()
-    postbox: TextType = new TextType()
-    floor: TextType = new TextType()
-    room: TextType = new TextType()
-    streetName: NameType = new NameType()
-    additionalStreetName: NameType = new NameType()
-    blockName: NameType = new NameType()
-    buildingName: NameType = new NameType()
-    buildingNumber: TextType = new TextType()
-    inhouseMail: TextType = new TextType()
-    department: TextType = new TextType()
-    markAttention: TextType = new TextType()
-    markCare: TextType = new TextType()
-    plotIdentification: TextType = new TextType()
-    citySubdivisionName: NameType = new NameType()
-    cityName: NameType = new NameType()
-    postalZone: TextType = new TextType()
-    countrySubentity: TextType = new TextType()
-    countrySubentityCode: CodeType = new CodeType()
-    region: TextType = new TextType()
-    district: TextType = new TextType()
-    timezoneOffset: TextType = new TextType()
-    addressLines: TextType[] = []
-    country: CountryType = new CountryType()
-    locationCoordinates: LocationCoordinateType[] = []
-    contact: ContactType = new ContactType()
+    id?: IdentifierType
+    addressTypeCode?: CodeType
+    addressFormatCode?: CodeType
+    postbox?: TextType
+    floor?: TextType
+    room?: TextType
+    streetName?: NameType
+    additionalStreetName?: NameType
+    blockName?: NameType
+    buildingName?: NameType
+    buildingNumber?: TextType
+    inhouseMail?: TextType
+    department?: TextType
+    markAttention?: TextType
+    markCare?: TextType
+    plotIdentification?: TextType
+    citySubdivisionName?: NameType
+    cityName?: NameType
+    postalZone?: TextType
+    countrySubentity?: TextType
+    countrySubentityCode?: CodeType
+    region?: TextType
+    district?: TextType
+    timezoneOffset?: TextType
+    addressLines?: TextType[]
+    country?: CountryType
+    locationCoordinates?: LocationCoordinateType[]
+    contact?: ContactType
 }

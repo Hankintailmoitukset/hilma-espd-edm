@@ -12,6 +12,6 @@ export class CountryType {
     } 
     
     
-    identificationCode: IdentifierType = new IdentifierType()
-    name: NameType = new NameType()
+    identificationCode?: IdentifierType
+    name?: NameType
 }

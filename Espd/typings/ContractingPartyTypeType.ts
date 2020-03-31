@@ -12,6 +12,6 @@ export class ContractingPartyTypeType {
     } 
     
     
-    partyTypeCode: CodeType = new CodeType()
-    partyType: TextType = new TextType()
+    partyTypeCode?: CodeType
+    partyType?: TextType
 }

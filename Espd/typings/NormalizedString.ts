@@ -10,5 +10,5 @@ export class NormalizedString {
     } 
     
     
-    value: string = ''
+    value?: string
 }

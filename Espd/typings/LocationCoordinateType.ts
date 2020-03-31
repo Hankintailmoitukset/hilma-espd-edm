@@ -12,12 +12,12 @@ export class LocationCoordinateType {
     } 
     
     
-    coordinateSystemCode: CodeType = new CodeType()
-    latitudeDegreesMeasure: MeasureType = new MeasureType()
-    latitudeMinutesMeasure: MeasureType = new MeasureType()
-    latitudeDirectionCode: CodeType = new CodeType()
-    longitudeDegreesMeasure: MeasureType = new MeasureType()
-    longitudeMinutesMeasure: MeasureType = new MeasureType()
-    longitudeDirectionCode: CodeType = new CodeType()
-    altitudeMeasure: MeasureType = new MeasureType()
+    coordinateSystemCode?: CodeType
+    latitudeDegreesMeasure?: MeasureType
+    latitudeMinutesMeasure?: MeasureType
+    latitudeDirectionCode?: CodeType
+    longitudeDegreesMeasure?: MeasureType
+    longitudeMinutesMeasure?: MeasureType
+    longitudeDirectionCode?: CodeType
+    altitudeMeasure?: MeasureType
 }

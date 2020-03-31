@@ -18,16 +18,16 @@ export class TenderingCriterion {
     } 
     
     
-    id: IdentifierType = new IdentifierType()
-    criterionTypeCode: CodeType = new CodeType()
-    name: NameType = new NameType()
-    description: TextType[] = []
-    weightNumeric: DecimalType = new DecimalType()
-    evaluationMethodTypeCode: CodeType = new CodeType()
-    weightingConsiderationDescription: TextType = new TextType()
-    subTenderingTenderingCriteria: TenderingCriterion[] = []
-    legislations: Legislation[] = []
-    tenderingCriterionPropertyGroups: TenderingCriterionPropertyGroup[] = []
-    fulfilmentIndicatorType: boolean = false
-    fulfilmentIndicatorTypeCodeType: NormalizedString = new NormalizedString()
+    id?: IdentifierType
+    criterionTypeCode?: CodeType
+    name?: NameType
+    description?: TextType[]
+    weightNumeric?: DecimalType
+    evaluationMethodTypeCode?: CodeType
+    weightingConsiderationDescription?: TextType
+    subTenderingTenderingCriteria?: TenderingCriterion[]
+    legislations?: Legislation[]
+    tenderingCriterionPropertyGroups?: TenderingCriterionPropertyGroup[]
+    fulfilmentIndicatorType?: boolean
+    fulfilmentIndicatorTypeCodeType?: NormalizedString
 }

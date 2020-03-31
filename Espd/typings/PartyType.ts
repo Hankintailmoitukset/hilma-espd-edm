@@ -16,11 +16,11 @@ export class PartyType {
     } 
     
     
-    partyIdentification: PartyIdentificationType[] = []
-    websiteURI: IdentifierType = new IdentifierType()
-    endpointID: IdentifierType = new IdentifierType()
-    partyName: PartyNameType = new PartyNameType()
-    postalAddress: AddressType = new AddressType()
-    contact: ContactType = new ContactType()
-    serviceProviderParty: ServiceProviderPartyType = new ServiceProviderPartyType()
+    partyIdentification?: PartyIdentificationType[]
+    websiteURI?: IdentifierType
+    endpointID?: IdentifierType
+    partyName?: PartyNameType
+    postalAddress?: AddressType
+    contact?: ContactType
+    serviceProviderParty?: ServiceProviderPartyType
 }

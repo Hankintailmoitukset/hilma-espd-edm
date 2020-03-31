@@ -9,13 +9,13 @@ export class IdentifierType {
         assign(this, init)
     } 
     
-    value: string = ''
+    value?: string
     
-    schemeID: string = ''
-    schemeName: string = ''
-    schemeAgencyID: string = ''
-    schemeAgencyName: string = ''
-    schemeVersionID: string = ''
-    schemeDataURI: string = ''
-    schemeURI: string = ''
+    schemeID?: string
+    schemeName?: string
+    schemeAgencyID?: string
+    schemeAgencyName?: string
+    schemeVersionID?: string
+    schemeDataURI?: string
+    schemeURI?: string
 }

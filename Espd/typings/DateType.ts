@@ -10,5 +10,5 @@ export class DateType {
     } 
     
     
-    value: Date | undefined
+    value?: Date
 }

@@ -84,7 +84,7 @@ export class $Name {
         assign(this, init)
     } 
     $BaseClass[$Properties[
-    $name: $Type $Type[$ConvertDefault]]]
+    $name?: $Type]]
     $Properties[
-    $name: $Type $Type[$ConvertDefault]]
+    $name?: $Type]
 }$Name[$Clear]]

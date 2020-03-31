@@ -11,5 +11,5 @@ export class ProcurementProjectLot {
     } 
     
     
-    id: IdentifierType = new IdentifierType()
+    id?: IdentifierType
 }

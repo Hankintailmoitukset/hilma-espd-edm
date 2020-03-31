@@ -19,21 +19,21 @@ export class DocumentReferenceType {
     } 
     
     
-    id: IdentifierType = new IdentifierType()
-    copyIndicator: boolean = false
-    uuid: IdentifierType = new IdentifierType()
-    issueDate: DateType = new DateType()
-    issueTime: TimeType = new TimeType()
-    documentTypeCode: CodeType = new CodeType()
-    documentType: TextType = new TextType()
-    xPath: TextType[] = []
-    languageID: IdentifierType = new IdentifierType()
-    localeCode: CodeType = new CodeType()
-    versionID: IdentifierType = new IdentifierType()
-    documentStatusCode: CodeType = new CodeType()
-    documentDescription: TextType[] = []
-    attachment: AttachmentType = new AttachmentType()
-    validityPeriod: PeriodType = new PeriodType()
-    issuerParty: PartyType = new PartyType()
-    resultOfVerification: ResultOfVerificationType = new ResultOfVerificationType()
+    id?: IdentifierType
+    copyIndicator?: boolean
+    uuid?: IdentifierType
+    issueDate?: DateType
+    issueTime?: TimeType
+    documentTypeCode?: CodeType
+    documentType?: TextType
+    xPath?: TextType[]
+    languageID?: IdentifierType
+    localeCode?: CodeType
+    versionID?: IdentifierType
+    documentStatusCode?: CodeType
+    documentDescription?: TextType[]
+    attachment?: AttachmentType
+    validityPeriod?: PeriodType
+    issuerParty?: PartyType
+    resultOfVerification?: ResultOfVerificationType
 }

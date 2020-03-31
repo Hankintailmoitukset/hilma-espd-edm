@@ -12,7 +12,7 @@ export class AttachmentType {
     } 
     
     
-    embeddedDocumentBinaryObject: number[] = []
-    embeddedDocument: TextType = new TextType()
-    externalReference: ExternalReferenceType = new ExternalReferenceType()
+    embeddedDocumentBinaryObject?: number[]
+    embeddedDocument?: TextType
+    externalReference?: ExternalReferenceType
 }

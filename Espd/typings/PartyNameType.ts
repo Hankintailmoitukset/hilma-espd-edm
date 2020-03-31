@@ -11,5 +11,5 @@ export class PartyNameType {
     } 
     
     
-    name: NameType = new NameType()
+    name?: NameType
 }

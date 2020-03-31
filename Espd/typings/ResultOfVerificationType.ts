@@ -16,12 +16,12 @@ export class ResultOfVerificationType {
     } 
     
     
-    validatorID: IdentifierType = new IdentifierType()
-    validationResultCode: CodeType = new CodeType()
-    validationDate: DateType = new DateType()
-    validationTime: TimeType = new TimeType()
-    validateProcess: TextType = new TextType()
-    validateTool: TextType = new TextType()
-    validateToolVersion: TextType = new TextType()
-    signatoryParty: PartyType = new PartyType()
+    validatorID?: IdentifierType
+    validationResultCode?: CodeType
+    validationDate?: DateType
+    validationTime?: TimeType
+    validateProcess?: TextType
+    validateTool?: TextType
+    validateToolVersion?: TextType
+    signatoryParty?: PartyType
 }

@@ -10,7 +10,7 @@ export class TimeType {
     } 
     
     
-    hour: number = 0
-    minute: number = 0
-    second: number = 0
+    hour?: number
+    minute?: number
+    second?: number
 }
