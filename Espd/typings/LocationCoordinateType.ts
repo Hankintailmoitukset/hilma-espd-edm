@@ -1,11 +1,12 @@
 ﻿
 
+
 import { CodeType } from './CodeType'
 import { MeasureType } from './MeasureType'
 
 import assign from 'lodash.assign'
 
-export class LocationCoordinateType {
+export class LocationCoordinateType { 
     public constructor(init?:Partial<LocationCoordinateType>) {
         assign(this, init)
     } 

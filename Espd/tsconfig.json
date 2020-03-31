@@ -5,6 +5,7 @@
   "clearOutputDirectory": true,
   "compilerOptions": {
     "target": "es5",
+    "esModuleInterop": true,
     "module": "commonjs",
     "declaration": true,
     "outDir": "./lib",
@@ -12,6 +13,9 @@
   },
   "declaration": true,
   "include": [ "typings" ],
-  "types": "index.d.ts",
+  "types": [ "index.d.ts", "node" ],
+  "typeRoots": [
+    "node_modules/@types"
+  ],
   "exclude": [ "node_modules", "**/__tests__/*" ]
 }

@@ -1,5 +1,6 @@
 ﻿
 
+
 import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
 import { NameType } from './NameType'
@@ -10,7 +11,7 @@ import { LanguageType } from './LanguageType'
 
 import assign from 'lodash.assign'
 
-export class EvidenceType {
+export class EvidenceType { 
     public constructor(init?:Partial<EvidenceType>) {
         assign(this, init)
     } 

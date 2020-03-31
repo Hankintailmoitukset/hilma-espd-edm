@@ -121,7 +121,7 @@
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\ProcurementProjectLot.cs</CustomToolNamespace>
     </None>
     <None Update="typings\QualificationApplicationRequest.ts">
-      <CustomToolNamespace>QualificationApplication\QualificationApplicationRequest.cs</CustomToolNamespace>
+      <CustomToolNamespace>QualificationApplicationRequest.cs</CustomToolNamespace>
     </None>
     <None Update="typings\QuantityType.ts">
       <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\QuantityType.cs</CustomToolNamespace>

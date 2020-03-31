@@ -1,5 +1,4 @@
 ﻿export * from './QualificationApplicationRequest';
-export * from './QualificationApplicationRequest';
 export * from './AdditionalDocumentReference';
 export * from './AddressType';
 export * from './AttachmentType';

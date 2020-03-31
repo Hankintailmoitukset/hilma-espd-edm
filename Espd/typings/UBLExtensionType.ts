@@ -1,5 +1,6 @@
 ﻿
 
+
 import { IdentifierType } from './IdentifierType'
 import { NameType } from './NameType'
 import { CodeType } from './CodeType'
@@ -7,7 +8,7 @@ import { TextType } from './TextType'
 
 import assign from 'lodash.assign'
 
-export class UBLExtensionType {
+export class UBLExtensionType { 
     public constructor(init?:Partial<UBLExtensionType>) {
         assign(this, init)
     } 

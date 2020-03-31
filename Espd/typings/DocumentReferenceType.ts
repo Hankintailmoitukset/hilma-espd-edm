@@ -1,5 +1,6 @@
 ﻿
 
+
 import { IdentifierType } from './IdentifierType'
 import { DateType } from './DateType'
 import { TimeType } from './TimeType'
@@ -12,7 +13,7 @@ import { ResultOfVerificationType } from './ResultOfVerificationType'
 
 import assign from 'lodash.assign'
 
-export class DocumentReferenceType {
+export class DocumentReferenceType { 
     public constructor(init?:Partial<DocumentReferenceType>) {
         assign(this, init)
     } 

@@ -1,5 +1,6 @@
 ﻿
 
+
 import { IdentifierType } from './IdentifierType'
 import { TextType } from './TextType'
 import { DateType } from './DateType'
@@ -8,7 +9,7 @@ import { CodeType } from './CodeType'
 
 import assign from 'lodash.assign'
 
-export class ExternalReferenceType {
+export class ExternalReferenceType { 
     public constructor(init?:Partial<ExternalReferenceType>) {
         assign(this, init)
     } 

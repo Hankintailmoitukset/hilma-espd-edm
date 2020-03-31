@@ -1,5 +1,6 @@
 ﻿
 
+
 import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
 import { TextType } from './TextType'
@@ -10,7 +11,7 @@ import { ContactType } from './ContactType'
 
 import assign from 'lodash.assign'
 
-export class AddressType {
+export class AddressType { 
     public constructor(init?:Partial<AddressType>) {
         assign(this, init)
     } 

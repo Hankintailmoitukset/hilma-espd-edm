@@ -1,9 +1,10 @@
 ﻿
 
 
+
 import assign from 'lodash.assign'
 
-export class IdentifierType {
+export class IdentifierType { 
     public constructor(init?:Partial<IdentifierType>) {
         assign(this, init)
     } 

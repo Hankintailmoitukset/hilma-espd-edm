@@ -1,5 +1,6 @@
 ﻿
 
+
 import { DateType } from './DateType'
 import { TimeType } from './TimeType'
 import { MeasureType } from './MeasureType'
@@ -8,7 +9,7 @@ import { TextType } from './TextType'
 
 import assign from 'lodash.assign'
 
-export class PeriodType {
+export class PeriodType { 
     public constructor(init?:Partial<PeriodType>) {
         assign(this, init)
     } 

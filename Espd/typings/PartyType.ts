@@ -1,5 +1,6 @@
 ﻿
 
+
 import { PartyIdentificationType } from './PartyIdentificationType'
 import { IdentifierType } from './IdentifierType'
 import { PartyNameType } from './PartyNameType'
@@ -9,7 +10,7 @@ import { ServiceProviderPartyType } from './ServiceProviderPartyType'
 
 import assign from 'lodash.assign'
 
-export class PartyType {
+export class PartyType { 
     public constructor(init?:Partial<PartyType>) {
         assign(this, init)
     } 

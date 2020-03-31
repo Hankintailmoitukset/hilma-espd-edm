@@ -1,9 +1,10 @@
 ﻿
 
 
+
 import assign from 'lodash.assign'
 
-export class AmountType {
+export class AmountType { 
     public constructor(init?:Partial<AmountType>) {
         assign(this, init)
     } 

@@ -1,9 +1,10 @@
 ﻿
 
 
+
 import assign from 'lodash.assign'
 
-export class NormalizedString {
+export class NormalizedString { 
     public constructor(init?:Partial<NormalizedString>) {
         assign(this, init)
     } 

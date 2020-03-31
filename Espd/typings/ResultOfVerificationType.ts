@@ -1,5 +1,6 @@
 ﻿
 
+
 import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
 import { DateType } from './DateType'
@@ -9,7 +10,7 @@ import { PartyType } from './PartyType'
 
 import assign from 'lodash.assign'
 
-export class ResultOfVerificationType {
+export class ResultOfVerificationType { 
     public constructor(init?:Partial<ResultOfVerificationType>) {
         assign(this, init)
     } 

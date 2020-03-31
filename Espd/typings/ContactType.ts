@@ -1,11 +1,12 @@
 ﻿
 
+
 import { NameType } from './NameType'
 import { TextType } from './TextType'
 
 import assign from 'lodash.assign'
 
-export class ContactType {
+export class ContactType { 
     public constructor(init?:Partial<ContactType>) {
         assign(this, init)
     } 

@@ -1,9 +1,10 @@
 ﻿
 
 
+
 import assign from 'lodash.assign'
 
-export class CodeType {
+export class CodeType { 
     public constructor(init?:Partial<CodeType>) {
         assign(this, init)
     } 

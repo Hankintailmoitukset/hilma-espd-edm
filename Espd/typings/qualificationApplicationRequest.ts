@@ -1,5 +1,6 @@
 ﻿
 
+
 import { UBLExtensionType } from './UBLExtensionType'
 import { IdentifierType } from './IdentifierType'
 import { DateType } from './DateType'
@@ -14,7 +15,7 @@ import { AdditionalDocumentReference } from './AdditionalDocumentReference'
 
 import assign from 'lodash.assign'
 
-export class QualificationApplicationRequest {
+export class QualificationApplicationRequest { 
     public constructor(init?:Partial<QualificationApplicationRequest>) {
         assign(this, init)
     } 

@@ -2,12 +2,17 @@
     using Typewriter.Extensions.Types;
 
     static List<string> ImportedTypes = new List<string>();
-
+    
     string LoudName(Property property)
     { 
         return property.Name.ToUpperInvariant();
     }
     
+    void RegisterTypeName( string name ) {
+    
+        ImportedTypes.Add( name );
+    }
+
     string ConvertDefault(Type type) {
         if (type.IsEnumerable) {
             return "= []";
@@ -70,10 +75,11 @@
     }
 }
 $Classes([Contract])[
+$Name[$RegisterTypeName]
 $Properties[$Type[$ImportType]]
 import assign from 'lodash.assign'
 
-export class $Name {
+export class $Name { 
     public constructor(init?:Partial<$Name>) {
         assign(this, init)
     } 

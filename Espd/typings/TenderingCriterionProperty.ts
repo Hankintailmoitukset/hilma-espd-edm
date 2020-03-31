@@ -1,5 +1,6 @@
 ﻿
 
+
 import { IdentifierType } from './IdentifierType'
 import { NameType } from './NameType'
 import { TextType } from './TextType'
@@ -10,7 +11,7 @@ import { EvidenceType } from './EvidenceType'
 
 import assign from 'lodash.assign'
 
-export class TenderingCriterionProperty {
+export class TenderingCriterionProperty { 
     public constructor(init?:Partial<TenderingCriterionProperty>) {
         assign(this, init)
     } 
