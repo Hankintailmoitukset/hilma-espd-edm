@@ -9,9 +9,9 @@ export class QuantityType {
         assign(this, init)
     } 
     
-    value: number = 0
+    value?: number
     
-    unitCode: string = ''
-    unitCodeListID: string = ''
-    unitCodeListAgencyName: string = ''
+    unitCode?: string
+    unitCodeListID?: string
+    unitCodeListAgencyName?: string
 }

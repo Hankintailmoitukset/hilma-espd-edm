@@ -15,11 +15,11 @@ export class PeriodType {
     } 
     
     
-    startDate: DateType = new DateType()
-    startTime: TimeType = new TimeType()
-    endDate: DateType = new DateType()
-    endTime: TimeType = new TimeType()
-    durationMeasure: MeasureType = new MeasureType()
-    descriptionCode: CodeType[] = []
-    descriptions: TextType[] = []
+    startDate?: DateType
+    startTime?: TimeType
+    endDate?: DateType
+    endTime?: TimeType
+    durationMeasure?: MeasureType
+    descriptionCode?: CodeType[]
+    descriptions?: TextType[]
 }

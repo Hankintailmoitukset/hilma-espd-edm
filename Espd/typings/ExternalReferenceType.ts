@@ -15,15 +15,15 @@ export class ExternalReferenceType {
     } 
     
     
-    uri: IdentifierType = new IdentifierType()
-    documentHash: TextType = new TextType()
-    hashAlgorithmMethod: TextType = new TextType()
-    expiryDate: DateType = new DateType()
-    expiryTime: TimeType = new TimeType()
-    mimeCode: CodeType = new CodeType()
-    formatCode: CodeType = new CodeType()
-    encodingCode: CodeType = new CodeType()
-    characterSetCode: CodeType = new CodeType()
-    fileName: TextType = new TextType()
-    description: TextType[] = []
+    uri?: IdentifierType
+    documentHash?: TextType
+    hashAlgorithmMethod?: TextType
+    expiryDate?: DateType
+    expiryTime?: TimeType
+    mimeCode?: CodeType
+    formatCode?: CodeType
+    encodingCode?: CodeType
+    characterSetCode?: CodeType
+    fileName?: TextType
+    description?: TextType[]
 }

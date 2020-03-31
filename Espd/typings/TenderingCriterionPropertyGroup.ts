@@ -15,11 +15,11 @@ export class TenderingCriterionPropertyGroup {
     } 
     
     
-    id: IdentifierType = new IdentifierType()
-    name: NameType[] = []
-    description: TextType[] = []
-    propertyGroupTypeCode: CodeType = new CodeType()
-    fulfilmentIndicatorTypeCode: CodeType = new CodeType()
-    tenderingCriterionProperties: TenderingCriterionProperty[] = []
-    subsidiaryTenderingCriterionPropertyGroups: TenderingCriterionPropertyGroup[] = []
+    id?: IdentifierType
+    name?: NameType
+    description?: TextType[]
+    propertyGroupTypeCode?: CodeType
+    fulfilmentIndicatorTypeCode?: CodeType
+    tenderingCriterionProperties?: TenderingCriterionProperty[]
+    subsidiaryTenderingCriterionPropertyGroups?: TenderingCriterionPropertyGroup[]
 }

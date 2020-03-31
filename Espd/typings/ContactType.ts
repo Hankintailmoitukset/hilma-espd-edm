@@ -12,8 +12,8 @@ export class ContactType {
     } 
     
     
-    name: NameType = new NameType()
-    telephone: TextType = new TextType()
-    telefax: TextType = new TextType()
-    electronicMail: TextType = new TextType()
+    name?: NameType
+    telephone?: TextType
+    telefax?: TextType
+    electronicMail?: TextType
 }

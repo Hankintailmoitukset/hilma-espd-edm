@@ -14,8 +14,8 @@ export class ServiceProviderPartyType {
     } 
     
     
-    id: IdentifierType = new IdentifierType()
-    serviceProviderTypeCode: CodeType = new CodeType()
-    serviceType: TextType[] = []
-    party: PartyType = new PartyType()
+    id?: IdentifierType
+    serviceProviderTypeCode?: CodeType
+    serviceType?: TextType[]
+    party?: PartyType
 }

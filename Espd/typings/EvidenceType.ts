@@ -17,13 +17,13 @@ export class EvidenceType {
     } 
     
     
-    id: IdentifierType = new IdentifierType()
-    evidenceTypeCode: CodeType = new CodeType()
-    name: NameType = new NameType()
-    description: TextType[] = []
-    candidateStatement: TextType[] = []
-    confidentialityLevelCode: CodeType = new CodeType()
-    evidenceIssuingParty: PartyType = new PartyType()
-    documentReference: DocumentReferenceType[] = []
-    language: LanguageType = new LanguageType()
+    id?: IdentifierType
+    evidenceTypeCode?: CodeType
+    name?: NameType
+    description?: TextType[]
+    candidateStatement?: TextType[]
+    confidentialityLevelCode?: CodeType
+    evidenceIssuingParty?: PartyType
+    documentReference?: DocumentReferenceType[]
+    language?: LanguageType
 }

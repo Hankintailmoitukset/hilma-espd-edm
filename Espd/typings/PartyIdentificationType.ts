@@ -11,5 +11,5 @@ export class PartyIdentificationType {
     } 
     
     
-    id: IdentifierType = new IdentifierType()
+    id?: IdentifierType
 }

@@ -13,7 +13,7 @@ export class LanguageType {
     } 
     
     
-    id: IdentifierType = new IdentifierType()
-    name: NameType = new NameType()
-    localeCode: CodeType = new CodeType()
+    id?: IdentifierType
+    name?: NameType
+    localeCode?: CodeType
 }

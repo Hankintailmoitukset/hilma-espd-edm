@@ -10,5 +10,5 @@ export class DecimalType {
     } 
     
     
-    value: number = 0
+    value?: number
 }

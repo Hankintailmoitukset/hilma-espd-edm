@@ -9,8 +9,8 @@ export class AmountType {
         assign(this, init)
     } 
     
-    value: number = 0
+    value?: number
     
-    currencyID: string = ''
-    currencyCodeListVersionID: string = ''
+    currencyID?: string
+    currencyCodeListVersionID?: string
 }

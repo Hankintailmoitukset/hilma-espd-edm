@@ -10,5 +10,5 @@ export class DateTimeType {
     } 
     
     
-    value: Date | undefined
+    value?: Date
 }

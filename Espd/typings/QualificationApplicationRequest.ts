@@ -21,26 +21,26 @@ export class QualificationApplicationRequest {
     } 
     
     
-    ublExtensions: UBLExtensionType[] = []
-    ulbVersionID: IdentifierType = new IdentifierType()
-    customizationID: IdentifierType = new IdentifierType()
-    profileID: IdentifierType = new IdentifierType()
-    profileExecutionID: IdentifierType = new IdentifierType()
-    id: IdentifierType = new IdentifierType()
-    copyIndicator: boolean = false
-    uuid: IdentifierType = new IdentifierType()
-    contractFolderID: IdentifierType = new IdentifierType()
-    issueDate: DateType = new DateType()
-    issueTime: TimeType = new TimeType()
-    versionID: IdentifierType = new IdentifierType()
-    previousVersionID: IdentifierType = new IdentifierType()
-    procedureCode: CodeType = new CodeType()
-    qualificationApplicationTypeCode: CodeType = new CodeType()
-    weightScoringMethodologyNote: TextType[] = []
-    weightingTypeCode: CodeType = new CodeType()
-    contractingParty: ContractingParty = new ContractingParty()
-    procurementProject: ProcurementProject = new ProcurementProject()
-    procurementProjectLots: ProcurementProjectLot[] = []
-    tenderingCriteria: TenderingCriterion[] = []
-    additionalDocumentReferences: AdditionalDocumentReference[] = []
+    ublExtensions?: UBLExtensionType[]
+    ulbVersionID?: IdentifierType
+    customizationID?: IdentifierType
+    profileID?: IdentifierType
+    profileExecutionID?: IdentifierType
+    id?: IdentifierType
+    copyIndicator?: boolean
+    uuid?: IdentifierType
+    contractFolderID?: IdentifierType
+    issueDate?: DateType
+    issueTime?: TimeType
+    versionID?: IdentifierType
+    previousVersionID?: IdentifierType
+    procedureCode?: CodeType
+    qualificationApplicationTypeCode?: CodeType
+    weightScoringMethodologyNote?: TextType[]
+    weightingTypeCode?: CodeType
+    contractingParty?: ContractingParty
+    procurementProject?: ProcurementProject
+    procurementProjectLots?: ProcurementProjectLot[]
+    tenderingCriteria?: TenderingCriterion[]
+    additionalDocumentReferences?: AdditionalDocumentReference[]
 }

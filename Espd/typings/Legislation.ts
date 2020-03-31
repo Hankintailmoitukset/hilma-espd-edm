@@ -14,12 +14,12 @@ export class Legislation {
     } 
     
     
-    id: IdentifierType = new IdentifierType()
-    titles: TextType[] = []
-    descriptions: TextType[] = []
-    jurisdictionLevels: TextType[] = []
-    articles: TextType[] = []
-    urIs: IdentifierType[] = []
-    languages: LanguageType[] = []
-    jurisdictionRegionAddresses: AddressType[] = []
+    id?: IdentifierType
+    titles?: TextType[]
+    descriptions?: TextType[]
+    jurisdictionLevels?: TextType[]
+    articles?: TextType[]
+    urIs?: IdentifierType[]
+    languages?: LanguageType[]
+    jurisdictionRegionAddresses?: AddressType[]
 }

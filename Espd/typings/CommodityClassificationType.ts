@@ -11,5 +11,5 @@ export class CommodityClassificationType {
     } 
     
     
-    itemClassificationCode: CodeType = new CodeType()
+    itemClassificationCode?: CodeType
 }

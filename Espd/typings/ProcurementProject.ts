@@ -13,8 +13,8 @@ export class ProcurementProject {
     } 
     
     
-    name: TextType = new TextType()
-    description: TextType = new TextType()
-    procurementTypeCode: CodeType = new CodeType()
-    mainCommodityClassifications: CommodityClassificationType[] = []
+    name?: TextType
+    description?: TextType
+    procurementTypeCode?: CodeType
+    mainCommodityClassifications?: CommodityClassificationType[]
 }

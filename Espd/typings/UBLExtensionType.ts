@@ -14,13 +14,13 @@ export class UBLExtensionType {
     } 
     
     
-    id: IdentifierType = new IdentifierType()
-    name: NameType = new NameType()
-    extensionAgencyID: IdentifierType = new IdentifierType()
-    extensionAgencyName: NameType = new NameType()
-    extensionVersionID: IdentifierType = new IdentifierType()
-    extensionAgencyURI: IdentifierType = new IdentifierType()
-    extensionReasonCode: CodeType = new CodeType()
-    extensionReason: TextType = new TextType()
-    extensionContent: any | undefined
+    id?: IdentifierType
+    name?: NameType
+    extensionAgencyID?: IdentifierType
+    extensionAgencyName?: NameType
+    extensionVersionID?: IdentifierType
+    extensionAgencyURI?: IdentifierType
+    extensionReasonCode?: CodeType
+    extensionReason?: TextType
+    extensionContent?: any
 }

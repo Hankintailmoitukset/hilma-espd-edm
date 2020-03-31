@@ -9,6 +9,6 @@ export class TextType {
         assign(this, init)
     } 
     
-    value: string = ''
+    value?: string
     
 }

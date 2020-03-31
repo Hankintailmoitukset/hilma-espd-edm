@@ -17,25 +17,25 @@ export class TenderingCriterionProperty {
     } 
     
     
-    id: IdentifierType = new IdentifierType()
-    name: NameType = new NameType()
-    description: TextType = new TextType()
-    typeCode: CodeType = new CodeType()
-    valueDataTypeCode: CodeType = new CodeType()
-    valueUnitCode: CodeType = new CodeType()
-    valueCurrencyCode: CodeType = new CodeType()
-    expectedAmount: number | null = null
-    expectedID: IdentifierType = new IdentifierType()
-    expectedCode: CodeType = new CodeType()
-    expectedValueNumeric: NumericType = new NumericType()
-    expectedDescription: string = ''
-    maximumAmount: string = ''
-    minimumAmount: string = ''
-    maximumValueNumeric: NumericType = new NumericType()
-    minimumValueNumeric: NumericType = new NumericType()
-    translationTypeCode: string = ''
-    certificationLevelDescription: TextType[] = []
-    copyQualityTypeCode: CodeType = new CodeType()
-    applicablePeriod: PeriodType[] = []
-    templateEvidence: EvidenceType[] = []
+    id?: IdentifierType
+    name?: NameType
+    description?: TextType
+    typeCode?: CodeType
+    valueDataTypeCode?: CodeType
+    valueUnitCode?: CodeType
+    valueCurrencyCode?: CodeType
+    expectedAmount?: number
+    expectedID?: IdentifierType
+    expectedCode?: CodeType
+    expectedValueNumeric?: NumericType
+    expectedDescription?: string
+    maximumAmount?: string
+    minimumAmount?: string
+    maximumValueNumeric?: NumericType
+    minimumValueNumeric?: NumericType
+    translationTypeCode?: string
+    certificationLevelDescription?: TextType[]
+    copyQualityTypeCode?: CodeType
+    applicablePeriod?: PeriodType[]
+    templateEvidence?: EvidenceType[]
 }

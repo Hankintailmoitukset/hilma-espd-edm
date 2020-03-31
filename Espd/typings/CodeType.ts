@@ -10,14 +10,14 @@ export class CodeType {
     } 
     
     
-    listID: string = ''
-    listName: string = ''
-    listAgencyID: string = ''
-    listAgencyName: string = ''
-    listVersionID: string = ''
-    listURI: string = ''
-    listSchemeURI: string = ''
-    name: string = ''
-    languageID: string = ''
-    value: string = ''
+    listID?: string
+    listName?: string
+    listAgencyID?: string
+    listAgencyName?: string
+    listVersionID?: string
+    listURI?: string
+    listSchemeURI?: string
+    name?: string
+    languageID?: string
+    value?: string
 }
