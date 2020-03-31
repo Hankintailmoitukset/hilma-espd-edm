@@ -34,5 +34,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 10
+      - name: Typescript build
         run: npm run build
       
