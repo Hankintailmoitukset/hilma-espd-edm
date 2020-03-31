@@ -60,5 +60,6 @@ jobs:
           npm install
       - name: Typescript build
         run: | 
+          cd $GITHUB_WORKSPACE/Espd/
           npm run tsbuild
       
