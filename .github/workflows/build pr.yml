@@ -19,14 +19,17 @@ jobs:
     steps:
       - name: Set env
         run: echo ::set-env name=workspace::$GITHUB_WORKSPACE
+      
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+
       - name: Fetch all history for all tags and branches
-      run: git fetch --prune --unshallow
+        run: git fetch --prune --unshallow
     
       - uses: gittools/actions/gitversion/setup@v0.9
         with:
           versionSpec: '5.1.x'  
+      
       - name: Use GitVersion
         id: gitversion # step id used as reference for output values
         uses: gittools/actions/gitversion/execute@v0.9
