@@ -19,6 +19,8 @@ namespace Hilma.UBL.PrimitiveTypes
       get => _value;
       set => _value = Regex.Replace(value, @"\s+", " ");
     }
+    
+
 
     public NormalizedString()
     {
@@ -32,5 +34,10 @@ namespace Hilma.UBL.PrimitiveTypes
     {
       return _value;
     }
+
+    public static implicit operator string(NormalizedString s) => s.Value;
+
+    public static implicit operator NormalizedString(string s) => new NormalizedString(s);
+
   }
 }
