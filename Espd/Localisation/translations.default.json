@@ -79,10 +79,7 @@
   "common.url.description": "URL",
   "common.verificationCode.description": "Verification code",
   "common.issuer.description": "Issuer",
-  "common.measuresToDemonstrateYourReliability.description": "Have you taken measures to demonstrate your reliability (Self-Cleaning)?",
-
-
-
+  "common.measuresToDemonstrateYourReliability.description": "Have you taken measures to demonstrate your reliability (Self-Cleaning)?"
 
 
 }

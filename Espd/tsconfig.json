@@ -1,17 +1,22 @@
 {
   "generationSpecs": [ "TypingsGenerationSpec" ],
-  "assemblies": [ "bin/Debug/netstandard2.1/Espd.dll", "bin/Debug/netstandard2.1/Hilma.UBL.dll" ],
+  "assemblies": [ "bin/Debug/netstandard2.1/Hilma.Espd.EDM.dll", "bin/Debug/netstandard2.1/Hilma.UBL.dll" ],
   "outputPath": "typings/",
   "clearOutputDirectory": true,
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",
+    "esModuleInterop": true,
+    "module": "CommonJS",
+    "moduleResolution": "Node",
     "declaration": true,
     "outDir": "./lib",
     "strict": true
   },
   "declaration": true,
   "include": [ "typings" ],
-  "types": "index.d.ts",
+  "types": [ "index.d.ts", "node" ],
+  "typeRoots": [
+    "node_modules/@types"
+  ],
   "exclude": [ "node_modules", "**/__tests__/*" ]
 }

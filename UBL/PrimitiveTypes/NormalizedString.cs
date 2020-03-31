@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
+using Hilma.UBL.Attributes;
 
 namespace Hilma.UBL.PrimitiveTypes
 {
@@ -7,6 +8,7 @@ namespace Hilma.UBL.PrimitiveTypes
   /// Normalized one line string value that does not contain other whitespace characters than spaces.
   /// Whitespaces are automatically converted to spaces.
   /// </summary>
+  [Contract]
   public class NormalizedString
   {
     private string _value = string.Empty;

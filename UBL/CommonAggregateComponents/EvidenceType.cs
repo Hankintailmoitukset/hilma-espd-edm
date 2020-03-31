@@ -1,9 +1,11 @@
-﻿using Hilma.UBL.UnqualifiedDataTypes;
+﻿using Hilma.UBL.Attributes;
+using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
 {
+    [Contract]
     public class EvidenceType
-  {
+    {
         public IdentifierType ID { get; set; }
         public CodeType EvidenceTypeCode { get; set; }
         public NameType Name { get; set; }

@@ -1,5 +1,8 @@
-﻿namespace Hilma.UBL.PrimitiveTypes
+﻿using Hilma.UBL.Attributes;
+
+namespace Hilma.UBL.PrimitiveTypes
 {
+  [Contract]
   public class DecimalType
   {
     public DecimalType()

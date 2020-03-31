@@ -9,10 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UBL", "UBL\UBL.csproj", "{8
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Espd.Tests", "Espd.Tests\Espd.Tests.csproj", "{A29F06E1-DCF4-4CDB-A5A8-216BC7E5BAD2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1D9E51DD-FDEB-4A7A-8229-1F5D9AAB48B5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4D0134DA-3BBA-44F3-91B6-C36B387858C2}"
 	ProjectSection(SolutionItems) = preProject
-		Espd\package.json = Espd\package.json
-		Espd\tsconfig.json = Espd\tsconfig.json
+		.github\workflows\build pr.yml = .github\workflows\build pr.yml
+		.github\workflows\build.yml = .github\workflows\build.yml
 		GitVersion.yml = GitVersion.yml
 	EndProjectSection
 EndProject

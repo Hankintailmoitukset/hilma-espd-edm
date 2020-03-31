@@ -1,8 +1,10 @@
-﻿using Hilma.UBL.UnqualifiedDataTypes;
+﻿using Hilma.UBL.Attributes;
+using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
 {
-    public class PeriodType
+  [Contract]
+  public class PeriodType
   {
     public DateType StartDate { get; set; }
 

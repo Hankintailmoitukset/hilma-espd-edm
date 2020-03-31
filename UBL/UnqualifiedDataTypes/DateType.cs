@@ -1,10 +1,12 @@
 ﻿using System;
+using Hilma.UBL.Attributes;
 
 namespace Hilma.UBL.UnqualifiedDataTypes
 {
   /// <summary>
   /// One calendar day according the Gregorian calendar.
   /// </summary>
+  [Contract]
   public class DateType
   {
     private DateTime _value;

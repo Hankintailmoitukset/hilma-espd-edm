@@ -5,8 +5,7 @@ using Newtonsoft.Json;
 
 namespace Hilma.Espd.Tests
 {
-
-
+  
   [TestClass]
   public class EspdSerializerTest
   {
@@ -23,9 +22,9 @@ namespace Hilma.Espd.Tests
     }
 
     [TestMethod]
-    public void TestSCAbilitiesStaffSelfContainedRequest()
+    public void TestScAbilitiesStaffSelfContainedRequest()
     {
-      var request = EspdDocumentHelper.SCAbilitiesStaffSelfContainedRequest;
+      var request = EspdDocumentHelper.ScAbilitiesStaffSelfContainedRequest;
       var result = request.Serialize();
 
       Assert.IsNotNull(result);

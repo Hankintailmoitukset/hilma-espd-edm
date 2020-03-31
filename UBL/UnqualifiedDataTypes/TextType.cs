@@ -1,10 +1,12 @@
-﻿using Hilma.UBL.PrimitiveTypes;
+﻿using Hilma.UBL.Attributes;
+using Hilma.UBL.PrimitiveTypes;
 
 namespace Hilma.UBL.UnqualifiedDataTypes
 {
   /// <summary>
   /// A character string (i.e. a finite set of characters) generally in the form of words of a language.
   /// </summary>
+  [Contract]
   public class TextType : StringType
   {
     public TextType()
