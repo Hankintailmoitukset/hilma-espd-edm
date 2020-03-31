@@ -51,15 +51,15 @@ jobs:
       - name: Dotnet build and test
         run: dotnet test --configuration Release $GITHUB_WORKSPACE
       
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 10
-      - name: Npm install
-        run: | 
-          cd $GITHUB_WORKSPACE/Espd/
-          npm install
-      - name: Typescript build
-        run: | 
-          cd $GITHUB_WORKSPACE/Espd/
-          npm run tsbuild
+    #  - uses: actions/setup-node@v1
+    #    with:
+    #      node-version: 10
+    #  - name: Npm install
+    #    run: | 
+    #      cd $GITHUB_WORKSPACE/Espd/
+    #      npm install
+    #  - name: Typescript build
+    #    run: | 
+    #      cd $GITHUB_WORKSPACE/Espd/
+    #      npm run tsbuild
       
