@@ -35,5 +35,7 @@ jobs:
         with:
           node-version: 10
       - name: Typescript build
-        run: npm run build
+        run: | 
+          cd $GITHUB_WORKSPACE/Espd/
+          npm run build 
       
