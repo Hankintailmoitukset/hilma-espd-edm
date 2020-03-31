@@ -10,7 +10,7 @@
   "main": "typings/index.ts",
   "module": "typings/index.ts",
   "scripts": {
-    "tsbuild": "tsc"
+    "tsbuild": "tsc --project tsconfig.json"
   },
   "dependencies": {
     "@types/lodash.assign": "^4.2.6",

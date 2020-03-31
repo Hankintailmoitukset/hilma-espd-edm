@@ -6,7 +6,8 @@
   "compilerOptions": {
     "target": "es5",
     "esModuleInterop": true,
-    "module": "commonjs",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
     "declaration": true,
     "outDir": "./lib",
     "strict": true
