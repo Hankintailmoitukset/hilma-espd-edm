@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Hilma.UBL.Attributes;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
@@ -6,6 +7,7 @@ namespace Hilma.UBL.CommonAggregateComponents
   /// <summary>
   /// The name of the contracting body as it is registered.
   /// </summary>
+  [Contract]
   public class PartyNameType
   {
     /// <summary>

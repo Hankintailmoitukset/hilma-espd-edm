@@ -8,14 +8,14 @@ namespace Hilma.Espd.EDM.CriterionModel
     {
 
         public static TenderingCriterion[] Subcriterion =>
-         new TenderingCriterion[]
+         new[]
                {
                    new TenderingCriterion(){
                        Name ="[Name of the National Criterion]",
                        Description = new TextType[]{ "[Description of the National Criterion ]" },
                        Id ="e6b21867-95b5-4549-8180-f4673219b179",
                        CriterionTypeCode ="ON*",
-                       TenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                       TenderingCriterionPropertyGroups = new[]
                        {
                            new TenderingCriterionPropertyGroup(){
                                PropertyGroupTypeCode = new PropertyGroupTypeCode("NONE"),
@@ -31,13 +31,13 @@ namespace Hilma.Espd.EDM.CriterionModel
                };
 
         public static TenderingCriterionPropertyGroup[] ConvictionsQuestionGroup =>
-            new TenderingCriterionPropertyGroup[]
+            new[]
                 {
                     new TenderingCriterionPropertyGroup()
                     {
                         Id = new CriteriaTaxonomyIdentifier("7c637c0c-7703-4389-ba52-02997a055bd7"),
                         PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
-                        TenderingCriterionProperties = new TenderingCriterionProperty[]
+                        TenderingCriterionProperties = new[]
                         {
                            new TenderingCriterionProperty()
                            {
@@ -46,13 +46,13 @@ namespace Hilma.Espd.EDM.CriterionModel
                              ValueDataTypeCode ="INDICATOR"
                            }
                         },
-                        SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                        SubsidiaryTenderingCriterionPropertyGroups = new[]
                         {
                             new TenderingCriterionPropertyGroup()
                             {
                                 Id = new CriteriaTaxonomyIdentifier("41dd2e9b-1bfd-44c7-93ee-56bd74a4334b"),
                                 PropertyGroupTypeCode = new PropertyGroupTypeCode("ONTRUE"),
-                                TenderingCriterionProperties = new TenderingCriterionProperty[]
+                                TenderingCriterionProperties = new[]
                                 {
                                    new TenderingCriterionProperty()
                                    {
@@ -79,13 +79,13 @@ namespace Hilma.Espd.EDM.CriterionModel
                                      ValueDataTypeCode ="PERIOD"
                                    }
                                 },
-                                SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                                SubsidiaryTenderingCriterionPropertyGroups = new[]
                                 {
                                     new TenderingCriterionPropertyGroup()
                                     {
                                         Id = new CriteriaTaxonomyIdentifier("5f9f09f7-f701-432c-9fdc-c22c124a74c9"),
                                         PropertyGroupTypeCode ="ON*",
-                                        TenderingCriterionProperties = new TenderingCriterionProperty[]
+                                        TenderingCriterionProperties = new[]
                                         {
                                             new TenderingCriterionProperty()
                                                {
@@ -94,13 +94,13 @@ namespace Hilma.Espd.EDM.CriterionModel
                                                  ValueDataTypeCode ="INDICATOR"
                                                }
                                         },
-                                        SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                                        SubsidiaryTenderingCriterionPropertyGroups = new[]
                                         {
                                             new TenderingCriterionPropertyGroup()
                                             {
                                                 Id = new CriteriaTaxonomyIdentifier("74e6c7b4-757b-4b40-ada6-fad6a997c310"),
                                                 PropertyGroupTypeCode = new PropertyGroupTypeCode("ONTRUE"),
-                                                TenderingCriterionProperties = new TenderingCriterionProperty[]
+                                                TenderingCriterionProperties = new[]
                                                 {
                                                     new TenderingCriterionProperty()
                                                        {
@@ -121,7 +121,7 @@ namespace Hilma.Espd.EDM.CriterionModel
                     {
                         Id = new CriteriaTaxonomyIdentifier("9026e403-3eb6-4705-a9e9-e21a1efc867d"),
                         PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
-                        TenderingCriterionProperties = new TenderingCriterionProperty[]
+                        TenderingCriterionProperties = new[]
                         {
                            new TenderingCriterionProperty()
                            {
@@ -134,15 +134,16 @@ namespace Hilma.Espd.EDM.CriterionModel
                     }
                 };
 
+        // ReSharper disable once InconsistentNaming
         public static TenderingCriterionPropertyGroup[] Social_LawCriterionPropertyGroups =>
-            new TenderingCriterionPropertyGroup[]
+            new[]
                {
 
                    new TenderingCriterionPropertyGroup()
                    {
                        Id = new CriteriaTaxonomyIdentifier("976b5acb-c00f-46ca-8f83-5ce6abfdfe43"),
                        PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
-                       TenderingCriterionProperties = new TenderingCriterionProperty[]
+                       TenderingCriterionProperties = new[]
                        {
                            new TenderingCriterionProperty()
                            {
@@ -151,13 +152,13 @@ namespace Hilma.Espd.EDM.CriterionModel
                              ValueDataTypeCode ="INDICATOR"
                            },
                        },
-                       SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                       SubsidiaryTenderingCriterionPropertyGroups = new[]
                        {
                            new TenderingCriterionPropertyGroup()
                            {
                                Id = new CriteriaTaxonomyIdentifier("64a2102c-4af1-4ecb-97b3-0c41907ec0f6"),
                                PropertyGroupTypeCode = new PropertyGroupTypeCode("ONTRUE"),
-                               TenderingCriterionProperties = new TenderingCriterionProperty[]
+                               TenderingCriterionProperties = new[]
                                {
                                    new TenderingCriterionProperty()
                                    {
@@ -166,13 +167,13 @@ namespace Hilma.Espd.EDM.CriterionModel
                                      ValueDataTypeCode ="DESCRIPTION"
                                    },
                                },
-                               SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                               SubsidiaryTenderingCriterionPropertyGroups = new[]
                                {
                                    new TenderingCriterionPropertyGroup()
                                    {
                                        Id = new CriteriaTaxonomyIdentifier("5f9f09f7-f701-432c-9fdc-c22c124a74c9"),
                                        PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
-                                       TenderingCriterionProperties = new TenderingCriterionProperty[]
+                                       TenderingCriterionProperties = new[]
                                        {
                                            new TenderingCriterionProperty()
                                            {
@@ -181,13 +182,13 @@ namespace Hilma.Espd.EDM.CriterionModel
                                              ValueDataTypeCode ="DESCRIPTION"
                                            },
                                        },
-                                       SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                                       SubsidiaryTenderingCriterionPropertyGroups = new[]
                                        {
                                            new TenderingCriterionPropertyGroup()
                                            {
                                                Id = new CriteriaTaxonomyIdentifier("74e6c7b4-757b-4b40-ada6-fad6a997c310"),
                                                PropertyGroupTypeCode = new PropertyGroupTypeCode("ONTRUE"),
-                                               TenderingCriterionProperties = new TenderingCriterionProperty[]
+                                               TenderingCriterionProperties = new[]
                                                {
                                                    new TenderingCriterionProperty()
                                                    {
@@ -209,13 +210,13 @@ namespace Hilma.Espd.EDM.CriterionModel
                };
 
         public static TenderingCriterionPropertyGroup[] TenderingCriterionURLGroup =>
-            new TenderingCriterionPropertyGroup[]
+            new[]
             {
                 new TenderingCriterionPropertyGroup()
                 {
                     Id = new CriteriaTaxonomyIdentifier("0a166f0a-0c5f-42b0-81e9-0fc9fa598a48"),
                     PropertyGroupTypeCode = new PropertyGroupTypeCode("ONTRUE"),
-                    TenderingCriterionProperties = new TenderingCriterionProperty[]
+                    TenderingCriterionProperties = new[]
                     {
                         new TenderingCriterionProperty()
                         {
@@ -240,13 +241,13 @@ namespace Hilma.Espd.EDM.CriterionModel
             };
 
         public static TenderingCriterionPropertyGroup[] Business =>
-             new TenderingCriterionPropertyGroup[]
+             new[]
                {
                    new TenderingCriterionPropertyGroup()
                    {
                        Id = new CriteriaTaxonomyIdentifier("d91c11a1-f19e-4b83-8ade-c4be2bf00555"),
                        PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
-                       TenderingCriterionProperties = new TenderingCriterionProperty[]
+                       TenderingCriterionProperties = new[]
                        {
                            new TenderingCriterionProperty()
                            {
@@ -256,13 +257,13 @@ namespace Hilma.Espd.EDM.CriterionModel
                            },
                        },
 
-                       SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                       SubsidiaryTenderingCriterionPropertyGroups = new[]
                        {
                            new TenderingCriterionPropertyGroup()
                            {
                                Id = new CriteriaTaxonomyIdentifier("aeef523b-c8fc-4dba-9c34-03e34812567b"),
                                PropertyGroupTypeCode = new PropertyGroupTypeCode("ONTRUE"),
-                               TenderingCriterionProperties = new TenderingCriterionProperty[]
+                               TenderingCriterionProperties = new[]
                                {
                                    new TenderingCriterionProperty()
                                    {
@@ -285,7 +286,7 @@ namespace Hilma.Espd.EDM.CriterionModel
                    {
                        Id = new CriteriaTaxonomyIdentifier("9026e403-3eb6-4705-a9e9-e21a1efc867d"),
                        PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
-                       TenderingCriterionProperties = new TenderingCriterionProperty[]
+                       TenderingCriterionProperties = new[]
                        {
                            new TenderingCriterionProperty()
                            {
@@ -302,13 +303,13 @@ namespace Hilma.Espd.EDM.CriterionModel
              };
 
         public static TenderingCriterionPropertyGroup[] MisconductQuestions =>
-            new TenderingCriterionPropertyGroup[]
+            new[]
                {
                    new TenderingCriterionPropertyGroup()
                    {
                        Id = new CriteriaTaxonomyIdentifier("67362ec7-cec3-4cb8-a38e-5d7a2a31e6d8"),
                        PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
-                       TenderingCriterionProperties = new TenderingCriterionProperty[]
+                       TenderingCriterionProperties = new[]
                        {
                            new TenderingCriterionProperty()
                            {
@@ -317,13 +318,13 @@ namespace Hilma.Espd.EDM.CriterionModel
                              ValueDataTypeCode ="INDICATOR"
                            },
                        },
-                       SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                       SubsidiaryTenderingCriterionPropertyGroups = new[]
                        {
                            new TenderingCriterionPropertyGroup()
                            {
                                Id = new CriteriaTaxonomyIdentifier("2cbcf978-765c-40aa-996b-b1d082485cef"),
                                PropertyGroupTypeCode = new PropertyGroupTypeCode("ONTRUE"),
-                               TenderingCriterionProperties = new TenderingCriterionProperty[]
+                               TenderingCriterionProperties = new[]
                                {
                                    new TenderingCriterionProperty()
                                    {
@@ -338,7 +339,7 @@ namespace Hilma.Espd.EDM.CriterionModel
                            {
                                Id = new CriteriaTaxonomyIdentifier("5f9f09f7-f701-432c-9fdc-c22c124a74c9"),
                                PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
-                               TenderingCriterionProperties = new TenderingCriterionProperty[]
+                               TenderingCriterionProperties = new[]
                                {
                                    new TenderingCriterionProperty()
                                    {
@@ -347,13 +348,13 @@ namespace Hilma.Espd.EDM.CriterionModel
                                      ValueDataTypeCode ="INDICATOR"
                                    },
                                },
-                               SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                               SubsidiaryTenderingCriterionPropertyGroups = new[]
                                {
                                    new TenderingCriterionPropertyGroup()
                                    {
                                        Id = new CriteriaTaxonomyIdentifier("74e6c7b4-757b-4b40-ada6-fad6a997c310"),
                                        PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
-                                       TenderingCriterionProperties = new TenderingCriterionProperty[]
+                                       TenderingCriterionProperties = new[]
                                        {
                                            new TenderingCriterionProperty()
                                            {
@@ -372,13 +373,13 @@ namespace Hilma.Espd.EDM.CriterionModel
                };
 
         public static TenderingCriterionPropertyGroup[] ConflictOfInterestQuestions =>
-            new TenderingCriterionPropertyGroup[]
+            new[]
                {
                     new TenderingCriterionPropertyGroup()
                     {
                         Id = new CriteriaTaxonomyIdentifier("67362ec7-cec3-4cb8-a38e-5d7a2a31e6d8"),
                         PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
-                        TenderingCriterionProperties = new TenderingCriterionProperty[]
+                        TenderingCriterionProperties = new[]
                         {
                             new TenderingCriterionProperty()
                             {
@@ -387,13 +388,13 @@ namespace Hilma.Espd.EDM.CriterionModel
                                 ValueDataTypeCode ="INDICATOR"
                             },
                         },
-                        SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                        SubsidiaryTenderingCriterionPropertyGroups = new[]
                         {
                             new TenderingCriterionPropertyGroup()
                             {
                                 Id = new CriteriaTaxonomyIdentifier("73f0fe4c-4ed9-4343-8096-d898cf200146"),
                                 PropertyGroupTypeCode = new PropertyGroupTypeCode("ONTRUE"),
-                                TenderingCriterionProperties = new TenderingCriterionProperty[]
+                                TenderingCriterionProperties = new[]
                                 {
                                     new TenderingCriterionProperty()
                                     {

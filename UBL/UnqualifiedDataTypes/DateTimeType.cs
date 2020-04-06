@@ -1,10 +1,12 @@
 ﻿using System;
+using Hilma.UBL.Attributes;
 
 namespace Hilma.UBL.UnqualifiedDataTypes
 {
   /// <summary>
   /// A particular point in the progression of time, together with relevant supplementary information.
   /// </summary>
+  [Contract]
   public class DateTimeType
   {
     public DateTimeType(DateTime value = default)

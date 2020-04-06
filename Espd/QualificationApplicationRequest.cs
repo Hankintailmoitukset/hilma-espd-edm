@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Hilma.UBL.Attributes;
 using Hilma.UBL.CommonAggregateComponents;
 using Hilma.UBL.CommonExtensionComponents;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.Espd.EDM
 {
+  [Contract]
   public class QualificationApplicationRequest
   {
 
@@ -80,7 +82,7 @@ namespace Hilma.Espd.EDM
     /// </summary>
     [Required]
     public DateType IssueDate { get; set; }
-
+ 
     /// <summary>
     /// Time when the document was issued by the contracting authority.
     /// </summary>

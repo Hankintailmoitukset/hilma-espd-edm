@@ -1,38 +1,14 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using Hilma.UBL.Attributes;
 
 namespace Hilma.UBL.UnqualifiedDataTypes
 {
-  /// <summary>
-  /// Typed CodeType for enums
-  /// </summary>
-  /// <typeparam name="TListEnum"></typeparam>
-  public class CodeType<TListEnum> : CodeType where TListEnum : struct
-  {
-    public TListEnum ListValue { get; set; }
-
-    public override string Value
-    {
-      get => ListValue.ToString();
-      set
-      {
-        if (Enum.TryParse(value, true, out TListEnum listValue))
-        {
-          ListValue = listValue;
-        }
-
-        throw new ArgumentOutOfRangeException($"Not valid argument for {typeof(TListEnum)}");
-      }
-    }
-
-
-  }
-
   /// <summary>
   /// A character string (letters, figures, or symbols) that for brevity and/or language
   /// independence may be used to represent or replace a definitive value or text of an
   /// attribute together with relevant supplementary information.
   /// </summary>
+  [Contract]
   public class CodeType : IListValueType, ILocalizableType
   {
     /// <summary>
@@ -94,7 +70,7 @@ namespace Hilma.UBL.UnqualifiedDataTypes
     /// <summary>
     /// The value of the code
     /// </summary>
-    public virtual string Value { get; set; }
+    public string Value { get; set; }
 
     public static implicit operator string(CodeType c) => c.Value;
 

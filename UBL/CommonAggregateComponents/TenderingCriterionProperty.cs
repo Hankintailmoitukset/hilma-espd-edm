@@ -1,9 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Hilma.UBL.Attributes;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
 {
-    public class TenderingCriterionProperty
+  [Contract]
+  public class TenderingCriterionProperty
   {
     /// <summary>
     /// Identifies one specific property.

@@ -1,7 +1,9 @@
-﻿using Hilma.UBL.UnqualifiedDataTypes;
+﻿using Hilma.UBL.Attributes;
+using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
 {
+  [Contract]
   public class LocationCoordinateType
   {
 

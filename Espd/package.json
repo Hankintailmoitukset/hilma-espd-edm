@@ -2,9 +2,18 @@
   "name": "@hankintailmoitukset.fi/hilma-espd-edm",
   "version": "#{PACKAGE_VERSION}#",
   "description": "Hilma ESPD EDM Version 2.1 compatible typescript classes and default translations",
-  "files": [ "typings/*" ],
+  "files": [
+    "typings/*"
+  ],
   "author": "Hankintailmoitukset.fi",
   "license": "LGPL-3.0-only",
   "main": "typings/index.ts",
-  "module": "typings/index.ts"
+  "module": "typings/index.ts",
+  "scripts": {
+    "tsbuild": "tsc --project tsconfig.json"
+  },
+  "dependencies": {
+    "@types/lodash.assign": "^4.2.6",
+    "lodash.assign": "^4.2.0"
+  }
 }

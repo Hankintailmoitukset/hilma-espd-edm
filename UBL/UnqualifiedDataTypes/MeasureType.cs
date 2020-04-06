@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Hilma.UBL.Attributes;
 using Hilma.UBL.PrimitiveTypes;
 
 namespace Hilma.UBL.UnqualifiedDataTypes
@@ -6,6 +7,7 @@ namespace Hilma.UBL.UnqualifiedDataTypes
   /// <summary>
   /// A numeric value determined by measuring an object using a specified unit of measure.
   /// </summary>
+  [Contract]
   public class MeasureType : DecimalType
   {
     /// <summary>

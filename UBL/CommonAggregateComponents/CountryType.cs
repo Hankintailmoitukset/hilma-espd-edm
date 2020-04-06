@@ -1,8 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Hilma.UBL.Attributes;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
 {
+  [Contract]
   public class CountryType
   {
     /// <summary>

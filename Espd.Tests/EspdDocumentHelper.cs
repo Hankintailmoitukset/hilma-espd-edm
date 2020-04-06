@@ -6,7 +6,7 @@ namespace Hilma.Espd.Tests
 {
     public class EspdDocumentHelper
     {
-        public static QualificationApplicationRequest SCAbilitiesStaffSelfContainedRequest =>
+        public static QualificationApplicationRequest ScAbilitiesStaffSelfContainedRequest =>
             new QualificationApplicationRequest()
             {
                 ULBVersionID = new IdentifierType() { Value= "2.2" },

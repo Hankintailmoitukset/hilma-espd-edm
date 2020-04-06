@@ -1,11 +1,13 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using Hilma.UBL.Attributes;
 
 namespace Hilma.UBL.UnqualifiedDataTypes
 {
   /// <summary>
   /// An instance of time that occurs every day.
   /// </summary>
+  [Contract]
   public class TimeType
   {
     public TimeType(int hour, int minute, int second)
