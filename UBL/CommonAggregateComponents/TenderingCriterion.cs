@@ -31,7 +31,7 @@ namespace Hilma.UBL.CommonAggregateComponents
       /// Rule: The name should match the one from e-Certis, which should be the same as in the in the spreadsheets Criteria Taxonomy (Regulated ESPD) and Criteria Taxonomy (Self-contained ESPD), e.g. 'Convictions', 'Corruption', 'Fraud', 'Financial ratio', 'Subcontracting proportion', 'Allowance of checks', etc.).
       /// </remarks>
       [Required]
-      public NameType Name { get; set; }
+      public string Name { get; set; }
       /// <summary>
       /// An extended description of the criterion.
       /// </summary>
@@ -40,7 +40,7 @@ namespace Hilma.UBL.CommonAggregateComponents
       /// Note: The UBL specification allows always multiple lines of text for the component cbc:Description. This feature can be used to split long descriptions into multiple lines, specially when the description contains enumerations (see the criterion "Misinterpretation" for an example).
       /// </remarks>
       [Required]
-      public TextType[] Description { get; set; }
+      public string[] Description { get; set; }
       /// <summary>
       /// A weighting to provide for automatic scoring of the Criterion (normally a percentage, e.g. 0.1, 0.5)
       /// </summary>
@@ -61,7 +61,7 @@ namespace Hilma.UBL.CommonAggregateComponents
       /// <remarks>
       /// Rule: Used only in Self-contained ESPDs namely for ability and professional selection criteria in procedures organised in two stages.
       /// </remarks>
-      public TextType WeightingConsiderationDescription { get; set; }
+      public string WeightingConsiderationDescription { get; set; }
 
       /// <summary>
       /// One or more descendant criteria used namely to define a national exclusion criterion that specialises a more generic criterion like a EU exclusion criterion defined in the Directive.

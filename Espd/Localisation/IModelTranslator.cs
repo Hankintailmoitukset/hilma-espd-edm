@@ -1,6 +1,6 @@
 using Hilma.UBL.CommonAggregateComponents;
 
-namespace espd.service.Controllers
+namespace Hilma.Espd.EDM.Localisation
 {
   public interface IModelTranslator
   {

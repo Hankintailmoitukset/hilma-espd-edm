@@ -2,7 +2,6 @@
 
 
 import { IdentifierType } from './IdentifierType'
-import { NameType } from './NameType'
 import { CodeType } from './CodeType'
 
 import assign from 'lodash.assign'
@@ -14,6 +13,6 @@ export class LanguageType {
     
     
     id?: IdentifierType
-    name?: NameType
+    name?: string
     localeCode?: CodeType
 }

@@ -10,7 +10,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     [Required]
     public IdentifierType ID { get; set; }
 
-    public NameType Name { get; set; }
+    public string Name { get; set; }
 
     public CodeType LocaleCode { get; set; }
 

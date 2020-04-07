@@ -1,13 +1,8 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using espd.service.Controllers;
 using Hilma.Espd.EDM.CriterionModel;
 using Hilma.Espd.EDM.Localisation;
-using Hilma.Espd.EDM.Serializers;
-using Hilma.UBL.UnqualifiedDataTypes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Newtonsoft.Json;
 
 namespace Hilma.Espd.Tests
 {
@@ -48,8 +43,8 @@ namespace Hilma.Espd.Tests
             var criterion = criterionSpecificaton.ExclusionGrounds.Convictions.First();
             var translatedCriterion = translator.TranslateCriterion(criterion);
 
-            Assert.AreEqual("Participation in a criminal organisation", translatedCriterion.Name.Value);
-            Assert.AreEqual("Has the economic operator breached its obligations relating to the payment of taxes, both in the country in which it is established and in Member State of the contracting authority or contracting entity if other than the country of establishment?", translatedCriterion.Description.First().Value);
+            Assert.AreEqual("Participation in a criminal organisation", translatedCriterion.Name);
+            Assert.AreEqual("Has the economic operator breached its obligations relating to the payment of taxes, both in the country in which it is established and in Member State of the contracting authority or contracting entity if other than the country of establishment?", translatedCriterion.Description.First());
 
         }
 
@@ -64,14 +59,14 @@ namespace Hilma.Espd.Tests
 
             var translatedCriterion = translator.TranslateCriterion(criterion);
 
-            Assert.AreEqual("Payment of taxes", criterion.Name.Value);
+            Assert.AreEqual("Payment of taxes", criterion.Name);
             AssertDescription("Has the economic operator breached its obligations relating to the payment of taxes, both in the country in which it is established and in Member State of the contracting authority or contracting entity if other than the country of establishment?",  translatedCriterion.Description);
             
-            Assert.AreEqual("Threshold", criterion.TenderingCriterionPropertyGroups.First().TenderingCriterionProperties.First().Description.Value);
+            Assert.AreEqual("Threshold", criterion.TenderingCriterionPropertyGroups.First().TenderingCriterionProperties.First().Description);
 
 
-            Assert.AreEqual("Your answer", criterion.TenderingCriterionPropertyGroups.First().SubsidiaryTenderingCriterionPropertyGroups.First().TenderingCriterionProperties.First().Description.Value);
-            Assert.AreEqual("Country or member state concerned", criterion.TenderingCriterionPropertyGroups.First().SubsidiaryTenderingCriterionPropertyGroups.First().SubsidiaryTenderingCriterionPropertyGroups.First().TenderingCriterionProperties.First().Description.Value);
+            Assert.AreEqual("Your answer", criterion.TenderingCriterionPropertyGroups.First().SubsidiaryTenderingCriterionPropertyGroups.First().TenderingCriterionProperties.First().Description);
+            Assert.AreEqual("Country or member state concerned", criterion.TenderingCriterionPropertyGroups.First().SubsidiaryTenderingCriterionPropertyGroups.First().SubsidiaryTenderingCriterionPropertyGroups.First().TenderingCriterionProperties.First().Description);
 
         }
 
@@ -86,7 +81,7 @@ namespace Hilma.Espd.Tests
 
             var translatedCriterion = translator.TranslateCriterion(criterion);
 
-            Assert.AreEqual("Guilty of misinterpretation, withheld information, unable to provide required documents and obtained confidential information of this procedure", criterion.Name.Value);
+            Assert.AreEqual("Guilty of misinterpretation, withheld information, unable to provide required documents and obtained confidential information of this procedure", criterion.Name);
             AssertDescription(new[] {"Can the economic operator confirm that:",
                                      "a) It has been guilty of serious misrepresentation in supplying the information required for the verification of the absence of grounds for exclusion or the fulfilment of the selection criteria,",
                                      "b) It has withheld such information,",
@@ -95,12 +90,12 @@ namespace Hilma.Espd.Tests
 
         }
 
-        private void AssertDescription(string excpectedValue, TextType[] textTypes)
+        private void AssertDescription(string excpectedValue, string[] textTypes)
         {
             AssertDescription(new[] { excpectedValue }, textTypes);
         }
 
-        private void AssertDescription(string[] excpectedValue, TextType[] textTypes)
+        private void AssertDescription(string[] excpectedValue, string[] textTypes)
         {
             Assert.AreEqual(excpectedValue.Length, textTypes.Length,"List length not match");
             CollectionAssert.AreEqual(excpectedValue, (from o in textTypes select o.ToString()).ToArray());

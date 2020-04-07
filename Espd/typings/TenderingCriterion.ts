@@ -3,8 +3,6 @@
 
 import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
-import { NameType } from './NameType'
-import { TextType } from './TextType'
 import { DecimalType } from './DecimalType'
 import { Legislation } from './Legislation'
 import { TenderingCriterionPropertyGroup } from './TenderingCriterionPropertyGroup'
@@ -20,11 +18,11 @@ export class TenderingCriterion {
     
     id?: IdentifierType
     criterionTypeCode?: CodeType
-    name?: NameType
-    description?: TextType[]
+    name?: string
+    description?: string[]
     weightNumeric?: DecimalType
     evaluationMethodTypeCode?: CodeType
-    weightingConsiderationDescription?: TextType
+    weightingConsiderationDescription?: string
     subTenderingTenderingCriteria?: TenderingCriterion[]
     legislations?: Legislation[]
     tenderingCriterionPropertyGroups?: TenderingCriterionPropertyGroup[]

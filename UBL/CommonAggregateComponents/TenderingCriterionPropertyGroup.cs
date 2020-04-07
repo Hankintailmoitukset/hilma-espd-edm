@@ -19,12 +19,12 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <summary>
     /// The name of the group.
     /// </summary>
-    public NameType Name { get; set; }
+    public string Name { get; set; }
 
     /// <summary>
     /// The textual description for this group.
     /// </summary>
-    public TextType[] Description { get; set; }
+    public string[] Description { get; set; }
 
     /// <summary>
     /// Code addressed to control the behavior of the group of criteria.

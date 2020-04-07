@@ -11,7 +11,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// </summary>
     public CodeType PartyTypeCode { get; set; }
 
-    public TextType PartyType { get; set; }
+    public string PartyType { get; set; }
 
   }
 

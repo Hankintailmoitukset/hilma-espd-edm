@@ -33,11 +33,11 @@ namespace Hilma.UBL.CommonAggregateComponents
         /// <summary>
         /// The type of document being referenced, expressed as text.
         /// </summary>
-        public TextType DocumentType { get; set; }
+        public string DocumentType { get; set; }
         /// <summary>
         /// A reference to another place in the same XML document instance in which DocumentReference appears.
         /// </summary>
-        public TextType[] XPath { get; set; }
+        public string[] XPath { get; set; }
         /// <summary>
         /// An identifier for the language used in the referenced document.
         /// </summary>
@@ -57,7 +57,7 @@ namespace Hilma.UBL.CommonAggregateComponents
         /// <summary>
         /// Text describing the referenced document.
         /// </summary>
-        public TextType[] DocumentDescription { get; set; }
+        public string[] DocumentDescription { get; set; }
         /// <summary>
         /// A class to describe an attached document. An attachment can refer to an external document or be included with the document being exchanged.
         /// </summary>

@@ -10,40 +10,40 @@ namespace Hilma.UBL.CommonAggregateComponents
     public IdentifierType ID { get; set; }
     public CodeType AddressTypeCode { get; set; }
     public CodeType AddressFormatCode { get; set; }
-    public TextType Postbox { get; set; }
-    public TextType Floor { get; set; }
-    public TextType Room { get; set; }
+    public string Postbox { get; set; }
+    public string Floor { get; set; }
+    public string Room { get; set; }
 
     /// <summary>
     /// The main address line in an address. Usually the street name and number or post office box.
     /// </summary>
-    public NameType StreetName { get; set; }
-    public NameType AdditionalStreetName { get; set; }
-    public NameType BlockName { get; set; }
-    public NameType BuildingName { get; set; }
-    public TextType BuildingNumber { get; set; }
-    public TextType InhouseMail { get; set; }
-    public TextType Department { get; set; }
-    public TextType MarkAttention { get; set; }
-    public TextType MarkCare { get; set; }
-    public TextType PlotIdentification { get; set; }
-    public NameType CitySubdivisionName { get; set; }
+    public string StreetName { get; set; }
+    public string AdditionalStreetName { get; set; }
+    public string BlockName { get; set; }
+    public string BuildingName { get; set; }
+    public string BuildingNumber { get; set; }
+    public string InhouseMail { get; set; }
+    public string Department { get; set; }
+    public string MarkAttention { get; set; }
+    public string MarkCare { get; set; }
+    public string PlotIdentification { get; set; }
+    public string CitySubdivisionName { get; set; }
 
     /// <summary>
     /// The common name of a city where the address is located.
     /// </summary>
-    public NameType CityName { get; set; }
+    public string CityName { get; set; }
 
     /// <summary>
     /// The identifier for an addressable group of properties according to the relevant postal service, such as a ZIP code or Post Code.
     /// </summary>
-    public TextType PostalZone { get; set; }
-    public TextType CountrySubentity { get; set; }
+    public string PostalZone { get; set; }
+    public string CountrySubentity { get; set; }
     public CodeType CountrySubentityCode { get; set; }
-    public TextType Region { get; set; }
-    public TextType District { get; set; }
-    public TextType TimezoneOffset { get; set; }
-    public TextType[] AddressLines { get; set; }
+    public string Region { get; set; }
+    public string District { get; set; }
+    public string TimezoneOffset { get; set; }
+    public string[] AddressLines { get; set; }
 
     [Required]
     public CountryType Country { get; set; }

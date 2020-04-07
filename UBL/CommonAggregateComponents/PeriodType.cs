@@ -18,7 +18,7 @@ namespace Hilma.UBL.CommonAggregateComponents
 
     public CodeType[] DescriptionCode { get; set; }
 
-    public TextType[] Descriptions { get; set; }
+    public string[] Descriptions { get; set; }
 
   }
 

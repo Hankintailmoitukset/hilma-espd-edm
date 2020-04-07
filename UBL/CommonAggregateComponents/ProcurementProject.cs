@@ -14,12 +14,12 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// An overall description of the procurement procedure.
     /// </summary>
     /// <remarks>Use the same name that will be used for the Contract Notice.</remarks>
-    public TextType Name { get; set; }
+    public string Name { get; set; }
 
     /// <summary>
     /// A descriptive text for the procurement procedure.
     /// </summary>
-    public TextType Description { get; set; }
+    public string Description { get; set; }
 
     /// <summary>
     /// A code to describe the object of the project (e.g. works, supplies, services, public work concessions, service concessions, other).

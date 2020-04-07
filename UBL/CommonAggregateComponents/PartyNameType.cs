@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Hilma.UBL.Attributes;
-using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
 {
@@ -15,7 +14,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// </summary>
     /// <remarks>Mandatory. Use the official name of the contracting body.</remarks>
     [Required]
-    public NameType Name { get; set; }
+    public string Name { get; set; }
 
   }
 }
