@@ -388,112 +388,119 @@ namespace Hilma.Espd.EDM.CriterionModel
         {
           get
           {
-            return WrapWithLotRequirementGroup(
-              new TenderingCriterionPropertyGroup()
-              {
-                Id = new CriteriaTaxonomyIdentifier("6cce6b8e-c53d-4598-8150-ac49aba3b9c7"),
-                PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
-                TenderingCriterionProperties = new[]
-                {
-                  new TenderingCriterionProperty()
-                  {
-                    TypeCode = new CriterionElementType("QUESTION"),
-                    Description = "common.yourAnswer",
-                    ValueDataTypeCode = new ResponseDataTypeCode("INDICATOR")
-                  }
-                },
-                SubsidiaryTenderingCriterionPropertyGroups = new[]
+            return new[]
                 {
                   new TenderingCriterionPropertyGroup()
                   {
-                    Id = new CriteriaTaxonomyIdentifier("3a4a5421-81cc-468e-b69f-b86bf8c7932d"),
-                    PropertyGroupTypeCode = new PropertyGroupTypeCode("ONFALSE"),
-                    TenderingCriterionProperties = new[]
-                    {
-                      new TenderingCriterionProperty()
-                      {
-                        TypeCode = new CriterionElementType("QUESTION"),
-                        Description = "common.reasonWhyNotRegistered.description",
-                        ValueDataTypeCode = new ResponseDataTypeCode("INDICATOR")
-                      }
-                    }
-                  },
-                  new TenderingCriterionPropertyGroup()
-                  {
-                    Id = new CriteriaTaxonomyIdentifier("9026e403-3eb6-4705-a9e9-e21a1efc867d"),
+                    Id = new CriteriaTaxonomyIdentifier("a53561d5-6614-4dbe-987e-b96f35387f46"),
                     PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
                     TenderingCriterionProperties = new[]
                     {
                       new TenderingCriterionProperty()
                       {
-                        TypeCode = new CriterionElementType("QUESTION"),
-                        Description = "common.informationAvailableFromEUDb.description",
-                        ValueDataTypeCode = new ResponseDataTypeCode("INDICATOR")
-                      }
-
-                    },
-                    SubsidiaryTenderingCriterionPropertyGroups = TenderingCriterionURLGroup
-                  }
-                }
-              });
-          }
-        }
-
-
-        public static TenderingCriterionPropertyGroup[] WrapWithLotRequirementGroup( TenderingCriterionPropertyGroup group )
-        {
-          return new[]
-          {
-            new TenderingCriterionPropertyGroup()
-            {
-              Id = new CriteriaTaxonomyIdentifier("a53561d5-6614-4dbe-987e-b96f35387f4"),
-              PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
-              TenderingCriterionProperties = new[]
-              {
-                new TenderingCriterionProperty()
-                {
-                  TypeCode = new CriterionElementType("CAPTION"),
-                  Description = "common.lotTheRequirementAppliesTo.description",
-                  ValueDataTypeCode = new ResponseDataTypeCode("NONE"),
-                },
-                new TenderingCriterionProperty()
-                {
-                  TypeCode = new CriterionElementType("REQUIREMENT"),
-                  Description = "common.lotId.description",
-                  ValueDataTypeCode = new ResponseDataTypeCode("IDENTIFIER"),
-
-                },
-
-              },
-              SubsidiaryTenderingCriterionPropertyGroups =
-                new[]
-                {
-                  new TenderingCriterionPropertyGroup()
-                  {
-                    Id = new CriteriaTaxonomyIdentifier("3aacb82e-afba-440c-b64e-1834007965a2"),
-                    PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
-                    TenderingCriterionProperties = new[]
-                    {
-                      new TenderingCriterionProperty()
-                      {
-                        TypeCode = CriterionElementType.Requirement,
-                        Description = "common.registerName.description",
-                        ValueDataTypeCode = new ResponseDataTypeCode("DESCRIPTION"),
-
+                        TypeCode = new CriterionElementType("CAPTION"),
+                        Description = "common.lotTheRequirementAppliesTo.description",
+                        ValueDataTypeCode = new ResponseDataTypeCode("NONE"),
                       },
                       new TenderingCriterionProperty()
                       {
                         TypeCode = new CriterionElementType("REQUIREMENT"),
-                        Description = "common.url.description",
-                        ValueDataTypeCode = new ResponseDataTypeCode("URL")
-                      },
-                    }
+                        Description = "common.lotId.description",
+                        ValueDataTypeCode = new ResponseDataTypeCode("IDENTIFIER"),
 
-                  },
-                  group
-                }
-            }
-          };
+                      },
+
+                    },
+                    SubsidiaryTenderingCriterionPropertyGroups =
+                      new[]
+                      {
+                        new TenderingCriterionPropertyGroup()
+                        {
+                          Id = new CriteriaTaxonomyIdentifier("3aacb82e-afba-440c-b64e-1834007965a2"),
+                          PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                          TenderingCriterionProperties = new[]
+                          {
+                            new TenderingCriterionProperty()
+                            {
+                              TypeCode = CriterionElementType.Requirement,
+                              Description = "common.registerName.description",
+                              ValueDataTypeCode = new ResponseDataTypeCode("DESCRIPTION"),
+
+                            },
+                            new TenderingCriterionProperty()
+                            {
+                              TypeCode = new CriterionElementType("REQUIREMENT"),
+                              Description = "common.url.description",
+                              ValueDataTypeCode = new ResponseDataTypeCode("URL")
+                            },
+                          }
+
+                        },
+                        new TenderingCriterionPropertyGroup()
+                        {
+                          Id = new CriteriaTaxonomyIdentifier("6cce6b8e-c53d-4598-8150-ac49aba3b9c7"),
+                          PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                          TenderingCriterionProperties = new[]
+                          {
+                            new TenderingCriterionProperty()
+                            {
+                              TypeCode = new CriterionElementType("QUESTION"),
+                              Description = "common.yourAnswer",
+                              ValueDataTypeCode = new ResponseDataTypeCode("INDICATOR")
+                            }
+                          },
+                          SubsidiaryTenderingCriterionPropertyGroups = new[]
+                          {
+                            new TenderingCriterionPropertyGroup()
+                            {
+                              Id = new CriteriaTaxonomyIdentifier("70d5bbcf-0581-4d0f-b5c7-8b604a791972"),
+                              PropertyGroupTypeCode = new PropertyGroupTypeCode("ONTRUE"),
+                              TenderingCriterionProperties = new[]
+                              {
+                                new TenderingCriterionProperty()
+                                {
+                                  TypeCode = new CriterionElementType("QUESTION"),
+                                  Description = "common.registrationNumber.description",
+                                  ValueDataTypeCode = new ResponseDataTypeCode("DESCRIPTION")
+                                }
+                              }
+                            },
+                            new TenderingCriterionPropertyGroup()
+                            {
+                              Id = new CriteriaTaxonomyIdentifier("3a4a5421-81cc-468e-b69f-b86bf8c7932d"),
+                              PropertyGroupTypeCode = new PropertyGroupTypeCode("ONFALSE"),
+                              TenderingCriterionProperties = new[]
+                              {
+                                new TenderingCriterionProperty()
+                                {
+                                  TypeCode = new CriterionElementType("QUESTION"),
+                                  Description = "common.reasonWhyNotRegistered.description",
+                                  ValueDataTypeCode = new ResponseDataTypeCode("DESCRIPTION")
+                                }
+                              }
+                            },
+                            new TenderingCriterionPropertyGroup()
+                            {
+                              Id = new CriteriaTaxonomyIdentifier("9026e403-3eb6-4705-a9e9-e21a1efc867d"),
+                              PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                              TenderingCriterionProperties = new[]
+                              {
+                                new TenderingCriterionProperty()
+                                {
+                                  TypeCode = new CriterionElementType("QUESTION"),
+                                  Description = "common.informationAvailableFromEUDb.description",
+                                  ValueDataTypeCode = new ResponseDataTypeCode("INDICATOR")
+                                }
+
+                              },
+                              SubsidiaryTenderingCriterionPropertyGroups = TenderingCriterionURLGroup
+                            }
+                          }
+                        }
+                      }
+                  }
+                };
+              }
         }
 
     };

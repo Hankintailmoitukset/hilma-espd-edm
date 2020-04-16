@@ -53,7 +53,7 @@
 
   "misconduct.haveYouTakenMeasuresToDemonstrateYourReliability.description": "Have you taken measures to demonstrate your reliability",
   "misconduct.guiltyOfGraveProfessionalMisconduct.name": "Guilty of grave professional misconduct",
-  "misconduct.guiltyOfGraveProfessionalMisconduct.description": "Is the economic operator  guilty of grave professional misconduct? Where applicable, see definitions in national law, the relevant notice or the in the ESPD, the relevant notice or.",
+  "misconduct.guiltyOfGraveProfessionalMisconduct.description": "Is the economic operatorï¿½ guilty of grave professional misconduct? Where applicable, see definitions in national law, the relevant notice or the in the ESPD, the relevant notice or.",
   "misconduct.agreementsWithOtherEconomicOperators.name": "Agreements with other economic operators aimed at distorting competition",
   "misconduct.agreementsWithOtherEconomicOperators.description": "Has the economic operator entered into agreements with other economic operators aimed at distorting competition?",
 
@@ -106,6 +106,7 @@
   "common.lotTheRequirementAppliesTo.description": "Lots the requirement apply to",
   "common.lotId.description": "LotID",
   "common.registerName.description": "Register name",
+  "common.registrationNumber.description":"Registration number",
   "common.reasonWhyNotRegistered.description": "Reasons why your are not registered",
   "common.amount.description": "Amount",
   "common.startDate.description": "Start date",
