@@ -15,6 +15,7 @@ export class TenderingCriterionProperty {
     } 
     
     
+    _cardinality?: string
     id?: IdentifierType
     name?: string
     description?: string

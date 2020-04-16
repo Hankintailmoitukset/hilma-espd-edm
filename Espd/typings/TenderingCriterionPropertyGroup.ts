@@ -13,6 +13,7 @@ export class TenderingCriterionPropertyGroup {
     } 
     
     
+    _cardinality?: string
     id?: IdentifierType
     name?: string
     description?: string[]
