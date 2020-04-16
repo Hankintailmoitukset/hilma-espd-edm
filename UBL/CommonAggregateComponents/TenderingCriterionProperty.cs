@@ -8,6 +8,15 @@ namespace Hilma.UBL.CommonAggregateComponents
   public class TenderingCriterionProperty
   {
     /// <summary>
+    /// Metadata: Cardinality of the element. 
+    /// </summary>
+    /// <example>"1" specifies that the element is required and repeated only once </example>
+    /// <example>"0..1" specifies that the element is optional and repeated only once </example>
+    /// <example>"0..n" specifies that the element is optional and repeated zero to n times</example>
+    /// <example>"1..n" specifies that the element is required and repeated one to n times</example>
+    public string _cardinality = CardinalityMetadata.ExactlyOne;
+
+    /// <summary>
     /// Identifies one specific property.
     /// </summary>
     /// <remarks>
