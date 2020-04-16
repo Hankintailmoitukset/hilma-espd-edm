@@ -2,7 +2,6 @@
 
 
 import { IdentifierType } from './IdentifierType'
-import { TextType } from './TextType'
 import { LanguageType } from './LanguageType'
 import { AddressType } from './AddressType'
 
@@ -15,10 +14,10 @@ export class Legislation {
     
     
     id?: IdentifierType
-    titles?: TextType[]
-    descriptions?: TextType[]
-    jurisdictionLevels?: TextType[]
-    articles?: TextType[]
+    titles?: string[]
+    descriptions?: string[]
+    jurisdictionLevels?: string[]
+    articles?: string[]
     urIs?: IdentifierType[]
     languages?: LanguageType[]
     jurisdictionRegionAddresses?: AddressType[]

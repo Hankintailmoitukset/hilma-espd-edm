@@ -123,7 +123,7 @@ namespace Hilma.Espd.EDM
     /// Free-form text to describing information about Weight Scoring Methodology.
     /// </summary>
     /// <remarks>Used for transparency motives. Provide a text explaining clearly the method that will be used to select those selection criteria that will be weighted.</remarks>
-    public TextType[] WeightScoringMethodologyNote { get; set; }
+    public string[] WeightScoringMethodologyNote { get; set; }
 
     /// <summary>
     /// A code specifying the type of the Weighting.

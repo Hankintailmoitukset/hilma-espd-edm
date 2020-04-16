@@ -10,12 +10,7 @@ namespace Hilma.UBL.Serializers
     {
       return Element("ID", id.Value );
     }
-
-    public static XElement Serialize(this TextType text, string name )
-    {
-      return Element(name, text.Value);
-    }
-
+    
     public static XElement Element(string name, object value)
     {
       return new XElement(UblNames.Cbc + name, value);

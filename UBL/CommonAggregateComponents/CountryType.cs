@@ -19,7 +19,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <summary>
     /// The name of the country.
     /// </summary>
-    public NameType Name { get; set; }
+    public string Name { get; set; }
 
   }
 }

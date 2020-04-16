@@ -6,6 +6,6 @@ namespace Hilma.UBL.CommonAggregateComponents
   {
     public CodeType ActivityTypeCode { get; set; }
 
-    public TextType ActivityType { get; set; }
+    public string ActivityType { get; set; }
   }
 }

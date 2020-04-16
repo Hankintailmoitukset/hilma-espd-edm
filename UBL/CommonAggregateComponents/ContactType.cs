@@ -1,5 +1,4 @@
 ﻿using Hilma.UBL.Attributes;
-using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
 {
@@ -12,21 +11,21 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <summary>
     /// The name of the contact point.
     /// </summary>
-    public NameType Name { get; set; }
+    public string Name { get; set; }
 
     /// <summary>
     /// A phone number for the contact point.
     /// </summary>
-    public TextType Telephone { get; set; }
+    public string Telephone { get; set; }
 
     /// <summary>
     /// A fax number for the contact point.
     /// </summary>
-    public TextType Telefax { get; set; }
+    public string Telefax { get; set; }
 
     /// <summary>
     /// An e-mail address for the contact point.
     /// </summary>
-    public TextType ElectronicMail { get; set; }
+    public string ElectronicMail { get; set; }
   }
 }

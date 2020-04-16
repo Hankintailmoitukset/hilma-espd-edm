@@ -1,7 +1,6 @@
 ﻿
 
 
-import { TextType } from './TextType'
 import { CodeType } from './CodeType'
 import { CommodityClassificationType } from './CommodityClassificationType'
 
@@ -13,8 +12,8 @@ export class ProcurementProject {
     } 
     
     
-    name?: TextType
-    description?: TextType
+    name?: string
+    description?: string
     procurementTypeCode?: CodeType
     mainCommodityClassifications?: CommodityClassificationType[]
 }

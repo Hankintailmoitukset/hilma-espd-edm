@@ -6,7 +6,6 @@ import { IdentifierType } from './IdentifierType'
 import { DateType } from './DateType'
 import { TimeType } from './TimeType'
 import { CodeType } from './CodeType'
-import { TextType } from './TextType'
 import { ContractingParty } from './ContractingParty'
 import { ProcurementProject } from './ProcurementProject'
 import { ProcurementProjectLot } from './ProcurementProjectLot'
@@ -36,7 +35,7 @@ export class QualificationApplicationRequest {
     previousVersionID?: IdentifierType
     procedureCode?: CodeType
     qualificationApplicationTypeCode?: CodeType
-    weightScoringMethodologyNote?: TextType[]
+    weightScoringMethodologyNote?: string[]
     weightingTypeCode?: CodeType
     contractingParty?: ContractingParty
     procurementProject?: ProcurementProject

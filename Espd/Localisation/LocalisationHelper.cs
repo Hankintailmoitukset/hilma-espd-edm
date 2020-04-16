@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace Hilma.Espd.EDM.Localisation
 {
@@ -14,13 +13,13 @@ namespace Hilma.Espd.EDM.Localisation
             string filePath = @"Localisation/translations.default.json";
             try
             {
-                var jsonString = File.ReadAllText(filePath).ToString();
+                var jsonString = File.ReadAllText(filePath);
                 var localisationDictionary = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonString);
                 return localisationDictionary;
             }
             catch (Exception e)
             {
-                throw e;
+                throw;
             }
             
         }
@@ -34,7 +33,7 @@ namespace Hilma.Espd.EDM.Localisation
             }
             catch (Exception e)
             {
-                throw e;
+                throw;
             }
         }
 

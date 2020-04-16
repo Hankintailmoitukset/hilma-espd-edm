@@ -18,7 +18,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <summary>
     /// The name of the criterion property.
     /// </summary>
-    public NameType Name { get; set; }
+    public string Name { get; set; }
     /// <summary>
     /// The text of the caption, requirement or question.
     /// </summary>
@@ -26,7 +26,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// Rule: None.
     /// </remarks>
     [Required]
-    public TextType Description { get; set; }
+    public string Description { get; set; }
     /// <summary>
     /// The type of property. Used to verify that structure of the property is correct.
     /// </summary>
@@ -118,7 +118,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <remarks>
     /// Rule: Verify that the value of cac:TypeCode is set to QUESTION and that the cac:ValueTypeCode is different to NONE.
     /// </remarks>
-    public TextType[] CertificationLevelDescription { get; set; }
+    public string[] CertificationLevelDescription { get; set; }
     /// <summary>
     /// The type of Copy quality, expressed as a code.
     /// </summary>

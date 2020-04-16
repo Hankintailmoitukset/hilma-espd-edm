@@ -2,7 +2,6 @@
 
 
 import { IdentifierType } from './IdentifierType'
-import { TextType } from './TextType'
 import { DateType } from './DateType'
 import { TimeType } from './TimeType'
 import { CodeType } from './CodeType'
@@ -16,14 +15,14 @@ export class ExternalReferenceType {
     
     
     uri?: IdentifierType
-    documentHash?: TextType
-    hashAlgorithmMethod?: TextType
+    documentHash?: string
+    hashAlgorithmMethod?: string
     expiryDate?: DateType
     expiryTime?: TimeType
     mimeCode?: CodeType
     formatCode?: CodeType
     encodingCode?: CodeType
     characterSetCode?: CodeType
-    fileName?: TextType
-    description?: TextType[]
+    fileName?: string
+    description?: string[]
 }

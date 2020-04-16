@@ -18,7 +18,7 @@ namespace Hilma.UBL.CommonExtensionComponents
     /// <summary>
     ///  A name for the Extension assigned by the creator of the extension.
     /// </summary>
-    public NameType Name { get; set; }
+    public string Name { get; set; }
 
     /// <summary>
     /// An agency that maintains one or more Extensions.
@@ -28,7 +28,7 @@ namespace Hilma.UBL.CommonExtensionComponents
     /// <summary>
     ///  The name of the agency that maintains the Extension.
     /// </summary>
-    public NameType ExtensionAgencyName { get; set; }
+    public string ExtensionAgencyName { get; set; }
 
     /// <summary>
     /// The version of the Extension.
@@ -48,7 +48,7 @@ namespace Hilma.UBL.CommonExtensionComponents
     /// <summary>
     /// A description of the reason for the Extension.
     /// </summary>
-    public TextType ExtensionReason { get; set; }
+    public string ExtensionReason { get; set; }
 
     /// <summary>
     /// The definition of the extension content.

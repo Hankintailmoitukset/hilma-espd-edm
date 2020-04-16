@@ -1,8 +1,6 @@
 ﻿
 
 
-import { NameType } from './NameType'
-import { TextType } from './TextType'
 
 import assign from 'lodash.assign'
 
@@ -12,8 +10,8 @@ export class ContactType {
     } 
     
     
-    name?: NameType
-    telephone?: TextType
-    telefax?: TextType
-    electronicMail?: TextType
+    name?: string
+    telephone?: string
+    telefax?: string
+    electronicMail?: string
 }

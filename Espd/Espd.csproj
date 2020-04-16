@@ -93,9 +93,6 @@
     <None Update="typings\MeasureType.ts">
       <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\MeasureType.cs</CustomToolNamespace>
     </None>
-    <None Update="typings\NameType.ts">
-      <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\NameType.cs</CustomToolNamespace>
-    </None>
     <None Update="typings\NormalizedString.ts">
       <CustomToolNamespace>..\UBL\PrimitiveTypes\NormalizedString.cs</CustomToolNamespace>
     </None>
@@ -143,9 +140,6 @@
     </None>
     <None Update="typings\TenderingCriterionPropertyGroup.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\TenderingCriterionPropertyGroup.cs</CustomToolNamespace>
-    </None>
-    <None Update="typings\TextType.ts">
-      <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\TextType.cs</CustomToolNamespace>
     </None>
     <None Update="typings\TimeType.ts">
       <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\TimeType.cs</CustomToolNamespace>

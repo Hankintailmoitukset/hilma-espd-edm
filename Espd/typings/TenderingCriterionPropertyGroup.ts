@@ -2,8 +2,6 @@
 
 
 import { IdentifierType } from './IdentifierType'
-import { NameType } from './NameType'
-import { TextType } from './TextType'
 import { CodeType } from './CodeType'
 import { TenderingCriterionProperty } from './TenderingCriterionProperty'
 
@@ -16,8 +14,8 @@ export class TenderingCriterionPropertyGroup {
     
     
     id?: IdentifierType
-    name?: NameType
-    description?: TextType[]
+    name?: string
+    description?: string[]
     propertyGroupTypeCode?: CodeType
     fulfilmentIndicatorTypeCode?: CodeType
     tenderingCriterionProperties?: TenderingCriterionProperty[]
