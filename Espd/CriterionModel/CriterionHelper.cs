@@ -476,7 +476,7 @@ namespace Hilma.Espd.EDM.CriterionModel
                     {
                       new TenderingCriterionProperty()
                       {
-                        TypeCode = new CriterionElementType("REQUIREMENT"),
+                        TypeCode = CriterionElementType.Requirement,
                         Description = "common.registerName.description",
                         ValueDataTypeCode = new ResponseDataTypeCode("DESCRIPTION"),
 
