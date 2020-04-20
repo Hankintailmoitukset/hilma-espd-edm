@@ -343,7 +343,7 @@ namespace Hilma.Espd.EDM.CriterionModel
                                      _cardinality = CardinalityMetadata.ExactlyOne,
                                      TypeCode = new CriterionElementType("QUESTION"),
                                      Description ="common.pleaseDescribeThem.description",
-                                     ValueDataTypeCode = new ResponseDataTypeCode("INDICATOR")
+                                     ValueDataTypeCode = new ResponseDataTypeCode("DESCRIPTION")
                                    },
                                },
                                SubsidiaryTenderingCriterionPropertyGroups = new[]
@@ -375,7 +375,7 @@ namespace Hilma.Espd.EDM.CriterionModel
                                                      _cardinality = CardinalityMetadata.ExactlyOne,
                                                      TypeCode = new CriterionElementType("QUESTION"),
                                                      Description ="common.pleaseDescribeThem.description",
-                                                     ValueDataTypeCode = new ResponseDataTypeCode("INDICATOR")
+                                                     ValueDataTypeCode = new ResponseDataTypeCode("DESCRIPTION")
                                                    },
                                                },
 
