@@ -106,12 +106,14 @@
   "common.lotTheRequirementAppliesTo.description": "Lots the requirement apply to",
   "common.lotId.description": "LotID",
   "common.registerName.description": "Register name",
-  "common.registrationNumber.description":"Registration number",
+  "common.registrationNumber.description": "Registration number",
   "common.reasonWhyNotRegistered.description": "Reasons why your are not registered",
   "common.amount.description": "Amount",
   "common.startDate.description": "Start date",
   "common.endDate.description": "End date",
-  "common.startDateEndDate.description": "Start date;End date"
+  "common.startDateEndDate.description": "Start date;End date",
+  "common.isThisInformationAvailableElectronically.description": "Is this information available electronically?",
+  "common.evidenceSupplied": "Evidence Supplied"
 
 
 }
