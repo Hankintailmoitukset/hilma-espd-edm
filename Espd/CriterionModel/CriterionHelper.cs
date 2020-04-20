@@ -202,7 +202,7 @@ namespace Hilma.Espd.EDM.CriterionModel
                            }
 
                        }
-                   }
+                   },
                    new TenderingCriterionPropertyGroup()
                     {
                         _cardinality = CardinalityMetadata.ExactlyOne,
