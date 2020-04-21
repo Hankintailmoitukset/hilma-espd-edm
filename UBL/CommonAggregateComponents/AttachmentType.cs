@@ -1,5 +1,4 @@
 ﻿using Hilma.UBL.Attributes;
-using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
 {
@@ -15,7 +14,7 @@ namespace Hilma.UBL.CommonAggregateComponents
         /// <summary>
         /// A clear text object containing an attached document.
         /// </summary>
-        public TextType EmbeddedDocument { get; set; }
+        public string EmbeddedDocument { get; set; }
         /// <summary>
         /// A reference to an attached document that is external to the document(s) being exchanged.
         /// </summary>

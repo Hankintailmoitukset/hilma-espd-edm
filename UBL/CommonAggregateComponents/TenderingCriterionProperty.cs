@@ -8,6 +8,15 @@ namespace Hilma.UBL.CommonAggregateComponents
   public class TenderingCriterionProperty
   {
     /// <summary>
+    /// Metadata: Cardinality of the element. 
+    /// </summary>
+    /// <example>"1" specifies that the element is required and repeated only once </example>
+    /// <example>"0..1" specifies that the element is optional and repeated only once </example>
+    /// <example>"0..n" specifies that the element is optional and repeated zero to n times</example>
+    /// <example>"1..n" specifies that the element is required and repeated one to n times</example>
+    public string _cardinality { get; set; } = CardinalityMetadata.ExactlyOne;
+
+    /// <summary>
     /// Identifies one specific property.
     /// </summary>
     /// <remarks>
@@ -18,7 +27,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <summary>
     /// The name of the criterion property.
     /// </summary>
-    public NameType Name { get; set; }
+    public string Name { get; set; }
     /// <summary>
     /// The text of the caption, requirement or question.
     /// </summary>
@@ -26,7 +35,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// Rule: None.
     /// </remarks>
     [Required]
-    public TextType Description { get; set; }
+    public string Description { get; set; }
     /// <summary>
     /// The type of property. Used to verify that structure of the property is correct.
     /// </summary>
@@ -118,7 +127,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <remarks>
     /// Rule: Verify that the value of cac:TypeCode is set to QUESTION and that the cac:ValueTypeCode is different to NONE.
     /// </remarks>
-    public TextType[] CertificationLevelDescription { get; set; }
+    public string[] CertificationLevelDescription { get; set; }
     /// <summary>
     /// The type of Copy quality, expressed as a code.
     /// </summary>

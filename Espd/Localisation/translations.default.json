@@ -53,12 +53,12 @@
 
   "misconduct.haveYouTakenMeasuresToDemonstrateYourReliability.description": "Have you taken measures to demonstrate your reliability",
   "misconduct.guiltyOfGraveProfessionalMisconduct.name": "Guilty of grave professional misconduct",
-  "misconduct.guiltyOfGraveProfessionalMisconduct.description": "Is the economic operator  guilty of grave professional misconduct? Where applicable, see definitions in national law, the relevant notice or the in the ESPD, the relevant notice or.",
+  "misconduct.guiltyOfGraveProfessionalMisconduct.description": "Is the economic operatorï¿½ guilty of grave professional misconduct? Where applicable, see definitions in national law, the relevant notice or the in the ESPD, the relevant notice or.",
   "misconduct.agreementsWithOtherEconomicOperators.name": "Agreements with other economic operators aimed at distorting competition",
   "misconduct.agreementsWithOtherEconomicOperators.description": "Has the economic operator entered into agreements with other economic operators aimed at distorting competition?",
 
-  "conflictOfInterest.conflictOfIinterest.name": "Conflict of interest due to its participation in the procurement procedure",
-  "conflictOfInterest.conflictOfIinterest.description": "Is the economic operator aware of any conflict of interest, as indicated in national law, the relevant notice or the in the ESPD, the relevant notice or  due to its participation in the procurement procedure?",
+  "conflictOfInterest.conflictOfInterest.name": "Conflict of interest due to its participation in the procurement procedure",
+  "conflictOfInterest.conflictOfInterest.description": "Is the economic operator aware of any conflict of interest, as indicated in national law, the relevant notice or the in the ESPD, the relevant notice or  due to its participation in the procurement procedure?",
   "conflictOfInterest.directOrIndirectInvolvement.name": "Direct or indirect involvement in the preparation of this procurement procedure",
   "conflictOfInterest.directOrIndirectInvolvement.description": "Has the economic operator or an undertaking related to it advised the contracting authority or contracting entity or otherwise been involved in the preparation of the procurement procedure?",
 
@@ -71,6 +71,29 @@
   "misinterpretation.guiltyOfMisinterpretationB.description": "b) It has withheld such information,",
   "misinterpretation.guiltyOfMisinterpretationC.description": "c) It has not been able, without delay, to submit the supporting documents required by a contracting authority or contracting entity, and",
 
+  "suitability.enrolmentInRelevantProfessionalRegister.name": "Enrolment in a relevant professional register",
+  "suitability.enrolmentInRelevantProfessionalRegister.description": "\"It is enrolled in relevant professional registers kept in the Member State of its establishment as described in Annex XI of Directive 2014/24/EU; economic operators from certain Member States may have to comply with other requirements set out in that Annex.",
+  "suitability.tradeRegisterEnrolment.name": "Enrolment in a trade register",
+  "suitability.tradeRegisterEnrolment.description": "It is enrolled in trade registers kept in the Member State of its establishment as described in Annex XI of Directive 2014/24/EU; economic operators from certain Member States may have to comply with other requirements set out in that Annex.",
+  "suitability.authorisationForParticularOrganisationNeeded.name": "For service contracts: authorisation of particular organisation needed",
+  "suitability.authorisationForParticularOrganisationNeeded.description": "Is a particular membership of a particular organisation needed in order to be able to perform the service in question in the country of establishment of the economic operator?",
+  "suitability.membershipOfParticularOrganisationNeeded.name": "For service contracts: membership of particular organisation needed",
+  "suitability.membershipOfParticularOrganisationNeeded.description": "Is a particular membership of a particular organisation needed in order to be able to perform the service in question in the country of establishment of the economic operator?",
+
+  "economicFinancialStanding.generalTurnoverYearly.name": "General yearly turnover",
+  "economicFinancialStanding.generalTurnoverYearly.description": "Its general yearly turnover for the number of financial years required in the relevant notice, the in the ESPD, the relevant notice or  or the ESPD is as follows:",
+  "economicFinancialStanding.specificTurnoverYearly.name": "Specific yearly turnover",
+  "economicFinancialStanding.specificTurnoverYearly.description": "Its specific yearly turnover in the business area covered by the contract for the number of financial years required in the relevant notice, the in the ESPD, the relevant notice or  or the ESPD is as follows:",
+  "economicFinancialStanding.businessDomainDescription.description": "Business domain description",
+  "economicFinancialStanding.minimumRequirement.description": "Minimum requirement",
+  "economicFinancialStanding.numberOfFiscalYears.description": "Number of fiscal years",
+  "economicFinancialStanding.cpvsCaption.description": "CPVs:",
+  "economicFinancialStanding.cpvCode.description": "CPV Code",
+  "economicFinancialStanding.averageTurnoverYearly.name": "Average yearly turnover",
+  "economicFinancialStanding.averageTurnoverYearly.description": "Its average yearly turnover for the number of years required in the relevant notice, the in the ESPD, the relevant notice or  or the ESPD is as follows:",
+  "economicFinancialStanding.averageForRequiredPeriod.description": "Average for the required period",
+  "economicFinancialStanding.additionalInformation.description": "Additional information",
+
   "common.yourAnswer.description": "Your answer",
   "common.CountryOrMemberStateConcerned.description": "Country or member state concerned",
   "common.amountConcerned.description": "Amount concerned",
@@ -79,7 +102,18 @@
   "common.url.description": "URL",
   "common.verificationCode.description": "Verification code",
   "common.issuer.description": "Issuer",
-  "common.measuresToDemonstrateYourReliability.description": "Have you taken measures to demonstrate your reliability (Self-Cleaning)?"
+  "common.measuresToDemonstrateYourReliability.description": "Have you taken measures to demonstrate your reliability (Self-Cleaning)?",
+  "common.lotTheRequirementAppliesTo.description": "Lots the requirement apply to",
+  "common.lotId.description": "LotID",
+  "common.registerName.description": "Register name",
+  "common.registrationNumber.description": "Registration number",
+  "common.reasonWhyNotRegistered.description": "Reasons why your are not registered",
+  "common.amount.description": "Amount",
+  "common.startDate.description": "Start date",
+  "common.endDate.description": "End date",
+  "common.startDateEndDate.description": "Start date;End date",
+  "common.isThisInformationAvailableElectronically.description": "Is this information available electronically?",
+  "common.evidenceSupplied": "Evidence Supplied"
 
 
 }

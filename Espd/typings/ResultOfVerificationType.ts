@@ -5,7 +5,6 @@ import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
 import { DateType } from './DateType'
 import { TimeType } from './TimeType'
-import { TextType } from './TextType'
 import { PartyType } from './PartyType'
 
 import assign from 'lodash.assign'
@@ -20,8 +19,8 @@ export class ResultOfVerificationType {
     validationResultCode?: CodeType
     validationDate?: DateType
     validationTime?: TimeType
-    validateProcess?: TextType
-    validateTool?: TextType
-    validateToolVersion?: TextType
+    validateProcess?: string
+    validateTool?: string
+    validateToolVersion?: string
     signatoryParty?: PartyType
 }

@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>Hilma.Espd.EDM</PackageId>
     <Authors>Tuomas Tolvanen</Authors>
     <Company>Hankintailmoitukset.fi</Company>
@@ -8,7 +8,7 @@
     <Version>0.3.0</Version>
     <PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
     <Description>Open data model draft for EU ESPD version 2.1 EDM data model implemented as .NET Standard 2.1 library. The library will offer in the future support for XML and JSON serialization / deserialization
-</Description>
+    </Description>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <RootNamespace>Hilma.Espd.EDM</RootNamespace>
@@ -93,9 +93,6 @@
     <None Update="typings\MeasureType.ts">
       <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\MeasureType.cs</CustomToolNamespace>
     </None>
-    <None Update="typings\NameType.ts">
-      <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\NameType.cs</CustomToolNamespace>
-    </None>
     <None Update="typings\NormalizedString.ts">
       <CustomToolNamespace>..\UBL\PrimitiveTypes\NormalizedString.cs</CustomToolNamespace>
     </None>
@@ -144,9 +141,6 @@
     <None Update="typings\TenderingCriterionPropertyGroup.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\TenderingCriterionPropertyGroup.cs</CustomToolNamespace>
     </None>
-    <None Update="typings\TextType.ts">
-      <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\TextType.cs</CustomToolNamespace>
-    </None>
     <None Update="typings\TimeType.ts">
       <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\TimeType.cs</CustomToolNamespace>
     </None>
@@ -160,5 +154,11 @@
 
   <ItemGroup>
     <Folder Include="QualificationApplication\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Localisation\translations.default.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

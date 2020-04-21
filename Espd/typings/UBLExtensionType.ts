@@ -2,9 +2,7 @@
 
 
 import { IdentifierType } from './IdentifierType'
-import { NameType } from './NameType'
 import { CodeType } from './CodeType'
-import { TextType } from './TextType'
 
 import assign from 'lodash.assign'
 
@@ -15,12 +13,12 @@ export class UBLExtensionType {
     
     
     id?: IdentifierType
-    name?: NameType
+    name?: string
     extensionAgencyID?: IdentifierType
-    extensionAgencyName?: NameType
+    extensionAgencyName?: string
     extensionVersionID?: IdentifierType
     extensionAgencyURI?: IdentifierType
     extensionReasonCode?: CodeType
-    extensionReason?: TextType
+    extensionReason?: string
     extensionContent?: any
 }

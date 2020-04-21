@@ -1,7 +1,6 @@
 ﻿
 
 
-import { NameType } from './NameType'
 
 import assign from 'lodash.assign'
 
@@ -11,5 +10,5 @@ export class PartyNameType {
     } 
     
     
-    name?: NameType
+    name?: string
 }

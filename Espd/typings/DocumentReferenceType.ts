@@ -5,7 +5,6 @@ import { IdentifierType } from './IdentifierType'
 import { DateType } from './DateType'
 import { TimeType } from './TimeType'
 import { CodeType } from './CodeType'
-import { TextType } from './TextType'
 import { AttachmentType } from './AttachmentType'
 import { PeriodType } from './PeriodType'
 import { PartyType } from './PartyType'
@@ -25,13 +24,13 @@ export class DocumentReferenceType {
     issueDate?: DateType
     issueTime?: TimeType
     documentTypeCode?: CodeType
-    documentType?: TextType
-    xPath?: TextType[]
+    documentType?: string
+    xPath?: string[]
     languageID?: IdentifierType
     localeCode?: CodeType
     versionID?: IdentifierType
     documentStatusCode?: CodeType
-    documentDescription?: TextType[]
+    documentDescription?: string[]
     attachment?: AttachmentType
     validityPeriod?: PeriodType
     issuerParty?: PartyType

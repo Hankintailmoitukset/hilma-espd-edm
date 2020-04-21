@@ -74,7 +74,5 @@ namespace Hilma.UBL.UnqualifiedDataTypes
 
     public static implicit operator string(CodeType c) => c.Value;
 
-    public static implicit operator CodeType(string s) => new CodeType(s);
-
   }
 }

@@ -1,7 +1,6 @@
 ﻿
 
 
-import { TextType } from './TextType'
 import { ExternalReferenceType } from './ExternalReferenceType'
 
 import assign from 'lodash.assign'
@@ -13,6 +12,6 @@ export class AttachmentType {
     
     
     embeddedDocumentBinaryObject?: number[]
-    embeddedDocument?: TextType
+    embeddedDocument?: string
     externalReference?: ExternalReferenceType
 }

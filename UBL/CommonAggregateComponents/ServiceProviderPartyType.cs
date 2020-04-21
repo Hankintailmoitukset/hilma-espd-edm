@@ -22,7 +22,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <summary>
     /// Optional
     /// </summary>
-    public TextType[] ServiceType { get; set; }
+    public string[] ServiceType { get; set; }
 
     /// <summary>
     /// Main information about the service provider.

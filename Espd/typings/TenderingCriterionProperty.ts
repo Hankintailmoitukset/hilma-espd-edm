@@ -2,8 +2,6 @@
 
 
 import { IdentifierType } from './IdentifierType'
-import { NameType } from './NameType'
-import { TextType } from './TextType'
 import { CodeType } from './CodeType'
 import { NumericType } from './NumericType'
 import { PeriodType } from './PeriodType'
@@ -17,9 +15,10 @@ export class TenderingCriterionProperty {
     } 
     
     
+    _cardinality?: string
     id?: IdentifierType
-    name?: NameType
-    description?: TextType
+    name?: string
+    description?: string
     typeCode?: CodeType
     valueDataTypeCode?: CodeType
     valueUnitCode?: CodeType
@@ -34,7 +33,7 @@ export class TenderingCriterionProperty {
     maximumValueNumeric?: NumericType
     minimumValueNumeric?: NumericType
     translationTypeCode?: string
-    certificationLevelDescription?: TextType[]
+    certificationLevelDescription?: string[]
     copyQualityTypeCode?: CodeType
     applicablePeriod?: PeriodType[]
     templateEvidence?: EvidenceType[]

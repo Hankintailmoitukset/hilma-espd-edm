@@ -3,8 +3,6 @@
 
 import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
-import { TextType } from './TextType'
-import { NameType } from './NameType'
 import { CountryType } from './CountryType'
 import { LocationCoordinateType } from './LocationCoordinateType'
 import { ContactType } from './ContactType'
@@ -20,28 +18,28 @@ export class AddressType {
     id?: IdentifierType
     addressTypeCode?: CodeType
     addressFormatCode?: CodeType
-    postbox?: TextType
-    floor?: TextType
-    room?: TextType
-    streetName?: NameType
-    additionalStreetName?: NameType
-    blockName?: NameType
-    buildingName?: NameType
-    buildingNumber?: TextType
-    inhouseMail?: TextType
-    department?: TextType
-    markAttention?: TextType
-    markCare?: TextType
-    plotIdentification?: TextType
-    citySubdivisionName?: NameType
-    cityName?: NameType
-    postalZone?: TextType
-    countrySubentity?: TextType
+    postbox?: string
+    floor?: string
+    room?: string
+    streetName?: string
+    additionalStreetName?: string
+    blockName?: string
+    buildingName?: string
+    buildingNumber?: string
+    inhouseMail?: string
+    department?: string
+    markAttention?: string
+    markCare?: string
+    plotIdentification?: string
+    citySubdivisionName?: string
+    cityName?: string
+    postalZone?: string
+    countrySubentity?: string
     countrySubentityCode?: CodeType
-    region?: TextType
-    district?: TextType
-    timezoneOffset?: TextType
-    addressLines?: TextType[]
+    region?: string
+    district?: string
+    timezoneOffset?: string
+    addressLines?: string[]
     country?: CountryType
     locationCoordinates?: LocationCoordinateType[]
     contact?: ContactType
