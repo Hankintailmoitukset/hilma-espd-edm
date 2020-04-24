@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Hilma.Espd.EDM.CriterionModels.v2_1_0;
 using Hilma.Espd.EDM.Localisation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -38,8 +39,8 @@ namespace Hilma.Espd.Tests
             };
 
             var translator = new Translator(translationDictionary);
-            var criterionSpecificaton = new CriterionSpecificationFactory();
-            var criterion = criterionSpecificaton.ExclusionGrounds.Convictions.First();
+            var criterionSpecification = new CriterionSpecification();
+            var criterion = criterionSpecification.ExclusionGrounds.Convictions.First();
             var translatedCriterion = translator.TranslateCriterion(criterion);
 
             Assert.AreEqual("Participation in a criminal organisation", translatedCriterion.Name);
@@ -53,8 +54,8 @@ namespace Hilma.Espd.Tests
             var translationDictionary = LocalisationHelper.ParseDefaultLocalisation();
             var translator = new Translator(translationDictionary);
 
-            var criterionSpecificaton = new CriterionSpecificationFactory();
-            var criterion = criterionSpecificaton.ExclusionGrounds.Contributions.First();
+            var criterionSpecification = new CriterionSpecification();
+            var criterion = criterionSpecification.ExclusionGrounds.Contributions.First();
 
             var translatedCriterion = translator.TranslateCriterion(criterion);
 
@@ -75,8 +76,8 @@ namespace Hilma.Espd.Tests
             var translationDictionary = LocalisationHelper.ParseDefaultLocalisation();
             var translator = new Translator(translationDictionary);
 
-            var criterionSpecificaton = new CriterionSpecificationFactory();
-            var criterion = criterionSpecificaton.ExclusionGrounds.Misinterpretation.First();
+            var criterionSpecification = new CriterionSpecification();
+           var criterion = criterionSpecification.ExclusionGrounds.Misinterpretation.First();
 
             var translatedCriterion = translator.TranslateCriterion(criterion);
 
