@@ -6,7 +6,7 @@ branches:
     mode: ContinuousDelivery
     regex: ^feature(s)?[/-]
   master:
-    mode: Mainline
+    mode: ContinuousDeployment
 ignore:
   sha: []
 merge-message-formats: {}
