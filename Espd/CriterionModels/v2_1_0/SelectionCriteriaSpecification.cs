@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http.Headers;
-using Hilma.Espd.EDM.CriterionModel.Identifiers;
+using Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers;
 using Hilma.UBL.CommonAggregateComponents;
 
-namespace Hilma.Espd.EDM.CriterionModel
+namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
 {
   public class SelectionCriteriaSpecification : IEnumerable<TenderingCriterion>
   {
@@ -26,7 +25,7 @@ namespace Hilma.Espd.EDM.CriterionModel
 
     public TenderingCriterion[] Suitability => new[]
     {
-      new TenderingCriterion()
+      new TenderingCriterion
       {
         CriterionTypeCode = new CriterionTypeCode("CRITERION.SELECTION.SUITABILITY.PROFESSIONAL_REGISTER_ENROLMENT"),
         Name = "suitability.enrolmentInRelevantProfessionalRegister.name",
@@ -35,7 +34,7 @@ namespace Hilma.Espd.EDM.CriterionModel
         Legislations = new Legislation[] { },
         TenderingCriterionPropertyGroups =  CriterionHelper.SuitabilityRegisterQuestionsGroups
       },
-      new TenderingCriterion()
+      new TenderingCriterion
       {
         CriterionTypeCode = new CriterionTypeCode("CRITERION.SELECTION.SUITABILITY.TRADE_REGISTER_ENROLMENT"),
         Name = "suitability.tradeRegisterEnrolment.name",
@@ -44,7 +43,7 @@ namespace Hilma.Espd.EDM.CriterionModel
         Legislations = new Legislation[] { },
         TenderingCriterionPropertyGroups = CriterionHelper.SuitabilityRegisterQuestionsGroups
       },
-      new TenderingCriterion()
+      new TenderingCriterion
       {
         CriterionTypeCode = new CriterionTypeCode("CRITERION.SELECTION.SUITABILITY.AUTHORISATION"),
         Name = "suitability.authorisationForParticularOrganisationNeeded.name",
@@ -53,15 +52,15 @@ namespace Hilma.Espd.EDM.CriterionModel
         Legislations = new Legislation[] { },
         TenderingCriterionPropertyGroups = CriterionHelper.SuitabilityRegisterQuestionsGroups
       },
-      new TenderingCriterion()
+      new TenderingCriterion
       {
         CriterionTypeCode = new CriterionTypeCode("CRITERION.SELECTION.SUITABILITY.MEMBERSHIP"),
-        Name = "suitability.authorisationForParticularOrganisationNeeded.name",
-        Description = new[] {"suitability.authorisationForParticularOrganisationNeeded.description"},
+        Name = "suitability.membershipForParticularOrganisationNeeded.name",
+        Description = new[] {"suitability.membershipForParticularOrganisationNeeded.description"},
         Id = new CriteriaTaxonomyIdentifier("73f10e36-ed7a-412e-995c-aa76463e3776"),
         Legislations = new Legislation[] { },
         TenderingCriterionPropertyGroups = CriterionHelper.SuitabilityRegisterQuestionsGroups
-      },
+      }
 
     };
 
@@ -79,14 +78,14 @@ namespace Hilma.Espd.EDM.CriterionModel
     //       new TenderingCriterionPropertyGroup()
     //       {
     //         Id = new CriteriaTaxonomyIdentifier("5ca58d66-3ef1-4145-957c-45d5b18a837f"),
-    //         PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+    //         PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
     //         TenderingCriterionProperties = new []
     //         {
     //           new TenderingCriterionProperty()
     //           {
-    //             TypeCode = new CriterionElementType("REQUIREMENT"),
+    //             TypeCode = CriterionElementType.Requirement,
     //             Description = "economicFinancialStanding.minimumRequirement.description",
-    //             ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT")
+    //             ValueDataTypeCode = ResponseDataTypeCode.Amount
     //           },
     //         },
     //         SubsidiaryTenderingCriterionPropertyGroups = new []
@@ -94,26 +93,26 @@ namespace Hilma.Espd.EDM.CriterionModel
     //           new TenderingCriterionPropertyGroup()
     //           {
     //             Id = new CriteriaTaxonomyIdentifier("c0cd9c1c-e90a-4ff9-bce3-ac0fe31abf16"),
-    //             PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+    //             PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
     //             TenderingCriterionProperties = new []
     //             {
     //               new TenderingCriterionProperty()
     //               {
-    //                 TypeCode = new CriterionElementType("QUESTION"),
+    //                 TypeCode = CriterionElementType.Question,
     //                 Description = "common.amount.description",
-    //                 ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT"),
+    //                 ValueDataTypeCode = ResponseDataTypeCode.Amount,
     //               },
     //               new TenderingCriterionProperty()
     //               {
-    //                 TypeCode = new CriterionElementType("QUESTION"),
+    //                 TypeCode = CriterionElementType.Question,
     //                 Description = "common.startDate.description",
-    //                 ValueDataTypeCode = new ResponseDataTypeCode("DATE"),
+    //                 ValueDataTypeCode = ResponseDataTypeCode.Date,
     //               },
     //               new TenderingCriterionProperty()
     //               {
-    //                 TypeCode = new CriterionElementType("QUESTION"),
+    //                 TypeCode = CriterionElementType.Question,
     //                 Description = "common.endDate.description",
-    //                 ValueDataTypeCode = new ResponseDataTypeCode("DATE")
+    //                 ValueDataTypeCode = ResponseDataTypeCode.Date
     //               },
     //             }
     //           },
@@ -140,14 +139,14 @@ namespace Hilma.Espd.EDM.CriterionModel
     //       new TenderingCriterionPropertyGroup()
     //       {
     //         Id = new CriteriaTaxonomyIdentifier("5ca58d66-3ef1-4145-957c-45d5b18a837f"),
-    //         PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+    //         PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
     //         TenderingCriterionProperties = new[]
     //         {
     //           new TenderingCriterionProperty()
     //           {
-    //             TypeCode = new CriterionElementType("REQUIREMENT"),
+    //             TypeCode = CriterionElementType.Requirement,
     //             Description = "economicFinancialStanding.numberOfFiscalYears.description",
-    //             ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT")
+    //             ValueDataTypeCode = ResponseDataTypeCode.Amount
     //           }
 
     //         },
@@ -156,7 +155,7 @@ namespace Hilma.Espd.EDM.CriterionModel
     //           new TenderingCriterionPropertyGroup()
     //           {
     //             Id = new CriteriaTaxonomyIdentifier("6d87673d-af3f-4c39-b0e4-fbef046bd435"),
-    //             PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+    //             PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
     //             TenderingCriterionProperties = new[]
     //             {
     //               new TenderingCriterionProperty()
@@ -167,42 +166,42 @@ namespace Hilma.Espd.EDM.CriterionModel
     //               },
     //               new TenderingCriterionProperty()
     //               {
-    //                 TypeCode = new CriterionElementType("REQUIREMENT"),
+    //                 TypeCode = CriterionElementType.Requirement,
     //                 Description = "economicFinancialStanding.cpvCode.description",
     //                 ValueDataTypeCode = new ResponseDataTypeCode("CODE"),
     //               },
     //               new TenderingCriterionProperty()
     //               {
-    //                 TypeCode = new CriterionElementType("REQUIREMENT"),
+    //                 TypeCode = CriterionElementType.Requirement,
     //                 Description = "economicFinancialStanding.businessDomainDescription.description",
     //                 ValueDataTypeCode = new ResponseDataTypeCode("CODE"),
     //               },
     //               new TenderingCriterionProperty()
     //               {
-    //                 TypeCode = new CriterionElementType("QUESTION"),
+    //                 TypeCode = CriterionElementType.Question,
     //                 Description = "common.minimumRequirement.description",
-    //                 ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT")
+    //                 ValueDataTypeCode = ResponseDataTypeCode.Amount
     //               },
     //             }
     //           },
     //           new TenderingCriterionPropertyGroup()
     //           {
     //             Id = new CriteriaTaxonomyIdentifier("c0cd9c1c-e90a-4ff9-bce3-ac0fe31abf16"),
-    //             PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+    //             PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
     //             TenderingCriterionProperties = new[]
     //             {
 
     //               new TenderingCriterionProperty()
     //               {
-    //                 TypeCode = new CriterionElementType("QUESTION"),
+    //                 TypeCode = CriterionElementType.Question,
     //                 Description = "common.startDateEndDate.description",
-    //                 ValueDataTypeCode = new ResponseDataTypeCode("PERIOD"),
+    //                 ValueDataTypeCode = ResponseDataTypeCode.Period,
     //               },
     //               new TenderingCriterionProperty()
     //               {
-    //                 TypeCode = new CriterionElementType("QUESTION"),
+    //                 TypeCode = CriterionElementType.Question,
     //                 Description = "common.amount.description",
-    //                 ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT"),
+    //                 ValueDataTypeCode = ResponseDataTypeCode.Amount,
     //               }
     //             }
     //           }
@@ -229,20 +228,20 @@ namespace Hilma.Espd.EDM.CriterionModel
     //       new TenderingCriterionPropertyGroup()
     //       {
     //         Id = new CriteriaTaxonomyIdentifier("5ca58d66-3ef1-4145-957c-45d5b18a837f"),
-    //         PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+    //         PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
     //         TenderingCriterionProperties = new[]
     //         {
     //           new TenderingCriterionProperty()
     //           {
-    //             TypeCode = new CriterionElementType("REQUIREMENT"),
+    //             TypeCode = CriterionElementType.Requirement,
     //             Description = "common.startDateEndDate.description",
-    //             ValueDataTypeCode = new ResponseDataTypeCode("PERIOD"),
+    //             ValueDataTypeCode = ResponseDataTypeCode.Period,
     //           },
     //           new TenderingCriterionProperty()
     //           {
-    //             TypeCode = new CriterionElementType("REQUIREMENT"),
+    //             TypeCode = CriterionElementType.Requirement,
     //             Description = "economicFinancialStanding.minimumRequirement.description",
-    //             ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT")
+    //             ValueDataTypeCode = ResponseDataTypeCode.Amount
     //           },
 
     //         },
@@ -251,18 +250,18 @@ namespace Hilma.Espd.EDM.CriterionModel
     //           new TenderingCriterionPropertyGroup()
     //           {
     //             Id = new CriteriaTaxonomyIdentifier("e1886054-ada4-473c-9afc-2fde82c24cf4"),
-    //             PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+    //             PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
     //             TenderingCriterionProperties = new[]
     //             {
     //               new TenderingCriterionProperty()
     //               {
-    //                 TypeCode = new CriterionElementType("QUESTION"),
+    //                 TypeCode = CriterionElementType.Question,
     //                 Description = "economicFinancialStanding.averageForRequiredPeriod.description",
-    //                 ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT"),
+    //                 ValueDataTypeCode = ResponseDataTypeCode.Amount,
     //               },
     //               new TenderingCriterionProperty()
     //               {
-    //                 TypeCode = new CriterionElementType("QUESTION"),
+    //                 TypeCode = CriterionElementType.Question,
     //                 Description = "economicFinancialStanding.cpvCode.description",
     //                 ValueDataTypeCode = new ResponseDataTypeCode("DESCRIPTION"),
     //               }
