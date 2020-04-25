@@ -11,7 +11,7 @@ using System.Collections.Generic;
 {
   public class QualificationApplicationFactory
   {
-    public QualificationApplicationRequest CreateEspd2_1_0SelfContainedRequest(IdentifierType identifier, Guid uuid)
+    public QualificationApplicationRequest CreateEspd2_1_0SelfContainedRequest(IdentifierType identifier, IdentifierType contractFolderId, Guid uuid)
     {
       return new QualificationApplicationRequest()
       {
@@ -19,7 +19,7 @@ using System.Collections.Generic;
         UUID = new EuComGrowId(uuid),
         ProfileExecutionID = ProfileExecutionId.Espd2_1_0SelfContained,
         QualificationApplicationTypeCode = QualificationApplicationType.SelfContained,
-        ContractFolderID = new IdentifierType(),
+        ContractFolderID = contractFolderId,
         IssueDate = DateTime.UtcNow.Date,
         IssueTime = DateTime.UtcNow,
         ContractingParty = new ContractingParty(),
