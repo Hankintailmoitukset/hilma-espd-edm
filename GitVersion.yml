@@ -1,8 +1,6 @@
 assembly-versioning-scheme: Major
 mode: ContinuousDelivery
 next-version: 0.2.0
-branches:
-  master:
-    mode: Mainline
+mode: Mainline
 ignore:
   sha: []
