@@ -11,11 +11,11 @@ using System.Collections.Generic;
 {
   public class QualificationApplicationFactory
   {
-    public QualificationApplicationRequest CreateEspd2_1_0SelfContainedRequest( string identifier, Guid uuid)
+    public QualificationApplicationRequest CreateEspd2_1_0SelfContainedRequest(IdentifierType identifier, Guid uuid)
     {
       return new QualificationApplicationRequest()
       {
-        ID = new EuComGrowId(identifier),
+        ID = identifier,
         UUID = new EuComGrowId(uuid),
         ProfileExecutionID = ProfileExecutionId.Espd2_1_0SelfContained,
         QualificationApplicationTypeCode = QualificationApplicationType.SelfContained,
