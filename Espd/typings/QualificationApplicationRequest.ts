@@ -24,7 +24,7 @@ export class QualificationApplicationRequest {
     ulbVersionID?: IdentifierType
     customizationID?: IdentifierType
     profileID?: IdentifierType
-    profileExecutionID?: IdentifierType
+    profileExecutionID?: ProfileExecutionId
     id?: IdentifierType
     copyIndicator?: boolean
     uuid?: IdentifierType
