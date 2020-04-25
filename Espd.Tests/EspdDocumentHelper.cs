@@ -1,5 +1,6 @@
 ﻿using System;
 using Hilma.Espd.EDM;
+using Hilma.Espd.EDM.CriterionModels;
 using Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers;
 using Hilma.UBL.CommonAggregateComponents;
 using Hilma.UBL.UnqualifiedDataTypes;
@@ -14,7 +15,7 @@ namespace Hilma.Espd.Tests
                 ULBVersionID = new IdentifierType { Value= "2.2" },
                 CustomizationID = new IdentifierType { Value= "urn:www.cenbii.eu:transaction:biitrdm070:ver3.0" },
                 ProfileID=new IdentifierType {Value= "4.1" },
-                ProfileExecutionID = new IdentifierType {Value= "ESPD-EDMv2.1.0-SELFCONTAINED" },
+                ProfileExecutionID = ProfileExecutionId.Espd2_1_0SelfContained,
                 ID = new IdentifierType {Value= "576ae724-f8e8-4b51-ae9c-2c2f4c90f433", SchemeID = "ISO/IEC 9834-8:2008 - 4UUID", SchemeAgencyID = "EU-COM-GROW", SchemeAgencyName = "DG GROW (European Commission)" },
                 CopyIndicator=false,
                 UUID = new IdentifierType { Value= "7a186dda-ad3b-4c9d-9e1c-0b44c716b28e", SchemeID= "ISO/IEC 9834-8:2008 - 4UUID" },
