@@ -29,7 +29,7 @@ namespace Hilma.Espd.Tests
                 WeightingTypeCode = new CodeType {Value = "PERCENTAGE" },
                 ContractingParty = new ContractingParty
                 {
-                    PartyType = new PartyType
+                    Party = new PartyType
                     {
                         WebsiteURI = new IdentifierType("www.__Procurer.com"),
                         PartyIdentification = new[]

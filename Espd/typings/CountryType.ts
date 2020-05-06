@@ -1,7 +1,7 @@
 ﻿
 
 
-import { IdentifierType } from './IdentifierType'
+import { CodeType } from './CodeType'
 
 import assign from 'lodash.assign'
 
@@ -11,6 +11,6 @@ export class CountryType {
     } 
     
     
-    identificationCode?: IdentifierType
+    identificationCode?: CodeType
     name?: string
 }
