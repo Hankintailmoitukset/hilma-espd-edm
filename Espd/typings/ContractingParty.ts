@@ -13,5 +13,5 @@ export class ContractingParty {
     
     
     buyerProfileUri?: IdentifierType
-    partyType?: PartyType
+    party?: PartyType
 }

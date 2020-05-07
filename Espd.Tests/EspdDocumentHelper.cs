@@ -29,7 +29,7 @@ namespace Hilma.Espd.Tests
                 WeightingTypeCode = new CodeType {Value = "PERCENTAGE" },
                 ContractingParty = new ContractingParty
                 {
-                    PartyType = new PartyType
+                    Party = new PartyType
                     {
                         WebsiteURI = new IdentifierType("www.__Procurer.com"),
                         PartyIdentification = new[]
@@ -47,12 +47,12 @@ namespace Hilma.Espd.Tests
                             PostalZone = "12345",
                             Country = new CountryType
                             {
-                                IdentificationCode = new IdentifierType
+                                IdentificationCode = new CodeType()
                                 {
-                                    SchemeVersionID = "1.0",
-                                    SchemeAgencyID = "ISO",
-                                    SchemeName = "CountryCodeIdentifier",
-                                    SchemeID = "CountryCodeIdentifier",
+                                    ListVersionID = "1.0",
+                                    ListAgencyID = "ISO",
+                                    ListName = "CountryCodeIdentifier",
+                                    ListID = "CountryCodeIdentifier",
                                     Value = "GR"
                                 }
                             }
