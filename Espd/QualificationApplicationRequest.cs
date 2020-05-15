@@ -181,19 +181,28 @@ namespace Hilma.Espd.EDM
     {
       void FinalizeGroup(IEnumerable<TenderingCriterionPropertyGroup> groups)
       {
+        if( groups == null ){
+          return;
+        }
+
         foreach (var group in groups)
         {
-          foreach (var property in group.TenderingCriterionProperties)
+          if( group?.TenderingCriterionProperties != null)
           {
-            property.Id = EuComGrowId.Random();
+            foreach (var property in group.TenderingCriterionProperties)
+            {
+              property.Id = EuComGrowId.Random();
+            }
           }
-          FinalizeGroup(group.SubsidiaryTenderingCriterionPropertyGroups);
+
+          FinalizeGroup(group?.SubsidiaryTenderingCriterionPropertyGroups);
         }
       }
 
-      foreach (var criterion in TenderingCriteria)
+
+      foreach (var criterion in TenderingCriteria ?? Enumerable.Empty<TenderingCriterion>())
       {
-        FinalizeGroup(criterion.TenderingCriterionPropertyGroups);
+        FinalizeGroup(criterion?.TenderingCriterionPropertyGroups);
       }
     }
   }
