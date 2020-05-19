@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using Hilma.UBL.CommonAggregateComponents;
 
-namespace Hilma.Espd.EDM.CriterionModel
+namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
 {
+  
+  /// <summary>
+  /// ESPD EDM Version 2.1.0 specification
+  /// </summary>
   public class CriterionSpecification : IEnumerable<TenderingCriterion>
   {
-    public ExclusionGroundsSpecification ExclusionGrounds { get; set; } = new ExclusionGroundsSpecification();
 
-    public SelectionCriteriaSpecification SelectionCriteria { get; set; } = new SelectionCriteriaSpecification();
+    public ExclusionGroundsSpecification ExclusionGrounds { get; } = new ExclusionGroundsSpecification();
+
+    private SelectionCriteriaSpecification SelectionCriteria { get; } = new SelectionCriteriaSpecification();
 
     public IEnumerable<TenderingCriterion> AllCriteria => new[]
     {

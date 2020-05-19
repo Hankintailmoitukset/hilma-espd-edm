@@ -23,7 +23,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// Rule: Property identifiers must use UUID numbers (version 4) automatically generated. The responses of the economic operator (in the ESPD Response document) will refer to this UUID to link the response with one, and only one, criterion property. See the section about the ESPD Response for examples.
     /// </remarks>
     [Required]
-    public IdentifierType Id { get; set; }
+    public IdentifierType Id { get; set; } 
     /// <summary>
     /// The name of the criterion property.
     /// </summary>
@@ -36,6 +36,12 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// </remarks>
     [Required]
     public string Description { get; set; }
+
+    /// <summary>
+    /// The value of the property
+    /// </summary>
+    public object Value { get; set; }
+    
     /// <summary>
     /// The type of property. Used to verify that structure of the property is correct.
     /// </summary>

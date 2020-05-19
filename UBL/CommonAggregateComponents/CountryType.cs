@@ -14,7 +14,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// </summary>
     /// <remarks>The country of the contracting body must always be specified. Compulsory use of the code list CountryCodeIdentifier (ISO 3166-1 2A:2006).</remarks>
     [Required]
-    public IdentifierType IdentificationCode { get; set; }
+    public CodeType IdentificationCode { get; set; }
 
     /// <summary>
     /// The name of the country.

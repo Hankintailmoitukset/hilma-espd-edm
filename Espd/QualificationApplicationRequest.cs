@@ -1,4 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using Hilma.Espd.EDM.CriterionModels;
+using Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers;
 using Hilma.UBL.Attributes;
 using Hilma.UBL.CommonAggregateComponents;
 using Hilma.UBL.CommonExtensionComponents;
@@ -34,13 +39,13 @@ namespace Hilma.Espd.EDM
     /// An identification of the specification containing the total set of rules regarding semantic content, cardinalities and business rules to which the data contained in the instance document conforms. The identification may include the version of the specification as well as any customizations applied. 
     /// </summary>
     /// <remarks>Use the value "41". Use also "CEN-BII" for the scheme AgencyID attribute.</remarks>
+    [Required]
     public IdentifierType ProfileID { get; set; } = new IdentifierType("41") { SchemeAgencyID = "CEN-BII" };
 
     /// <summary>
     /// The identification and version of the ESPD Exchange Data Model used to create the to XML instance. The identification may include the exact version of the specification.
     /// </summary>
     /// <remarks>Compulsory use of the CodeList ProfileExecutionID. Use the value "EU-COM-GROW" for th SchemeAgencyID attribute.</remarks>
-    [Required]
     public IdentifierType ProfileExecutionID { get; set; }
 
     /// <summary>
@@ -168,6 +173,37 @@ namespace Hilma.Espd.EDM
     /// </summary>
     /// <remarks>For procurement procedures above the threshold it is compulsory to make reference to the Contract Notice of the procedure published in TED. See section "Reference to the Contract Notice" for a complete example.</remarks>
     public AdditionalDocumentReference[] AdditionalDocumentReferences { get; set; }
+    
+    /// <summary>
+    /// Finalize document properties
+    /// </summary>
+    public void FinalizeDocument()
+    {
+      void FinalizeGroup(IEnumerable<TenderingCriterionPropertyGroup> groups)
+      {
+        if( groups == null ){
+          return;
+        }
 
+        foreach (var group in groups)
+        {
+          if( group?.TenderingCriterionProperties != null)
+          {
+            foreach (var property in group.TenderingCriterionProperties)
+            {
+              property.Id = EuComGrowId.Random();
+            }
+          }
+
+          FinalizeGroup(group?.SubsidiaryTenderingCriterionPropertyGroups);
+        }
+      }
+
+
+      foreach (var criterion in TenderingCriteria ?? Enumerable.Empty<TenderingCriterion>())
+      {
+        FinalizeGroup(criterion?.TenderingCriterionPropertyGroups);
+      }
+    }
   }
 }

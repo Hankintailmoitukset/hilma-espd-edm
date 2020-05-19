@@ -1,10 +1,10 @@
-﻿namespace Hilma.Espd.EDM.CriterionModel.Identifiers
+﻿namespace Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers
 {
    
     public class CriteriaTaxonomyIdentifier : EuComGrowId {
     public CriteriaTaxonomyIdentifier( string identifier ) : base( identifier ) {
-        this.SchemeName = "CriteriaTaxonomy";
-        this.SchemeVersionID = "2.1.0";
+        SchemeName = "CriteriaTaxonomy";
+        SchemeVersionID = "2.1.0";
     }
   }
 }
