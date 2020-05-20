@@ -23,7 +23,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
             return AllCriteria.GetEnumerator();
         }
 
-        public TenderingCriterion[] Suitability => new[]
+       public TenderingCriterion[] Suitability => new[]
         {
           new TenderingCriterion
           {
@@ -63,7 +63,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
           }
 
         };
-        public TenderingCriterion[] GeneralTurnover => new[]
+        public TenderingCriterion[] GeneralYearlyTurnover => new[]
         {
             new TenderingCriterion()
             {
@@ -76,108 +76,122 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                 {
                     new TenderingCriterionPropertyGroup()
                     {
+                        _cardinality = CardinalityMetadata.OneOrMore,
                         Id = new CriteriaTaxonomyIdentifier("5ca58d66-3ef1-4145-957c-45d5b18a837f"),
-                        PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                        PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                         TenderingCriterionProperties = new []
                         {
                             new TenderingCriterionProperty()
                             {
-                              TypeCode = new CriterionElementType("REQUIREMENT"),
+                              _cardinality = CardinalityMetadata.ExactlyOne,
+                              TypeCode = CriterionElementType.Requirement,
                               Description = "economicFinancialStanding.minimumRequirement.description",
-                              ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT")
+                              ValueDataTypeCode = ResponseDataTypeCode.Amount
                             },
                         },
                         SubsidiaryTenderingCriterionPropertyGroups = new []
                         {
                             new TenderingCriterionPropertyGroup()
                             {
+                                _cardinality = CardinalityMetadata.ExactlyOne,
                                 Id = new CriteriaTaxonomyIdentifier("c0cd9c1c-e90a-4ff9-bce3-ac0fe31abf16"),
-                                PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                                PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                 TenderingCriterionProperties = new []
                                 {
                                     new TenderingCriterionProperty()
                                     {
-                                        TypeCode = new CriterionElementType("QUESTION"),
+                                        _cardinality = CardinalityMetadata.ExactlyOne,
+                                        TypeCode = CriterionElementType.Question,
                                         Description = "common.amount.description",
-                                        ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT"),
+                                        ValueDataTypeCode = ResponseDataTypeCode.Amount,
                                     },
+                                    //pitäisikö olla period tyyppinen eikä kahta date kenttää?
                                     new TenderingCriterionProperty()
                                     {
-                                        TypeCode = new CriterionElementType("QUESTION"),
+                                        _cardinality = CardinalityMetadata.ExactlyOne,
+                                        TypeCode = CriterionElementType.Question,
                                         Description = "common.startDate.description",
-                                        ValueDataTypeCode = new ResponseDataTypeCode("DATE"),
+                                        ValueDataTypeCode = ResponseDataTypeCode.Date, 
                                     },
                                     new TenderingCriterionProperty()
                                     {
-                                        TypeCode = new CriterionElementType("QUESTION"),
+                                        _cardinality = CardinalityMetadata.ExactlyOne,
+                                        TypeCode = CriterionElementType.Question,
                                         Description = "common.endDate.description",
-                                        ValueDataTypeCode = new ResponseDataTypeCode("DATE")
+                                        ValueDataTypeCode = ResponseDataTypeCode.Date
                                     },
                                 }
-                            }
+                            },
+                            CriterionHelper.TurnOverisThisInformationAvailableElectronically
                         }
                     }
                 }
             },
         };
-        public TenderingCriterion[] AverageTurnover => new[]
+        public TenderingCriterion[] GeneralAvarageTurnover => new[]
         {
             new TenderingCriterion()
-        {
-            CriterionTypeCode =
-              new CriterionTypeCode("CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.AVERAGE_YEARLY"),
-            Name = "economicFinancialStanding.averageTurnoverYearly.name",
-            Description = new[] {"economicFinancialStanding.specificTurnoverYearly.description"},
-            Id = new CriteriaTaxonomyIdentifier("b16cb9fc-6cb7-4585-9302-9533b415cf48"),
-            Legislations = new Legislation[] { },
-            TenderingCriterionPropertyGroups = new[]
             {
-              new TenderingCriterionPropertyGroup()
-              {
-                Id = new CriteriaTaxonomyIdentifier("5ca58d66-3ef1-4145-957c-45d5b18a837f"),
-                PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
-                TenderingCriterionProperties = new[]
-                {
-                  new TenderingCriterionProperty()
-                  {
-                    TypeCode = new CriterionElementType("REQUIREMENT"),
-                    Description = "common.startDateEndDate.description",
-                    ValueDataTypeCode = new ResponseDataTypeCode("PERIOD"),
-                  },
-                  new TenderingCriterionProperty()
-                  {
-                    TypeCode = new CriterionElementType("REQUIREMENT"),
-                    Description = "economicFinancialStanding.minimumRequirement.description",
-                    ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT")
-                  },
-
-                },
-                SubsidiaryTenderingCriterionPropertyGroups = new[]
+                CriterionTypeCode =
+                  new CriterionTypeCode("CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.AVERAGE_YEARLY"),
+                Name = "economicFinancialStanding.averageTurnoverYearly.name",
+                Description = new[] {"economicFinancialStanding.specificTurnoverYearly.description"},
+                Id = new CriteriaTaxonomyIdentifier("b16cb9fc-6cb7-4585-9302-9533b415cf48"),
+                Legislations = new Legislation[] { },
+                TenderingCriterionPropertyGroups = new[]
                 {
                   new TenderingCriterionPropertyGroup()
                   {
-                    Id = new CriteriaTaxonomyIdentifier("e1886054-ada4-473c-9afc-2fde82c24cf4"),
-                    PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                    _cardinality = CardinalityMetadata.ExactlyOne,
+                    Id = new CriteriaTaxonomyIdentifier("53882893-f4a8-40ae-99dc-cad7b0748790"),
+                    PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                     TenderingCriterionProperties = new[]
                     {
                       new TenderingCriterionProperty()
                       {
-                        TypeCode = new CriterionElementType("QUESTION"),
-                        Description = "economicFinancialStanding.averageForRequiredPeriod.description",
-                        ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT"),
+                        _cardinality = CardinalityMetadata.ExactlyOne,
+                        TypeCode = CriterionElementType.Requirement,
+                        Description = "common.startDateEndDate.description",
+                        ValueDataTypeCode = ResponseDataTypeCode.Period,
                       },
                       new TenderingCriterionProperty()
                       {
-                        TypeCode = new CriterionElementType("QUESTION"),
-                        Description = "economicFinancialStanding.cpvCode.description",
-                        ValueDataTypeCode = new ResponseDataTypeCode("DESCRIPTION"),
-                      }
+                        _cardinality = CardinalityMetadata.ExactlyOne,
+                        TypeCode = CriterionElementType.Requirement,
+                        Description = "economicFinancialStanding.minimumRequirement.description",
+                        ValueDataTypeCode = ResponseDataTypeCode.Amount
+                      },
+
+                    },
+                    SubsidiaryTenderingCriterionPropertyGroups = new[]
+                    {
+                      new TenderingCriterionPropertyGroup()
+                      {
+                        Id = new CriteriaTaxonomyIdentifier("e1886054-ada4-473c-9afc-2fde82c24cf4"),
+                        PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
+                        TenderingCriterionProperties = new[]
+                        {
+                          new TenderingCriterionProperty()
+                          {
+                            _cardinality = CardinalityMetadata.ExactlyOne,
+                            TypeCode = CriterionElementType.Question,
+                            Description = "economicFinancialStanding.averageForRequiredPeriod.description",
+                            ValueDataTypeCode = ResponseDataTypeCode.Amount,
+                          },
+                          new TenderingCriterionProperty()
+                          {
+                            _cardinality = CardinalityMetadata.ExactlyOne,
+                            TypeCode = CriterionElementType.Question,
+                            Description = "economicFinancialStanding.cpvCode.description",
+                            ValueDataTypeCode = ResponseDataTypeCode.Description,
+                          }
+                        }
+                      },
+                      CriterionHelper.TurnOverisThisInformationAvailableElectronically
                     }
                   }
                 }
-              }
-            }
-       }
+           }
         };
         public TenderingCriterion[] SpecificAverageTurnover => new[]
         {
@@ -195,29 +209,29 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                 {
                     _cardinality = CardinalityMetadata.ExactlyOne,
                     Id = new CriteriaTaxonomyIdentifier("6cff132b-8d15-4f79-ae37-2f9295432381"),
-                    PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                    PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                     TenderingCriterionProperties = new[]
                     {
                         new TenderingCriterionProperty()
                         {
                           _cardinality = CardinalityMetadata.ExactlyOne,
-                          TypeCode = new CriterionElementType("REQUIREMENT"),
+                          TypeCode = CriterionElementType.Requirement,
                           Description = "common.numberOfFiscalYears.description",
-                          ValueDataTypeCode = new ResponseDataTypeCode("QUANTITY_INTEGER"),
+                          ValueDataTypeCode = ResponseDataTypeCode.QuantityInteger,
                         },
                         new TenderingCriterionProperty()
                         {
                           _cardinality = CardinalityMetadata.OneOrMore,
-                          TypeCode = new CriterionElementType("REQUIREMENT"),
+                          TypeCode = CriterionElementType.Requirement,
                           Description = "specificAverageTurnover.ausinessDomainDescription.description",
-                          ValueDataTypeCode = new ResponseDataTypeCode("DESCRIPTION"),
+                          ValueDataTypeCode = ResponseDataTypeCode.Description,
                         },
                         new TenderingCriterionProperty()
                         {
                           _cardinality = CardinalityMetadata.ExactlyOne,
-                          TypeCode = new CriterionElementType("REQUIREMENT"),
+                          TypeCode = CriterionElementType.Requirement,
                           Description = "common.minimumRequirement.description",
-                          ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT"),
+                          ValueDataTypeCode = ResponseDataTypeCode.Amount,
                         },
                     },
                     SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
@@ -226,21 +240,22 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                        {
                          _cardinality = CardinalityMetadata.ExactlyOne,
                          Id = new CriteriaTaxonomyIdentifier("6d87673d-af3f-4c39-b0e4-fbef046bd435"),
-                         PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                         PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                          TenderingCriterionProperties = new[]
                          {
                            new TenderingCriterionProperty()
                            {
-                             TypeCode = new CriterionElementType("CAPTION"),
-                             Description = "CPVs:",
-                             ValueDataTypeCode = new ResponseDataTypeCode("NONE")
+                             TypeCode = CriterionElementType.Caption,
+                             Description = "specificAverageTurnover.cpvs.description",
+                            
+                             ValueDataTypeCode = ResponseDataTypeCode.None
                            },
                            new TenderingCriterionProperty()
                            {
                              _cardinality = CardinalityMetadata.OneOrMore,
-                             TypeCode = new CriterionElementType("REQUIREMENT"),
-                             Description = "CPV Code",
-                             ValueDataTypeCode = new ResponseDataTypeCode("CODE")
+                             TypeCode = CriterionElementType.Requirement,
+                             Description = "common.cpvCode.description",
+                             ValueDataTypeCode = ResponseDataTypeCode.Code
                            }
                          }
                         },
@@ -248,22 +263,22 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                        {
                            _cardinality = CardinalityMetadata.ExactlyOne,
                            Id = new CriteriaTaxonomyIdentifier("c0cd9c1c-e90a-4ff9-bce3-ac0fe31abf16"),
-                           PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                           PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                            TenderingCriterionProperties = new[]
                            {
                                new TenderingCriterionProperty()
                                {
                                  _cardinality = CardinalityMetadata.ExactlyOne,
-                                 TypeCode = new CriterionElementType("QUESTION"),
-                                 Description = "Start date; End date",
-                                 ValueDataTypeCode = new ResponseDataTypeCode("PERIOD")
+                                 TypeCode = CriterionElementType.Question,
+                                 Description = "specificAverageTurnover.startDateEndDate.description",
+                                 ValueDataTypeCode = ResponseDataTypeCode.Period
                                },
                                new TenderingCriterionProperty()
                                {
                                  _cardinality = CardinalityMetadata.ExactlyOne,
-                                 TypeCode = new CriterionElementType("QUESTION"),
-                                 Description = "Amount",
-                                 ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT")
+                                 TypeCode = CriterionElementType.Question,
+                                 Description = "common.amount.description",
+                                 ValueDataTypeCode = ResponseDataTypeCode.Amount
                                }
                            }
                        },
@@ -271,15 +286,15 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                        {
                            _cardinality = CardinalityMetadata.ExactlyOne,
                            Id = new CriteriaTaxonomyIdentifier("7458d42a-e581-4640-9283-34ceb3ad4345"),
-                           PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                           PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                            TenderingCriterionProperties = new[]
                            {
                                new TenderingCriterionProperty()
                                {
                                  _cardinality = CardinalityMetadata.ExactlyOne,
-                                 TypeCode = new CriterionElementType("QUESTION"),
-                                 Description = "Is this information available electronically?",
-                                 ValueDataTypeCode = new ResponseDataTypeCode("INDICATOR")
+                                 TypeCode = CriterionElementType.Question,
+                                 Description = "common.isThisInformationAvailableElectronically.description",
+                                 ValueDataTypeCode = ResponseDataTypeCode.Indicator
                                }
                            },
                            SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
@@ -288,15 +303,15 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                {
                                    _cardinality = CardinalityMetadata.ZeroOrMore,
                                    Id = new CriteriaTaxonomyIdentifier("41dd2e9b-1bfd-44c7-93ee-56bd74a4334b"),
-                                   PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                                   PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                    TenderingCriterionProperties = new[]
                                    {
                                        new TenderingCriterionProperty()
                                        {
                                          _cardinality = CardinalityMetadata.OneOrMore,
-                                         TypeCode = new CriterionElementType("QUESTION"),
-                                         Description = "Evidence Supplied",
-                                         ValueDataTypeCode = new ResponseDataTypeCode("EVIDENCE_IDENTIFIER")
+                                         TypeCode = CriterionElementType.Question,
+                                         Description = "common.evidenceSupplied",
+                                         ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
                                        }
                                     }
                                 }
@@ -307,7 +322,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
             }
             }
         };
-        public TenderingCriterion[] SpecificTurnover => new[]
+        
+        public TenderingCriterion[] SpecificYearlyTurnover => new[]
         {
             new TenderingCriterion()
             {
@@ -321,84 +337,97 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                 {
                     new TenderingCriterionPropertyGroup()
                     {
-                        Id = new CriteriaTaxonomyIdentifier("5ca58d66-3ef1-4145-957c-45d5b18a837f"),
-                        PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                        //id puuttuu
+                       // Id = new CriteriaTaxonomyIdentifier("5ca58d66-3ef1-4145-957c-45d5b18a837f"),
+                        _cardinality = CardinalityMetadata.ExactlyOne,
+                        PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                         TenderingCriterionProperties = new[]
                         {
                           new TenderingCriterionProperty()
                            {
-                             TypeCode = new CriterionElementType("REQUIREMENT"),
+                             _cardinality = CardinalityMetadata.ExactlyOne,
+                             TypeCode = CriterionElementType.Requirement,
                              Description = "economicFinancialStanding.numberOfFiscalYears.description",
-                             ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT")
-                           }
-
+                             ValueDataTypeCode = ResponseDataTypeCode.QuantityInteger
+                           },
+                          new TenderingCriterionProperty()
+                          {
+                            _cardinality= CardinalityMetadata.ExactlyOne,
+                            TypeCode = CriterionElementType.Requirement,
+                            Description = "economicFinancialStanding.businessDomainDescription.description",
+                            ValueDataTypeCode = ResponseDataTypeCode.Description,
+                          },
+                          new TenderingCriterionProperty()
+                          {
+                            _cardinality= CardinalityMetadata.ExactlyOne,
+                            TypeCode = CriterionElementType.Question,
+                            Description = "common.minimumRequirement.description",
+                            ValueDataTypeCode = ResponseDataTypeCode.Amount
+                          }
                         },
                         SubsidiaryTenderingCriterionPropertyGroups = new[]
                          {
                              new TenderingCriterionPropertyGroup()
                              {
+                                 _cardinality= CardinalityMetadata.ExactlyOne,
                                  Id = new CriteriaTaxonomyIdentifier("6d87673d-af3f-4c39-b0e4-fbef046bd435"),
-                                 PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                                 PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                  TenderingCriterionProperties = new[]
                                  {
                                    new TenderingCriterionProperty()
                                    {
-                                     TypeCode = new CriterionElementType("CAPTION"),
+                                     _cardinality= CardinalityMetadata.ExactlyOne,
+                                     TypeCode = CriterionElementType.Caption,
                                      Description = "economicFinancialStanding.cpvsCaption.description",
-                                     ValueDataTypeCode = new ResponseDataTypeCode("NONE"),
+                                     ValueDataTypeCode = ResponseDataTypeCode.None,
                                    },
                                    new TenderingCriterionProperty()
                                    {
-                                     TypeCode = new CriterionElementType("REQUIREMENT"),
-                                     Description = "economicFinancialStanding.cpvCode.description",
-                                     ValueDataTypeCode = new ResponseDataTypeCode("CODE"),
-                                   },
-                                   new TenderingCriterionProperty()
-                                   {
-                                     TypeCode = new CriterionElementType("REQUIREMENT"),
-                                     Description = "economicFinancialStanding.businessDomainDescription.description",
-                                     ValueDataTypeCode = new ResponseDataTypeCode("CODE"),
-                                   },
-                                   new TenderingCriterionProperty()
-                                   {
-                                     TypeCode = new CriterionElementType("QUESTION"),
-                                     Description = "common.minimumRequirement.description",
-                                     ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT")
-                                   },
+                                     _cardinality= CardinalityMetadata.OneOrMore,
+                                     TypeCode = CriterionElementType.Requirement,
+                                     Description = "common.cpvCode.description",
+                                     ValueDataTypeCode = ResponseDataTypeCode.Code,
+                                   }
+                                   
                                  }
                              },
                              new TenderingCriterionPropertyGroup()
-                       {
-                         Id = new CriteriaTaxonomyIdentifier("c0cd9c1c-e90a-4ff9-bce3-ac0fe31abf16"),
-                         PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
-                         TenderingCriterionProperties = new[]
-                         {
+                               {
+                                 _cardinality= CardinalityMetadata.OneOrMore,
+                                 Id = new CriteriaTaxonomyIdentifier("c0cd9c1c-e90a-4ff9-bce3-ac0fe31abf16"),
+                                 PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
+                                 TenderingCriterionProperties = new[]
+                                 {
 
-                           new TenderingCriterionProperty()
-                           {
-                             TypeCode = new CriterionElementType("QUESTION"),
-                             Description = "common.startDateEndDate.description",
-                             ValueDataTypeCode = new ResponseDataTypeCode("PERIOD"),
-                           },
-                           new TenderingCriterionProperty()
-                           {
-                             TypeCode = new CriterionElementType("QUESTION"),
-                             Description = "common.amount.description",
-                             ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT"),
-                           }
-                         }
-                       }
+                                   new TenderingCriterionProperty()
+                                   {
+                                     _cardinality= CardinalityMetadata.ExactlyOne,
+                                     TypeCode = CriterionElementType.Question,
+                                     Description = "common.startDateEndDate.description",
+                                     ValueDataTypeCode = ResponseDataTypeCode.Period,
+                                   },
+                                   new TenderingCriterionProperty()
+                                   {
+                                     _cardinality= CardinalityMetadata.ExactlyOne,
+                                     TypeCode = CriterionElementType.Question,
+                                     Description = "common.amount.description",
+                                     ValueDataTypeCode = ResponseDataTypeCode.Amount,
+                                   }
+                                 }
+                               },
+                             CriterionHelper.TurnOverisThisInformationAvailableElectronically
                          }
                     }
                 }
             },
         };
+
         public TenderingCriterion[] SetupOfEconomicOperator => new[]
         {
              new TenderingCriterion()
              {
                  CriterionTypeCode =
-                   new CriterionTypeCode("CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.SPECIFIC_YEARLY"),
+                   new CriterionTypeCode("CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.SET_UP"),
                  Name = "setupOfEconomicOperator.question.name",
                  Description = new[] {"setupOfEconomicOperator.question.description"},
                  Id = new CriteriaTaxonomyIdentifier("77f481ce-ffb6-483f-8e2b-c78db5e68292"),
@@ -409,15 +438,15 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                     {
                         _cardinality = CardinalityMetadata.ExactlyOne,
                         Id = new CriteriaTaxonomyIdentifier("e9aa7763-c167-4352-8060-1a3d7d3e2662"),
-                        PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                        PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                         TenderingCriterionProperties = new[]
                         {
                           new TenderingCriterionProperty()
                           {
                             _cardinality = CardinalityMetadata.ExactlyOne,
-                            TypeCode = new CriterionElementType("QUESTION"),
+                            TypeCode = CriterionElementType.Question,
                             Description = "setupOfEconomicOperator.pleaseSpecify.description",
-                            ValueDataTypeCode = new ResponseDataTypeCode("DATE")
+                            ValueDataTypeCode = ResponseDataTypeCode.Date
                           }
                         },
                         SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
@@ -426,15 +455,15 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                             {
                                 _cardinality = CardinalityMetadata.ExactlyOne,
                                 Id = new CriteriaTaxonomyIdentifier("7458d42a-e581-4640-9283-34ceb3ad4345"),
-                                PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                                PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                 TenderingCriterionProperties = new[]
                                 {
                                   new TenderingCriterionProperty()
                                   {
                                     _cardinality = CardinalityMetadata.ExactlyOne,
-                                    TypeCode = new CriterionElementType("QUESTION"),
+                                    TypeCode = CriterionElementType.Question,
                                     Description = "common.isThisInformationAvailableElectronically.description",
-                                    ValueDataTypeCode = new ResponseDataTypeCode("INDICATOR")
+                                    ValueDataTypeCode = ResponseDataTypeCode.Indicator
                                   }
                                 },
                                 SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
@@ -443,15 +472,15 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                     {
                                         _cardinality = CardinalityMetadata.ZeroOrMore,
                                         Id = new CriteriaTaxonomyIdentifier("41dd2e9b-1bfd-44c7-93ee-56bd74a4334b"),
-                                        PropertyGroupTypeCode = new PropertyGroupTypeCode("ONTRUE"),
+                                        PropertyGroupTypeCode = PropertyGroupTypeCode.OnTrue,
                                         TenderingCriterionProperties = new[]
                                         {
                                           new TenderingCriterionProperty()
                                           {
                                             _cardinality = CardinalityMetadata.OneOrMore,
-                                            TypeCode = new CriterionElementType("QUESTION"),
+                                            TypeCode = CriterionElementType.Question,
                                             Description = "common.evidenceSupplied",
-                                            ValueDataTypeCode = new ResponseDataTypeCode("EVIDENCE_IDENTIFIER")
+                                            ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
                                           }
                                         }
                                     }
@@ -462,7 +491,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                  }
              }
         };
-        public TenderingCriterion[] Financial_ratios => new[]
+        public TenderingCriterion[] FinancialRatios => new[]
         {
             new TenderingCriterion()
             {
@@ -478,15 +507,15 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                     {
                         _cardinality = CardinalityMetadata.OneOrMore,
                         Id = new CriteriaTaxonomyIdentifier("cc1da737-6c4e-4f4e-821d-c260029058f6"),
-                        PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                        PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                         TenderingCriterionProperties = new[]
                         {
                           new TenderingCriterionProperty()
                           {
                             _cardinality = CardinalityMetadata.ExactlyOne,
-                            TypeCode = new CriterionElementType("REQUIREMENT"),
+                            TypeCode = CriterionElementType.Requirement,
                             Description = "financialRatios.selectPeriods.description",
-                            ValueDataTypeCode = new ResponseDataTypeCode("PERIOD")
+                            ValueDataTypeCode = ResponseDataTypeCode.Period
                           }
                         },
                         SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
@@ -496,29 +525,29 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                             {
                                 _cardinality = CardinalityMetadata.OneOrMore,
                                 Id = new CriteriaTaxonomyIdentifier("ee486082-93fa-4c17-8920-fdf01b890bd1"),
-                                PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                                PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                 TenderingCriterionProperties = new[]
                                 {
                                   new TenderingCriterionProperty()
                                   {
                                     _cardinality = CardinalityMetadata.ExactlyOne,
-                                    TypeCode = new CriterionElementType("REQUIREMENT"),
+                                    TypeCode = CriterionElementType.Requirement,
                                     Description = "financialRatios.ratioType.description",
-                                    ValueDataTypeCode = new ResponseDataTypeCode("CODE")
+                                    ValueDataTypeCode = ResponseDataTypeCode.Code
                                   },
                                   new TenderingCriterionProperty()
                                   {
                                     _cardinality = CardinalityMetadata.ExactlyOne,
-                                    TypeCode = new CriterionElementType("REQUIREMENT"),
+                                    TypeCode = CriterionElementType.Requirement,
                                     Description = "financialRatios.definition.description",
-                                    ValueDataTypeCode = new ResponseDataTypeCode("DESCRIPTION")
+                                    ValueDataTypeCode = ResponseDataTypeCode.Description
                                   },
                                   new TenderingCriterionProperty()
                                   {
                                     _cardinality = CardinalityMetadata.ExactlyOne,
-                                    TypeCode = new CriterionElementType("REQUIREMENT"),
+                                    TypeCode = CriterionElementType.Requirement,
                                     Description = "common.minimumRequirement.description",
-                                    ValueDataTypeCode = new ResponseDataTypeCode("QUANTITY")
+                                    ValueDataTypeCode = ResponseDataTypeCode.Quantity
                                   }
                                 }
                             },
@@ -526,15 +555,15 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                             {
                                 _cardinality = CardinalityMetadata.ExactlyOne,
                                 Id = new CriteriaTaxonomyIdentifier("e9aa7763-c167-4352-8060-1a3d7d3e2662"),
-                                PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                                PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                 TenderingCriterionProperties = new[]
                                 {
                                   new TenderingCriterionProperty()
                                   {
                                     _cardinality = CardinalityMetadata.ExactlyOne,
-                                    TypeCode = new CriterionElementType("QUESTION"),
+                                    TypeCode = CriterionElementType.Question,
                                     Description = "financialRatios.pleaseProvideYourRatio.description",
-                                    ValueDataTypeCode = new ResponseDataTypeCode("QUANTITY")
+                                    ValueDataTypeCode = ResponseDataTypeCode.Quantity
                                   }
                                 }
                             },
@@ -542,15 +571,15 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                             {
                                 _cardinality = CardinalityMetadata.ExactlyOne,
                                 Id = new CriteriaTaxonomyIdentifier("7458d42a-e581-4640-9283-34ceb3ad4345"),
-                                PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                                PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                 TenderingCriterionProperties = new[]
                                 {
                                   new TenderingCriterionProperty()
                                   {
                                     _cardinality = CardinalityMetadata.ExactlyOne,
-                                    TypeCode = new CriterionElementType("QUESTION"),
+                                    TypeCode = CriterionElementType.Question,
                                     Description = "common.isThisInformationAvailableElectronically.description",
-                                    ValueDataTypeCode = new ResponseDataTypeCode("INDICATOR")
+                                    ValueDataTypeCode = ResponseDataTypeCode.Indicator
                                   }
                                 },
                                 SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
@@ -559,15 +588,15 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                     {
                                         _cardinality = CardinalityMetadata.Optional,
                                         Id = new CriteriaTaxonomyIdentifier("41dd2e9b-1bfd-44c7-93ee-56bd74a4334b"),
-                                        PropertyGroupTypeCode = new PropertyGroupTypeCode("ONTRUE"),
+                                        PropertyGroupTypeCode = PropertyGroupTypeCode.OnTrue,
                                         TenderingCriterionProperties = new[]
                                         {
                                           new TenderingCriterionProperty()
                                           {
                                             _cardinality = CardinalityMetadata.OneOrMore,
-                                            TypeCode = new CriterionElementType("QUESTION"),
+                                            TypeCode = CriterionElementType.Question,
                                             Description = "common.evidenceSupplied",
-                                            ValueDataTypeCode = new ResponseDataTypeCode("EVIDENCE_IDENTIFIER")
+                                            ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
                                           }
                                         }
                                     }
@@ -595,15 +624,15 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                      {
                         _cardinality = CardinalityMetadata.OneOrMore,
                         Id = new CriteriaTaxonomyIdentifier("83e3dcc4-c9b3-47e5-9fb8-ffd8386679f1"),
-                        PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                        PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                         TenderingCriterionProperties = new[]
                         {
                           new TenderingCriterionProperty()
                           {
                             _cardinality = CardinalityMetadata.ExactlyOne,
-                            TypeCode = new CriterionElementType("CAPTION"),
+                            TypeCode = CriterionElementType.Caption,
                             Description = "common.lotsTheEequirementAppliesTo.description",
-                            ValueDataTypeCode = new ResponseDataTypeCode("NONE")
+                            ValueDataTypeCode = ResponseDataTypeCode.None
                           }
                         },
                         SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
@@ -612,15 +641,15 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                             {
                                 _cardinality = CardinalityMetadata.OneOrMore,
                                 Id = new CriteriaTaxonomyIdentifier("cc1da737-6c4e-4f4e-821d-c260029058f6"),
-                                PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                                PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                 TenderingCriterionProperties = new[]
                                 {
                                   new TenderingCriterionProperty()
                                   {
                                     _cardinality = CardinalityMetadata.ZeroOrMore,
-                                    TypeCode = new CriterionElementType("REQUIREMENT"),
+                                    TypeCode = CriterionElementType.Requirement,
                                     Description = "professionalRiskInsuranse.lotIds.description",
-                                    ValueDataTypeCode = new ResponseDataTypeCode("LOT_IDENTIFIER")
+                                    ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
                                   }
                                 },
                                 SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
@@ -629,22 +658,22 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                     {
                                         _cardinality = CardinalityMetadata.OneOrMore,
                                         Id = new CriteriaTaxonomyIdentifier("6fc3a90b-0759-4517-af64-ce7d6eb4bf24"),
-                                        PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                                        PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                         TenderingCriterionProperties = new[]
                                         {
                                           new TenderingCriterionProperty()
                                           {
                                             _cardinality = CardinalityMetadata.ExactlyOne,
-                                            TypeCode = new CriterionElementType("REQUIREMENT"),
+                                            TypeCode = CriterionElementType.Requirement,
                                             Description = "professionalRiskInsuranse.typeOfInsurance.description",
-                                            ValueDataTypeCode = new ResponseDataTypeCode("DESCRIPTION")
+                                            ValueDataTypeCode = ResponseDataTypeCode.Description
                                           },
                                           new TenderingCriterionProperty()
                                           {
                                             _cardinality = CardinalityMetadata.ExactlyOne,
-                                            TypeCode = new CriterionElementType("REQUIREMENT"),
+                                            TypeCode = CriterionElementType.Requirement,
                                             Description = "professionalRiskInsuranse.minimumAmount.description",
-                                            ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT")
+                                            ValueDataTypeCode = ResponseDataTypeCode.Amount
                                           }
                                         },
                                         SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
@@ -653,29 +682,29 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                             {
                                                 _cardinality = CardinalityMetadata.ExactlyOne,
                                                 Id = new CriteriaTaxonomyIdentifier("42dc8062-974d-4201-91ba-7f2ea90338fd"),
-                                                PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                                                PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                                 TenderingCriterionProperties = new[]
                                                 {
                                                   new TenderingCriterionProperty()
                                                   {
                                                     _cardinality = CardinalityMetadata.ExactlyOne,
-                                                    TypeCode = new CriterionElementType("QUESTION"),
+                                                    TypeCode = CriterionElementType.Question,
                                                     Description = "common.amount.description",
-                                                    ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT")
+                                                    ValueDataTypeCode = ResponseDataTypeCode.Amount
                                                   },
                                                   new TenderingCriterionProperty()
                                                   {
                                                     _cardinality = CardinalityMetadata.ExactlyOne,
-                                                    TypeCode = new CriterionElementType("QUESTION"),
+                                                    TypeCode = CriterionElementType.Question,
                                                     Description = "professionalRiskInsuranse.asAnEO.description",
-                                                    ValueDataTypeCode = new ResponseDataTypeCode("INDICATOR")
+                                                    ValueDataTypeCode = ResponseDataTypeCode.Indicator
                                                   },
                                                   new TenderingCriterionProperty()
                                                   {
                                                     _cardinality = CardinalityMetadata.ExactlyOne,
-                                                    TypeCode = new CriterionElementType("QUESTION"),
+                                                    TypeCode = CriterionElementType.Question,
                                                     Description = "professionalRiskInsuranse.iAmExempt.description",
-                                                    ValueDataTypeCode = new ResponseDataTypeCode("INDICATOR")
+                                                    ValueDataTypeCode = ResponseDataTypeCode.Indicator
                                                   },
 
                                                 }
@@ -684,15 +713,15 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                             {
                                                 _cardinality = CardinalityMetadata.ExactlyOne,
                                                 Id = new CriteriaTaxonomyIdentifier("7458d42a-e581-4640-9283-34ceb3ad4345"),
-                                                PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                                                PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                                 TenderingCriterionProperties = new[]
                                                 {
                                                   new TenderingCriterionProperty()
                                                   {
                                                     _cardinality = CardinalityMetadata.ExactlyOne,
-                                                    TypeCode = new CriterionElementType("QUESTION"),
+                                                    TypeCode = CriterionElementType.Question,
                                                     Description = "common.isThisInformationAvailableElectronically.description",
-                                                    ValueDataTypeCode = new ResponseDataTypeCode("INDICATOR")
+                                                    ValueDataTypeCode = ResponseDataTypeCode.Indicator
                                                   }
                                                 },
                                                 SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
@@ -701,15 +730,15 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                     {
                                                         _cardinality = CardinalityMetadata.Optional,
                                                         Id = new CriteriaTaxonomyIdentifier("41dd2e9b-1bfd-44c7-93ee-56bd74a4334b"),
-                                                        PropertyGroupTypeCode = new PropertyGroupTypeCode("ONTRUE"),
+                                                        PropertyGroupTypeCode = PropertyGroupTypeCode.OnTrue,
                                                         TenderingCriterionProperties = new[]
                                                         {
                                                           new TenderingCriterionProperty()
                                                           {
                                                             _cardinality = CardinalityMetadata.OneOrMore,
-                                                            TypeCode = new CriterionElementType("QUESTION"),
+                                                            TypeCode = CriterionElementType.Question,
                                                             Description = "common.evidenceSupplied",
-                                                            ValueDataTypeCode = new ResponseDataTypeCode("EVIDENCE_IDENTIFIER")
+                                                            ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
                                                           }
                                                         }
                                                     }
@@ -740,15 +769,15 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                      {
                          _cardinality = CardinalityMetadata.OneOrMore,
                          Id = new CriteriaTaxonomyIdentifier("4ddccd16-91e4-4b72-ae0f-78f2f1ab9490"),
-                         PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                         PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                          TenderingCriterionProperties = new[]
                          {
                            new TenderingCriterionProperty()
                            {
                              _cardinality = CardinalityMetadata.Optional,
-                             TypeCode = new CriterionElementType("CAPTION"),
+                             TypeCode = CriterionElementType.Caption,
                              Description = "common.lotsTheEequirementAppliesTo.description",
-                             ValueDataTypeCode = new ResponseDataTypeCode("NONE")
+                             ValueDataTypeCode = ResponseDataTypeCode.None
                            }
                          },
                          SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
@@ -757,15 +786,15 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                              {
                                  _cardinality = CardinalityMetadata.Optional,
                                  Id = new CriteriaTaxonomyIdentifier("cc1da737-6c4e-4f4e-821d-c260029058f6"),
-                                 PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                                 PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                  TenderingCriterionProperties = new[]
                                  {
                                    new TenderingCriterionProperty()
                                    {
                                      _cardinality = CardinalityMetadata.Optional,
-                                     TypeCode = new CriterionElementType("REQUIREMENT"),
+                                     TypeCode = CriterionElementType.Requirement,
                                      Description = "otherEconomicOrFinancial.lotID.description",
-                                     ValueDataTypeCode = new ResponseDataTypeCode("LOT_IDENTIFIER")
+                                     ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
                                    }
                                  }
                              },
@@ -773,15 +802,15 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                              {
                                  _cardinality = CardinalityMetadata.ExactlyOne,
                                  Id = new CriteriaTaxonomyIdentifier("26ece6a2-b360-46c1-890d-8338913b8719"),
-                                 PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                                 PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                  TenderingCriterionProperties = new[]
                                  {
                                    new TenderingCriterionProperty()
                                    {
                                      _cardinality = CardinalityMetadata.ExactlyOne,
-                                     TypeCode = new CriterionElementType("REQUIREMENT"),
+                                     TypeCode = CriterionElementType.Requirement,
                                      Description = "otherEconomicOrFinancial.selectTheTypeOfRequirement.description",
-                                     ValueDataTypeCode = new ResponseDataTypeCode("CODE_BOOLEAN")
+                                     ValueDataTypeCode = ResponseDataTypeCode.CodeBoolean
                                    }
                                  },
                                  SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
@@ -790,46 +819,46 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                      {
                                          _cardinality = CardinalityMetadata.ZeroOrMore,
                                          Id = new CriteriaTaxonomyIdentifier("ca15c15f-110e-4a10-8d6e-5e41cf5f9098"),
-                                         PropertyGroupTypeCode = new PropertyGroupTypeCode("ONTRUE"),
+                                         PropertyGroupTypeCode = PropertyGroupTypeCode.OnTrue,
                                          TenderingCriterionProperties = new[]
                                          {
                                            new TenderingCriterionProperty()
                                            {
                                              _cardinality = CardinalityMetadata.ExactlyOne,
-                                             TypeCode = new CriterionElementType("REQUIREMENT"),
+                                             TypeCode = CriterionElementType.Requirement,
                                              Description = "Description of the economic or financial requirement",
-                                             ValueDataTypeCode = new ResponseDataTypeCode("DESCRIPTION")
+                                             ValueDataTypeCode = ResponseDataTypeCode.Description
                                            },
                                            new TenderingCriterionProperty()
                                            {
                                              _cardinality = CardinalityMetadata.ExactlyOne,
-                                             TypeCode = new CriterionElementType("REQUIREMENT"),
+                                             TypeCode = CriterionElementType.Requirement,
                                              Description = "Minimum amount",
-                                             ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT")
+                                             ValueDataTypeCode = ResponseDataTypeCode.Amount
                                            },
                                            new TenderingCriterionProperty()
                                            {
                                              _cardinality = CardinalityMetadata.ExactlyOne,
-                                             TypeCode = new CriterionElementType("REQUIREMENT"),
+                                             TypeCode = CriterionElementType.Requirement,
                                              Description = "Start date; End date",
-                                             ValueDataTypeCode = new ResponseDataTypeCode("PERIOD")
+                                             ValueDataTypeCode = ResponseDataTypeCode.Period
                                            }
                                          },
                                          SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
                                          {
                                              new TenderingCriterionPropertyGroup()
                                              {
-                                                 //_cardinality = CardinalityMetadata.ZeroOrMore,
+                                                 _cardinality = CardinalityMetadata.ExactlyOne,
                                                  Id = new CriteriaTaxonomyIdentifier("9b3a04ff-e36d-4d4f-b47c-82ad402b9b02"),
-                                                 //PropertyGroupTypeCode = new PropertyGroupTypeCode("ONTRUE"),
+                                                 PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                                  TenderingCriterionProperties = new[]
                                                  {
                                                    new TenderingCriterionProperty()
                                                    {
                                                      _cardinality = CardinalityMetadata.ExactlyOne,
-                                                     TypeCode = new CriterionElementType("QUESTION"),
+                                                     TypeCode = CriterionElementType.Question,
                                                      Description = "Amount",
-                                                     ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT")
+                                                     ValueDataTypeCode = ResponseDataTypeCode.Amount
                                                    }
                                                  }
 
@@ -841,39 +870,39 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                      {
                                          _cardinality = CardinalityMetadata.ZeroOrMore,
                                          Id = new CriteriaTaxonomyIdentifier("cc96aa19-a0be-4409-af58-ff3f3812741b"),
-                                         PropertyGroupTypeCode = new PropertyGroupTypeCode("ONFALSE"),
+                                         PropertyGroupTypeCode = PropertyGroupTypeCode.OnFalse,
                                          TenderingCriterionProperties = new[]
                                          {
                                            new TenderingCriterionProperty()
                                            {
                                              _cardinality = CardinalityMetadata.ExactlyOne,
-                                             TypeCode = new CriterionElementType("REQUIREMENT"),
+                                             TypeCode = CriterionElementType.Requirement,
                                              Description = "Minimum rating",
-                                             ValueDataTypeCode = new ResponseDataTypeCode("QUANTITY")
+                                             ValueDataTypeCode = ResponseDataTypeCode.Quantity
                                            },
                                            new TenderingCriterionProperty()
                                            {
                                              _cardinality = CardinalityMetadata.ExactlyOne,
-                                             TypeCode = new CriterionElementType("REQUIREMENT"),
+                                             TypeCode = CriterionElementType.Requirement,
                                              Description = "Rating scheme",
-                                             ValueDataTypeCode = new ResponseDataTypeCode("DESCRIPTION")
+                                             ValueDataTypeCode = ResponseDataTypeCode.Description
                                            },
                                          },
                                          SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
                                          {
                                              new TenderingCriterionPropertyGroup()
                                              {
-                                                 //_cardinality = CardinalityMetadata.ZeroOrMore,
+                                                 _cardinality = CardinalityMetadata.ExactlyOne,
                                                  Id = new CriteriaTaxonomyIdentifier(" 5fe93344-ed91-4f97-bcab-b6720a131798"),
-                                                 //PropertyGroupTypeCode = new PropertyGroupTypeCode("ONTRUE"),
+                                                 PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                                  TenderingCriterionProperties = new[]
                                                  {
                                                    new TenderingCriterionProperty()
                                                    {
                                                      _cardinality = CardinalityMetadata.ExactlyOne,
-                                                     TypeCode = new CriterionElementType("QUESTION"),
+                                                     TypeCode = CriterionElementType.Question,
                                                      Description = "Rating",
-                                                     ValueDataTypeCode = new ResponseDataTypeCode("QUANTITY")
+                                                     ValueDataTypeCode = ResponseDataTypeCode.Quantity
                                                    }
                                                  }
 
@@ -887,15 +916,15 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                              {
                                  _cardinality = CardinalityMetadata.ExactlyOne,
                                  Id = new CriteriaTaxonomyIdentifier("7458d42a-e581-4640-9283-34ceb3ad4345"),
-                                 PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                                 PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                  TenderingCriterionProperties = new[]
                                  {
                                    new TenderingCriterionProperty()
                                    {
                                      _cardinality = CardinalityMetadata.ExactlyOne,
-                                     TypeCode = new CriterionElementType("QUESTION"),
+                                     TypeCode = CriterionElementType.Question,
                                      Description = "otherEconomicOrFinancial.lotID.description",
-                                     ValueDataTypeCode = new ResponseDataTypeCode("LOT_IDENTIFIER")
+                                     ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
                                    }
                                  },
                                  SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
@@ -904,15 +933,15 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                     {
                                         _cardinality = CardinalityMetadata.Optional,
                                         Id = new CriteriaTaxonomyIdentifier("41dd2e9b-1bfd-44c7-93ee-56bd74a4334b"),
-                                        PropertyGroupTypeCode = new PropertyGroupTypeCode("ONTRUE"),
+                                        PropertyGroupTypeCode = PropertyGroupTypeCode.OnTrue,
                                         TenderingCriterionProperties = new[]
                                         {
                                            new TenderingCriterionProperty()
                                            {
                                              _cardinality = CardinalityMetadata.OneOrMore,
-                                             TypeCode = new CriterionElementType("QUESTION"),
+                                             TypeCode = CriterionElementType.Question,
                                              Description = "common.evidenceSupplied",
-                                             ValueDataTypeCode = new ResponseDataTypeCode("EVIDENCE_IDENTIFIER")
+                                             ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
                                            }
                                         },
                                     }

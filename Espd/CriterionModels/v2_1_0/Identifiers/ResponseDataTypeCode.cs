@@ -4,12 +4,24 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers
 {
   public class ResponseDataTypeCode : CodeType
   {
-    public ResponseDataTypeCode(string code): base(code)
+        
+
+        public ResponseDataTypeCode(string code): base(code)
     {
       ListID = "ResponseDataType";
       ListAgencyID = "EU-COM-GROW";
       ListVersionID = "2.1.0";
     }
+
+    /// <summary>
+    /// Code type
+    /// </summary>
+    public static CodeType Code => new ResponseDataTypeCode("CODE");
+
+    /// <summary>
+    /// Boolean code type
+    /// </summary>
+    public static CodeType CodeBoolean => new ResponseDataTypeCode("CODE_BOOLEAN");
 
     /// <summary>
     /// Indicator type
@@ -60,11 +72,18 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers
     /// Amount
     /// </summary>
     public static CodeType Amount => new ResponseDataTypeCode("AMOUNT");
-
-
     /// <summary>
     /// Date
     /// </summary>
     public static CodeType Date => new ResponseDataTypeCode("DATE");
+    /// <summary>
+    /// Quantity
+    /// </summary>
+    public static CodeType Quantity => new ResponseDataTypeCode("QUANTITY");
+
+    /// <summary>
+    /// Quantity integer
+    /// </summary>
+    public static CodeType QuantityInteger => new ResponseDataTypeCode("QUANTITY_INTEGER");
   }
 }

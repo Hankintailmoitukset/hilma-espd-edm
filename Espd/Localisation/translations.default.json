@@ -89,7 +89,7 @@
   "economicFinancialStanding.minimumRequirement.description": "Minimum requirement",
   "economicFinancialStanding.numberOfFiscalYears.description": "Number of fiscal years",
   "economicFinancialStanding.cpvsCaption.description": "CPVs:",
-  "economicFinancialStanding.cpvCode.description": "CPV Code",
+
   "economicFinancialStanding.averageTurnoverYearly.name": "Average yearly turnover",
   "economicFinancialStanding.averageTurnoverYearly.description": "Its average yearly turnover for the number of years required in the relevant notice, the in the ESPD, the relevant notice or  or the ESPD is as follows:",
   "economicFinancialStanding.averageForRequiredPeriod.description": "Average for the required period",
@@ -98,6 +98,8 @@
   "specificAverageTurnover.ausinessDomainDescription.description": "Business domain description",
   "specificAverageTurnover.question.name": "Specific average turnover",
   "specificAverageTurnover.question.description": "Its specific average yearly turnover in the business area covered by the contract for the number of years required in the relevant notice, the in the ESPD, the relevant notice or  or the ESPD is as follows:",
+  "specificAverageTurnover.cpvs.description": "CPVs:",
+  "specificAverageTurnover.startDateEndDate.description": "Start date; End date",
 
   "setupOfEconomicOperator.question.name": "Set up of economic operator",
   "setupOfEconomicOperator.question.description": "In case the information concerning turnover (general or specific) is not available for the entire period required, please state the date on which the economic operator was set up or started trading:",
@@ -146,7 +148,8 @@
   "common.evidenceSupplied": "Evidence Supplied",
   "common.numberOfFiscalYears.description": "Number of fiscal years",
   "common.lotsTheEequirementAppliesTo.description": "Lots the requirement applies to",
-  "common.minimumRequirement.description": "Minimum requirement"
+  "common.minimumRequirement.description": "Minimum requirement",
+  "common.cpvCode.description": "CPV Code"
 
 
 }
