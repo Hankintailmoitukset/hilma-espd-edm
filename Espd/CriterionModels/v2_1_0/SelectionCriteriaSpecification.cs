@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http.Headers;
-using Hilma.Espd.EDM.CriterionModel.Identifiers;
+using Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers;
 using Hilma.UBL.CommonAggregateComponents;
 
-namespace Hilma.Espd.EDM.CriterionModel
+namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
 {
     public class SelectionCriteriaSpecification : IEnumerable<TenderingCriterion>
     {
@@ -24,9 +23,9 @@ namespace Hilma.Espd.EDM.CriterionModel
             return AllCriteria.GetEnumerator();
         }
 
-        public TenderingCriterion[] Suitability => new[]
-        {
-      new TenderingCriterion()
+    public TenderingCriterion[] Suitability => new[]
+    {
+      new TenderingCriterion
       {
         CriterionTypeCode = new CriterionTypeCode("CRITERION.SELECTION.SUITABILITY.PROFESSIONAL_REGISTER_ENROLMENT"),
         Name = "suitability.enrolmentInRelevantProfessionalRegister.name",
@@ -35,7 +34,7 @@ namespace Hilma.Espd.EDM.CriterionModel
         Legislations = new Legislation[] { },
         TenderingCriterionPropertyGroups =  CriterionHelper.SuitabilityRegisterQuestionsGroups
       },
-      new TenderingCriterion()
+      new TenderingCriterion
       {
         CriterionTypeCode = new CriterionTypeCode("CRITERION.SELECTION.SUITABILITY.TRADE_REGISTER_ENROLMENT"),
         Name = "suitability.tradeRegisterEnrolment.name",
@@ -44,7 +43,7 @@ namespace Hilma.Espd.EDM.CriterionModel
         Legislations = new Legislation[] { },
         TenderingCriterionPropertyGroups = CriterionHelper.SuitabilityRegisterQuestionsGroups
       },
-      new TenderingCriterion()
+      new TenderingCriterion
       {
         CriterionTypeCode = new CriterionTypeCode("CRITERION.SELECTION.SUITABILITY.AUTHORISATION"),
         Name = "suitability.authorisationForParticularOrganisationNeeded.name",
@@ -53,15 +52,15 @@ namespace Hilma.Espd.EDM.CriterionModel
         Legislations = new Legislation[] { },
         TenderingCriterionPropertyGroups = CriterionHelper.SuitabilityRegisterQuestionsGroups
       },
-      new TenderingCriterion()
+      new TenderingCriterion
       {
         CriterionTypeCode = new CriterionTypeCode("CRITERION.SELECTION.SUITABILITY.MEMBERSHIP"),
-        Name = "suitability.authorisationForParticularOrganisationNeeded.name",
-        Description = new[] {"suitability.authorisationForParticularOrganisationNeeded.description"},
+        Name = "suitability.membershipForParticularOrganisationNeeded.name",
+        Description = new[] {"suitability.membershipForParticularOrganisationNeeded.description"},
         Id = new CriteriaTaxonomyIdentifier("73f10e36-ed7a-412e-995c-aa76463e3776"),
         Legislations = new Legislation[] { },
         TenderingCriterionPropertyGroups = CriterionHelper.SuitabilityRegisterQuestionsGroups
-      },
+      }
 
     };
 
