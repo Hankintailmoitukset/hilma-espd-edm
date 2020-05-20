@@ -485,19 +485,105 @@ namespace Hilma.Espd.EDM.CriterionModel
                  {
                     new TenderingCriterionPropertyGroup()
                     {
-                        _cardinality = CardinalityMetadata.ExactlyOne,
-                        Id = new CriteriaTaxonomyIdentifier("e9aa7763-c167-4352-8060-1a3d7d3e2662"),
+                        _cardinality = CardinalityMetadata.OneOrMore,
+                        Id = new CriteriaTaxonomyIdentifier("cc1da737-6c4e-4f4e-821d-c260029058f6"),
                         PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
                         TenderingCriterionProperties = new[]
                         {
                           new TenderingCriterionProperty()
                           {
                             _cardinality = CardinalityMetadata.ExactlyOne,
-                            TypeCode = new CriterionElementType("QUESTION"),
-                            Description = "Please specify",
-                            ValueDataTypeCode = new ResponseDataTypeCode("DATE")
+                            TypeCode = new CriterionElementType("REQUIREMENT"),
+                            Description = "Select the periods applicable for all ratios",
+                            ValueDataTypeCode = new ResponseDataTypeCode("PERIOD")
                           }
                         }, 
+                        SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                        {
+
+                            new TenderingCriterionPropertyGroup()
+                            {
+                                _cardinality = CardinalityMetadata.OneOrMore,
+                                Id = new CriteriaTaxonomyIdentifier("ee486082-93fa-4c17-8920-fdf01b890bd1"),
+                                PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                                TenderingCriterionProperties = new[]
+                                {
+                                  new TenderingCriterionProperty()
+                                  {
+                                    _cardinality = CardinalityMetadata.ExactlyOne,
+                                    TypeCode = new CriterionElementType("REQUIREMENT"),
+                                    Description = "Ratio Type",
+                                    ValueDataTypeCode = new ResponseDataTypeCode("CODE")
+                                  },
+                                  new TenderingCriterionProperty()
+                                  {
+                                    _cardinality = CardinalityMetadata.ExactlyOne,
+                                    TypeCode = new CriterionElementType("REQUIREMENT"),
+                                    Description = "Definition",
+                                    ValueDataTypeCode = new ResponseDataTypeCode("DESCRIPTION")
+                                  },
+                                  new TenderingCriterionProperty()
+                                  {
+                                    _cardinality = CardinalityMetadata.ExactlyOne,
+                                    TypeCode = new CriterionElementType("REQUIREMENT"),
+                                    Description = "Minimum requirement",
+                                    ValueDataTypeCode = new ResponseDataTypeCode("QUANTITY")
+                                  }
+                                }
+                            },
+                            new TenderingCriterionPropertyGroup()
+                            {
+                                _cardinality = CardinalityMetadata.ExactlyOne,
+                                Id = new CriteriaTaxonomyIdentifier("e9aa7763-c167-4352-8060-1a3d7d3e2662"),
+                                PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                                TenderingCriterionProperties = new[]
+                                {
+                                  new TenderingCriterionProperty()
+                                  {
+                                    _cardinality = CardinalityMetadata.ExactlyOne,
+                                    TypeCode = new CriterionElementType("QUESTION"),
+                                    Description = "Please provide your ratio",
+                                    ValueDataTypeCode = new ResponseDataTypeCode("QUANTITY")
+                                  }
+                                }
+                            },
+                            new TenderingCriterionPropertyGroup()
+                            {
+                                _cardinality = CardinalityMetadata.ExactlyOne,
+                                Id = new CriteriaTaxonomyIdentifier("7458d42a-e581-4640-9283-34ceb3ad4345"),
+                                PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                                TenderingCriterionProperties = new[]
+                                {
+                                  new TenderingCriterionProperty()
+                                  {
+                                    _cardinality = CardinalityMetadata.ExactlyOne,
+                                    TypeCode = new CriterionElementType("QUESTION"),
+                                    Description = "Is this information available electronically?",
+                                    ValueDataTypeCode = new ResponseDataTypeCode("INDICATOR")
+                                  }
+                                },
+                                SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                                {
+                                    new TenderingCriterionPropertyGroup()
+                                    {
+                                        _cardinality = CardinalityMetadata.Optional,
+                                        Id = new CriteriaTaxonomyIdentifier("41dd2e9b-1bfd-44c7-93ee-56bd74a4334b"),
+                                        PropertyGroupTypeCode = new PropertyGroupTypeCode("ONTRUE"),
+                                        TenderingCriterionProperties = new[]
+                                        {
+                                          new TenderingCriterionProperty()
+                                          {
+                                            _cardinality = CardinalityMetadata.OneOrMore,
+                                            TypeCode = new CriterionElementType("QUESTION"),
+                                            Description = "Evidence Supplied",
+                                            ValueDataTypeCode = new ResponseDataTypeCode("EVIDENCE_IDENTIFIER")
+                                          }
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
                     } 
                  }
             }
@@ -506,14 +592,191 @@ namespace Hilma.Espd.EDM.CriterionModel
 {
             new TenderingCriterion()
             {
+                 CriterionTypeCode =
+                   new CriterionTypeCode("CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.RISK_INDEMNITY_INSURANCE"),
+                 Name = "Professional risk indemnity insurance",
+                 Description = new[] {"The insured amount in its professional risk indemnity insurance is the following:"},
+                 Id = new CriteriaTaxonomyIdentifier("7604bd40-4462-4086-8763-a50da51a869c"),
+                 Legislations = new Legislation[] { },
+                 TenderingCriterionPropertyGroups = new[]
+                 {
+                     new TenderingCriterionPropertyGroup()
+                     {
+                        _cardinality = CardinalityMetadata.OneOrMore,
+                        Id = new CriteriaTaxonomyIdentifier("83e3dcc4-c9b3-47e5-9fb8-ffd8386679f1"),
+                        PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                        TenderingCriterionProperties = new[]
+                        {
+                          new TenderingCriterionProperty()
+                          {
+                            _cardinality = CardinalityMetadata.ExactlyOne,
+                            TypeCode = new CriterionElementType("CAPTION"),
+                            Description = "Lots the requirement applies to",
+                            ValueDataTypeCode = new ResponseDataTypeCode("NONE")
+                          }
+                        },
+                        SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                        {
+                            new TenderingCriterionPropertyGroup()
+                            {
+                                _cardinality = CardinalityMetadata.OneOrMore,
+                                Id = new CriteriaTaxonomyIdentifier("cc1da737-6c4e-4f4e-821d-c260029058f6"),
+                                PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                                TenderingCriterionProperties = new[]
+                                {
+                                  new TenderingCriterionProperty()
+                                  {
+                                    _cardinality = CardinalityMetadata.ZeroOrMore,
+                                    TypeCode = new CriterionElementType("REQUIREMENT"),
+                                    Description = "Lot Ids",
+                                    ValueDataTypeCode = new ResponseDataTypeCode("LOT_IDENTIFIER")
+                                  }
+                                },
+                                SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                                {
+                                    new TenderingCriterionPropertyGroup()
+                                    {
+                                        _cardinality = CardinalityMetadata.OneOrMore,
+                                        Id = new CriteriaTaxonomyIdentifier("6fc3a90b-0759-4517-af64-ce7d6eb4bf24"),
+                                        PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                                        TenderingCriterionProperties = new[]
+                                        {
+                                          new TenderingCriterionProperty()
+                                          {
+                                            _cardinality = CardinalityMetadata.ExactlyOne,
+                                            TypeCode = new CriterionElementType("REQUIREMENT"),
+                                            Description = "Type of insurance",
+                                            ValueDataTypeCode = new ResponseDataTypeCode("DESCRIPTION")
+                                          },
+                                          new TenderingCriterionProperty()
+                                          {
+                                            _cardinality = CardinalityMetadata.ExactlyOne,
+                                            TypeCode = new CriterionElementType("REQUIREMENT"),
+                                            Description = "Minimum amount",
+                                            ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT")
+                                          }
+                                        },
+                                        SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                                        {
+                                            new TenderingCriterionPropertyGroup()
+                                            {
+                                                _cardinality = CardinalityMetadata.ExactlyOne,
+                                                Id = new CriteriaTaxonomyIdentifier("42dc8062-974d-4201-91ba-7f2ea90338fd"),
+                                                PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                                                TenderingCriterionProperties = new[]
+                                                {
+                                                  new TenderingCriterionProperty()
+                                                  {
+                                                    _cardinality = CardinalityMetadata.ExactlyOne,
+                                                    TypeCode = new CriterionElementType("QUESTION"),
+                                                    Description = "Amount",
+                                                    ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT")
+                                                  },
+                                                  new TenderingCriterionProperty()
+                                                  {
+                                                    _cardinality = CardinalityMetadata.ExactlyOne,
+                                                    TypeCode = new CriterionElementType("QUESTION"),
+                                                    Description = "As an EO I will commit to obtain the minimum amount required",
+                                                    ValueDataTypeCode = new ResponseDataTypeCode("INDICATOR")
+                                                  },
+                                                  new TenderingCriterionProperty()
+                                                  {
+                                                    _cardinality = CardinalityMetadata.ExactlyOne,
+                                                    TypeCode = new CriterionElementType("QUESTION"),
+                                                    Description = "I am exempt",
+                                                    ValueDataTypeCode = new ResponseDataTypeCode("INDICATOR")
+                                                  },
 
+                                                } 
+                                            },
+                                            new TenderingCriterionPropertyGroup()
+                                            {
+                                                _cardinality = CardinalityMetadata.ExactlyOne,
+                                                Id = new CriteriaTaxonomyIdentifier("7458d42a-e581-4640-9283-34ceb3ad4345"),
+                                                PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                                                TenderingCriterionProperties = new[]
+                                                {
+                                                  new TenderingCriterionProperty()
+                                                  {
+                                                    _cardinality = CardinalityMetadata.ExactlyOne,
+                                                    TypeCode = new CriterionElementType("QUESTION"),
+                                                    Description = "Is this information available electronically?",
+                                                    ValueDataTypeCode = new ResponseDataTypeCode("INDICATOR")
+                                                  }
+                                                },
+                                                SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                                                {
+                                                    new TenderingCriterionPropertyGroup()
+                                                    {
+                                                        _cardinality = CardinalityMetadata.Optional,
+                                                        Id = new CriteriaTaxonomyIdentifier("41dd2e9b-1bfd-44c7-93ee-56bd74a4334b"),
+                                                        PropertyGroupTypeCode = new PropertyGroupTypeCode("ONTRUE"),
+                                                        TenderingCriterionProperties = new[]
+                                                        {
+                                                          new TenderingCriterionProperty()
+                                                          {
+                                                            _cardinality = CardinalityMetadata.OneOrMore,
+                                                            TypeCode = new CriterionElementType("QUESTION"),
+                                                            Description = "Evidence Supplied",
+                                                            ValueDataTypeCode = new ResponseDataTypeCode("EVIDENCE_IDENTIFIER")
+                                                          }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                     }
+                 }
             }
         };
         public TenderingCriterion[] OtherEconomicOrFinancial => new[]
         {
             new TenderingCriterion()
             {
+                CriterionTypeCode =
+                   new CriterionTypeCode("CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.OTHER_REQUIREMENTS"),
+                 Name = "Other economic or financial requirements",
+                 Description = new[] {"Concerning the other economic or financial requirements, if any, that may have been specified in the relevant notice or in the ESPD, the economic operator declares that:"},
+                 Id = new CriteriaTaxonomyIdentifier("ab0e7f2e-6418-40e2-8870-6713123e41ad"),
+                 Legislations = new Legislation[] { },
+                 TenderingCriterionPropertyGroups = new[]
+                 {
+                     new TenderingCriterionPropertyGroup()
+                     {
+                         //_cardinality = CardinalityMetadata.ExactlyOne,
+                         //Id = new CriteriaTaxonomyIdentifier("42dc8062-974d-4201-91ba-7f2ea90338fd"),
+                         //PropertyGroupTypeCode = new PropertyGroupTypeCode("ON*"),
+                         //TenderingCriterionProperties = new[]
+                         //{
+                         //  new TenderingCriterionProperty()
+                         //  {
+                         //    _cardinality = CardinalityMetadata.ExactlyOne,
+                         //    TypeCode = new CriterionElementType("QUESTION"),
+                         //    Description = "Amount",
+                         //    ValueDataTypeCode = new ResponseDataTypeCode("AMOUNT")
+                         //  },
+                         //  new TenderingCriterionProperty()
+                         //  {
+                         //    _cardinality = CardinalityMetadata.ExactlyOne,
+                         //    TypeCode = new CriterionElementType("QUESTION"),
+                         //    Description = "As an EO I will commit to obtain the minimum amount required",
+                         //    ValueDataTypeCode = new ResponseDataTypeCode("INDICATOR")
+                         //  },
+                         //  new TenderingCriterionProperty()
+                         //  {
+                         //    _cardinality = CardinalityMetadata.ExactlyOne,
+                         //    TypeCode = new CriterionElementType("QUESTION"),
+                         //    Description = "I am exempt",
+                         //    ValueDataTypeCode = new ResponseDataTypeCode("INDICATOR")
+                         //  },
 
+                         //}
+                     }
+                 }
             }
         };
 
