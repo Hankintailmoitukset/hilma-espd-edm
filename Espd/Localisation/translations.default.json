@@ -95,6 +95,35 @@
   "economicFinancialStanding.averageForRequiredPeriod.description": "Average for the required period",
   "economicFinancialStanding.additionalInformation.description": "Additional information",
 
+  "specificAverageTurnover.ausinessDomainDescription.description": "Business domain description",
+  "specificAverageTurnover.question.name": "Specific average turnover",
+  "specificAverageTurnover.question.description": "Its specific average yearly turnover in the business area covered by the contract for the number of years required in the relevant notice, the in the ESPD, the relevant notice or  or the ESPD is as follows:",
+
+  "setupOfEconomicOperator.question.name": "Set up of economic operator",
+  "setupOfEconomicOperator.question.description": "In case the information concerning turnover (general or specific) is not available for the entire period required, please state the date on which the economic operator was set up or started trading:",
+  "setupOfEconomicOperator.pleaseSpecify.description": "Please specify",
+
+  "financialRatios.question.name": "Financial ratio",
+  "financialRatios.question.description": "Concerning the financial ratios  specified in the relevant notice, the in the ESPD, the relevant notice or  or the ESPD, the economic operator declares that the actual values for the required ratios are as follows:",
+  "financialRatios.selectPeriods.description": "Select the periods applicable for all ratios",
+  "financialRatios.ratioType.description": "Ratio Type",
+  "financialRatios.definition.description": "Definition",
+  "financialRatios.pleaseProvideYourRatio.description": "Please provide your ratio",
+
+  "professionalRiskInsuranse.question.name": "Professional risk indemnity insurance",
+  "professionalRiskInsuranse.question.description": "The insured amount in its professional risk indemnity insurance is the following:",
+
+  "professionalRiskInsuranse.lotIds.description": "Lot Ids",
+  "professionalRiskInsuranse.typeOfInsurance.description": "Type of insurance",
+  "professionalRiskInsuranse.minimumAmount.description": "Minimum amount",
+  "professionalRiskInsuranse.asAnEO.description": "As an EO I will commit to obtain the minimum amount required",
+  "professionalRiskInsuranse.iAmExempt.description": "I am exempt",
+
+  "otherEconomicOrFinancial.question.name": "Other economic or financial requirements",
+  "otherEconomicOrFinancial.question.description": "Concerning the other economic or financial requirements, if any, that may have been specified in the relevant notice or in the ESPD, the economic operator declares that:",
+  "otherEconomicOrFinancial.lotID.description": "Lot ID",
+  "otherEconomicOrFinancial.selectTheTypeOfRequirement.description": "Select the type of requirement",
+
   "common.yourAnswer.description": "Your answer",
   "common.CountryOrMemberStateConcerned.description": "Country or member state concerned",
   "common.amountConcerned.description": "Amount concerned",
@@ -114,7 +143,10 @@
   "common.endDate.description": "End date",
   "common.startDateEndDate.description": "Start date;End date",
   "common.isThisInformationAvailableElectronically.description": "Is this information available electronically?",
-  "common.evidenceSupplied": "Evidence Supplied"
+  "common.evidenceSupplied": "Evidence Supplied",
+  "common.numberOfFiscalYears.description": "Number of fiscal years",
+  "common.lotsTheEequirementAppliesTo.description": "Lots the requirement applies to",
+  "common.minimumRequirement.description": "Minimum requirement"
 
 
 }
