@@ -800,7 +800,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                     "misinterpretation.guiltyOfMisinterpretation.description",
                     "misinterpretation.guiltyOfMisinterpretationA.description",
                     "misinterpretation.guiltyOfMisinterpretationB.description",
-                    "misinterpretation.guiltyOfMisinterpretationC.description"
+                    "misinterpretation.guiltyOfMisinterpretationC.description",
+                    "misinterpretation.guiltyOfMisinterpretationD.description"
                 },
                 Id = new CriteriaTaxonomyIdentifier("696a75b2-6107-428f-8b74-82affb67e184"),
                 Legislations = new Legislation[] { },

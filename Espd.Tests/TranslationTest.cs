@@ -85,7 +85,8 @@ namespace Hilma.Espd.Tests
             AssertDescription(new[] {"Can the economic operator confirm that:",
                                      "a) It has been guilty of serious misrepresentation in supplying the information required for the verification of the absence of grounds for exclusion or the fulfilment of the selection criteria,",
                                      "b) It has withheld such information,",
-                                     "c) It has not been able, without delay, to submit the supporting documents required by a contracting authority or contracting entity, and"
+                                     "c) It has not been able, without delay, to submit the supporting documents required by a contracting authority or contracting entity, and",
+                                     "d) It has undertaken to unduly influence the decision making process of the contracting authority or contracting entity, to obtain confidential information that may confer upon it undue advantages in the procurement procedure or to negligently provide misleading information that may have a material influence on decisions concerning exclusion, selection or award?"
                                     }, translatedCriterion.Description);
 
         }

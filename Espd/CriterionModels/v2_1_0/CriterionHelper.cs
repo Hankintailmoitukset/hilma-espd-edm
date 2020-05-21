@@ -2,7 +2,7 @@
 using Hilma.UBL.CommonAggregateComponents;
 
 namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
-{ 
+{
 
     public class CriterionHelper
     {
@@ -22,7 +22,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                              Id = EuComGrowId.Random(),
                              TypeCode = CriterionElementType.Question,
                              Description ="common.yourAnswer.description",
-                             ValueDataTypeCode = ResponseDataTypeCode.Indicator 
+                             ValueDataTypeCode = ResponseDataTypeCode.Indicator
                            }
                         },
                         SubsidiaryTenderingCriterionPropertyGroups = new[]
@@ -130,7 +130,42 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                         SubsidiaryTenderingCriterionPropertyGroups = TenderingCriterionURLGroup
                     }
                 };
-
+        public static TenderingCriterionPropertyGroup TurnOverisThisInformationAvailableElectronically =>
+            new TenderingCriterionPropertyGroup()
+            {
+                 _cardinality = CardinalityMetadata.ExactlyOne,
+                 Id = new CriteriaTaxonomyIdentifier("7458d42a-e581-4640-9283-34ceb3ad4345"),
+                 PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
+                 TenderingCriterionProperties = new[]
+                 {
+                     new TenderingCriterionProperty()
+                     {
+                       _cardinality = CardinalityMetadata.ExactlyOne,
+                       TypeCode = CriterionElementType.Question,
+                       Description = "common.isThisInformationAvailableElectronically.description",
+                       ValueDataTypeCode = ResponseDataTypeCode.Indicator
+                     }
+                 },
+                 SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                 {
+                     new TenderingCriterionPropertyGroup()
+                     {
+                         _cardinality = CardinalityMetadata.ZeroOrMore,
+                         Id = new CriteriaTaxonomyIdentifier("41dd2e9b-1bfd-44c7-93ee-56bd74a4334b"),
+                         PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
+                         TenderingCriterionProperties = new[]
+                         {
+                             new TenderingCriterionProperty()
+                             {
+                               _cardinality = CardinalityMetadata.OneOrMore,
+                               TypeCode = CriterionElementType.Question,
+                               Description = "common.evidenceSupplied",
+                               ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
+                             }
+                          }
+                      }
+                 }
+            };
         // ReSharper disable once InconsistentNaming
         public static TenderingCriterionPropertyGroup[] Social_LawCriterionPropertyGroups =>
             new[]
