@@ -1,10 +1,6 @@
 ﻿
 
 
-import { DateType } from './DateType'
-import { TimeType } from './TimeType'
-import { MeasureType } from './MeasureType'
-import { CodeType } from './CodeType'
 
 import assign from 'lodash.assign'
 
@@ -14,11 +10,6 @@ export class PeriodType {
     } 
     
     
-    startDate?: DateType
-    startTime?: TimeType
-    endDate?: DateType
-    endTime?: TimeType
-    durationMeasure?: MeasureType
-    descriptionCode?: CodeType[]
-    descriptions?: string[]
+    startDate?: Date
+    endDate?: Date
 }
