@@ -3,7 +3,7 @@
 
 import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
-import { NumericType } from './NumericType'
+import { AmountType } from './AmountType'
 import { PeriodType } from './PeriodType'
 import { EvidenceType } from './EvidenceType'
 
@@ -24,15 +24,15 @@ export class TenderingCriterionProperty {
     valueDataTypeCode?: CodeType
     valueUnitCode?: CodeType
     valueCurrencyCode?: CodeType
-    expectedAmount?: number
+    expectedAmount?: AmountType
     expectedID?: IdentifierType
     expectedCode?: CodeType
-    expectedValueNumeric?: NumericType
+    expectedValueNumeric?: number
     expectedDescription?: string
-    maximumAmount?: string
-    minimumAmount?: string
-    maximumValueNumeric?: NumericType
-    minimumValueNumeric?: NumericType
+    maximumAmount?: AmountType
+    minimumAmount?: AmountType
+    maximumValueNumeric?: number
+    minimumValueNumeric?: number
     translationTypeCode?: string
     certificationLevelDescription?: string[]
     copyQualityTypeCode?: CodeType

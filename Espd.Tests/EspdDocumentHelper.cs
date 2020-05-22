@@ -135,7 +135,7 @@ namespace Hilma.Espd.Tests
                                         Description = "Minum number of years",
                                         TypeCode = CriterionElementType.Requirement,
                                         ValueDataTypeCode = new ResponseDataTypeCode("QUANTITY_INTEGER"),
-                                        ExpectedValueNumeric = new NumericType { Value = 3 }
+                                        ExpectedValueNumeric = 3 
                                     },
                                     new TenderingCriterionProperty
                                     {

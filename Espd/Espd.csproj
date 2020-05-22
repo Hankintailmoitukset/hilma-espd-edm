@@ -96,9 +96,6 @@
     <None Update="typings\NormalizedString.ts">
       <CustomToolNamespace>..\UBL\PrimitiveTypes\NormalizedString.cs</CustomToolNamespace>
     </None>
-    <None Update="typings\NumericType.ts">
-      <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\NumericType.cs</CustomToolNamespace>
-    </None>
     <None Update="typings\PartyIdentificationType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\PartyIdentificationType.cs</CustomToolNamespace>
     </None>
@@ -146,9 +143,6 @@
     </None>
     <None Update="typings\UBLExtensionType.ts">
       <CustomToolNamespace>..\UBL\CommonExtensionComponents\UBLExtensionType.cs</CustomToolNamespace>
-    </None>
-    <None Update="typings\ValueType.ts">
-      <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\ValueType.cs</CustomToolNamespace>
     </None>
   </ItemGroup>
 

@@ -3,10 +3,8 @@
 
 import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
-import { DecimalType } from './DecimalType'
 import { Legislation } from './Legislation'
 import { TenderingCriterionPropertyGroup } from './TenderingCriterionPropertyGroup'
-import { NormalizedString } from './NormalizedString'
 
 import assign from 'lodash.assign'
 
@@ -20,12 +18,12 @@ export class TenderingCriterion {
     criterionTypeCode?: CodeType
     name?: string
     description?: string[]
-    weightNumeric?: DecimalType
+    weightNumeric?: number
     evaluationMethodTypeCode?: CodeType
     weightingConsiderationDescription?: string
     subTenderingTenderingCriteria?: TenderingCriterion[]
     legislations?: Legislation[]
     tenderingCriterionPropertyGroups?: TenderingCriterionPropertyGroup[]
     fulfilmentIndicatorType?: boolean
-    fulfilmentIndicatorTypeCodeType?: NormalizedString
+    fulfilmentIndicatorTypeCodeType?: string
 }

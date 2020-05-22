@@ -15,7 +15,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <example>"0..n" specifies that the element is optional and repeated zero to n times</example>
     /// <example>"1..n" specifies that the element is required and repeated one to n times</example>
     public string _cardinality { get; set; } = CardinalityMetadata.ExactlyOne;
-
+    
     /// <summary>
     /// Identifies one specific property.
     /// </summary>
@@ -75,7 +75,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <summary>
     /// The expected amount that the responder has to provide in the criterion response.
     /// </summary>
-    public decimal? ExpectedAmount { get; set; }
+    public AmountType ExpectedAmount { get; set; }
     /// <summary>
     /// The expected identifier that the economic operator has to provide in the criterion response.
     /// </summary>
@@ -96,7 +96,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <remarks>
     /// Rule: Verify that the value of cac:TypeCode is set to QUESTION and that the cac:ValueTypeCode is different to NONE.
     /// </remarks>
-    public NumericType ExpectedValueNumeric { get; set; }
+    public decimal? ExpectedValueNumeric { get; set; }
     /// <summary>
     /// The description of the of the expected
     /// </summary>
@@ -104,25 +104,25 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <summary>
     /// The maximum amount the response must have.
     /// </summary>
-    public string MaximumAmount { get; set; }
+    public AmountType MaximumAmount { get; set; }
     /// <summary>
     /// The minimum amount the response must have.
     /// </summary>
-    public string MinimumAmount { get; set; }
+    public AmountType MinimumAmount { get; set; }
     /// <summary>
     /// The maximum value the response must have.
     /// </summary>
     /// <remarks>
     /// Rule: Verify that the value of cac:TypeCode is set to QUESTION and that the cac:ValueTypeCode is different to NONE.
     /// </remarks>
-    public NumericType MaximumValueNumeric { get; set; }
+    public decimal? MaximumValueNumeric { get; set; }
     /// <summary>
     /// The minimum value the response must have.
     /// </summary>
     /// <remarks>
     /// Rule: Verify that the value of cac:TypeCode is set to QUESTION and that the cac:ValueTypeCode is different to NONE.
     /// </remarks>
-    public NumericType MinimumValueNumeric { get; set; }
+    public decimal? MinimumValueNumeric { get; set; }
     /// <summary>
     /// The type of Translation that the requirement shall be translated for example certified translation
     /// </summary>

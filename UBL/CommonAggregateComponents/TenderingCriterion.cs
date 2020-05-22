@@ -47,7 +47,7 @@ namespace Hilma.UBL.CommonAggregateComponents
       /// <remarks>
       /// Rule: Used only in Self-contained ESPDs namely for ability and professional selection criteria in procedures organised in two stages.
       /// </remarks>
-      public DecimalType WeightNumeric { get; set; }
+      public decimal? WeightNumeric { get; set; }
       /// <summary>
       /// A code to inform about the type of Evaluation, namely for transparency purposes (e.g. PASSFAIL, WEIGHTED)
       /// </summary>
@@ -89,16 +89,7 @@ namespace Hilma.UBL.CommonAggregateComponents
 
       public bool FulfilmentIndicatorType { get; set; }
 
-      public NormalizedString FulfilmentIndicatorTypeCodeType { get; set; }
-
-      
-
-      
-
-      
-      
-      
-
+      public string FulfilmentIndicatorTypeCodeType { get; set; }
       
   }
 
