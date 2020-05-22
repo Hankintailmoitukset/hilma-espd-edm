@@ -36,6 +36,6 @@ export class TenderingCriterionProperty {
     translationTypeCode?: string
     certificationLevelDescription?: string[]
     copyQualityTypeCode?: CodeType
-    applicablePeriod?: PeriodType[]
+    applicablePeriod?: PeriodType
     templateEvidence?: EvidenceType[]
 }

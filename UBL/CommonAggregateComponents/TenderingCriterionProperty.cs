@@ -144,7 +144,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <remarks>
     /// Rule: The ESPD-EDM does only expect start date and end date.
     /// </remarks>
-    public PeriodType[] ApplicablePeriod { get; set; }
+    public PeriodType ApplicablePeriod { get; set; }
     /// <summary>
     /// A pointer to one or more evidences that support the veracity of this criterion.
     /// </summary>
