@@ -10,7 +10,8 @@
     "moduleResolution": "Node",
     "declaration": true,
     "outDir": "./lib",
-    "strict": true
+    "strict": true,
+    "resolveJsonModule": true
   },
   "declaration": true,
   "include": [ "typings" ],
