@@ -10,7 +10,15 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
     {
         public IEnumerable<TenderingCriterion> AllCriteria => new[]
         {
-            Suitability
+            Suitability,
+            GeneralYearlyTurnover,
+            GeneralAvarageTurnover,
+            SpecificYearlyTurnover,
+            SpecificAverageTurnover,
+            SetupOfEconomicOperator,
+            FinancialRatios,
+            ProfessionalRiskInsurance
+
         }.SelectMany(c => c);
 
         public IEnumerator<TenderingCriterion> GetEnumerator()
@@ -608,7 +616,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                  }
             }
         };
-        public TenderingCriterion[] ProfessionalRiskInsuranse => new[]
+        public TenderingCriterion[] ProfessionalRiskInsurance => new[]
         {
             new TenderingCriterion()
             {
