@@ -12,7 +12,7 @@ namespace CodelistParser
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Downloading exml");
+            Console.WriteLine("Downloading xml");
 
             //TODO READ URLS FROM CONFIG
             var financialRatioTypeUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.0/docs/src/main/asciidoc/dist/cl/gc/FinancialRatioType-CodeList.gc";
@@ -33,7 +33,9 @@ namespace CodelistParser
             XElement formSection = doc.Root;
             Codelist financialRatioTypes = ParseFinancialRatioTypes(formSection, lang);
 
-            string path = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..","..","..","..","Espd","typings", "financialRatioTypes.json"));
+            string path = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "typings", "financialRatioTypes.json"));
+
+            Console.WriteLine("writing file to path: " + path);
 
             // Write to file
             using (var file = File.CreateText(path))
