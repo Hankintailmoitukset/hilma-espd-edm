@@ -49,8 +49,11 @@ jobs:
     - name: Dotnet build and test
       run: dotnet test --configuration Release $GITHUB_WORKSPACE        
     
-    - name: Create Nuget package
-      run: dotnet pack --no-build --configuration Release -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersion }} $GITHUB_WORKSPACE     
+    - name: Create Espd Nuget package
+      run: dotnet pack --no-build --configuration Release -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersion }} $GITHUB_WORKSPACE/Espd/Espd.csproj     
+  
+    - name: Create UBL Nuget package
+      run: dotnet pack --no-build --configuration Release -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersion }} $GITHUB_WORKSPACE/UBL/UBL.csproj     
   
     - name: Publish the package to Nuget.org
       run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg -k ${{secrets.NUGET_AUTH_TOKEN}} -n true --skip-duplicate true
