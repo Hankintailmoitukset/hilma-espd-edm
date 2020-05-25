@@ -1,0 +1,122 @@
+{
+  "ShortName": "FinancialRatioType",
+  "LongName": "FINANCIAL RATIO TYPE",
+  "Codes": [
+    {
+      "Code": "R11",
+      "Name": "Assets to Equity ratio"
+    },
+    {
+      "Code": "R12",
+      "Name": "Liabilities to Equity ratio "
+    },
+    {
+      "Code": "R13",
+      "Name": "Current assets/Total assets "
+    },
+    {
+      "Code": "R14",
+      "Name": "Other financial assets and cash and bank/ Total assets"
+    },
+    {
+      "Code": "R15",
+      "Name": "Non-current debt/ Total assets "
+    },
+    {
+      "Code": "R16",
+      "Name": "Current debt/Total assets "
+    },
+    {
+      "Code": "R21",
+      "Name": "Financial income net of charges other than interest/EBITDA"
+    },
+    {
+      "Code": "R22",
+      "Name": "EBITDA/Interest on financial debt"
+    },
+    {
+      "Code": "R23",
+      "Name": "Interest burden"
+    },
+    {
+      "Code": "R24",
+      "Name": "Interest and similar charges/Net turnove"
+    },
+    {
+      "Code": "R25",
+      "Name": "Interest and similar charges/Gross operating profit"
+    },
+    {
+      "Code": "R26",
+      "Name": "Net financial income/Gross operating profit"
+    },
+    {
+      "Code": "R27",
+      "Name": "Gross operating profit/Total net debt"
+    },
+    {
+      "Code": "R31",
+      "Name": "Gross value added/Net turnove"
+    },
+    {
+      "Code": "R32",
+      "Name": "Gross operating profit/Net turnover (ROS)"
+    },
+    {
+      "Code": "R33",
+      "Name": "EBITDA/Net turnove"
+    },
+    {
+      "Code": "R34",
+      "Name": "Net operating profit/Net turnover"
+    },
+    {
+      "Code": "R35",
+      "Name": "EBIT/Net turnover"
+    },
+    {
+      "Code": "R36",
+      "Name": "EBT/Net turnover"
+    },
+    {
+      "Code": "R37",
+      "Name": "Net financial income/Net turnover"
+    },
+    {
+      "Code": "R38",
+      "Name": "Return on equity"
+    },
+    {
+      "Code": "R39",
+      "Name": "Net operating profit/Total assets"
+    },
+    {
+      "Code": "R310",
+      "Name": "Profit or loss for the year before taxes/Equity"
+    },
+    {
+      "Code": "R41",
+      "Name": "Asset turnover ratio"
+    },
+    {
+      "Code": "R42",
+      "Name": "Employee expenses/Gross value added"
+    },
+    {
+      "Code": "R51",
+      "Name": "Inventories/Net turnover"
+    },
+    {
+      "Code": "R52",
+      "Name": "Trade receivables/Net turnover"
+    },
+    {
+      "Code": "R53",
+      "Name": "Trade payables/Net turnover"
+    },
+    {
+      "Code": "R54",
+      "Name": "Operating working capital/Net turnover"
+    }
+  ]
+}

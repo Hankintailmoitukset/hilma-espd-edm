@@ -51,6 +51,9 @@ jobs:
       - name: Dotnet build and test
         run: dotnet test --configuration Release $GITHUB_WORKSPACE
       
+      - name: Publish code lists
+        run: dotnet run --project $GITHUB_WORKSPACE/CodelistParser/CodelistParser.csproj 
+
     #  - uses: actions/setup-node@v1
     #    with:
     #      node-version: 10
