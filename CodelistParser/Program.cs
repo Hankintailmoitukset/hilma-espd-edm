@@ -54,7 +54,7 @@ namespace CodelistParser
         {
             if (formSection == null)
             {
-                return new Codelist();
+                throw new Exception("xml data is null");
             }
             try
             {
@@ -85,7 +85,7 @@ namespace CodelistParser
             {
                 var code = new Codes()
                 {
-                    Name = row.Elements("Value").Where(r => r.Attribute("ColumnRef")?.Value == "name-fin")
+                    Name = row.Elements("Value").Where(r => r.Attribute("ColumnRef")?.Value == lang)
                                             .FirstOrDefault().Element("SimpleValue").Value,
                     Code = row.Elements("Value").Where(r => r.Attribute("ColumnRef")?.Value == "code")
                                             .FirstOrDefault().Element("SimpleValue").Value
