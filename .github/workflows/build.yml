@@ -59,7 +59,7 @@ jobs:
       run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg -k ${{secrets.NUGET_AUTH_TOKEN}} -n true --skip-duplicate true
 
     - name: Publish code lists
-      run: dotnet run --project $GITHUB_WORKSPACE/CodelistParser/CodelistParser.csproj 
+      run: dotnet run --project $GITHUB_WORKSPACE/ResourceExporter/ResourceExporter.csproj 
     
     - uses: actions/setup-node@v1
       with:

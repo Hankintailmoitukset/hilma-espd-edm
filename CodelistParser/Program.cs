@@ -1,4 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using Hilma.Espd.EDM.CriterionModels.v2_1_0;
+using Hilma.Espd.EDM.Localisation;
+using Hilma.UBL.CommonAggregateComponents;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,7 +9,7 @@ using System.Linq;
 using System.Net;
 using System.Xml.Linq;
 
-namespace CodelistParser
+namespace ResourceExporter
 {
     class Program
     {
@@ -32,12 +35,25 @@ namespace CodelistParser
             var doc = XDocument.Parse(xmlContent);
             XElement formSection = doc.Root;
             Codelist financialRatioTypes = ParseFinancialRatioTypes(formSection, lang);
+            WriteToFile(financialRatioTypes, "financialRatioTypes.json");
 
-            string path = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "typings", "financialRatioTypes.json"));
+            //get tenderincriterion
+            var criterionSpecification = new CriterionSpecification().AllCriteria.ToArray();
+            WriteToFile(criterionSpecification, "criterionSpecification.json");
 
+            //copy transaltion
+            string sourceFile = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "Localisation","translations.default.json"));
+            string targetPath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "typings", "translations.default.json"));
+            Console.WriteLine("writing file to path: " + targetPath);
+            System.IO.File.Copy(sourceFile, targetPath, true);
+
+        }
+
+        private static void WriteToFile(Codelist financialRatioTypes, string filename)
+        {
+            string path = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "typings", filename));
             Console.WriteLine("writing file to path: " + path);
 
-            // Write to file
             using (var file = File.CreateText(path))
             {
                 var serializer = new JsonSerializer
@@ -46,8 +62,21 @@ namespace CodelistParser
                 };
                 serializer.Serialize(file, financialRatioTypes);
             }
+        }
 
+        private static void WriteToFile(IEnumerable<TenderingCriterion> criterionSpecification, string filename)
+        {
+            string path = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "typings", filename));
+            Console.WriteLine("writing file to path: " + path);
 
+            using (var file = File.CreateText(path))
+            {
+                var serializer = new JsonSerializer
+                {
+                    Formatting = Formatting.Indented
+                };
+                serializer.Serialize(file, criterionSpecification);
+            }
         }
 
         private static Codelist ParseFinancialRatioTypes(XElement formSection, string lang)

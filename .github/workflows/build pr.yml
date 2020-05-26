@@ -52,7 +52,7 @@ jobs:
         run: dotnet test --configuration Release $GITHUB_WORKSPACE
       
       - name: Publish code lists
-        run: dotnet run --project $GITHUB_WORKSPACE/CodelistParser/CodelistParser.csproj 
+        run: dotnet run --project $GITHUB_WORKSPACE/ResourceExporter/ResourceExporter.csproj 
 
     #  - uses: actions/setup-node@v1
     #    with:
