@@ -150,6 +150,10 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// </summary>
     public EvidenceType[] TemplateEvidence { get; set; }
 
+    /// <summary>
+    /// Additional property to define code list id for ValueDataType "CODE"
+    /// </summary>
+    public string CodeListId { get; set; }
   }
 
 }

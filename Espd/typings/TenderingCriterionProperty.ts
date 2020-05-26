@@ -38,4 +38,5 @@ export class TenderingCriterionProperty {
     copyQualityTypeCode?: CodeType
     applicablePeriod?: PeriodType
     templateEvidence?: EvidenceType[]
+    codeListId?: string
 }
