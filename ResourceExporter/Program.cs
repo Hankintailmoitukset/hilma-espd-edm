@@ -8,6 +8,8 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Xml.Linq;
+using Hilma.Espd.EDM.CodeLists;
+using Newtonsoft.Json.Serialization;
 
 namespace ResourceExporter
 {
@@ -34,7 +36,7 @@ namespace ResourceExporter
             //parse xml
             var doc = XDocument.Parse(xmlContent);
             XElement formSection = doc.Root;
-            Codelist financialRatioTypes = ParseFinancialRatioTypes(formSection, lang);
+            CodeListContract financialRatioTypes = ParseFinancialRatioTypes(formSection, lang);
             WriteToFile(financialRatioTypes, "financialRatioTypes.json");
 
             //get tenderincriterion
@@ -49,19 +51,19 @@ namespace ResourceExporter
 
         }
 
-        private static void WriteToFile(Codelist financialRatioTypes, string filename)
+        private static void WriteToFile(CodeListContract financialRatioTypes, string filename)
         {
             string path = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "typings", filename));
             Console.WriteLine("writing file to path: " + path);
 
-            using (var file = File.CreateText(path))
+            using var file = File.CreateText(path);
+            var serializer = new JsonSerializer
             {
-                var serializer = new JsonSerializer
-                {
-                    Formatting = Formatting.Indented
-                };
-                serializer.Serialize(file, financialRatioTypes);
-            }
+              Formatting = Formatting.Indented, 
+              ContractResolver = new CamelCasePropertyNamesContractResolver(),
+              NullValueHandling = NullValueHandling.Ignore
+            };
+            serializer.Serialize(file, financialRatioTypes);
         }
 
         private static void WriteToFile(IEnumerable<TenderingCriterion> criterionSpecification, string filename)
@@ -69,17 +71,18 @@ namespace ResourceExporter
             string path = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "typings", filename));
             Console.WriteLine("writing file to path: " + path);
 
-            using (var file = File.CreateText(path))
+            using var file = File.CreateText(path);
+            var serializer = new JsonSerializer
             {
-                var serializer = new JsonSerializer
-                {
-                    Formatting = Formatting.Indented
-                };
-                serializer.Serialize(file, criterionSpecification);
-            }
+              Formatting = Formatting.Indented,
+              ContractResolver = new CamelCasePropertyNamesContractResolver(),
+              NullValueHandling = NullValueHandling.Ignore
+
+            };
+            serializer.Serialize(file, criterionSpecification);
         }
 
-        private static Codelist ParseFinancialRatioTypes(XElement formSection, string lang)
+        private static CodeListContract ParseFinancialRatioTypes(XElement formSection, string lang)
         {
             if (formSection == null)
             {
@@ -90,14 +93,14 @@ namespace ResourceExporter
                 var identification = formSection.Element("Identification");
                 var simpleCodeList = formSection.Element("SimpleCodeList");
 
-                Codelist codelist = new Codelist()
+                CodeListContract codeListContract = new CodeListContract()
                 {
                     ShortName = identification.Element("ShortName").Value,
                     LongName = identification.Element("LongName").Value,
                     Codes = ParseCodes(simpleCodeList, lang)
                 };
 
-                return codelist;
+                return codeListContract;
             }
             catch (Exception)
             {
@@ -106,13 +109,13 @@ namespace ResourceExporter
             }
         }
 
-        private static List<Codes> ParseCodes(XElement codelist, string lang)
+        private static List<CodeContract> ParseCodes(XElement codelist, string lang)
         {
-            var listOfCodes = new List<Codes>();
+            var listOfCodes = new List<CodeContract>();
 
             foreach (var row in codelist.Elements("Row"))
             {
-                var code = new Codes()
+                var code = new CodeContract()
                 {
                     Name = row.Elements("Value").Where(r => r.Attribute("ColumnRef")?.Value == lang)
                                             .FirstOrDefault().Element("SimpleValue").Value,

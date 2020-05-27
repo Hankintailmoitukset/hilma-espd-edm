@@ -14,6 +14,7 @@ export class AdditionalDocumentReference {
         assign(this, init)
     } 
     
+    
     id?: IdentifierType
     uuid?: IdentifierType
     documentTypeCode?: CodeType

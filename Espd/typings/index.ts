@@ -36,6 +36,4 @@ export * from './DateType';
 export * from './IdentifierType';
 export * from './MeasureType';
 export * from './CommodityClassificationType';
-export * as financialRatioTypes from './financialRatioTypes.json';
-export * as criterionSpecification from './criterionSpecification.json';
-export * as translationsDefault from './translations.default.json';
+export * from './Resources'

@@ -36,6 +36,12 @@
     <None Update="typings\AttachmentType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\AttachmentType.cs</CustomToolNamespace>
     </None>
+    <None Update="typings\CodeContract.ts">
+      <CustomToolNamespace>CodeLists\CodeContract.cs</CustomToolNamespace>
+    </None>
+    <None Update="typings\CodeListContract.ts">
+      <CustomToolNamespace>CodeLists\CodeListContract.cs</CustomToolNamespace>
+    </None>
     <None Update="typings\CodeType.ts">
       <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\CodeType.cs</CustomToolNamespace>
     </None>
@@ -147,6 +153,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="CodeEntities\" />
     <Folder Include="QualificationApplication\" />
   </ItemGroup>
 

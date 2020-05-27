@@ -13,4 +13,8 @@
     <ProjectReference Include="..\Espd\Espd.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Entities\" />
+  </ItemGroup>
+
 </Project>

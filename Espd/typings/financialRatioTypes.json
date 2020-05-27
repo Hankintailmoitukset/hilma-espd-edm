@@ -1,122 +1,122 @@
 {
-  "ShortName": "FinancialRatioType",
-  "LongName": "FINANCIAL RATIO TYPE",
-  "Codes": [
+  "shortName": "FinancialRatioType",
+  "longName": "FINANCIAL RATIO TYPE",
+  "codes": [
     {
-      "Code": "R11",
-      "Name": "Assets to Equity ratio"
+      "code": "R11",
+      "name": "Assets to Equity ratio"
     },
     {
-      "Code": "R12",
-      "Name": "Liabilities to Equity ratio "
+      "code": "R12",
+      "name": "Liabilities to Equity ratio "
     },
     {
-      "Code": "R13",
-      "Name": "Current assets/Total assets "
+      "code": "R13",
+      "name": "Current assets/Total assets "
     },
     {
-      "Code": "R14",
-      "Name": "Other financial assets and cash and bank/ Total assets"
+      "code": "R14",
+      "name": "Other financial assets and cash and bank/ Total assets"
     },
     {
-      "Code": "R15",
-      "Name": "Non-current debt/ Total assets "
+      "code": "R15",
+      "name": "Non-current debt/ Total assets "
     },
     {
-      "Code": "R16",
-      "Name": "Current debt/Total assets "
+      "code": "R16",
+      "name": "Current debt/Total assets "
     },
     {
-      "Code": "R21",
-      "Name": "Financial income net of charges other than interest/EBITDA"
+      "code": "R21",
+      "name": "Financial income net of charges other than interest/EBITDA"
     },
     {
-      "Code": "R22",
-      "Name": "EBITDA/Interest on financial debt"
+      "code": "R22",
+      "name": "EBITDA/Interest on financial debt"
     },
     {
-      "Code": "R23",
-      "Name": "Interest burden"
+      "code": "R23",
+      "name": "Interest burden"
     },
     {
-      "Code": "R24",
-      "Name": "Interest and similar charges/Net turnove"
+      "code": "R24",
+      "name": "Interest and similar charges/Net turnove"
     },
     {
-      "Code": "R25",
-      "Name": "Interest and similar charges/Gross operating profit"
+      "code": "R25",
+      "name": "Interest and similar charges/Gross operating profit"
     },
     {
-      "Code": "R26",
-      "Name": "Net financial income/Gross operating profit"
+      "code": "R26",
+      "name": "Net financial income/Gross operating profit"
     },
     {
-      "Code": "R27",
-      "Name": "Gross operating profit/Total net debt"
+      "code": "R27",
+      "name": "Gross operating profit/Total net debt"
     },
     {
-      "Code": "R31",
-      "Name": "Gross value added/Net turnove"
+      "code": "R31",
+      "name": "Gross value added/Net turnove"
     },
     {
-      "Code": "R32",
-      "Name": "Gross operating profit/Net turnover (ROS)"
+      "code": "R32",
+      "name": "Gross operating profit/Net turnover (ROS)"
     },
     {
-      "Code": "R33",
-      "Name": "EBITDA/Net turnove"
+      "code": "R33",
+      "name": "EBITDA/Net turnove"
     },
     {
-      "Code": "R34",
-      "Name": "Net operating profit/Net turnover"
+      "code": "R34",
+      "name": "Net operating profit/Net turnover"
     },
     {
-      "Code": "R35",
-      "Name": "EBIT/Net turnover"
+      "code": "R35",
+      "name": "EBIT/Net turnover"
     },
     {
-      "Code": "R36",
-      "Name": "EBT/Net turnover"
+      "code": "R36",
+      "name": "EBT/Net turnover"
     },
     {
-      "Code": "R37",
-      "Name": "Net financial income/Net turnover"
+      "code": "R37",
+      "name": "Net financial income/Net turnover"
     },
     {
-      "Code": "R38",
-      "Name": "Return on equity"
+      "code": "R38",
+      "name": "Return on equity"
     },
     {
-      "Code": "R39",
-      "Name": "Net operating profit/Total assets"
+      "code": "R39",
+      "name": "Net operating profit/Total assets"
     },
     {
-      "Code": "R310",
-      "Name": "Profit or loss for the year before taxes/Equity"
+      "code": "R310",
+      "name": "Profit or loss for the year before taxes/Equity"
     },
     {
-      "Code": "R41",
-      "Name": "Asset turnover ratio"
+      "code": "R41",
+      "name": "Asset turnover ratio"
     },
     {
-      "Code": "R42",
-      "Name": "Employee expenses/Gross value added"
+      "code": "R42",
+      "name": "Employee expenses/Gross value added"
     },
     {
-      "Code": "R51",
-      "Name": "Inventories/Net turnover"
+      "code": "R51",
+      "name": "Inventories/Net turnover"
     },
     {
-      "Code": "R52",
-      "Name": "Trade receivables/Net turnover"
+      "code": "R52",
+      "name": "Trade receivables/Net turnover"
     },
     {
-      "Code": "R53",
-      "Name": "Trade payables/Net turnover"
+      "code": "R53",
+      "name": "Trade payables/Net turnover"
     },
     {
-      "Code": "R54",
-      "Name": "Operating working capital/Net turnover"
+      "code": "R54",
+      "name": "Operating working capital/Net turnover"
     }
   ]
 }
