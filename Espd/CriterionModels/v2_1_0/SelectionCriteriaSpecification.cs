@@ -17,7 +17,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
             SpecificAverageTurnover,
             SetupOfEconomicOperator,
             FinancialRatios,
-            ProfessionalRiskInsurance
+            ProfessionalRiskInsurance,
+            OtherEconomicOrFinancial
 
         }.SelectMany(c => c);
 
