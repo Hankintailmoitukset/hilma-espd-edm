@@ -664,8 +664,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
             {
                  CriterionTypeCode =
                    new CriterionTypeCode("CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.RISK_INDEMNITY_INSURANCE"),
-                 Name = "ProfessionalRiskInsuranse.question.name",
-                 Description = new[] {"ProfessionalRiskInsuranse.question.description"},
+                 Name = "professionalRiskInsurance.question.name",
+                 Description = new[] {"professionalRiskInsurance.question.description"},
                  Id = new CriteriaTaxonomyIdentifier("7604bd40-4462-4086-8763-a50da51a869c"),
                  Legislations = new Legislation[] { },
                  TenderingCriterionPropertyGroups = new[]
@@ -700,7 +700,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                     _cardinality = CardinalityMetadata.ZeroOrMore,
                                     Id = EuComGrowId.Random(),
                                     TypeCode = CriterionElementType.Requirement,
-                                    Description = "professionalRiskInsuranse.lotIds.description",
+                                    Description = "professionalRiskInsurance.lotIds.description",
                                     ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
                                   }
                                 },
@@ -718,7 +718,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                             _cardinality = CardinalityMetadata.ExactlyOne,
                                             Id = EuComGrowId.Random(),
                                             TypeCode = CriterionElementType.Requirement,
-                                            Description = "professionalRiskInsuranse.typeOfInsurance.description",
+                                            Description = "professionalRiskInsurance.typeOfInsurance.description",
                                             ValueDataTypeCode = ResponseDataTypeCode.Description
                                           },
                                           new TenderingCriterionProperty()
@@ -752,7 +752,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                     _cardinality = CardinalityMetadata.ExactlyOne,
                                                     Id = EuComGrowId.Random(),
                                                     TypeCode = CriterionElementType.Question,
-                                                    Description = "professionalRiskInsuranse.asAnEO.description",
+                                                    Description = "professionalRiskInsurance.asAnEO.description",
                                                     ValueDataTypeCode = ResponseDataTypeCode.Indicator
                                                   },
                                                   new TenderingCriterionProperty()
@@ -760,7 +760,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                     _cardinality = CardinalityMetadata.ExactlyOne,
                                                     Id = EuComGrowId.Random(),
                                                     TypeCode = CriterionElementType.Question,
-                                                    Description = "professionalRiskInsuranse.iAmExempt.description",
+                                                    Description = "professionalRiskInsurance.iAmExempt.description",
                                                     ValueDataTypeCode = ResponseDataTypeCode.Indicator
                                                   },
 
