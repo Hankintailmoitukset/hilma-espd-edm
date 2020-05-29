@@ -26,7 +26,7 @@ using System.Collections.Generic;
         ProcurementProject = new ProcurementProject(),
         ProcurementProjectLots = new ProcurementProjectLot[0],
         AdditionalDocumentReferences = new AdditionalDocumentReference[0],
-        TenderingCriteria = new CriterionSpecification().AllCriteria.ToArray()
+        TenderingCriteria = new CriterionSpecification().ExclusionGrounds.AllCriteria.ToArray()
       };
     }
     
