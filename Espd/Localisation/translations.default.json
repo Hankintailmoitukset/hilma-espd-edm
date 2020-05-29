@@ -117,7 +117,6 @@
 
   "professionalRiskInsuranse.lotIds.description": "Lot Ids",
   "professionalRiskInsuranse.typeOfInsurance.description": "Type of insurance",
-  "professionalRiskInsuranse.minimumAmount.description": "Minimum amount",
   "professionalRiskInsuranse.asAnEO.description": "As an EO I will commit to obtain the minimum amount required",
   "professionalRiskInsuranse.iAmExempt.description": "I am exempt",
 
@@ -125,6 +124,10 @@
   "otherEconomicOrFinancial.question.description": "Concerning the other economic or financial requirements, if any, that may have been specified in the relevant notice or in the ESPD, the economic operator declares that:",
   "otherEconomicOrFinancial.lotID.description": "Lot ID",
   "otherEconomicOrFinancial.selectTheTypeOfRequirement.description": "Select the type of requirement",
+  "otherEconomicOrFinancial.descriptionOfTheEconomicfinancial.description": "Description of the economic or financial requirement",
+  "otherEconomicOrFinancial.minimumRating.description": "Minimum rating",
+  "otherEconomicOrFinancial.ratingScheme.description": "Rating scheme",
+  "otherEconomicOrFinancial.rating.description": "Rating",
 
   "common.yourAnswer.description": "Your answer",
   "common.CountryOrMemberStateConcerned.description": "Country or member state concerned",
@@ -143,13 +146,13 @@
   "common.amount.description": "Amount",
   "common.startDate.description": "Start date",
   "common.endDate.description": "End date",
-  "common.startDateEndDate.description": "Start date;End date",
+  "common.startDateEndDate.description": "Start date; End date",
   "common.isThisInformationAvailableElectronically.description": "Is this information available electronically?",
   "common.evidenceSupplied": "Evidence Supplied",
   "common.numberOfFiscalYears.description": "Number of fiscal years",
   "common.lotsTheEequirementAppliesTo.description": "Lots the requirement applies to",
   "common.minimumRequirement.description": "Minimum requirement",
-  "common.cpvCode.description": "CPV Code"
-
+  "common.cpvCode.description": "CPV Code",
+  "common.minimumAmount.description": "Minimum amount"
 
 }

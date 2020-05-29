@@ -14,7 +14,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers
         /// <summary>
         /// Visible when parent indicator value is false
         /// </summary>
-        public static CodeType OnTrue => new PropertyGroupTypeCode("ONFALSE");
+        public static CodeType OnTrue => new PropertyGroupTypeCode("ONTRUE");
 
         /// <summary>
         /// Visible when parent indicator value is false

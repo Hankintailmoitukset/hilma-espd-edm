@@ -280,7 +280,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                {
                                  _cardinality = CardinalityMetadata.ExactlyOne,
                                  TypeCode = CriterionElementType.Question,
-                                 Description = "specificAverageTurnover.startDateEndDate.description",
+                                 Description = "common.startDateEndDate.description",
                                  ValueDataTypeCode = ResponseDataTypeCode.Period
                                },
                                new TenderingCriterionProperty()
@@ -689,7 +689,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                           {
                                             _cardinality = CardinalityMetadata.ExactlyOne,
                                             TypeCode = CriterionElementType.Requirement,
-                                            Description = "professionalRiskInsuranse.minimumAmount.description",
+                                            Description = "common.minimumAmount.description",
                                             ValueDataTypeCode = ResponseDataTypeCode.Amount
                                           }
                                         },
@@ -843,21 +843,21 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                            {
                                              _cardinality = CardinalityMetadata.ExactlyOne,
                                              TypeCode = CriterionElementType.Requirement,
-                                             Description = "Description of the economic or financial requirement",
+                                             Description = "otherEconomicOrFinancial.descriptionOfTheEconomicfinancial.description",
                                              ValueDataTypeCode = ResponseDataTypeCode.Description
                                            },
                                            new TenderingCriterionProperty()
                                            {
                                              _cardinality = CardinalityMetadata.ExactlyOne,
                                              TypeCode = CriterionElementType.Requirement,
-                                             Description = "Minimum amount",
+                                             Description = "common.minimumAmount.description",
                                              ValueDataTypeCode = ResponseDataTypeCode.Amount
                                            },
                                            new TenderingCriterionProperty()
                                            {
                                              _cardinality = CardinalityMetadata.ExactlyOne,
                                              TypeCode = CriterionElementType.Requirement,
-                                             Description = "Start date; End date",
+                                             Description = "common.startDateEndDate.description",
                                              ValueDataTypeCode = ResponseDataTypeCode.Period
                                            }
                                          },
@@ -894,14 +894,14 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                            {
                                              _cardinality = CardinalityMetadata.ExactlyOne,
                                              TypeCode = CriterionElementType.Requirement,
-                                             Description = "Minimum rating",
+                                             Description = "otherEconomicOrFinancial.minimumRating.description",
                                              ValueDataTypeCode = ResponseDataTypeCode.Quantity
                                            },
                                            new TenderingCriterionProperty()
                                            {
                                              _cardinality = CardinalityMetadata.ExactlyOne,
                                              TypeCode = CriterionElementType.Requirement,
-                                             Description = "Rating scheme",
+                                             Description = "otherEconomicOrFinancial.ratingScheme.description",
                                              ValueDataTypeCode = ResponseDataTypeCode.Description
                                            },
                                          },
@@ -918,7 +918,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                    {
                                                      _cardinality = CardinalityMetadata.ExactlyOne,
                                                      TypeCode = CriterionElementType.Question,
-                                                     Description = "Rating",
+                                                     Description = "otherEconomicOrFinancial.rating.description",
                                                      ValueDataTypeCode = ResponseDataTypeCode.Quantity
                                                    }
                                                  }
