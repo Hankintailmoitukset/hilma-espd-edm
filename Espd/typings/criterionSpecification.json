@@ -38,7 +38,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "929ca7e3-bb7f-4df0-b53b-db37f5f53fc1"
+              "value": "98c83b68-9015-4fb0-8873-e12bb74d59e3"
             },
             "description": "common.yourAnswer.description",
             "typeCode": {
@@ -68,7 +68,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -76,7 +76,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "728588a4-d3a8-4c8b-a70a-51a6f46d5e24"
+                  "value": "5ac4d155-eeea-487f-a872-a8903e7b0fad"
                 },
                 "description": "convictions.dateOfConviction.description",
                 "typeCode": {
@@ -97,7 +97,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "65bd7bd9-2f59-4ede-9320-e0d5278fcb15"
+                  "value": "0ee31ae9-bc03-4fbc-8b7f-b3d846a17857"
                 },
                 "description": "convictions.reason.description",
                 "typeCode": {
@@ -118,7 +118,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "6baaa5a0-7a0f-4ce8-9d67-6e2da3262cb8"
+                  "value": "975af61d-24f0-47d3-a389-1641a13f0d47"
                 },
                 "description": "convictions.whoHasBeenConvicted.description",
                 "typeCode": {
@@ -139,7 +139,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "5df931b8-b1b0-4764-9ddc-5423f905851b"
+                  "value": "fd26f252-97bc-43e4-a963-dbb7b909f2e1"
                 },
                 "description": "convictions.lengthOfThePeriodOfExclusion.description",
                 "typeCode": {
@@ -177,7 +177,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "953c9762-06bb-4f9d-af67-983f63e84410"
+                      "value": "2890570b-2e9c-4b44-8edc-e325e418a074"
                     },
                     "description": "convictions.measuresToDemonstrateYourReliability.description",
                     "typeCode": {
@@ -207,7 +207,7 @@
                       "listID": "PropertyGroupType",
                       "listAgencyID": "EU-COM-GROW",
                       "listVersionID": "2.1.0",
-                      "value": "ONFALSE"
+                      "value": "ONTRUE"
                     },
                     "tenderingCriterionProperties": [
                       {
@@ -215,7 +215,7 @@
                         "id": {
                           "schemeAgencyID": "EU-COM-GROW",
                           "schemeVersionID": "2.1.0",
-                          "value": "d1411c25-97db-4873-a468-62377ab06da4"
+                          "value": "133d0637-1a1c-4929-854c-9b0a99b9c692"
                         },
                         "description": "common.pleaseDescribeThem.description",
                         "typeCode": {
@@ -259,7 +259,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "f78db723-bd96-4c4e-85ff-c9922f4fb80a"
+              "value": "c271e7f2-0f9e-40d7-b4a8-bffe11f1cb89"
             },
             "description": "common.isThisInformationAvailableElectronically.description",
             "typeCode": {
@@ -289,7 +289,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -297,7 +297,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "9ea4d4af-f8ce-437d-84fb-3940e63ee45d"
+                  "value": "c445eb0b-4386-427a-8ae9-339d0facb4cd"
                 },
                 "description": "common.evidenceSupplied",
                 "typeCode": {
@@ -359,7 +359,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "f43fbf06-eeb3-4def-bf8f-9a0bcacc5a5c"
+              "value": "69f02e8f-6232-4c0c-b2e3-c00c2c0725db"
             },
             "description": "common.yourAnswer.description",
             "typeCode": {
@@ -389,7 +389,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -397,7 +397,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "9597d42b-a198-478d-872c-5333048ce2cc"
+                  "value": "c1d62d25-1b86-4fa6-9d05-5fe196ef9935"
                 },
                 "description": "convictions.dateOfConviction.description",
                 "typeCode": {
@@ -418,7 +418,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "44ad3607-d6d7-4285-b2af-b0dbc401992e"
+                  "value": "75be1c84-f4a1-4c93-8b9a-4b5e728401b6"
                 },
                 "description": "convictions.reason.description",
                 "typeCode": {
@@ -439,7 +439,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "d2fb1dae-a401-4d10-a51c-78912bf0eb1b"
+                  "value": "04dca162-7d7b-41d1-add0-0c4135a4a8fc"
                 },
                 "description": "convictions.whoHasBeenConvicted.description",
                 "typeCode": {
@@ -460,7 +460,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "ccc2a51f-e704-40a0-9ce1-7086aedc8f21"
+                  "value": "15a4614e-7f00-4324-865c-a3f054cae02c"
                 },
                 "description": "convictions.lengthOfThePeriodOfExclusion.description",
                 "typeCode": {
@@ -498,7 +498,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "f085bee3-e733-464a-bf4f-27120185504e"
+                      "value": "96906806-2ac0-4789-86c2-e5e9251ab17b"
                     },
                     "description": "convictions.measuresToDemonstrateYourReliability.description",
                     "typeCode": {
@@ -528,7 +528,7 @@
                       "listID": "PropertyGroupType",
                       "listAgencyID": "EU-COM-GROW",
                       "listVersionID": "2.1.0",
-                      "value": "ONFALSE"
+                      "value": "ONTRUE"
                     },
                     "tenderingCriterionProperties": [
                       {
@@ -536,7 +536,7 @@
                         "id": {
                           "schemeAgencyID": "EU-COM-GROW",
                           "schemeVersionID": "2.1.0",
-                          "value": "88aab378-2e84-4b65-881d-d12ca1ab0045"
+                          "value": "e8f7f037-2c14-48ef-905b-2fa670340b77"
                         },
                         "description": "common.pleaseDescribeThem.description",
                         "typeCode": {
@@ -580,7 +580,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "337a190c-273c-44ef-baca-8bcb6b5d734f"
+              "value": "59cd2a63-0c56-4e9c-9c8f-64570d0c51a6"
             },
             "description": "common.isThisInformationAvailableElectronically.description",
             "typeCode": {
@@ -610,7 +610,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -618,7 +618,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "6a2e88a2-6e65-4adf-abe4-bd46bbb8a72d"
+                  "value": "faa94c2a-d683-4e27-b4c8-337ac575db4f"
                 },
                 "description": "common.evidenceSupplied",
                 "typeCode": {
@@ -680,7 +680,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "f30025b1-6104-4e07-b17c-69aa6b70ea66"
+              "value": "9e999c62-e019-4277-9d28-fe58e2ecf31b"
             },
             "description": "common.yourAnswer.description",
             "typeCode": {
@@ -710,7 +710,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -718,7 +718,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "8cedf48e-9726-4d5e-93a3-a53202c82d3d"
+                  "value": "dfc97c1a-9638-43a1-9b1a-d11e5cc6945b"
                 },
                 "description": "convictions.dateOfConviction.description",
                 "typeCode": {
@@ -739,7 +739,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "f55e0b27-7323-4d6c-acbd-96463ce3169c"
+                  "value": "2f182182-ff42-401d-816f-79cb2f8f01c6"
                 },
                 "description": "convictions.reason.description",
                 "typeCode": {
@@ -760,7 +760,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "7711779d-de18-483c-87a9-bd5f51c2d921"
+                  "value": "30317f8d-a308-41a5-9108-16aa62b2177b"
                 },
                 "description": "convictions.whoHasBeenConvicted.description",
                 "typeCode": {
@@ -781,7 +781,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "8eea36c4-a691-4250-a796-59ff48a78497"
+                  "value": "018b3c01-f531-4e53-a80c-7d2b38325bca"
                 },
                 "description": "convictions.lengthOfThePeriodOfExclusion.description",
                 "typeCode": {
@@ -819,7 +819,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "0014e805-9654-4c2c-9068-361798fa399b"
+                      "value": "958d5704-84bd-4741-8219-38e1bfdf98cb"
                     },
                     "description": "convictions.measuresToDemonstrateYourReliability.description",
                     "typeCode": {
@@ -849,7 +849,7 @@
                       "listID": "PropertyGroupType",
                       "listAgencyID": "EU-COM-GROW",
                       "listVersionID": "2.1.0",
-                      "value": "ONFALSE"
+                      "value": "ONTRUE"
                     },
                     "tenderingCriterionProperties": [
                       {
@@ -857,7 +857,7 @@
                         "id": {
                           "schemeAgencyID": "EU-COM-GROW",
                           "schemeVersionID": "2.1.0",
-                          "value": "c2bce083-09af-479e-9e54-ec5da128bb83"
+                          "value": "4f387bab-b409-48d8-a5d7-3660cc6cc5e5"
                         },
                         "description": "common.pleaseDescribeThem.description",
                         "typeCode": {
@@ -901,7 +901,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "603346d4-2086-4b47-af28-1e884bbe0fab"
+              "value": "d6391ba2-7c0f-4d8e-90da-a629424623fe"
             },
             "description": "common.isThisInformationAvailableElectronically.description",
             "typeCode": {
@@ -931,7 +931,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -939,7 +939,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "aba98ff2-20d5-415a-9c46-373dcea84649"
+                  "value": "931483e1-450f-4baf-8fee-a50368ef938c"
                 },
                 "description": "common.evidenceSupplied",
                 "typeCode": {
@@ -1001,7 +1001,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "9b215277-062c-4968-9041-7b86cc24ca77"
+              "value": "337e8cf8-b3a4-4c57-b40d-be4ca275f464"
             },
             "description": "common.yourAnswer.description",
             "typeCode": {
@@ -1031,7 +1031,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -1039,7 +1039,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "799d07ce-8eff-4ed9-a570-17aaecd3fbda"
+                  "value": "2d8a91b7-7f94-455d-b594-2cc423704f3d"
                 },
                 "description": "convictions.dateOfConviction.description",
                 "typeCode": {
@@ -1060,7 +1060,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "daf2e2b2-0cdb-4c4b-b3db-4bfc31dca826"
+                  "value": "bcddbbf7-4e0a-4108-9738-8f8fa1ab6e0d"
                 },
                 "description": "convictions.reason.description",
                 "typeCode": {
@@ -1081,7 +1081,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "b0d804ba-ba75-40ae-a624-f0ef781b6249"
+                  "value": "e1f96c0f-5fa2-4a11-9f9c-86af0c75401e"
                 },
                 "description": "convictions.whoHasBeenConvicted.description",
                 "typeCode": {
@@ -1102,7 +1102,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "a5ddd5b3-25b8-44d0-a0b8-19dea3b39dcd"
+                  "value": "7f4c65cb-0f75-4285-b178-5e04d72a6e3e"
                 },
                 "description": "convictions.lengthOfThePeriodOfExclusion.description",
                 "typeCode": {
@@ -1140,7 +1140,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "bc5ac3a2-da65-452f-8cf4-aded60a2516b"
+                      "value": "5d98547a-f228-40ee-be31-ea392ffd24a7"
                     },
                     "description": "convictions.measuresToDemonstrateYourReliability.description",
                     "typeCode": {
@@ -1170,7 +1170,7 @@
                       "listID": "PropertyGroupType",
                       "listAgencyID": "EU-COM-GROW",
                       "listVersionID": "2.1.0",
-                      "value": "ONFALSE"
+                      "value": "ONTRUE"
                     },
                     "tenderingCriterionProperties": [
                       {
@@ -1178,7 +1178,7 @@
                         "id": {
                           "schemeAgencyID": "EU-COM-GROW",
                           "schemeVersionID": "2.1.0",
-                          "value": "b46114ba-3df9-41e6-835c-d8a9db55774a"
+                          "value": "be2f575e-edde-46e8-9ee4-13720e2505db"
                         },
                         "description": "common.pleaseDescribeThem.description",
                         "typeCode": {
@@ -1222,7 +1222,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "bb0f4b90-6fb3-4b91-ae53-981bf721dce9"
+              "value": "228cc40a-8591-492f-9d3c-5cfb80f6be18"
             },
             "description": "common.isThisInformationAvailableElectronically.description",
             "typeCode": {
@@ -1252,7 +1252,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -1260,7 +1260,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "f390c416-ec7b-4469-a271-3b3bca77f461"
+                  "value": "8eedbadd-5248-4a32-89a3-b070f9f5e57e"
                 },
                 "description": "common.evidenceSupplied",
                 "typeCode": {
@@ -1322,7 +1322,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "012ed39a-0b8a-4fa5-a09d-8ac481969e17"
+              "value": "f6148217-bbe1-44c4-aa81-a1d4a6bc0a1a"
             },
             "description": "common.yourAnswer.description",
             "typeCode": {
@@ -1352,7 +1352,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -1360,7 +1360,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "024efffd-4443-400c-b55d-42eecf005d5f"
+                  "value": "f389b99e-1c0e-46f1-9659-51bb09f2b972"
                 },
                 "description": "convictions.dateOfConviction.description",
                 "typeCode": {
@@ -1381,7 +1381,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "81494385-5175-4d7c-abbb-cce78d24f92d"
+                  "value": "ff4e5edf-978b-479d-b006-2d824d34f810"
                 },
                 "description": "convictions.reason.description",
                 "typeCode": {
@@ -1402,7 +1402,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "e7e44d36-b350-49e0-aa9d-5408e7aa8f96"
+                  "value": "7dd545af-5089-4c1c-a55e-dd1a6c49e86f"
                 },
                 "description": "convictions.whoHasBeenConvicted.description",
                 "typeCode": {
@@ -1423,7 +1423,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "5471e188-183b-40c8-ba0a-8c8071556d9f"
+                  "value": "48712911-6f56-47d5-b2a7-c89ff396411e"
                 },
                 "description": "convictions.lengthOfThePeriodOfExclusion.description",
                 "typeCode": {
@@ -1461,7 +1461,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "8383860d-0142-4fce-87c8-05d159cdff00"
+                      "value": "49640480-6787-42f2-9e47-babc25146928"
                     },
                     "description": "convictions.measuresToDemonstrateYourReliability.description",
                     "typeCode": {
@@ -1491,7 +1491,7 @@
                       "listID": "PropertyGroupType",
                       "listAgencyID": "EU-COM-GROW",
                       "listVersionID": "2.1.0",
-                      "value": "ONFALSE"
+                      "value": "ONTRUE"
                     },
                     "tenderingCriterionProperties": [
                       {
@@ -1499,7 +1499,7 @@
                         "id": {
                           "schemeAgencyID": "EU-COM-GROW",
                           "schemeVersionID": "2.1.0",
-                          "value": "8f089a23-bc9d-4e8a-a3d5-132c7445fcaf"
+                          "value": "9bbb7587-4c45-4dd3-823c-5c03baaa8def"
                         },
                         "description": "common.pleaseDescribeThem.description",
                         "typeCode": {
@@ -1543,7 +1543,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "61a24451-f4f9-4c3e-b4a5-44c1602ac48a"
+              "value": "edfdc1cd-a223-4eea-ba76-f01d4870d587"
             },
             "description": "common.isThisInformationAvailableElectronically.description",
             "typeCode": {
@@ -1573,7 +1573,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -1581,7 +1581,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "f309e38c-864d-4372-88e6-eb2bdee1fc00"
+                  "value": "d9302f28-d3c3-4815-96ef-dcd713a31a6a"
                 },
                 "description": "common.evidenceSupplied",
                 "typeCode": {
@@ -1643,7 +1643,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "257d5e90-bc6f-40cc-96ba-6e4be4b03f16"
+              "value": "48471dd3-3050-4b74-a114-b9dcec4b451c"
             },
             "description": "common.yourAnswer.description",
             "typeCode": {
@@ -1673,7 +1673,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -1681,7 +1681,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "22a1dabb-dc57-4696-b49f-4d470185052d"
+                  "value": "52b2e6c0-8442-4f1a-bd2e-ffb45dd28499"
                 },
                 "description": "convictions.dateOfConviction.description",
                 "typeCode": {
@@ -1702,7 +1702,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "19bcd040-fb6e-4306-8096-af7964377ad9"
+                  "value": "cf6b9ef8-6eda-4d41-bf93-a0539a4d7753"
                 },
                 "description": "convictions.reason.description",
                 "typeCode": {
@@ -1723,7 +1723,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "8fd70bad-f75b-41d3-b3ab-5ed575cd805a"
+                  "value": "5aa1f27a-c933-45bd-a2a7-7f781a8b20de"
                 },
                 "description": "convictions.whoHasBeenConvicted.description",
                 "typeCode": {
@@ -1744,7 +1744,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "043df1e4-4a00-46c9-93db-2ed84245c711"
+                  "value": "f2baa752-27b5-42ed-bd23-0d9a577ecc99"
                 },
                 "description": "convictions.lengthOfThePeriodOfExclusion.description",
                 "typeCode": {
@@ -1782,7 +1782,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "ddc6b444-aac5-4bd8-bc43-965ea06b5ff5"
+                      "value": "cee2bc83-0532-44e2-b231-e08f09973b42"
                     },
                     "description": "convictions.measuresToDemonstrateYourReliability.description",
                     "typeCode": {
@@ -1812,7 +1812,7 @@
                       "listID": "PropertyGroupType",
                       "listAgencyID": "EU-COM-GROW",
                       "listVersionID": "2.1.0",
-                      "value": "ONFALSE"
+                      "value": "ONTRUE"
                     },
                     "tenderingCriterionProperties": [
                       {
@@ -1820,7 +1820,7 @@
                         "id": {
                           "schemeAgencyID": "EU-COM-GROW",
                           "schemeVersionID": "2.1.0",
-                          "value": "f74227a0-89b3-4de3-91c0-c08d53ba5a2f"
+                          "value": "39bf10c6-f4aa-4c71-8b4c-2329370dcf39"
                         },
                         "description": "common.pleaseDescribeThem.description",
                         "typeCode": {
@@ -1864,7 +1864,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "f61b7aab-7939-4194-b2fb-9388b41aea8c"
+              "value": "6cc593f4-c345-4c9c-8725-460ea29f8901"
             },
             "description": "common.isThisInformationAvailableElectronically.description",
             "typeCode": {
@@ -1894,7 +1894,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -1902,7 +1902,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "8d864805-e6f8-473d-9000-e5b7ec076a55"
+                  "value": "2c2aa73b-69f4-45c1-a25f-7c3a9e7418dc"
                 },
                 "description": "common.evidenceSupplied",
                 "typeCode": {
@@ -1964,7 +1964,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "645f11d9-7ec0-4965-9a64-95ac28ed689d"
+              "value": "4a7e6e9b-40e1-4a14-8970-eab8455961ff"
             },
             "description": "contributions.threshold.description",
             "typeCode": {
@@ -1985,7 +1985,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "ed525081-e601-493e-b698-e51641ee8442"
+              "value": "82b3c819-a258-42dc-8b8f-161aca468c4a"
             },
             "description": "contributions.additionalInformation.description",
             "typeCode": {
@@ -2023,7 +2023,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "1bde225e-fffb-4e9e-9df7-827476f54e88"
+                  "value": "abfa5b65-4afd-4a46-891e-7dd17f9beafb"
                 },
                 "description": "common.yourAnswer.description",
                 "typeCode": {
@@ -2053,7 +2053,7 @@
                   "listID": "PropertyGroupType",
                   "listAgencyID": "EU-COM-GROW",
                   "listVersionID": "2.1.0",
-                  "value": "ONFALSE"
+                  "value": "ONTRUE"
                 },
                 "tenderingCriterionProperties": [
                   {
@@ -2061,7 +2061,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "5f954939-329f-4730-88f9-6f1529adbc71"
+                      "value": "72ce92cc-38d9-4907-aa80-ed730c8e9ac6"
                     },
                     "description": "common.CountryOrMemberStateConcerned.description",
                     "typeCode": {
@@ -2082,7 +2082,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "933796b8-dcbc-42db-8ccc-a2e863416f6d"
+                      "value": "891b97f1-a0a8-400e-a2e8-f31abb7cae07"
                     },
                     "description": "common.amountConcerned.description",
                     "typeCode": {
@@ -2120,7 +2120,7 @@
                         "id": {
                           "schemeAgencyID": "EU-COM-GROW",
                           "schemeVersionID": "2.1.0",
-                          "value": "f52dae19-3368-4748-a489-b4cf3ff3a70a"
+                          "value": "aaf45464-39cd-4df9-8a86-e39145beb0f4"
                         },
                         "description": "contributions.hasThisBreachOfObligations.description",
                         "typeCode": {
@@ -2150,7 +2150,7 @@
                           "listID": "PropertyGroupType",
                           "listAgencyID": "EU-COM-GROW",
                           "listVersionID": "2.1.0",
-                          "value": "ONFALSE"
+                          "value": "ONTRUE"
                         },
                         "tenderingCriterionProperties": [
                           {
@@ -2158,7 +2158,7 @@
                             "id": {
                               "schemeAgencyID": "EU-COM-GROW",
                               "schemeVersionID": "2.1.0",
-                              "value": "6f12bcdd-4278-4de0-8c34-4b5c1dcab816"
+                              "value": "6eaddc83-1c81-483a-b731-5639550c0ffd"
                             },
                             "description": "contributions.pleaseDescribeWhichMeansWereUsed.description",
                             "typeCode": {
@@ -2196,7 +2196,7 @@
                                 "id": {
                                   "schemeAgencyID": "EU-COM-GROW",
                                   "schemeVersionID": "2.1.0",
-                                  "value": "5bc7d75e-129e-4215-9d86-f027be915ecf"
+                                  "value": "151a2c46-5a5f-40e3-9967-b398eabacd17"
                                 },
                                 "description": "contributions.hasTheEconomicOperatorFulfilled.description",
                                 "typeCode": {
@@ -2226,7 +2226,7 @@
                                   "listID": "PropertyGroupType",
                                   "listAgencyID": "EU-COM-GROW",
                                   "listVersionID": "2.1.0",
-                                  "value": "ONFALSE"
+                                  "value": "ONTRUE"
                                 },
                                 "tenderingCriterionProperties": [
                                   {
@@ -2234,7 +2234,7 @@
                                     "id": {
                                       "schemeAgencyID": "EU-COM-GROW",
                                       "schemeVersionID": "2.1.0",
-                                      "value": "8db15836-2e35-42db-8702-6b3336601ae0"
+                                      "value": "e6eb0021-57f5-4023-a065-12e9acc4e672"
                                     },
                                     "description": "common.pleaseDescribeThem.description",
                                     "typeCode": {
@@ -2276,7 +2276,7 @@
                             "id": {
                               "schemeAgencyID": "EU-COM-GROW",
                               "schemeVersionID": "2.1.0",
-                              "value": "e4f81056-5aa0-49d2-9ee9-2c96546ed0e8"
+                              "value": "c0963416-d4a8-4ae9-bc83-6e9340b91b74"
                             },
                             "description": "contributions.ifThisBreachOfObligationsWas.description",
                             "typeCode": {
@@ -2306,7 +2306,7 @@
                               "listID": "PropertyGroupType",
                               "listAgencyID": "EU-COM-GROW",
                               "listVersionID": "2.1.0",
-                              "value": "ONFALSE"
+                              "value": "ONTRUE"
                             },
                             "tenderingCriterionProperties": [
                               {
@@ -2314,7 +2314,7 @@
                                 "id": {
                                   "schemeAgencyID": "EU-COM-GROW",
                                   "schemeVersionID": "2.1.0",
-                                  "value": "47c09856-d3ff-4a8c-bdc4-c4163f26c8d6"
+                                  "value": "b7271486-b533-468e-9ad9-719952d40501"
                                 },
                                 "description": "contributions.pleaseIindicateTheDateOfConvictionOrDecision.description",
                                 "typeCode": {
@@ -2335,7 +2335,7 @@
                                 "id": {
                                   "schemeAgencyID": "EU-COM-GROW",
                                   "schemeVersionID": "2.1.0",
-                                  "value": "6cc3fc10-d12b-441b-bc01-2edc08ba9de6"
+                                  "value": "88d28b32-3031-4543-8b60-7c7fe83bd649"
                                 },
                                 "description": "contributions.inCaseOfAConviction.description",
                                 "typeCode": {
@@ -2381,7 +2381,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "a09b82b1-2bc1-4eef-816b-d3c7436844d3"
+                  "value": "159e9bbd-ed7d-44d8-841f-23f9920d31ab"
                 },
                 "description": "common.isThisInformationAvailableElectronically.description",
                 "typeCode": {
@@ -2411,7 +2411,7 @@
                   "listID": "PropertyGroupType",
                   "listAgencyID": "EU-COM-GROW",
                   "listVersionID": "2.1.0",
-                  "value": "ONFALSE"
+                  "value": "ONTRUE"
                 },
                 "tenderingCriterionProperties": [
                   {
@@ -2419,7 +2419,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "184c6630-c094-4509-a9a9-3a13bf7e80e9"
+                      "value": "eea69db8-fd39-4611-bfca-19944bc02da5"
                     },
                     "description": "common.evidenceSupplied",
                     "typeCode": {
@@ -2483,7 +2483,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "a574bb02-39a3-4a23-99ad-2cbc8f734c1d"
+              "value": "7a472be2-2634-4713-9b37-5ca5a253c9ec"
             },
             "description": "contributions.threshold.description",
             "typeCode": {
@@ -2504,7 +2504,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "3591baaf-9f17-4484-9832-742cbe6509df"
+              "value": "b08153c3-7c40-483c-b5cc-b6f4c8338ac9"
             },
             "description": "contributions.additionalInformation.description",
             "typeCode": {
@@ -2542,7 +2542,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "3d691f4c-11aa-450d-bf78-24d0bc29e48a"
+                  "value": "4118b487-0f7b-4e81-9934-64184ffdd8b3"
                 },
                 "description": "common.yourAnswer.description",
                 "typeCode": {
@@ -2572,7 +2572,7 @@
                   "listID": "PropertyGroupType",
                   "listAgencyID": "EU-COM-GROW",
                   "listVersionID": "2.1.0",
-                  "value": "ONFALSE"
+                  "value": "ONTRUE"
                 },
                 "tenderingCriterionProperties": [
                   {
@@ -2580,7 +2580,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "dd540e21-6f0b-4ca8-b9fb-91286ef44d55"
+                      "value": "cb30c20e-be1d-4c59-ac5a-cf30ce3cbeb0"
                     },
                     "description": "common.CountryOrMemberStateConcerned.description",
                     "typeCode": {
@@ -2601,7 +2601,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "a77a0f07-5b2c-4259-9f05-da2a2ddb32b0"
+                      "value": "4069a527-2e4b-4990-a331-b5d17a9c723b"
                     },
                     "description": "common.amountConcerned.description",
                     "typeCode": {
@@ -2639,7 +2639,7 @@
                         "id": {
                           "schemeAgencyID": "EU-COM-GROW",
                           "schemeVersionID": "2.1.0",
-                          "value": "35a7fa24-0825-48dd-82d4-a9017317dd7f"
+                          "value": "cfeb45a2-c1f5-46c5-81da-3c791da8b037"
                         },
                         "description": "contributions.hasThisBreachOfObligations.description",
                         "typeCode": {
@@ -2669,7 +2669,7 @@
                           "listID": "PropertyGroupType",
                           "listAgencyID": "EU-COM-GROW",
                           "listVersionID": "2.1.0",
-                          "value": "ONFALSE"
+                          "value": "ONTRUE"
                         },
                         "tenderingCriterionProperties": [
                           {
@@ -2677,7 +2677,7 @@
                             "id": {
                               "schemeAgencyID": "EU-COM-GROW",
                               "schemeVersionID": "2.1.0",
-                              "value": "3163ac14-0023-4cf0-a55a-4bbdc12ca093"
+                              "value": "4736feea-26f3-4cb5-9e72-1ac3e3ee506e"
                             },
                             "description": "contributions.pleaseDescribeWhichMeansWereUsed.description",
                             "typeCode": {
@@ -2715,7 +2715,7 @@
                             "id": {
                               "schemeAgencyID": "EU-COM-GROW",
                               "schemeVersionID": "2.1.0",
-                              "value": "991194fc-260f-4f0c-81fe-ea49a2009399"
+                              "value": "22dfe0f4-5e67-42f6-ae19-f2260cca8fae"
                             },
                             "description": "contributions.hasTheEconomicOperatorFulfilled.description",
                             "typeCode": {
@@ -2745,7 +2745,7 @@
                               "listID": "PropertyGroupType",
                               "listAgencyID": "EU-COM-GROW",
                               "listVersionID": "2.1.0",
-                              "value": "ONFALSE"
+                              "value": "ONTRUE"
                             },
                             "tenderingCriterionProperties": [
                               {
@@ -2753,7 +2753,7 @@
                                 "id": {
                                   "schemeAgencyID": "EU-COM-GROW",
                                   "schemeVersionID": "2.1.0",
-                                  "value": "87c3146e-50b8-44d8-838c-da0ec28ebc38"
+                                  "value": "e3d5d4b6-0f08-4732-9e68-b28c1c4777b5"
                                 },
                                 "description": "common.pleaseDescribeThem.description",
                                 "typeCode": {
@@ -2793,7 +2793,7 @@
                             "id": {
                               "schemeAgencyID": "EU-COM-GROW",
                               "schemeVersionID": "2.1.0",
-                              "value": "e0f882af-8a02-4d4e-bdcd-378a49a58b6e"
+                              "value": "aa25bb80-5a48-4e58-98b9-d96d6d238810"
                             },
                             "description": "contributions.ifThisBreachOfObligationsWas.description",
                             "typeCode": {
@@ -2823,7 +2823,7 @@
                               "listID": "PropertyGroupType",
                               "listAgencyID": "EU-COM-GROW",
                               "listVersionID": "2.1.0",
-                              "value": "ONFALSE"
+                              "value": "ONTRUE"
                             },
                             "tenderingCriterionProperties": [
                               {
@@ -2831,7 +2831,7 @@
                                 "id": {
                                   "schemeAgencyID": "EU-COM-GROW",
                                   "schemeVersionID": "2.1.0",
-                                  "value": "c983275e-b018-44c1-8f29-19406aac374a"
+                                  "value": "6f23c2cd-812a-47f0-8717-f2cceffc8b6a"
                                 },
                                 "description": "contributions.pleaseIindicateTheDateOfConvictionOrDecision.description",
                                 "typeCode": {
@@ -2852,7 +2852,7 @@
                                 "id": {
                                   "schemeAgencyID": "EU-COM-GROW",
                                   "schemeVersionID": "2.1.0",
-                                  "value": "79f8c4bc-6e97-431f-8cdc-e1648b328cba"
+                                  "value": "45080478-e7d7-4f1b-ae42-751c0e8facfe"
                                 },
                                 "description": "contributions.inCaseOfAConviction.description",
                                 "typeCode": {
@@ -2898,7 +2898,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "fcf3bdae-2cbb-4ec8-82f1-e19137c38bcf"
+                  "value": "e2f492ad-1c07-4968-8974-d979a5f41d29"
                 },
                 "description": "common.informationAvailableFromEUDb.description",
                 "typeCode": {
@@ -2928,7 +2928,7 @@
                   "listID": "PropertyGroupType",
                   "listAgencyID": "EU-COM-GROW",
                   "listVersionID": "2.1.0",
-                  "value": "ONFALSE"
+                  "value": "ONTRUE"
                 },
                 "tenderingCriterionProperties": [
                   {
@@ -2936,7 +2936,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "f5df8c2b-6ce2-46f6-973e-d86686047e94"
+                      "value": "a54dadb8-bdff-4dd0-add0-30489b889b7e"
                     },
                     "description": "common.evidenceSupplied",
                     "typeCode": {
@@ -3000,7 +3000,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "60f3bfa9-c356-493c-8675-dd0ed2ff204f"
+              "value": "b3fc975b-7bc0-46cf-89a7-cbb8cde2f7d2"
             },
             "description": "common.yourAnswer.description",
             "typeCode": {
@@ -3030,7 +3030,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -3038,7 +3038,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "e0e10a97-0145-4e8c-b545-9f61003bc125"
+                  "value": "3f09cc5b-c417-4d5f-9d38-f92fda602b56"
                 },
                 "description": "common.pleaseDescribeThem.description",
                 "typeCode": {
@@ -3076,7 +3076,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "a8601ad4-96a9-4099-9290-bf06a4c6b0f2"
+                      "value": "66a0f545-4b09-4982-8e24-ade4bbacc06d"
                     },
                     "description": "convictions.measuresToDemonstrateYourReliability.description",
                     "typeCode": {
@@ -3106,7 +3106,7 @@
                       "listID": "PropertyGroupType",
                       "listAgencyID": "EU-COM-GROW",
                       "listVersionID": "2.1.0",
-                      "value": "ONFALSE"
+                      "value": "ONTRUE"
                     },
                     "tenderingCriterionProperties": [
                       {
@@ -3114,7 +3114,7 @@
                         "id": {
                           "schemeAgencyID": "EU-COM-GROW",
                           "schemeVersionID": "2.1.0",
-                          "value": "2ca664f2-1b2a-467c-a8ac-1783099460bb"
+                          "value": "c4b6b8d5-951b-418d-906d-cf52c1d34a0a"
                         },
                         "description": "common.pleaseDescribeThem.description",
                         "typeCode": {
@@ -3158,7 +3158,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "94850f96-adac-4b0c-ac73-b836617a769e"
+              "value": "b98c7854-5b49-4617-a0e0-43d6109cafd2"
             },
             "description": "common.isThisInformationAvailableElectronically.description",
             "typeCode": {
@@ -3188,7 +3188,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -3196,7 +3196,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "57f3cfc6-300b-4339-a151-5659767f1e18"
+                  "value": "4fc2bd70-f3cc-4607-8893-afcdfa390b24"
                 },
                 "description": "common.evidenceSupplied",
                 "typeCode": {
@@ -3258,7 +3258,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "9cfe21df-be5c-4a5e-9830-f9c72a6d2dff"
+              "value": "fdb19604-a9a4-4a02-804d-c9388d4d9dd9"
             },
             "description": "common.yourAnswer.description",
             "typeCode": {
@@ -3288,7 +3288,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -3296,7 +3296,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "4e5919fc-87b6-46e4-b8fe-5e8b25525e6d"
+                  "value": "8936e8f8-6c41-4b3a-8890-cacf9d98a6f8"
                 },
                 "description": "common.pleaseDescribeThem.description",
                 "typeCode": {
@@ -3334,7 +3334,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "0789493f-9262-4d8d-a573-d60a466627bb"
+                      "value": "a014bb10-043b-488d-aaff-dfca03194787"
                     },
                     "description": "convictions.measuresToDemonstrateYourReliability.description",
                     "typeCode": {
@@ -3364,7 +3364,7 @@
                       "listID": "PropertyGroupType",
                       "listAgencyID": "EU-COM-GROW",
                       "listVersionID": "2.1.0",
-                      "value": "ONFALSE"
+                      "value": "ONTRUE"
                     },
                     "tenderingCriterionProperties": [
                       {
@@ -3372,7 +3372,7 @@
                         "id": {
                           "schemeAgencyID": "EU-COM-GROW",
                           "schemeVersionID": "2.1.0",
-                          "value": "78ff6dc5-1d0d-40a7-88c1-7a300e8c2c01"
+                          "value": "5e6317cc-1bbc-4e01-af0b-82982a00f540"
                         },
                         "description": "common.pleaseDescribeThem.description",
                         "typeCode": {
@@ -3416,7 +3416,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "60dc40ef-4521-4553-9607-fac61f11d35c"
+              "value": "f730f776-c121-4f90-b6f1-9f38e761142f"
             },
             "description": "common.isThisInformationAvailableElectronically.description",
             "typeCode": {
@@ -3446,7 +3446,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -3454,7 +3454,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "12d55296-7db1-4530-a8a7-c5cadab385fc"
+                  "value": "d8663e01-b251-4c71-a6db-edbf16825439"
                 },
                 "description": "common.evidenceSupplied",
                 "typeCode": {
@@ -3516,7 +3516,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "466bbc79-7c0f-44dc-8086-20ba71b62d9b"
+              "value": "7fb97329-2f2e-4bbe-bce0-60587de4b415"
             },
             "description": "common.yourAnswer.description",
             "typeCode": {
@@ -3546,7 +3546,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -3554,7 +3554,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "000798cf-e0ef-4f97-85e2-56862ed0f248"
+                  "value": "0a7f2d3e-48e5-4a5b-9671-898995c28e31"
                 },
                 "description": "common.pleaseDescribeThem.description",
                 "typeCode": {
@@ -3592,7 +3592,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "309ec79b-fc14-4e50-be39-0402cb8b7a48"
+                      "value": "a4b057bd-0b2b-44d6-9996-0d9b092048a8"
                     },
                     "description": "convictions.measuresToDemonstrateYourReliability.description",
                     "typeCode": {
@@ -3622,7 +3622,7 @@
                       "listID": "PropertyGroupType",
                       "listAgencyID": "EU-COM-GROW",
                       "listVersionID": "2.1.0",
-                      "value": "ONFALSE"
+                      "value": "ONTRUE"
                     },
                     "tenderingCriterionProperties": [
                       {
@@ -3630,7 +3630,7 @@
                         "id": {
                           "schemeAgencyID": "EU-COM-GROW",
                           "schemeVersionID": "2.1.0",
-                          "value": "14dc0425-5de9-4c35-bf3c-23f834980b91"
+                          "value": "5e81face-1e92-4651-94f3-8d7c1988317f"
                         },
                         "description": "common.pleaseDescribeThem.description",
                         "typeCode": {
@@ -3674,7 +3674,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "07817519-5275-4643-b55a-8f89c6bc196b"
+              "value": "b4d2ad03-448d-46c8-ade4-6c3258069a3f"
             },
             "description": "common.isThisInformationAvailableElectronically.description",
             "typeCode": {
@@ -3704,7 +3704,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -3712,7 +3712,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "4da5f836-dabb-4907-abcf-0f493fe5d7fa"
+                  "value": "72ff4b78-5c47-42f2-91e4-ad3925db7089"
                 },
                 "description": "common.evidenceSupplied",
                 "typeCode": {
@@ -3774,7 +3774,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "5578d4a3-0b8a-4aaf-a8ab-d6d3b78784ea"
+              "value": "9b0a0598-f709-42dd-8bfb-bc4be0257f51"
             },
             "description": "common.yourAnswer.description",
             "typeCode": {
@@ -3804,7 +3804,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -3812,7 +3812,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "35644211-b6c1-45eb-8422-fdc5e33f0a4c"
+                  "value": "bfa4907b-0f64-4400-8c5a-3bdc9e1b84d9"
                 },
                 "description": "common.pleaseDescribeThem.description",
                 "typeCode": {
@@ -3833,7 +3833,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "8c374205-5dbc-4fe0-83a9-028d4ba00848"
+                  "value": "412d0a23-6be1-4bf7-8c9b-9bcda3f1f588"
                 },
                 "description": "business.indicateReasonsForBeingNeverthelessToPerformTheContract.description",
                 "typeCode": {
@@ -3873,7 +3873,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "ab267415-efcc-4614-9298-a212523e6ee8"
+              "value": "746c8566-588a-4525-8e20-2baecd25ae2b"
             },
             "description": "common.informationAvailableFromEUDb.description",
             "typeCode": {
@@ -3903,7 +3903,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -3911,7 +3911,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "e11b8e81-56d1-4264-92d0-70b1528bbc9b"
+                  "value": "86db0e09-d4fc-4249-aa56-c7b0a147956b"
                 },
                 "description": "common.evidenceSupplied",
                 "typeCode": {
@@ -3973,7 +3973,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "16d7995c-206f-4688-93cb-76408647b87d"
+              "value": "c6ad0ab2-24d0-4346-abdc-ca5668d979d9"
             },
             "description": "common.yourAnswer.description",
             "typeCode": {
@@ -4003,7 +4003,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -4011,7 +4011,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "3c28c781-7186-4888-b886-97dd9ba5c58b"
+                  "value": "0db0514b-8e80-4020-9ab5-eafd47f968a5"
                 },
                 "description": "common.pleaseDescribeThem.description",
                 "typeCode": {
@@ -4032,7 +4032,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "25a898f7-e95e-4be2-bf71-2a5795edc2e3"
+                  "value": "5e69bd65-bb35-4e30-97f6-6c3ce4802f52"
                 },
                 "description": "business.indicateReasonsForBeingNeverthelessToPerformTheContract.description",
                 "typeCode": {
@@ -4072,7 +4072,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "7a091d19-e31a-420d-8b31-9c53960dee57"
+              "value": "1149c316-8a02-4f94-bf48-f98d93bc606a"
             },
             "description": "common.informationAvailableFromEUDb.description",
             "typeCode": {
@@ -4102,7 +4102,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -4110,7 +4110,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "541245cb-aac7-4871-bc36-95b939f01569"
+                  "value": "98e38c27-dd1d-42bc-9477-26e222141775"
                 },
                 "description": "common.evidenceSupplied",
                 "typeCode": {
@@ -4172,7 +4172,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "92d90cb9-e6b7-400c-92f9-45968b8a61a7"
+              "value": "fa955450-917c-44ee-a677-872c69da6e95"
             },
             "description": "common.yourAnswer.description",
             "typeCode": {
@@ -4202,7 +4202,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -4210,7 +4210,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "3142bf6d-9e8c-4ff6-8687-9d54d4a1b332"
+                  "value": "e53ce167-3778-4203-b356-6422fd567819"
                 },
                 "description": "common.pleaseDescribeThem.description",
                 "typeCode": {
@@ -4231,7 +4231,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "b870d67f-6f1c-4a8c-a4ed-0ed406001676"
+                  "value": "40f68657-19da-4864-87f9-79fe42b275b0"
                 },
                 "description": "business.indicateReasonsForBeingNeverthelessToPerformTheContract.description",
                 "typeCode": {
@@ -4271,7 +4271,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "22e3b4fc-0ec9-4be1-8634-a7483fee0bf4"
+              "value": "733e90e7-e5e0-47a1-991d-c099fd294cf9"
             },
             "description": "common.informationAvailableFromEUDb.description",
             "typeCode": {
@@ -4301,7 +4301,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -4309,7 +4309,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "84d0c01f-2307-4084-9476-9a2bc990bc41"
+                  "value": "e1d04c25-61c3-4cdf-8cab-dd04347a1efc"
                 },
                 "description": "common.evidenceSupplied",
                 "typeCode": {
@@ -4371,7 +4371,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "ae69cb5f-984e-4b6c-97c2-4904af59a4f1"
+              "value": "79a59365-3074-478e-bc1b-0b4782c5340e"
             },
             "description": "common.yourAnswer.description",
             "typeCode": {
@@ -4401,7 +4401,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -4409,7 +4409,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "ada231b4-c489-4b67-b5a6-e0a0d093143a"
+                  "value": "b09a2a4c-dc6b-4751-aa3e-587adbc834bb"
                 },
                 "description": "common.pleaseDescribeThem.description",
                 "typeCode": {
@@ -4430,7 +4430,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "563555fa-ec8e-4267-afe2-7a83942e8d63"
+                  "value": "73883556-433b-4206-9c2e-181d73217276"
                 },
                 "description": "business.indicateReasonsForBeingNeverthelessToPerformTheContract.description",
                 "typeCode": {
@@ -4470,7 +4470,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "f4032aef-51b5-406e-b225-ebc4543c1f30"
+              "value": "ea0c441b-b524-42a0-b9f5-c139c85f5996"
             },
             "description": "common.informationAvailableFromEUDb.description",
             "typeCode": {
@@ -4500,7 +4500,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -4508,7 +4508,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "23ad8a7b-ea26-40d4-8ece-2e2e1ad4bd79"
+                  "value": "624616bc-d534-4f10-a503-6e473ae0145d"
                 },
                 "description": "common.evidenceSupplied",
                 "typeCode": {
@@ -4570,7 +4570,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "8e68ebec-699d-4298-83f2-e1d7db4e3720"
+              "value": "878de3ed-c72e-4f58-ad45-b5cd55ffe477"
             },
             "description": "common.yourAnswer.description",
             "typeCode": {
@@ -4600,7 +4600,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -4608,7 +4608,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "51aa210a-25b8-40d4-866a-9da225713c00"
+                  "value": "37efc297-40c8-44df-aafc-96e5c6a3f0bc"
                 },
                 "description": "common.pleaseDescribeThem.description",
                 "typeCode": {
@@ -4629,7 +4629,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "7bba4eb0-72fe-4e89-8b44-a8bbf9fbd9d4"
+                  "value": "9c0510fc-914a-4f06-8e4d-c0a7cd89fda5"
                 },
                 "description": "business.indicateReasonsForBeingNeverthelessToPerformTheContract.description",
                 "typeCode": {
@@ -4669,7 +4669,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "e26cffaa-d126-43aa-8054-3f1eb6f2ec49"
+              "value": "1d89127b-6e10-4fca-948a-01b7c65455a8"
             },
             "description": "common.informationAvailableFromEUDb.description",
             "typeCode": {
@@ -4699,7 +4699,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -4707,7 +4707,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "64da2084-b539-4ff9-a161-ce5c46b9a569"
+                  "value": "941467b0-e522-4e75-bd68-0ee8534ee054"
                 },
                 "description": "common.evidenceSupplied",
                 "typeCode": {
@@ -4769,7 +4769,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "893f9b1b-8ea6-4d9c-ab07-349eb0843288"
+              "value": "40398701-66e6-4a7c-a7a2-184329558a3f"
             },
             "description": "common.yourAnswer.description",
             "typeCode": {
@@ -4799,7 +4799,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -4807,7 +4807,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "b06e2cd0-99b2-4bff-88db-1b9587edb783"
+                  "value": "667118fe-1b62-4d42-a007-c72f67173ada"
                 },
                 "description": "common.pleaseDescribeThem.description",
                 "typeCode": {
@@ -4828,7 +4828,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "230d8d70-62e8-40b7-b5d6-36dca9ef944f"
+                  "value": "6c12da77-51cf-4910-96de-85a09b3281ab"
                 },
                 "description": "business.indicateReasonsForBeingNeverthelessToPerformTheContract.description",
                 "typeCode": {
@@ -4868,7 +4868,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "494f20a8-6d16-4074-b564-6a0c27bb1ea1"
+              "value": "c07026cd-98bd-49bc-ac6d-3f2ee88257bb"
             },
             "description": "common.informationAvailableFromEUDb.description",
             "typeCode": {
@@ -4898,7 +4898,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -4906,7 +4906,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "de4689d6-ccff-4fc7-b89e-9419f9d98058"
+                  "value": "ba666ac9-5857-4696-b376-1c1c68577625"
                 },
                 "description": "common.evidenceSupplied",
                 "typeCode": {
@@ -4968,7 +4968,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "af2c0b55-0ec2-432f-8b5e-8834c6c57180"
+              "value": "334fbdf9-d605-47b9-890d-69a1ffcb92e9"
             },
             "description": "common.yourAnswer.description",
             "typeCode": {
@@ -4998,7 +4998,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -5006,7 +5006,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "ea0dcd9c-3a02-4da6-bde4-193262e9874a"
+                  "value": "e873a33c-8172-49ff-ac3b-66c4988e47c8"
                 },
                 "description": "common.pleaseDescribeThem.description",
                 "typeCode": {
@@ -5044,7 +5044,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "5690433b-5673-49a5-b062-cbda7d3f8352"
+                      "value": "c71c00c8-4780-4e26-95ef-7b8b640438df"
                     },
                     "description": "misconduct.haveYouTakenMeasuresToDemonstrateYourReliability.description",
                     "typeCode": {
@@ -5082,7 +5082,7 @@
                         "id": {
                           "schemeAgencyID": "EU-COM-GROW",
                           "schemeVersionID": "2.1.0",
-                          "value": "181985e5-3adf-4e06-bfc6-d05407592d00"
+                          "value": "33f3a36e-d39f-4404-b52d-1e44a2f4a4d1"
                         },
                         "description": "common.pleaseDescribeThem.description",
                         "typeCode": {
@@ -5126,7 +5126,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "03acfab3-f520-46cd-a2a1-8e5df2107231"
+              "value": "8214eed1-9126-40f7-ab14-e504d9237dcd"
             },
             "description": "common.informationAvailableFromEUDb.description",
             "typeCode": {
@@ -5156,7 +5156,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -5164,7 +5164,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "a658cbb4-ba90-4d23-a074-eac611bf7fd6"
+                  "value": "3c14872b-6a44-4536-9f88-d761949be1b2"
                 },
                 "description": "common.evidenceSupplied",
                 "typeCode": {
@@ -5226,7 +5226,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "5612a78e-c7da-496d-a86e-4aba9add47c6"
+              "value": "c6ba6109-ccb5-477c-b0e9-ce3e91819679"
             },
             "description": "common.yourAnswer.description",
             "typeCode": {
@@ -5256,7 +5256,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -5264,7 +5264,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "78790ad4-7921-4b7e-8810-9e31f73685cc"
+                  "value": "e441165f-14f9-4017-ba9d-69189bbc8d17"
                 },
                 "description": "common.pleaseDescribeThem.description",
                 "typeCode": {
@@ -5302,7 +5302,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "0e1ab376-320c-4a8d-ba31-78a49d8cf776"
+                      "value": "9c4eacf8-a0b9-45ed-b8b0-3a5be2dd61cc"
                     },
                     "description": "misconduct.haveYouTakenMeasuresToDemonstrateYourReliability.description",
                     "typeCode": {
@@ -5340,7 +5340,7 @@
                         "id": {
                           "schemeAgencyID": "EU-COM-GROW",
                           "schemeVersionID": "2.1.0",
-                          "value": "cbfdfefc-bad0-4765-b397-380ff62a57a5"
+                          "value": "91428308-afec-4e55-9d87-8c4c93131145"
                         },
                         "description": "common.pleaseDescribeThem.description",
                         "typeCode": {
@@ -5384,7 +5384,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "e35f32b1-418b-45d9-aa6f-82d52addda3a"
+              "value": "d0ab6212-1231-42d3-b708-d3007939ef24"
             },
             "description": "common.informationAvailableFromEUDb.description",
             "typeCode": {
@@ -5414,7 +5414,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -5422,7 +5422,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "9200efb0-f2a3-4f90-ba1f-c64ee2b21a35"
+                  "value": "8fa62c57-b916-40f2-b0b5-ffcd6aa26a2f"
                 },
                 "description": "common.evidenceSupplied",
                 "typeCode": {
@@ -5484,7 +5484,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "86c99aeb-df83-4efe-96b9-103f0fa64cd5"
+              "value": "ccc20da6-e83d-47a4-86b1-2ce3cfd298b2"
             },
             "description": "common.yourAnswer.description",
             "typeCode": {
@@ -5514,7 +5514,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -5522,7 +5522,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "4f314b96-2d0b-4085-b267-e09c6c305f58"
+                  "value": "be08f27f-dc76-44e3-a558-58cbbc84e6fb"
                 },
                 "description": "common.pleaseDescribeThem.description",
                 "typeCode": {
@@ -5562,7 +5562,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "655d3a22-8d77-4069-b98d-b71f96f146df"
+              "value": "c67d5048-5f74-43d2-b7b5-1263c72305e0"
             },
             "description": "common.informationAvailableFromEUDb.description",
             "typeCode": {
@@ -5592,7 +5592,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -5600,7 +5600,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "c54dbb8a-2568-41f9-8d48-5d4e6d936c21"
+                  "value": "0ce1418a-aba8-4a18-82d3-c92ce4ba436d"
                 },
                 "description": "common.evidenceSupplied",
                 "typeCode": {
@@ -5662,7 +5662,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "67d3977f-5bdc-4977-b5c4-b6035461a10f"
+              "value": "c70da498-d9d9-4905-9a0e-777305b47179"
             },
             "description": "common.yourAnswer.description",
             "typeCode": {
@@ -5692,7 +5692,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -5700,7 +5700,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "56536051-2500-4562-8fb3-ddd7bad61e7d"
+                  "value": "50c69cb3-f171-4a16-acb9-c3c27e068d51"
                 },
                 "description": "common.pleaseDescribeThem.description",
                 "typeCode": {
@@ -5740,7 +5740,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "4dfe6666-6131-4275-a339-7d16a08b0000"
+              "value": "697daf4d-d240-4fa3-bff8-aa1980efbd41"
             },
             "description": "common.informationAvailableFromEUDb.description",
             "typeCode": {
@@ -5770,7 +5770,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -5778,7 +5778,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "59ed7337-f150-4736-9d14-5cb23ddc2c46"
+                  "value": "a9354f92-760e-4cfb-ab15-8bc1e45f79fa"
                 },
                 "description": "common.evidenceSupplied",
                 "typeCode": {
@@ -5840,7 +5840,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "feb4237c-743b-47c3-9045-96881c4f6540"
+              "value": "010c4603-01e4-47a7-9bb2-3927f3fc4b1a"
             },
             "description": "common.yourAnswer.description",
             "typeCode": {
@@ -5878,7 +5878,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "a187784f-7259-4586-b4a9-8cd01008734a"
+                  "value": "4055b5b0-2683-4ced-b386-7221fd7c0288"
                 },
                 "description": "common.pleaseDescribeThem.description",
                 "typeCode": {
@@ -5916,7 +5916,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "d4026aee-e131-4ece-b257-fc166a3c18b5"
+                      "value": "4c6c8563-a3a1-4a06-9eff-1d9920ca8edd"
                     },
                     "description": "common.measuresToDemonstrateYourReliability.description",
                     "typeCode": {
@@ -5946,7 +5946,7 @@
                       "listID": "PropertyGroupType",
                       "listAgencyID": "EU-COM-GROW",
                       "listVersionID": "2.1.0",
-                      "value": "ONFALSE"
+                      "value": "ONTRUE"
                     },
                     "tenderingCriterionProperties": [
                       {
@@ -5954,7 +5954,7 @@
                         "id": {
                           "schemeAgencyID": "EU-COM-GROW",
                           "schemeVersionID": "2.1.0",
-                          "value": "b8be8e8f-2887-497a-8589-9a69f3bd01a9"
+                          "value": "fbc0027a-eaa0-4b27-b179-a18e9965777e"
                         },
                         "description": "common.pleaseDescribeThem.description",
                         "typeCode": {
@@ -5998,7 +5998,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "43a08dd4-fc61-476e-a721-cbd58b79cfac"
+              "value": "e2463eba-8fb1-4700-b33b-2d798abb8918"
             },
             "description": "common.informationAvailableFromEUDb.description",
             "typeCode": {
@@ -6028,7 +6028,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -6036,7 +6036,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "b129e95a-2509-4aaf-84ac-4109cb32d3c5"
+                  "value": "36ac02aa-59b5-40c3-98ee-33a83b7f4208"
                 },
                 "description": "common.evidenceSupplied",
                 "typeCode": {
@@ -6102,7 +6102,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "3fd90a65-0961-491f-a61c-62c7d80df2f7"
+              "value": "79c3eeae-c101-4e4e-a8f4-42ab6ea67ed8"
             },
             "description": "common.yourAnswer.description",
             "typeCode": {
@@ -6140,7 +6140,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "eebc9bb3-2364-47ab-b648-f122cb1a196f"
+              "value": "06e72578-95e2-40d0-b6b6-f9581ae06a21"
             },
             "description": "common.informationAvailableFromEUDb.description",
             "typeCode": {
@@ -6170,7 +6170,7 @@
               "listID": "PropertyGroupType",
               "listAgencyID": "EU-COM-GROW",
               "listVersionID": "2.1.0",
-              "value": "ONFALSE"
+              "value": "ONTRUE"
             },
             "tenderingCriterionProperties": [
               {
@@ -6178,7 +6178,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "383a2411-f282-47a8-a0cb-6ba698d32e72"
+                  "value": "16a05d15-bfd3-42f5-9227-02b5322630f9"
                 },
                 "description": "common.evidenceSupplied",
                 "typeCode": {
@@ -6240,7 +6240,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "040c47bb-0d67-4776-bdf0-4cb0dc270ed4"
+              "value": "d112afd9-ef03-4b25-8c91-15b55981b3f7"
             },
             "description": "common.lotTheRequirementAppliesTo.description",
             "typeCode": {
@@ -6261,7 +6261,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "ce011b81-03c7-4d55-af35-11b443c7e3ba"
+              "value": "2dffd6d9-7c78-4f04-9303-fbe7d685287a"
             },
             "description": "common.lotId.description",
             "typeCode": {
@@ -6299,7 +6299,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "3416779d-e661-4aba-9176-8adc45cf206a"
+                  "value": "b468680a-82c9-4912-a63f-5e5bc187ff3c"
                 },
                 "description": "common.registerName.description",
                 "typeCode": {
@@ -6320,7 +6320,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "20ba938d-9bce-47c1-be18-6e82f10e5202"
+                  "value": "2fce3642-50d8-474c-ad6f-0b3406d0e798"
                 },
                 "description": "common.url.description",
                 "typeCode": {
@@ -6358,7 +6358,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "d1d0e472-8b3a-4311-9613-e26049596429"
+                  "value": "40486170-48ff-414d-835b-04ec6ea51633"
                 },
                 "description": "common.yourAnswer",
                 "typeCode": {
@@ -6388,7 +6388,7 @@
                   "listID": "PropertyGroupType",
                   "listAgencyID": "EU-COM-GROW",
                   "listVersionID": "2.1.0",
-                  "value": "ONFALSE"
+                  "value": "ONTRUE"
                 },
                 "tenderingCriterionProperties": [
                   {
@@ -6396,7 +6396,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "68adc9a0-4935-494f-b4cb-3dd7274e3a44"
+                      "value": "3c43c417-e05e-4929-a4a8-459b9fa45334"
                     },
                     "description": "common.registrationNumber.description",
                     "typeCode": {
@@ -6434,7 +6434,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "44fca8da-768d-4771-9315-e6c10468e409"
+                      "value": "29d4e264-a62a-409b-8315-178937b94f00"
                     },
                     "description": "common.reasonWhyNotRegistered.description",
                     "typeCode": {
@@ -6472,7 +6472,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "20f862c4-3cb8-4519-b26b-eb25668dc3c5"
+                      "value": "0a43a18e-65c4-4a15-86dc-f4d9d7b4a874"
                     },
                     "description": "common.isThisInformationAvailableElectronically.description",
                     "typeCode": {
@@ -6502,7 +6502,7 @@
                       "listID": "PropertyGroupType",
                       "listAgencyID": "EU-COM-GROW",
                       "listVersionID": "2.1.0",
-                      "value": "ONFALSE"
+                      "value": "ONTRUE"
                     },
                     "tenderingCriterionProperties": [
                       {
@@ -6510,7 +6510,7 @@
                         "id": {
                           "schemeAgencyID": "EU-COM-GROW",
                           "schemeVersionID": "2.1.0",
-                          "value": "805425d1-21c0-4c9c-b77d-1bac61317167"
+                          "value": "fc19d6e0-1c4f-4d1f-b8af-f8e57a07ad5a"
                         },
                         "description": "common.evidenceSupplied",
                         "typeCode": {
@@ -6576,7 +6576,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "9eadc811-04c2-4a62-9f7c-c48d575c5cad"
+              "value": "0bbe759d-bdcf-4c49-8a83-b8d534179d92"
             },
             "description": "common.lotTheRequirementAppliesTo.description",
             "typeCode": {
@@ -6597,7 +6597,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "df50d131-4ad0-47fa-9c0c-164788357bbf"
+              "value": "c1969ec0-4a8b-4602-b0eb-70048aa8df23"
             },
             "description": "common.lotId.description",
             "typeCode": {
@@ -6635,7 +6635,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "70d04f10-c54b-40d4-896d-6d3056d86c5f"
+                  "value": "d83f822a-f394-4b9d-a4ac-e2be4179cd50"
                 },
                 "description": "common.registerName.description",
                 "typeCode": {
@@ -6656,7 +6656,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "e2f67b69-161f-42b5-88a2-fbfc2ce8ca65"
+                  "value": "d34d1363-f86c-47bb-88e2-3e274570f970"
                 },
                 "description": "common.url.description",
                 "typeCode": {
@@ -6694,7 +6694,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "cae54bef-17b5-4db0-aba6-68ba7cbd4697"
+                  "value": "9650ab1b-cc6a-4c19-a636-01659490c483"
                 },
                 "description": "common.yourAnswer",
                 "typeCode": {
@@ -6724,7 +6724,7 @@
                   "listID": "PropertyGroupType",
                   "listAgencyID": "EU-COM-GROW",
                   "listVersionID": "2.1.0",
-                  "value": "ONFALSE"
+                  "value": "ONTRUE"
                 },
                 "tenderingCriterionProperties": [
                   {
@@ -6732,7 +6732,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "d5094052-733f-4b3f-a87a-f1017aebf920"
+                      "value": "69676c1c-3445-4552-a851-cb9e66d7ffb5"
                     },
                     "description": "common.registrationNumber.description",
                     "typeCode": {
@@ -6770,7 +6770,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "11aec9e4-252d-4b1b-812b-e05239dba026"
+                      "value": "301ed0f1-5b36-4a9a-9c2c-c9c776e7d79d"
                     },
                     "description": "common.reasonWhyNotRegistered.description",
                     "typeCode": {
@@ -6808,7 +6808,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "3e84730d-8d8a-4759-8b42-9bdfbe48ac3d"
+                      "value": "c5776057-41c5-40ed-abeb-96a8871d3c41"
                     },
                     "description": "common.isThisInformationAvailableElectronically.description",
                     "typeCode": {
@@ -6838,7 +6838,7 @@
                       "listID": "PropertyGroupType",
                       "listAgencyID": "EU-COM-GROW",
                       "listVersionID": "2.1.0",
-                      "value": "ONFALSE"
+                      "value": "ONTRUE"
                     },
                     "tenderingCriterionProperties": [
                       {
@@ -6846,7 +6846,7 @@
                         "id": {
                           "schemeAgencyID": "EU-COM-GROW",
                           "schemeVersionID": "2.1.0",
-                          "value": "4bf28d1a-54d7-41b4-91ec-864966df0401"
+                          "value": "e9f12780-4403-476f-9d4c-771a3bec5490"
                         },
                         "description": "common.evidenceSupplied",
                         "typeCode": {
@@ -6912,7 +6912,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "78823ff3-7497-498e-ac24-40c5f544c630"
+              "value": "0518e584-4bd4-4de1-a49d-1e48a9abd8ee"
             },
             "description": "common.lotTheRequirementAppliesTo.description",
             "typeCode": {
@@ -6933,7 +6933,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "1ff735bc-c24d-4fd9-9bd4-bbd158276d1e"
+              "value": "4c5861d7-67ab-43c6-ad39-32a06a86dc88"
             },
             "description": "common.lotId.description",
             "typeCode": {
@@ -6971,7 +6971,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "9bb1aef4-86e5-4487-9776-4fb40ab7696c"
+                  "value": "8c975019-fdbb-4eca-86c5-0ac4086e5874"
                 },
                 "description": "common.registerName.description",
                 "typeCode": {
@@ -6992,7 +6992,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "8da8b8b4-84b0-4f3a-9285-c7a64ff00160"
+                  "value": "4a13e991-f8f9-4d34-92f7-2f46bed90fda"
                 },
                 "description": "common.url.description",
                 "typeCode": {
@@ -7030,7 +7030,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "91e5e96c-91c5-4a12-9be5-6f2f48c02b69"
+                  "value": "199e79ff-7b6f-49d2-a45b-5c09d98378a9"
                 },
                 "description": "common.yourAnswer",
                 "typeCode": {
@@ -7060,7 +7060,7 @@
                   "listID": "PropertyGroupType",
                   "listAgencyID": "EU-COM-GROW",
                   "listVersionID": "2.1.0",
-                  "value": "ONFALSE"
+                  "value": "ONTRUE"
                 },
                 "tenderingCriterionProperties": [
                   {
@@ -7068,7 +7068,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "99f74391-3f37-40bd-bc87-52ba6b692213"
+                      "value": "e7258855-56be-4f3b-a1b4-f41431a7269b"
                     },
                     "description": "common.registrationNumber.description",
                     "typeCode": {
@@ -7106,7 +7106,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "4413ca4d-2c5d-4c50-942b-129586adbfc2"
+                      "value": "9d747bbe-70e5-4905-8c4f-bbb62f0174b0"
                     },
                     "description": "common.reasonWhyNotRegistered.description",
                     "typeCode": {
@@ -7144,7 +7144,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "79e439fe-53a1-4f5e-9259-1381166b5229"
+                      "value": "fed0fa6a-c58d-4909-ae28-03af9fb30c30"
                     },
                     "description": "common.isThisInformationAvailableElectronically.description",
                     "typeCode": {
@@ -7174,7 +7174,7 @@
                       "listID": "PropertyGroupType",
                       "listAgencyID": "EU-COM-GROW",
                       "listVersionID": "2.1.0",
-                      "value": "ONFALSE"
+                      "value": "ONTRUE"
                     },
                     "tenderingCriterionProperties": [
                       {
@@ -7182,7 +7182,7 @@
                         "id": {
                           "schemeAgencyID": "EU-COM-GROW",
                           "schemeVersionID": "2.1.0",
-                          "value": "231c9cb0-ca8b-4396-805e-dd17a68346cd"
+                          "value": "72df9f58-e1c0-4e0e-a001-d348482a7438"
                         },
                         "description": "common.evidenceSupplied",
                         "typeCode": {
@@ -7248,7 +7248,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "255224f4-ed60-4ee4-ae96-5dea8c0dbe20"
+              "value": "4fdbef5c-98cf-48e3-8490-7d6a10eb9654"
             },
             "description": "common.lotTheRequirementAppliesTo.description",
             "typeCode": {
@@ -7269,7 +7269,7 @@
             "id": {
               "schemeAgencyID": "EU-COM-GROW",
               "schemeVersionID": "2.1.0",
-              "value": "72e9ad45-f110-4fc4-951e-6158304714fd"
+              "value": "34def965-3a69-4e1e-9c84-67c999476557"
             },
             "description": "common.lotId.description",
             "typeCode": {
@@ -7307,7 +7307,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "f6e2f1ba-48bd-4f73-b645-7cd0ccee681d"
+                  "value": "06556a48-34db-4441-9051-b23183a28a76"
                 },
                 "description": "common.registerName.description",
                 "typeCode": {
@@ -7328,7 +7328,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "ceb06b0d-b823-4efa-93aa-259734f1d2dd"
+                  "value": "12ba7356-7e62-4ac6-95f3-b61df09dfd2b"
                 },
                 "description": "common.url.description",
                 "typeCode": {
@@ -7366,7 +7366,7 @@
                 "id": {
                   "schemeAgencyID": "EU-COM-GROW",
                   "schemeVersionID": "2.1.0",
-                  "value": "bee0b2aa-9ccd-42c7-8154-96c173c75f56"
+                  "value": "9014fb46-b4d7-4e5b-b451-b06966f6ddaa"
                 },
                 "description": "common.yourAnswer",
                 "typeCode": {
@@ -7396,7 +7396,7 @@
                   "listID": "PropertyGroupType",
                   "listAgencyID": "EU-COM-GROW",
                   "listVersionID": "2.1.0",
-                  "value": "ONFALSE"
+                  "value": "ONTRUE"
                 },
                 "tenderingCriterionProperties": [
                   {
@@ -7404,7 +7404,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "804ca303-afaa-4349-a4b4-296498b00fb1"
+                      "value": "6d0c4acc-dd6f-4d00-a684-35628da9458d"
                     },
                     "description": "common.registrationNumber.description",
                     "typeCode": {
@@ -7442,7 +7442,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "4dad117c-25d7-4f76-86ef-896d3327285b"
+                      "value": "c901f60b-f1bc-4b6c-b929-4c4ef365a959"
                     },
                     "description": "common.reasonWhyNotRegistered.description",
                     "typeCode": {
@@ -7480,7 +7480,7 @@
                     "id": {
                       "schemeAgencyID": "EU-COM-GROW",
                       "schemeVersionID": "2.1.0",
-                      "value": "3a0dc5fb-23bf-484e-ba9f-7c21906a9aec"
+                      "value": "be595914-b88e-440c-aa5e-ff2fa8bdd24b"
                     },
                     "description": "common.isThisInformationAvailableElectronically.description",
                     "typeCode": {
@@ -7510,7 +7510,7 @@
                       "listID": "PropertyGroupType",
                       "listAgencyID": "EU-COM-GROW",
                       "listVersionID": "2.1.0",
-                      "value": "ONFALSE"
+                      "value": "ONTRUE"
                     },
                     "tenderingCriterionProperties": [
                       {
@@ -7518,7 +7518,7 @@
                         "id": {
                           "schemeAgencyID": "EU-COM-GROW",
                           "schemeVersionID": "2.1.0",
-                          "value": "0fc3db2e-aafa-4552-9a6c-93e88fa6500f"
+                          "value": "68057ac1-96fb-4395-ba98-53cec3ebcbce"
                         },
                         "description": "common.evidenceSupplied",
                         "typeCode": {
@@ -7581,6 +7581,11 @@
         "tenderingCriterionProperties": [
           {
             "_cardinality": "1",
+            "id": {
+              "schemeAgencyID": "EU-COM-GROW",
+              "schemeVersionID": "2.1.0",
+              "value": "e5fc811c-7aac-4914-96b6-9533cfca04af"
+            },
             "description": "economicFinancialStanding.minimumRequirement.description",
             "typeCode": {
               "listID": "CriterionElementType",
@@ -7614,6 +7619,11 @@
             "tenderingCriterionProperties": [
               {
                 "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "a5afeae8-49d2-4327-ba86-d34ecce2c6e5"
+                },
                 "description": "common.amount.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -7630,6 +7640,11 @@
               },
               {
                 "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "c5202652-31ff-447c-b0af-80c9f0783d93"
+                },
                 "description": "common.startDate.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -7646,6 +7661,11 @@
               },
               {
                 "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "a0b53ed1-7259-4d8a-8450-d34e0d6e3308"
+                },
                 "description": "common.endDate.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -7679,6 +7699,11 @@
             "tenderingCriterionProperties": [
               {
                 "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "7bce8255-bb71-4175-bb41-a2a57112d381"
+                },
                 "description": "common.isThisInformationAvailableElectronically.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -7712,6 +7737,11 @@
                 "tenderingCriterionProperties": [
                   {
                     "_cardinality": "1..n",
+                    "id": {
+                      "schemeAgencyID": "EU-COM-GROW",
+                      "schemeVersionID": "2.1.0",
+                      "value": "ed80977a-7df8-44c4-9d9e-232b61fab3c8"
+                    },
                     "description": "common.evidenceSupplied",
                     "typeCode": {
                       "listID": "CriterionElementType",
@@ -7771,6 +7801,11 @@
         "tenderingCriterionProperties": [
           {
             "_cardinality": "1",
+            "id": {
+              "schemeAgencyID": "EU-COM-GROW",
+              "schemeVersionID": "2.1.0",
+              "value": "22873730-c4e4-47fa-927d-2ca41200b8d5"
+            },
             "description": "common.startDateEndDate.description",
             "typeCode": {
               "listID": "CriterionElementType",
@@ -7787,6 +7822,11 @@
           },
           {
             "_cardinality": "1",
+            "id": {
+              "schemeAgencyID": "EU-COM-GROW",
+              "schemeVersionID": "2.1.0",
+              "value": "ebdc663b-8d52-4f91-8c65-9d98f3dc4c04"
+            },
             "description": "economicFinancialStanding.minimumRequirement.description",
             "typeCode": {
               "listID": "CriterionElementType",
@@ -7820,6 +7860,11 @@
             "tenderingCriterionProperties": [
               {
                 "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "d51cd601-7d8a-477d-9494-f1295639789f"
+                },
                 "description": "economicFinancialStanding.averageForRequiredPeriod.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -7836,6 +7881,11 @@
               },
               {
                 "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "9315e6b6-feba-491e-b21b-fa455d4e8761"
+                },
                 "description": "economicFinancialStanding.cpvCode.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -7869,6 +7919,11 @@
             "tenderingCriterionProperties": [
               {
                 "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "3e5dedfe-8dc2-4589-a5d6-f7802b4d35c7"
+                },
                 "description": "common.isThisInformationAvailableElectronically.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -7902,6 +7957,11 @@
                 "tenderingCriterionProperties": [
                   {
                     "_cardinality": "1..n",
+                    "id": {
+                      "schemeAgencyID": "EU-COM-GROW",
+                      "schemeVersionID": "2.1.0",
+                      "value": "6f24d2ed-2f61-465e-ae80-7ee92938f4e9"
+                    },
                     "description": "common.evidenceSupplied",
                     "typeCode": {
                       "listID": "CriterionElementType",
@@ -7946,6 +8006,12 @@
     "tenderingCriterionPropertyGroups": [
       {
         "_cardinality": "1",
+        "id": {
+          "schemeName": "CriteriaTaxonomy",
+          "schemeAgencyID": "EU-COM-GROW",
+          "schemeVersionID": "2.1.0",
+          "value": "5ca58d66-3ef1-4145-957c-45d5b18a837f"
+        },
         "propertyGroupTypeCode": {
           "listID": "PropertyGroupType",
           "listAgencyID": "EU-COM-GROW",
@@ -7955,6 +8021,11 @@
         "tenderingCriterionProperties": [
           {
             "_cardinality": "1",
+            "id": {
+              "schemeAgencyID": "EU-COM-GROW",
+              "schemeVersionID": "2.1.0",
+              "value": "a015f0d3-175d-4f3d-a74d-6c2bc2815a84"
+            },
             "description": "economicFinancialStanding.numberOfFiscalYears.description",
             "typeCode": {
               "listID": "CriterionElementType",
@@ -7971,6 +8042,11 @@
           },
           {
             "_cardinality": "1",
+            "id": {
+              "schemeAgencyID": "EU-COM-GROW",
+              "schemeVersionID": "2.1.0",
+              "value": "4a0e74fc-5a07-4f19-a6aa-18662a9649e0"
+            },
             "description": "economicFinancialStanding.businessDomainDescription.description",
             "typeCode": {
               "listID": "CriterionElementType",
@@ -7987,6 +8063,11 @@
           },
           {
             "_cardinality": "1",
+            "id": {
+              "schemeAgencyID": "EU-COM-GROW",
+              "schemeVersionID": "2.1.0",
+              "value": "c7b6c94c-ab80-4c54-a916-35b5125fc6e0"
+            },
             "description": "common.minimumRequirement.description",
             "typeCode": {
               "listID": "CriterionElementType",
@@ -8020,6 +8101,11 @@
             "tenderingCriterionProperties": [
               {
                 "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "77b80b7c-a246-41d2-87e9-ba4cf84737e8"
+                },
                 "description": "economicFinancialStanding.cpvsCaption.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -8036,6 +8122,11 @@
               },
               {
                 "_cardinality": "1..n",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "35af29d4-a36d-4a73-b6ec-2ce97ff10d7e"
+                },
                 "description": "common.cpvCode.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -8070,6 +8161,11 @@
             "tenderingCriterionProperties": [
               {
                 "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "8a1712bc-20a4-46d7-a426-750ce319e526"
+                },
                 "description": "common.startDateEndDate.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -8086,6 +8182,11 @@
               },
               {
                 "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "62422596-cd02-4181-b37d-243b8556f906"
+                },
                 "description": "common.amount.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -8119,6 +8220,11 @@
             "tenderingCriterionProperties": [
               {
                 "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "48ed4127-f297-40ea-86ec-f6540cb8e907"
+                },
                 "description": "common.isThisInformationAvailableElectronically.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -8152,6 +8258,11 @@
                 "tenderingCriterionProperties": [
                   {
                     "_cardinality": "1..n",
+                    "id": {
+                      "schemeAgencyID": "EU-COM-GROW",
+                      "schemeVersionID": "2.1.0",
+                      "value": "c5093939-8c28-46b4-ad3d-68a3a0c34866"
+                    },
                     "description": "common.evidenceSupplied",
                     "typeCode": {
                       "listID": "CriterionElementType",
@@ -8211,6 +8322,11 @@
         "tenderingCriterionProperties": [
           {
             "_cardinality": "1",
+            "id": {
+              "schemeAgencyID": "EU-COM-GROW",
+              "schemeVersionID": "2.1.0",
+              "value": "1dffa203-829d-4222-aa14-90cf1118614d"
+            },
             "description": "common.numberOfFiscalYears.description",
             "typeCode": {
               "listID": "CriterionElementType",
@@ -8227,6 +8343,11 @@
           },
           {
             "_cardinality": "1..n",
+            "id": {
+              "schemeAgencyID": "EU-COM-GROW",
+              "schemeVersionID": "2.1.0",
+              "value": "8c91db08-66ca-48d1-b1d1-99290d238d9a"
+            },
             "description": "specificAverageTurnover.ausinessDomainDescription.description",
             "typeCode": {
               "listID": "CriterionElementType",
@@ -8243,6 +8364,11 @@
           },
           {
             "_cardinality": "1",
+            "id": {
+              "schemeAgencyID": "EU-COM-GROW",
+              "schemeVersionID": "2.1.0",
+              "value": "14afde68-45d5-4c1c-b443-ed1c42f3fa57"
+            },
             "description": "common.minimumRequirement.description",
             "typeCode": {
               "listID": "CriterionElementType",
@@ -8276,6 +8402,11 @@
             "tenderingCriterionProperties": [
               {
                 "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "2397a22e-0d81-435c-80cb-77be289cfb37"
+                },
                 "description": "specificAverageTurnover.cpvs.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -8292,6 +8423,11 @@
               },
               {
                 "_cardinality": "1..n",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "16a306b1-f22a-4d27-a8fc-297bed2b3513"
+                },
                 "description": "common.cpvCode.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -8326,7 +8462,12 @@
             "tenderingCriterionProperties": [
               {
                 "_cardinality": "1",
-                "description": "specificAverageTurnover.startDateEndDate.description",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "0aa4b493-bc80-460d-8241-6d55b4d447aa"
+                },
+                "description": "common.startDateEndDate.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
                   "listAgencyID": "EU-COM-GROW",
@@ -8342,6 +8483,11 @@
               },
               {
                 "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "0f307891-3e49-405a-842e-a712accda31d"
+                },
                 "description": "common.amount.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -8375,6 +8521,11 @@
             "tenderingCriterionProperties": [
               {
                 "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "afbfc9fd-f610-4be7-a840-2dc3cb404ecc"
+                },
                 "description": "common.isThisInformationAvailableElectronically.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -8408,6 +8559,11 @@
                 "tenderingCriterionProperties": [
                   {
                     "_cardinality": "1..n",
+                    "id": {
+                      "schemeAgencyID": "EU-COM-GROW",
+                      "schemeVersionID": "2.1.0",
+                      "value": "d01836c7-adae-461d-aa1c-71d671a46aac"
+                    },
                     "description": "common.evidenceSupplied",
                     "typeCode": {
                       "listID": "CriterionElementType",
@@ -8467,6 +8623,11 @@
         "tenderingCriterionProperties": [
           {
             "_cardinality": "1",
+            "id": {
+              "schemeAgencyID": "EU-COM-GROW",
+              "schemeVersionID": "2.1.0",
+              "value": "79764cb1-c093-4765-aacc-e3d305894b9d"
+            },
             "description": "setupOfEconomicOperator.pleaseSpecify.description",
             "typeCode": {
               "listID": "CriterionElementType",
@@ -8500,6 +8661,11 @@
             "tenderingCriterionProperties": [
               {
                 "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "aa53f997-a3ef-4ccf-84e1-31d0d7410d43"
+                },
                 "description": "common.isThisInformationAvailableElectronically.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -8528,11 +8694,16 @@
                   "listID": "PropertyGroupType",
                   "listAgencyID": "EU-COM-GROW",
                   "listVersionID": "2.1.0",
-                  "value": "ONFALSE"
+                  "value": "ONTRUE"
                 },
                 "tenderingCriterionProperties": [
                   {
                     "_cardinality": "1..n",
+                    "id": {
+                      "schemeAgencyID": "EU-COM-GROW",
+                      "schemeVersionID": "2.1.0",
+                      "value": "7f09b08d-5a01-439c-83df-fc86dc464de0"
+                    },
                     "description": "common.evidenceSupplied",
                     "typeCode": {
                       "listID": "CriterionElementType",
@@ -8592,6 +8763,11 @@
         "tenderingCriterionProperties": [
           {
             "_cardinality": "1",
+            "id": {
+              "schemeAgencyID": "EU-COM-GROW",
+              "schemeVersionID": "2.1.0",
+              "value": "5b7c535c-f936-4063-ad95-ce55387e9d3a"
+            },
             "description": "financialRatios.selectPeriods.description",
             "typeCode": {
               "listID": "CriterionElementType",
@@ -8625,6 +8801,11 @@
             "tenderingCriterionProperties": [
               {
                 "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "6cadc6ba-a79c-4255-9336-24bb3c7a0f6f"
+                },
                 "description": "financialRatios.ratioType.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -8642,6 +8823,11 @@
               },
               {
                 "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "1686ad4b-cca1-4b59-ba74-55dfd1e3d31b"
+                },
                 "description": "financialRatios.definition.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -8658,6 +8844,11 @@
               },
               {
                 "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "c2939a7f-9920-41d4-aed8-98fb6bd76745"
+                },
                 "description": "common.minimumRequirement.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -8691,6 +8882,11 @@
             "tenderingCriterionProperties": [
               {
                 "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "40533801-66be-4203-ba76-5835e591dd4e"
+                },
                 "description": "financialRatios.pleaseProvideYourRatio.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -8724,6 +8920,11 @@
             "tenderingCriterionProperties": [
               {
                 "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "11526bc3-83ef-46d0-8f5b-a1901e654dbf"
+                },
                 "description": "common.isThisInformationAvailableElectronically.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -8752,11 +8953,16 @@
                   "listID": "PropertyGroupType",
                   "listAgencyID": "EU-COM-GROW",
                   "listVersionID": "2.1.0",
-                  "value": "ONFALSE"
+                  "value": "ONTRUE"
                 },
                 "tenderingCriterionProperties": [
                   {
                     "_cardinality": "1..n",
+                    "id": {
+                      "schemeAgencyID": "EU-COM-GROW",
+                      "schemeVersionID": "2.1.0",
+                      "value": "5421130d-7791-4707-8e11-75566b4a7ff2"
+                    },
                     "description": "common.evidenceSupplied",
                     "typeCode": {
                       "listID": "CriterionElementType",
@@ -8816,6 +9022,11 @@
         "tenderingCriterionProperties": [
           {
             "_cardinality": "1",
+            "id": {
+              "schemeAgencyID": "EU-COM-GROW",
+              "schemeVersionID": "2.1.0",
+              "value": "43d50b7c-defb-40d7-91f6-b0feec69d44d"
+            },
             "description": "common.lotsTheEequirementAppliesTo.description",
             "typeCode": {
               "listID": "CriterionElementType",
@@ -8849,6 +9060,11 @@
             "tenderingCriterionProperties": [
               {
                 "_cardinality": "0..n",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "aaeaf128-df96-4a0d-9125-5543ae488fdc"
+                },
                 "description": "professionalRiskInsuranse.lotIds.description",
                 "typeCode": {
                   "listID": "CriterionElementType",
@@ -8882,6 +9098,11 @@
                 "tenderingCriterionProperties": [
                   {
                     "_cardinality": "1",
+                    "id": {
+                      "schemeAgencyID": "EU-COM-GROW",
+                      "schemeVersionID": "2.1.0",
+                      "value": "3fdf95a4-8356-41be-b518-960cd7d0c169"
+                    },
                     "description": "professionalRiskInsuranse.typeOfInsurance.description",
                     "typeCode": {
                       "listID": "CriterionElementType",
@@ -8898,7 +9119,12 @@
                   },
                   {
                     "_cardinality": "1",
-                    "description": "professionalRiskInsuranse.minimumAmount.description",
+                    "id": {
+                      "schemeAgencyID": "EU-COM-GROW",
+                      "schemeVersionID": "2.1.0",
+                      "value": "d2183eab-c571-47e5-a8c4-020fdb706966"
+                    },
+                    "description": "common.minimumAmount.description",
                     "typeCode": {
                       "listID": "CriterionElementType",
                       "listAgencyID": "EU-COM-GROW",
@@ -8931,6 +9157,11 @@
                     "tenderingCriterionProperties": [
                       {
                         "_cardinality": "1",
+                        "id": {
+                          "schemeAgencyID": "EU-COM-GROW",
+                          "schemeVersionID": "2.1.0",
+                          "value": "f7f178a4-164b-47cc-8081-b8f26b0b7f34"
+                        },
                         "description": "common.amount.description",
                         "typeCode": {
                           "listID": "CriterionElementType",
@@ -8947,6 +9178,11 @@
                       },
                       {
                         "_cardinality": "1",
+                        "id": {
+                          "schemeAgencyID": "EU-COM-GROW",
+                          "schemeVersionID": "2.1.0",
+                          "value": "76b6be29-d63b-4107-b289-99fedfb7e557"
+                        },
                         "description": "professionalRiskInsuranse.asAnEO.description",
                         "typeCode": {
                           "listID": "CriterionElementType",
@@ -8963,6 +9199,11 @@
                       },
                       {
                         "_cardinality": "1",
+                        "id": {
+                          "schemeAgencyID": "EU-COM-GROW",
+                          "schemeVersionID": "2.1.0",
+                          "value": "9d64ee63-9355-4e2e-bcb4-23ee0b2bfb75"
+                        },
                         "description": "professionalRiskInsuranse.iAmExempt.description",
                         "typeCode": {
                           "listID": "CriterionElementType",
@@ -8996,6 +9237,11 @@
                     "tenderingCriterionProperties": [
                       {
                         "_cardinality": "1",
+                        "id": {
+                          "schemeAgencyID": "EU-COM-GROW",
+                          "schemeVersionID": "2.1.0",
+                          "value": "75f05ec9-f959-4b13-81b8-5e3c3e63c9c0"
+                        },
                         "description": "common.isThisInformationAvailableElectronically.description",
                         "typeCode": {
                           "listID": "CriterionElementType",
@@ -9024,11 +9270,16 @@
                           "listID": "PropertyGroupType",
                           "listAgencyID": "EU-COM-GROW",
                           "listVersionID": "2.1.0",
-                          "value": "ONFALSE"
+                          "value": "ONTRUE"
                         },
                         "tenderingCriterionProperties": [
                           {
                             "_cardinality": "1..n",
+                            "id": {
+                              "schemeAgencyID": "EU-COM-GROW",
+                              "schemeVersionID": "2.1.0",
+                              "value": "4d3f006f-fc3c-4aed-8765-5f09ba22d073"
+                            },
                             "description": "common.evidenceSupplied",
                             "typeCode": {
                               "listID": "CriterionElementType",
@@ -9046,6 +9297,443 @@
                         ]
                       }
                     ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "fulfilmentIndicatorType": false
+  },
+  {
+    "id": {
+      "schemeName": "CriteriaTaxonomy",
+      "schemeAgencyID": "EU-COM-GROW",
+      "schemeVersionID": "2.1.0",
+      "value": "ab0e7f2e-6418-40e2-8870-6713123e41ad"
+    },
+    "criterionTypeCode": {
+      "listID": "CriteriaTypeCode",
+      "listAgencyID": "EU-COM-GROW",
+      "listVersionID": "2.1.0",
+      "value": "CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.OTHER_REQUIREMENTS"
+    },
+    "name": "otherEconomicOrFinancial.question.name",
+    "description": [
+      "otherEconomicOrFinancial.question.description"
+    ],
+    "legislations": [],
+    "tenderingCriterionPropertyGroups": [
+      {
+        "_cardinality": "1..n",
+        "id": {
+          "schemeName": "CriteriaTaxonomy",
+          "schemeAgencyID": "EU-COM-GROW",
+          "schemeVersionID": "2.1.0",
+          "value": "4ddccd16-91e4-4b72-ae0f-78f2f1ab9490"
+        },
+        "propertyGroupTypeCode": {
+          "listID": "PropertyGroupType",
+          "listAgencyID": "EU-COM-GROW",
+          "listVersionID": "2.1.0",
+          "value": "ON*"
+        },
+        "tenderingCriterionProperties": [
+          {
+            "_cardinality": "0..1",
+            "id": {
+              "schemeAgencyID": "EU-COM-GROW",
+              "schemeVersionID": "2.1.0",
+              "value": "95ed1a86-7634-4cb4-a403-84cc8273d205"
+            },
+            "description": "common.lotsTheEequirementAppliesTo.description",
+            "typeCode": {
+              "listID": "CriterionElementType",
+              "listAgencyID": "EU-COM-GROW",
+              "listVersionID": "2.1.0",
+              "value": "CAPTION"
+            },
+            "valueDataTypeCode": {
+              "listID": "ResponseDataType",
+              "listAgencyID": "EU-COM-GROW",
+              "listVersionID": "2.1.0",
+              "value": "NONE"
+            }
+          }
+        ],
+        "subsidiaryTenderingCriterionPropertyGroups": [
+          {
+            "_cardinality": "0..1",
+            "id": {
+              "schemeName": "CriteriaTaxonomy",
+              "schemeAgencyID": "EU-COM-GROW",
+              "schemeVersionID": "2.1.0",
+              "value": "cc1da737-6c4e-4f4e-821d-c260029058f6"
+            },
+            "propertyGroupTypeCode": {
+              "listID": "PropertyGroupType",
+              "listAgencyID": "EU-COM-GROW",
+              "listVersionID": "2.1.0",
+              "value": "ON*"
+            },
+            "tenderingCriterionProperties": [
+              {
+                "_cardinality": "0..1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "2cee7b83-671a-46d9-8016-e5bc06ab3a23"
+                },
+                "description": "otherEconomicOrFinancial.lotID.description",
+                "typeCode": {
+                  "listID": "CriterionElementType",
+                  "listAgencyID": "EU-COM-GROW",
+                  "listVersionID": "2.1.0",
+                  "value": "REQUIREMENT"
+                },
+                "valueDataTypeCode": {
+                  "listID": "ResponseDataType",
+                  "listAgencyID": "EU-COM-GROW",
+                  "listVersionID": "2.1.0",
+                  "value": "LOT_IDENTIFIER"
+                }
+              }
+            ]
+          },
+          {
+            "_cardinality": "1",
+            "id": {
+              "schemeName": "CriteriaTaxonomy",
+              "schemeAgencyID": "EU-COM-GROW",
+              "schemeVersionID": "2.1.0",
+              "value": "26ece6a2-b360-46c1-890d-8338913b8719"
+            },
+            "propertyGroupTypeCode": {
+              "listID": "PropertyGroupType",
+              "listAgencyID": "EU-COM-GROW",
+              "listVersionID": "2.1.0",
+              "value": "ON*"
+            },
+            "tenderingCriterionProperties": [
+              {
+                "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "83708c19-73e8-46e9-9c80-a79fec267643"
+                },
+                "description": "otherEconomicOrFinancial.selectTheTypeOfRequirement.description",
+                "typeCode": {
+                  "listID": "CriterionElementType",
+                  "listAgencyID": "EU-COM-GROW",
+                  "listVersionID": "2.1.0",
+                  "value": "REQUIREMENT"
+                },
+                "valueDataTypeCode": {
+                  "listID": "ResponseDataType",
+                  "listAgencyID": "EU-COM-GROW",
+                  "listVersionID": "2.1.0",
+                  "value": "CODE_BOOLEAN"
+                }
+              }
+            ],
+            "subsidiaryTenderingCriterionPropertyGroups": [
+              {
+                "_cardinality": "0..n",
+                "id": {
+                  "schemeName": "CriteriaTaxonomy",
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "ca15c15f-110e-4a10-8d6e-5e41cf5f9098"
+                },
+                "propertyGroupTypeCode": {
+                  "listID": "PropertyGroupType",
+                  "listAgencyID": "EU-COM-GROW",
+                  "listVersionID": "2.1.0",
+                  "value": "ONTRUE"
+                },
+                "tenderingCriterionProperties": [
+                  {
+                    "_cardinality": "1",
+                    "id": {
+                      "schemeAgencyID": "EU-COM-GROW",
+                      "schemeVersionID": "2.1.0",
+                      "value": "cefe368a-cb54-4b28-bf17-4575287d6960"
+                    },
+                    "description": "otherEconomicOrFinancial.descriptionOfTheEconomicfinancial.description",
+                    "typeCode": {
+                      "listID": "CriterionElementType",
+                      "listAgencyID": "EU-COM-GROW",
+                      "listVersionID": "2.1.0",
+                      "value": "REQUIREMENT"
+                    },
+                    "valueDataTypeCode": {
+                      "listID": "ResponseDataType",
+                      "listAgencyID": "EU-COM-GROW",
+                      "listVersionID": "2.1.0",
+                      "value": "DESCRIPTION"
+                    }
+                  },
+                  {
+                    "_cardinality": "1",
+                    "id": {
+                      "schemeAgencyID": "EU-COM-GROW",
+                      "schemeVersionID": "2.1.0",
+                      "value": "9fe24b07-ceb1-4677-865c-d8b7ccf22e5c"
+                    },
+                    "description": "common.minimumAmount.description",
+                    "typeCode": {
+                      "listID": "CriterionElementType",
+                      "listAgencyID": "EU-COM-GROW",
+                      "listVersionID": "2.1.0",
+                      "value": "REQUIREMENT"
+                    },
+                    "valueDataTypeCode": {
+                      "listID": "ResponseDataType",
+                      "listAgencyID": "EU-COM-GROW",
+                      "listVersionID": "2.1.0",
+                      "value": "AMOUNT"
+                    }
+                  },
+                  {
+                    "_cardinality": "1",
+                    "id": {
+                      "schemeAgencyID": "EU-COM-GROW",
+                      "schemeVersionID": "2.1.0",
+                      "value": "f4aa7dff-0b6b-4ef9-8b9c-f7a35241420e"
+                    },
+                    "description": "common.startDateEndDate.description",
+                    "typeCode": {
+                      "listID": "CriterionElementType",
+                      "listAgencyID": "EU-COM-GROW",
+                      "listVersionID": "2.1.0",
+                      "value": "REQUIREMENT"
+                    },
+                    "valueDataTypeCode": {
+                      "listID": "ResponseDataType",
+                      "listAgencyID": "EU-COM-GROW",
+                      "listVersionID": "2.1.0",
+                      "value": "PERIOD"
+                    }
+                  }
+                ],
+                "subsidiaryTenderingCriterionPropertyGroups": [
+                  {
+                    "_cardinality": "1",
+                    "id": {
+                      "schemeName": "CriteriaTaxonomy",
+                      "schemeAgencyID": "EU-COM-GROW",
+                      "schemeVersionID": "2.1.0",
+                      "value": "9b3a04ff-e36d-4d4f-b47c-82ad402b9b02"
+                    },
+                    "propertyGroupTypeCode": {
+                      "listID": "PropertyGroupType",
+                      "listAgencyID": "EU-COM-GROW",
+                      "listVersionID": "2.1.0",
+                      "value": "ON*"
+                    },
+                    "tenderingCriterionProperties": [
+                      {
+                        "_cardinality": "1",
+                        "id": {
+                          "schemeAgencyID": "EU-COM-GROW",
+                          "schemeVersionID": "2.1.0",
+                          "value": "4e6c9b7f-ea10-46c2-ab14-42b91a1b1e7e"
+                        },
+                        "description": "Amount",
+                        "typeCode": {
+                          "listID": "CriterionElementType",
+                          "listAgencyID": "EU-COM-GROW",
+                          "listVersionID": "2.1.0",
+                          "value": "QUESTION"
+                        },
+                        "valueDataTypeCode": {
+                          "listID": "ResponseDataType",
+                          "listAgencyID": "EU-COM-GROW",
+                          "listVersionID": "2.1.0",
+                          "value": "AMOUNT"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "_cardinality": "0..n",
+                "id": {
+                  "schemeName": "CriteriaTaxonomy",
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "cc96aa19-a0be-4409-af58-ff3f3812741b"
+                },
+                "propertyGroupTypeCode": {
+                  "listID": "PropertyGroupType",
+                  "listAgencyID": "EU-COM-GROW",
+                  "listVersionID": "2.1.0",
+                  "value": "ONFALSE"
+                },
+                "tenderingCriterionProperties": [
+                  {
+                    "_cardinality": "1",
+                    "id": {
+                      "schemeAgencyID": "EU-COM-GROW",
+                      "schemeVersionID": "2.1.0",
+                      "value": "2a575d54-d718-4b02-8234-79a6c88e6557"
+                    },
+                    "description": "otherEconomicOrFinancial.minimumRating.description",
+                    "typeCode": {
+                      "listID": "CriterionElementType",
+                      "listAgencyID": "EU-COM-GROW",
+                      "listVersionID": "2.1.0",
+                      "value": "REQUIREMENT"
+                    },
+                    "valueDataTypeCode": {
+                      "listID": "ResponseDataType",
+                      "listAgencyID": "EU-COM-GROW",
+                      "listVersionID": "2.1.0",
+                      "value": "QUANTITY"
+                    }
+                  },
+                  {
+                    "_cardinality": "1",
+                    "id": {
+                      "schemeAgencyID": "EU-COM-GROW",
+                      "schemeVersionID": "2.1.0",
+                      "value": "798c31d7-6657-40b4-b0eb-f1fa3694f153"
+                    },
+                    "description": "otherEconomicOrFinancial.ratingScheme.description",
+                    "typeCode": {
+                      "listID": "CriterionElementType",
+                      "listAgencyID": "EU-COM-GROW",
+                      "listVersionID": "2.1.0",
+                      "value": "REQUIREMENT"
+                    },
+                    "valueDataTypeCode": {
+                      "listID": "ResponseDataType",
+                      "listAgencyID": "EU-COM-GROW",
+                      "listVersionID": "2.1.0",
+                      "value": "DESCRIPTION"
+                    }
+                  }
+                ],
+                "subsidiaryTenderingCriterionPropertyGroups": [
+                  {
+                    "_cardinality": "1",
+                    "id": {
+                      "schemeName": "CriteriaTaxonomy",
+                      "schemeAgencyID": "EU-COM-GROW",
+                      "schemeVersionID": "2.1.0",
+                      "value": " 5fe93344-ed91-4f97-bcab-b6720a131798"
+                    },
+                    "propertyGroupTypeCode": {
+                      "listID": "PropertyGroupType",
+                      "listAgencyID": "EU-COM-GROW",
+                      "listVersionID": "2.1.0",
+                      "value": "ON*"
+                    },
+                    "tenderingCriterionProperties": [
+                      {
+                        "_cardinality": "1",
+                        "id": {
+                          "schemeAgencyID": "EU-COM-GROW",
+                          "schemeVersionID": "2.1.0",
+                          "value": "e1afa2aa-f784-41c6-9ba6-96cc49105161"
+                        },
+                        "description": "otherEconomicOrFinancial.rating.description",
+                        "typeCode": {
+                          "listID": "CriterionElementType",
+                          "listAgencyID": "EU-COM-GROW",
+                          "listVersionID": "2.1.0",
+                          "value": "QUESTION"
+                        },
+                        "valueDataTypeCode": {
+                          "listID": "ResponseDataType",
+                          "listAgencyID": "EU-COM-GROW",
+                          "listVersionID": "2.1.0",
+                          "value": "QUANTITY"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "_cardinality": "1",
+            "id": {
+              "schemeName": "CriteriaTaxonomy",
+              "schemeAgencyID": "EU-COM-GROW",
+              "schemeVersionID": "2.1.0",
+              "value": "7458d42a-e581-4640-9283-34ceb3ad4345"
+            },
+            "propertyGroupTypeCode": {
+              "listID": "PropertyGroupType",
+              "listAgencyID": "EU-COM-GROW",
+              "listVersionID": "2.1.0",
+              "value": "ON*"
+            },
+            "tenderingCriterionProperties": [
+              {
+                "_cardinality": "1",
+                "id": {
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "24820f68-c1e8-4977-ab64-d09fe0bc3c11"
+                },
+                "description": "otherEconomicOrFinancial.lotID.description",
+                "typeCode": {
+                  "listID": "CriterionElementType",
+                  "listAgencyID": "EU-COM-GROW",
+                  "listVersionID": "2.1.0",
+                  "value": "QUESTION"
+                },
+                "valueDataTypeCode": {
+                  "listID": "ResponseDataType",
+                  "listAgencyID": "EU-COM-GROW",
+                  "listVersionID": "2.1.0",
+                  "value": "LOT_IDENTIFIER"
+                }
+              }
+            ],
+            "subsidiaryTenderingCriterionPropertyGroups": [
+              {
+                "_cardinality": "0..1",
+                "id": {
+                  "schemeName": "CriteriaTaxonomy",
+                  "schemeAgencyID": "EU-COM-GROW",
+                  "schemeVersionID": "2.1.0",
+                  "value": "41dd2e9b-1bfd-44c7-93ee-56bd74a4334b"
+                },
+                "propertyGroupTypeCode": {
+                  "listID": "PropertyGroupType",
+                  "listAgencyID": "EU-COM-GROW",
+                  "listVersionID": "2.1.0",
+                  "value": "ONTRUE"
+                },
+                "tenderingCriterionProperties": [
+                  {
+                    "_cardinality": "1..n",
+                    "id": {
+                      "schemeAgencyID": "EU-COM-GROW",
+                      "schemeVersionID": "2.1.0",
+                      "value": "094338bd-f0af-46ee-95d6-10d9bdb5e186"
+                    },
+                    "description": "common.evidenceSupplied",
+                    "typeCode": {
+                      "listID": "CriterionElementType",
+                      "listAgencyID": "EU-COM-GROW",
+                      "listVersionID": "2.1.0",
+                      "value": "QUESTION"
+                    },
+                    "valueDataTypeCode": {
+                      "listID": "ResponseDataType",
+                      "listAgencyID": "EU-COM-GROW",
+                      "listVersionID": "2.1.0",
+                      "value": "EVIDENCE_IDENTIFIER"
+                    }
                   }
                 ]
               }
