@@ -93,6 +93,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                             new TenderingCriterionProperty()
                             {
                               _cardinality = CardinalityMetadata.ExactlyOne,
+                              Id = EuComGrowId.Random(),
                               TypeCode = CriterionElementType.Requirement,
                               Description = "economicFinancialStanding.minimumRequirement.description",
                               ValueDataTypeCode = ResponseDataTypeCode.Amount
@@ -110,6 +111,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                     new TenderingCriterionProperty()
                                     {
                                         _cardinality = CardinalityMetadata.ExactlyOne,
+                                        Id = EuComGrowId.Random(),
                                         TypeCode = CriterionElementType.Question,
                                         Description = "common.amount.description",
                                         ValueDataTypeCode = ResponseDataTypeCode.Amount,
@@ -118,6 +120,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                     new TenderingCriterionProperty()
                                     {
                                         _cardinality = CardinalityMetadata.ExactlyOne,
+                                        Id = EuComGrowId.Random(),
                                         TypeCode = CriterionElementType.Question,
                                         Description = "common.startDate.description",
                                         ValueDataTypeCode = ResponseDataTypeCode.Date, 
@@ -125,6 +128,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                     new TenderingCriterionProperty()
                                     {
                                         _cardinality = CardinalityMetadata.ExactlyOne,
+                                        Id = EuComGrowId.Random(),
                                         TypeCode = CriterionElementType.Question,
                                         Description = "common.endDate.description",
                                         ValueDataTypeCode = ResponseDataTypeCode.Date
@@ -159,6 +163,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                       new TenderingCriterionProperty()
                       {
                         _cardinality = CardinalityMetadata.ExactlyOne,
+                        Id = EuComGrowId.Random(),
                         TypeCode = CriterionElementType.Requirement,
                         Description = "common.startDateEndDate.description",
                         ValueDataTypeCode = ResponseDataTypeCode.Period,
@@ -166,6 +171,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                       new TenderingCriterionProperty()
                       {
                         _cardinality = CardinalityMetadata.ExactlyOne,
+                        Id = EuComGrowId.Random(),
                         TypeCode = CriterionElementType.Requirement,
                         Description = "economicFinancialStanding.minimumRequirement.description",
                         ValueDataTypeCode = ResponseDataTypeCode.Amount
@@ -183,6 +189,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                           new TenderingCriterionProperty()
                           {
                             _cardinality = CardinalityMetadata.ExactlyOne,
+                            Id = EuComGrowId.Random(),
                             TypeCode = CriterionElementType.Question,
                             Description = "economicFinancialStanding.averageForRequiredPeriod.description",
                             ValueDataTypeCode = ResponseDataTypeCode.Amount,
@@ -190,6 +197,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                           new TenderingCriterionProperty()
                           {
                             _cardinality = CardinalityMetadata.ExactlyOne,
+                            Id = EuComGrowId.Random(),
                             TypeCode = CriterionElementType.Question,
                             Description = "economicFinancialStanding.cpvCode.description",
                             ValueDataTypeCode = ResponseDataTypeCode.Description,
@@ -224,6 +232,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                         new TenderingCriterionProperty()
                         {
                           _cardinality = CardinalityMetadata.ExactlyOne,
+                          Id = EuComGrowId.Random(),
                           TypeCode = CriterionElementType.Requirement,
                           Description = "common.numberOfFiscalYears.description",
                           ValueDataTypeCode = ResponseDataTypeCode.QuantityInteger,
@@ -231,6 +240,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                         new TenderingCriterionProperty()
                         {
                           _cardinality = CardinalityMetadata.OneOrMore,
+                          Id = EuComGrowId.Random(),
                           TypeCode = CriterionElementType.Requirement,
                           Description = "specificAverageTurnover.ausinessDomainDescription.description",
                           ValueDataTypeCode = ResponseDataTypeCode.Description,
@@ -238,6 +248,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                         new TenderingCriterionProperty()
                         {
                           _cardinality = CardinalityMetadata.ExactlyOne,
+                          Id = EuComGrowId.Random(),
                           TypeCode = CriterionElementType.Requirement,
                           Description = "common.minimumRequirement.description",
                           ValueDataTypeCode = ResponseDataTypeCode.Amount,
@@ -254,6 +265,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                          {
                            new TenderingCriterionProperty()
                            {
+                             Id = EuComGrowId.Random(),
                              TypeCode = CriterionElementType.Caption,
                              Description = "specificAverageTurnover.cpvs.description",
                             
@@ -262,6 +274,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                            new TenderingCriterionProperty()
                            {
                              _cardinality = CardinalityMetadata.OneOrMore,
+                             Id = EuComGrowId.Random(),
                              TypeCode = CriterionElementType.Requirement,
                              Description = "common.cpvCode.description",
                              ValueDataTypeCode = ResponseDataTypeCode.Code,
@@ -279,6 +292,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                new TenderingCriterionProperty()
                                {
                                  _cardinality = CardinalityMetadata.ExactlyOne,
+                                 Id = EuComGrowId.Random(),
                                  TypeCode = CriterionElementType.Question,
                                  Description = "common.startDateEndDate.description",
                                  ValueDataTypeCode = ResponseDataTypeCode.Period
@@ -286,6 +300,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                new TenderingCriterionProperty()
                                {
                                  _cardinality = CardinalityMetadata.ExactlyOne,
+                                 Id = EuComGrowId.Random(),
                                  TypeCode = CriterionElementType.Question,
                                  Description = "common.amount.description",
                                  ValueDataTypeCode = ResponseDataTypeCode.Amount
@@ -302,6 +317,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                new TenderingCriterionProperty()
                                {
                                  _cardinality = CardinalityMetadata.ExactlyOne,
+                                 Id = EuComGrowId.Random(),
                                  TypeCode = CriterionElementType.Question,
                                  Description = "common.isThisInformationAvailableElectronically.description",
                                  ValueDataTypeCode = ResponseDataTypeCode.Indicator
@@ -319,6 +335,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                        new TenderingCriterionProperty()
                                        {
                                          _cardinality = CardinalityMetadata.OneOrMore,
+                                         Id = EuComGrowId.Random(),
                                          TypeCode = CriterionElementType.Question,
                                          Description = "common.evidenceSupplied",
                                          ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
@@ -347,22 +364,23 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                 {
                     new TenderingCriterionPropertyGroup()
                     {
-                        //id puuttuu
-                       // Id = new CriteriaTaxonomyIdentifier("5ca58d66-3ef1-4145-957c-45d5b18a837f"),
                         _cardinality = CardinalityMetadata.ExactlyOne,
+                        Id = new CriteriaTaxonomyIdentifier("5ca58d66-3ef1-4145-957c-45d5b18a837f"),
                         PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                         TenderingCriterionProperties = new[]
                         {
                           new TenderingCriterionProperty()
-                           {
-                             _cardinality = CardinalityMetadata.ExactlyOne,
-                             TypeCode = CriterionElementType.Requirement,
-                             Description = "economicFinancialStanding.numberOfFiscalYears.description",
-                             ValueDataTypeCode = ResponseDataTypeCode.QuantityInteger
-                           },
+                          {
+                            _cardinality = CardinalityMetadata.ExactlyOne,
+                            Id = EuComGrowId.Random(),
+                            TypeCode = CriterionElementType.Requirement,
+                            Description = "economicFinancialStanding.numberOfFiscalYears.description",
+                            ValueDataTypeCode = ResponseDataTypeCode.QuantityInteger
+                          },
                           new TenderingCriterionProperty()
                           {
                             _cardinality= CardinalityMetadata.ExactlyOne,
+                            Id = EuComGrowId.Random(),
                             TypeCode = CriterionElementType.Requirement,
                             Description = "economicFinancialStanding.businessDomainDescription.description",
                             ValueDataTypeCode = ResponseDataTypeCode.Description,
@@ -370,6 +388,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                           new TenderingCriterionProperty()
                           {
                             _cardinality= CardinalityMetadata.ExactlyOne,
+                            Id = EuComGrowId.Random(),
                             TypeCode = CriterionElementType.Question,
                             Description = "common.minimumRequirement.description",
                             ValueDataTypeCode = ResponseDataTypeCode.Amount
@@ -387,6 +406,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                    new TenderingCriterionProperty()
                                    {
                                      _cardinality= CardinalityMetadata.ExactlyOne,
+                                     Id = EuComGrowId.Random(),
                                      TypeCode = CriterionElementType.Caption,
                                      Description = "economicFinancialStanding.cpvsCaption.description",
                                      ValueDataTypeCode = ResponseDataTypeCode.None,
@@ -394,6 +414,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                    new TenderingCriterionProperty()
                                    {
                                      _cardinality= CardinalityMetadata.OneOrMore,
+                                     Id = EuComGrowId.Random(),
                                      TypeCode = CriterionElementType.Requirement,
                                      Description = "common.cpvCode.description",
                                      ValueDataTypeCode = ResponseDataTypeCode.Code,
@@ -413,6 +434,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                    new TenderingCriterionProperty()
                                    {
                                      _cardinality= CardinalityMetadata.ExactlyOne,
+                                     Id = EuComGrowId.Random(),
                                      TypeCode = CriterionElementType.Question,
                                      Description = "common.startDateEndDate.description",
                                      ValueDataTypeCode = ResponseDataTypeCode.Period,
@@ -420,6 +442,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                    new TenderingCriterionProperty()
                                    {
                                      _cardinality= CardinalityMetadata.ExactlyOne,
+                                     Id = EuComGrowId.Random(),
                                      TypeCode = CriterionElementType.Question,
                                      Description = "common.amount.description",
                                      ValueDataTypeCode = ResponseDataTypeCode.Amount,
@@ -455,6 +478,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                           new TenderingCriterionProperty()
                           {
                             _cardinality = CardinalityMetadata.ExactlyOne,
+                            Id = EuComGrowId.Random(),
                             TypeCode = CriterionElementType.Question,
                             Description = "setupOfEconomicOperator.pleaseSpecify.description",
                             ValueDataTypeCode = ResponseDataTypeCode.Date
@@ -472,6 +496,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                   new TenderingCriterionProperty()
                                   {
                                     _cardinality = CardinalityMetadata.ExactlyOne,
+                                    Id = EuComGrowId.Random(),
                                     TypeCode = CriterionElementType.Question,
                                     Description = "common.isThisInformationAvailableElectronically.description",
                                     ValueDataTypeCode = ResponseDataTypeCode.Indicator
@@ -489,6 +514,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                           new TenderingCriterionProperty()
                                           {
                                             _cardinality = CardinalityMetadata.OneOrMore,
+                                            Id = EuComGrowId.Random(),
                                             TypeCode = CriterionElementType.Question,
                                             Description = "common.evidenceSupplied",
                                             ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
@@ -528,6 +554,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                       new TenderingCriterionProperty()
                       {
                         _cardinality = CardinalityMetadata.ExactlyOne,
+                        Id = EuComGrowId.Random(),
                         TypeCode = CriterionElementType.Requirement,
                         Description = "financialRatios.selectPeriods.description",
                         ValueDataTypeCode = ResponseDataTypeCode.Period
@@ -545,6 +572,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                           new TenderingCriterionProperty()
                           {
                             _cardinality = CardinalityMetadata.ExactlyOne,
+                            Id = EuComGrowId.Random(),
                             TypeCode = CriterionElementType.Requirement,
                             Description = "financialRatios.ratioType.description",
                             ValueDataTypeCode = ResponseDataTypeCode.Code,
@@ -553,6 +581,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                           new TenderingCriterionProperty()
                           {
                             _cardinality = CardinalityMetadata.ExactlyOne,
+                            Id = EuComGrowId.Random(),
                             TypeCode = CriterionElementType.Requirement,
                             Description = "financialRatios.definition.description",
                             ValueDataTypeCode = ResponseDataTypeCode.Description
@@ -560,6 +589,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                           new TenderingCriterionProperty()
                           {
                             _cardinality = CardinalityMetadata.ExactlyOne,
+                            Id = EuComGrowId.Random(),
                             TypeCode = CriterionElementType.Requirement,
                             Description = "common.minimumRequirement.description",
                             ValueDataTypeCode = ResponseDataTypeCode.Quantity
@@ -576,6 +606,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                           new TenderingCriterionProperty()
                           {
                             _cardinality = CardinalityMetadata.ExactlyOne,
+                            Id = EuComGrowId.Random(),
                             TypeCode = CriterionElementType.Question,
                             Description = "financialRatios.pleaseProvideYourRatio.description",
                             ValueDataTypeCode = ResponseDataTypeCode.Quantity
@@ -592,6 +623,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                           new TenderingCriterionProperty()
                           {
                             _cardinality = CardinalityMetadata.ExactlyOne,
+                            Id = EuComGrowId.Random(),
                             TypeCode = CriterionElementType.Question,
                             Description = "common.isThisInformationAvailableElectronically.description",
                             ValueDataTypeCode = ResponseDataTypeCode.Indicator
@@ -609,6 +641,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                               new TenderingCriterionProperty()
                               {
                                 _cardinality = CardinalityMetadata.OneOrMore,
+                                Id = EuComGrowId.Random(),
                                 TypeCode = CriterionElementType.Question,
                                 Description = "common.evidenceSupplied",
                                 ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
@@ -647,6 +680,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                           new TenderingCriterionProperty()
                           {
                             _cardinality = CardinalityMetadata.ExactlyOne,
+                            Id = EuComGrowId.Random(),
                             TypeCode = CriterionElementType.Caption,
                             Description = "common.lotsTheEequirementAppliesTo.description",
                             ValueDataTypeCode = ResponseDataTypeCode.None
@@ -664,6 +698,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                   new TenderingCriterionProperty()
                                   {
                                     _cardinality = CardinalityMetadata.ZeroOrMore,
+                                    Id = EuComGrowId.Random(),
                                     TypeCode = CriterionElementType.Requirement,
                                     Description = "professionalRiskInsuranse.lotIds.description",
                                     ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
@@ -681,6 +716,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                           new TenderingCriterionProperty()
                                           {
                                             _cardinality = CardinalityMetadata.ExactlyOne,
+                                            Id = EuComGrowId.Random(),
                                             TypeCode = CriterionElementType.Requirement,
                                             Description = "professionalRiskInsuranse.typeOfInsurance.description",
                                             ValueDataTypeCode = ResponseDataTypeCode.Description
@@ -688,6 +724,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                           new TenderingCriterionProperty()
                                           {
                                             _cardinality = CardinalityMetadata.ExactlyOne,
+                                            Id = EuComGrowId.Random(),
                                             TypeCode = CriterionElementType.Requirement,
                                             Description = "common.minimumAmount.description",
                                             ValueDataTypeCode = ResponseDataTypeCode.Amount
@@ -705,6 +742,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                   new TenderingCriterionProperty()
                                                   {
                                                     _cardinality = CardinalityMetadata.ExactlyOne,
+                                                    Id = EuComGrowId.Random(),
                                                     TypeCode = CriterionElementType.Question,
                                                     Description = "common.amount.description",
                                                     ValueDataTypeCode = ResponseDataTypeCode.Amount
@@ -712,6 +750,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                   new TenderingCriterionProperty()
                                                   {
                                                     _cardinality = CardinalityMetadata.ExactlyOne,
+                                                    Id = EuComGrowId.Random(),
                                                     TypeCode = CriterionElementType.Question,
                                                     Description = "professionalRiskInsuranse.asAnEO.description",
                                                     ValueDataTypeCode = ResponseDataTypeCode.Indicator
@@ -719,6 +758,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                   new TenderingCriterionProperty()
                                                   {
                                                     _cardinality = CardinalityMetadata.ExactlyOne,
+                                                    Id = EuComGrowId.Random(),
                                                     TypeCode = CriterionElementType.Question,
                                                     Description = "professionalRiskInsuranse.iAmExempt.description",
                                                     ValueDataTypeCode = ResponseDataTypeCode.Indicator
@@ -736,6 +776,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                   new TenderingCriterionProperty()
                                                   {
                                                     _cardinality = CardinalityMetadata.ExactlyOne,
+                                                    Id = EuComGrowId.Random(),
                                                     TypeCode = CriterionElementType.Question,
                                                     Description = "common.isThisInformationAvailableElectronically.description",
                                                     ValueDataTypeCode = ResponseDataTypeCode.Indicator
@@ -753,6 +794,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                           new TenderingCriterionProperty()
                                                           {
                                                             _cardinality = CardinalityMetadata.OneOrMore,
+                                                            Id = EuComGrowId.Random(),
                                                             TypeCode = CriterionElementType.Question,
                                                             Description = "common.evidenceSupplied",
                                                             ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
@@ -792,6 +834,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                            new TenderingCriterionProperty()
                            {
                              _cardinality = CardinalityMetadata.Optional,
+                             Id = EuComGrowId.Random(),
                              TypeCode = CriterionElementType.Caption,
                              Description = "common.lotsTheEequirementAppliesTo.description",
                              ValueDataTypeCode = ResponseDataTypeCode.None
@@ -809,6 +852,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                    new TenderingCriterionProperty()
                                    {
                                      _cardinality = CardinalityMetadata.Optional,
+                                     Id = EuComGrowId.Random(),
                                      TypeCode = CriterionElementType.Requirement,
                                      Description = "otherEconomicOrFinancial.lotID.description",
                                      ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
@@ -825,6 +869,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                    new TenderingCriterionProperty()
                                    {
                                      _cardinality = CardinalityMetadata.ExactlyOne,
+                                     Id = EuComGrowId.Random(),
                                      TypeCode = CriterionElementType.Requirement,
                                      Description = "otherEconomicOrFinancial.selectTheTypeOfRequirement.description",
                                      ValueDataTypeCode = ResponseDataTypeCode.CodeBoolean
@@ -842,6 +887,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                            new TenderingCriterionProperty()
                                            {
                                              _cardinality = CardinalityMetadata.ExactlyOne,
+                                             Id = EuComGrowId.Random(),
                                              TypeCode = CriterionElementType.Requirement,
                                              Description = "otherEconomicOrFinancial.descriptionOfTheEconomicfinancial.description",
                                              ValueDataTypeCode = ResponseDataTypeCode.Description
@@ -849,6 +895,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                            new TenderingCriterionProperty()
                                            {
                                              _cardinality = CardinalityMetadata.ExactlyOne,
+                                             Id = EuComGrowId.Random(),
                                              TypeCode = CriterionElementType.Requirement,
                                              Description = "common.minimumAmount.description",
                                              ValueDataTypeCode = ResponseDataTypeCode.Amount
@@ -856,6 +903,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                            new TenderingCriterionProperty()
                                            {
                                              _cardinality = CardinalityMetadata.ExactlyOne,
+                                             Id = EuComGrowId.Random(),
                                              TypeCode = CriterionElementType.Requirement,
                                              Description = "common.startDateEndDate.description",
                                              ValueDataTypeCode = ResponseDataTypeCode.Period
@@ -873,6 +921,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                    new TenderingCriterionProperty()
                                                    {
                                                      _cardinality = CardinalityMetadata.ExactlyOne,
+                                                     Id = EuComGrowId.Random(),
                                                      TypeCode = CriterionElementType.Question,
                                                      Description = "Amount",
                                                      ValueDataTypeCode = ResponseDataTypeCode.Amount
@@ -893,6 +942,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                            new TenderingCriterionProperty()
                                            {
                                              _cardinality = CardinalityMetadata.ExactlyOne,
+                                             Id = EuComGrowId.Random(),
                                              TypeCode = CriterionElementType.Requirement,
                                              Description = "otherEconomicOrFinancial.minimumRating.description",
                                              ValueDataTypeCode = ResponseDataTypeCode.Quantity
@@ -900,6 +950,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                            new TenderingCriterionProperty()
                                            {
                                              _cardinality = CardinalityMetadata.ExactlyOne,
+                                             Id = EuComGrowId.Random(),
                                              TypeCode = CriterionElementType.Requirement,
                                              Description = "otherEconomicOrFinancial.ratingScheme.description",
                                              ValueDataTypeCode = ResponseDataTypeCode.Description
@@ -917,6 +968,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                    new TenderingCriterionProperty()
                                                    {
                                                      _cardinality = CardinalityMetadata.ExactlyOne,
+                                                     Id = EuComGrowId.Random(),
                                                      TypeCode = CriterionElementType.Question,
                                                      Description = "otherEconomicOrFinancial.rating.description",
                                                      ValueDataTypeCode = ResponseDataTypeCode.Quantity
@@ -939,6 +991,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                    new TenderingCriterionProperty()
                                    {
                                      _cardinality = CardinalityMetadata.ExactlyOne,
+                                     Id = EuComGrowId.Random(),
                                      TypeCode = CriterionElementType.Question,
                                      Description = "otherEconomicOrFinancial.lotID.description",
                                      ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
@@ -956,6 +1009,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                            new TenderingCriterionProperty()
                                            {
                                              _cardinality = CardinalityMetadata.OneOrMore,
+                                             Id = EuComGrowId.Random(),
                                              TypeCode = CriterionElementType.Question,
                                              Description = "common.evidenceSupplied",
                                              ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier

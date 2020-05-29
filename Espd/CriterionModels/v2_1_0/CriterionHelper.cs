@@ -141,6 +141,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                      new TenderingCriterionProperty()
                      {
                        _cardinality = CardinalityMetadata.ExactlyOne,
+                       Id = EuComGrowId.Random(),
                        TypeCode = CriterionElementType.Question,
                        Description = "common.isThisInformationAvailableElectronically.description",
                        ValueDataTypeCode = ResponseDataTypeCode.Indicator
@@ -158,6 +159,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                              new TenderingCriterionProperty()
                              {
                                _cardinality = CardinalityMetadata.OneOrMore,
+                               Id = EuComGrowId.Random(),
                                TypeCode = CriterionElementType.Question,
                                Description = "common.evidenceSupplied",
                                ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
