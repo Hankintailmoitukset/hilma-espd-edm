@@ -27,6 +27,6 @@
       "name": "Check-box is in state UNCHECKED"
     }
   ],
-  "identifier": "EU-COM-GROW",
-  "version": "2.1.1"
+  "agencyId": "EU-COM-GROW",
+  "version": "2.1.0"
 }

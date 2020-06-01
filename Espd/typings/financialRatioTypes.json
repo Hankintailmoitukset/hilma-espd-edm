@@ -119,6 +119,6 @@
       "name": "Operating working capital/Net turnover"
     }
   ],
-  "identifier": "BACH",
+  "agencyId": "BACH",
   "version": "1.0"
 }

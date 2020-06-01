@@ -21,7 +21,7 @@ namespace ResourceExporter
 
             //TODO READ URLS FROM CONFIG
             var financialRatioTypeUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.0/docs/src/main/asciidoc/dist/cl/gc/FinancialRatioType-CodeList.gc";
-            var booleanGUIControlTypeUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.0/docs/src/main/asciidoc/dist/cl/gc/BooleanGUIControlType.gc";
+            var booleanGUIControlTypeUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.0/docs/src/main/asciidoc/dist/cl/gc/BooleanGUIControlType-CodeList.gc";
             var lang = "name-eng";
 
             CreateTypeCodeList(financialRatioTypeUrl, lang, "financialRatioTypes.json");
