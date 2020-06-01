@@ -100,11 +100,14 @@ namespace ResourceExporter
             {
                 var identification = formSection.Element("Identification");
                 var simpleCodeList = formSection.Element("SimpleCodeList");
+                var agency = identification.Element("Agency");
 
                 CodeListContract codeListContract = new CodeListContract()
                 {
                     ShortName = identification.Element("ShortName").Value,
                     LongName = identification.Element("LongName").Value,
+                    Identifier = agency.Element("Identifier").Value,
+                    Version = identification.Element("Version").Value,
                     Codes = ParseCodes(simpleCodeList, lang)
                 };
 

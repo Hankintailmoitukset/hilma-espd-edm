@@ -26,5 +26,7 @@
       "code": "CHECK_BOX_UNCHECKED",
       "name": "Check-box is in state UNCHECKED"
     }
-  ]
+  ],
+  "identifier": "EU-COM-GROW",
+  "version": "2.1.1"
 }

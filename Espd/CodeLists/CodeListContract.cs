@@ -9,5 +9,7 @@ namespace Hilma.Espd.EDM.CodeLists
         public string ShortName { get; set; }
         public string LongName { get; set; }
         public List<CodeContract> Codes { get; set; }
+        public string Identifier { get; set; }
+        public string Version { get; set; }
     }
 }
