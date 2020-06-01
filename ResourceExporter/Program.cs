@@ -21,8 +21,27 @@ namespace ResourceExporter
 
             //TODO READ URLS FROM CONFIG
             var financialRatioTypeUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.0/docs/src/main/asciidoc/dist/cl/gc/FinancialRatioType-CodeList.gc";
+            var booleanGUIControlTypeUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.0/docs/src/main/asciidoc/dist/cl/gc/BooleanGUIControlType-CodeList.gc";
             var lang = "name-eng";
 
+            CreateTypeCodeList(financialRatioTypeUrl, lang, "financialRatioTypes.json");
+
+            CreateTypeCodeList(booleanGUIControlTypeUrl, lang, "booleanGUIControlTypes.json");
+
+            //get tenderincriterion
+            var criterionSpecification = new CriterionSpecification().AllCriteria.ToArray();
+            WriteToFile(criterionSpecification, "criterionSpecification.json");
+
+            //copy transaltion
+            string sourceFile = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "Localisation", "translations.default.json"));
+            string targetPath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "typings", "translations.default.json"));
+            Console.WriteLine("writing file to path: " + targetPath);
+            System.IO.File.Copy(sourceFile, targetPath, true);
+
+        }
+
+        private static void CreateTypeCodeList(string financialRatioTypeUrl, string lang, string fileName)
+        {
             var webRequest = WebRequest.Create(@financialRatioTypeUrl);
             var xmlContent = string.Empty;
 
@@ -36,19 +55,8 @@ namespace ResourceExporter
             //parse xml
             var doc = XDocument.Parse(xmlContent);
             XElement formSection = doc.Root;
-            CodeListContract financialRatioTypes = ParseFinancialRatioTypes(formSection, lang);
-            WriteToFile(financialRatioTypes, "financialRatioTypes.json");
-
-            //get tenderincriterion
-            var criterionSpecification = new CriterionSpecification().AllCriteria.ToArray();
-            WriteToFile(criterionSpecification, "criterionSpecification.json");
-
-            //copy transaltion
-            string sourceFile = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "Localisation","translations.default.json"));
-            string targetPath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "typings", "translations.default.json"));
-            Console.WriteLine("writing file to path: " + targetPath);
-            System.IO.File.Copy(sourceFile, targetPath, true);
-
+            CodeListContract financialRatioTypes = ParseXmlCodeList(formSection, lang);
+            WriteToFile(financialRatioTypes, fileName);
         }
 
         private static void WriteToFile(CodeListContract financialRatioTypes, string filename)
@@ -82,7 +90,7 @@ namespace ResourceExporter
             serializer.Serialize(file, criterionSpecification);
         }
 
-        private static CodeListContract ParseFinancialRatioTypes(XElement formSection, string lang)
+        private static CodeListContract ParseXmlCodeList(XElement formSection, string lang)
         {
             if (formSection == null)
             {
@@ -92,11 +100,14 @@ namespace ResourceExporter
             {
                 var identification = formSection.Element("Identification");
                 var simpleCodeList = formSection.Element("SimpleCodeList");
+                var agency = identification.Element("Agency");
 
                 CodeListContract codeListContract = new CodeListContract()
                 {
                     ShortName = identification.Element("ShortName").Value,
                     LongName = identification.Element("LongName").Value,
+                    AgencyId = agency.Element("Identifier").Value,
+                    Version = identification.Element("Version").Value,
                     Codes = ParseCodes(simpleCodeList, lang)
                 };
 

@@ -872,7 +872,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                      Id = EuComGrowId.Random(),
                                      TypeCode = CriterionElementType.Requirement,
                                      Description = "otherEconomicOrFinancial.selectTheTypeOfRequirement.description",
-                                     ValueDataTypeCode = ResponseDataTypeCode.CodeBoolean
+                                     ValueDataTypeCode = ResponseDataTypeCode.CodeBoolean,
+                                     CodeListId = CodeListIds.BooleanGUIControlType
                                    }
                                  },
                                  SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
