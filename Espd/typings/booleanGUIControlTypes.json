@@ -1,0 +1,30 @@
+{
+  "shortName": "BooleanGUIControlType",
+  "longName": "Boolean GUI Control Type",
+  "codes": [
+    {
+      "code": "RADIO_BUTTON_TRUE",
+      "name": "Radio Button is in state TRUE"
+    },
+    {
+      "code": "RADIO_BUTTON_FALSE",
+      "name": "Radio Button is in state FALSE"
+    },
+    {
+      "code": "RADIO_BUTTON_UNSELECTED",
+      "name": "Radio Button is in state UNSELECTED"
+    },
+    {
+      "code": "CHECK_BOX_TRUE",
+      "name": "Check-box is in state TRUE"
+    },
+    {
+      "code": "CHECK_BOX_FALSE",
+      "name": "Check-box is in state FALSE"
+    },
+    {
+      "code": "CHECK_BOX_UNCHECKED",
+      "name": "Check-box is in state UNCHECKED"
+    }
+  ]
+}

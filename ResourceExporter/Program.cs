@@ -21,8 +21,27 @@ namespace ResourceExporter
 
             //TODO READ URLS FROM CONFIG
             var financialRatioTypeUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.0/docs/src/main/asciidoc/dist/cl/gc/FinancialRatioType-CodeList.gc";
+            var BooleanGUIControlTypeUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.1/docs/src/main/asciidoc/dist/cl/gc/BooleanGUIControlType.gc";
             var lang = "name-eng";
 
+            CreateTypeCodeList(financialRatioTypeUrl, lang, "financialRatioTypes.json");
+
+            CreateTypeCodeList(BooleanGUIControlTypeUrl, lang, "booleanGUIControlTypes.json");
+
+            //get tenderincriterion
+            var criterionSpecification = new CriterionSpecification().AllCriteria.ToArray();
+            WriteToFile(criterionSpecification, "criterionSpecification.json");
+
+            //copy transaltion
+            string sourceFile = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "Localisation", "translations.default.json"));
+            string targetPath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "typings", "translations.default.json"));
+            Console.WriteLine("writing file to path: " + targetPath);
+            System.IO.File.Copy(sourceFile, targetPath, true);
+
+        }
+
+        private static void CreateTypeCodeList(string financialRatioTypeUrl, string lang, string fileName)
+        {
             var webRequest = WebRequest.Create(@financialRatioTypeUrl);
             var xmlContent = string.Empty;
 
@@ -37,18 +56,7 @@ namespace ResourceExporter
             var doc = XDocument.Parse(xmlContent);
             XElement formSection = doc.Root;
             CodeListContract financialRatioTypes = ParseFinancialRatioTypes(formSection, lang);
-            WriteToFile(financialRatioTypes, "financialRatioTypes.json");
-
-            //get tenderincriterion
-            var criterionSpecification = new CriterionSpecification().AllCriteria.ToArray();
-            WriteToFile(criterionSpecification, "criterionSpecification.json");
-
-            //copy transaltion
-            string sourceFile = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "Localisation","translations.default.json"));
-            string targetPath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "typings", "translations.default.json"));
-            Console.WriteLine("writing file to path: " + targetPath);
-            System.IO.File.Copy(sourceFile, targetPath, true);
-
+            WriteToFile(financialRatioTypes, fileName);
         }
 
         private static void WriteToFile(CodeListContract financialRatioTypes, string filename)

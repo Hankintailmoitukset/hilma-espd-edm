@@ -4,6 +4,6 @@
   {
     public const string CpvCodes = nameof(CpvCodes);
     public const string FinancialRatioType = nameof(FinancialRatioType);
-    public const string CodeBoolean = nameof(CodeBoolean);
+    public const string BooleanGUIControlType = nameof(BooleanGUIControlType);
   }
 }

@@ -873,7 +873,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                      TypeCode = CriterionElementType.Requirement,
                                      Description = "otherEconomicOrFinancial.selectTheTypeOfRequirement.description",
                                      ValueDataTypeCode = ResponseDataTypeCode.CodeBoolean,
-                                     CodeListId = CodeListIds.CodeBoolean
+                                     CodeListId = CodeListIds.BooleanGUIControlType
                                    }
                                  },
                                  SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
