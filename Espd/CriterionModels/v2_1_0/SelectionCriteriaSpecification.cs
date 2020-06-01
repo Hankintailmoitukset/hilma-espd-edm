@@ -1024,5 +1024,35 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
             }
         };
 
+        public TenderingCriterion[] References => new[]
+        {
+            new TenderingCriterion()
+            { }
+        };
+        public TenderingCriterion[] AbilitiesPersons => new[]
+       {
+            new TenderingCriterion()
+            { }
+        };
+        public TenderingCriterion[] AbilitiesFacilities => new[]
+       {
+            new TenderingCriterion()
+            { }
+        };
+        public TenderingCriterion[] AbilitiesEducation => new[]
+       {
+            new TenderingCriterion()
+            { }
+        };
+        public TenderingCriterion[] AbilitiesChecks => new[]
+       {
+            new TenderingCriterion()
+            { }
+        };
+        public TenderingCriterion[] AbilitiesStaff => new[]
+       {
+            new TenderingCriterion()
+            { }
+        };
     };
 }
