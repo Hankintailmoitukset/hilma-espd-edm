@@ -55,7 +55,7 @@ namespace ResourceExporter
             //parse xml
             var doc = XDocument.Parse(xmlContent);
             XElement formSection = doc.Root;
-            CodeListContract financialRatioTypes = ParseFinancialRatioTypes(formSection, lang);
+            CodeListContract financialRatioTypes = ParseXmlCodeList(formSection, lang);
             WriteToFile(financialRatioTypes, fileName);
         }
 
@@ -90,7 +90,7 @@ namespace ResourceExporter
             serializer.Serialize(file, criterionSpecification);
         }
 
-        private static CodeListContract ParseFinancialRatioTypes(XElement formSection, string lang)
+        private static CodeListContract ParseXmlCodeList(XElement formSection, string lang)
         {
             if (formSection == null)
             {
