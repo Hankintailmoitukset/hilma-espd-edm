@@ -118,5 +118,7 @@
       "code": "R54",
       "name": "Operating working capital/Net turnover"
     }
-  ]
+  ],
+  "agencyId": "BACH",
+  "version": "1.0"
 }

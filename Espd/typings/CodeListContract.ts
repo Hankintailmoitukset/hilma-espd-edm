@@ -14,4 +14,6 @@ export class CodeListContract {
     shortName?: string
     longName?: string
     codes?: CodeContract[]
+    agencyId?: string
+    version?: string
 }
