@@ -5,5 +5,6 @@
     public const string CpvCodes = nameof(CpvCodes);
     public const string FinancialRatioType = nameof(FinancialRatioType);
     public const string BooleanGUIControlType = nameof(BooleanGUIControlType);
+
   }
 }

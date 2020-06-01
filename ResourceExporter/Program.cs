@@ -21,12 +21,12 @@ namespace ResourceExporter
 
             //TODO READ URLS FROM CONFIG
             var financialRatioTypeUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.0/docs/src/main/asciidoc/dist/cl/gc/FinancialRatioType-CodeList.gc";
-            var BooleanGUIControlTypeUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.1/docs/src/main/asciidoc/dist/cl/gc/BooleanGUIControlType.gc";
+            var booleanGUIControlTypeUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.0/docs/src/main/asciidoc/dist/cl/gc/BooleanGUIControlType.gc";
             var lang = "name-eng";
 
             CreateTypeCodeList(financialRatioTypeUrl, lang, "financialRatioTypes.json");
 
-            CreateTypeCodeList(BooleanGUIControlTypeUrl, lang, "booleanGUIControlTypes.json");
+            CreateTypeCodeList(booleanGUIControlTypeUrl, lang, "booleanGUIControlTypes.json");
 
             //get tenderincriterion
             var criterionSpecification = new CriterionSpecification().AllCriteria.ToArray();
@@ -106,7 +106,7 @@ namespace ResourceExporter
                 {
                     ShortName = identification.Element("ShortName").Value,
                     LongName = identification.Element("LongName").Value,
-                    Identifier = agency.Element("Identifier").Value,
+                    AgencyId = agency.Element("Identifier").Value,
                     Version = identification.Element("Version").Value,
                     Codes = ParseCodes(simpleCodeList, lang)
                 };
