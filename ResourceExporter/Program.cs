@@ -22,11 +22,15 @@ namespace ResourceExporter
             //TODO READ URLS FROM CONFIG
             var financialRatioTypeUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.0/docs/src/main/asciidoc/dist/cl/gc/FinancialRatioType-CodeList.gc";
             var booleanGUIControlTypeUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.0/docs/src/main/asciidoc/dist/cl/gc/BooleanGUIControlType-CodeList.gc";
+            var CurrencyCodeUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.0/docs/src/main/asciidoc/dist/cl/gc/CurrencyCode-CodeList.gc";
+
             var lang = "name-eng";
 
             CreateTypeCodeList(financialRatioTypeUrl, lang, "financialRatioTypes.json");
 
             CreateTypeCodeList(booleanGUIControlTypeUrl, lang, "booleanGUIControlTypes.json");
+
+            CreateTypeCodeList(CurrencyCodeUrl, lang, "currencyCode.json");
 
             //get tenderincriterion
             var criterionSpecification = new CriterionSpecification().AllCriteria.ToArray();
@@ -42,21 +46,30 @@ namespace ResourceExporter
 
         private static void CreateTypeCodeList(string financialRatioTypeUrl, string lang, string fileName)
         {
-            var webRequest = WebRequest.Create(@financialRatioTypeUrl);
-            var xmlContent = string.Empty;
-
-            using (var response = webRequest.GetResponse())
-            using (var content = response.GetResponseStream())
-            using (var reader = new StreamReader(content))
+            try
             {
-                xmlContent = reader.ReadToEnd();
-            }
+                var webRequest = WebRequest.Create(@financialRatioTypeUrl);
+                var xmlContent = string.Empty;
 
-            //parse xml
-            var doc = XDocument.Parse(xmlContent);
-            XElement formSection = doc.Root;
-            CodeListContract financialRatioTypes = ParseXmlCodeList(formSection, lang);
-            WriteToFile(financialRatioTypes, fileName);
+                using (var response = webRequest.GetResponse())
+                using (var content = response.GetResponseStream())
+                using (var reader = new StreamReader(content))
+                {
+                    xmlContent = reader.ReadToEnd();
+                }
+
+                //parse xml
+                var doc = XDocument.Parse(xmlContent);
+                XElement formSection = doc.Root;
+                CodeListContract financialRatioTypes = ParseXmlCodeList(formSection, lang);
+                WriteToFile(financialRatioTypes, fileName);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
 
         private static void WriteToFile(CodeListContract financialRatioTypes, string filename)

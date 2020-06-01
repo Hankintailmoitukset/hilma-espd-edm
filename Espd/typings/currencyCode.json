@@ -1,0 +1,1064 @@
+{
+  "shortName": "CurrencyCode",
+  "longName": "ISO 3 Alpha Currency Code",
+  "codes": [
+    {
+      "code": "AED",
+      "name": "(N_ | UAE dirham) (_P | UAE dirhams)"
+    },
+    {
+      "code": "AFN",
+      "name": "(N_ | Afghani)"
+    },
+    {
+      "code": "ALL",
+      "name": "(N_ | Lek) (_P | Leks)"
+    },
+    {
+      "code": "AMD",
+      "name": "(N_ | Dram)"
+    },
+    {
+      "code": "ANG",
+      "name": "(N_ | Netherlands Antillean guilder) (_P | Netherlands Antillean guilders)"
+    },
+    {
+      "code": "AOA",
+      "name": "(N_ | Angolan kwanza)"
+    },
+    {
+      "code": "ARS",
+      "name": "(N_ | Argentine peso) (_P | Argentine pesos)"
+    },
+    {
+      "code": "AUD",
+      "name": "(N_ | Australian dollar) (_P | Australian dollars)"
+    },
+    {
+      "code": "AWG",
+      "name": "(N_ | Aruban guilder) (_P | Aruban guilders)"
+    },
+    {
+      "code": "AZN",
+      "name": "(N_ | Azerbaijani manat)"
+    },
+    {
+      "code": "BAM",
+      "name": "(N_ | Bosnia and Herzegovina convertible mark) (_P | Bosnia and Herzegovina convertible marks)"
+    },
+    {
+      "code": "BBD",
+      "name": "(N_ | Barbados dollar) (_P | Barbados dollars)"
+    },
+    {
+      "code": "BDT",
+      "name": "(N_ | Taka)"
+    },
+    {
+      "code": "BGN",
+      "name": "(N_ | Lev) (_P | Leva)"
+    },
+    {
+      "code": "BHD",
+      "name": "(N_ | Bahraini dinar) (_P | Bahraini dinars)"
+    },
+    {
+      "code": "BIF",
+      "name": "(N_ | Burundi franc) (_P | Burundi francs)"
+    },
+    {
+      "code": "BMD",
+      "name": "(N_ | Bermuda dollar) (_P | Bermuda dollars)"
+    },
+    {
+      "code": "BND",
+      "name": "(N_ | Brunei dollar) (_P | Brunei dollars)"
+    },
+    {
+      "code": "BOB",
+      "name": "(N_ | Boliviano) (_P | Bolivianos)"
+    },
+    {
+      "code": "BRL",
+      "name": "(N_ | Real) (_P | Reais)"
+    },
+    {
+      "code": "BSD",
+      "name": "(N_ | Bahamian dollar) (_P | Bahamian dollars)"
+    },
+    {
+      "code": "BTN",
+      "name": "(N_ | Ngultrum)"
+    },
+    {
+      "code": "BWP",
+      "name": "(N_ | Pula)"
+    },
+    {
+      "code": "BZD",
+      "name": "(N_ | Belize dollar) (_P | Belize dollars)"
+    },
+    {
+      "code": "CAD",
+      "name": "(N_ | Canadian dollar) (_P | Canadian dollars)"
+    },
+    {
+      "code": "CDF",
+      "name": "(N_ | Congolese franc) (_P | Congolese francs)"
+    },
+    {
+      "code": "CHF",
+      "name": "(N_ | Swiss franc) (_P | Swiss francs)"
+    },
+    {
+      "code": "CLP",
+      "name": "(N_ | Chilean peso) (_P | Chilean pesos)"
+    },
+    {
+      "code": "CNY",
+      "name": "(N_ | Renminbi-yuan)"
+    },
+    {
+      "code": "COP",
+      "name": "(N_ | Colombian peso) (_P | Colombian pesos)"
+    },
+    {
+      "code": "CRC",
+      "name": "(N_ | Costa Rican colon) (_P | Costa Rican colones)"
+    },
+    {
+      "code": "CUC",
+      "name": "(N_ | Convertible peso) (_P | Convertible pesos)"
+    },
+    {
+      "code": "CUP",
+      "name": "(N_ | Cuban peso) (_P | Cuban pesos)"
+    },
+    {
+      "code": "CVE",
+      "name": "(N_ | Cape Verde escudo) (_P | Cape Verde escudos)"
+    },
+    {
+      "code": "CZK",
+      "name": "(N_ | Czech koruna) (_P | Czech koruny)"
+    },
+    {
+      "code": "DJF",
+      "name": "(N_ | Djibouti franc) (_P | Djibouti francs)"
+    },
+    {
+      "code": "DKK",
+      "name": "(N_ | Danish krone) (_P | Danish kroner)"
+    },
+    {
+      "code": "DOP",
+      "name": "(N_ | Dominican peso) (_P | Dominican pesos)"
+    },
+    {
+      "code": "DZD",
+      "name": "(N_ | Algerian dinar) (_P | Algerian dinars)"
+    },
+    {
+      "code": "EEK",
+      "name": "(N_ | Estonian kroon) (_P | Estonian kroonid)"
+    },
+    {
+      "code": "EGP",
+      "name": "(N_ | Egyptian pound) (_P | Egyptian pounds)"
+    },
+    {
+      "code": "ERN",
+      "name": "(N_ | Nakfa) (_P | Nakfas)"
+    },
+    {
+      "code": "ETB",
+      "name": "(N_ | Birr)"
+    },
+    {
+      "code": "EUR",
+      "name": "(N_ | Euro)"
+    },
+    {
+      "code": "FJD",
+      "name": "(N_ | Fiji dollar) (_P | Fiji dollars)"
+    },
+    {
+      "code": "FKP",
+      "name": "(N_ | Falkland Islands pound) (_P | Falkland Islands pounds)"
+    },
+    {
+      "code": "GBP",
+      "name": "(N_ | Pound sterling) (_P | Pounds sterling)"
+    },
+    {
+      "code": "GEL",
+      "name": "(N_ | Lari) (_P | Laris)"
+    },
+    {
+      "code": "GHS",
+      "name": "(N_ | Ghana cedi) (_P | Ghana cedis)"
+    },
+    {
+      "code": "GIP",
+      "name": "(N_ | Gibraltar pound)"
+    },
+    {
+      "code": "GMD",
+      "name": "(N_ | Dalasi)"
+    },
+    {
+      "code": "GNF",
+      "name": "(N_ | Guinean franc) (_P | Guinean francs)"
+    },
+    {
+      "code": "GTQ",
+      "name": "(N_ | Quetzal) (_P | Quetzales)"
+    },
+    {
+      "code": "GYD",
+      "name": "(N_ | Guyana dollar) (_P | Guyana dollars)"
+    },
+    {
+      "code": "HKD",
+      "name": "(N_ | Hong Kong dollar) (_P | Hong Kong dollars)"
+    },
+    {
+      "code": "HNL",
+      "name": "(N_ | Lempira)"
+    },
+    {
+      "code": "HRK",
+      "name": "(N_ | Kuna)"
+    },
+    {
+      "code": "HTG",
+      "name": "(N_ | Gourde) (_P | Gourdes)"
+    },
+    {
+      "code": "HUF",
+      "name": "(N_ | Forint)"
+    },
+    {
+      "code": "IDR",
+      "name": "(N_ | Indonesian rupiah)"
+    },
+    {
+      "code": "ILS",
+      "name": "(N_ | Shekel) (_P | Shekels)"
+    },
+    {
+      "code": "INR",
+      "name": "(N_ | Indian rupee) (_P | Indian rupees)"
+    },
+    {
+      "code": "IQD",
+      "name": "(N_ | Iraqi dinar) (_P | Iraqi dinars)"
+    },
+    {
+      "code": "IRR",
+      "name": "(N_ | Iranian rial) (_P | Iranian rials)"
+    },
+    {
+      "code": "ISK",
+      "name": "(N_ | Iceland króna) (_P | Iceland krónur)"
+    },
+    {
+      "code": "JMD",
+      "name": "(N_ | Jamaica dollar) (_P | Jamaica dollars)"
+    },
+    {
+      "code": "JOD",
+      "name": "(N_ | Jordanian dinar) (_P | Jordanian dinars)"
+    },
+    {
+      "code": "JPY",
+      "name": "(N_ | Yen)"
+    },
+    {
+      "code": "KES",
+      "name": "(N_ | Kenyan shilling) (_P | Kenyan shillingq)"
+    },
+    {
+      "code": "KGS",
+      "name": "(N_ | Som)"
+    },
+    {
+      "code": "KHR",
+      "name": "(N_ | Riel)"
+    },
+    {
+      "code": "KMF",
+      "name": "(N_ | Comorian franc) (_P | Comorian francs)"
+    },
+    {
+      "code": "KPW",
+      "name": "(N_ | North Korean won)"
+    },
+    {
+      "code": "KRW",
+      "name": "(N_ | South Korean won)"
+    },
+    {
+      "code": "KWD",
+      "name": "(N_ | Kuwaiti dinar) (_P | Kuwaiti dinars)"
+    },
+    {
+      "code": "KYD",
+      "name": "(N_ | Cayman Islands dollar) (_P | Cayman Islands dollars)"
+    },
+    {
+      "code": "KZT",
+      "name": "(N_ | Tenge)"
+    },
+    {
+      "code": "LAK",
+      "name": "(N_ | Kip)"
+    },
+    {
+      "code": "LBP",
+      "name": "(N_ | Lebanese pound) (_P | Lebanese pounds)"
+    },
+    {
+      "code": "LKR",
+      "name": "(N_ | Sri Lankan rupee) (_P | Sri Lankan rupees)"
+    },
+    {
+      "code": "LRD",
+      "name": "(N_ | Liberian dollar) (_P | Liberian dollars)"
+    },
+    {
+      "code": "LSL",
+      "name": "(N_ | Loti) (_P | Maloti)"
+    },
+    {
+      "code": "LTL",
+      "name": "(N_ | Litas) (_P | Litai)"
+    },
+    {
+      "code": "LVL",
+      "name": "(N_ | Lats) (_P | Lati)"
+    },
+    {
+      "code": "LYD",
+      "name": "(N_ | Libyan dinar) (_P | Libyan dinars)"
+    },
+    {
+      "code": "MAD",
+      "name": "(N_ | Moroccan dirham) (_P | Moroccan dirhams)"
+    },
+    {
+      "code": "MDL",
+      "name": "(N_ | Moldovan leu) (_P | Moldovan lei)"
+    },
+    {
+      "code": "MGA",
+      "name": "(N_ | Ariary)"
+    },
+    {
+      "code": "MKD",
+      "name": "(N_ | Denar) (_P | Denars)"
+    },
+    {
+      "code": "MMK",
+      "name": "(N_ | Kyat) (_P | Kyats)"
+    },
+    {
+      "code": "MNT",
+      "name": "(N_ | Tugrik)"
+    },
+    {
+      "code": "MOP",
+      "name": "(N_ | Pataca) (_P | Patacas)"
+    },
+    {
+      "code": "MRO",
+      "name": "(N_ | Ouguiya) (_P | Ouguiyas)"
+    },
+    {
+      "code": "MUR",
+      "name": "(N_ | Mauritian rupee) (_P | Mauritian rupees)"
+    },
+    {
+      "code": "MVR",
+      "name": "(N_ | Rufiyaa)"
+    },
+    {
+      "code": "MWK",
+      "name": "(N_ | Malawian kwacha)"
+    },
+    {
+      "code": "MXN",
+      "name": "(N_ | Mexican peso) (_P | Mexican pesos)"
+    },
+    {
+      "code": "MYR",
+      "name": "(N_ | Ringgit)"
+    },
+    {
+      "code": "MZN",
+      "name": "(N_ | Metical) (_S | Meticais)"
+    },
+    {
+      "code": "NAD",
+      "name": "(N_ | Namibian dollar) (_P | Namibian dollars)"
+    },
+    {
+      "code": "NGN",
+      "name": "(N_ | Naira)"
+    },
+    {
+      "code": "NIO",
+      "name": "(N_ | Córdoba oro) (_P | Córdobas oro)"
+    },
+    {
+      "code": "NOK",
+      "name": "(N_ | Norwegian krone) (_P | Norwegian kroner)"
+    },
+    {
+      "code": "NPR",
+      "name": "(N_ | Nepalese rupee) (_P | Nepalese rupees)"
+    },
+    {
+      "code": "NZD",
+      "name": "(N_ | New Zealand dollar) (_P | New Zealand dollars)"
+    },
+    {
+      "code": "OMR",
+      "name": "(N_ | Omani rial) (_P | Omani rials)"
+    },
+    {
+      "code": "PAB",
+      "name": "(N_ | Balboa)"
+    },
+    {
+      "code": "PEN",
+      "name": "(N_ | Nuevo sol) (_P | Nueve sols)"
+    },
+    {
+      "code": "PGK",
+      "name": "(N_ | Kina)"
+    },
+    {
+      "code": "PHP",
+      "name": "(N_ | Philippine peso) (_P | Philippine pesos)"
+    },
+    {
+      "code": "PKR",
+      "name": "(N_ | Pakistani rupee) (_P | Pakistani rupees)"
+    },
+    {
+      "code": "PLN",
+      "name": "(N_ | Zloty) (_P | Zlotys)"
+    },
+    {
+      "code": "PYG",
+      "name": "(N_ | Guaraní) (_P | Guaraníes)"
+    },
+    {
+      "code": "QAR",
+      "name": "(N_ | Qatari rial) (_P | Qatari rials)"
+    },
+    {
+      "code": "RON",
+      "name": "(N_ | Romanian leu) (_P | Romanian lei)"
+    },
+    {
+      "code": "RSD",
+      "name": "(N_ | Serbian dinar) (_P | Serbian dinars)"
+    },
+    {
+      "code": "RUB",
+      "name": "(N_ | Russian rouble) (_P | Russian roubles)"
+    },
+    {
+      "code": "RWF",
+      "name": "(N_ | Rwandese franc) (_P | Rwandese francs)"
+    },
+    {
+      "code": "SAR",
+      "name": "(N_ | Saudi riyal) (_P | Saudi riyals)"
+    },
+    {
+      "code": "SBD",
+      "name": "(N_ | Solomon Islands dollar) (_P | Solomon Islands dollars)"
+    },
+    {
+      "code": "SCR",
+      "name": "(N_ | Seychelles rupee) (_P | Seychelles rupees)"
+    },
+    {
+      "code": "SDG",
+      "name": "(N_ | Sudanese pound) (_P | Sudanese pounds)"
+    },
+    {
+      "code": "SEK",
+      "name": "(N_ | Swedish krona) (_P | Swedish kronor)"
+    },
+    {
+      "code": "SGD",
+      "name": "(N_ | Singapore dollar) (_P | Singapore dollars)"
+    },
+    {
+      "code": "SHP",
+      "name": "(N_ | Saint Helena pound) (_P | Saint Helena pounds)"
+    },
+    {
+      "code": "SLL",
+      "name": "(N_ | Leone) (_P | Leones)"
+    },
+    {
+      "code": "SOS",
+      "name": "(N_ | Somali shilling) (_P | Somali shillings)"
+    },
+    {
+      "code": "SRD",
+      "name": "(N_ | Surinamese dollar) (_P | Surinamese dollars)"
+    },
+    {
+      "code": "STD",
+      "name": "(N_ | Dobra) (_P | Dobras)"
+    },
+    {
+      "code": "SYP",
+      "name": "(N_ | Syrian pound) (_P | Syrian pounds)"
+    },
+    {
+      "code": "SZL",
+      "name": "(N_ | Lilangeni) (_P | Emalangeni)"
+    },
+    {
+      "code": "THB",
+      "name": "(N_ | Baht)"
+    },
+    {
+      "code": "TJS",
+      "name": "(N_ | Somoni) (_P | Somonis)"
+    },
+    {
+      "code": "TMT",
+      "name": "(N_ | Turkmen manat)"
+    },
+    {
+      "code": "TND",
+      "name": "(N_ | Tunisian dinar) (_P | Tunisian dinars)"
+    },
+    {
+      "code": "TOP",
+      "name": "(N_ | Pa’anga)"
+    },
+    {
+      "code": "TRY",
+      "name": "(N_ | Turkish lira)"
+    },
+    {
+      "code": "TTD",
+      "name": "(N_ | Trinidad and Tobago dollar) (_P | Trinidad and Tobago dollars)"
+    },
+    {
+      "code": "TWD",
+      "name": "(N_ | New Taiwan dollar) (_P | New Taiwan dollars)"
+    },
+    {
+      "code": "TZS",
+      "name": "(N_ | Tanzanian shilling) (_P | Tanzanian shillings)"
+    },
+    {
+      "code": "UAH",
+      "name": "(N_ | Hryvnia) (_P | Hryvnen)"
+    },
+    {
+      "code": "UGX",
+      "name": "(N_ | Uganda shilling) (_P | Uganda shillings)"
+    },
+    {
+      "code": "USD",
+      "name": "(N_ | US dollar) (_P | US dollars)"
+    },
+    {
+      "code": "USN",
+      "name": "(N_ | US dollar) (_P | US dollars)"
+    },
+    {
+      "code": "USS",
+      "name": "(N_ | US dollar) (_P | US dollars)"
+    },
+    {
+      "code": "UYU",
+      "name": "(N_ | Uruguayan peso)"
+    },
+    {
+      "code": "UZS",
+      "name": "(N_ | Sum)"
+    },
+    {
+      "code": "VEF",
+      "name": "(N_ | Bolívar) (_P | Bolívares)"
+    },
+    {
+      "code": "VND",
+      "name": "(N_ | Dong)"
+    },
+    {
+      "code": "VUV",
+      "name": "(N_ | Vatu)"
+    },
+    {
+      "code": "WST",
+      "name": "(N_ | Tala)"
+    },
+    {
+      "code": "XAF",
+      "name": "{N_ | CFA franc (BEAC)}"
+    },
+    {
+      "code": "XCD",
+      "name": "(N_ | East Caribbean dollar) (_P | East Caribbean dollars)"
+    },
+    {
+      "code": "XOF",
+      "name": "{CFA Franc (BCEAO)}"
+    },
+    {
+      "code": "XPF",
+      "name": "(N_ | CFP franc) (_P | CFP francs)"
+    },
+    {
+      "code": "XTS",
+      "name": "Code reserved for testing purposes"
+    },
+    {
+      "code": "XXX",
+      "name": "No currency"
+    },
+    {
+      "code": "YER",
+      "name": "(N_ | Yemeni rial) (_P | Yemeni rials)"
+    },
+    {
+      "code": "ZAR",
+      "name": "(N_ | Rand)"
+    },
+    {
+      "code": "ZMK",
+      "name": "(N_ | Zambian kwacha) (_P | Zambian kwacha)"
+    },
+    {
+      "code": "ZWL",
+      "name": "(N_ | Zimbabwe dollar) (_P | Zimbabwe dollars)"
+    },
+    {
+      "code": "SQS",
+      "name": "(N_ | Somaliland shilling) (_P | Somaliland shillings)"
+    },
+    {
+      "code": "TVD",
+      "name": "(N_ | Tuvaluan dollar) (_P | Tuvaluan dollars)"
+    },
+    {
+      "code": "ADF",
+      "name": "(N_ | Andorran franc) (_P | Andorran francs)"
+    },
+    {
+      "code": "ADP",
+      "name": "(N_ | Andorran peseta)"
+    },
+    {
+      "code": "ATS",
+      "name": "(N_ | Austrian schilling)"
+    },
+    {
+      "code": "BEF",
+      "name": "(N_ | Belgian franc) (_P | Belgian francs)"
+    },
+    {
+      "code": "CYP",
+      "name": "(N_ | Cypriot pound) (_P | Cypriot pounds)"
+    },
+    {
+      "code": "DEM",
+      "name": "(N_ | German mark) (_P | German marks)"
+    },
+    {
+      "code": "ESP",
+      "name": "(N_ | Peseta) (_P | Pesetas)"
+    },
+    {
+      "code": "FIM",
+      "name": "(N_ | Finnish markka)"
+    },
+    {
+      "code": "FRF",
+      "name": "(N_ | French franc) (_P | French francs)"
+    },
+    {
+      "code": "GRD",
+      "name": "(N_ | Drachma) (_P | Drachmas)"
+    },
+    {
+      "code": "IEP",
+      "name": "(N_ | Irish pound) (_P | Irish pounds)"
+    },
+    {
+      "code": "ITL",
+      "name": "(N_ | Italian lira)"
+    },
+    {
+      "code": "LUF",
+      "name": "(N_ | Luxembourg franc) (_P | Luxembourg francs)"
+    },
+    {
+      "code": "MCF",
+      "name": "(N_ | Monegasque franc) (_P | Monegasque francs)"
+    },
+    {
+      "code": "MTL",
+      "name": "(N_ | Maltese lira) (_P | Maltese liri)"
+    },
+    {
+      "code": "NLG",
+      "name": "(N_ | Netherlands guilder) (_P | Netherlands guilders)"
+    },
+    {
+      "code": "PTE",
+      "name": "(N_ | Portuguese escudo) (_P | Portuguese escudos)"
+    },
+    {
+      "code": "SIT",
+      "name": "(N_ | Slovenian tolar) (_P | Slovenian tolars)"
+    },
+    {
+      "code": "SKK",
+      "name": "(N_ | Slovak koruna) (_P | Slovak koruny)"
+    },
+    {
+      "code": "SML",
+      "name": "(N_ | San Marinese lira)"
+    },
+    {
+      "code": "VAL",
+      "name": "(N_ | Vatican lira)"
+    },
+    {
+      "code": "XEU",
+      "name": "(N_ | European Currency Unit)"
+    },
+    {
+      "code": "AFA",
+      "name": "(N_ | Afghani)"
+    },
+    {
+      "code": "ALK",
+      "name": "(N_ | Lek) (_P | Leks)"
+    },
+    {
+      "code": "AON",
+      "name": "(N_ | New Angolan kwanza)"
+    },
+    {
+      "code": "AOR",
+      "name": "(N_ | Angolan kwanza readjustado)"
+    },
+    {
+      "code": "ARM",
+      "name": "(N_ | Argentine peso moneda nacional)"
+    },
+    {
+      "code": "ARL",
+      "name": "(N_ | Argentine peso ley)"
+    },
+    {
+      "code": "ARP",
+      "name": "(N_ | Argentine peso argentino)"
+    },
+    {
+      "code": "ARA",
+      "name": "(N_ | Argentine austral)"
+    },
+    {
+      "code": "AZM",
+      "name": "(N_ | Azerbaijani manat)"
+    },
+    {
+      "code": "BGJ",
+      "name": "(N_ | Lev A/52) (_P | Leva A/52)"
+    },
+    {
+      "code": "BGK",
+      "name": "(N_ | Lev A/62) (_P | Leva A/62)"
+    },
+    {
+      "code": "BGL",
+      "name": "(N_ | Lev A/99) (_P | Leva A/99)"
+    },
+    {
+      "code": "BOP",
+      "name": "(N_ | Bolivian peso) (_P | Bolivian pesos)"
+    },
+    {
+      "code": "BRB",
+      "name": "(N_ | Cruzeiro novo) (_P | Cruzeiros nove)"
+    },
+    {
+      "code": "BRC",
+      "name": "(N_ | Cruzado) (_P | Cruzados)"
+    },
+    {
+      "code": "BRE",
+      "name": "(N_ | Cruziero) (_P | Cruzieros)"
+    },
+    {
+      "code": "BRN",
+      "name": "(N_ | Cruzado novo) (_P | Cruzados nove)"
+    },
+    {
+      "code": "BRR",
+      "name": "(N_ | Cruziero real) (_P | Cruzieros real)"
+    },
+    {
+      "code": "BRZ",
+      "name": "(N_ | Cruziero) (_P | Cruzieros)"
+    },
+    {
+      "code": "CLE",
+      "name": "(N_ | Chilean escudo) (_P | Chilean escudos)"
+    },
+    {
+      "code": "RSD",
+      "name": "(N_ | Serbian dinar) (_P | Serbian dinars)"
+    },
+    {
+      "code": "CSJ",
+      "name": "(N_ | Czechoslovak koruna) (_P | Czechoslovak koruny)"
+    },
+    {
+      "code": "CSK",
+      "name": "(N_ | Czechoslovak koruna) (_P | Czechoslovak koruny)"
+    },
+    {
+      "code": "DDM",
+      "name": "(N_ | East-German Mark) (_P | East-German Marks)"
+    },
+    {
+      "code": "ECS",
+      "name": "(N_ | Ecuadorian sucre) (_P | Ecuadorian sucres)"
+    },
+    {
+      "code": "GQE",
+      "name": "(N_ | Ekwele) (_P | Bipkwele)"
+    },
+    {
+      "code": "GNE",
+      "name": "(N_ | Syli)"
+    },
+    {
+      "code": "GHC",
+      "name": "(N_ | Cedi) (_P | Cedis)"
+    },
+    {
+      "code": "GWP",
+      "name": "(N_ | Guinea-Bissau peso) (_P | Guinea-Bissau pesos)"
+    },
+    {
+      "code": "ILP",
+      "name": "(N_ | Israeli lira) (_P | Israeli lirot)"
+    },
+    {
+      "code": "ILR",
+      "name": "(N_ | Shekel) (_P | Shekels)"
+    },
+    {
+      "code": "ISJ",
+      "name": "(N_ | Icelandic old króna)"
+    },
+    {
+      "code": "LAJ",
+      "name": "(N_ | Kip)"
+    },
+    {
+      "code": "MGF",
+      "name": "(N_ | Malagasy franc) (_P | Malagasy francs)"
+    },
+    {
+      "code": "MKN",
+      "name": "(N_ | Denar A/93) (_P | Denars A/93)"
+    },
+    {
+      "code": "MLF",
+      "name": "(N_ | Mali franc) (_P | Mali francs)"
+    },
+    {
+      "code": "MVQ",
+      "name": "(N_ | Maldive rupee) (_P | Maldive rupees)"
+    },
+    {
+      "code": "MXP",
+      "name": "(N_ | Mexican peso) (_P | Mexican pesos)"
+    },
+    {
+      "code": "MZM",
+      "name": "(N_ | Metica) (_P | Meticais)"
+    },
+    {
+      "code": "NFD",
+      "name": "(N_ | Newfoundland dollar) (_P | Newfoundland dollars)"
+    },
+    {
+      "code": "PEH",
+      "name": "(N_ | Sol) (_P | Sols)"
+    },
+    {
+      "code": "PEI",
+      "name": "(N_ | Inti)"
+    },
+    {
+      "code": "PLZ",
+      "name": "(N_ | Zloty A/94) (_P | Zlotys A/94)"
+    },
+    {
+      "code": "ROL",
+      "name": "(N_ | Romanian leu A/05) (_P | Romanian lei A/05)"
+    },
+    {
+      "code": "RUR",
+      "name": "(N_ | Russian rouble A/97) (_P | Russian roubles A/97)"
+    },
+    {
+      "code": "SDD",
+      "name": "(N_ | Sudanese dinar) (_P | Sudanese dinars)"
+    },
+    {
+      "code": "SRG",
+      "name": "(N_ | Suriname guilder) (_P | Suriname guilders)"
+    },
+    {
+      "code": "SUR",
+      "name": "(N_ | Soviet Union rouble) (_P | Soviet Union roubles)"
+    },
+    {
+      "code": "SVC",
+      "name": "(N_ | Salvadorian colón) (_P | Salvadorian colones)"
+    },
+    {
+      "code": "TJR",
+      "name": "(N_ | Tajikistani rouble) (_P | Tajikistani roubles)"
+    },
+    {
+      "code": "TMM",
+      "name": "(N_ | Turkmen manat)"
+    },
+    {
+      "code": "TPE",
+      "name": "(N_ | Portuguese Timorese escudo) (_P | Portuguese Timorese escudos)"
+    },
+    {
+      "code": "TRL",
+      "name": "(N_ | Turkish lira A/05)"
+    },
+    {
+      "code": "UAK",
+      "name": "(N_ | Karbovanets) (_P | Karbovantsi)"
+    },
+    {
+      "code": "UGS",
+      "name": "(N_ | Uganda shilling A/87) (_P | Uganda shillings A/87)"
+    },
+    {
+      "code": "UYN",
+      "name": "(N_ | Uruguay old peso) (_P | Uruguay old pesos)"
+    },
+    {
+      "code": "VEB",
+      "name": "(N_ | Bolívar fuerte) (_P | Bolívares fuertes)"
+    },
+    {
+      "code": "VNC",
+      "name": "(N_ | Old dong)"
+    },
+    {
+      "code": "YDD",
+      "name": "(N_ | South Yemeni dinar) (_P | South Yemeni dinars)"
+    },
+    {
+      "code": "YUS",
+      "name": "(N_ | Yugoslav dinar) (_P | Yugoslav dinars)"
+    },
+    {
+      "code": "YUF",
+      "name": "(N_ | Yugoslav dinar) (_P | Yugoslav dinars)"
+    },
+    {
+      "code": "YUD",
+      "name": "(N_ | Yugoslav dinar) (_P | Yugoslav dinars)"
+    },
+    {
+      "code": "YUN",
+      "name": "(N_ | Yugoslav dinar) (_P | Yugoslav dinars)"
+    },
+    {
+      "code": "YUR",
+      "name": "(N_ | Yugoslav dinar) (_P | Yugoslav dinars)"
+    },
+    {
+      "code": "YUO",
+      "name": "(N_ | Yugoslav dinar) (_P | Yugoslav dinars)"
+    },
+    {
+      "code": "YUG",
+      "name": "(N_ | Yugoslav dinar) (_P | Yugoslav dinars)"
+    },
+    {
+      "code": "YUM",
+      "name": "(N_ | Yugoslav dinar) (_P | Yugoslav dinars)"
+    },
+    {
+      "code": "ZRN",
+      "name": "(N_ | Zaïrean zaïre) (_P | Zaïrean zaïres)"
+    },
+    {
+      "code": "ZRZ",
+      "name": "(N_ | Zaïrean new zaïre) (_P | Zaïrean new zaïres)"
+    },
+    {
+      "code": "ZWC",
+      "name": "(N_ | Rhodesian dollar) (_P | Rhodesian dollars)"
+    },
+    {
+      "code": "ZWD",
+      "name": "(N_ | Zimbabwe dollar A/06) (_P | Zimbabwe dollars A/06)"
+    },
+    {
+      "code": "ZWN",
+      "name": "(N_ | Zimbabwe dollar A/08) (_P | Zimbabwe dollars A/08)"
+    },
+    {
+      "code": "ZWR",
+      "name": "(N_ | Zimbabwe dollar A/09) (_P | Zimbabwe dollars A/09)"
+    },
+    {
+      "code": "MTP",
+      "name": "(N_ | Maltese pound) (_P | Maltese pounds)"
+    },
+    {
+      "code": "SSP",
+      "name": "(N_ | South Sudanese pound) (_P | South Sudanese pounds)"
+    },
+    {
+      "code": "ZMW",
+      "name": "(N_ | Zambian kwacha) (_P | Zambian kwacha)"
+    },
+    {
+      "code": "PEN",
+      "name": "(N_ | Sol) (_P | Sols)"
+    },
+    {
+      "code": "BYR",
+      "name": "(N_ | Belarusian rouble) (_P | Belarusian roubles)"
+    },
+    {
+      "code": "BYN",
+      "name": "(N_ | Belarusian rouble) (_P | Belarusian roubles)"
+    }
+  ],
+  "agencyId": "EU-COM-OP",
+  "version": "1.0"
+}
