@@ -20,9 +20,10 @@ namespace ResourceExporter
             Console.WriteLine("Downloading xml");
 
             //TODO READ URLS FROM CONFIG
-            var financialRatioTypeUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.0/docs/src/main/asciidoc/dist/cl/gc/FinancialRatioType-CodeList.gc";
-            var booleanGUIControlTypeUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.0/docs/src/main/asciidoc/dist/cl/gc/BooleanGUIControlType-CodeList.gc";
-            var CurrencyCodeUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.0/docs/src/main/asciidoc/dist/cl/gc/CurrencyCode-CodeList.gc";
+            var rootUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.0/docs/src/main/asciidoc/dist/cl/gc/";
+            var financialRatioTypeUrl = $"{rootUrl}FinancialRatioType-CodeList.gc";
+            var booleanGUIControlTypeUrl = $"{rootUrl}BooleanGUIControlType-CodeList.gc";
+            var currencyCodeUrl = $"{rootUrl}CurrencyCode-CodeList.gc";
 
             var lang = "name-eng";
 
@@ -64,10 +65,9 @@ namespace ResourceExporter
                 CodeListContract financialRatioTypes = ParseXmlCodeList(formSection, lang);
                 WriteToFile(financialRatioTypes, fileName);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
-                throw;
+                Console.WriteLine(e.Message.ToString());
             }
             
         }
