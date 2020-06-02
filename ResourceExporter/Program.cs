@@ -32,14 +32,14 @@ namespace ResourceExporter
 
       // get tendering criteria
       var criterionSpecification = new CriterionSpecification().AllCriteria.ToArray();
-      WriteToFile(criterionSpecification, "criterionSpecification.json");
+      WriteToFile(criterionSpecification, $"{ToLowerFirstChar(nameof(CriterionSpecification))}.json");
 
       // copy translation
       var espdPath = Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd");
       var sourceFile = Path.GetFullPath(Path.Combine(espdPath, "Localisation", "translations.default.json"));
       var targetPath = Path.GetFullPath(Path.Combine(espdPath, "typings", "translations.default.json"));
       Console.WriteLine("writing file to path: " + targetPath);
-      System.IO.File.Copy(sourceFile, targetPath, true);
+      File.Copy(sourceFile, targetPath, true);
 
     }
 
