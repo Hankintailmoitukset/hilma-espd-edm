@@ -10,147 +10,154 @@ using System.Net;
 using System.Xml.Linq;
 using Hilma.Espd.EDM.CodeLists;
 using Newtonsoft.Json.Serialization;
+using static System.String;
 
 namespace ResourceExporter
 {
-    class Program
+  class Program
+  {
+    const string RootUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.0/docs/src/main/asciidoc/dist/cl/gc/{0}-CodeList.gc";
+   
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Downloading xml");
+      Console.WriteLine("Generating resources");
+      
+      var lang = "name-eng";
 
-            //TODO READ URLS FROM CONFIG
-            var rootUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.0/docs/src/main/asciidoc/dist/cl/gc/";
-            var financialRatioTypeUrl = $"{rootUrl}FinancialRatioType-CodeList.gc";
-            var booleanGUIControlTypeUrl = $"{rootUrl}BooleanGUIControlType-CodeList.gc";
-            var currencyCodeUrl = $"{rootUrl}CurrencyCode-CodeList.gc";
+      // get code lists
+      foreach (var codeListId in CodeListIds.All)
+      {
+        CreateTypeCodeList(codeListId, lang);
+      }
 
-            var lang = "name-eng";
+      // get tendering criteria
+      var criterionSpecification = new CriterionSpecification().AllCriteria.ToArray();
+      WriteToFile(criterionSpecification, "criterionSpecification.json");
 
-            CreateTypeCodeList(financialRatioTypeUrl, lang, "financialRatioTypes.json");
+      // copy translation
+      var espdPath = Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd");
+      var sourceFile = Path.GetFullPath(Path.Combine(espdPath, "Localisation", "translations.default.json"));
+      var targetPath = Path.GetFullPath(Path.Combine(espdPath, "typings", "translations.default.json"));
+      Console.WriteLine("writing file to path: " + targetPath);
+      System.IO.File.Copy(sourceFile, targetPath, true);
 
-            CreateTypeCodeList(booleanGUIControlTypeUrl, lang, "booleanGUIControlTypes.json");
-
-            CreateTypeCodeList(currencyCodeUrl, lang, "currencyCode.json");
-
-            //get tenderincriterion
-            var criterionSpecification = new CriterionSpecification().AllCriteria.ToArray();
-            WriteToFile(criterionSpecification, "criterionSpecification.json");
-
-            //copy transaltion
-            string sourceFile = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "Localisation", "translations.default.json"));
-            string targetPath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "typings", "translations.default.json"));
-            Console.WriteLine("writing file to path: " + targetPath);
-            System.IO.File.Copy(sourceFile, targetPath, true);
-
-        }
-
-        private static void CreateTypeCodeList(string financialRatioTypeUrl, string lang, string fileName)
-        {
-            try
-            {
-                var webRequest = WebRequest.Create(@financialRatioTypeUrl);
-                var xmlContent = string.Empty;
-
-                using (var response = webRequest.GetResponse())
-                using (var content = response.GetResponseStream())
-                using (var reader = new StreamReader(content))
-                {
-                    xmlContent = reader.ReadToEnd();
-                }
-
-                //parse xml
-                var doc = XDocument.Parse(xmlContent);
-                XElement formSection = doc.Root;
-                CodeListContract financialRatioTypes = ParseXmlCodeList(formSection, lang);
-                WriteToFile(financialRatioTypes, fileName);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message.ToString());
-            }
-            
-        }
-
-        private static void WriteToFile(CodeListContract financialRatioTypes, string filename)
-        {
-            string path = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "typings", filename));
-            Console.WriteLine("writing file to path: " + path);
-
-            using var file = File.CreateText(path);
-            var serializer = new JsonSerializer
-            {
-              Formatting = Formatting.Indented, 
-              ContractResolver = new CamelCasePropertyNamesContractResolver(),
-              NullValueHandling = NullValueHandling.Ignore
-            };
-            serializer.Serialize(file, financialRatioTypes);
-        }
-
-        private static void WriteToFile(IEnumerable<TenderingCriterion> criterionSpecification, string filename)
-        {
-            string path = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "typings", filename));
-            Console.WriteLine("writing file to path: " + path);
-
-            using var file = File.CreateText(path);
-            var serializer = new JsonSerializer
-            {
-              Formatting = Formatting.Indented,
-              ContractResolver = new CamelCasePropertyNamesContractResolver(),
-              NullValueHandling = NullValueHandling.Ignore
-
-            };
-            serializer.Serialize(file, criterionSpecification);
-        }
-
-        private static CodeListContract ParseXmlCodeList(XElement formSection, string lang)
-        {
-            if (formSection == null)
-            {
-                throw new Exception("xml data is null");
-            }
-            try
-            {
-                var identification = formSection.Element("Identification");
-                var simpleCodeList = formSection.Element("SimpleCodeList");
-                var agency = identification.Element("Agency");
-
-                CodeListContract codeListContract = new CodeListContract()
-                {
-                    ShortName = identification.Element("ShortName").Value,
-                    LongName = identification.Element("LongName").Value,
-                    AgencyId = agency.Element("Identifier").Value,
-                    Version = identification.Element("Version").Value,
-                    Codes = ParseCodes(simpleCodeList, lang)
-                };
-
-                return codeListContract;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-
-        private static List<CodeContract> ParseCodes(XElement codelist, string lang)
-        {
-            var listOfCodes = new List<CodeContract>();
-
-            foreach (var row in codelist.Elements("Row"))
-            {
-                var code = new CodeContract()
-                {
-                    Name = row.Elements("Value").Where(r => r.Attribute("ColumnRef")?.Value == lang)
-                                            .FirstOrDefault().Element("SimpleValue").Value,
-                    Code = row.Elements("Value").Where(r => r.Attribute("ColumnRef")?.Value == "code")
-                                            .FirstOrDefault().Element("SimpleValue").Value
-                };
-
-                listOfCodes.Add(code);
-            }
-
-            return listOfCodes;
-        }
     }
+
+    private static void CreateTypeCodeList(string codeListId, string lang)
+    {
+      try
+      {
+        Console.WriteLine($"Downloading code list {codeListId}");
+        var url = Format(RootUrl, codeListId);
+        var webRequest = WebRequest.Create(url);
+
+        using var response = webRequest.GetResponse();
+        using var content = response.GetResponseStream();
+        using var reader = new StreamReader(content ?? throw new InvalidOperationException());
+        var xmlContent = reader.ReadToEnd();
+
+        //parse xml
+        var doc = XDocument.Parse(xmlContent);
+        var formSection = doc.Root;
+        var codeListContract = ParseXmlCodeList(formSection, lang);
+
+        WriteToFile(codeListContract);
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine($"Error while loading {codeListId}: {e.Message}");
+      }
+
+    }
+
+    private static void WriteToFile(CodeListContract codeList)
+    {
+      var filename = $"{ToLowerFirstChar(codeList.ShortName)}.json";
+      var path = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "typings",
+        filename));
+      Console.WriteLine("writing file to path: " + path);
+
+      using var file = File.CreateText(path);
+      var serializer = new JsonSerializer
+      {
+        Formatting = Formatting.Indented,
+        ContractResolver = new CamelCasePropertyNamesContractResolver(),
+        NullValueHandling = NullValueHandling.Ignore
+      };
+      serializer.Serialize(file, codeList);
+    }
+
+    private static void WriteToFile(IEnumerable<TenderingCriterion> criterionSpecification, string filename)
+    {
+      var path = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "typings",
+        filename));
+      Console.WriteLine("writing file to path: " + path);
+
+      using var file = File.CreateText(path);
+      var serializer = new JsonSerializer
+      {
+        Formatting = Formatting.Indented,
+        ContractResolver = new CamelCasePropertyNamesContractResolver(),
+        NullValueHandling = NullValueHandling.Ignore
+
+      };
+      serializer.Serialize(file, criterionSpecification);
+    }
+
+    private static string ToLowerFirstChar(string input)
+    {
+      var newString = input;
+      if (!IsNullOrEmpty(newString) && char.IsUpper(newString[0]))
+        newString = $"{char.ToLower(newString[0])}{newString.Substring(1)}";
+      return newString;
+    }
+
+    private static CodeListContract ParseXmlCodeList(XElement formSection, string lang)
+    {
+      if (formSection == null)
+      {
+        throw new Exception("xml data is null");
+      }
+
+      var identification = formSection.Element("Identification");
+      var simpleCodeList = formSection.Element("SimpleCodeList");
+      if (identification == null)
+      {
+        throw new NullReferenceException("code list identification was null");
+      }
+
+      var agency = identification.Element("Agency");
+
+      var codeListContract = new CodeListContract()
+      {
+        ShortName = identification.Element("ShortName")?.Value,
+        LongName = identification.Element("LongName")?.Value,
+        AgencyId = agency.Element("Identifier")?.Value,
+        Version = identification.Element("Version")?.Value,
+        Codes = ParseCodes(simpleCodeList, lang)
+      };
+
+      return codeListContract;
+    }
+
+    private static List<CodeContract> ParseCodes(XElement codeList, string lang)
+    {
+      var listOfCodes = new List<CodeContract>();
+
+      foreach (var row in codeList.Elements("Row"))
+      {
+        var code = new CodeContract()
+        {
+          Name = row.Elements("Value")
+            .FirstOrDefault(r => r.Attribute("ColumnRef")?.Value == lang)?.Element("SimpleValue")?.Value,
+          Code = row.Elements("Value")
+            .FirstOrDefault(r => r.Attribute("ColumnRef")?.Value == "code")?.Element("SimpleValue")?.Value
+        };
+
+        listOfCodes.Add(code);
+      }
+
+      return listOfCodes;
+    }
+  }
 }

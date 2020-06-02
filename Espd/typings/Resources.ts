@@ -1,6 +1,6 @@
 ﻿import { CodeListContract } from './CodeListContract';
-import financialRatioTypesData from './financialRatioTypes.json'
-import booleanGUIControlTypesData from './booleanGUIControlTypes.json'
+import financialRatioTypesData from './financialRatioType.json'
+import booleanGUIControlTypesData from './booleanGUIControlType.json'
 import criterionSpecificationData from './criterionSpecification.json'
 import currencyCodeListData from './currencyCode.json'
 import translationsDefaultData from './translations.default.json'
