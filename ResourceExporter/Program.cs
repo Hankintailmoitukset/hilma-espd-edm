@@ -22,7 +22,7 @@ namespace ResourceExporter
     {
       Console.WriteLine("Generating resources");
       
-      var lang = "name-eng";
+      const string lang = "name-eng";
 
       // get code lists
       foreach (var codeListId in CodeListIds.All)
@@ -60,8 +60,9 @@ namespace ResourceExporter
         var doc = XDocument.Parse(xmlContent);
         var formSection = doc.Root;
         var codeListContract = ParseXmlCodeList(formSection, lang);
+        var filename = $"{ToLowerFirstChar(codeListId)}.json";
 
-        WriteToFile(codeListContract);
+        WriteToFile(codeListContract, filename);
       }
       catch (Exception e)
       {
@@ -70,10 +71,9 @@ namespace ResourceExporter
 
     }
 
-    private static void WriteToFile(CodeListContract codeList)
+    private static void WriteToFile<T>(T contract, string filename)
     {
-      var filename = $"{ToLowerFirstChar(codeList.ShortName)}.json";
-      var path = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "typings",
+       var path = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "typings",
         filename));
       Console.WriteLine("writing file to path: " + path);
 
@@ -84,26 +84,9 @@ namespace ResourceExporter
         ContractResolver = new CamelCasePropertyNamesContractResolver(),
         NullValueHandling = NullValueHandling.Ignore
       };
-      serializer.Serialize(file, codeList);
+      serializer.Serialize(file, contract);
     }
-
-    private static void WriteToFile(IEnumerable<TenderingCriterion> criterionSpecification, string filename)
-    {
-      var path = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Espd", "typings",
-        filename));
-      Console.WriteLine("writing file to path: " + path);
-
-      using var file = File.CreateText(path);
-      var serializer = new JsonSerializer
-      {
-        Formatting = Formatting.Indented,
-        ContractResolver = new CamelCasePropertyNamesContractResolver(),
-        NullValueHandling = NullValueHandling.Ignore
-
-      };
-      serializer.Serialize(file, criterionSpecification);
-    }
-
+    
     private static string ToLowerFirstChar(string input)
     {
       var newString = input;
