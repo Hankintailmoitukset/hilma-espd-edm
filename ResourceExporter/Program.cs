@@ -31,7 +31,7 @@ namespace ResourceExporter
 
             CreateTypeCodeList(booleanGUIControlTypeUrl, lang, "booleanGUIControlTypes.json");
 
-            CreateTypeCodeList(CurrencyCodeUrl, lang, "currencyCode.json");
+            CreateTypeCodeList(currencyCodeUrl, lang, "currencyCode.json");
 
             //get tenderincriterion
             var criterionSpecification = new CriterionSpecification().AllCriteria.ToArray();
