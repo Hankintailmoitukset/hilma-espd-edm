@@ -9,7 +9,7 @@ import { TenderingCriterion } from './TenderingCriterion';
 export class Resources {
   public static financialRatioTypes: CodeListContract = financialRatioTypesData
   public static booleanGUIControlTypes: CodeListContract = booleanGUIControlTypesData
-  public static currencyCodeList: CodeListContract = currencyCodeListData
+  public static currencyCode: CodeListContract = currencyCodeListData
   public static criterionSpecification: TenderingCriterion[] = criterionSpecificationData
   public static translationsDefault: any = translationsDefaultData
 }

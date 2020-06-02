@@ -5,7 +5,7 @@
     public const string CpvCodes = nameof(CpvCodes);
     public const string FinancialRatioType = nameof(FinancialRatioType);
     public const string BooleanGUIControlType = nameof(BooleanGUIControlType);
-    public const string CurrencyCodeList = nameof(CurrencyCodeList);
+    public const string CurrencyCode = nameof(CurrencyCode);
 
     }
 }
