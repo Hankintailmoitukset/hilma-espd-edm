@@ -32,8 +32,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
             return AllCriteria.GetEnumerator();
         }
 
-       public TenderingCriterion[] Suitability => new[]
-        {
+        public TenderingCriterion[] Suitability => new[]
+         {
           new TenderingCriterion
           {
             CriterionTypeCode = new CriterionTypeCode("CRITERION.SELECTION.SUITABILITY.PROFESSIONAL_REGISTER_ENROLMENT"),
@@ -78,7 +78,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
             {
                 CriterionTypeCode = new CriterionTypeCode("CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.GENERAL_YEARLY"),
                 Name = "economicFinancialStanding.generalTurnoverYearly.name",
-                Description = new[] { "economicFinancialStanding.generalTurnoverYearly.description" },
+                Description = new[] { "economicFinancialStanding.generalTurnoverYearly.description"},
                 Id = new CriteriaTaxonomyIdentifier("499efc97-2ac1-4af2-9e84-323c2ca67747"),
                 Legislations = new Legislation[] { },
                 TenderingCriterionPropertyGroups = new []
@@ -123,7 +123,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                         Id = EuComGrowId.Random(),
                                         TypeCode = CriterionElementType.Question,
                                         Description = "common.startDate.description",
-                                        ValueDataTypeCode = ResponseDataTypeCode.Date, 
+                                        ValueDataTypeCode = ResponseDataTypeCode.Date,
                                     },
                                     new TenderingCriterionProperty()
                                     {
@@ -268,7 +268,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                              Id = EuComGrowId.Random(),
                              TypeCode = CriterionElementType.Caption,
                              Description = "specificAverageTurnover.cpvs.description",
-                            
+
                              ValueDataTypeCode = ResponseDataTypeCode.None
                            },
                            new TenderingCriterionProperty()
@@ -349,7 +349,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
             }
             }
         };
-        
+
         public TenderingCriterion[] SpecificYearlyTurnover => new[]
         {
             new TenderingCriterion()
@@ -420,7 +420,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                      ValueDataTypeCode = ResponseDataTypeCode.Code,
                                      CodeListId = CodeListIds.CpvCodes
                                    }
-                                   
+
                                  }
                              },
                              new TenderingCriterionPropertyGroup()
@@ -530,10 +530,10 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
         };
         public TenderingCriterion[] FinancialRatios
         {
-          get
-          {
-            return new[]
+            get
             {
+                return new[]
+                {
               new TenderingCriterion()
               {
                 CriterionTypeCode =
@@ -655,7 +655,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                 }
               }
             };
-          }
+            }
         }
 
         public TenderingCriterion[] ProfessionalRiskInsurance => new[]
@@ -962,7 +962,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                              new TenderingCriterionPropertyGroup()
                                              {
                                                  _cardinality = CardinalityMetadata.ExactlyOne,
-                                                 Id = new CriteriaTaxonomyIdentifier(" 5fe93344-ed91-4f97-bcab-b6720a131798"),
+                                                 Id = new CriteriaTaxonomyIdentifier("5fe93344-ed91-4f97-bcab-b6720a131798"),
                                                  PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                                  TenderingCriterionProperties = new[]
                                                  {
@@ -1028,12 +1028,58 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
         public TenderingCriterion[] References => new[]
         {
             new TenderingCriterion()
-            { }
+            {
+                 CriterionTypeCode =
+                   new CriterionTypeCode("CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.REFERENCES.WORKS_PERFORMANCE"),
+                 Name = "For works contracts: performance of works of the specified type",
+                 Description = new[] {"For public works contracts only: During the reference period, the economic operator has performed the following works of the specified type. Contracting authorities may require up to five years and allow experience dating from more than five years."},
+                 Id = new CriteriaTaxonomyIdentifier("cdd3bb3e-34a5-43d5-b668-2aab86a73822"),
+                 Legislations = new Legislation[] { },
+                 TenderingCriterionPropertyGroups = CriterionHelper.References
+            },
+            new TenderingCriterion()
+            {
+                 CriterionTypeCode =
+                   new CriterionTypeCode("CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.REFERENCES.SUPPLIES_DELIVERY_PERFORMANCE"),
+                 Name = "For supply contracts: performance of deliveries of the specified type",
+                 Description = new[] {"For public supply contracts only: During the reference period, the economic operator has delivered the following principal deliveries of the type specified. Contracting authorities may require up to three years and allow experience dating from more than three years."},
+                 Id = new CriteriaTaxonomyIdentifier("3a18a175-1863-4b1d-baef-588ce61960ca"),
+                 Legislations = new Legislation[] { },
+                 TenderingCriterionPropertyGroups = CriterionHelper.References
+            },
+            new TenderingCriterion()
+            {
+                 CriterionTypeCode =
+                   new CriterionTypeCode("CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.REFERENCES.SERVICES_DELIVERY_PERFORMANCE"),
+                 Name = "For service contracts: performance of services of the specified type",
+                 Description = new[] {"For public service contracts only: During the reference period, the economic operator has provided the following main services of the type specified. Contracting authorities may require up to three years and allow experience dating from more than three years."},
+                 Id = new CriteriaTaxonomyIdentifier("5e506c16-26ab-4e32-bb78-b27f87dc0565"),
+                 Legislations = new Legislation[] { },
+                 TenderingCriterionPropertyGroups = CriterionHelper.References
+            }
         };
         public TenderingCriterion[] AbilitiesPersons => new[]
        {
             new TenderingCriterion()
-            { }
+            {
+                 CriterionTypeCode =
+                   new CriterionTypeCode("CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.TECHNICIANS_FOR_QUALITY_CONTROL"),
+                 Name = "Technicians or technical bodies for quality control",
+                 Description = new[] {"It can call upon the following technicians or technical bodies, especially those responsible for quality control. For technicians or technical bodies not belonging directly to the economic operator's undertaking but on whose capacities the economic operator relies as set out under Part II, Section C, separate ESPD forms must be filled in."},
+                 Id = new CriteriaTaxonomyIdentifier("3aaca389-4a7b-406b-a4b9-080845d127e7"),
+                 Legislations = new Legislation[] { },
+                 TenderingCriterionPropertyGroups = CriterionHelper.AbilitiesPersons
+            },
+            new TenderingCriterion()
+            {
+                 CriterionTypeCode =
+                   new CriterionTypeCode("CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.TECHNICIANS_FOR_CARRYING_WORKS"),
+                 Name = "For works contracts: technicians or technical bodies to carry out the work",
+                 Description = new[] {"In the case of public works contracts, the economic operator will be able to call on the following technicians or technical bodies to carry out the work:"},
+                 Id = new CriteriaTaxonomyIdentifier("c599c130-b29f-461e-a187-4e16c7d40db7"),
+                 Legislations = new Legislation[] { },
+                 TenderingCriterionPropertyGroups = CriterionHelper.AbilitiesPersons
+            }
         };
         public TenderingCriterion[] AbilitiesFacilities => new[]
        {

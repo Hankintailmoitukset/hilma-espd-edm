@@ -27,7 +27,12 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers
     /// Indicator type
     /// </summary>
     public static CodeType Indicator => new ResponseDataTypeCode("INDICATOR");
-
+        
+    /// <summary>
+    /// Wheight indicator type
+    /// </summary>
+    public static CodeType WeightIndicator => new ResponseDataTypeCode("WEIGHT_INDICATOR");
+    
     /// <summary>
     /// Description value data type
     /// </summary>
