@@ -90,6 +90,8 @@
   "economicFinancialStanding.numberOfFiscalYears.description": "Number of fiscal years",
   "economicFinancialStanding.cpvsCaption.description": "CPVs:",
 
+  "criteria.economic_financial_standing": "Economic financial standing",
+
   "economicFinancialStanding.averageTurnoverYearly.name": "Average yearly turnover",
   "economicFinancialStanding.averageTurnoverYearly.description": "Its average yearly turnover for the number of years required in the relevant notice, the in the ESPD, the relevant notice or  or the ESPD is as follows:",
   "economicFinancialStanding.averageForRequiredPeriod.description": "Average for the required period",
@@ -112,13 +114,13 @@
   "financialRatios.definition.description": "Definition",
   "financialRatios.pleaseProvideYourRatio.description": "Please provide your ratio",
 
-  "professionalRiskInsuranse.question.name": "Professional risk indemnity insurance",
-  "professionalRiskInsuranse.question.description": "The insured amount in its professional risk indemnity insurance is the following:",
-
-  "professionalRiskInsuranse.lotIds.description": "Lot Ids",
-  "professionalRiskInsuranse.typeOfInsurance.description": "Type of insurance",
-  "professionalRiskInsuranse.asAnEO.description": "As an EO I will commit to obtain the minimum amount required",
-  "professionalRiskInsuranse.iAmExempt.description": "I am exempt",
+  "professionalRiskInsurance.question.name": "Professional risk indemnity insurance",
+  "professionalRiskInsurance.question.description": "The insured amount in its professional risk indemnity insurance is the following:",
+  "professionalRiskInsurance.lotIds.description": "Lot Ids",
+  "professionalRiskInsurance.typeOfInsurance.description": "Type of insurance",
+  "professionalRiskInsurance.asAnEO.description": "As an EO I will commit to obtain the minimum amount required",
+  "professionalRiskInsurance.iAmExempt.description": "I am exempt",
+  "criteria.economic_financial_standing": "Criteria economic financial standing",
 
   "otherEconomicOrFinancial.question.name": "Other economic or financial requirements",
   "otherEconomicOrFinancial.question.description": "Concerning the other economic or financial requirements, if any, that may have been specified in the relevant notice or in the ESPD, the economic operator declares that:",
