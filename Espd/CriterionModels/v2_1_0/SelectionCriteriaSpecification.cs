@@ -18,7 +18,14 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
             SetupOfEconomicOperator,
             FinancialRatios,
             ProfessionalRiskInsurance,
-            OtherEconomicOrFinancial
+            OtherEconomicOrFinancial,
+            References,
+            AbilitiesPersons,
+            AbilitiesFacilities,
+            AbilitiesEducation,
+            AbilitiesChecks,
+            AbilitiesStaff
+
 
         }.SelectMany(c => c);
 
@@ -1084,7 +1091,21 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
         public TenderingCriterion[] AbilitiesFacilities => new[]
        {
             new TenderingCriterion()
-            { }
+            {
+                 CriterionTypeCode =
+                   new CriterionTypeCode("CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.FACILITIES_FOR_QUALITY_ENSURING"),
+                 Name = "Technical facilities and measures for ensuring quality",
+                 Description = new[] {"It uses the following technical facilities and measures for ensuring quality and its study and research facilities are as follows:"},
+                 Id = new CriteriaTaxonomyIdentifier("4bf996d9-439c-40c6-9ab9-980a48cb55a1"),
+                 Legislations = new Legislation[] { },
+                 TenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                 {
+                     new TenderingCriterionPropertyGroup()
+                     {
+
+                     }
+                 }
+            }
         };
         public TenderingCriterion[] AbilitiesEducation => new[]
        {
