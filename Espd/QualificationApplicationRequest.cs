@@ -174,36 +174,5 @@ namespace Hilma.Espd.EDM
     /// <remarks>For procurement procedures above the threshold it is compulsory to make reference to the Contract Notice of the procedure published in TED. See section "Reference to the Contract Notice" for a complete example.</remarks>
     public AdditionalDocumentReference[] AdditionalDocumentReferences { get; set; }
     
-    /// <summary>
-    /// Finalize document properties
-    /// </summary>
-    public void FinalizeDocument()
-    {
-      void FinalizeGroup(IEnumerable<TenderingCriterionPropertyGroup> groups)
-      {
-        if( groups == null ){
-          return;
-        }
-
-        foreach (var group in groups)
-        {
-          if( group?.TenderingCriterionProperties != null)
-          {
-            foreach (var property in group.TenderingCriterionProperties)
-            {
-              property.Id = EuComGrowId.Random();
-            }
-          }
-
-          FinalizeGroup(group?.SubsidiaryTenderingCriterionPropertyGroups);
-        }
-      }
-
-
-      foreach (var criterion in TenderingCriteria ?? Enumerable.Empty<TenderingCriterion>())
-      {
-        FinalizeGroup(criterion?.TenderingCriterionPropertyGroups);
-      }
-    }
   }
 }
