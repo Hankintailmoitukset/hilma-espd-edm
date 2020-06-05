@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers;
 using Hilma.UBL.CommonAggregateComponents;
 using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace Hilma.Espd.EDM.CriterionModels
+namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
 {
   public static class QualificationApplicationOperations
   {
@@ -15,74 +14,90 @@ namespace Hilma.Espd.EDM.CriterionModels
     /// </summary>
     public static QualificationApplicationRequest FinalizeDocument(this QualificationApplicationRequest request)
     {
-      var hasLots = request.ProcurementProjectLots.Length > 1;
+      var procurementHasLots = request.ProcurementProjectLots?.Length > 1;
 
-      void FinalizeGroup(IEnumerable<TenderingCriterionPropertyGroup> groups)
+      foreach (var criterion in request.TenderingCriteria ?? Enumerable.Empty<TenderingCriterion>())
+      {
+        FinalizeCriterion(criterion, request);
+      }
+
+      return request;
+    }
+
+    private static void FinalizeCriterion(TenderingCriterion criterion, QualificationApplicationRequest request)
+    {
+      var procurementHasLots = request.ProcurementProjectLots?.Length > 1;
+      criterion.TenderingCriterionPropertyGroups = FinalizeGroups(criterion.TenderingCriterionPropertyGroups).ToArray();
+
+      IEnumerable<TenderingCriterionPropertyGroup> FinalizeGroups(IEnumerable<TenderingCriterionPropertyGroup> groups)
       {
         if (groups == null)
         {
-          return;
+          yield break;
         }
 
         foreach (var group in groups)
         {
-          if (group?.TenderingCriterionProperties != null)
-          {
-            var propertiesToRemove = new List<TenderingCriterionProperty>();
-            var propertiesToAdd = new List<TenderingCriterionProperty>();
-            var isLotGroup = group.TenderingCriterionProperties
-                .Any(p => 
-                  p.ValueDataTypeCode == ResponseDataTypeCode.LotIdentifier
-                  );
-            
-            void PopulateLots(TenderingCriterionProperty property)
-            {
-                propertiesToRemove.Add(property);
-                propertiesToAdd.AddRange(request.ProcurementProjectLots
-                  .Select(lot => new TenderingCriterionProperty()
-                  {
-                    _cardinality = property._cardinality,
-                    Id = EuComGrowId.Random(),
-                    Name = property.Name,
-                    Description = property.Description,
-                    ExpectedID = new IdentifierType(lot.ID.Value)
-                  }));
-            }
-
-            if (!hasLots && isLotGroup)
-            {
-                propertiesToRemove.AddRange( group.TenderingCriterionProperties );
-                
-            }
-            else
-            {
-              foreach (var property in group.TenderingCriterionProperties)
-              {
-                property.Id = EuComGrowId.Random();
-
-                if (property.ValueDataTypeCode == ResponseDataTypeCode.LotIdentifier)
-                {
-                  PopulateLots(property);
-                }
-              }
-            }
-
-            group.TenderingCriterionProperties = group.TenderingCriterionProperties
-              .Where(p => !propertiesToRemove.Contains(p))
-              .Union(propertiesToAdd)
-              .ToArray();
-          }
-
-          FinalizeGroup(group?.SubsidiaryTenderingCriterionPropertyGroups);
+          yield return FinalizeGroup(@group);
         }
       }
-      
-      foreach (var criterion in request.TenderingCriteria ?? Enumerable.Empty<TenderingCriterion>())
+
+      TenderingCriterionPropertyGroup FinalizeGroup(TenderingCriterionPropertyGroup propertyGroup)
       {
-        FinalizeGroup(criterion?.TenderingCriterionPropertyGroups);
+        if (propertyGroup == null)
+          throw new ArgumentNullException(nameof(propertyGroup));
+
+        if (propertyGroup?.TenderingCriterionProperties != null)
+        {
+          propertyGroup.TenderingCriterionProperties =
+            FilterAndFinalizeProperties(propertyGroup)
+              .ToArray();
+        }
+
+        if (propertyGroup.SubsidiaryTenderingCriterionPropertyGroups != null)
+        {
+          propertyGroup.SubsidiaryTenderingCriterionPropertyGroups =
+            FinalizeGroups(propertyGroup?.SubsidiaryTenderingCriterionPropertyGroups).ToArray();
+        }
+
+        return propertyGroup;
       }
 
-      return request;
+      IEnumerable<TenderingCriterionProperty> FilterAndFinalizeProperties(
+        TenderingCriterionPropertyGroup group)
+      {
+        var isLotGroup = group.TenderingCriterionProperties
+          .Any(p =>
+            Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier) );
+
+        foreach (var property in group.TenderingCriterionProperties)
+        {
+          if (!procurementHasLots && isLotGroup)
+          {
+            yield break;
+          }
+
+          if (Equals(property.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier))
+          {
+            foreach (var projectLot in request.ProcurementProjectLots)
+            {
+              yield return new TenderingCriterionProperty()
+              {
+                _cardinality = property._cardinality,
+                Id = EuComGrowId.Random(),
+                Name = property.Name,
+                Description = property.Description,
+                ExpectedID = new IdentifierType(projectLot.ID.Value),
+                ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
+              };
+            }
+            continue;
+          }
+
+          property.Id = EuComGrowId.Random();
+          yield return property;
+        }
+      }
     }
   }
 }

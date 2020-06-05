@@ -1,6 +1,6 @@
 ﻿using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace Hilma.Espd.EDM.CriterionModels
+namespace Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers
 {
   public class EuComGrowCodeType : CodeType
   {

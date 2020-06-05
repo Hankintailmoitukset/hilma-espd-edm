@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using Hilma.UBL.Attributes;
 using Hilma.UBL.UnqualifiedDataTypes;
 
@@ -67,5 +69,11 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// </remarks>
     public TenderingCriterionPropertyGroup[] SubsidiaryTenderingCriterionPropertyGroups { get; set; }
 
+    public IEnumerable<TenderingCriterionProperty> DescendantProperties()
+    {
+      return TenderingCriterionProperties.Union(
+        SubsidiaryTenderingCriterionPropertyGroups?.SelectMany(g => g.DescendantProperties()) ??
+        Enumerable.Empty<TenderingCriterionProperty>());
+    }
   }
 }

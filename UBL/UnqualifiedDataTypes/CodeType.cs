@@ -11,6 +11,37 @@ namespace Hilma.UBL.UnqualifiedDataTypes
   [Contract]
   public class CodeType : IListValueType, ILocalizableType
   {
+    protected bool Equals(CodeType other)
+    {
+      return ListID == other.ListID && ListName == other.ListName && ListAgencyID == other.ListAgencyID && ListAgencyName == other.ListAgencyName && ListVersionID == other.ListVersionID && ListURI == other.ListURI && ListSchemeURI == other.ListSchemeURI && Name == other.Name && LanguageID == other.LanguageID && Value == other.Value;
+    }
+
+    public override bool Equals(object obj)
+    {
+      if (ReferenceEquals(null, obj)) return false;
+      if (ReferenceEquals(this, obj)) return true;
+      if (obj.GetType() != this.GetType()) return false;
+      return Equals((CodeType) obj);
+    }
+
+    public override int GetHashCode()
+    {
+      unchecked
+      {
+        var hashCode = (ListID != null ? ListID.GetHashCode() : 0);
+        hashCode = (hashCode * 397) ^ (ListName != null ? ListName.GetHashCode() : 0);
+        hashCode = (hashCode * 397) ^ (ListAgencyID != null ? ListAgencyID.GetHashCode() : 0);
+        hashCode = (hashCode * 397) ^ (ListAgencyName != null ? ListAgencyName.GetHashCode() : 0);
+        hashCode = (hashCode * 397) ^ (ListVersionID != null ? ListVersionID.GetHashCode() : 0);
+        hashCode = (hashCode * 397) ^ (ListURI != null ? ListURI.GetHashCode() : 0);
+        hashCode = (hashCode * 397) ^ (ListSchemeURI != null ? ListSchemeURI.GetHashCode() : 0);
+        hashCode = (hashCode * 397) ^ (Name != null ? Name.GetHashCode() : 0);
+        hashCode = (hashCode * 397) ^ (LanguageID != null ? LanguageID.GetHashCode() : 0);
+        hashCode = (hashCode * 397) ^ (Value != null ? Value.GetHashCode() : 0);
+        return hashCode;
+      }
+    }
+
     /// <summary>
     /// The identification of a list of codes.
     /// </summary>
@@ -71,8 +102,6 @@ namespace Hilma.UBL.UnqualifiedDataTypes
     /// The value of the code
     /// </summary>
     public string Value { get; set; }
-
-    public static implicit operator string(CodeType c) => c.Value;
-
+    
   }
 }

@@ -5,6 +5,24 @@ namespace Hilma.UBL.PrimitiveTypes
   [Contract]
   public class DecimalType
   {
+    protected bool Equals(DecimalType other)
+    {
+      return Value == other.Value;
+    }
+
+    public override bool Equals(object obj)
+    {
+      if (ReferenceEquals(null, obj)) return false;
+      if (ReferenceEquals(this, obj)) return true;
+      if (obj.GetType() != this.GetType()) return false;
+      return Equals((DecimalType) obj);
+    }
+
+    public override int GetHashCode()
+    {
+      return Value.GetHashCode();
+    }
+
     public DecimalType()
     {
     }

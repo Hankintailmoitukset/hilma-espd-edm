@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using Hilma.Espd.EDM.CriterionModels;
-using Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers;
+﻿using System.ComponentModel.DataAnnotations;
 using Hilma.UBL.Attributes;
 using Hilma.UBL.CommonAggregateComponents;
 using Hilma.UBL.CommonExtensionComponents;
 using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace Hilma.Espd.EDM
+namespace Hilma.Espd.EDM.CriterionModels
 {
   [Contract]
   public class QualificationApplicationRequest

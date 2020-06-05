@@ -11,6 +11,7 @@ namespace Hilma.Espd.EDM.CriterionModels
   {
     public QualificationApplicationRequest CreateEspd2_1_0SelfContainedRequest(IdentifierType identifier, IdentifierType contractFolderId, Guid uuid)
     {
+      var criterionFactory = new CriterionFactory();
       return new QualificationApplicationRequest()
       {
         ID = identifier,
@@ -24,7 +25,7 @@ namespace Hilma.Espd.EDM.CriterionModels
         ProcurementProject = new ProcurementProject(),
         ProcurementProjectLots = new ProcurementProjectLot[0],
         AdditionalDocumentReferences = new AdditionalDocumentReference[0],
-        TenderingCriteria = new CriterionSpecification().ExclusionGrounds.AllCriteria.ToArray()
+        TenderingCriteria = criterionFactory.V2_1_0.ExclusionGrounds.ToArray()
       };
     }
     

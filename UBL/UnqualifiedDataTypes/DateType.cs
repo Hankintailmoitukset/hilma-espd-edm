@@ -9,6 +9,24 @@ namespace Hilma.UBL.UnqualifiedDataTypes
   [Contract]
   public class DateType
   {
+    protected bool Equals(DateType other)
+    {
+      return _value.Equals(other._value);
+    }
+
+    public override bool Equals(object obj)
+    {
+      if (ReferenceEquals(null, obj)) return false;
+      if (ReferenceEquals(this, obj)) return true;
+      if (obj.GetType() != this.GetType()) return false;
+      return Equals((DateType) obj);
+    }
+
+    public override int GetHashCode()
+    {
+      return _value.GetHashCode();
+    }
+
     private DateTime _value;
 
     public DateType()
