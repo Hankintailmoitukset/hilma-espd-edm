@@ -161,7 +161,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                _cardinality = CardinalityMetadata.OneOrMore,
                                Id = EuComGrowId.Random(),
                                TypeCode = CriterionElementType.Question,
-                               Description = "common.evidenceSupplied",
+                               Description = "common.evidenceSupplied.description",
                                ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
                              }
                           }
@@ -289,7 +289,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                             _cardinality = CardinalityMetadata.OneOrMore,
                             Id = EuComGrowId.Random(),
                             TypeCode = CriterionElementType.Question,
-                            Description ="common.evidenceSupplied",
+                            Description ="common.evidenceSupplied.description",
                             ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
                         }
                     }
@@ -681,7 +681,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                              _cardinality = CardinalityMetadata.ExactlyOne,
                              Id = EuComGrowId.Random(),
                              TypeCode = CriterionElementType.Requirement,
-                             Description = "Minimum number of references",
+                             Description = "references.minimumNumberOfReferences.description",
                              ValueDataTypeCode = ResponseDataTypeCode.QuantityInteger
                            }
                          },
@@ -715,14 +715,14 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                 _cardinality = CardinalityMetadata.OneOrMore,
                                                 Id = EuComGrowId.Random(),
                                                 TypeCode = CriterionElementType.Requirement,
-                                                Description ="Requirement",
+                                                Description ="common.requirement.description",
                                                 ValueDataTypeCode = ResponseDataTypeCode.Description
                                                 }
                                             }
                                         },
                                         new TenderingCriterionPropertyGroup()
                                         {
-                                            Description = new[] {"The requirements apply to the following Lots"},
+                                            Description = new[] {"references.theRequirementsApplyToTheFollowingLots.description"},
                                             _cardinality = CardinalityMetadata.ZeroOrMore,
                                             Id = new CriteriaTaxonomyIdentifier("167ab253-4fb7-4e45-81be-b049fba44b3a"),
                                             PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
@@ -733,7 +733,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                 _cardinality = CardinalityMetadata.ZeroOrMore,
                                                 Id = EuComGrowId.Random(),
                                                 TypeCode = CriterionElementType.Requirement,
-                                                Description ="Lot ID",
+                                                Description ="common.lotID.description",
                                                 ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
                                                 }
                                             }
@@ -751,7 +751,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                         {
                                             _cardinality = CardinalityMetadata.ExactlyOne,
                                             Id = EuComGrowId.Random(),
-                                            Description ="Lots these references apply to",
+                                            Description ="references.lotsTheseReferencesApplyTo.description",
                                             TypeCode = CriterionElementType.Caption,
                                             ValueDataTypeCode = ResponseDataTypeCode.None
                                         }
@@ -770,7 +770,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                 _cardinality = CardinalityMetadata.OneOrMore,
                                                 Id = EuComGrowId.Random(),
                                                 TypeCode = CriterionElementType.Question,
-                                                Description ="Lot ID",
+                                                Description ="common.lotID.description",
                                                 ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
                                                 }
                                           }
@@ -778,7 +778,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                       new TenderingCriterionPropertyGroup()
                                       {
                                           _cardinality = CardinalityMetadata.ExactlyOne,
-                                          Description = new[]{"Reference"},
+                                          Description = new[]{"references.reference.description"},
                                           Id = new CriteriaTaxonomyIdentifier("c8ec5c30-2c17-4936-abbb-392523d873e5"),
                                           PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                           TenderingCriterionProperties = new[]
@@ -788,7 +788,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                 _cardinality = CardinalityMetadata.ZeroOrMore,
                                                 Id = EuComGrowId.Random(),
                                                 TypeCode = CriterionElementType.Question,
-                                                Description ="Reference description",
+                                                Description ="references.referenceDescription.description",
                                                 ValueDataTypeCode = ResponseDataTypeCode.Description
                                                 },
                                               new TenderingCriterionProperty()
@@ -796,7 +796,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                 _cardinality = CardinalityMetadata.ZeroOrMore,
                                                 Id = EuComGrowId.Random(),
                                                 TypeCode = CriterionElementType.Question,
-                                                Description ="Total amount",
+                                                Description ="references.totalAmount.description",
                                                 ValueDataTypeCode = ResponseDataTypeCode.Amount
                                                 },
                                               new TenderingCriterionProperty()
@@ -804,7 +804,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                 _cardinality = CardinalityMetadata.ZeroOrMore,
                                                 Id = EuComGrowId.Random(),
                                                 TypeCode = CriterionElementType.Question,
-                                                Description ="Activity of the economic operator",
+                                                Description ="references.ActivityOfTheEconomicOperator.description",
                                                 ValueDataTypeCode = ResponseDataTypeCode.Description
                                                 },
                                               new TenderingCriterionProperty()
@@ -812,7 +812,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                 _cardinality = CardinalityMetadata.ZeroOrMore,
                                                 Id = EuComGrowId.Random(),
                                                 TypeCode = CriterionElementType.Question,
-                                                Description ="Specific amount",
+                                                Description ="references.specificAmount.description",
                                                 ValueDataTypeCode = ResponseDataTypeCode.Amount
                                                 },
                                               new TenderingCriterionProperty()
@@ -820,7 +820,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                 _cardinality = CardinalityMetadata.ZeroOrMore,
                                                 Id = EuComGrowId.Random(),
                                                 TypeCode = CriterionElementType.Question,
-                                                Description ="Period (Start and End dates)",
+                                                Description ="references.PeriodStartAndEndDates.description",
                                                 ValueDataTypeCode = ResponseDataTypeCode.Period
                                                 }
                                               ,new TenderingCriterionProperty()
@@ -828,7 +828,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                 _cardinality = CardinalityMetadata.ZeroOrMore,
                                                 Id = EuComGrowId.Random(),
                                                 TypeCode = CriterionElementType.Question,
-                                                Description ="Confidential",
+                                                Description ="references.confidential.description",
                                                 ValueDataTypeCode = ResponseDataTypeCode.Indicator
                                                 }
                                           },
@@ -837,7 +837,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                               new TenderingCriterionPropertyGroup()
                                                 {
                                                     _cardinality = CardinalityMetadata.ZeroOrMore,
-                                                    Description = new[]{"Recipients"},
+                                                    Description = new[]{"references.recipients.description"},
                                                     Id = new CriteriaTaxonomyIdentifier("6afa7569-e4c4-4538-be89-84a82b2a301b"),
                                                     PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                                     TenderingCriterionProperties = new[]
@@ -846,28 +846,28 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                             _cardinality = CardinalityMetadata.ZeroOrMore,
                                                             Id = EuComGrowId.Random(),
                                                             TypeCode = CriterionElementType.Question,
-                                                            Description ="Recipient name",
+                                                            Description ="references.recipientName.description",
                                                             ValueDataTypeCode = ResponseDataTypeCode.Description
                                                         },
                                                         new TenderingCriterionProperty(){
                                                             _cardinality = CardinalityMetadata.Optional,
                                                             Id = EuComGrowId.Random(),
                                                             TypeCode = CriterionElementType.Question,
-                                                            Description ="Contact person name",
+                                                            Description ="references.contactPersonName.description",
                                                             ValueDataTypeCode = ResponseDataTypeCode.Description
                                                         },
                                                         new TenderingCriterionProperty(){
                                                             _cardinality = CardinalityMetadata.Optional,
                                                             Id = EuComGrowId.Random(),
                                                             TypeCode = CriterionElementType.Question,
-                                                            Description ="Contact email",
+                                                            Description ="references.contactEmail.description",
                                                             ValueDataTypeCode = ResponseDataTypeCode.Description
                                                         },
                                                         new TenderingCriterionProperty(){
                                                             _cardinality = CardinalityMetadata.Optional,
                                                             Id = EuComGrowId.Random(),
                                                             TypeCode = CriterionElementType.Question,
-                                                            Description ="Contact telephone",
+                                                            Description ="references.contactTelephone.description",
                                                             ValueDataTypeCode = ResponseDataTypeCode.Description
                                                         }
                                                     }
@@ -875,7 +875,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                               new TenderingCriterionPropertyGroup()
                                               {
                                                   _cardinality = CardinalityMetadata.ExactlyOne,
-                                                  Description = new[]{"Recipients"},
+                                                  Description = new[]{"references.recipients.description"},
                                                   Id = new CriteriaTaxonomyIdentifier("7458d42a-e581-4640-9283-34ceb3ad4345"),
                                                   PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                                   TenderingCriterionProperties = new[]
@@ -884,7 +884,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                             _cardinality = CardinalityMetadata.ExactlyOne,
                                                             Id = EuComGrowId.Random(),
                                                             TypeCode = CriterionElementType.Question,
-                                                            Description ="Is this information available online?",
+                                                            Description ="common.isThisInformationAvailableOnline.description",
                                                             ValueDataTypeCode = ResponseDataTypeCode.Indicator
                                                         }
                                                   },
@@ -901,7 +901,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                                     _cardinality = CardinalityMetadata.OneOrMore,
                                                                     Id = EuComGrowId.Random(),
                                                                     TypeCode = CriterionElementType.Question,
-                                                                    Description ="Evidence Supplied",
+                                                                    Description ="common.evidenceSupplied.description",
                                                                     ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
                                                                 }
                                                           }
@@ -932,7 +932,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                              _cardinality = CardinalityMetadata.Optional,
                              Id = EuComGrowId.Random(),
                              TypeCode = CriterionElementType.Requirement,
-                             Description = "This criterion will be weighted",
+                             Description = "common.thisCriterionWillBeWeighted.description",
                              ValueDataTypeCode = ResponseDataTypeCode.WeightIndicator
                            }
                          },
@@ -950,7 +950,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                      _cardinality = CardinalityMetadata.ExactlyOne,
                                      Id = EuComGrowId.Random(),
                                      TypeCode = CriterionElementType.Requirement,
-                                     Description = "Requirement",
+                                     Description = "common.requirement.description",
                                      ValueDataTypeCode = ResponseDataTypeCode.Description
                                      }
                                  },
@@ -976,7 +976,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                              new TenderingCriterionPropertyGroup()
                                              {
                                                  _cardinality = CardinalityMetadata.ZeroOrMore,
-                                                 Description = new[]{"Technician"},
+                                                 Description = new[]{"abilitiesPersons.technician.description"},
                                                  Id = new CriteriaTaxonomyIdentifier("52ffcf91-3598-438f-8c3d-faf97da02602"),
                                                  PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                                  TenderingCriterionProperties = new[]
@@ -986,7 +986,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                          _cardinality = CardinalityMetadata.Optional,
                                                          Id = EuComGrowId.Random(),
                                                          TypeCode = CriterionElementType.Question,
-                                                         Description = "First name",
+                                                         Description = "common.firstName.description",
                                                          ValueDataTypeCode = ResponseDataTypeCode.Description
                                                      },
                                                      new TenderingCriterionProperty()
@@ -994,7 +994,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                          _cardinality = CardinalityMetadata.Optional,
                                                          Id = EuComGrowId.Random(),
                                                          TypeCode = CriterionElementType.Question,
-                                                         Description = "Last name",
+                                                         Description = "common.lastName.description",
                                                          ValueDataTypeCode = ResponseDataTypeCode.Description
                                                      },
                                                      new TenderingCriterionProperty()
@@ -1002,7 +1002,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                          _cardinality = CardinalityMetadata.ExactlyOne,
                                                          Id = EuComGrowId.Random(),
                                                          TypeCode = CriterionElementType.Question,
-                                                         Description = "Profession",
+                                                         Description = "abilitiesPersons.profession.description",
                                                          ValueDataTypeCode = ResponseDataTypeCode.Description
                                                      },
                                                      new TenderingCriterionProperty()
@@ -1010,7 +1010,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                          _cardinality = CardinalityMetadata.Optional,
                                                          Id = EuComGrowId.Random(),
                                                          TypeCode = CriterionElementType.Question,
-                                                         Description = "Experience",
+                                                         Description = "abilitiesPersons.experience.description",
                                                          ValueDataTypeCode = ResponseDataTypeCode.Description
                                                      },
                                                      new TenderingCriterionProperty()
@@ -1018,7 +1018,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                          _cardinality = CardinalityMetadata.Optional,
                                                          Id = EuComGrowId.Random(),
                                                          TypeCode = CriterionElementType.Question,
-                                                         Description = "Other information",
+                                                         Description = "abilitiesPersons.otherInformation.description",
                                                          ValueDataTypeCode = ResponseDataTypeCode.Description
                                                      },
                                                      new TenderingCriterionProperty()
@@ -1026,7 +1026,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                          _cardinality = CardinalityMetadata.Optional,
                                                          Id = EuComGrowId.Random(),
                                                          TypeCode = CriterionElementType.Question,
-                                                         Description = "How long with  EO",
+                                                         Description = "abilitiesPersons.howLongWithEO.description",
                                                          ValueDataTypeCode = ResponseDataTypeCode.QuantityInteger
                                                      }
 
@@ -1045,7 +1045,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                                  _cardinality = CardinalityMetadata.ExactlyOne,
                                                                  Id = EuComGrowId.Random(),
                                                                  TypeCode = CriterionElementType.Question,
-                                                                 Description = "Is this information available online?",
+                                                                 Description = "common.isThisInformationAvailableOnline.description",
                                                                  ValueDataTypeCode = ResponseDataTypeCode.Indicator
                                                              },
                                                          },
@@ -1063,7 +1063,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                                          _cardinality = CardinalityMetadata.ExactlyOne,
                                                                          Id = EuComGrowId.Random(),
                                                                          TypeCode = CriterionElementType.Question,
-                                                                         Description = "Evidence supplied",
+                                                                         Description = "common.evidenceSupplied.description",
                                                                          ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
                                                                      },
                                                                  }
@@ -1094,7 +1094,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                              new TenderingCriterionPropertyGroup()
                                              {
                                                  _cardinality = CardinalityMetadata.ZeroOrMore,
-                                                 Description = new[]{"Technical body"},
+                                                 Description = new[]{"abilitiesPersons.technicalBody.description"},
                                                  Id = new CriteriaTaxonomyIdentifier("52ffcf91-3598-438f-8c3d-faf97da02602"),
                                                  PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                                  TenderingCriterionProperties = new[]
@@ -1104,7 +1104,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                          _cardinality = CardinalityMetadata.ExactlyOne,
                                                          Id = EuComGrowId.Random(),
                                                          TypeCode = CriterionElementType.Question,
-                                                         Description = "Name",
+                                                         Description = "common.name.description",
                                                          ValueDataTypeCode = ResponseDataTypeCode.Description
                                                      },
                                                      new TenderingCriterionProperty()
@@ -1112,7 +1112,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                          _cardinality = CardinalityMetadata.Optional,
                                                          Id = EuComGrowId.Random(),
                                                          TypeCode = CriterionElementType.Question,
-                                                         Description = "Experience area",
+                                                         Description = "abilitiesPersons.experienceArea.description",
                                                          ValueDataTypeCode = ResponseDataTypeCode.Description
                                                      },
                                                      new TenderingCriterionProperty()
@@ -1120,7 +1120,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                          _cardinality = CardinalityMetadata.Optional,
                                                          Id = EuComGrowId.Random(),
                                                          TypeCode = CriterionElementType.Question,
-                                                         Description = "Other information",
+                                                         Description = "abilitiesPersons.otherInformation.description",
                                                          ValueDataTypeCode = ResponseDataTypeCode.Description
                                                      },
                                                  },
@@ -1129,7 +1129,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                      new TenderingCriterionPropertyGroup()
                                                      {
                                                          _cardinality = CardinalityMetadata.Optional,
-                                                         Description = new[]{"Technical body"},
+                                                         Description = new[]{"abilitiesPersons.technicalBody.description"},
                                                          Id = new CriteriaTaxonomyIdentifier("0a166f0a-0c5f-42b0-81e9-0fc9fa598a48"),
                                                          PropertyGroupTypeCode = PropertyGroupTypeCode.OnTrue,
                                                          TenderingCriterionProperties = new[]
@@ -1139,7 +1139,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                                  _cardinality = CardinalityMetadata.OneOrMore,
                                                                  Id = EuComGrowId.Random(),
                                                                  TypeCode = CriterionElementType.Question,
-                                                                 Description = "Evidence Supplied",
+                                                                 Description = "common.evidenceSupplied.description",
                                                                  ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
                                                              }
                                                          }
@@ -1155,7 +1155,203 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
 
                          }
                      }
-          }
+          };
+
+        public static TenderingCriterionPropertyGroup[] AbilitiesFacilities =>
+        new[]
+        {
+        new TenderingCriterionPropertyGroup()
+                     {
+                         _cardinality = CardinalityMetadata.ExactlyOne,
+                         Id = new CriteriaTaxonomyIdentifier("1e73d705-9dc1-43f1-9b5c-2d0deac7bc5f"),
+                         PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
+                         TenderingCriterionProperties = new[]
+                         {
+                           new TenderingCriterionProperty()
+                           {
+                             _cardinality = CardinalityMetadata.Optional,
+                             Id = EuComGrowId.Random(),
+                             TypeCode = CriterionElementType.Requirement,
+                             Description = "common.thisCriterionWillBeWeighted.description",
+                             ValueDataTypeCode = ResponseDataTypeCode.WeightIndicator
+                           }
+                         },
+                         SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                         {
+                             new TenderingCriterionPropertyGroup()
+                             {
+                                 _cardinality = CardinalityMetadata.OneOrMore,
+                                 Id = new CriteriaTaxonomyIdentifier("f156d97a-9700-4ad9-8d21-e3ac57102278"),
+                                 PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
+                                 TenderingCriterionProperties = new[]
+                                 {
+                                   new TenderingCriterionProperty()
+                                   {
+                                     _cardinality = CardinalityMetadata.Optional,
+                                     Id = EuComGrowId.Random(),
+                                     TypeCode = CriterionElementType.Requirement,
+                                     Description = "common.requirement.description",
+                                     ValueDataTypeCode = ResponseDataTypeCode.Description
+                                   }
+                                 },
+                                 SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                                 {
+                                     new TenderingCriterionPropertyGroup()
+                                     {
+                                         _cardinality = CardinalityMetadata.ExactlyOne,
+                                         Id = new CriteriaTaxonomyIdentifier("488ca189-bcdb-4bf4-80c7-3ad507fd89fb"),
+                                         PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
+                                         TenderingCriterionProperties = new[]
+                                         {
+                                           new TenderingCriterionProperty()
+                                           {
+                                             _cardinality = CardinalityMetadata.ExactlyOne,
+                                             Id = EuComGrowId.Random(),
+                                             TypeCode = CriterionElementType.Question,
+                                             Description = "common.pleaseDescribeThem.description",
+                                             ValueDataTypeCode = ResponseDataTypeCode.Description
+                                           }
+                                         },
+                                     },
+                                     new TenderingCriterionPropertyGroup()
+                                     {
+                                         _cardinality = CardinalityMetadata.ExactlyOne,
+                                         Id = new CriteriaTaxonomyIdentifier("7458d42a-e581-4640-9283-34ceb3ad4345"),
+                                         PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
+                                         TenderingCriterionProperties = new[]
+                                         {
+                                           new TenderingCriterionProperty()
+                                           {
+                                             _cardinality = CardinalityMetadata.ExactlyOne,
+                                             Id = EuComGrowId.Random(),
+                                             TypeCode = CriterionElementType.Question,
+                                             Description = "common.isThisInformationAvailableElectronically.description",
+                                             ValueDataTypeCode = ResponseDataTypeCode.Indicator
+                                           }
+                                         },
+                                         SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                                         {
+                                             new TenderingCriterionPropertyGroup()
+                                             {
+                                                 _cardinality = CardinalityMetadata.Optional,
+                                                 Id = new CriteriaTaxonomyIdentifier("41dd2e9b-1bfd-44c7-93ee-56bd74a4334b"),
+                                                 PropertyGroupTypeCode = PropertyGroupTypeCode.OnTrue,
+                                                 TenderingCriterionProperties = new[]
+                                                 {
+                                                   new TenderingCriterionProperty()
+                                                   {
+                                                     _cardinality = CardinalityMetadata.ExactlyOne,
+                                                     Id = EuComGrowId.Random(),
+                                                     TypeCode = CriterionElementType.Question,
+                                                     Description = "common.evidenceSupplied.description",
+                                                     ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
+                                                   }
+                                                 },
+                                             }
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                     }
+        };
+
+        public static TenderingCriterionPropertyGroup[] AbilitiesStaff =>
+        new[]
+        {
+        new TenderingCriterionPropertyGroup()
+            {
+                _cardinality = CardinalityMetadata.ExactlyOne,
+                Id = new CriteriaTaxonomyIdentifier("7f7949a8-dbe6-496c-a9f6-6f05b8648bad"),
+                PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
+                TenderingCriterionProperties = new[]
+                {
+                  new TenderingCriterionProperty()
+                  {
+                    _cardinality = CardinalityMetadata.ExactlyOne,
+                    Id = EuComGrowId.Random(),
+                    TypeCode = CriterionElementType.Requirement,
+                    Description = "abilitiesStaff.minumNumberOfYears.description",
+                    ValueDataTypeCode = ResponseDataTypeCode.QuantityInteger
+                  },
+                  new TenderingCriterionProperty()
+                  {
+                    _cardinality = CardinalityMetadata.Optional,
+                    Id = EuComGrowId.Random(),
+                    TypeCode = CriterionElementType.Requirement,
+                    Description = "abilitiesStaff.additionalInformation.description",
+                    ValueDataTypeCode = ResponseDataTypeCode.Description
+                  }
+                },
+                SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                {
+                    new TenderingCriterionPropertyGroup()
+                    {
+                        _cardinality = CardinalityMetadata.OneOrMore,
+                        Id = new CriteriaTaxonomyIdentifier("96defecc-7d32-4957-82e9-aad5f3c5b736"),
+                        PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
+                        TenderingCriterionProperties = new[]
+                        {
+                          new TenderingCriterionProperty()
+                          {
+                            _cardinality = CardinalityMetadata.ExactlyOne,
+                            Id = EuComGrowId.Random(),
+                            TypeCode = CriterionElementType.Question,
+                            Description = "common.year.description",
+                            ValueDataTypeCode = ResponseDataTypeCode.QuantityYear
+                          },
+                          new TenderingCriterionProperty()
+                          {
+                            _cardinality = CardinalityMetadata.ExactlyOne,
+                            Id = EuComGrowId.Random(),
+                            TypeCode = CriterionElementType.Question,
+                            Description = "common.number.description",
+                            ValueDataTypeCode = ResponseDataTypeCode.QuantityInteger
+                          }
+                        }
+                    },
+                    new TenderingCriterionPropertyGroup()
+                    {
+                        _cardinality = CardinalityMetadata.ExactlyOne,
+                        Id = new CriteriaTaxonomyIdentifier("7458d42a-e581-4640-9283-34ceb3ad4345"),
+                        PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
+                        TenderingCriterionProperties = new[]
+                        {
+                          new TenderingCriterionProperty()
+                          {
+                            _cardinality = CardinalityMetadata.ExactlyOne,
+                            Id = EuComGrowId.Random(),
+                            TypeCode = CriterionElementType.Question,
+                            Description = "common.isThisInformationAvailableOnline.description",
+                            ValueDataTypeCode = ResponseDataTypeCode.Indicator
+                          }
+                        },
+                        SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                        {
+                           new TenderingCriterionPropertyGroup()
+                           {
+                               _cardinality = CardinalityMetadata.Optional,
+                               Id = new CriteriaTaxonomyIdentifier("41dd2e9b-1bfd-44c7-93ee-56bd74a4334b"),
+                               PropertyGroupTypeCode = PropertyGroupTypeCode.OnTrue,
+                               TenderingCriterionProperties = new[]
+                               {
+                                   new TenderingCriterionProperty()
+                                   {
+                                       _cardinality = CardinalityMetadata.OneOrMore,
+                                       Id = EuComGrowId.Random(),
+                                       TypeCode = CriterionElementType.Question,
+                                       Description = "common.evidenceSupplied.description",
+                                       ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
+                                   }
+                               }
+                           }
+                        }
+                    },
+                }
+            }
+        };
+
+        
     }
 }
 

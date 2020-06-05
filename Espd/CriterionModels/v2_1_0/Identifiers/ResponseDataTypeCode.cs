@@ -90,5 +90,10 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers
     /// Quantity integer
     /// </summary>
     public static CodeType QuantityInteger => new ResponseDataTypeCode("QUANTITY_INTEGER");
-  }
+
+    /// <summary>
+    /// Quantity
+    /// </summary>
+    public static CodeType QuantityYear => new ResponseDataTypeCode("QUANTITY_YEAR");
+    }
 }
