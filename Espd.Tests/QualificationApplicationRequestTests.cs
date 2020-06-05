@@ -32,7 +32,7 @@ namespace Hilma.Espd.Tests
 
       Assert.AreNotEqual(firstPropertyId, firstPropertyIdAfter, "Id, should not be the same");
 
-      Assert.IsFalse(suitabilityCriterion.DescendantProperties.Any( p => Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier )), "Lots should have been removed" );
+      Assert.IsFalse(suitabilityCriterion.DescendantProperties().Any( p => Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier )), "Lots should have been removed" );
     }
     
     [TestMethod]
@@ -51,7 +51,7 @@ namespace Hilma.Espd.Tests
       
       qar.FinalizeDocument();
       var lotProperties =
-        suitabilityCriterion.DescendantProperties.Where(p => Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier)).ToArray();
+        suitabilityCriterion.DescendantProperties().Where(p => Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier)).ToArray();
       Assert.AreEqual(2, lotProperties.Length, "Should have two lot properties");
       Assert.AreEqual("Lot 1", lotProperties[0].ExpectedID.Value);
       Assert.AreEqual("Lot 2", lotProperties[1].ExpectedID.Value);
