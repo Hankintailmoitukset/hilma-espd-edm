@@ -8,8 +8,18 @@ namespace Hilma.Espd.EDM.CriterionModels
 {
   public class QualificationApplicationFactory
   {
-    public QualificationApplicationRequest CreateEspd2_1_0SelfContainedRequest(IdentifierType identifier, IdentifierType contractFolderId, Guid uuid)
+    public QualificationApplicationRequest CreateEspd2_1_0SelfContainedRequest(IdentifierType identifier, IdentifierType contractFolderId, Guid uuid, string[] lotIds )
     {
+      var procurementProjectLots = lotIds.Any()
+        ? lotIds.Select(l => new ProcurementProjectLot()
+        {
+          ID = new IdentifierType(l)
+        }) : 
+        new[] {new ProcurementProjectLot()
+        {
+          ID = new IdentifierType("0")
+        }};  
+
       var criterionFactory = new CriterionFactory();
       return new QualificationApplicationRequest()
       {
@@ -22,7 +32,7 @@ namespace Hilma.Espd.EDM.CriterionModels
         IssueTime = DateTime.UtcNow,
         ContractingParty = new ContractingParty(),
         ProcurementProject = new ProcurementProject(),
-        ProcurementProjectLots = new ProcurementProjectLot[0],
+        ProcurementProjectLots = procurementProjectLots.ToArray(),
         AdditionalDocumentReferences = new AdditionalDocumentReference[0],
         TenderingCriteria = criterionFactory.V2_1_0.ExclusionGrounds.ToArray()
       };
