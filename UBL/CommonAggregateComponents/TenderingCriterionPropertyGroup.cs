@@ -69,11 +69,5 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// </remarks>
     public TenderingCriterionPropertyGroup[] SubsidiaryTenderingCriterionPropertyGroups { get; set; }
 
-    public IEnumerable<TenderingCriterionProperty> DescendantProperties()
-    {
-      return TenderingCriterionProperties.Union(
-        SubsidiaryTenderingCriterionPropertyGroups?.SelectMany(g => g.DescendantProperties()) ??
-        Enumerable.Empty<TenderingCriterionProperty>());
-    }
   }
 }

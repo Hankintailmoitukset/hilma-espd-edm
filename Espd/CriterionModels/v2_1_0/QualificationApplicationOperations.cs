@@ -14,8 +14,6 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
     /// </summary>
     public static QualificationApplicationRequest FinalizeDocument(this QualificationApplicationRequest request)
     {
-      var procurementHasLots = request.ProcurementProjectLots?.Length > 1;
-
       foreach (var criterion in request.TenderingCriteria ?? Enumerable.Empty<TenderingCriterion>())
       {
         FinalizeCriterion(criterion, request);
@@ -70,15 +68,17 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
           .Any(p =>
             Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier) );
 
+        if (!procurementHasLots && isLotGroup)
+        {
+          // If no lot, filter out all lot properties
+          yield break;
+        }
+
         foreach (var property in group.TenderingCriterionProperties)
         {
-          if (!procurementHasLots && isLotGroup)
-          {
-            yield break;
-          }
-
           if (Equals(property.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier))
           {
+            // Duplicate lot property for each lot 
             foreach (var projectLot in request.ProcurementProjectLots)
             {
               yield return new TenderingCriterionProperty()
@@ -91,11 +91,13 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                 ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
               };
             }
-            continue;
           }
-
-          property.Id = EuComGrowId.Random();
-          yield return property;
+          else
+          {
+            // Generate new if for property
+            property.Id = EuComGrowId.Random();
+            yield return property;
+          }
         }
       }
     }

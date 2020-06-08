@@ -92,13 +92,6 @@ namespace Hilma.UBL.CommonAggregateComponents
 
       public string FulfilmentIndicatorTypeCodeType { get; set; }
 
-      public IEnumerable<TenderingCriterionProperty> DescendantProperties()
-      {
-         return TenderingCriterionPropertyGroups.SelectMany(g => g.DescendantProperties())
-          .Union(SubTenderingTenderingCriteria?
-                                               .SelectMany(g => g.DescendantProperties()) ??
-                                             Enumerable.Empty<TenderingCriterionProperty>());
-      }
   }
 
   //public static class TenderingCriterionSerializer

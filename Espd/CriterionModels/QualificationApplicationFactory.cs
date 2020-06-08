@@ -1,5 +1,4 @@
-﻿using Hilma.Espd.EDM.CriterionModels.v2_1_0;
-using Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers;
+﻿using Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers;
 using Hilma.UBL.CommonAggregateComponents;
 using Hilma.UBL.UnqualifiedDataTypes;
 using System;
