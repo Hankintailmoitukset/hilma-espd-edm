@@ -65,7 +65,7 @@ namespace Hilma.Espd.Tests
             Assert.AreEqual("Threshold", criterion.TenderingCriterionPropertyGroups.First().TenderingCriterionProperties.First().Description);
 
 
-            Assert.AreEqual("Your answer", criterion.TenderingCriterionPropertyGroups.First().SubsidiaryTenderingCriterionPropertyGroups.First().TenderingCriterionProperties.First().Description);
+            Assert.AreEqual("Your answer?", criterion.TenderingCriterionPropertyGroups.First().SubsidiaryTenderingCriterionPropertyGroups.First().TenderingCriterionProperties.First().Description);
             Assert.AreEqual("Country or member state concerned", criterion.TenderingCriterionPropertyGroups.First().SubsidiaryTenderingCriterionPropertyGroups.First().SubsidiaryTenderingCriterionPropertyGroups.First().TenderingCriterionProperties.First().Description);
 
         }
