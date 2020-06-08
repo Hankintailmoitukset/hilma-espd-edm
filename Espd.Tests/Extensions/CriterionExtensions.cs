@@ -16,7 +16,7 @@ namespace Hilma.Espd.Tests.Extensions
 
     public static IEnumerable<TenderingCriterionProperty> DescendantProperties(this TenderingCriterionPropertyGroup tenderingCriterionPropertyGroup)
     {
-      return tenderingCriterionPropertyGroup?.DescendantProperties()
+      return tenderingCriterionPropertyGroup?.TenderingCriterionProperties
         .Union(tenderingCriterionPropertyGroup.SubsidiaryTenderingCriterionPropertyGroups?.SelectMany(g => g.DescendantProperties()) ??
                Enumerable.Empty<TenderingCriterionProperty>());
     }
