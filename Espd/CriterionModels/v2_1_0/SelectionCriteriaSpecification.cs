@@ -142,7 +142,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                     },
                                 }
                             },
-                            CriterionHelper.TurnOverisThisInformationAvailableElectronically
+                            CriterionHelper.IsThisInformationAvailableElectronically
                         }
                     }
                 }
@@ -211,7 +211,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                           }
                         }
                       },
-                      CriterionHelper.TurnOverisThisInformationAvailableElectronically
+                      CriterionHelper.IsThisInformationAvailableElectronically
                     }
                   }
                 }
@@ -336,7 +336,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                {
                                    _cardinality = CardinalityMetadata.ZeroOrMore,
                                    Id = new CriteriaTaxonomyIdentifier("41dd2e9b-1bfd-44c7-93ee-56bd74a4334b"),
-                                   PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
+                                   PropertyGroupTypeCode = PropertyGroupTypeCode.OnTrue,
                                    TenderingCriterionProperties = new[]
                                    {
                                        new TenderingCriterionProperty()
@@ -455,7 +455,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                    }
                                  }
                                },
-                             CriterionHelper.TurnOverisThisInformationAvailableElectronically
+                             CriterionHelper.IsThisInformationAvailableElectronically
                          }
                     }
                 }
@@ -485,7 +485,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                             _cardinality = CardinalityMetadata.ExactlyOne,
                             Id = EuComGrowId.Random(),
                             TypeCode = CriterionElementType.Question,
-                            Description = "setupOfEconomicOperator.pleaseSpecify.description",
+                            Description = "common.pleaseSpecify.description",
                             ValueDataTypeCode = ResponseDataTypeCode.Date
                           }
                         },
@@ -1401,7 +1401,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                      {
                                          _cardinality = CardinalityMetadata.Optional,
                                          Id = new CriteriaTaxonomyIdentifier("41dd2e9b-1bfd-44c7-93ee-56bd74a4334b"),
-                                         PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
+                                         PropertyGroupTypeCode = PropertyGroupTypeCode.OnTrue,
                                          TenderingCriterionProperties = new[]
                                          {
                                            new TenderingCriterionProperty()
@@ -1423,7 +1423,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
             }
         };
         public TenderingCriterion[] AbilitiesStaff => new[]
-       {
+        {
             new TenderingCriterion()
             {
                  CriterionTypeCode =
@@ -1445,5 +1445,134 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                  TenderingCriterionPropertyGroups = CriterionHelper.AbilitiesStaff
             }
         };
+
+        public TenderingCriterion[] SubcontractingProportion => new[]
+        {
+            new TenderingCriterion()
+            {
+                 CriterionTypeCode =
+                   new CriterionTypeCode("CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.SUBCONTRACTING_PROPORTION"),
+                 Name = "subcontractingProportion.question.name",
+                 Description = new[] {"subcontractingProportion.question.description"},
+                 Id = new CriteriaTaxonomyIdentifier("612a1625-118d-4ea4-a6db-413184e7c0a8"),
+                 Legislations = new Legislation[] { },
+                 TenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]{
+
+                     new TenderingCriterionPropertyGroup()
+                    {
+                        _cardinality = CardinalityMetadata.ExactlyOne,
+                        Id = new CriteriaTaxonomyIdentifier("575f7550-8a2d-4bad-b9d8-be07ab570076"),
+                        PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
+                        TenderingCriterionProperties = new[]
+                        {
+                          new TenderingCriterionProperty()
+                          {
+                            _cardinality = CardinalityMetadata.ExactlyOne,
+                            Id = EuComGrowId.Random(),
+                            TypeCode = CriterionElementType.Question,
+                            Description = "common.pleaseSpecify.description",
+                            ValueDataTypeCode = ResponseDataTypeCode.Description
+                          }
+                        }
+                    },
+                     new TenderingCriterionPropertyGroup()
+                     {
+                        _cardinality = CardinalityMetadata.ExactlyOne,
+                        Id = new CriteriaTaxonomyIdentifier("7458d42a-e581-4640-9283-34ceb3ad4345"),
+                        PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
+                        TenderingCriterionProperties = new[]
+                        {
+                          new TenderingCriterionProperty()
+                          {
+                            _cardinality = CardinalityMetadata.ExactlyOne,
+                            Id = EuComGrowId.Random(),
+                            TypeCode = CriterionElementType.Question,
+                            Description = "common.isThisInformationAvailableElectronically.description",
+                            ValueDataTypeCode = ResponseDataTypeCode.Indicator
+                          }
+                        },
+                        SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                        {
+                           new TenderingCriterionPropertyGroup()
+                           {
+                               _cardinality = CardinalityMetadata.Optional,
+                               Id = new CriteriaTaxonomyIdentifier("41dd2e9b-1bfd-44c7-93ee-56bd74a4334b"),
+                               PropertyGroupTypeCode = PropertyGroupTypeCode.OnTrue,
+                               TenderingCriterionProperties = new[]
+                               {
+                                   new TenderingCriterionProperty()
+                                   {
+                                       _cardinality = CardinalityMetadata.OneOrMore,
+                                       Id = EuComGrowId.Random(),
+                                       TypeCode = CriterionElementType.Question,
+                                       Description = "common.evidenceSupplied.description",
+                                       ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
+                                   }
+                               }
+                           }
+                        }
+                     }
+                 }
+            }
+        };
+
+        public TenderingCriterion[] SamplesCertificates => new[]
+        {
+            new TenderingCriterion()
+            {
+                 CriterionTypeCode =
+                   new CriterionTypeCode("CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.ARTEFACTS.NO_AUTHENTICATED_ARTEFACTS"),
+                 Name = "samplesCertificates.question1.name",
+                 Description = new[] {"samplesCertificates.question1.description"},
+                 Id = new CriteriaTaxonomyIdentifier("bdf0601d-2480-4250-b870-658d0ee95be6"),
+                 Legislations = new Legislation[] { },
+                 TenderingCriterionPropertyGroups = CriterionHelper.SamplesCertificates
+            },
+            new TenderingCriterion()
+            {
+                 CriterionTypeCode =
+                   new CriterionTypeCode("CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.ARTEFACTS.AUTHENTICATED_ARTEFACTS"),
+                 Name = "samplesCertificates.question2.name",
+                 Description = new[] {"samplesCertificates.question2.description"},
+                 Id = new CriteriaTaxonomyIdentifier("7662b7a9-bcb8-4763-a0a7-7505d8e8470d"),
+                 Legislations = new Legislation[] { },
+                 TenderingCriterionPropertyGroups = CriterionHelper.SamplesCertificates
+            }
+
+        };
+        public TenderingCriterion[] QualityAssurance => new[]
+        {
+            new TenderingCriterion()
+            {
+                 CriterionTypeCode =
+                   new CriterionTypeCode("CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.QUALITY_ASSURANCE.QA_INSTITUTES_CERTIFICATE"),
+                 Name = "qualityAssurance.question1.name",
+                 Description = new[] {"qualityAssurance.question1.description"},
+                 Id = new CriteriaTaxonomyIdentifier("a7669d7d-9297-43e1-9d10-691a1660187c"),
+                 Legislations = new Legislation[] { },
+                 TenderingCriterionPropertyGroups = CriterionHelper.QualityAssurance
+            },
+            new TenderingCriterion()
+            {
+                 CriterionTypeCode =
+                   new CriterionTypeCode("CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.QUALITY_ASSURANCE.QA_INDEPENDENT_CERTIFICATE"),
+                 Name = "qualityAssurance.question2.name",
+                 Description = new[] {"qualityAssurance.question2.description"},
+                 Id = new CriteriaTaxonomyIdentifier("d726bac9-e153-4e75-bfca-c5385587766d"),
+                 Legislations = new Legislation[] { },
+                 TenderingCriterionPropertyGroups = CriterionHelper.QualityAssurance
+            },
+            new TenderingCriterion()
+            {
+                 CriterionTypeCode =
+                   new CriterionTypeCode("CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.ENVIRONMENTAL_MANAGEMENT.ENV_INDEPENDENT_CERTIFICATE"),
+                 Name = "qualityAssurance.question3.name",
+                 Description = new[] {"qualityAssurance.question3.description"},
+                 Id = new CriteriaTaxonomyIdentifier("8ed65e48-fd0d-444f-97bd-4f58da632999"),
+                 Legislations = new Legislation[] { },
+                 TenderingCriterionPropertyGroups = CriterionHelper.QualityAssurance
+            }
+        };
+
     };
 }

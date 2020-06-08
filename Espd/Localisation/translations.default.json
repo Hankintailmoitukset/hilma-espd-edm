@@ -105,7 +105,7 @@
 
   "setupOfEconomicOperator.question.name": "Set up of economic operator",
   "setupOfEconomicOperator.question.description": "In case the information concerning turnover (general or specific) is not available for the entire period required, please state the date on which the economic operator was set up or started trading:",
-  "setupOfEconomicOperator.pleaseSpecify.description": "Please specify",
+
 
   "financialRatios.question.name": "Financial ratio",
   "financialRatios.question.description": "Concerning the financial ratios  specified in the relevant notice, the in the ESPD, the relevant notice or  or the ESPD, the economic operator declares that the actual values for the required ratios are as follows:",
@@ -130,7 +130,7 @@
   "otherEconomicOrFinancial.rating.description": "Rating",
 
   "common.lotID.description": "Lot ID",
-  "common.yourAnswer.description": "Your answer",
+  "common.yourAnswer.description": "Your answer?",
   "common.CountryOrMemberStateConcerned.description": "Country or member state concerned",
   "common.amountConcerned.description": "Amount concerned",
   "common.pleaseDescribeThem.description": "Please describe them",
@@ -163,6 +163,7 @@
   "common.thisCriterionWillBeWeighted.description": "This criterion will be weighted",
   "common.year.description": "Year",
   "common.number.description": "Number",
+  "common.pleaseSpecify.description": "Please specify",
 
   "references.question1.name": "For works contracts: performance of works of the specified type",
   "references.question1.description": "For public works contracts only: During the reference period, the economic operator has performed the following works of the specified type. Contracting authorities may require up to five years and allow experience dating from more than five years.",
@@ -230,7 +231,22 @@
   "abilitiesChecks.question.name": "Allowance of checks",
   "abilitiesChecks.question.description": "For complex products or services to be supplied or, exceptionally, for products or services which are required for a special purpose: The economic operator will allow checks  to be conducted on the production capacities or the technical capacity of the economic operator and, where necessary, on the means of study and research which are available to it and on the quality control measures? The check is to be performed by the contracting authority or, in case the latter consents to this, on its behalf by a competent official body of the country in which the supplier or service provider is established.",
   "abilitiesChecks.doYouAllowChecks.description": "Do you allow checks?",
-  "abilitiesChecks..description": "",
+
+  "subcontractingProportion.question.name": "Subcontracting proportion",
+  "subcontractingProportion.question.description": "The economic operator intends possibly to subcontract  the following proportion (i.e. percentage) of the contract. Please note that if the economic operator has decided to subcontract a part of the contract and relies on the subcontractor’s capacities to perform that part, then please fill in a separate ESPD for such subcontractors, see Part II, Section C above.",
+
+  "samplesCertificates.question1.name": "For supply contracts: samples, descriptions or photographs without certification of authenticity",
+  "samplesCertificates.question1.description": "For public supply contracts: The economic operator will supply the required samples, descriptions or photographs of the products to be supplied, which do not need to be accompanied by certifications of authenticity.",
+  "samplesCertificates.question2.name": "For supply contracts: samples, descriptions or photographs with certification of authenticity",
+  "samplesCertificates.question2.description": "For public supply contracts: The economic operator will supply the required samples, descriptions or photographs of the products to be supplied and will provide certifications of authenticity where applicable.",
+
+  "qualityAssurance.question1.name": "For supply contracts: certificates by quality control institutes",
+  "qualityAssurance.question1.description": "Can the economic operator provide the required certificates drawn up by official quality control institutes or agencies of recognised competence attesting the conformity of products clearly identified by references to the technical specifications or standards, which are set out in the relevant notice or the in the ESPD, the relevant notice or ?",
+  "qualityAssurance.question2.name": "Certificates by independent bodies about quality assurance standards",
+  "qualityAssurance.question2.description": "Will the economic operator be able to produce certificates drawn up by independent bodies attesting that the economic operator complies with the required quality assurance standards, including accessibility for disabled persons?",
+  "qualityAssurance.question3.name": "Certificates by independent bodies about environmental management systems or standards",
+  "qualityAssurance.question3.description": "Will the economic operator be able to produce certificates drawn up by independent bodies attesting that the economic operator complies with the required environmental management systems or standards?",
+  "qualityAssurance.pleaseExplainWhyAndState.description": "If not, please explain why and state which other means of proof can be provided:",
 
   "financialRatioType.R11": "Assets to Equity ratio",
   "financialRatioType.R12": "Liabilities to Equity ratio",
