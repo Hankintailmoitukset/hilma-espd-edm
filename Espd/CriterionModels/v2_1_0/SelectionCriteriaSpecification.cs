@@ -142,7 +142,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                     },
                                 }
                             },
-                            CriterionHelper.TurnOverisThisInformationAvailableElectronically
+                            CriterionHelper.IsThisInformationAvailableElectronically
                         }
                     }
                 }
@@ -211,7 +211,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                           }
                         }
                       },
-                      CriterionHelper.TurnOverisThisInformationAvailableElectronically
+                      CriterionHelper.IsThisInformationAvailableElectronically
                     }
                   }
                 }
@@ -455,7 +455,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                    }
                                  }
                                },
-                             CriterionHelper.TurnOverisThisInformationAvailableElectronically
+                             CriterionHelper.IsThisInformationAvailableElectronically
                          }
                     }
                 }

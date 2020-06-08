@@ -130,7 +130,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                         SubsidiaryTenderingCriterionPropertyGroups = TenderingCriterionURLGroup
                     }
                 };
-        public static TenderingCriterionPropertyGroup TurnOverisThisInformationAvailableElectronically =>
+        public static TenderingCriterionPropertyGroup IsThisInformationAvailableElectronically =>
             new TenderingCriterionPropertyGroup()
             {
                 _cardinality = CardinalityMetadata.ExactlyOne,
@@ -1468,7 +1468,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                            }
                        }
                    },
-                   TurnOverisThisInformationAvailableElectronically
+                   IsThisInformationAvailableElectronically
                  }
             }
         };
