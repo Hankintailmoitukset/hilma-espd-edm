@@ -24,8 +24,10 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
             AbilitiesFacilities,
             AbilitiesEducation,
             AbilitiesChecks,
-            AbilitiesStaff
-
+            AbilitiesStaff,
+            SubcontractingProportion,
+            SamplesCertificates,
+            QualityAssurance
 
         }.SelectMany(c => c);
 
@@ -1445,7 +1447,6 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                  TenderingCriterionPropertyGroups = CriterionHelper.AbilitiesStaff
             }
         };
-
         public TenderingCriterion[] SubcontractingProportion => new[]
         {
             new TenderingCriterion()
@@ -1515,7 +1516,6 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                  }
             }
         };
-
         public TenderingCriterion[] SamplesCertificates => new[]
         {
             new TenderingCriterion()
