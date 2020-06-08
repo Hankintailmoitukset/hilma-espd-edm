@@ -17,12 +17,12 @@ namespace Hilma.Espd.EDM.CriterionModels
       var procurementProjectLots = lotIds.Any()
         ? lotIds.Select(l => new ProcurementProjectLot()
         {
-          ID = new IdentifierType(l)
+          ID = new EuComGrowId(l)
         }) : 
         new[] {new ProcurementProjectLot()
         {
-          ID = new IdentifierType("0")
-        }};  
+          ID = new EuComGrowId("0")
+        }}; 
 
       var criterionFactory = new CriterionFactory();
       return new QualificationApplicationRequest()

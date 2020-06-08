@@ -42,22 +42,47 @@ namespace Hilma.Espd.Tests
     {
       var factory = new QualificationApplicationFactory();
       var uuid = Guid.NewGuid();
+      var lotIds = new []{ "Lot 1", "Lot 2"};
       var qar = factory.CreateEspd2_1_0SelfContainedRequest(
         new IdentifierType("TEST-123") {SchemeAgencyID = "TEST"},
         new IdentifierType("TEST-REF-111") {SchemeAgencyID = "TEST"},
         uuid,
-        new []{ "Lot 1", "Lot 2"});
+        lotIds);
  
       var suitabilityCriterion = new CriterionSpecification().SelectionCriteria.Suitability.First();
       qar.TenderingCriteria = qar.TenderingCriteria.Union(new[] {suitabilityCriterion}).ToArray();
 
-      qar.FinalizeDocument();
+      qar.FinalizeDocument(lotIds);
+
       var lotProperties =
         suitabilityCriterion.DescendantProperties()
           .Where(p => Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier)).ToArray();
       Assert.AreEqual(2, lotProperties.Length, "Should have two lot properties");
       Assert.AreEqual("Lot 1", lotProperties[0].ExpectedID.Value);
       Assert.AreEqual("Lot 2", lotProperties[1].ExpectedID.Value);
+    }
+
+    [TestMethod]
+    public void TestLotFinalize_SingleLotSelected()
+    {
+      var factory = new QualificationApplicationFactory();
+      var uuid = Guid.NewGuid();
+      var qar = factory.CreateEspd2_1_0SelfContainedRequest(
+        new IdentifierType("TEST-123") { SchemeAgencyID = "TEST" },
+        new IdentifierType("TEST-REF-111") { SchemeAgencyID = "TEST" },
+        uuid,
+        new[] { "Lot 1", "Lot 2" });
+
+      var suitabilityCriterion = new CriterionSpecification().SelectionCriteria.Suitability.First();
+      qar.TenderingCriteria = qar.TenderingCriteria.Union(new[] { suitabilityCriterion }).ToArray();
+
+      qar.FinalizeDocument( new []{ "Lot 1"});
+
+      var lotProperties =
+        suitabilityCriterion.DescendantProperties()
+          .Where(p => Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier)).ToArray();
+      Assert.AreEqual(1, lotProperties.Length, "Should have one lot property");
+      Assert.AreEqual("Lot 1", lotProperties[0].ExpectedID.Value);
     }
   }
 }
