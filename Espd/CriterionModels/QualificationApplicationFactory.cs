@@ -10,6 +10,10 @@ namespace Hilma.Espd.EDM.CriterionModels
   {
     public QualificationApplicationRequest CreateEspd2_1_0SelfContainedRequest(IdentifierType identifier, IdentifierType contractFolderId, Guid uuid, string[] lotIds )
     {
+      if (identifier == null) throw new ArgumentNullException(nameof(identifier));
+      if (contractFolderId == null) throw new ArgumentNullException(nameof(contractFolderId));
+      if (lotIds == null) throw new ArgumentNullException(nameof(lotIds));
+
       var procurementProjectLots = lotIds.Any()
         ? lotIds.Select(l => new ProcurementProjectLot()
         {
