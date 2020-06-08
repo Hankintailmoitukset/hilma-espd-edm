@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using Hilma.Espd.EDM.CriterionModels;
-using Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers;
+﻿using System.ComponentModel.DataAnnotations;
 using Hilma.UBL.Attributes;
 using Hilma.UBL.CommonAggregateComponents;
 using Hilma.UBL.CommonExtensionComponents;
 using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace Hilma.Espd.EDM
+namespace Hilma.Espd.EDM.CriterionModels
 {
   [Contract]
   public class QualificationApplicationRequest
@@ -174,36 +169,5 @@ namespace Hilma.Espd.EDM
     /// <remarks>For procurement procedures above the threshold it is compulsory to make reference to the Contract Notice of the procedure published in TED. See section "Reference to the Contract Notice" for a complete example.</remarks>
     public AdditionalDocumentReference[] AdditionalDocumentReferences { get; set; }
     
-    /// <summary>
-    /// Finalize document properties
-    /// </summary>
-    public void FinalizeDocument()
-    {
-      void FinalizeGroup(IEnumerable<TenderingCriterionPropertyGroup> groups)
-      {
-        if( groups == null ){
-          return;
-        }
-
-        foreach (var group in groups)
-        {
-          if( group?.TenderingCriterionProperties != null)
-          {
-            foreach (var property in group.TenderingCriterionProperties)
-            {
-              property.Id = EuComGrowId.Random();
-            }
-          }
-
-          FinalizeGroup(group?.SubsidiaryTenderingCriterionPropertyGroups);
-        }
-      }
-
-
-      foreach (var criterion in TenderingCriteria ?? Enumerable.Empty<TenderingCriterion>())
-      {
-        FinalizeGroup(criterion?.TenderingCriterionPropertyGroups);
-      }
-    }
   }
 }

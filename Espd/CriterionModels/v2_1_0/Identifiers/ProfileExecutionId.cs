@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net.Http.Headers;
-using System.Text;
-using Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers;
-
-namespace Hilma.Espd.EDM.CriterionModels
+﻿namespace Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers
 {
   public class ProfileExecutionId : EuComGrowId
   {

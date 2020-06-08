@@ -11,6 +11,24 @@ namespace Hilma.UBL.PrimitiveTypes
   [Contract]
   public class NormalizedString
   {
+    protected bool Equals(NormalizedString other)
+    {
+      return _value == other._value;
+    }
+
+    public override bool Equals(object obj)
+    {
+      if (ReferenceEquals(null, obj)) return false;
+      if (ReferenceEquals(this, obj)) return true;
+      if (obj.GetType() != this.GetType()) return false;
+      return Equals((NormalizedString) obj);
+    }
+
+    public override int GetHashCode()
+    {
+      return (_value != null ? _value.GetHashCode() : 0);
+    }
+
     private string _value = string.Empty;
 
     [Required]

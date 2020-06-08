@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers;
 using Hilma.UBL.CommonAggregateComponents;
 using Hilma.UBL.UnqualifiedDataTypes;

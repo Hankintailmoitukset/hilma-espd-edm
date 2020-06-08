@@ -14,7 +14,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
 
     public ExclusionGroundsSpecification ExclusionGrounds { get; } = new ExclusionGroundsSpecification();
 
-    private SelectionCriteriaSpecification SelectionCriteria { get; } = new SelectionCriteriaSpecification();
+    public SelectionCriteriaSpecification SelectionCriteria { get; } = new SelectionCriteriaSpecification();
 
     public IEnumerable<TenderingCriterion> AllCriteria => new[]
     {

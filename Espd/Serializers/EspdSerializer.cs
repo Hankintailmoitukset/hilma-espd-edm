@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Xml.Linq;
+using Hilma.Espd.EDM.CriterionModels;
 using Hilma.UBL.Serializers;
 
 namespace Hilma.Espd.EDM.Serializers

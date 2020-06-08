@@ -1,6 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using Hilma.UBL.Attributes;
-using Hilma.UBL.PrimitiveTypes;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
@@ -90,7 +91,7 @@ namespace Hilma.UBL.CommonAggregateComponents
       public bool FulfilmentIndicatorType { get; set; }
 
       public string FulfilmentIndicatorTypeCodeType { get; set; }
-      
+
   }
 
   //public static class TenderingCriterionSerializer

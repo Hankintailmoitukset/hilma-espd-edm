@@ -10,6 +10,31 @@ namespace Hilma.UBL.UnqualifiedDataTypes
   [Contract]
   public class MeasureType : DecimalType
   {
+    protected bool Equals(MeasureType other)
+    {
+      return base.Equals(other) && UnitCode == other.UnitCode && UnitCodeListID == other.UnitCodeListID && UnitCodeListAgencyName == other.UnitCodeListAgencyName;
+    }
+
+    public override bool Equals(object obj)
+    {
+      if (ReferenceEquals(null, obj)) return false;
+      if (ReferenceEquals(this, obj)) return true;
+      if (obj.GetType() != this.GetType()) return false;
+      return Equals((MeasureType) obj);
+    }
+
+    public override int GetHashCode()
+    {
+      unchecked
+      {
+        int hashCode = base.GetHashCode();
+        hashCode = (hashCode * 397) ^ (UnitCode != null ? UnitCode.GetHashCode() : 0);
+        hashCode = (hashCode * 397) ^ (UnitCodeListID != null ? UnitCodeListID.GetHashCode() : 0);
+        hashCode = (hashCode * 397) ^ (UnitCodeListAgencyName != null ? UnitCodeListAgencyName.GetHashCode() : 0);
+        return hashCode;
+      }
+    }
+
     /// <summary>
     /// The unit of the quantity
     /// </summary>

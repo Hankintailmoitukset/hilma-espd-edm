@@ -10,6 +10,30 @@ namespace Hilma.UBL.UnqualifiedDataTypes
   [Contract]
   public class AmountType : DecimalType
   {
+    protected bool Equals(AmountType other)
+    {
+      return base.Equals(other) && CurrencyID == other.CurrencyID && CurrencyCodeListVersionID == other.CurrencyCodeListVersionID;
+    }
+
+    public override bool Equals(object obj)
+    {
+      if (ReferenceEquals(null, obj)) return false;
+      if (ReferenceEquals(this, obj)) return true;
+      if (obj.GetType() != this.GetType()) return false;
+      return Equals((AmountType) obj);
+    }
+
+    public override int GetHashCode()
+    {
+      unchecked
+      {
+        int hashCode = base.GetHashCode();
+        hashCode = (hashCode * 397) ^ (CurrencyID != null ? CurrencyID.GetHashCode() : 0);
+        hashCode = (hashCode * 397) ^ (CurrencyCodeListVersionID != null ? CurrencyCodeListVersionID.GetHashCode() : 0);
+        return hashCode;
+      }
+    }
+
     /// <summary>
     /// The currency of the amount.
     /// </summary>

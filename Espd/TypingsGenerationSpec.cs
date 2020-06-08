@@ -1,4 +1,5 @@
-﻿using TypeGen.Core.SpecGeneration;
+﻿using Hilma.Espd.EDM.CriterionModels;
+using TypeGen.Core.SpecGeneration;
 
 namespace Hilma.Espd.EDM
 {
