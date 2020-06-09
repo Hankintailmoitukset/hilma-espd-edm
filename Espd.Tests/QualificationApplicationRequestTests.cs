@@ -29,11 +29,12 @@ namespace Hilma.Espd.Tests
 
       var firstPropertyIdAfter = qar.TenderingCriteria[0].TenderingCriterionPropertyGroups[0]
         .TenderingCriterionProperties[0].Id.Value;
-
+      var assertedCriteria = qar.TenderingCriteria.Last();
+      Assert.AreEqual(suitabilityCriterion.Name, assertedCriteria.Name);
       Assert.AreNotEqual(firstPropertyId, firstPropertyIdAfter, "Id, should not be the same");
 
       Assert.IsFalse(
-        suitabilityCriterion.DescendantProperties()
+        assertedCriteria.DescendantProperties()
           .Any(p => Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier)), "Lots should have been removed");
     }
 
@@ -53,9 +54,12 @@ namespace Hilma.Espd.Tests
       qar.TenderingCriteria = qar.TenderingCriteria.Union(new[] {suitabilityCriterion}).ToArray();
 
       qar.FinalizeDocument(lotIds);
+      
+      var assertedCriteria = qar.TenderingCriteria.Last();
+      Assert.AreEqual(suitabilityCriterion.Name, assertedCriteria.Name);
 
       var lotProperties =
-        suitabilityCriterion.DescendantProperties()
+        assertedCriteria.DescendantProperties()
           .Where(p => Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier)).ToArray();
       Assert.AreEqual(2, lotProperties.Length, "Should have two lot properties");
       Assert.AreEqual("Lot 1", lotProperties[0].ExpectedID.Value);
@@ -78,8 +82,11 @@ namespace Hilma.Espd.Tests
 
       qar.FinalizeDocument( new []{ "Lot 1"});
 
+      var assertedCriteria = qar.TenderingCriteria.Last();
+      Assert.AreEqual(suitabilityCriterion.Name, assertedCriteria.Name);
+
       var lotProperties =
-        suitabilityCriterion.DescendantProperties()
+        assertedCriteria.DescendantProperties()
           .Where(p => Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier)).ToArray();
       Assert.AreEqual(1, lotProperties.Length, "Should have one lot property");
       Assert.AreEqual("Lot 1", lotProperties[0].ExpectedID.Value);

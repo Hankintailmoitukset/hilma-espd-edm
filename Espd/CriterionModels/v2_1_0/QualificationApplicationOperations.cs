@@ -68,7 +68,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
       {
         var isLotGroup = group.TenderingCriterionProperties
           .Any(p =>
-            Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier) );
+            ResponseDataTypeCode.LotIdentifier.Equals(p.ValueDataTypeCode));
 
         if (!procurementHasLots && isLotGroup)
         {
@@ -78,7 +78,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
 
         foreach (var property in group.TenderingCriterionProperties)
         {
-          if (Equals(property.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier))
+          if (ResponseDataTypeCode.LotIdentifier.Equals(property.ValueDataTypeCode))
           {
             // Duplicate lot property for each lot 
             foreach (var projectLot in selectedLots)
