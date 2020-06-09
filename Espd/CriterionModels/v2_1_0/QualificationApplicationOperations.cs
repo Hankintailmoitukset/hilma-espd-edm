@@ -67,8 +67,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
         TenderingCriterionPropertyGroup group)
       {
         var isLotGroup = group.TenderingCriterionProperties
-          .Any(p =>
-            ResponseDataTypeCode.LotIdentifier.Equals(p.ValueDataTypeCode));
+          .Any(IsLotIdentifier);
 
         if (!procurementHasLots && isLotGroup)
         {
@@ -78,7 +77,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
 
         foreach (var property in group.TenderingCriterionProperties)
         {
-          if (ResponseDataTypeCode.LotIdentifier.Equals(property.ValueDataTypeCode))
+          if (IsLotIdentifier(property))
           {
             // Duplicate lot property for each lot 
             foreach (var projectLot in selectedLots)
@@ -100,6 +99,14 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
             property.Id = EuComGrowId.Random();
             yield return property;
           }
+        }
+
+        bool IsLotIdentifier(TenderingCriterionProperty property)
+        {
+          if (property == null || property.ValueDataTypeCode == null)
+            return false;
+
+          return property.ValueDataTypeCode.Value == ResponseDataTypeCode.LotIdentifier.Value;
         }
       }
     }
