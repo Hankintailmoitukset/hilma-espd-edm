@@ -723,7 +723,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                         new TenderingCriterionPropertyGroup()
                                         {
                                             Description = new[] {"references.theRequirementsApplyToTheFollowingLots.description"},
-                                            _cardinality = CardinalityMetadata.ZeroOrMore,
+                                            _cardinality = CardinalityMetadata.Optional,
                                             Id = new CriteriaTaxonomyIdentifier("167ab253-4fb7-4e45-81be-b049fba44b3a"),
                                             PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                             TenderingCriterionProperties = new[]
