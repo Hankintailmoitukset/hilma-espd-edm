@@ -103,7 +103,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
 
         bool IsLotIdentifier(TenderingCriterionProperty property)
         {
-          if (property == null || property.ValueDataTypeCode == null)
+          if (property?.ValueDataTypeCode == null)
             return false;
 
           return property.ValueDataTypeCode.Value == ResponseDataTypeCode.LotIdentifier.Value;

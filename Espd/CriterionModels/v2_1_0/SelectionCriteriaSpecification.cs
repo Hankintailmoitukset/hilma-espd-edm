@@ -688,7 +688,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                             _cardinality = CardinalityMetadata.ExactlyOne,
                             Id = EuComGrowId.Random(),
                             TypeCode = CriterionElementType.Caption,
-                            Description = "common.lotsTheEequirementAppliesTo.description",
+                            Description = "common.lotsTheRequirementAppliesTo.description",
                             ValueDataTypeCode = ResponseDataTypeCode.None
                           }
                         },
@@ -842,7 +842,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                              _cardinality = CardinalityMetadata.Optional,
                              Id = EuComGrowId.Random(),
                              TypeCode = CriterionElementType.Caption,
-                             Description = "common.lotsTheEequirementAppliesTo.description",
+                             Description = "common.lotsTheRequirementAppliesTo.description",
                              ValueDataTypeCode = ResponseDataTypeCode.None
                            }
                          },

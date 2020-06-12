@@ -151,7 +151,7 @@
   "common.isThisInformationAvailableElectronically.description": "Is this information available electronically?",
   "common.evidenceSupplied.description": "Evidence Supplied",
   "common.numberOfFiscalYears.description": "Number of fiscal years",
-  "common.lotsTheEequirementAppliesTo.description": "Lots the requirement applies to",
+  "common.lotsTheRequirementAppliesTo.description": "Lots the requirement applies to",
   "common.minimumRequirement.description": "Minimum requirement",
   "common.requirement.description": "Requirement",
   "common.cpvCode.description": "CPV Code",
