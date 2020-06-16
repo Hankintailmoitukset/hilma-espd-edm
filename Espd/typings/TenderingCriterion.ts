@@ -5,6 +5,7 @@ import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
 import { Legislation } from './Legislation'
 import { TenderingCriterionPropertyGroup } from './TenderingCriterionPropertyGroup'
+import { ContractType } from './ContractType'
 
 import assign from 'lodash.assign'
 
@@ -26,4 +27,5 @@ export class TenderingCriterion {
     tenderingCriterionPropertyGroups?: TenderingCriterionPropertyGroup[]
     fulfilmentIndicatorType?: boolean
     fulfilmentIndicatorTypeCodeType?: string
+    applicableContractType?: ContractType
 }
