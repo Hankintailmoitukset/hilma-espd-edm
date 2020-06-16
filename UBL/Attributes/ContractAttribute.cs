@@ -6,8 +6,7 @@ namespace Hilma.UBL.Attributes
     /// Data contract attribute to signal generation of Typescript typings
     /// </summary>
     [AttributeUsage(AttributeTargets.Class |  
-                           AttributeTargets.Struct | 
-                           AttributeTargets.Enum ) ] 
+                           AttributeTargets.Struct)] 
     public class ContractAttribute : Attribute {
 
     }

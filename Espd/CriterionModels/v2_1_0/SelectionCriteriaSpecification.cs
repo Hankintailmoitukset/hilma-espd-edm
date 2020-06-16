@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers;
 using Hilma.UBL.CommonAggregateComponents;
+using UBL.Enums;
 
 namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
 {
@@ -1040,7 +1041,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                  Description = new[] {"references.question1.description"},
                  Id = new CriteriaTaxonomyIdentifier("cdd3bb3e-34a5-43d5-b668-2aab86a73822"),
                  Legislations = new Legislation[] { },
-                 TenderingCriterionPropertyGroups = CriterionHelper.References
+                 TenderingCriterionPropertyGroups = CriterionHelper.References,
+                 ApplicableContractType = ContractType.Works
             },
             new TenderingCriterion()
             {
@@ -1050,7 +1052,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                  Description = new[] {"references.question2.description"},
                  Id = new CriteriaTaxonomyIdentifier("3a18a175-1863-4b1d-baef-588ce61960ca"),
                  Legislations = new Legislation[] { },
-                 TenderingCriterionPropertyGroups = CriterionHelper.References
+                 TenderingCriterionPropertyGroups = CriterionHelper.References,
+                 ApplicableContractType = ContractType.Supplies
             },
             new TenderingCriterion()
             {
@@ -1060,7 +1063,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                  Description = new[] {"references.question3.description"},
                  Id = new CriteriaTaxonomyIdentifier("5e506c16-26ab-4e32-bb78-b27f87dc0565"),
                  Legislations = new Legislation[] { },
-                 TenderingCriterionPropertyGroups = CriterionHelper.References
+                 TenderingCriterionPropertyGroups = CriterionHelper.References,
+                 ApplicableContractType = ContractType.Services
             }
         };
         public TenderingCriterion[] AbilitiesPersons => new[]
@@ -1083,7 +1087,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                  Description = new[] {"abilitiesPersons.question2.description"},
                  Id = new CriteriaTaxonomyIdentifier("c599c130-b29f-461e-a187-4e16c7d40db7"),
                  Legislations = new Legislation[] { },
-                 TenderingCriterionPropertyGroups = CriterionHelper.AbilitiesPersons
+                 TenderingCriterionPropertyGroups = CriterionHelper.AbilitiesPersons,
+                 ApplicableContractType = ContractType.Works
             }
         };
         public TenderingCriterion[] AbilitiesFacilities => new[]
@@ -1526,7 +1531,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                  Description = new[] {"samplesCertificates.question1.description"},
                  Id = new CriteriaTaxonomyIdentifier("bdf0601d-2480-4250-b870-658d0ee95be6"),
                  Legislations = new Legislation[] { },
-                 TenderingCriterionPropertyGroups = CriterionHelper.SamplesCertificates
+                 TenderingCriterionPropertyGroups = CriterionHelper.SamplesCertificates,
+                 ApplicableContractType = ContractType.Supplies
             },
             new TenderingCriterion()
             {
@@ -1536,7 +1542,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                  Description = new[] {"samplesCertificates.question2.description"},
                  Id = new CriteriaTaxonomyIdentifier("7662b7a9-bcb8-4763-a0a7-7505d8e8470d"),
                  Legislations = new Legislation[] { },
-                 TenderingCriterionPropertyGroups = CriterionHelper.SamplesCertificates
+                 TenderingCriterionPropertyGroups = CriterionHelper.SamplesCertificates,
+                 ApplicableContractType = ContractType.Supplies
             }
 
         };
@@ -1550,7 +1557,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                  Description = new[] {"qualityAssurance.question1.description"},
                  Id = new CriteriaTaxonomyIdentifier("a7669d7d-9297-43e1-9d10-691a1660187c"),
                  Legislations = new Legislation[] { },
-                 TenderingCriterionPropertyGroups = CriterionHelper.QualityAssurance
+                 TenderingCriterionPropertyGroups = CriterionHelper.QualityAssurance,
+                 ApplicableContractType = ContractType.Supplies
             },
             new TenderingCriterion()
             {

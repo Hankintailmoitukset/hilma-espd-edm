@@ -57,6 +57,9 @@
     <None Update="typings\ContractingPartyTypeType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\ContractingPartyTypeType.cs</CustomToolNamespace>
     </None>
+    <None Update="typings\ContractType.ts">
+      <CustomToolNamespace>..\UBL\Enums\ContractType.cs</CustomToolNamespace>
+    </None>
     <None Update="typings\CountryIdentificationCodeType.ts">
       <CustomToolNamespace>..\UBL\QualifiedDataType\CountryIdentificationCodeType.cs</CustomToolNamespace>
     </None>
@@ -121,7 +124,7 @@
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\ProcurementProjectLot.cs</CustomToolNamespace>
     </None>
     <None Update="typings\QualificationApplicationRequest.ts">
-      <CustomToolNamespace>QualificationApplicationRequest.cs</CustomToolNamespace>
+      <CustomToolNamespace>CriterionModels\QualificationApplicationRequest.cs</CustomToolNamespace>
     </None>
     <None Update="typings\QuantityType.ts">
       <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\QuantityType.cs</CustomToolNamespace>

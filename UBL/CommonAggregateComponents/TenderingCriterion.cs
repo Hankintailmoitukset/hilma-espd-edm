@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using Hilma.UBL.Attributes;
 using Hilma.UBL.UnqualifiedDataTypes;
+using UBL.Enums;
 
 namespace Hilma.UBL.CommonAggregateComponents
 {
@@ -91,6 +92,11 @@ namespace Hilma.UBL.CommonAggregateComponents
       public bool FulfilmentIndicatorType { get; set; }
 
       public string FulfilmentIndicatorTypeCodeType { get; set; }
+      
+      /// <summary>
+      /// This criterion is relevant only if the contract type matches
+      /// </summary>
+      public ContractType ApplicableContractType { get; set; }
 
   }
 
