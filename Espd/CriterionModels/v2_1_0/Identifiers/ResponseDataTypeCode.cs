@@ -69,6 +69,11 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers
     public static CodeType Identifier => new ResponseDataTypeCode("IDENTIFIER");
 
     /// <summary>
+    /// Economic operator identifier
+    /// </summary>
+    public static CodeType EconomicOperatorIdentifier => new ResponseDataTypeCode("ECONOMIC_OPERATOR_IDENTIFIER");
+
+    /// <summary>
     /// Country code
     /// </summary>
     public static CodeType CountryCode => new ResponseDataTypeCode("CODE_COUNTRY");
@@ -95,5 +100,11 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers
     /// Quantity
     /// </summary>
     public static CodeType QuantityYear => new ResponseDataTypeCode("QUANTITY_YEAR");
+
+    /// <summary>
+    /// Percentage
+    /// </summary>
+    public static CodeType Percentage => new ResponseDataTypeCode("PERCENTAGE");
+
     }
 }
