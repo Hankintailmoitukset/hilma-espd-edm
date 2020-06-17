@@ -16,10 +16,13 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
 
     public SelectionCriteriaSpecification SelectionCriteria { get; } = new SelectionCriteriaSpecification();
 
+    public OtherCriteriaSpecification OtherCriteria { get; } = new OtherCriteriaSpecification();
+
     public IEnumerable<TenderingCriterion> AllCriteria => new[]
     {
       ExclusionGrounds.AllCriteria,
-      SelectionCriteria.AllCriteria
+      SelectionCriteria.AllCriteria,
+      OtherCriteria.AllCriteria
 
     }.SelectMany(c => c);
 
