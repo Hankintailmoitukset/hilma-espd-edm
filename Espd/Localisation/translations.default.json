@@ -122,7 +122,6 @@
 
   "otherEconomicOrFinancial.question.name": "Other economic or financial requirements",
   "otherEconomicOrFinancial.question.description": "Concerning the other economic or financial requirements, if any, that may have been specified in the relevant notice or in the ESPD, the economic operator declares that:",
-  "otherEconomicOrFinancial.lotID.description": "Lot ID",
   "otherEconomicOrFinancial.selectTheTypeOfRequirement.description": "Select the type of requirement",
   "otherEconomicOrFinancial.descriptionOfTheEconomicfinancial.description": "Description of the economic or financial requirement",
   "otherEconomicOrFinancial.minimumRating.description": "Minimum rating",
@@ -164,6 +163,9 @@
   "common.year.description": "Year",
   "common.number.description": "Number",
   "common.pleaseSpecify.description": "Please specify",
+  "common.nameOfTheEntity.description": "Name of the entity",
+  "common.iDOfTheEntity.description": "ID of the entity",
+  "common.activityOfTheEntity.description": "Activity of the entity (for this specific procedure)",
 
   "references.question1.name": "For works contracts: performance of works of the specified type",
   "references.question1.description": "For public works contracts only: During the reference period, the economic operator has performed the following works of the specified type. Contracting authorities may require up to five years and allow experience dating from more than five years.",
@@ -240,6 +242,44 @@
   "samplesCertificates.question2.name": "For supply contracts: samples, descriptions or photographs with certification of authenticity",
   "samplesCertificates.question2.description": "For public supply contracts: The economic operator will supply the required samples, descriptions or photographs of the products to be supplied and will provide certifications of authenticity where applicable.",
 
+  "otherEoSheltered.question.name": "EO is a sheltered workshop",
+  "otherEoSheltered.question.description": "Only in case the procurement is reserved: is the economic operator a sheltered workshop, a 'social business' or will it provide for the performance of the contract in the context of sheltered employment programmes?",
+  "otherEoSheltered.whatIsTheCorrespondingPercentage.description": "What is the corresponding percentage of disabled or disadvantaged workers?",
+  "otherEoSheltered.ifRequiredPleaseProvideDetails.description": "If required, please provide details on whether the employees concerned belong to a specific category of disabled or disadvantaged workers?",
+
+  "otherEoPqs.question.name": "EO registered in a PQS",
+  "otherEoPqs.question.description": "If applicable, is the economic operator registered on an official list of approved economic operators or does it have an equivalent certificate (e.g. under a national (pre)qualification system)?",
+  "otherEoPqs.pleaseProvideTheNameOfCertificate.description": "Please provide the name of the list or certificate and the relevant registration or certification number, if applicable",
+  "otherEoPqs.ifTheCertificateOfRegistrationOrCertificationIsAvailableElectronically.description": "If the certificate of registration or certification is available electronically, please state where",
+  "otherEoPqs.pleaseStateTheReferencesRegistration.description": "Please state the references on which the registration or certification is based, and, where applicable, the classification obtained in the official list",
+  "otherEoPqs.doesTheEegistrationOrCertificationCover.description": "Does the registration or certification cover all of the required selection criteria?",
+  "otherEoPqs.willTheEconomicOperatorBeAbleToProvideCertificate.description": "Will the economic operator be able to provide a certificate with regard to the payment of social security contributions and taxes or provide information enabling the contracting authority or contracting entity to obtaining it directly by accessing a national database in any Member State that is available free of charge?",
+
+  "otherEoGroups.question.name": "EO together with others",
+  "otherEoGroups.question.description": "Is the economic operator participating in the procurement procedure together with others?",
+  "otherEoGroups.pleaseIndicateTheRoleOfTheEconomicOperator.description": "Please indicate the role of the economic operator in the group (leader, responsible for specific tasks...)",
+  "otherEoGroups.pleaseIdentifyTheOtherEconomicOperators.description": "Please identify the other economic operators participating in the procurement procedure together",
+  "otherEoGroups.whereApplicableNameOfTheParticipatingGroup.description": "Where applicable, name of the participating group:",
+
+  "otherEoReliedOnEntities.question.name": "Relied on entities",
+  "otherEoReliedOnEntities.question.description": "Does the economic operator rely on the capacities of other entities in order to meet the selection criteria set out under Part IV and the criteria and rules (if any) set out under Part V below?",
+
+  "otherEoNotReliedOnEntities.question.name": "Not relied on entities",
+  "otherEoNotReliedOnEntities.question.description": "Does the economic operator intend to subcontract any share of the contract to third parties?",
+
+  "otherEoLots.question.name": "Lots the EO tenders to",
+  "otherEoLots.question.description": "Where applicable, indication of the lot(s) for which the economic operator wishes to tender",
+
+
+  "eoReductionOfCandidates.question.name": "Reduction of the number of qualified candidates",
+  "eoReductionOfCandidates.question.description": "The economic operator declares that It meets the objective and non discriminatory criteria or rules to be applied in order to limit the number of candidates in the following way:",
+
+  "OtherCaLots.question.name": "CA Lots",
+  "OtherCaLots.question.description": "Please take into account the following requirements regarding the lots of this procurement procedure:",
+  "OtherCaLots.tendersMayBeSubmittedFor.description": "Tenders may be submitted for",
+  "OtherCaLots.maximumNumberOfLots.description": "Maximum number of lots",
+  "OtherCaLots.maximumNumberOfLotsThatMayBeAwarded.description": "Maximum number of lots that may be awarded to one tenderer",
+
   "qualityAssurance.question1.name": "For supply contracts: certificates by quality control institutes",
   "qualityAssurance.question1.description": "Can the economic operator provide the required certificates drawn up by official quality control institutes or agencies of recognised competence attesting the conformity of products clearly identified by references to the technical specifications or standards, which are set out in the relevant notice or the in the ESPD, the relevant notice or ?",
   "qualityAssurance.question2.name": "Certificates by independent bodies about quality assurance standards",
@@ -261,7 +301,7 @@
   "financialRatioType.R25": "Interest and similar charges/Gross operating profit",
   "financialRatioType.R26": "Net financial income/Gross operating profit",
   "financialRatioType.R27": "Gross operating profit/Total net debt",
-  "financialRatioType.R31": "Gross value added/Net turnove",
+  "financialRatioType.R31": "Gross value added/Net turnover",
   "financialRatioType.R32": "Gross operating profit/Net turnover (ROS)",
   "financialRatioType.R33": "EBITDA/Net turnove",
   "financialRatioType.R34": "Net operating profit/Net turnover",

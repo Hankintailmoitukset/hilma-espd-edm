@@ -861,7 +861,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                      _cardinality = CardinalityMetadata.Optional,
                                      Id = EuComGrowId.Random(),
                                      TypeCode = CriterionElementType.Requirement,
-                                     Description = "otherEconomicOrFinancial.lotID.description",
+                                     Description = "common.lotID.description",
                                      ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
                                    }
                                  }
@@ -1001,7 +1001,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                      _cardinality = CardinalityMetadata.ExactlyOne,
                                      Id = EuComGrowId.Random(),
                                      TypeCode = CriterionElementType.Question,
-                                     Description = "otherEconomicOrFinancial.lotID.description",
+                                     Description = "common.lotID.description",
                                      ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
                                    }
                                  },
@@ -1180,7 +1180,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                  Id = new CriteriaTaxonomyIdentifier("1be6421a-0360-449e-ae7c-ce7fad73c2c2"),
                                  PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                                  TenderingCriterionProperties = new[]
-                                 {  
+                                 {
                                     new TenderingCriterionProperty()
                                     {
                                       _cardinality = CardinalityMetadata.Optional,
