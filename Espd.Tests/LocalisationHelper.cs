@@ -2,7 +2,7 @@
 using System.IO;
 using Newtonsoft.Json;
 
-namespace Hilma.Espd.EDM.Localisation
+namespace Hilma.Espd.Tests
 {
     public class LocalisationHelper
     {
