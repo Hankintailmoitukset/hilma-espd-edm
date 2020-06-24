@@ -65,7 +65,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
             Description = new[] {"suitability.authorisationForParticularOrganisationNeeded.description"},
             Id = new CriteriaTaxonomyIdentifier("9eeb6d5c-0eb8-48e8-a4c5-5087a7c095a4"),
             Legislations = new Legislation[] { },
-            TenderingCriterionPropertyGroups = CriterionHelper.SuitabilityRegisterQuestionsGroups
+            TenderingCriterionPropertyGroups = CriterionHelper.SuitabilityRegisterQuestionsGroups,
+            ApplicableContractType = ContractType.Services
           },
           new TenderingCriterion
           {
@@ -74,7 +75,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
             Description = new[] {"suitability.membershipForParticularOrganisationNeeded.description"},
             Id = new CriteriaTaxonomyIdentifier("73f10e36-ed7a-412e-995c-aa76463e3776"),
             Legislations = new Legislation[] { },
-            TenderingCriterionPropertyGroups = CriterionHelper.SuitabilityRegisterQuestionsGroups
+            TenderingCriterionPropertyGroups = CriterionHelper.SuitabilityRegisterQuestionsGroups,
+            ApplicableContractType = ContractType.Services
           }
 
         };
