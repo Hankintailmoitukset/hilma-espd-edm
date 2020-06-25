@@ -17,7 +17,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
           Misconduct,
           ConflictOfInterest,
           EarlyTermination,
-          Misinterpretation
+          Misinterpretation,
+          PurelyNational
 
         }.SelectMany(c => c);
 
@@ -846,16 +847,13 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
             }
         };
 
-        //TODO
-        public TenderingCriterion[] PurelyNational { get; set; } = {
+    
+    public TenderingCriterion[] PurelyNational { get; set; } = {
       new TenderingCriterion
       {
         CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.NATIONAL.OTHER"),
-        Name = "Purely national exclusion grounds",
-        Description = new[]
-        {
-          "Other exclusion grounds that may be foreseen in the national legislation of the contracting authority's or contracting entity's Member State. Has the economic operator breached its obligations relating to the purely national grounds of exclusion, which are specified in the relevant notice or in the procurement documents?"
-        },
+        Name = "purelyNational.question.name",
+        Description = new[]{"purelyNational.question.description"},
         Id = new CriteriaTaxonomyIdentifier("63adb07d-db1b-4ef0-a14e-a99785cf8cf6"),
         Legislations = new Legislation[] { },
         TenderingCriterionPropertyGroups = new[]
@@ -866,6 +864,20 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
             PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
             TenderingCriterionProperties = new[]
             {
+                new TenderingCriterionProperty
+              {
+                Id = EuComGrowId.Random(),
+                TypeCode = CriterionElementType.Caption,
+                Description = "purelyNational.textDescribingTheNationalCriterion.description",
+                ValueDataTypeCode = ResponseDataTypeCode.None
+              },
+                new TenderingCriterionProperty
+              {
+                Id = EuComGrowId.Random(),
+                TypeCode = CriterionElementType.Caption,
+                Description = "purelyNational.typeOfEvidenceFromECertis.description",
+                ValueDataTypeCode = ResponseDataTypeCode.None
+              },
               new TenderingCriterionProperty
               {
                 Id = EuComGrowId.Random(),

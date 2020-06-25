@@ -128,6 +128,12 @@
   "otherEconomicOrFinancial.ratingScheme.description": "Rating scheme",
   "otherEconomicOrFinancial.rating.description": "Rating",
 
+  "purelyNational.question.name": "Purely national exclusion grounds",
+  "purelyNational.question.description": "Other exclusion grounds that may be foreseen in the national legislation of the contracting authority's or contracting entity's Member State. Has the economic operator breached its obligations relating to the purely national grounds of exclusion, which are specified in the relevant notice or in the procurement documents?",
+  "purelyNational.textDescribingTheNationalCriterion.description": "[Text describing the national criterion]",
+  "purelyNational.typeOfEvidenceFromECertis.description": "[Type of evidence from e-Certis]",
+
+
   "common.lotID.description": "Lot ID",
   "common.yourAnswer.description": "Your answer?",
   "common.CountryOrMemberStateConcerned.description": "Country or member state concerned",
