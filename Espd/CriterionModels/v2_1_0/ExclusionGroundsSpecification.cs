@@ -159,7 +159,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                             Id = EuComGrowId.Random(),
                             TypeCode = CriterionElementType.Question,
                             Description = "common.CountryOrMemberStateConcerned.description",
-                            ValueDataTypeCode = ResponseDataTypeCode.CountryCode
+                            ValueDataTypeCode = ResponseDataTypeCode.CountryCode,
+                            CodeListId = CodeListIds.CountryCodeIdentifier
                           },
                           new TenderingCriterionProperty
                           {
@@ -394,7 +395,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                 Id = EuComGrowId.Random(),
                                 TypeCode = CriterionElementType.Question,
                                 Description = "common.CountryOrMemberStateConcerned.description",
-                                ValueDataTypeCode = ResponseDataTypeCode.CountryCode
+                                ValueDataTypeCode = ResponseDataTypeCode.CountryCode,
+                                CodeListId = CodeListIds.CountryCodeIdentifier
                               },
                               new TenderingCriterionProperty
                               {

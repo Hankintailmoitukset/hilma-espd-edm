@@ -6,12 +6,14 @@
     public const string FinancialRatioType = nameof(FinancialRatioType);
     public const string BooleanGUIControlType = nameof(BooleanGUIControlType);
     public const string CurrencyCode = nameof(CurrencyCode);
+    public const string CountryCodeIdentifier = nameof(CountryCodeIdentifier);
 
     public static string[] All => new[]
     {
       FinancialRatioType, 
       BooleanGUIControlType, 
-      CurrencyCode
+      CurrencyCode,
+      CountryCodeIdentifier
     };
 
   }

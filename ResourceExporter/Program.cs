@@ -102,13 +102,13 @@ namespace ResourceExporter
 
       var identification = formSection.Element("Identification");
       var simpleCodeList = formSection.Element("SimpleCodeList");
+
       if (identification == null)
       {
         throw new NullReferenceException("code list identification was null");
       }
 
       var agency = identification.Element("Agency");
-
       var codeListContract = new CodeListContract()
       {
         ShortName = identification.Element("ShortName")?.Value,
