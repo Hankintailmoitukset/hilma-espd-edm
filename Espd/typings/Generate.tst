@@ -13,7 +13,7 @@
         ImportedTypes.Add( name );
     }
 
-    string ConvertDefault(Type type) {
+    string ConvertDefault(Type type) { 
         if (type.IsEnumerable) {
             return "= []";
         }

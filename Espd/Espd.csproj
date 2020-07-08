@@ -123,8 +123,14 @@
     <None Update="typings\ProcurementProjectLot.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\ProcurementProjectLot.cs</CustomToolNamespace>
     </None>
+    <None Update="typings\QualificationApplicationRequest - Copy.ts">
+      <CustomToolNamespace>CriterionModels\QualificationApplicationRequest - Copy.cs</CustomToolNamespace>
+    </None>
     <None Update="typings\QualificationApplicationRequest.ts">
       <CustomToolNamespace>CriterionModels\QualificationApplicationRequest.cs</CustomToolNamespace>
+    </None>
+    <None Update="typings\QualificationApplicationResponse.ts">
+      <CustomToolNamespace>CriterionModels\QualificationApplicationResponse.cs</CustomToolNamespace>
     </None>
     <None Update="typings\QuantityType.ts">
       <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\QuantityType.cs</CustomToolNamespace>
@@ -146,6 +152,9 @@
     </None>
     <None Update="typings\TenderingCriterionPropertyGroup.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\TenderingCriterionPropertyGroup.cs</CustomToolNamespace>
+    </None>
+    <None Update="typings\TenderingCriterionResponse.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\TenderingCriterionResponse.cs</CustomToolNamespace>
     </None>
     <None Update="typings\TimeType.ts">
       <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\TimeType.cs</CustomToolNamespace>
