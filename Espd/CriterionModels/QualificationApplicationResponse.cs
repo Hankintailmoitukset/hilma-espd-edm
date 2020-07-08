@@ -169,6 +169,7 @@ namespace Hilma.Espd.EDM.CriterionModels
     /// </summary>
     /// <remarks>
     public TenderingCriterionResponse[] TenderingCriterionResponses { get; set; }
+
     /// <summary>
     /// A reference to an additional document associated with this document.
     /// </summary>
