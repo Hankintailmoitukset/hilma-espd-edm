@@ -11,7 +11,7 @@ namespace Hilma.Espd.Tests
         public static QualificationApplicationRequest ScAbilitiesStaffSelfContainedRequest =>
             new QualificationApplicationRequest
             {
-                ULBVersionID = new IdentifierType { Value= "2.2" },
+                UBLVersionID = new IdentifierType { Value= "2.2" },
                 CustomizationID = new IdentifierType { Value= "urn:www.cenbii.eu:transaction:biitrdm070:ver3.0" },
                 ProfileID=new IdentifierType {Value= "4.1" },
                 ProfileExecutionID = ProfileExecutionId.Espd2_1_0SelfContained,
