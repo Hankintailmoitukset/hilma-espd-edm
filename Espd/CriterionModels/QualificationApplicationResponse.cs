@@ -15,7 +15,7 @@ namespace Hilma.Espd.EDM.CriterionModels
     /// </summary>
     /// <remarks>Use the value "2.2". Use also "OASIS-UBL-TC" for the schemeAgencyID attribute.</remarks>
     [Required]
-    public IdentifierType ULBVersionID { get; set; } = new IdentifierType("2.2") { SchemeAgencyID = "OASIS-UBL-TC" };
+    public IdentifierType UBLVersionID { get; set; } = new IdentifierType("2.2") { SchemeAgencyID = "OASIS-UBL-TC" };
 
     /// <summary>
     /// Identifies a user-defined customization of UBL for a specific use.

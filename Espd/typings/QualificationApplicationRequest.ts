@@ -21,7 +21,7 @@ export class QualificationApplicationRequest {
     
     
     ublExtensions?: UBLExtensionType[]
-    ulbVersionID?: IdentifierType
+    ublVersionID?: IdentifierType
     customizationID?: IdentifierType
     profileID?: IdentifierType
     profileExecutionID?: IdentifierType

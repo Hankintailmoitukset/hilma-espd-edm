@@ -6,6 +6,7 @@ import { DateType } from './DateType'
 import { TimeType } from './TimeType'
 import { CodeType } from './CodeType'
 import { ContractingParty } from './ContractingParty'
+import { EconomicOperatorParty } from './EconomicOperatorParty'
 import { ProcurementProject } from './ProcurementProject'
 import { ProcurementProjectLot } from './ProcurementProjectLot'
 import { TenderingCriterion } from './TenderingCriterion'
@@ -21,7 +22,7 @@ export class QualificationApplicationResponse {
     } 
     
     
-    ulbVersionID?: IdentifierType
+    ublVersionID?: IdentifierType
     customizationID?: IdentifierType
     profileID?: IdentifierType
     id?: IdentifierType
