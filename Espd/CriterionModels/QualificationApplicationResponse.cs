@@ -137,7 +137,7 @@ namespace Hilma.Espd.EDM.CriterionModels
     /// <summary>
     /// Any natural or legal person or public entity which offers the execution of works and/or a work, the supply of products or the provision of services on the market. Information about the party submitting the qualification.
     /// </summary>
-    public PartyType EconomicOperator { get; set; }
+    public EconomicOperatorParty EconomicOperatorParty { get; set; }
 
     /// <summary>
     /// An overall definition of the procurement procedure.

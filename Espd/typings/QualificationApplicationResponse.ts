@@ -6,7 +6,6 @@ import { DateType } from './DateType'
 import { TimeType } from './TimeType'
 import { CodeType } from './CodeType'
 import { ContractingParty } from './ContractingParty'
-import { PartyType } from './PartyType'
 import { ProcurementProject } from './ProcurementProject'
 import { ProcurementProjectLot } from './ProcurementProjectLot'
 import { TenderingCriterion } from './TenderingCriterion'
@@ -39,7 +38,7 @@ export class QualificationApplicationResponse {
     weightScoringMethodologyNote?: string[]
     weightingTypeCode?: CodeType
     contractingParty?: ContractingParty
-    economicOperator?: PartyType
+    economicOperatorParty?: EconomicOperatorParty
     procurementProject?: ProcurementProject
     procurementProjectLots?: ProcurementProjectLot[]
     tenderingCriteria?: TenderingCriterion[]
