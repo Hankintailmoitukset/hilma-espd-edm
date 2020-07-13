@@ -37,7 +37,6 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <summary>
     /// Contracting body address information.
     /// </summary>
-    [Required]
     public AddressType PostalAddress { get; set; }
 
     /// <summary>
