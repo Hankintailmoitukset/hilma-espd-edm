@@ -14,6 +14,7 @@ export class TenderingCriterionPropertyGroup {
     
     
     _cardinality?: string
+    _maxOccurrence?: number
     id?: IdentifierType
     name?: string
     description?: string[]

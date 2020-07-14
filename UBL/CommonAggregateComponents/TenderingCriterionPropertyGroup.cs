@@ -20,6 +20,11 @@ namespace Hilma.UBL.CommonAggregateComponents
     public string _cardinality { get; set; } = CardinalityMetadata.ExactlyOne;
 
     /// <summary>
+    /// Defines max occurrence of criterion if specifed
+    /// </summary>
+    public int? _maxOccurrence { get; set; }
+
+    /// <summary>
     /// Identifies a group of requirements uniquely.
     /// </summary>
     /// <remarks>
