@@ -33,7 +33,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
         }
 
         public TenderingCriterion[] Convictions { get; set; } = {
-            new TenderingCriterion {
+            new TenderingCriterion
+            {
                 _mandatory = true,
                 CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION"),
                 Name = "convictions.participationInCriminalOrganisation.name",
@@ -42,7 +43,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                 Legislations = new Legislation[] { },
                 TenderingCriterionPropertyGroups = CriterionHelper.ConvictionsQuestionGroup
             },
-            new TenderingCriterion {
+            new TenderingCriterion
+            {
                 _mandatory = true,
                 CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONVICTIONS.CORRUPTION"),
                 Name = "convictions.corruption.name",
@@ -51,7 +53,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                 Legislations = new Legislation[] { },
                 TenderingCriterionPropertyGroups = CriterionHelper.ConvictionsQuestionGroup
             },
-            new TenderingCriterion {
+            new TenderingCriterion
+            {
                 _mandatory = true,
                 CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONVICTIONS.FRAUD"),
                 Name = "convictions.fraud.name",
@@ -60,7 +63,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                 Legislations = new Legislation[] { },
                 TenderingCriterionPropertyGroups = CriterionHelper.ConvictionsQuestionGroup
             },
-            new TenderingCriterion {
+            new TenderingCriterion
+            {
                 _mandatory = true,
                 CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONVICTIONS.TERRORIST_OFFENCES"),
                 Name = "convictions.terroristActivities.name",
@@ -69,7 +73,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                 Legislations = new Legislation[] { },
                 TenderingCriterionPropertyGroups = CriterionHelper.ConvictionsQuestionGroup
             },
-            new TenderingCriterion {
+            new TenderingCriterion
+            {
                 _mandatory = true,
                 CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONVICTIONS.MONEY_LAUNDERING"),
                 Name = "convictions.moneyLaundering.name",
@@ -78,7 +83,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                 Legislations = new Legislation[] { },
                 TenderingCriterionPropertyGroups = CriterionHelper.ConvictionsQuestionGroup
             },
-            new TenderingCriterion {
+            new TenderingCriterion
+            {
                 _mandatory = true,
                 CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONVICTIONS.CHILD_LABOUR-HUMAN_TRAFFICKING"),
                 Name = "convictions.childLabour.name",
@@ -90,7 +96,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
         };
 
         public TenderingCriterion[] Contributions { get; set; } = {
-            new TenderingCriterion {
+            new TenderingCriterion
+            {
                 _mandatory = true,
                 CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONTRIBUTIONS.PAYMENT_OF_TAXES"),
                 Name = "contributions.paymentOfTaxes.name",
@@ -326,7 +333,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
               }
             }
             },
-            new TenderingCriterion {
+            new TenderingCriterion
+            {
                 _mandatory = true,
                 CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONTRIBUTIONS.PAYMENT_OF_SOCIAL_SECURITY"),
                 Name = "contributions.paymentOfSocialSecurityContributions.name",
@@ -865,7 +873,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
 
     
         public TenderingCriterion[] PurelyNational { get; set; } = {
-            new TenderingCriterion {
+            new TenderingCriterion
+            {
                 _mandatory = true,
                 CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.NATIONAL.OTHER"),
                 Name = "purelyNational.question.name",
