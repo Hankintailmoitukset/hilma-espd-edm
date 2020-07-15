@@ -11,6 +11,10 @@ namespace Hilma.UBL.CommonAggregateComponents
   public class TenderingCriterion
   {
       /// <summary>
+      /// tells is the criterion set to mandatory.
+      /// </summary>
+      public bool _mandatory { get; set; } = false;
+      /// <summary>
       /// A language-independent token, e.g., a number, that allows to identify a criterion uniquely as well as allows to reference the criterion in other documents.
       /// </summary>
       /// <remarks>
