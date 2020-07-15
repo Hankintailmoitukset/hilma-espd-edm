@@ -15,6 +15,7 @@ export class TenderingCriterion {
     } 
     
     
+    _mandatory?: boolean
     id?: IdentifierType
     criterionTypeCode?: CodeType
     name?: string

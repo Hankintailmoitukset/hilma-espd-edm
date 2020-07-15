@@ -33,72 +33,78 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
         }
 
         public TenderingCriterion[] Convictions { get; set; } = {
-      new TenderingCriterion
-      {
-        CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION"),
-        Name = "convictions.participationInCriminalOrganisation.name",
-        Description = new[] {"convictions.participationInCriminalOrganisation.description"},
-        Id = new CriteriaTaxonomyIdentifier("005eb9ed-1347-4ca3-bb29-9bc0db64e1ab"),
-        Legislations = new Legislation[] { },
-        TenderingCriterionPropertyGroups = CriterionHelper.ConvictionsQuestionGroup
-      },
-      new TenderingCriterion
-      {
-        CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONVICTIONS.CORRUPTION"),
-        Name = "convictions.corruption.name",
-        Description = new[] {"convictions.corruption.description"},
-        Id = new CriteriaTaxonomyIdentifier("c27b7c4e-c837-4529-b867-ed55ce639db5"),
-        Legislations = new Legislation[] { },
-        TenderingCriterionPropertyGroups = CriterionHelper.ConvictionsQuestionGroup
-      },
-      new TenderingCriterion
-      {
-        CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONVICTIONS.FRAUD"),
-        Name = "convictions.fraud.name",
-        Description = new[] {"convictions.fraud.description"},
-        Id = new CriteriaTaxonomyIdentifier("297d2323-3ede-424e-94bc-a91561e6f320"),
-        Legislations = new Legislation[] { },
-        TenderingCriterionPropertyGroups = CriterionHelper.ConvictionsQuestionGroup
-      },
-      new TenderingCriterion
-      {
-        CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONVICTIONS.TERRORIST_OFFENCES"),
-        Name = "convictions.terroristActivities.name",
-        Description = new[] {"convictions.terroristActivities.description"},
-        Id = new CriteriaTaxonomyIdentifier("d486fb70-86b3-4e75-97f2-0d71b5697c7d"),
-        Legislations = new Legislation[] { },
-        TenderingCriterionPropertyGroups = CriterionHelper.ConvictionsQuestionGroup
-      },
-      new TenderingCriterion
-      {
-        CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONVICTIONS.MONEY_LAUNDERING"),
-        Name = "convictions.moneyLaundering.name",
-        Description = new[] {"convictions.moneyLaundering.description"},
-        Id = new CriteriaTaxonomyIdentifier("47112079-6fec-47a3-988f-e561668c3aef"),
-        Legislations = new Legislation[] { },
-        TenderingCriterionPropertyGroups = CriterionHelper.ConvictionsQuestionGroup
-      },
-      new TenderingCriterion
-      {
-        CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONVICTIONS.CHILD_LABOUR-HUMAN_TRAFFICKING"),
-        Name = "convictions.childLabour.name",
-        Description = new[] {"convictions.childLabour.description"},
-        Id = new CriteriaTaxonomyIdentifier("d789d01a-fe03-4ccd-9898-73f9cfa080d1"),
-        Legislations = new Legislation[] { },
-        TenderingCriterionPropertyGroups = CriterionHelper.ConvictionsQuestionGroup
-      }
-
-    };
+            new TenderingCriterion
+            {
+                _mandatory = true,
+                CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION"),
+                Name = "convictions.participationInCriminalOrganisation.name",
+                Description = new[] {"convictions.participationInCriminalOrganisation.description"},
+                Id = new CriteriaTaxonomyIdentifier("005eb9ed-1347-4ca3-bb29-9bc0db64e1ab"),
+                Legislations = new Legislation[] { },
+                TenderingCriterionPropertyGroups = CriterionHelper.ConvictionsQuestionGroup
+            },
+            new TenderingCriterion
+            {
+                _mandatory = true,
+                CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONVICTIONS.CORRUPTION"),
+                Name = "convictions.corruption.name",
+                Description = new[] {"convictions.corruption.description"},
+                Id = new CriteriaTaxonomyIdentifier("c27b7c4e-c837-4529-b867-ed55ce639db5"),
+                Legislations = new Legislation[] { },
+                TenderingCriterionPropertyGroups = CriterionHelper.ConvictionsQuestionGroup
+            },
+            new TenderingCriterion
+            {
+                _mandatory = true,
+                CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONVICTIONS.FRAUD"),
+                Name = "convictions.fraud.name",
+                Description = new[] {"convictions.fraud.description"},
+                Id = new CriteriaTaxonomyIdentifier("297d2323-3ede-424e-94bc-a91561e6f320"),
+                Legislations = new Legislation[] { },
+                TenderingCriterionPropertyGroups = CriterionHelper.ConvictionsQuestionGroup
+            },
+            new TenderingCriterion
+            {
+                _mandatory = true,
+                CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONVICTIONS.TERRORIST_OFFENCES"),
+                Name = "convictions.terroristActivities.name",
+                Description = new[] {"convictions.terroristActivities.description"},
+                Id = new CriteriaTaxonomyIdentifier("d486fb70-86b3-4e75-97f2-0d71b5697c7d"),
+                Legislations = new Legislation[] { },
+                TenderingCriterionPropertyGroups = CriterionHelper.ConvictionsQuestionGroup
+            },
+            new TenderingCriterion
+            {
+                _mandatory = true,
+                CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONVICTIONS.MONEY_LAUNDERING"),
+                Name = "convictions.moneyLaundering.name",
+                Description = new[] {"convictions.moneyLaundering.description"},
+                Id = new CriteriaTaxonomyIdentifier("47112079-6fec-47a3-988f-e561668c3aef"),
+                Legislations = new Legislation[] { },
+                TenderingCriterionPropertyGroups = CriterionHelper.ConvictionsQuestionGroup
+            },
+            new TenderingCriterion
+            {
+                _mandatory = true,
+                CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONVICTIONS.CHILD_LABOUR-HUMAN_TRAFFICKING"),
+                Name = "convictions.childLabour.name",
+                Description = new[] {"convictions.childLabour.description"},
+                Id = new CriteriaTaxonomyIdentifier("d789d01a-fe03-4ccd-9898-73f9cfa080d1"),
+                Legislations = new Legislation[] { },
+                TenderingCriterionPropertyGroups = CriterionHelper.ConvictionsQuestionGroup
+            }
+        };
 
         public TenderingCriterion[] Contributions { get; set; } = {
-          new TenderingCriterion
-          {
-            CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONTRIBUTIONS.PAYMENT_OF_TAXES"),
-            Name = "contributions.paymentOfTaxes.name",
-            Description = new[] {"contributions.paymentOfTaxes.description"},
-            Id = new CriteriaTaxonomyIdentifier("b61bbeb7-690e-4a40-bc68-d6d4ecfaa3d4"),
-            Legislations = new Legislation[] { },
-            TenderingCriterionPropertyGroups = new[]
+            new TenderingCriterion
+            {
+                _mandatory = true,
+                CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONTRIBUTIONS.PAYMENT_OF_TAXES"),
+                Name = "contributions.paymentOfTaxes.name",
+                Description = new[] {"contributions.paymentOfTaxes.description"},
+                Id = new CriteriaTaxonomyIdentifier("b61bbeb7-690e-4a40-bc68-d6d4ecfaa3d4"),
+                Legislations = new Legislation[] { },
+                TenderingCriterionPropertyGroups = new[]
             {
               new TenderingCriterionPropertyGroup
               {
@@ -326,15 +332,16 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                 }
               }
             }
-          },
-          new TenderingCriterion
-          {
-            CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONTRIBUTIONS.PAYMENT_OF_SOCIAL_SECURITY"),
-            Name = "contributions.paymentOfSocialSecurityContributions.name",
-            Description = new[] {"contributions.paymentOfSocialSecurityContributions.description"},
-            Id = new CriteriaTaxonomyIdentifier("7d85e333-bbab-49c0-be8d-c36d71a72f5e"),
-            Legislations = new Legislation[] { },
-            TenderingCriterionPropertyGroups = new[]
+            },
+            new TenderingCriterion
+            {
+                _mandatory = true,
+                CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.CONTRIBUTIONS.PAYMENT_OF_SOCIAL_SECURITY"),
+                Name = "contributions.paymentOfSocialSecurityContributions.name",
+                Description = new[] {"contributions.paymentOfSocialSecurityContributions.description"},
+                Id = new CriteriaTaxonomyIdentifier("7d85e333-bbab-49c0-be8d-c36d71a72f5e"),
+                Legislations = new Legislation[] { },
+                TenderingCriterionPropertyGroups = new[]
                 {
                   new TenderingCriterionPropertyGroup
                   {
@@ -562,8 +569,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                     }
                   }
                 }
-
-          }
+            }
         };
 
         public TenderingCriterion[] Social { get; set; } = {
@@ -866,15 +872,16 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
         };
 
     
-    public TenderingCriterion[] PurelyNational { get; set; } = {
-      new TenderingCriterion
-      {
-        CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.NATIONAL.OTHER"),
-        Name = "purelyNational.question.name",
-        Description = new[]{"purelyNational.question.description"},
-        Id = new CriteriaTaxonomyIdentifier("63adb07d-db1b-4ef0-a14e-a99785cf8cf6"),
-        Legislations = new Legislation[] { },
-        TenderingCriterionPropertyGroups = new[]
+        public TenderingCriterion[] PurelyNational { get; set; } = {
+            new TenderingCriterion
+            {
+                _mandatory = true,
+                CriterionTypeCode = new CriterionTypeCode("CRITERION.EXCLUSION.NATIONAL.OTHER"),
+                Name = "purelyNational.question.name",
+                Description = new[]{"purelyNational.question.description"},
+                Id = new CriteriaTaxonomyIdentifier("63adb07d-db1b-4ef0-a14e-a99785cf8cf6"),
+                Legislations = new Legislation[] { },
+                TenderingCriterionPropertyGroups = new[]
         {
           new TenderingCriterionPropertyGroup
           {
@@ -907,8 +914,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
             SubsidiaryTenderingCriterionPropertyGroups = CriterionHelper.TenderingCriterionURLGroup
           }
         }
-      }
-    };
-
+            }
+        };
     }
 }
