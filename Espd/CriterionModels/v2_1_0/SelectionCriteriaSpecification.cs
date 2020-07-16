@@ -1243,7 +1243,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                  {
                                     new TenderingCriterionProperty()
                                     {
-                                      _cardinality = CardinalityMetadata.Optional,
+                                      _cardinality = CardinalityMetadata.ExactlyOne,
                                       Id = EuComGrowId.Random(),
                                       TypeCode = CriterionElementType.Requirement,
                                       Description = "common.requirement.description",
