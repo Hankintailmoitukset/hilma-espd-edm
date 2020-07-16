@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Hilma.UBL</AssemblyName>
     <RootNamespace>Hilma.UBL</RootNamespace>
-    <Version>0.3.0</Version>
+    <Version>0.5.9</Version>
     <Authors>Hankintailmoitukset.fi</Authors>
     <Product>Hilma UBL</Product>
     <PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
