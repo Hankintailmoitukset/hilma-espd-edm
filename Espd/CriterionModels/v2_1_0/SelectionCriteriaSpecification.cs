@@ -1257,15 +1257,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                          _cardinality = CardinalityMetadata.Optional,
                                          Id = new CriteriaTaxonomyIdentifier("5df40500-a9b7-4c15-8325-a9762224a3c9"),
                                          PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
-                                         TenderingCriterionProperties = new[]
+                                         TenderingCriterionProperties = new TenderingCriterionProperty[]
                                          {
-                                            new TenderingCriterionProperty()
-                                            {
-                                              _cardinality = CardinalityMetadata.ExactlyOne,
-                                              Id = EuComGrowId.Random(),
-                                              TypeCode = CriterionElementType.Caption,
-                                              ValueDataTypeCode = ResponseDataTypeCode.None
-                                            }
                                          },
                                          SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
                                          {

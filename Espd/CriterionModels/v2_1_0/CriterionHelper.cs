@@ -691,15 +691,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                  _cardinality = CardinalityMetadata.ExactlyOne,
                                  Id = new CriteriaTaxonomyIdentifier("53c9aad8-dc80-48f8-85d9-755c2aab8e95"),
                                  PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
-                                 TenderingCriterionProperties = new[]
+                                 TenderingCriterionProperties = new TenderingCriterionProperty[]
                                  {
-                                 new TenderingCriterionProperty()
-                                 {
-                                     _cardinality = CardinalityMetadata.ExactlyOne,
-                                     Id = EuComGrowId.Random(),
-                                     TypeCode = CriterionElementType.Caption,
-                                     ValueDataTypeCode = ResponseDataTypeCode.None
-                                 }
                                  },
                                  SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
                                     {
@@ -961,15 +954,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                          _cardinality = CardinalityMetadata.Optional,
                                          Id = new CriteriaTaxonomyIdentifier("609cc954-64be-4b4f-800a-f17589deb936"),
                                          PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
-                                         TenderingCriterionProperties = new[]
+                                         TenderingCriterionProperties = new TenderingCriterionProperty[]
                                          {
-                                             new TenderingCriterionProperty()
-                                             {
-                                             _cardinality = CardinalityMetadata.ExactlyOne,
-                                             Id = EuComGrowId.Random(),
-                                             TypeCode = CriterionElementType.Caption,
-                                             ValueDataTypeCode = ResponseDataTypeCode.None
-                                             }
                                          },
                                          SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
                                          {
@@ -1079,15 +1065,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                          _cardinality = CardinalityMetadata.Optional,
                                          Id = new CriteriaTaxonomyIdentifier("45a67f48-d146-4faf-8239-dd6977dffe29"),
                                          PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
-                                         TenderingCriterionProperties = new[]
+                                         TenderingCriterionProperties = new TenderingCriterionProperty[]
                                          {
-                                             new TenderingCriterionProperty()
-                                             {
-                                             _cardinality = CardinalityMetadata.ExactlyOne,
-                                             Id = EuComGrowId.Random(),
-                                             TypeCode = CriterionElementType.Caption,
-                                             ValueDataTypeCode = ResponseDataTypeCode.None
-                                             }
                                          },
                                          SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
                                          {
