@@ -208,7 +208,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                             _cardinality = CardinalityMetadata.ExactlyOne,
                             Id = EuComGrowId.Random(),
                             TypeCode = CriterionElementType.Question,
-                            Description = "economicFinancialStanding.cpvCode.description",
+                            Description = "economicFinancialStanding.additionalInformation.description",
                             ValueDataTypeCode = ResponseDataTypeCode.Description,
                           }
                         }
