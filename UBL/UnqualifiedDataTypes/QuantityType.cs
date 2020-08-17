@@ -38,7 +38,6 @@ namespace Hilma.UBL.UnqualifiedDataTypes
     /// <summary>
     /// The unit of the quantity
     /// </summary>
-    [MaxLength(3)]
     public string UnitCode { get; set; }
 
     /// <summary>
