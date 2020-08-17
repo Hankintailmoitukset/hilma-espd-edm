@@ -35,107 +35,67 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0.Legislations
     public Legislation EuPublicProcurements2014 => new Legislation()
     {
       ID = new EuComGrowId("4ea7a10a-643e-4022-b67e-e06573b28ff5"),
-      Titles = new[]
-      {
-        "DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC"
-      },
-      Descriptions = new[]
-      {
-        "DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC"
-      },
-      JurisdictionLevels = new[] {"EU_DIRECTIVE"},
-      Articles = new[] {"XX"},
-      URIs = new[]
-      {
-        new IdentifierType("https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0024")
-      }
+      Title =
+        "DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC",
+      Description =
+        "DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC",
+      JurisdictionLevel = "EU_DIRECTIVE",
+      Article = "XX",
+      URI = new IdentifierType("https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0024")
     };
 
     public Legislation EuUtilitiesProcurements2014 => new Legislation()
     {
       ID = new EuComGrowId("4ea7a10a-643e-4022-b67e-e06573b28ff5"),
-      Titles = new[]
-      {
-        "Directive 2014/25/EU of the European Parliament and of the Council of 26 February 2014 on procurement by entities operating in the water, energy, transport and postal services sectors and repealing Directive 2004/17/EC Text with EEA relevance"
-      },
-      Descriptions = new[]
-      {
-        "Directive 2014/25/EU of the European Parliament and of the Council of 26 February 2014 on procurement by entities operating in the water, energy, transport and postal services sectors and repealing Directive 2004/17/EC Text with EEA relevance"
-      },
-      JurisdictionLevels = new[]
-      {
-        "EU_DIRECTIVE"
-      },
-      Articles = new[] { "57(1)" },
-      URIs = new[]
-      {
+      Title =
+        "Directive 2014/25/EU of the European Parliament and of the Council of 26 February 2014 on procurement by entities operating in the water, energy, transport and postal services sectors and repealing Directive 2004/17/EC Text with EEA relevance",
+      Description =
+        "Directive 2014/25/EU of the European Parliament and of the Council of 26 February 2014 on procurement by entities operating in the water, energy, transport and postal services sectors and repealing Directive 2004/17/EC Text with EEA relevance",
+      JurisdictionLevel =
+        "EU_DIRECTIVE",
+      Article = "57(1)",
+      URI =
         new IdentifierType("https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0025")
-      }
     };
 
     public Legislation EuConcessionProcurement2014 => new Legislation()
     {
       ID = new EuComGrowId("4ea7a10a-643e-4022-b67e-e06573b28ff5"),
-      Titles = new[]
-      {
-        "Directive 2014/23/EU of the European Parliament and of the Council of 26 February 2014 on the award of concession contracts Text with EEA relevance"
-      },
-      Descriptions = new[]
-      {
-        "Directive 2014/23/EU of the European Parliament and of the Council of 26 February 2014 on the award of concession contracts Text with EEA relevance"
-      },
-      JurisdictionLevels = new[]
-      {
-        "EU_DIRECTIVE"
-      },
-      Articles = new[] { "XX" },
-      URIs = new[]
-      {
-        new IdentifierType("https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0023")
-      }
+      Title =
+        "Directive 2014/23/EU of the European Parliament and of the Council of 26 February 2014 on the award of concession contracts Text with EEA relevance",
+      Description =
+        "Directive 2014/23/EU of the European Parliament and of the Council of 26 February 2014 on the award of concession contracts Text with EEA relevance",
+      JurisdictionLevel =
+        "EU_DIRECTIVE",
+      Article = "XX",
+      URI = new IdentifierType("https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0023")
     };
 
     public Legislation EuEuratom2018 => new Legislation()
     {
       ID = new EuComGrowId("4ea7a10a-643e-4022-b67e-e06573b28ff5"),
-      Titles = new[]
-      {
-        "Regulation (EU, Euratom) 2018/1046 of the European Parliament and of the Council of 18 July 2018 on the financial rules applicable to the general budget of the Union, amending Regulations (EU) No 1296/2013, (EU) No 1301/2013, (EU) No 1303/2013, (EU) No 1304/2013, (EU) No 1309/2013, (EU) No 1316/2013, (EU) No 223/2014, (EU) No 283/2014, and Decision No 541/2014/EU and repealing Regulation (EU, Euratom) No 966/2012"
-      },
-      Descriptions = new[]
-      {
-        "Regulation (EU, Euratom) 2018/1046 of the European Parliament and of the Council of 18 July 2018 on the financial rules applicable to the general budget of the Union, amending Regulations (EU) No 1296/2013, (EU) No 1301/2013, (EU) No 1303/2013, (EU) No 1304/2013, (EU) No 1309/2013, (EU) No 1316/2013, (EU) No 223/2014, (EU) No 283/2014, and Decision No 541/2014/EU and repealing Regulation (EU, Euratom) No 966/2012"
-      },
-      JurisdictionLevels = new[]
-      {
-        "EU_DIRECTIVE"
-      },
-      Articles = new[] { "XX" },
-      URIs = new[]
-      {
-        new IdentifierType("https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018R1046")
-      }
+      Title =
+        "Regulation (EU, Euratom) 2018/1046 of the European Parliament and of the Council of 18 July 2018 on the financial rules applicable to the general budget of the Union, amending Regulations (EU) No 1296/2013, (EU) No 1301/2013, (EU) No 1303/2013, (EU) No 1304/2013, (EU) No 1309/2013, (EU) No 1316/2013, (EU) No 223/2014, (EU) No 283/2014, and Decision No 541/2014/EU and repealing Regulation (EU, Euratom) No 966/2012",
+      Description =
+        "Regulation (EU, Euratom) 2018/1046 of the European Parliament and of the Council of 18 July 2018 on the financial rules applicable to the general budget of the Union, amending Regulations (EU) No 1296/2013, (EU) No 1301/2013, (EU) No 1303/2013, (EU) No 1304/2013, (EU) No 1309/2013, (EU) No 1316/2013, (EU) No 223/2014, (EU) No 283/2014, and Decision No 541/2014/EU and repealing Regulation (EU, Euratom) No 966/2012",
+      JurisdictionLevel =
+        "EU_DIRECTIVE",
+      Article = "XX",
+      URI = new IdentifierType("https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018R1046")
     };
+
     public Legislation EuDefenceProcurements2009 => new Legislation()
     {
       ID = new EuComGrowId("4ea7a10a-643e-4022-b67e-e06573b28ff5"),
-      Titles = new[]
-      {
-        "Directive 2009/81/EC of the European Parliament and of the Council of 13 July 2009 on the coordination of procedures for the award of certain works contracts, supply contracts and service contracts by contracting authorities or entities in the fields of defence and security, and amending Directives 2004/17/EC and 2004/18/EC (Text with EEA relevance)"
-      },
-      Descriptions = new[]
-      {
-        "Directive 2009/81/EC of the European Parliament and of the Council of 13 July 2009 on the coordination of procedures for the award of certain works contracts, supply contracts and service contracts by contracting authorities or entities in the fields of defence and security, and amending Directives 2004/17/EC and 2004/18/EC (Text with EEA relevance)"
-      },
-      JurisdictionLevels = new[]
-      {
-        "EU_DIRECTIVE"
-      },
-      Articles = new[] { "XX" },
-      URIs = new[]
-      {
+      Title =
+        "Directive 2009/81/EC of the European Parliament and of the Council of 13 July 2009 on the coordination of procedures for the award of certain works contracts, supply contracts and service contracts by contracting authorities or entities in the fields of defence and security, and amending Directives 2004/17/EC and 2004/18/EC (Text with EEA relevance)",
+      Description =
+        "Directive 2009/81/EC of the European Parliament and of the Council of 13 July 2009 on the coordination of procedures for the award of certain works contracts, supply contracts and service contracts by contracting authorities or entities in the fields of defence and security, and amending Directives 2004/17/EC and 2004/18/EC (Text with EEA relevance)",
+      JurisdictionLevel =
+        "EU_DIRECTIVE",
+      Article = "XX",
+      URI =
         new IdentifierType("https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018R1046")
-      }
     };
 
     public Legislation CreateFromDirective(string directive)

@@ -26,7 +26,7 @@ export class TenderingCriterion {
     subTenderingTenderingCriteria?: TenderingCriterion[]
     legislations?: Legislation[]
     tenderingCriterionPropertyGroups?: TenderingCriterionPropertyGroup[]
-    fulfilmentIndicatorType?: boolean
-    fulfilmentIndicatorTypeCodeType?: string
+    fulfilmentIndicator?: boolean
+    fulfilmentIndicatorTypeCode?: string
     applicableContractType?: ContractType
 }

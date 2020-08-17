@@ -3,9 +3,9 @@
 
 import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
-import { CountryType } from './CountryType'
-import { LocationCoordinateType } from './LocationCoordinateType'
-import { ContactType } from './ContactType'
+import { Country } from './Country'
+import { LocationCoordinate } from './LocationCoordinate'
+import { Contact } from './Contact'
 
 import assign from 'lodash.assign'
 
@@ -40,7 +40,7 @@ export class AddressType {
     district?: string
     timezoneOffset?: string
     addressLines?: string[]
-    country?: CountryType
-    locationCoordinates?: LocationCoordinateType[]
-    contact?: ContactType
+    country?: Country
+    locationCoordinates?: LocationCoordinate[]
+    contact?: Contact
 }

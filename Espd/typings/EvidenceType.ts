@@ -3,9 +3,9 @@
 
 import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
-import { PartyType } from './PartyType'
+import { Party } from './Party'
 import { DocumentReferenceType } from './DocumentReferenceType'
-import { LanguageType } from './LanguageType'
+import { Language } from './Language'
 
 import assign from 'lodash.assign'
 
@@ -21,7 +21,7 @@ export class EvidenceType {
     description?: string[]
     candidateStatement?: string[]
     confidentialityLevelCode?: CodeType
-    evidenceIssuingParty?: PartyType
+    evidenceIssuingParty?: Party
     documentReference?: DocumentReferenceType[]
-    language?: LanguageType
+    language?: Language
 }

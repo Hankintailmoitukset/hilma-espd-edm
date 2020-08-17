@@ -1,17 +1,20 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Xml.Linq;
 using Hilma.UBL.Attributes;
+using Hilma.UBL.Serializers;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
 {
   [Contract]
-  public class PartyType
+  public class Party
   {
     /// <summary>
     /// The national identifier of a contracting body as it is legally registered (e.g. VAT identification).
     /// </summary>
     /// <remarks>More than one identifier can be specified. When possible use the VAT identification of the contracting body (see the VIES platform for a EU cross-border national VAT number verification system). The code list EOIDType may be used to indicate the type of identifier used as a value of the schemeID attribute, e.g. schemeID="VAT").</remarks>
-    public PartyIdentificationType[] PartyIdentification { get; set; }
+    public PartyIdentification[] PartyIdentification { get; set; }
 
     /// <summary>
     /// The website of the contracting body.
@@ -32,7 +35,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// Mandatory. The PartyName class has an associated basic element "cbc:Name". See XML example below.
     /// </summary>
     [Required]
-    public PartyNameType PartyName { get; set; }
+    public PartyName PartyName { get; set; }
 
     /// <summary>
     /// Contracting body address information.
@@ -42,12 +45,23 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <summary>
     /// The primary contact for this party.
     /// </summary>
-    public ContactType Contact { get; set; }
+    public Contact Contact { get; set; }
 
     /// <summary>
     /// The ESPD request may contain information of identification regarding an ESPD service provider: Name, Party Identification, Endpoint ID.
     /// </summary>
     public ServiceProviderPartyType ServiceProviderParty { get; set; }
 
+    public XElement Serialize()
+    {
+      return new XElement(UblNames.Cac + nameof(Party),
+        WebsiteURI?.Serialize(nameof(WebsiteURI)),
+        EndpointID?.Serialize(nameof(EndpointID)),
+        PartyIdentification?.Select( pi => pi.Serialize()),
+        PartyName?.Serialize(),
+        PostalAddress?.Serialize(nameof(PostalAddress)),
+        Contact?.Serialize()
+      );
+    }
   }
 }

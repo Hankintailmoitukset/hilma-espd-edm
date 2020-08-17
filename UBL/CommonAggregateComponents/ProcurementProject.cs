@@ -1,4 +1,7 @@
-﻿using Hilma.UBL.Attributes;
+﻿using System.Linq;
+using System.Xml.Linq;
+using Hilma.UBL.Attributes;
+using Hilma.UBL.Serializers;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
@@ -31,6 +34,16 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// A class to classify the works, services or supplies. The Self-contained ESPD uses it to assign CPV codes to works and services.
     /// </summary>
     /// <remarks>Use the element cbc:ItemClassificationCode for the specification of the CPV code. Beware that the cardinality of the basic element is 0..1 but the cardinality of the class is 0..n, thus allowing for multiple CPVs.</remarks>
-    public CommodityClassificationType[] MainCommodityClassifications { get; set; }
+    public CommodityClassification[] MainCommodityClassifications { get; set; }
+
+    public XElement Serialize()
+    {
+      return new XElement(UblNames.Cac + nameof(ProcurementProject),
+        Name.Serialize(nameof(Name)),
+        Description.Serialize(nameof(Description)),
+        ProcurementTypeCode.Serialize(nameof(ProcurementTypeCode)),
+        MainCommodityClassifications?.Select( cpv => cpv?.Serialize("MainCommodityClassification"))
+        );
+    }
   }
 }

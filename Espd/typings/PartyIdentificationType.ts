@@ -5,8 +5,8 @@ import { IdentifierType } from './IdentifierType'
 
 import assign from 'lodash.assign'
 
-export class PartyIdentificationType { 
-    public constructor(init?:Partial<PartyIdentificationType>) {
+export class PartyIdentification { 
+    public constructor(init?:Partial<PartyIdentification>) {
         assign(this, init)
     } 
     

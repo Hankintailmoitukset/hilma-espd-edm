@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
 using Hilma.UBL.Attributes;
+using Hilma.UBL.Serializers;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
@@ -17,5 +19,11 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// if only one Lot is specified its ID has to be set to '0' thus indicating that the procurement procedure is not divided into Lots.</remarks>
     [Required]
     public IdentifierType ID { get; set; }
+
+    public XElement Serialize()
+    {
+      return new XElement(UblNames.Cac + nameof(ProcurementProjectLot),
+        ID?.Serialize(nameof(ID)));
+    }
   }
 }

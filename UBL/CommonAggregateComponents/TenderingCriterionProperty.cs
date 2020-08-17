@@ -1,5 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Xml.Linq;
 using Hilma.UBL.Attributes;
+using Hilma.UBL.Serializers;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
@@ -23,7 +26,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// Rule: Property identifiers must use UUID numbers (version 4) automatically generated. The responses of the economic operator (in the ESPD Response document) will refer to this UUID to link the response with one, and only one, criterion property. See the section about the ESPD Response for examples.
     /// </remarks>
     [Required]
-    public IdentifierType Id { get; set; } 
+    public IdentifierType ID { get; set; } 
     /// <summary>
     /// The name of the criterion property.
     /// </summary>
@@ -37,11 +40,6 @@ namespace Hilma.UBL.CommonAggregateComponents
     [Required]
     public string Description { get; set; }
 
-    /// <summary>
-    /// The value of the property
-    /// </summary>
-    public object Value { get; set; }
-    
     /// <summary>
     /// The type of property. Used to verify that structure of the property is correct.
     /// </summary>
@@ -154,6 +152,34 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// Additional property to define code list id for ValueDataType "CODE"
     /// </summary>
     public string CodeListId { get; set; }
+
+    public XElement Serialize()
+    {
+      return new XElement( UblNames.Cac + nameof(TenderingCriterionProperty),
+        ID?.Serialize(nameof(ID)),
+        Name.Serialize(nameof(Name)),
+        Description.Serialize(nameof(Description)),
+        TypeCode?.Serialize(nameof(TypeCode)),
+        ValueDataTypeCode?.Serialize(nameof(ValueDataTypeCode)),
+        ValueUnitCode?.Serialize(nameof(ValueUnitCode)),
+        ValueCurrencyCode?.Serialize(nameof(ValueCurrencyCode)),
+        ExpectedAmount?.Serialize(nameof(ExpectedAmount)),
+        ExpectedID?.Serialize(nameof(ExpectedID)),
+        ExpectedCode?.Serialize(nameof(ExpectedCode)),
+        ExpectedValueNumeric.Serialize(nameof(ExpectedValueNumeric)),
+        ExpectedDescription.Serialize(nameof(ExpectedDescription)),
+        MaximumAmount?.Serialize(nameof(MaximumAmount)),
+        MinimumAmount?.Serialize(nameof(MinimumAmount)),
+        MaximumValueNumeric.Serialize(nameof(MaximumValueNumeric)),
+        MinimumValueNumeric.Serialize(nameof(MinimumValueNumeric)),
+        TranslationTypeCode?.Serialize(nameof(TranslationTypeCode)),
+        CertificationLevelDescription?.Serialize(nameof(CertificationLevelDescription)),
+        CopyQualityTypeCode?.Serialize(nameof(CopyQualityTypeCode)),
+        ApplicablePeriod?.Serialize(nameof(ApplicablePeriod)),
+        TemplateEvidence?.Select( e => e.Serialize(nameof(TemplateEvidence)))
+      );
+    }
+
   }
 
 }

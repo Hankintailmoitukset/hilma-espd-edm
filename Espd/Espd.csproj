@@ -48,6 +48,9 @@
     <None Update="typings\CommodityClassificationType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\CommodityClassificationType.cs</CustomToolNamespace>
     </None>
+    <None Update="typings\Contact.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\Contact.cs</CustomToolNamespace>
+    </None>
     <None Update="typings\ContactType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\ContactType.cs</CustomToolNamespace>
     </None>
@@ -59,6 +62,9 @@
     </None>
     <None Update="typings\ContractType.ts">
       <CustomToolNamespace>..\UBL\Enums\ContractType.cs</CustomToolNamespace>
+    </None>
+    <None Update="typings\Country.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\Country.cs</CustomToolNamespace>
     </None>
     <None Update="typings\CountryIdentificationCodeType.ts">
       <CustomToolNamespace>..\UBL\QualifiedDataType\CountryIdentificationCodeType.cs</CustomToolNamespace>
@@ -96,6 +102,9 @@
     <None Update="typings\Legislation.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\Legislation.cs</CustomToolNamespace>
     </None>
+    <None Update="typings\LocationCoordinate.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\LocationCoordinate.cs</CustomToolNamespace>
+    </None>
     <None Update="typings\LocationCoordinateType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\LocationCoordinateType.cs</CustomToolNamespace>
     </None>
@@ -105,8 +114,14 @@
     <None Update="typings\NormalizedString.ts">
       <CustomToolNamespace>..\UBL\PrimitiveTypes\NormalizedString.cs</CustomToolNamespace>
     </None>
+    <None Update="typings\Party.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\Party.cs</CustomToolNamespace>
+    </None>
     <None Update="typings\PartyIdentificationType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\PartyIdentificationType.cs</CustomToolNamespace>
+    </None>
+    <None Update="typings\PartyName.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\PartyName.cs</CustomToolNamespace>
     </None>
     <None Update="typings\PartyNameType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\PartyNameType.cs</CustomToolNamespace>
@@ -131,6 +146,9 @@
     </None>
     <None Update="typings\QualificationApplicationResponse.ts">
       <CustomToolNamespace>CriterionModels\QualificationApplicationResponse.cs</CustomToolNamespace>
+    </None>
+    <None Update="typings\QualifyingParty.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\QualifyingParty.cs</CustomToolNamespace>
     </None>
     <None Update="typings\QuantityType.ts">
       <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\QuantityType.cs</CustomToolNamespace>

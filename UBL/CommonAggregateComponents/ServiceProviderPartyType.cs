@@ -28,6 +28,6 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// Main information about the service provider.
     /// </summary>
     [Required]
-    public PartyType Party { get; set; }
+    public Party Party { get; set; }
   }
 }

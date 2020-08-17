@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Xml.Linq;
 using Hilma.UBL.Attributes;
+using Hilma.UBL.Serializers;
 using Hilma.UBL.UnqualifiedDataTypes;
 using UBL.Enums;
 
@@ -21,7 +23,7 @@ namespace Hilma.UBL.CommonAggregateComponents
       /// Each Criterion is defined in e-Certis and must use the UUID supplied by e-Certis. See also the spreadsheets Criteria Taxonomy (Regulated ESPD) and Criteria Taxonomy (Self-contained ESPD).
       /// </remarks>
       [Required]
-      public IdentifierType Id { get; set; }
+      public IdentifierType ID { get; set; }
       /// <summary>
       /// A classification code defined by the ESPD-EDM to represent the criterion in the ESPD taxonomy of criteria.
       /// </summary>
@@ -93,14 +95,32 @@ namespace Hilma.UBL.CommonAggregateComponents
       [Required]
       public TenderingCriterionPropertyGroup[] TenderingCriterionPropertyGroups { get; set; } = new TenderingCriterionPropertyGroup[0];
 
-      public bool FulfilmentIndicatorType { get; set; }
+      public bool FulfilmentIndicator { get; set; }
 
-      public string FulfilmentIndicatorTypeCodeType { get; set; }
+      public string FulfilmentIndicatorTypeCode { get; set; }
       
       /// <summary>
       /// This criterion is relevant only if the contract type matches
       /// </summary>
       public ContractType ApplicableContractType { get; set; }
+
+      public XElement Serialize( string name = null)
+      {
+        return new XElement(UblNames.Cac + (name ?? nameof(TenderingCriterion)),
+          ID.Serialize(nameof(ID)),
+          CriterionTypeCode.Serialize(nameof(CriterionTypeCode)),
+          Name.Serialize(nameof(Name)), 
+          Description.Serialize(nameof(Description)),
+          WeightNumeric.Serialize(nameof(WeightNumeric)),
+          FulfilmentIndicator.Serialize(nameof(FulfilmentIndicator)),
+          FulfilmentIndicatorTypeCode?.Serialize(nameof(FulfilmentIndicatorTypeCode)),
+          EvaluationMethodTypeCode.Serialize(nameof(EvaluationMethodTypeCode)),
+          WeightingConsiderationDescription.Serialize(nameof(WeightingConsiderationDescription)),
+          SubTenderingTenderingCriteria?.Select( criterion => criterion.Serialize("SubTenderingCriterion")),
+          Legislations?.Select( lex => lex.Serialize()),
+          TenderingCriterionPropertyGroups?.Select(g => g.Serialize())
+        );
+      }
 
   }
 
@@ -109,7 +129,7 @@ namespace Hilma.UBL.CommonAggregateComponents
   //  public static XElement ToXml( this TenderingCriterion value )
   //  { 
   //      return new XElement( UblNames.Cbc + nameof(TenderingCriterion),
-          
+
   //        new XmlElement( value.)
   //        );
   //  }
