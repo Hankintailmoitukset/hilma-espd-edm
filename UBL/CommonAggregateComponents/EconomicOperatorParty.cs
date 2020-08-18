@@ -20,7 +20,7 @@ namespace Hilma.UBL.CommonAggregateComponents
         /// <summary>
         /// Main set of data used to identify and contact the economic operator, such as official identifiers, name, address, contact person, representatives, etc.
         /// </summary>
-        public PartyType Party { get; set; }
+        public Party Party { get; set; }
         
     }
 }

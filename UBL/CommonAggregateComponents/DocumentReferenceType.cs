@@ -69,7 +69,7 @@ namespace Hilma.UBL.CommonAggregateComponents
         /// <summary>
         /// The party who issued the referenced document.
         /// </summary>
-        public PartyType IssuerParty { get; set; }
+        public Party IssuerParty { get; set; }
         /// <summary>
         /// The result of an attempt to verify a signature associated with the referenced document.
         /// </summary>

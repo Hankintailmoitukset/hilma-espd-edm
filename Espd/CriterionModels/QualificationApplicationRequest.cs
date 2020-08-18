@@ -1,7 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Xml.Linq;
+using Hilma.Espd.EDM.Serializers;
 using Hilma.UBL.Attributes;
 using Hilma.UBL.CommonAggregateComponents;
 using Hilma.UBL.CommonExtensionComponents;
+using Hilma.UBL.Serializers;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.Espd.EDM.CriterionModels
@@ -168,6 +172,35 @@ namespace Hilma.Espd.EDM.CriterionModels
     /// </summary>
     /// <remarks>For procurement procedures above the threshold it is compulsory to make reference to the Contract Notice of the procedure published in TED. See section "Reference to the Contract Notice" for a complete example.</remarks>
     public AdditionalDocumentReference[] AdditionalDocumentReferences { get; set; }
-    
+
+
+    public XDocument Serialize()
+    { 
+      return new XDocument(new XElement(EspdNames.Qarq + nameof(QualificationApplicationRequest),
+        new XAttribute(XNamespace.Xmlns + "cbc", UblNames.Cbc),
+        new XAttribute(XNamespace.Xmlns + "cac", UblNames.Cac),
+        UBLVersionID.Serialize(nameof(UBLVersionID)),
+        CustomizationID.Serialize(nameof(CustomizationID)),
+        ProfileID.Serialize(nameof(ProfileID)),
+        ProfileExecutionID.Serialize(nameof(ProfileExecutionID)),
+        ID?.Serialize(nameof(ID)),
+        CopyIndicator.Serialize( nameof(CopyIndicator)),
+        UUID.Serialize(nameof(UUID)),
+        ContractFolderID.Serialize(nameof(ContractFolderID)),
+        IssueDate.Serialize(nameof(IssueDate)),
+        IssueTime.Serialize(nameof(IssueTime)),
+        VersionID.Serialize(nameof(VersionID)),
+        PreviousVersionID.Serialize(nameof(PreviousVersionID)),
+        ProcedureCode.Serialize(nameof(ProcedureCode)),
+        QualificationApplicationTypeCode.Serialize(nameof(QualificationApplicationTypeCode)),
+        WeightScoringMethodologyNote.Serialize(nameof(WeightScoringMethodologyNote)),
+        WeightingTypeCode.Serialize(nameof(WeightingTypeCode)),
+        ContractingParty?.Serialize(),
+        ProcurementProject?.Serialize(),
+        ProcurementProjectLots?.Select( lot => lot.Serialize()),
+        TenderingCriteria?.Select(c => c.Serialize())
+      ));
+    }
+
   }
 }

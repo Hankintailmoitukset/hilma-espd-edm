@@ -6,8 +6,8 @@ import { CodeType } from './CodeType'
 
 import assign from 'lodash.assign'
 
-export class LanguageType { 
-    public constructor(init?:Partial<LanguageType>) {
+export class Language { 
+    public constructor(init?:Partial<Language>) {
         assign(this, init)
     } 
     

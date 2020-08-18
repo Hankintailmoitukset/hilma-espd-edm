@@ -49,7 +49,8 @@ namespace Hilma.UBL.UnqualifiedDataTypes
 
     public override string ToString()
     {
-      return $"{Value:CCYY-MM-DD}";
+      return $"{Value:yyyy-MM-dd}";
     }
+
   }
 }

@@ -12,9 +12,9 @@ namespace Hilma.UBL.CommonAggregateComponents
         public string[] Description { get; set; }
         public string[] CandidateStatement { get; set; }
         public CodeType ConfidentialityLevelCode { get; set; }
-        public PartyType EvidenceIssuingParty { get; set; }
+        public Party EvidenceIssuingParty { get; set; }
         public DocumentReferenceType[] DocumentReference { get; set; }
-        public LanguageType Language { get; set; }
+        public Language Language { get; set; }
 
     }
 

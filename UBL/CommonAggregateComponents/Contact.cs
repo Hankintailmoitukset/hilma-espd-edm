@@ -1,4 +1,6 @@
-﻿using Hilma.UBL.Attributes;
+﻿using System.Xml.Linq;
+using Hilma.UBL.Attributes;
+using Hilma.UBL.Serializers;
 
 namespace Hilma.UBL.CommonAggregateComponents
 {
@@ -6,7 +8,7 @@ namespace Hilma.UBL.CommonAggregateComponents
   /// Used to provide contacting information for a party in general or a person.
   /// </summary>
   [Contract]
-  public class ContactType
+  public class Contact
   {
     /// <summary>
     /// The name of the contact point.
@@ -27,5 +29,16 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// An e-mail address for the contact point.
     /// </summary>
     public string ElectronicMail { get; set; }
+
+
+    public XElement Serialize()
+    {
+      return new XElement(UblNames.Cac + nameof(Contact),
+        Name?.Serialize(nameof(Name)),
+        Telephone?.Serialize(nameof(Telephone)),
+        Telephone?.Serialize(nameof(Telefax)),
+        Telephone?.Serialize(nameof(ElectronicMail))
+      );
+    }
   }
 }

@@ -5,8 +5,8 @@ import { CodeType } from './CodeType'
 
 import assign from 'lodash.assign'
 
-export class CommodityClassificationType { 
-    public constructor(init?:Partial<CommodityClassificationType>) {
+export class CommodityClassification { 
+    public constructor(init?:Partial<CommodityClassification>) {
         assign(this, init)
     } 
     

@@ -1,4 +1,6 @@
-﻿using Hilma.UBL.Attributes;
+﻿using System.Xml.Linq;
+using Hilma.UBL.Attributes;
+using Hilma.UBL.Serializers;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
@@ -21,7 +23,14 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <summary>
     /// Main data placeholder structure for, in this case, the contracting body.
     /// </summary>
-    public PartyType Party { get; set; }
+    public Party Party { get; set; }
+
+    public XElement Serialize()
+    {
+      return new XElement(UblNames.Cac + nameof(ContractingParty),
+        Party?.Serialize()
+      );
+    }
 
   }
-}
+} 

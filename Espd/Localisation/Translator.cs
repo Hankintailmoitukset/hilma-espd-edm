@@ -46,11 +46,6 @@ namespace Hilma.Espd.EDM.Localisation
 
         private void TranslateCriterionPropertryGroup(TenderingCriterionPropertyGroup propertyGroup)
         {
-            if(propertyGroup.Name != null)
-            {
-                propertyGroup.Name = Translate(propertyGroup.Name);
-            }
-
             if(propertyGroup.Description !=null && propertyGroup.Description.Length > 0)
             {
                 propertyGroup.Description = Translate(propertyGroup.Description);

@@ -1,5 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Xml.Linq;
 using Hilma.UBL.Attributes;
+using Hilma.UBL.Serializers;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
@@ -46,13 +49,47 @@ namespace Hilma.UBL.CommonAggregateComponents
     public string[] AddressLines { get; set; }
 
     [Required]
-    public CountryType Country { get; set; }
-    public LocationCoordinateType[] LocationCoordinates { get; set; }
+    public Country Country { get; set; }
+    public LocationCoordinate[] LocationCoordinates { get; set; }
 
     /// <summary>
     /// Contact of the contracting body
     /// </summary>
-    public ContactType Contact { get; set; }
+    public Contact Contact { get; set; }
+
+    public XElement Serialize( string name )
+    {
+      return new XElement(UblNames.Cac + name,
+        ID.Serialize(nameof(ID)),
+        AddressTypeCode.Serialize(nameof(AddressTypeCode)),
+        AddressFormatCode.Serialize(nameof(AddressFormatCode)),
+        Postbox.Serialize(nameof(Postbox)),
+        Floor.Serialize(nameof(Floor)),
+        Room.Serialize(nameof(Room)),
+        StreetName.Serialize(nameof(StreetName)),
+        AdditionalStreetName.Serialize(nameof(AdditionalStreetName)),
+        BlockName.Serialize(nameof(BlockName)),
+        BuildingName.Serialize(nameof(BuildingName)),
+        BuildingNumber.Serialize(nameof(BuildingNumber)),
+        InhouseMail.Serialize(nameof(InhouseMail)),
+        Department.Serialize(nameof(Department)),
+        MarkAttention.Serialize(nameof(MarkAttention)),
+        MarkCare.Serialize(nameof(MarkCare)),
+        PlotIdentification.Serialize(nameof(PlotIdentification)),
+        CitySubdivisionName.Serialize(nameof(CitySubdivisionName)),
+        CityName.Serialize(nameof(CityName)),
+        PostalZone.Serialize(nameof(PostalZone)),
+        CountrySubentity.Serialize(nameof(CountrySubentity)),
+        CountrySubentityCode.Serialize(nameof(CountrySubentityCode)),
+        Region.Serialize(nameof(Region)),
+        District.Serialize(nameof(District)),
+        TimezoneOffset.Serialize(nameof(TimezoneOffset)),
+        AddressLines.Serialize("AddressLine"),
+        Country?.Serialize(),
+        LocationCoordinates?.Select( lc => lc.Serialize()),
+        Contact?.Serialize()
+        );
+    }
                  
   }
 }

@@ -29,6 +29,6 @@ namespace Hilma.UBL.CommonAggregateComponents
         /// <summary>
         /// The identifier of the economic operator in an official list, register or (pre)qualification system.
         /// </summary>
-        public PartyIdentificationType ID { get; set; }
+        public PartyIdentification ID { get; set; }
     }
 }

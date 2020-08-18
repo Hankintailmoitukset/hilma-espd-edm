@@ -23,12 +23,12 @@ namespace Hilma.Espd.Tests
       var suitabilityCriterion = new CriterionSpecification().SelectionCriteria.Suitability.First();
       qar.TenderingCriteria = qar.TenderingCriteria.Union(new[] {suitabilityCriterion}).ToArray();
       var firstPropertyId = qar.TenderingCriteria[0].TenderingCriterionPropertyGroups[0].TenderingCriterionProperties[0]
-        .Id.Value;
+        .ID.Value;
 
       qar.FinalizeDocument();
 
       var firstPropertyIdAfter = qar.TenderingCriteria[0].TenderingCriterionPropertyGroups[0]
-        .TenderingCriterionProperties[0].Id.Value;
+        .TenderingCriterionProperties[0].ID.Value;
       var assertedCriteria = qar.TenderingCriteria.Last();
       Assert.AreEqual(suitabilityCriterion.Name, assertedCriteria.Name);
       Assert.AreNotEqual(firstPropertyId, firstPropertyIdAfter, "Id, should not be the same");

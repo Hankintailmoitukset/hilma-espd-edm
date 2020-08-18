@@ -13,7 +13,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     public string ValidateProcess { get; set; }
     public string ValidateTool { get; set; }
     public string ValidateToolVersion { get; set; }
-    public PartyType SignatoryParty { get; set; }
+    public Party SignatoryParty { get; set; }
 
   }
 

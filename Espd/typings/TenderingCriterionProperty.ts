@@ -19,7 +19,6 @@ export class TenderingCriterionProperty {
     id?: IdentifierType
     name?: string
     description?: string
-    value?: any
     typeCode?: CodeType
     valueDataTypeCode?: CodeType
     valueUnitCode?: CodeType

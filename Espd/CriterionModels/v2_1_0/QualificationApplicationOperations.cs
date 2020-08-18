@@ -85,7 +85,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
               yield return new TenderingCriterionProperty()
               {
                 _cardinality = property._cardinality,
-                Id = EuComGrowId.Random(),
+                ID = EuComGrowId.Random(),
                 Name = property.Name,
                 Description = property.Description,
                 ExpectedID = new IdentifierType(projectLot),
@@ -96,7 +96,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
           else
           {
             // Generate new if for property
-            property.Id = EuComGrowId.Random();
+            property.ID = EuComGrowId.Random();
             yield return property;
           }
         }

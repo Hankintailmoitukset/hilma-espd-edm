@@ -2,7 +2,7 @@
 
 
 import { CodeType } from './CodeType'
-import { CommodityClassificationType } from './CommodityClassificationType'
+import { CommodityClassification } from './CommodityClassification'
 
 import assign from 'lodash.assign'
 
@@ -15,5 +15,5 @@ export class ProcurementProject {
     name?: string
     description?: string
     procurementTypeCode?: CodeType
-    mainCommodityClassifications?: CommodityClassificationType[]
+    mainCommodityClassifications?: CommodityClassification[]
 }

@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Xml.Linq;
 using Hilma.UBL.Attributes;
+using Hilma.UBL.Serializers;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
@@ -31,12 +33,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// Rule: Compulsory use of the UUIDs supplied by e-Certis. See also the spreadsheets Criteria Taxonomy (Regulated ESPD) and Criteria Taxonomy (Self-contained ESPD).
     /// </remarks>
     [Required]
-    public IdentifierType Id { get; set; }
-
-    /// <summary>
-    /// The name of the group.
-    /// </summary>
-    public string Name { get; set; }
+    public IdentifierType ID { get; set; }
 
     /// <summary>
     /// The textual description for this group.
@@ -73,6 +70,17 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// Rule: subsidiary property groups 'are' property groups (i.e. it is the same component but qualified as 'subsidary'). Therefore all the rules applicable to property groups are also applicable to sub-groups: Compulsory use of the Code List PropertyGroupType. See sections below about the 'criteria data structures' and the XML examples on exclusion and selection criteria to understand the use of this code. Beware that the first element inside a group of properties (after the group ID) is always a cac:TenderingCriterionProperty. In some occasions this might entail the use of an empty CAPTION element, for instance, to produce groups of subgroups where no property does really makes sense in the first group.
     /// </remarks>
     public TenderingCriterionPropertyGroup[] SubsidiaryTenderingCriterionPropertyGroups { get; set; }
+
+    public XElement Serialize(string name = null)
+    {
+     return new XElement( UblNames.Cac + (name ?? nameof(TenderingCriterionPropertyGroup)),
+        ID.Serialize(nameof(ID)),
+        Description.Serialize(nameof(Description)),
+        PropertyGroupTypeCode.Serialize(nameof(PropertyGroupTypeCode)),
+        FulfilmentIndicatorTypeCode.Serialize(nameof(FulfilmentIndicatorTypeCode)),
+        TenderingCriterionProperties?.Select( prop => prop.Serialize()),
+        SubsidiaryTenderingCriterionPropertyGroups?.Select( group => group.Serialize("SubsidiaryTenderingCriterionPropertyGroup")));
+    }
 
   }
 }
