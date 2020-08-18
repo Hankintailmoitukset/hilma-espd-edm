@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Xml.Linq;
@@ -105,6 +106,11 @@ namespace Hilma.UBL.Serializers
     public static XElement Serialize(this DateType value, string name)
     {
       return value != null ? new XElement(UblNames.Cbc + name, value.ToString()) : null;
+    }
+
+    public static XElement SerializeAsDate(this DateTime value, string name)
+    {
+      return value != null ? new XElement(UblNames.Cbc + name, value.ToString("yyyy-MM-dd")) : null;
     }
 
     public static XElement Serialize(this TimeType value, string name)

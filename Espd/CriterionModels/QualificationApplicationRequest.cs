@@ -198,7 +198,8 @@ namespace Hilma.Espd.EDM.CriterionModels
         ContractingParty?.Serialize(),
         ProcurementProject?.Serialize(),
         ProcurementProjectLots?.Select( lot => lot.Serialize()),
-        TenderingCriteria?.Select(c => c.Serialize())
+        TenderingCriteria?.Select(c => c.Serialize()),
+        AdditionalDocumentReferences?.Select( d => d.Serialize())
       ));
     }
 

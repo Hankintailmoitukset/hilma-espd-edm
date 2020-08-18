@@ -32,12 +32,12 @@ namespace Hilma.UBL.CommonAggregateComponents
        /// <summary>
        /// A class for the economic operator to specify the start date and the end-date when the expected answer to a criterion property is a lapse of time.
        /// </summary>
-       public PeriodType ApplicablePeriod { get; set; }
+       public Period ApplicablePeriod { get; set; }
 
        /// <summary>
        /// A reference to the evidence supporting this criterion property response.
        /// </summary>
-       public EvidenceType EvidenceSupplied { get; set; }
+       public Evidence EvidenceSupplied { get; set; }
 
     }
 }

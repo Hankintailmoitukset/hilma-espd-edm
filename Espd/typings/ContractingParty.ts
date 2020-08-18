@@ -2,7 +2,7 @@
 
 
 import { IdentifierType } from './IdentifierType'
-import { PartyType } from './PartyType'
+import { Party } from './Party'
 
 import assign from 'lodash.assign'
 
@@ -13,5 +13,5 @@ export class ContractingParty {
     
     
     buyerProfileUri?: IdentifierType
-    party?: PartyType
+    party?: Party
 }

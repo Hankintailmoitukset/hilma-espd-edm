@@ -3,7 +3,7 @@
 
 import { QualifyingParty } from './QualifyingParty'
 import { EconomicOperatorRole } from './EconomicOperatorRole'
-import { PartyType } from './PartyType'
+import { Party } from './Party'
 
 import assign from 'lodash.assign'
 
@@ -15,5 +15,5 @@ export class EconomicOperatorParty {
     
     qualifyingParty?: QualifyingParty
     economicOperatorRole?: EconomicOperatorRole
-    party?: PartyType
+    party?: Party
 }

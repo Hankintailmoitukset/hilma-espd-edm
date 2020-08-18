@@ -10,7 +10,7 @@ namespace Hilma.UBL.CommonAggregateComponents
   /// The ESPD allows the provision of data about the service provider who produced the ESPD Request document (and equally for the ESPD Response document, on behalf of the economic operator).
   /// </summary>
   [Contract]
-  public class ServiceProviderPartyType
+  public class ServiceProviderParty
   {
     public IdentifierType ID { get; set; }
 

@@ -8,7 +8,7 @@ using Hilma.UBL.UnqualifiedDataTypes;
 namespace Hilma.UBL.CommonAggregateComponents
 {
   [Contract]
-  public class AddressType
+  public class Address
   {
     public IdentifierType ID { get; set; }
     public CodeType AddressTypeCode { get; set; }

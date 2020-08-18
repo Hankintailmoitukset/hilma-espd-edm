@@ -3,10 +3,9 @@
 
 import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
-import { PeriodType } from './PeriodType'
-import { EvidenceType } from './EvidenceType'
 import { ResponseValue } from './ResponseValue'
-
+import { Period } from './Period'
+import { Evidence } from './Evidence'
 
 import assign from 'lodash.assign'
 
@@ -20,6 +19,6 @@ export class TenderingCriterionResponse {
     validatedCriterionPropertyID?: IdentifierType
     confidentialityLevelCode?: CodeType
     responseValue?: ResponseValue[]
-    applicablePeriod?: PeriodType
-    evidenceSupplied?: EvidenceType
+    applicablePeriod?: Period
+    evidenceSupplied?: Evidence
 }

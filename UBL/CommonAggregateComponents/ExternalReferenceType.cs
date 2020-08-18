@@ -1,17 +1,18 @@
-﻿using Hilma.UBL.Attributes;
+﻿using System.Xml.Linq;
+using Hilma.UBL.Attributes;
+using Hilma.UBL.Serializers;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
 {
   [Contract]
-  public class ExternalReferenceType
+  public class ExternalReference
   {
     /// <summary>
     ///The Uniform Resource Identifier(URI) that identifies where the document is located.
     /// </summary>
     public IdentifierType URI { get; set; }
-
-
+    
     public string DocumentHash { get; set; }
     public string HashAlgorithmMethod { get; set; }
     public DateType ExpiryDate { get; set; }
@@ -40,6 +41,23 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <cbc:Description>293520-2017</cbc:Description>
     /// </example>
     public string[] Description { get; set; }
+
+    public XElement Serialize()
+    {
+      return new XElement( UblNames.Cac + nameof(ExternalReference),
+        URI.Serialize(nameof(URI)),
+        DocumentHash.Serialize(nameof(DocumentHash)),
+        HashAlgorithmMethod.Serialize(nameof(HashAlgorithmMethod)),
+        ExpiryDate.Serialize(nameof(ExpiryDate)),
+        ExpiryTime.Serialize(nameof(ExpiryTime)),
+        MimeCode.Serialize(nameof(MimeCode)),
+        FormatCode.Serialize(nameof(FormatCode)),
+        EncodingCode.Serialize(nameof(EncodingCode)),
+        CharacterSetCode.Serialize(nameof(CharacterSetCode)),
+        FileName.Serialize(nameof(FileName)),
+        Description.Serialize(nameof(Description))
+        );
+    }
 
   }
 

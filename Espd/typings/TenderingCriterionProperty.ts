@@ -4,8 +4,8 @@
 import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
 import { AmountType } from './AmountType'
-import { PeriodType } from './PeriodType'
-import { EvidenceType } from './EvidenceType'
+import { Period } from './Period'
+import { Evidence } from './Evidence'
 
 import assign from 'lodash.assign'
 
@@ -35,7 +35,7 @@ export class TenderingCriterionProperty {
     translationTypeCode?: string
     certificationLevelDescription?: string[]
     copyQualityTypeCode?: CodeType
-    applicablePeriod?: PeriodType
-    templateEvidence?: EvidenceType[]
+    applicablePeriod?: Period
+    templateEvidence?: Evidence[]
     codeListId?: string
 }

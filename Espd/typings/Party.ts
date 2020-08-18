@@ -4,9 +4,9 @@
 import { PartyIdentification } from './PartyIdentification'
 import { IdentifierType } from './IdentifierType'
 import { PartyName } from './PartyName'
-import { AddressType } from './AddressType'
+import { Address } from './Address'
 import { Contact } from './Contact'
-import { ServiceProviderPartyType } from './ServiceProviderPartyType'
+import { ServiceProviderParty } from './ServiceProviderParty'
 
 import assign from 'lodash.assign'
 
@@ -20,7 +20,7 @@ export class Party {
     websiteURI?: IdentifierType
     endpointID?: IdentifierType
     partyName?: PartyName
-    postalAddress?: AddressType
+    postalAddress?: Address
     contact?: Contact
-    serviceProviderParty?: ServiceProviderPartyType
+    serviceProviderParty?: ServiceProviderParty
 }
