@@ -3,7 +3,7 @@
 
 import { IdentifierType } from './IdentifierType'
 import { Language } from './Language'
-import { AddressType } from './AddressType'
+import { Address } from './Address'
 
 import assign from 'lodash.assign'
 
@@ -20,5 +20,5 @@ export class Legislation {
     article?: string
     uri?: IdentifierType
     languages?: Language[]
-    jurisdictionRegionAddress?: AddressType
+    jurisdictionRegionAddress?: Address
 }

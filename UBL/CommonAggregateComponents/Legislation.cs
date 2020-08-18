@@ -64,7 +64,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <summary>
     /// The geopolitical region in which this legislation applies.
     /// </summary>
-    public AddressType JurisdictionRegionAddress { get; set; }
+    public Address JurisdictionRegionAddress { get; set; }
 
     public XElement Serialize()
     {

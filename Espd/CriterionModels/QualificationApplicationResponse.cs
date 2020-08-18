@@ -176,7 +176,7 @@ namespace Hilma.Espd.EDM.CriterionModels
     /// <remarks>For procurement procedures above the threshold it is compulsory to make reference to the Contract Notice of the procedure published in TED. See section "Reference to the Contract Notice" for a complete example.</remarks>
     public AdditionalDocumentReference[] AdditionalDocumentReferences { get; set; }
     
-    public EvidenceType[] Evidences { get; set; }
+    public Evidence[] Evidences { get; set; }
 
     }
 }

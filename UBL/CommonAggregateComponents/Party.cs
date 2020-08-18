@@ -40,7 +40,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <summary>
     /// Contracting body address information.
     /// </summary>
-    public AddressType PostalAddress { get; set; }
+    public Address PostalAddress { get; set; }
 
     /// <summary>
     /// The primary contact for this party.
@@ -50,7 +50,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <summary>
     /// The ESPD request may contain information of identification regarding an ESPD service provider: Name, Party Identification, Endpoint ID.
     /// </summary>
-    public ServiceProviderPartyType ServiceProviderParty { get; set; }
+    public ServiceProviderParty ServiceProviderParty { get; set; }
 
     public XElement Serialize()
     {

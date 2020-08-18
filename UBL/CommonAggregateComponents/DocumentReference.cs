@@ -1,10 +1,12 @@
-﻿using Hilma.UBL.Attributes;
+﻿using System.Xml.Linq;
+using Hilma.UBL.Attributes;
+using Hilma.UBL.Serializers;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
 {
     [Contract]
-    public class DocumentReferenceType
+    public class DocumentReference
     {
         /// <summary>
         /// An identifier for the referenced document.
@@ -61,11 +63,11 @@ namespace Hilma.UBL.CommonAggregateComponents
         /// <summary>
         /// A class to describe an attached document. An attachment can refer to an external document or be included with the document being exchanged.
         /// </summary>
-        public AttachmentType Attachment { get; set; }
+        public Attachment Attachment { get; set; }
         /// <summary>
         /// The period for which this document reference is valid.
         /// </summary>
-        public PeriodType ValidityPeriod { get; set; }
+        public Period ValidityPeriod { get; set; }
         /// <summary>
         /// The party who issued the referenced document.
         /// </summary>
@@ -73,8 +75,29 @@ namespace Hilma.UBL.CommonAggregateComponents
         /// <summary>
         /// The result of an attempt to verify a signature associated with the referenced document.
         /// </summary>
-        public ResultOfVerificationType ResultOfVerification { get; set; }
+        public ResultOfVerification ResultOfVerification { get; set; }
 
+    public XElement Serialize()
+    {
+      return new XElement(UblNames.Cac + nameof(DocumentReference),
+        ID.Serialize(nameof(ID)),
+        CopyIndicator.Serialize(nameof(CopyIndicator)),
+        UUID.Serialize(nameof(UUID)),
+        IssueDate.Serialize(nameof(IssueDate)),
+        IssueTime.Serialize(nameof(IssueTime)),
+        DocumentTypeCode.Serialize(nameof(DocumentTypeCode)),
+        DocumentType.Serialize(nameof(DocumentType)),
+        XPath.Serialize(nameof(XPath)),
+        LanguageID.Serialize(nameof(LanguageID)),
+        LocaleCode.Serialize(nameof(LocaleCode)),
+        VersionID.Serialize(nameof(VersionID)),
+        DocumentStatusCode.Serialize(nameof(DocumentStatusCode)),
+        DocumentDescription.Serialize(nameof(DocumentDescription)),
+        Attachment?.Serialize(),
+        ValidityPeriod?.Serialize(nameof(ValidityPeriod)),
+        IssuerParty.Serialize(nameof(IssuerParty)),
+        ResultOfVerification?.Serialize());
     }
+  }
 
 }

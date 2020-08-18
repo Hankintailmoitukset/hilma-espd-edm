@@ -9,8 +9,8 @@ import { Contact } from './Contact'
 
 import assign from 'lodash.assign'
 
-export class AddressType { 
-    public constructor(init?:Partial<AddressType>) {
+export class Address { 
+    public constructor(init?:Partial<Address>) {
         assign(this, init)
     } 
     

@@ -5,15 +5,15 @@ import { IdentifierType } from './IdentifierType'
 import { DateType } from './DateType'
 import { TimeType } from './TimeType'
 import { CodeType } from './CodeType'
-import { AttachmentType } from './AttachmentType'
-import { PeriodType } from './PeriodType'
-import { PartyType } from './PartyType'
-import { ResultOfVerificationType } from './ResultOfVerificationType'
+import { Attachment } from './Attachment'
+import { Period } from './Period'
+import { Party } from './Party'
+import { ResultOfVerification } from './ResultOfVerification'
 
 import assign from 'lodash.assign'
 
-export class DocumentReferenceType { 
-    public constructor(init?:Partial<DocumentReferenceType>) {
+export class DocumentReference { 
+    public constructor(init?:Partial<DocumentReference>) {
         assign(this, init)
     } 
     
@@ -31,8 +31,8 @@ export class DocumentReferenceType {
     versionID?: IdentifierType
     documentStatusCode?: CodeType
     documentDescription?: string[]
-    attachment?: AttachmentType
-    validityPeriod?: PeriodType
-    issuerParty?: PartyType
-    resultOfVerification?: ResultOfVerificationType
+    attachment?: Attachment
+    validityPeriod?: Period
+    issuerParty?: Party
+    resultOfVerification?: ResultOfVerification
 }

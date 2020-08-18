@@ -5,8 +5,8 @@ import { CodeType } from './CodeType'
 
 import assign from 'lodash.assign'
 
-export class ContractingPartyTypeType { 
-    public constructor(init?:Partial<ContractingPartyTypeType>) {
+export class ContractingPartyType { 
+    public constructor(init?:Partial<ContractingPartyType>) {
         assign(this, init)
     } 
     

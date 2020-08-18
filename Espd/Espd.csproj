@@ -27,14 +27,23 @@
     <None Update="typings\AdditionalDocumentReference.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\AdditionalDocumentReference.cs</CustomToolNamespace>
     </None>
+    <None Update="typings\Address.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\Address.cs</CustomToolNamespace>
+    </None>
     <None Update="typings\AddressType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\AddressType.cs</CustomToolNamespace>
     </None>
     <None Update="typings\AmountType.ts">
       <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\AmountType.cs</CustomToolNamespace>
     </None>
+    <None Update="typings\Attachment.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\Attachment.cs</CustomToolNamespace>
+    </None>
     <None Update="typings\AttachmentType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\AttachmentType.cs</CustomToolNamespace>
+    </None>
+    <None Update="typings\BusinessClassificationScheme.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\BusinessClassificationScheme.cs</CustomToolNamespace>
     </None>
     <None Update="typings\CodeContract.ts">
       <CustomToolNamespace>CodeLists\CodeContract.cs</CustomToolNamespace>
@@ -45,8 +54,14 @@
     <None Update="typings\CodeType.ts">
       <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\CodeType.cs</CustomToolNamespace>
     </None>
+    <None Update="typings\CommodityClassification.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\CommodityClassification.cs</CustomToolNamespace>
+    </None>
     <None Update="typings\CommodityClassificationType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\CommodityClassificationType.cs</CustomToolNamespace>
+    </None>
+    <None Update="typings\CompletedTask.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\CompletedTask.cs</CustomToolNamespace>
     </None>
     <None Update="typings\Contact.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\Contact.cs</CustomToolNamespace>
@@ -56,6 +71,9 @@
     </None>
     <None Update="typings\ContractingParty.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\ContractingParty.cs</CustomToolNamespace>
+    </None>
+    <None Update="typings\ContractingPartyType.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\ContractingPartyType.cs</CustomToolNamespace>
     </None>
     <None Update="typings\ContractingPartyTypeType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\ContractingPartyTypeType.cs</CustomToolNamespace>
@@ -84,8 +102,20 @@
     <None Update="typings\DecimalType.ts">
       <CustomToolNamespace>..\UBL\PrimitiveTypes\DecimalType.cs</CustomToolNamespace>
     </None>
+    <None Update="typings\DocumentReference.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\DocumentReference.cs</CustomToolNamespace>
+    </None>
     <None Update="typings\DocumentReferenceType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\DocumentReferenceType.cs</CustomToolNamespace>
+    </None>
+    <None Update="typings\EconomicOperatorParty.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\EconomicOperatorParty.cs</CustomToolNamespace>
+    </None>
+    <None Update="typings\EconomicOperatorRole.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\EconomicOperatorRole.cs</CustomToolNamespace>
+    </None>
+    <None Update="typings\Evidence.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\Evidence.cs</CustomToolNamespace>
     </None>
     <None Update="typings\EvidenceType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\EvidenceType.cs</CustomToolNamespace>
@@ -95,6 +125,9 @@
     </None>
     <None Update="typings\IdentifierType.ts">
       <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\IdentifierType.cs</CustomToolNamespace>
+    </None>
+    <None Update="typings\Language.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\Language.cs</CustomToolNamespace>
     </None>
     <None Update="typings\LanguageType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\LanguageType.cs</CustomToolNamespace>
@@ -117,6 +150,9 @@
     <None Update="typings\Party.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\Party.cs</CustomToolNamespace>
     </None>
+    <None Update="typings\PartyIdentification.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\PartyIdentification.cs</CustomToolNamespace>
+    </None>
     <None Update="typings\PartyIdentificationType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\PartyIdentificationType.cs</CustomToolNamespace>
     </None>
@@ -128,6 +164,9 @@
     </None>
     <None Update="typings\PartyType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\PartyType.cs</CustomToolNamespace>
+    </None>
+    <None Update="typings\Period.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\Period.cs</CustomToolNamespace>
     </None>
     <None Update="typings\PeriodType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\PeriodType.cs</CustomToolNamespace>
@@ -153,8 +192,17 @@
     <None Update="typings\QuantityType.ts">
       <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\QuantityType.cs</CustomToolNamespace>
     </None>
+    <None Update="typings\ResponseValue.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\ResponseValue.cs</CustomToolNamespace>
+    </None>
+    <None Update="typings\ResultOfVerification.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\ResultOfVerification.cs</CustomToolNamespace>
+    </None>
     <None Update="typings\ResultOfVerificationType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\ResultOfVerificationType.cs</CustomToolNamespace>
+    </None>
+    <None Update="typings\ServiceProviderParty.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\ServiceProviderParty.cs</CustomToolNamespace>
     </None>
     <None Update="typings\ServiceProviderPartyType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\ServiceProviderPartyType.cs</CustomToolNamespace>

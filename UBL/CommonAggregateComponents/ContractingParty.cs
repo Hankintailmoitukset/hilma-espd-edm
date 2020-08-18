@@ -28,6 +28,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     public XElement Serialize()
     {
       return new XElement(UblNames.Cac + nameof(ContractingParty),
+        BuyerProfileUri.Serialize(nameof(BuyerProfileUri)),
         Party?.Serialize()
       );
     }

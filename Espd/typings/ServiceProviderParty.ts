@@ -3,12 +3,12 @@
 
 import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
-import { PartyType } from './PartyType'
+import { Party } from './Party'
 
 import assign from 'lodash.assign'
 
-export class ServiceProviderPartyType { 
-    public constructor(init?:Partial<ServiceProviderPartyType>) {
+export class ServiceProviderParty { 
+    public constructor(init?:Partial<ServiceProviderParty>) {
         assign(this, init)
     } 
     
@@ -16,5 +16,5 @@ export class ServiceProviderPartyType {
     id?: IdentifierType
     serviceProviderTypeCode?: CodeType
     serviceType?: string[]
-    party?: PartyType
+    party?: Party
 }

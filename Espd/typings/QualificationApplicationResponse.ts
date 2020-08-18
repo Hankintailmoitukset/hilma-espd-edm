@@ -12,7 +12,7 @@ import { ProcurementProjectLot } from './ProcurementProjectLot'
 import { TenderingCriterion } from './TenderingCriterion'
 import { TenderingCriterionResponse } from './TenderingCriterionResponse'
 import { AdditionalDocumentReference } from './AdditionalDocumentReference'
-import { EvidenceType } from './EvidenceType'
+import { Evidence } from './Evidence'
 
 import assign from 'lodash.assign'
 
@@ -45,5 +45,5 @@ export class QualificationApplicationResponse {
     tenderingCriteria?: TenderingCriterion[]
     tenderingCriterionResponses?: TenderingCriterionResponse[]
     additionalDocumentReferences?: AdditionalDocumentReference[]
-    evidences?: EvidenceType[]
+    evidences?: Evidence[]
 }

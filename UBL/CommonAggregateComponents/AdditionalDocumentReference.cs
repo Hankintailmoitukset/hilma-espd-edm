@@ -1,4 +1,6 @@
-﻿using Hilma.UBL.Attributes;
+﻿using System.Xml.Linq;
+using Hilma.UBL.Attributes;
+using Hilma.UBL.Serializers;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
@@ -48,6 +50,18 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <summary>
     /// The class cac:AdditionalDocumentReference aggregates a subclass cac:Attachment that is used by ESPD to place the URI, name of the document and descriptions.
     /// </summary>
-    public AttachmentType Attachment { get; set; }
+    public Attachment Attachment { get; set; }
+
+    public XElement Serialize()
+    {
+      return new XElement(UblNames.Cac + nameof(AdditionalDocumentReference),
+        ID.Serialize(nameof(ID)),
+        UUID.Serialize(nameof(UUID)),
+        IssueDate.Serialize(nameof(IssueDate)),
+        IssueTime.Serialize(nameof(IssueTime)),
+        DocumentTypeCode.Serialize(nameof(DocumentTypeCode)),
+        DocumentType.Serialize(nameof(DocumentType)),
+        Attachment?.Serialize());
+    }
   }
 }

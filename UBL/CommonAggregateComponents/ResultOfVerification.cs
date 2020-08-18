@@ -1,10 +1,11 @@
-﻿using Hilma.UBL.Attributes;
+﻿using System.Xml.Linq;
+using Hilma.UBL.Attributes;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
 {
   [Contract]
-  public class ResultOfVerificationType
+  public class ResultOfVerification
   {
     public IdentifierType ValidatorID { get; set; }
     public CodeType ValidationResultCode { get; set; }

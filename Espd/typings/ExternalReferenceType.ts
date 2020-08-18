@@ -8,8 +8,8 @@ import { CodeType } from './CodeType'
 
 import assign from 'lodash.assign'
 
-export class ExternalReferenceType { 
-    public constructor(init?:Partial<ExternalReferenceType>) {
+export class ExternalReference { 
+    public constructor(init?:Partial<ExternalReference>) {
         assign(this, init)
     } 
     

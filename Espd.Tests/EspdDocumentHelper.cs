@@ -39,7 +39,7 @@ namespace Hilma.Espd.Tests
                         {
                             Name = "__ProcurerName"
                         },
-                        PostalAddress = new AddressType
+                        PostalAddress = new Address
                         {
                             StreetName = "__ProcurerStreet",
                             CityName =  "__ProcurerCity" ,

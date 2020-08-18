@@ -5,12 +5,12 @@ import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
 import { DateType } from './DateType'
 import { TimeType } from './TimeType'
-import { PartyType } from './PartyType'
+import { Party } from './Party'
 
 import assign from 'lodash.assign'
 
-export class ResultOfVerificationType { 
-    public constructor(init?:Partial<ResultOfVerificationType>) {
+export class ResultOfVerification { 
+    public constructor(init?:Partial<ResultOfVerification>) {
         assign(this, init)
     } 
     
@@ -22,5 +22,5 @@ export class ResultOfVerificationType {
     validateProcess?: string
     validateTool?: string
     validateToolVersion?: string
-    signatoryParty?: PartyType
+    signatoryParty?: Party
 }

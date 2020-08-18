@@ -4,8 +4,8 @@
 
 import assign from 'lodash.assign'
 
-export class PeriodType { 
-    public constructor(init?:Partial<PeriodType>) {
+export class Period { 
+    public constructor(init?:Partial<Period>) {
         assign(this, init)
     } 
     
