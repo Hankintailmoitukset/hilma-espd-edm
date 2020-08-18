@@ -1,7 +1,6 @@
 ﻿using System.Linq;
 using System.Xml.Linq;
 using Hilma.UBL.Attributes;
-using Hilma.UBL.Attributes;
 using Hilma.UBL.Serializers;
 using Hilma.UBL.UnqualifiedDataTypes;
 
