@@ -1,7 +1,7 @@
 ﻿
 
 
-import { UBLExtensionType } from './UBLExtensionType'
+import { UBLExtension } from './UBLExtension'
 import { IdentifierType } from './IdentifierType'
 import { DateType } from './DateType'
 import { TimeType } from './TimeType'
@@ -20,7 +20,7 @@ export class QualificationApplicationRequest {
     } 
     
     
-    ublExtensions?: UBLExtensionType[]
+    ublExtensions?: UBLExtension[]
     ublVersionID?: IdentifierType
     customizationID?: IdentifierType
     profileID?: IdentifierType

@@ -8,7 +8,7 @@ namespace Hilma.UBL.CommonExtensionComponents
   ///  A single extension for private use.
   /// </summary>
   [Contract]
-  public class UBLExtensionType
+  public class UBLExtension
   {
     /// <summary>
     /// An identifier for the Extension assigned by the creator of the extension.

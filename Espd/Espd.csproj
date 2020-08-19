@@ -225,9 +225,6 @@
     <None Update="typings\TimeType.ts">
       <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\TimeType.cs</CustomToolNamespace>
     </None>
-    <None Update="typings\UBLExtensionType.ts">
-      <CustomToolNamespace>..\UBL\CommonExtensionComponents\UBLExtensionType.cs</CustomToolNamespace>
-    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -238,6 +235,9 @@
   <ItemGroup>
     <None Update="Localisation\translations.default.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="typings\UBLExtension.ts">
+      <CustomToolNamespace>..\UBL\CommonExtensionComponents\UBLExtension.cs</CustomToolNamespace>
     </None>
   </ItemGroup>
 </Project>

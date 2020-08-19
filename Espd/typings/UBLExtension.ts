@@ -6,8 +6,8 @@ import { CodeType } from './CodeType'
 
 import assign from 'lodash.assign'
 
-export class UBLExtensionType { 
-    public constructor(init?:Partial<UBLExtensionType>) {
+export class UBLExtension { 
+    public constructor(init?:Partial<UBLExtension>) {
         assign(this, init)
     } 
     

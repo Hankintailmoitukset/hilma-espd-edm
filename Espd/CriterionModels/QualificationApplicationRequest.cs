@@ -18,7 +18,7 @@ namespace Hilma.Espd.EDM.CriterionModels
     /// A container for all extension present in the document
     /// <remarks>Not in use for ESPD</remarks>
     /// </summary>
-    public UBLExtensionType[] UBLExtensions { get; set; }
+    public UBLExtension[] UBLExtensions { get; set; }
 
     /// <summary>
     /// Identifies the earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.
