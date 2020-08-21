@@ -19,7 +19,7 @@ namespace Hilma.Espd.Tests
       var factory = new QualificationApplicationFactory();
       var uuid = Guid.NewGuid();
       var qar = factory.CreateEspd2_1_0SelfContainedRequest(new IdentifierType("TEST-123") {SchemeAgencyID = "TEST"},
-        new IdentifierType("TEST-REF-111") {SchemeAgencyID = "TEST"}, uuid, new string[0] );
+        new IdentifierType("TEST-REF-111") {SchemeAgencyID = "TEST"}, uuid, new string[0], false );
       var suitabilityCriterion = new CriterionSpecification().SelectionCriteria.Suitability.First();
       qar.TenderingCriteria = qar.TenderingCriteria.Union(new[] {suitabilityCriterion}).ToArray();
       var firstPropertyId = qar.TenderingCriteria[0].TenderingCriterionPropertyGroups[0].TenderingCriterionProperties[0]
@@ -48,7 +48,7 @@ namespace Hilma.Espd.Tests
         new IdentifierType("TEST-123") {SchemeAgencyID = "TEST"},
         new IdentifierType("TEST-REF-111") {SchemeAgencyID = "TEST"},
         uuid,
-        lotIds);
+        lotIds, false);
  
       var suitabilityCriterion = new CriterionSpecification().SelectionCriteria.Suitability.First();
       qar.TenderingCriteria = qar.TenderingCriteria.Union(new[] {suitabilityCriterion}).ToArray();
@@ -75,7 +75,7 @@ namespace Hilma.Espd.Tests
         new IdentifierType("TEST-123") { SchemeAgencyID = "TEST" },
         new IdentifierType("TEST-REF-111") { SchemeAgencyID = "TEST" },
         uuid,
-        new[] { "Lot 1", "Lot 2" });
+        new[] { "Lot 1", "Lot 2" }, false);
 
       var suitabilityCriterion = new CriterionSpecification().SelectionCriteria.Suitability.First();
       qar.TenderingCriteria = qar.TenderingCriteria.Union(new[] { suitabilityCriterion }).ToArray();
