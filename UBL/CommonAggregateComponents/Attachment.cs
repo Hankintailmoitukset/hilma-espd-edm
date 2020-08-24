@@ -26,9 +26,9 @@ namespace Hilma.UBL.CommonAggregateComponents
         {
           return new XElement(UblNames.Cac + nameof(Attachment),
               new XElement( UblNames.Cbc + nameof(EmbeddedDocumentBinaryObject), 
-              System.Convert.ToBase64String(EmbeddedDocumentBinaryObject)),
+              EmbeddedDocumentBinaryObject.Serialize(nameof(EmbeddedDocumentBinaryObject)),
               EmbeddedDocument.Serialize(nameof(EmbeddedDocument)), 
-              ExternalReference.Serialize()
+              ExternalReference.Serialize())
            );
         }
     }

@@ -122,7 +122,10 @@ namespace Hilma.UBL.Serializers
     {
       return value != null ? new XElement(UblNames.Cbc + name, value.ToString()) : null;
     }
-
+  public static XElement Serialize(this byte[] value, string name)
+    {
+      return value != null ? new XElement(UblNames.Cbc + name,  System.Convert.ToBase64String(value)) : null;
+    }
     public static object Serialize(this string[] text, string name)
     {
       return text?.Select( t => new XElement(UblNames.Cbc + name, t));
