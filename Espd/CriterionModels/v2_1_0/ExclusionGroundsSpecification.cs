@@ -115,7 +115,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                 {
                   new TenderingCriterionProperty
                   {
-                    _cardinality = CardinalityMetadata.ExactlyOne,
+                    _cardinality = CardinalityMetadata.Optional,
                     ID = EuComGrowId.Random(),
                     TypeCode = CriterionElementType.Requirement,
                     Description = "contributions.threshold.description",
@@ -123,7 +123,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                   },
                   new TenderingCriterionProperty
                   {
-                    _cardinality = CardinalityMetadata.ExactlyOne,
+                    _cardinality = CardinalityMetadata.Optional,
                     ID = EuComGrowId.Random(),
                     TypeCode = CriterionElementType.Requirement,
                     Description = "contributions.additionalInformation.description",
@@ -352,7 +352,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                     {
                       new TenderingCriterionProperty
                       {
-                        _cardinality = CardinalityMetadata.ExactlyOne,
+                        _cardinality = CardinalityMetadata.Optional,
                         ID = EuComGrowId.Random(),
                         TypeCode = CriterionElementType.Requirement,
                         Description = "contributions.threshold.description",
@@ -360,7 +360,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                       },
                       new TenderingCriterionProperty
                       {
-                        _cardinality = CardinalityMetadata.ExactlyOne,
+                        _cardinality = CardinalityMetadata.Optional,
                         ID = EuComGrowId.Random(),
                         TypeCode = CriterionElementType.Requirement,
                         Description = "contributions.additionalInformation.description",
