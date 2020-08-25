@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading;
@@ -7,15 +8,6 @@ using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.Serializers
 {
-  public static class StringExtensions
-  {
-    public static string FirstToLower(this string str)
-    {
-      var first = str.Substring(0, 1).ToLower();
-      return $"{first}{str.Substring(1)}";
-    }
-  } 
-
   public static class CommonBasicComponentsXmlSerializerExtensions
   {
    
@@ -61,7 +53,7 @@ namespace Hilma.UBL.Serializers
       if (measure?.Value == null)
         return null;
 
-      return Element(name, measure.Value,
+      return Element(name, measure.Value.ToString(CultureInfo.InvariantCulture),
         new[]
         {
           Attribute(nameof(measure.UnitCode), measure.UnitCode),
@@ -76,7 +68,7 @@ namespace Hilma.UBL.Serializers
       if (measure?.Value == null)
         return null;
 
-      return Element(name, measure.Value.ToString("F"),
+      return Element(name, measure.Value.ToString(CultureInfo.InvariantCulture),
         new[]
         {
           Attribute(nameof(measure.CurrencyCodeListVersionID), measure.CurrencyCodeListVersionID),
@@ -110,7 +102,7 @@ namespace Hilma.UBL.Serializers
 
     public static XElement SerializeAsDate(this DateTime value, string name)
     {
-      return value != null ? new XElement(UblNames.Cbc + name, value.ToString("yyyy-MM-dd")) : null;
+      return new XElement(UblNames.Cbc + name, value.ToString("yyyy-MM-dd"));
     }
 
     public static XElement Serialize(this TimeType value, string name)
@@ -118,7 +110,7 @@ namespace Hilma.UBL.Serializers
       return value != null ? new XElement(UblNames.Cbc + name, value.ToString()) : null;
     }
 
-    public static XElement Serialize(this object value, string name)
+    public static XElement Serialize(this string value, string name)
     {
       return value != null ? new XElement(UblNames.Cbc + name, value.ToString()) : null;
     }
@@ -126,12 +118,12 @@ namespace Hilma.UBL.Serializers
     {
       return value != null ? new XElement(UblNames.Cbc + name,  System.Convert.ToBase64String(value)) : null;
     }
-    public static object Serialize(this string[] text, string name)
+    public static object Serialize(this IEnumerable<string> text, string name)
     {
       return text?.Select( t => new XElement(UblNames.Cbc + name, t));
     }
 
-    public static XElement Element(string name, object value, XAttribute[] attributes)
+    public static XElement Element(string name, string value, XAttribute[] attributes)
     {
       return value != null ? new XElement(UblNames.Cbc + name, value, attributes) : null;
     }

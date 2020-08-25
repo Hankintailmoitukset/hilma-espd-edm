@@ -25,9 +25,9 @@ namespace Hilma.Espd.EDM.Localisation
                 tenderingCriterion.Description = Translate(tenderingCriterion.Description);
             }
             
-            if(tenderingCriterion.SubTenderingTenderingCriteria != null)
+            if(tenderingCriterion.SubTenderingCriteria != null)
             {
-                foreach (var subCriteria in tenderingCriterion.SubTenderingTenderingCriteria)
+                foreach (var subCriteria in tenderingCriterion.SubTenderingCriteria)
                 {
                     TranslateCriterion(subCriteria);
                 }
@@ -37,14 +37,14 @@ namespace Hilma.Espd.EDM.Localisation
             {
                 foreach (var propertyGroup in tenderingCriterion.TenderingCriterionPropertyGroups)
                 {
-                    TranslateCriterionPropertryGroup(propertyGroup);
+                    TranslateCriterionPropertyGroup(propertyGroup);
                 }
             }
 
             return tenderingCriterion;
         }
 
-        private void TranslateCriterionPropertryGroup(TenderingCriterionPropertyGroup propertyGroup)
+        private void TranslateCriterionPropertyGroup(TenderingCriterionPropertyGroup propertyGroup)
         {
             if(propertyGroup.Description !=null && propertyGroup.Description.Length > 0)
             {
@@ -60,7 +60,7 @@ namespace Hilma.Espd.EDM.Localisation
             {
                 foreach (var subPropertyGroup in propertyGroup.SubsidiaryTenderingCriterionPropertyGroups)
                 {
-                    TranslateCriterionPropertryGroup(subPropertyGroup);
+                    TranslateCriterionPropertyGroup(subPropertyGroup);
                 }
             }
         }

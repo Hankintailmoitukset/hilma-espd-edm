@@ -36,8 +36,8 @@ namespace Hilma.UBL.CommonAggregateComponents
       return new XElement(UblNames.Cac + nameof(Contact),
         Name?.Serialize(nameof(Name)),
         Telephone?.Serialize(nameof(Telephone)),
-        Telephone?.Serialize(nameof(Telefax)),
-        Telephone?.Serialize(nameof(ElectronicMail))
+        Telefax?.Serialize(nameof(Telefax)),
+        ElectronicMail?.Serialize(nameof(ElectronicMail))
       );
     }
   }

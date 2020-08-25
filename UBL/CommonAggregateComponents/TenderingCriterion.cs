@@ -77,7 +77,7 @@ namespace Hilma.UBL.CommonAggregateComponents
       /// <remarks>
       /// Rule: None. Beware that a sub-criterion 'is a' criterion, therefore no need to list these elements at new. See XML examples in the section about exclusion criteria about how to define a sub-criterion.
       /// </remarks>
-      public TenderingCriterion[] SubTenderingTenderingCriteria { get; set; }
+      public TenderingCriterion[] SubTenderingCriteria { get; set; }
 
       /// <summary>
       /// A reference to the legislation related to the Criterion.
@@ -116,7 +116,7 @@ namespace Hilma.UBL.CommonAggregateComponents
           FulfilmentIndicatorTypeCode?.Serialize(nameof(FulfilmentIndicatorTypeCode)),
           EvaluationMethodTypeCode.Serialize(nameof(EvaluationMethodTypeCode)),
           WeightingConsiderationDescription.Serialize(nameof(WeightingConsiderationDescription)),
-          SubTenderingTenderingCriteria?.Select( criterion => criterion.Serialize("SubTenderingCriterion")),
+          SubTenderingCriteria?.Select( criterion => criterion.Serialize("SubTenderingCriterion")),
           Legislations?.Select( lex => lex.Serialize()),
           TenderingCriterionPropertyGroups?.Select(g => g.Serialize())
         );

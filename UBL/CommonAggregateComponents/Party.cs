@@ -52,9 +52,9 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// </summary>
     public ServiceProviderParty ServiceProviderParty { get; set; }
 
-    public XElement Serialize()
+    public XElement Serialize( string name = null )
     {
-      return new XElement(UblNames.Cac + nameof(Party),
+      return new XElement(UblNames.Cac + (name ?? nameof(Party)),
         WebsiteURI?.Serialize(nameof(WebsiteURI)),
         EndpointID?.Serialize(nameof(EndpointID)),
         PartyIdentification?.Select( pi => pi.Serialize()),
