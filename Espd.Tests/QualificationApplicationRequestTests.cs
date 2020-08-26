@@ -33,9 +33,10 @@ namespace Hilma.Espd.Tests
       Assert.AreEqual(suitabilityCriterion.Name, assertedCriteria.Name);
       Assert.AreNotEqual(firstPropertyId, firstPropertyIdAfter, "Id, should not be the same");
 
-      Assert.IsFalse(
-        assertedCriteria.DescendantProperties()
-          .Any(p => Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier)), "Lots should have been removed");
+      var lotIds = assertedCriteria.DescendantProperties()
+          .Where(p => Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier));
+
+      Assert.IsTrue( lotIds.All( id => id.ExpectedID == "0"), "Lot id:s should have been set to \"0\"");
     }
 
     [TestMethod]
