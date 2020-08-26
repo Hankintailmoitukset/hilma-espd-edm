@@ -246,7 +246,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                     ID = EuComGrowId.Random(),
                                     TypeCode = CriterionElementType.Question,
                                     Description = "otherEoGroups.pleaseIndicateTheRoleOfTheEconomicOperator.description",
-                                    ValueDataTypeCode = ResponseDataTypeCode.Code
+                                    ValueDataTypeCode = ResponseDataTypeCode.Code,
+                                    CodeListId = CodeListIds.EORoleType
                                   },
                                   new TenderingCriterionProperty()
                                   {
@@ -319,15 +320,17 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                   },
                                   new TenderingCriterionProperty()
                                   {
-                                    _cardinality = CardinalityMetadata.Optional,
+                                    _cardinality = CardinalityMetadata.ExactlyOne,
                                     ID = EuComGrowId.Random(),
                                     TypeCode = CriterionElementType.Question,
                                     Description = "common.iDOfTheEntity.description",
-                                    ValueDataTypeCode = ResponseDataTypeCode.EconomicOperatorIdentifier
+                                    ValueDataTypeCode = ResponseDataTypeCode.EconomicOperatorIdentifier,
+                                    CodeListId = CodeListIds.EOIDType
+
                                   },
                                   new TenderingCriterionProperty()
                                   {
-                                    _cardinality = CardinalityMetadata.Optional,
+                                    _cardinality = CardinalityMetadata.ExactlyOne,
                                     ID = EuComGrowId.Random(),
                                     TypeCode = CriterionElementType.Question,
                                     Description = "common.activityOfTheEntity.description",
