@@ -23,7 +23,7 @@ export class TenderingCriterion {
     weightNumeric?: number
     evaluationMethodTypeCode?: CodeType
     weightingConsiderationDescription?: string
-    subTenderingTenderingCriteria?: TenderingCriterion[]
+    subTenderingCriteria?: TenderingCriterion[]
     legislations?: Legislation[]
     tenderingCriterionPropertyGroups?: TenderingCriterionPropertyGroup[]
     fulfilmentIndicator?: boolean
