@@ -116,7 +116,7 @@ namespace Hilma.UBL.Serializers
     }
   public static XElement Serialize(this byte[] value, string name)
     {
-      return value != null ? new XElement(UblNames.Cbc + name,  System.Convert.ToBase64String(value)) : null;
+      return value != null ? new XElement(UblNames.Cbc + name, new XAttribute("mimeCode", "application/octet-stream"), System.Convert.ToBase64String(value)) : null;
     }
     public static object Serialize(this IEnumerable<string> text, string name)
     {

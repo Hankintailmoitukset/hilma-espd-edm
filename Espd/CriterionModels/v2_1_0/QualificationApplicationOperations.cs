@@ -69,30 +69,40 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
         var isLotGroup = group.TenderingCriterionProperties
           .Any(IsLotIdentifier);
 
-        if (!procurementHasLots && isLotGroup)
-        {
-          // If no lot, filter out all lot properties
-          yield break;
-        }
-
         foreach (var property in group.TenderingCriterionProperties)
         {
           if (IsLotIdentifier(property))
           {
-            // Duplicate lot property for each lot 
-            foreach (var projectLot in selectedLots)
+            // Set default lot
+            if (selectedLots.Any())
             {
-              yield return new TenderingCriterionProperty()
-              {
-                _cardinality = property._cardinality,
-                ID = EuComGrowId.Random(),
-                Name = property.Name,
-                Description = property.Description,
-                ExpectedID = new IdentifierType(projectLot),
-                ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
-              };
+                // Duplicate lot property for each lot 
+                foreach (var projectLot in selectedLots)
+                {
+                    yield return new TenderingCriterionProperty()
+                    {
+                        _cardinality = property._cardinality,
+                        ID = EuComGrowId.Random(),
+                        Name = property.Name,
+                        Description = property.Description,
+                        ExpectedID = new IdentifierType(projectLot),
+                        ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
+                    };
+                }
             }
-          }
+            else
+            {
+                yield return new TenderingCriterionProperty()
+                {
+                    _cardinality = property._cardinality,
+                    ID = EuComGrowId.Random(),
+                    Name = property.Name,
+                    Description = property.Description,
+                    ExpectedID = new IdentifierType(0.ToString()),
+                    ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
+                };
+            }
+        }
           else
           {
             // Generate new if for property

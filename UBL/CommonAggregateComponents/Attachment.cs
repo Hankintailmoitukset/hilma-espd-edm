@@ -10,7 +10,6 @@ namespace Hilma.UBL.CommonAggregateComponents
         /// <summary>
         /// A binary large object containing an attached document.
         /// </summary>
-        // TODO convert to base64Binary
         public byte[] EmbeddedDocumentBinaryObject { get; set; }
 
         /// <summary>
@@ -25,10 +24,9 @@ namespace Hilma.UBL.CommonAggregateComponents
         public XElement Serialize()
         {
           return new XElement(UblNames.Cac + nameof(Attachment),
-              new XElement( UblNames.Cbc + nameof(EmbeddedDocumentBinaryObject), 
               EmbeddedDocumentBinaryObject.Serialize(nameof(EmbeddedDocumentBinaryObject)),
               EmbeddedDocument.Serialize(nameof(EmbeddedDocument)), 
-              ExternalReference.Serialize())
+              ExternalReference.Serialize()
            );
         }
     }
