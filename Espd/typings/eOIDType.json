@@ -1,0 +1,28 @@
+{
+  "shortName": "EOIDType",
+  "longName": "EOIDType",
+  "codes": [
+    {
+      "code": "NATIONAL",
+      "name": "National Identifier"
+    },
+    {
+      "code": "VAT",
+      "name": "VAT number"
+    },
+    {
+      "code": "LEI",
+      "name": "Legal Entity Identifier"
+    },
+    {
+      "code": "BRIS",
+      "name": "Business Registry European Unique Identifier"
+    },
+    {
+      "code": "DUNS",
+      "name": "Duns & Bradstreet number"
+    }
+  ],
+  "agencyId": "EU-COM-GROW",
+  "version": "2.1.0"
+}

@@ -1,0 +1,32 @@
+{
+  "shortName": "EORoleType",
+  "longName": "ECONOMIC OPERATOR ROLE TYPE",
+  "codes": [
+    {
+      "code": "SCLE",
+      "name": "Sole contractor / Lead entity"
+    },
+    {
+      "code": "GM",
+      "name": "Group member"
+    },
+    {
+      "code": "OERON",
+      "name": "Other entity (relied upon)"
+    },
+    {
+      "code": "OENRON",
+      "name": "Other entity (not relied upon)"
+    },
+    {
+      "code": "SC",
+      "name": "Sole entity "
+    },
+    {
+      "code": "LE",
+      "name": "The leader of a Consortium, Joint Venture or another type of group."
+    }
+  ],
+  "agencyId": "EU-COM-GROW",
+  "version": "2.1.0"
+}

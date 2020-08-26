@@ -7,14 +7,17 @@
     public const string BooleanGUIControlType = nameof(BooleanGUIControlType);
     public const string CurrencyCode = nameof(CurrencyCode);
     public const string CountryCodeIdentifier = nameof(CountryCodeIdentifier);
+    public const string EORoleType = nameof(EORoleType);
+    public const string EOIDType = nameof(EOIDType);
 
     public static string[] All => new[]
     {
       FinancialRatioType, 
       BooleanGUIControlType, 
       CurrencyCode,
-      CountryCodeIdentifier
+      CountryCodeIdentifier,
+      EORoleType,
+      EOIDType
     };
-
   }
 }

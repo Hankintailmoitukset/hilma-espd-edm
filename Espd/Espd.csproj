@@ -120,6 +120,9 @@
     <None Update="typings\EvidenceType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\EvidenceType.cs</CustomToolNamespace>
     </None>
+    <None Update="typings\ExternalReference.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\ExternalReference.cs</CustomToolNamespace>
+    </None>
     <None Update="typings\ExternalReferenceType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\ExternalReferenceType.cs</CustomToolNamespace>
     </None>
