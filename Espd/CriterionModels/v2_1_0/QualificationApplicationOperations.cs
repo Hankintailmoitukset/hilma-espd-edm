@@ -47,11 +47,19 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
         if (propertyGroup == null)
           throw new ArgumentNullException(nameof(propertyGroup));
 
-        if (propertyGroup?.TenderingCriterionProperties != null)
+        if (propertyGroup?.TenderingCriterionProperties?.Any()??false)
         {
           propertyGroup.TenderingCriterionProperties =
             FilterAndFinalizeProperties(propertyGroup)
               .ToArray();
+        }
+        else
+        {
+          // Set empty property to conform to espd schema
+          propertyGroup.TenderingCriterionProperties = new[]
+          {
+            CriterionHelper.EmptyCaptionProperty
+          };
         }
 
         if (propertyGroup.SubsidiaryTenderingCriterionPropertyGroups != null)
