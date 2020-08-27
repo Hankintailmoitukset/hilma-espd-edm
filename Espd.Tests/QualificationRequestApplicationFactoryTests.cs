@@ -18,7 +18,7 @@ namespace Hilma.Espd.Tests
       var qar = factory.CreateEspd2_1_0SelfContainedRequest( new IdentifierType("TEST-123"){ SchemeAgencyID = "TEST" },
         new IdentifierType("TEST-REF-111"){ SchemeAgencyID = "TEST" },
         uuid,
-        new string[0]);
+        new string[0], false);
  
       var validationResults = new List<ValidationResult>();
       var isValid = Validator.TryValidateObject(qar, new ValidationContext(qar), validationResults);

@@ -22,6 +22,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
 
         }.SelectMany(c => c);
 
+        public IEnumerable<TenderingCriterion> MandatoryCriteria => AllCriteria.Where(x => x._mandatory == true);
+
         public IEnumerator<TenderingCriterion> GetEnumerator()
         {
             return AllCriteria.GetEnumerator();

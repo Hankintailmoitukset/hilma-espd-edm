@@ -8,7 +8,7 @@ namespace Hilma.Espd.EDM.CriterionModels
 {
   public class QualificationApplicationFactory
   {
-    public QualificationApplicationRequest CreateEspd2_1_0SelfContainedRequest(IdentifierType identifier, IdentifierType contractFolderId, Guid uuid, string[] lotIds )
+    public QualificationApplicationRequest CreateEspd2_1_0SelfContainedRequest(IdentifierType identifier, IdentifierType contractFolderId, Guid uuid, string[] lotIds, bool onlyMandatoryExclusionGrounds)
     {
       if (identifier == null) throw new ArgumentNullException(nameof(identifier));
       if (contractFolderId == null) throw new ArgumentNullException(nameof(contractFolderId));
@@ -38,7 +38,8 @@ namespace Hilma.Espd.EDM.CriterionModels
         ProcurementProject = new ProcurementProject(),
         ProcurementProjectLots = procurementProjectLots.ToArray(),
         AdditionalDocumentReferences = new AdditionalDocumentReference[0],
-        TenderingCriteria = criterionFactory.V2_1_0.ExclusionGrounds.ToArray()
+        TenderingCriteria = onlyMandatoryExclusionGrounds ? criterionFactory.V2_1_0.ExclusionGrounds.MandatoryCriteria.ToArray()
+                                                          : criterionFactory.V2_1_0.ExclusionGrounds.ToArray()
       };
     }
     
