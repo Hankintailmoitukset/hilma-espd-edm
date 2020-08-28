@@ -34,7 +34,7 @@ namespace Hilma.Espd.Tests
       Assert.AreNotEqual(firstPropertyId, firstPropertyIdAfter, "Id, should not be the same");
 
       var lotIds = assertedCriteria.DescendantProperties()
-          .Where(p => Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier));
+          .Where(p => p.TypeCode.Equals(CriterionElementType.Requirement) && Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier));
 
       Assert.IsTrue( lotIds.All( id => id.ExpectedID == "0"), "Lot id:s should have been set to \"0\"");
     }
@@ -61,7 +61,7 @@ namespace Hilma.Espd.Tests
 
       var lotProperties =
         assertedCriteria.DescendantProperties()
-          .Where(p => Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier)).ToArray();
+          .Where(p => p.TypeCode.Equals(CriterionElementType.Requirement) && Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier)).ToArray();
       Assert.AreEqual(2, lotProperties.Length, "Should have two lot properties");
       Assert.AreEqual("Lot 1", lotProperties[0].ExpectedID.Value);
       Assert.AreEqual("Lot 2", lotProperties[1].ExpectedID.Value);
@@ -88,7 +88,7 @@ namespace Hilma.Espd.Tests
 
       var lotProperties =
         assertedCriteria.DescendantProperties()
-          .Where(p => Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier)).ToArray();
+          .Where(p => p.TypeCode.Equals(CriterionElementType.Requirement) && Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier)).ToArray();
       Assert.AreEqual(1, lotProperties.Length, "Should have one lot property");
       Assert.AreEqual("Lot 1", lotProperties[0].ExpectedID.Value);
     }
