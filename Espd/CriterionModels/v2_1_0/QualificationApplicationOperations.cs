@@ -75,11 +75,11 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
         TenderingCriterionPropertyGroup group)
       {
         var isLotGroup = group.TenderingCriterionProperties
-          .Any(IsLotIdentifier);
+          .Any(IsRequirementLotIdentifier);
 
         foreach (var property in group.TenderingCriterionProperties)
         {
-          if (IsLotIdentifier(property))
+          if (IsRequirementLotIdentifier(property))
           {
             // Set default lot
             if (selectedLots.Any())
@@ -89,28 +89,30 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                 {
                     yield return new TenderingCriterionProperty()
                     {
-                        _cardinality = property._cardinality,
-                        ID = EuComGrowId.Random(),
-                        Name = property.Name,
-                        Description = property.Description,
-                        ExpectedID = new IdentifierType(projectLot),
-                        ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
+                      _cardinality = property._cardinality,
+                      ID = EuComGrowId.Random(),
+                      Name = property.Name,
+                      Description = property.Description,
+                      ExpectedID = new IdentifierType(projectLot),
+                      TypeCode = CriterionElementType.Requirement,
+                      ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
                     };
                 }
             }
             else
             {
-                yield return new TenderingCriterionProperty()
-                {
-                    _cardinality = property._cardinality,
-                    ID = EuComGrowId.Random(),
-                    Name = property.Name,
-                    Description = property.Description,
-                    ExpectedID = new IdentifierType(0.ToString()),
-                    ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
-                };
+              yield return new TenderingCriterionProperty()
+              {
+                  _cardinality = property._cardinality,
+                  ID = EuComGrowId.Random(),
+                  Name = property.Name,
+                  Description = property.Description,
+                  ExpectedID = new IdentifierType(0.ToString()),
+                  TypeCode = CriterionElementType.Requirement,
+                  ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
+              };
             }
-        }
+          }
           else
           {
             // Generate new if for property
@@ -119,9 +121,9 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
           }
         }
 
-        bool IsLotIdentifier(TenderingCriterionProperty property)
+        bool IsRequirementLotIdentifier(TenderingCriterionProperty property)
         {
-          if (property?.ValueDataTypeCode == null)
+          if (property?.ValueDataTypeCode == null || (!property?.TypeCode?.Equals(CriterionElementType.Requirement) ?? false))
             return false;
 
           return property.ValueDataTypeCode.Value == ResponseDataTypeCode.LotIdentifier.Value;

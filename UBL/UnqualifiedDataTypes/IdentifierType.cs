@@ -56,7 +56,7 @@ namespace Hilma.UBL.UnqualifiedDataTypes
       Value = value;
     }
 
-    public static implicit operator string(IdentifierType c) => c.Value;
+    public static implicit operator string(IdentifierType c) => c?.Value;
 
    }
  
