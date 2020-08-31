@@ -37,7 +37,6 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <remarks>
     /// Rule: None.
     /// </remarks>
-    [Required]
     public string Description { get; set; }
 
     /// <summary>
