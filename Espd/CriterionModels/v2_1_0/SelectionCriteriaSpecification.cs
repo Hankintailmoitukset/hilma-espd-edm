@@ -1000,8 +1000,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                      _cardinality = CardinalityMetadata.ExactlyOne,
                                      ID = EuComGrowId.Random(),
                                      TypeCode = CriterionElementType.Question,
-                                     Description = "common.lotID.description",
-                                     ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
+                                     Description = "common.isThisInformationAvailableOnline.description",
+                                     ValueDataTypeCode = ResponseDataTypeCode.Indicator
                                    }
                                  },
                                  SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
