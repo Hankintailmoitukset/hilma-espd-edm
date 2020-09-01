@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers;
@@ -887,6 +888,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
         {
           new TenderingCriterionPropertyGroup
           {
+            ID = new EuComGrowId(Guid.Empty.ToString()), //TODO: Tämän id puuttuu
             PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
             TenderingCriterionProperties = new[]
             {
