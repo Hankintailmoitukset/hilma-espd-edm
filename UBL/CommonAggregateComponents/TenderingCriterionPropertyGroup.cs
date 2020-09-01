@@ -32,7 +32,6 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <remarks>
     /// Rule: Compulsory use of the UUIDs supplied by e-Certis. See also the spreadsheets Criteria Taxonomy (Regulated ESPD) and Criteria Taxonomy (Self-contained ESPD).
     /// </remarks>
-    [Required]
     public IdentifierType ID { get; set; }
 
     /// <summary>

@@ -22,7 +22,7 @@ namespace Hilma.Espd.Tests
                 IssueDate = new DateType { Value=DateTime.Parse("2019-01-23") },
                 IssueTime= new TimeType {Hour= 00, Minute=08,Second=33 },
                 VersionID = new IdentifierType { Value= "2018.01.01" },
-                ProcedureCode = new CodeType { Value= "OPEN",ListID= "ProcedureType",ListAgencyID= "EU-COM-OP" },
+                ProcedureCode = new CodeType { Value= "OPEN",ListID= "ProcedureType", ListAgencyID= "EU-COM-OP", ListVersionID = "1.0" },
                 QualificationApplicationTypeCode = new CodeType {Value= "SELFCONTAINED" },
                 WeightScoringMethodologyNote = new[] {  "__WeightingScoringMethodologyNote" },
                 WeightingTypeCode = new CodeType {Value = "PERCENTAGE" },
