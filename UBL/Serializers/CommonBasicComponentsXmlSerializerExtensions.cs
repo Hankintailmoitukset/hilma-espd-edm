@@ -19,7 +19,7 @@ namespace Hilma.UBL.Serializers
       return Element(name, id.Value, 
         new []
         {
-          Attribute( nameof(id.SchemeAgencyID), id.SchemeAgencyID ),
+          Attribute( nameof(id.SchemeAgencyID), id.SchemeAgencyID),
           Attribute( nameof(id.SchemeAgencyName), id.SchemeAgencyName ),
           Attribute( nameof(id.SchemeDataURI), id.SchemeDataURI ),
           Attribute( nameof(id.SchemeID), id.SchemeID ),
