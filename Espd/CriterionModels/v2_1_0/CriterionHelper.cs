@@ -803,7 +803,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                 },
                                               new TenderingCriterionProperty()
                                                 {
-                                                _cardinality = CardinalityMetadata.ZeroOrMore,
+                                                _cardinality = CardinalityMetadata.Optional,
                                                 ID = EuComGrowId.Random(),
                                                 TypeCode = CriterionElementType.Question,
                                                 Description ="references.specificAmount.description",
@@ -811,7 +811,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                 },
                                               new TenderingCriterionProperty()
                                                 {
-                                                _cardinality = CardinalityMetadata.ZeroOrMore,
+                                                _cardinality = CardinalityMetadata.Optional,
                                                 ID = EuComGrowId.Random(),
                                                 TypeCode = CriterionElementType.Question,
                                                 Description ="references.PeriodStartAndEndDates.description",
@@ -880,7 +880,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                             TypeCode = CriterionElementType.Question,
                                                             Description ="common.isThisInformationAvailableOnline.description",
                                                             ValueDataTypeCode = ResponseDataTypeCode.Indicator
-                                                        }
+                                                      }
                                                   },
                                                   SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
                                                   {
@@ -897,7 +897,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                                     TypeCode = CriterionElementType.Question,
                                                                     Description ="common.evidenceSupplied.description",
                                                                     ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
-                                                                }
+                                                              }
                                                           }
                                                       }
                                                   }
