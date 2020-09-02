@@ -391,15 +391,15 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                   },
                                   new TenderingCriterionProperty()
                                   {
-                                    _cardinality = CardinalityMetadata.Optional,
+                                    _cardinality = CardinalityMetadata.ExactlyOne,
                                     ID = EuComGrowId.Random(),
                                     TypeCode = CriterionElementType.Question,
-                                    Description = "common.iDOfTheEntity.description",
+                                    Description = "common.iDOfTheSubcontractor.description",
                                     ValueDataTypeCode = ResponseDataTypeCode.EconomicOperatorIdentifier
                                   },
                                   new TenderingCriterionProperty()
                                   {
-                                    _cardinality = CardinalityMetadata.Optional,
+                                    _cardinality = CardinalityMetadata.ZeroOrMore,
                                     ID = EuComGrowId.Random(),
                                     TypeCode = CriterionElementType.Question,
                                     Description = "common.activityOfTheEntity.description",
