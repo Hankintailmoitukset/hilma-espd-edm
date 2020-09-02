@@ -93,7 +93,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                       ID = EuComGrowId.Random(),
                       Name = property.Name,
                       Description = property.Description,
-                      ExpectedID = new IdentifierType(projectLot),
+                      ExpectedID = new EuComGrowId(projectLot),
                       TypeCode = CriterionElementType.Requirement,
                       ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
                     };
@@ -107,7 +107,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                   ID = EuComGrowId.Random(),
                   Name = property.Name,
                   Description = property.Description,
-                  ExpectedID = new IdentifierType(0.ToString()),
+                  ExpectedID = new EuComGrowId(0.ToString()),
                   TypeCode = CriterionElementType.Requirement,
                   ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
               };

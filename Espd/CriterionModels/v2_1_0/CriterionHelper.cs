@@ -427,7 +427,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                            new TenderingCriterionPropertyGroup
                                            {
                                                ID = new CriteriaTaxonomyIdentifier("74e6c7b4-757b-4b40-ada6-fad6a997c310"),
-                                               PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
+                                               PropertyGroupTypeCode = PropertyGroupTypeCode.OnTrue,
                                                TenderingCriterionProperties = new[]
                                                {
                                                    new TenderingCriterionProperty

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers;
@@ -887,11 +888,11 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
         {
           new TenderingCriterionPropertyGroup
           {
-            ID = new CriteriaTaxonomyIdentifier("f3a6836d-2de2-4cd1-81ca-fb06178d05c5"),
+            ID = new EuComGrowId(Guid.Empty.ToString()), //TODO: Tämän id puuttuu
             PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
             TenderingCriterionProperties = new[]
             {
-                new TenderingCriterionProperty
+              new TenderingCriterionProperty
               {
                 ID = EuComGrowId.Random(),
                 TypeCode = CriterionElementType.Caption,

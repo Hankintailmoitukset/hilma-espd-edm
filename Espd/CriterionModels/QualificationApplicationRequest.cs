@@ -39,7 +39,7 @@ namespace Hilma.Espd.EDM.CriterionModels
     /// </summary>
     /// <remarks>Use the value "41". Use also "CEN-BII" for the scheme AgencyID attribute.</remarks>
     [Required]
-    public IdentifierType ProfileID { get; set; } = new IdentifierType("41") { SchemeAgencyID = "CEN-BII" };
+    public IdentifierType ProfileID { get; set; } = new IdentifierType("4.1") { SchemeAgencyID = "CEN-BII" };
 
     /// <summary>
     /// The identification and version of the ESPD Exchange Data Model used to create the to XML instance. The identification may include the exact version of the specification.
