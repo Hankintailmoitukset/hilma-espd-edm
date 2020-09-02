@@ -171,7 +171,7 @@
   "common.pleaseSpecify.description": "Please specify",
   "common.nameOfTheEntity.description": "Name of the entity",
   "common.iDOfTheEntity.description": "ID of the entity",
-  "common.iDOfTheSubcontractor.description": "ID of the entity",
+  "common.iDOfTheSubcontractor.description": "ID of the subcontractor",
   "common.activityOfTheEntity.description": "Activity of the entity (for this specific procedure)",
 
   "references.question1.name": "For works contracts: performance of works of the specified type",

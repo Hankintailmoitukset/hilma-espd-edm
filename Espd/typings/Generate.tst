@@ -12,13 +12,13 @@
     
         ImportedTypes.Add( name );
     }
-
-    string ConvertDefault(Type type) { 
+    
+    string ConvertDefault(Type type) {
         if (type.IsEnumerable) {
             return "= []";
         }
 
-        if(type.IsGuid) { 
+        if(type.IsGuid) {
             return "= '00000000-0000-0000-0000-000000000000'";  
         }
 
