@@ -1,4 +1,4 @@
-﻿using Hilma.Espd.EDM.CriterionModels.v2_1_0;
+﻿using Hilma.Espd.EDM.CriterionModels.v2_1_1;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;

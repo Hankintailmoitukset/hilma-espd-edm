@@ -1,12 +1,12 @@
 using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers
+namespace Hilma.Espd.EDM.CriterionModels.v2_1_1.Identifiers
 {
     public class PropertyGroupTypeCode : CodeType {
         public PropertyGroupTypeCode( string code ) : base ( code ) {
             ListID = "PropertyGroupType";
             ListAgencyID = "EU-COM-GROW";
-            ListVersionID = "2.1.0";
+            ListVersionID = "2.1.1";
         }
 
         public static PropertyGroupTypeCode OnAlways => new PropertyGroupTypeCode("ON*");

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using Hilma.Espd.EDM.CriterionModels.v2_1_0;
+using Hilma.Espd.EDM.CriterionModels.v2_1_1;
 using Hilma.Espd.EDM.Localisation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
