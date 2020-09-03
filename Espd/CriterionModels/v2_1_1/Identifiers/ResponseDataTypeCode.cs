@@ -1,6 +1,6 @@
 using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers
+namespace Hilma.Espd.EDM.CriterionModels.v2_1_1.Identifiers
 {
   public class ResponseDataTypeCode : CodeType
   {
@@ -10,7 +10,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers
     {
       ListID = "ResponseDataType";
       ListAgencyID = "EU-COM-GROW";
-      ListVersionID = "2.1.0";
+      ListVersionID = "2.1.1";
     }
 
     /// <summary>

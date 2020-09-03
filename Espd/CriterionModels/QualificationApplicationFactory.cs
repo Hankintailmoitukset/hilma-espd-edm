@@ -1,4 +1,4 @@
-﻿using Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers;
+﻿using Hilma.Espd.EDM.CriterionModels.v2_1_1.Identifiers;
 using Hilma.UBL.CommonAggregateComponents;
 using Hilma.UBL.UnqualifiedDataTypes;
 using System;
@@ -38,8 +38,8 @@ namespace Hilma.Espd.EDM.CriterionModels
         ProcurementProject = new ProcurementProject(),
         ProcurementProjectLots = procurementProjectLots.ToArray(),
         AdditionalDocumentReferences = new AdditionalDocumentReference[0],
-        TenderingCriteria = onlyMandatoryExclusionGrounds ? criterionFactory.V2_1_0.ExclusionGrounds.MandatoryCriteria.ToArray()
-                                                          : criterionFactory.V2_1_0.ExclusionGrounds.ToArray()
+        TenderingCriteria = onlyMandatoryExclusionGrounds ? criterionFactory.V2_1_1.ExclusionGrounds.MandatoryCriteria.ToArray()
+                                                          : criterionFactory.V2_1_1.ExclusionGrounds.ToArray()
       };
     }
     

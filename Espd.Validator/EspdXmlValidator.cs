@@ -25,7 +25,7 @@ namespace Espd.Validator
       var path = Path.GetFullPath(AppDomain.CurrentDomain.BaseDirectory);
       var schema = new XmlSchemaSet { XmlResolver = new XmlUrlResolver() };
       var nameSpace = EspdNames.Qarq;
-      schema.Add(nameSpace.ToString(), Path.Combine(path, "Schemas", "2.1.0", "maindoc", QualificationApplicationRequestXsd));
+      schema.Add(nameSpace.ToString(), Path.Combine(path, "Schemas", "2.1.1", "maindoc", QualificationApplicationRequestXsd));
       schema.Compile();
       
       var validationErrors = new List<string>();

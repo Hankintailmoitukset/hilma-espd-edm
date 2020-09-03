@@ -1,6 +1,6 @@
 using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers
+namespace Hilma.Espd.EDM.CriterionModels.v2_1_1.Identifiers
 {
      public class CriterionElementType : CodeType {
         public static CriterionElementType Requirement => new CriterionElementType("REQUIREMENT");
@@ -12,7 +12,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers
         public CriterionElementType( string code ) : base ( code ) {
             ListID = "CriterionElementType";
             ListAgencyID = "EU-COM-GROW";
-            ListVersionID = "2.1.0";
+            ListVersionID = "2.1.1";
         }
     }
 }
