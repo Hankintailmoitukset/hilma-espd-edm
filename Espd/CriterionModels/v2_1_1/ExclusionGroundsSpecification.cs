@@ -2,10 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers;
+using Hilma.Espd.EDM.CriterionModels.v2_1_1.Identifiers;
 using Hilma.UBL.CommonAggregateComponents;
 
-namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
+namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
 {
     public class ExclusionGroundsSpecification : IEnumerable<TenderingCriterion>
     {
@@ -885,38 +885,76 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                 ID = new CriteriaTaxonomyIdentifier("63adb07d-db1b-4ef0-a14e-a99785cf8cf6"),
                 Legislations = new Legislation[] { },
                 TenderingCriterionPropertyGroups = new[]
-        {
-          new TenderingCriterionPropertyGroup
-          {
-            ID = new EuComGrowId(Guid.Empty.ToString()), //TODO: Tämän id puuttuu
-            PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
-            TenderingCriterionProperties = new[]
-            {
-              new TenderingCriterionProperty
-              {
-                ID = EuComGrowId.Random(),
-                TypeCode = CriterionElementType.Caption,
-                Description = "purelyNational.textDescribingTheNationalCriterion.description",
-                ValueDataTypeCode = ResponseDataTypeCode.None
-              },
-                new TenderingCriterionProperty
-              {
-                ID = EuComGrowId.Random(),
-                TypeCode = CriterionElementType.Caption,
-                Description = "purelyNational.typeOfEvidenceFromECertis.description",
-                ValueDataTypeCode = ResponseDataTypeCode.None
-              },
-              new TenderingCriterionProperty
-              {
-                ID = EuComGrowId.Random(),
-                TypeCode = CriterionElementType.Question,
-                Description = "common.yourAnswer.description",
-                ValueDataTypeCode = ResponseDataTypeCode.Indicator
-              }
-            },
-            SubsidiaryTenderingCriterionPropertyGroups = CriterionHelper.TenderingCriterionURLGroup
-          }
-        }
+                {
+                    new TenderingCriterionPropertyGroup
+                    {
+                        _cardinality = CardinalityMetadata.ExactlyOne,
+                        ID = new CriteriaTaxonomyIdentifier("8d79d5f7-dc21-45e9-b188-e02008b854e0"),
+                        PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
+                        TenderingCriterionProperties = new[]
+                        {
+                          new TenderingCriterionProperty
+                          {
+                            ID = EuComGrowId.Random(),
+                            TypeCode = CriterionElementType.Caption,
+                            Description = "",
+                            ValueDataTypeCode = ResponseDataTypeCode.None
+                          }
+                        },
+                        SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                        {
+                            new TenderingCriterionPropertyGroup
+                            {
+                                _cardinality = CardinalityMetadata.OneOrMore,
+                                ID = new CriteriaTaxonomyIdentifier("4f5088db-ae29-46fb-b642-30240aa2248a"),
+                                PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
+                                TenderingCriterionProperties = new[]{
+                                    new TenderingCriterionProperty
+                                    {
+                                        ID = EuComGrowId.Random(),
+                                        TypeCode = CriterionElementType.Caption,
+                                        Description = "purelyNational.textDescribingTheNationalCriterion.description",
+                                        ValueDataTypeCode = ResponseDataTypeCode.None
+                                    },
+                                    new TenderingCriterionProperty
+                                    {
+                                        ID = EuComGrowId.Random(),
+                                        TypeCode = CriterionElementType.Caption,
+                                        Description = "purelyNational.typeOfEvidenceFromECertis.description",
+                                        ValueDataTypeCode = ResponseDataTypeCode.None
+                                    },
+                                    new TenderingCriterionProperty
+                                    {
+                                        ID = EuComGrowId.Random(),
+                                        TypeCode = CriterionElementType.Question,
+                                        Description = "common.yourAnswer.description",
+                                        ValueDataTypeCode = ResponseDataTypeCode.Indicator
+                                    }
+                                }
+                            }
+                        }
+                    },
+
+                    new TenderingCriterionPropertyGroup
+                    {
+                        _cardinality = CardinalityMetadata.Optional,
+                        ID = new CriteriaTaxonomyIdentifier("41dd2e9b-1bfd-44c7-93ee-56bd74a4334b"),
+                        PropertyGroupTypeCode = PropertyGroupTypeCode.OnTrue,
+                        TenderingCriterionProperties = new[]
+                        {
+                            new TenderingCriterionProperty
+                            {
+                                _cardinality = CardinalityMetadata.OneOrMore,
+                                ID = EuComGrowId.Random(),
+                                TypeCode = CriterionElementType.Question,
+                                Description ="common.evidenceSupplied.description",
+                                ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
+                            }
+                        }
+                    }
+
+                }
+
             }
         };
     }

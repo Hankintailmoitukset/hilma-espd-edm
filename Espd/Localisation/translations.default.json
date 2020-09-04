@@ -287,6 +287,17 @@
   "OtherCaLots.maximumNumberOfLots.description": "Maximum number of lots",
   "OtherCaLots.maximumNumberOfLotsThatMayBeAwarded.description": "Maximum number of lots that may be awarded to one tenderer",
 
+  "otherEOSME.question.name": "EO SME",
+  "otherEOSME.question.description": "Is the economic operator a Micro, a Small or Medium-sized Enterprise?",
+  "otherEOSME.numberOfEmployees.description": "Number of employees",
+  "otherEOSME.turnover.description": "Turnover",
+
+  "defenceSelectionOther.question.name": "Supplementary evidence for procurement procedures regulated by 2009/81/EC Directive",
+  "defenceSelectionOther.question.description": "Regarding procurement procedures regulated by the 2009/81/EC Directive, does the Economic Operator add any supplementary evidence that may be required?",
+
+  "utilitiesSelectionOther.question.name": "Supplementary evidence for procurement procedures regulated by 2004/17/EC Directive",
+  "utilitiesSelectionOther.question.description": "Regarding procurement procedures regulated by the 2004/17/EC Directive, does the Economic Operator add any supplementary evidence that may be required?",
+
   "qualityAssurance.question1.name": "For supply contracts: certificates by quality control institutes",
   "qualityAssurance.question1.description": "Can the economic operator provide the required certificates drawn up by official quality control institutes or agencies of recognised competence attesting the conformity of products clearly identified by references to the technical specifications or standards, which are set out in the relevant notice or the in the ESPD, the relevant notice or ?",
   "qualityAssurance.question2.name": "Certificates by independent bodies about quality assurance standards",

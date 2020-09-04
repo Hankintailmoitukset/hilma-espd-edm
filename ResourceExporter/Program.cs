@@ -1,4 +1,4 @@
-﻿using Hilma.Espd.EDM.CriterionModels.v2_1_0;
+﻿using Hilma.Espd.EDM.CriterionModels.v2_1_1;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -14,7 +14,7 @@ namespace ResourceExporter
 {
   class Program
   {
-    const string RootUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.0/docs/src/main/asciidoc/dist/cl/gc/{0}-CodeList.gc";
+    const string RootUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.1/docs/src/main/asciidoc/dist/cl/gc/{0}.gc";
    
     static void Main(string[] args)
     {

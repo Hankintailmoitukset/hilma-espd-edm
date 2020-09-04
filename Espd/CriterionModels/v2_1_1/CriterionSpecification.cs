@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Hilma.UBL.CommonAggregateComponents;
 
-namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
+namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
 {
   
   /// <summary>
@@ -20,10 +20,10 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
 
     public IEnumerable<TenderingCriterion> AllCriteria => new[]
     {
+      OtherCriteria.AllCriteria,
       ExclusionGrounds.AllCriteria,
       SelectionCriteria.AllCriteria,
-      OtherCriteria.AllCriteria
-
+      
     }.SelectMany(c => c);
 
     public IEnumerator<TenderingCriterion> GetEnumerator()

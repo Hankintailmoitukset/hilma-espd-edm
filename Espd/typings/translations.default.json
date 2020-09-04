@@ -90,7 +90,7 @@
   "economicFinancialStanding.numberOfFiscalYears.description": "Number of fiscal years",
   "economicFinancialStanding.cpvsCaption.description": "CPVs:",
 
-  "criteria.economic_financial_standing": "Economic financial standing",
+  "criteria.economic_financial_standing": "Economic financial standing", 
 
   "economicFinancialStanding.averageTurnoverYearly.name": "Average yearly turnover",
   "economicFinancialStanding.averageTurnoverYearly.description": "Its average yearly turnover for the number of years required in the relevant notice, the in the ESPD, the relevant notice or  or the ESPD is as follows:",

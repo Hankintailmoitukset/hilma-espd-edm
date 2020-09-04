@@ -1,7 +1,7 @@
-﻿using Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers;
+﻿using Hilma.Espd.EDM.CriterionModels.v2_1_1.Identifiers;
 using Hilma.UBL.CommonAggregateComponents;
 
-namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
+namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
 {
 
     public class CriterionHelper
@@ -837,7 +837,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                                                     TenderingCriterionProperties = new[]
                                                     {
                                                         new TenderingCriterionProperty(){
-                                                            _cardinality = CardinalityMetadata.ZeroOrMore,
+                                                            _cardinality = CardinalityMetadata.Optional,
                                                             ID = EuComGrowId.Random(),
                                                             TypeCode = CriterionElementType.Question,
                                                             Description ="references.recipientName.description",
@@ -921,14 +921,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                          PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                          TenderingCriterionProperties = new[]
                          {
-                           new TenderingCriterionProperty()
-                           {
-                             _cardinality = CardinalityMetadata.Optional,
-                             ID = EuComGrowId.Random(),
-                             TypeCode = CriterionElementType.Requirement,
-                             Description = "common.thisCriterionWillBeWeighted.description",
-                             ValueDataTypeCode = ResponseDataTypeCode.WeightIndicator
-                           }
+                           //  replaced WEIGHT_INDICATOR with empty caption
+                           CriterionHelper.EmptyCaptionProperty
                          },
                          SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
                          {

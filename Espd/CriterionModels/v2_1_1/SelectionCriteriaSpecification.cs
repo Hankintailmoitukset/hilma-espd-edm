@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers;
+using Hilma.Espd.EDM.CriterionModels.v2_1_1.Identifiers;
 using Hilma.UBL.CommonAggregateComponents;
 using UBL.Enums;
 
-namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
+namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
 {
     public class SelectionCriteriaSpecification : IEnumerable<TenderingCriterion>
     {
@@ -174,8 +174,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0
                         _cardinality = CardinalityMetadata.ExactlyOne,
                         ID = EuComGrowId.Random(),
                         TypeCode = CriterionElementType.Requirement,
-                        Description = "common.startDateEndDate.description",
-                        ValueDataTypeCode = ResponseDataTypeCode.Period,
+                        Description = "common.numberOfFiscalYears.description",
+                        ValueDataTypeCode = ResponseDataTypeCode.QuantityInteger,
                       },
                       new TenderingCriterionProperty()
                       {

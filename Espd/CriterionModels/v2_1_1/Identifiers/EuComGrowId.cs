@@ -1,7 +1,7 @@
 ﻿using System;
 using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers
+namespace Hilma.Espd.EDM.CriterionModels.v2_1_1.Identifiers
 {
   public class EuComGrowId : IdentifierType
   {
@@ -11,7 +11,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_0.Identifiers
     public EuComGrowId(string value) : base(value)
     {
       SchemeAgencyID = "EU-COM-GROW";
-      SchemeVersionID = "2.1.0";
+      SchemeVersionID = "2.1.1";
     }
 
     /// <summary>
