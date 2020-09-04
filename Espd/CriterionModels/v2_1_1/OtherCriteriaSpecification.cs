@@ -549,7 +549,6 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                  }
             }
         };
-
         public TenderingCriterion[] OtherEOSME => new[]
         {
             new TenderingCriterion()
@@ -610,7 +609,6 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                  }
             }
         };
-
         public TenderingCriterion[] DefenceSelectionOther => new[]
         {
             new TenderingCriterion()
@@ -663,7 +661,6 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                  }
             }
         };
-
         public TenderingCriterion[] UtilitiesSelectionOther => new[]
         {
             new TenderingCriterion()
