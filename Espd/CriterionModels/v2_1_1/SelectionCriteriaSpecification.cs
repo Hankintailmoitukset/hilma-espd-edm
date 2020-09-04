@@ -125,23 +125,14 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                                         Description = "common.amount.description",
                                         ValueDataTypeCode = ResponseDataTypeCode.Amount,
                                     },
-                                    //pitäisikö olla period tyyppinen eikä kahta date kenttää?
                                     new TenderingCriterionProperty()
                                     {
                                         _cardinality = CardinalityMetadata.ExactlyOne,
                                         ID = EuComGrowId.Random(),
                                         TypeCode = CriterionElementType.Question,
-                                        Description = "common.startDate.description",
-                                        ValueDataTypeCode = ResponseDataTypeCode.Date,
-                                    },
-                                    new TenderingCriterionProperty()
-                                    {
-                                        _cardinality = CardinalityMetadata.ExactlyOne,
-                                        ID = EuComGrowId.Random(),
-                                        TypeCode = CriterionElementType.Question,
-                                        Description = "common.endDate.description",
-                                        ValueDataTypeCode = ResponseDataTypeCode.Date
-                                    },
+                                        Description = "references.PeriodStartAndEndDates.description",
+                                        ValueDataTypeCode = ResponseDataTypeCode.Period,
+                                    }                                    
                                 }
                             },
                             CriterionHelper.IsThisInformationAvailableElectronically
@@ -490,48 +481,9 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                             Description = "common.pleaseSpecify.description",
                             ValueDataTypeCode = ResponseDataTypeCode.Date
                           }
-                        },
-                        SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
-                        {
-                            new TenderingCriterionPropertyGroup()
-                            {
-                                _cardinality = CardinalityMetadata.ExactlyOne,
-                                ID = new CriteriaTaxonomyIdentifier("7458d42a-e581-4640-9283-34ceb3ad4345"),
-                                PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
-                                TenderingCriterionProperties = new[]
-                                {
-                                  new TenderingCriterionProperty()
-                                  {
-                                    _cardinality = CardinalityMetadata.ExactlyOne,
-                                    ID = EuComGrowId.Random(),
-                                    TypeCode = CriterionElementType.Question,
-                                    Description = "common.isThisInformationAvailableElectronically.description",
-                                    ValueDataTypeCode = ResponseDataTypeCode.Indicator
-                                  }
-                                },
-                                SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
-                                {
-                                    new TenderingCriterionPropertyGroup()
-                                    {
-                                        _cardinality = CardinalityMetadata.ZeroOrMore,
-                                        ID = new CriteriaTaxonomyIdentifier("41dd2e9b-1bfd-44c7-93ee-56bd74a4334b"),
-                                        PropertyGroupTypeCode = PropertyGroupTypeCode.OnTrue,
-                                        TenderingCriterionProperties = new[]
-                                        {
-                                          new TenderingCriterionProperty()
-                                          {
-                                            _cardinality = CardinalityMetadata.OneOrMore,
-                                            ID = EuComGrowId.Random(),
-                                            TypeCode = CriterionElementType.Question,
-                                            Description = "common.evidenceSupplied",
-                                            ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
-                                          }
-                                        }
-                                    }
-                                }
-                            }
                         }
-                    }
+                    },
+                    CriterionHelper.IsThisInformationAvailableElectronically
                  }
              }
         };
@@ -619,50 +571,15 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                             ValueDataTypeCode = ResponseDataTypeCode.Quantity
                           }
                         }
-                      },
-                      new TenderingCriterionPropertyGroup()
-                      {
-                        _cardinality = CardinalityMetadata.ExactlyOne,
-                        ID = new CriteriaTaxonomyIdentifier("7458d42a-e581-4640-9283-34ceb3ad4345"),
-                        PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
-                        TenderingCriterionProperties = new[]
-                        {
-                          new TenderingCriterionProperty()
-                          {
-                            _cardinality = CardinalityMetadata.ExactlyOne,
-                            ID = EuComGrowId.Random(),
-                            TypeCode = CriterionElementType.Question,
-                            Description = "common.isThisInformationAvailableElectronically.description",
-                            ValueDataTypeCode = ResponseDataTypeCode.Indicator
-                          }
-                        },
-                        SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
-                        {
-                          new TenderingCriterionPropertyGroup()
-                          {
-                            _cardinality = CardinalityMetadata.Optional,
-                            ID = new CriteriaTaxonomyIdentifier("41dd2e9b-1bfd-44c7-93ee-56bd74a4334b"),
-                            PropertyGroupTypeCode = PropertyGroupTypeCode.OnTrue,
-                            TenderingCriterionProperties = new[]
-                            {
-                              new TenderingCriterionProperty()
-                              {
-                                _cardinality = CardinalityMetadata.OneOrMore,
-                                ID = EuComGrowId.Random(),
-                                TypeCode = CriterionElementType.Question,
-                                Description = "common.evidenceSupplied",
-                                ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
-                              }
-                            }
-                          }
-                        }
+                      
                       }
                     }
-                  }
+                  },
+                  CriterionHelper.IsThisInformationAvailableElectronically
                 }
               }
             };
-            }
+          }
         }
         public TenderingCriterion[] ProfessionalRiskInsurance => new[]
         {

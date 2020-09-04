@@ -543,14 +543,6 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
               {
                 new TenderingCriterionProperty
                 {
-                  _cardinality = CardinalityMetadata.ExactlyOne,
-                  ID = EuComGrowId.Random(),
-                  TypeCode = CriterionElementType.Caption,
-                  Description = "common.lotTheRequirementAppliesTo.description",
-                  ValueDataTypeCode = ResponseDataTypeCode.None
-                },
-                new TenderingCriterionProperty
-                {
                   _cardinality = CardinalityMetadata.ZeroOrMore,
                   ID = EuComGrowId.Random(),
                   TypeCode = CriterionElementType.Requirement,

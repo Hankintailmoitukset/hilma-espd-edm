@@ -934,25 +934,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                             }
                         }
                     },
-
-                    new TenderingCriterionPropertyGroup
-                    {
-                        _cardinality = CardinalityMetadata.Optional,
-                        ID = new CriteriaTaxonomyIdentifier("41dd2e9b-1bfd-44c7-93ee-56bd74a4334b"),
-                        PropertyGroupTypeCode = PropertyGroupTypeCode.OnTrue,
-                        TenderingCriterionProperties = new[]
-                        {
-                            new TenderingCriterionProperty
-                            {
-                                _cardinality = CardinalityMetadata.OneOrMore,
-                                ID = EuComGrowId.Random(),
-                                TypeCode = CriterionElementType.Question,
-                                Description ="common.evidenceSupplied.description",
-                                ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
-                            }
-                        }
-                    }
-
+                   CriterionHelper.IsThisInformationAvailableElectronically
                 }
 
             }

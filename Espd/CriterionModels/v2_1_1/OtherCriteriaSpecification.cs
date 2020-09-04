@@ -269,10 +269,10 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                                     ValueDataTypeCode = ResponseDataTypeCode.Description
                                   }
                               }
-                            },
-                            CriterionHelper.IsThisInformationAvailableElectronically
+                            }
                          }
-                     }
+                     },
+                     CriterionHelper.IsThisInformationAvailableElectronically
                  }
             }
         };
