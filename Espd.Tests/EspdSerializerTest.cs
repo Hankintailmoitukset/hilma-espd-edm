@@ -37,7 +37,7 @@ namespace Hilma.Espd.Tests
     [TestMethod]
     public void TestRequest()
     {
-        var request = EspdDocumentHelper_v2_1_1.ScAbilitiesStaffSelfContainedRequest;
+        var request = EspdDocumentHelper.CriteriaTaxonomyExtendedV2_1_1;
         var result = request.Serialize();
 
         Assert.IsNotNull(result);
