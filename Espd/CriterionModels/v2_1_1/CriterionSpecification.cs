@@ -20,10 +20,10 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
 
     public IEnumerable<TenderingCriterion> AllCriteria => new[]
     {
+      OtherCriteria.AllCriteria,
       ExclusionGrounds.AllCriteria,
       SelectionCriteria.AllCriteria,
-      OtherCriteria.AllCriteria
-
+      
     }.SelectMany(c => c);
 
     public IEnumerator<TenderingCriterion> GetEnumerator()

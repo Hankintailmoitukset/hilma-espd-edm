@@ -1,10 +1,9 @@
 ﻿using System;
-using Hilma.Espd.EDM.CriterionModels;
 using Hilma.Espd.EDM.CriterionModels.v2_1_1.Identifiers;
 using Hilma.UBL.CommonAggregateComponents;
 using Hilma.UBL.UnqualifiedDataTypes;
 
-namespace Hilma.Espd.Tests
+namespace Hilma.Espd.EDM.CriterionModels.v2_1_1.Examples
 {
     public class EspdDocumentHelper
     {

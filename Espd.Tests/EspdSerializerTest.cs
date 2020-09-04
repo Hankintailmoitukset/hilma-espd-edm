@@ -2,6 +2,7 @@ using System;
 using Hilma.Espd.EDM.Serializers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
+using Hilma.Espd.EDM.CriterionModels.v2_1_1.Examples;
 
 namespace Hilma.Espd.Tests
 {

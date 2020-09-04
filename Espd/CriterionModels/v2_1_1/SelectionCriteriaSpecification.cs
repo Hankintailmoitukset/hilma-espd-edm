@@ -174,8 +174,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                         _cardinality = CardinalityMetadata.ExactlyOne,
                         ID = EuComGrowId.Random(),
                         TypeCode = CriterionElementType.Requirement,
-                        Description = "common.startDateEndDate.description",
-                        ValueDataTypeCode = ResponseDataTypeCode.Period,
+                        Description = "common.numberOfFiscalYears.description",
+                        ValueDataTypeCode = ResponseDataTypeCode.QuantityInteger,
                       },
                       new TenderingCriterionProperty()
                       {
