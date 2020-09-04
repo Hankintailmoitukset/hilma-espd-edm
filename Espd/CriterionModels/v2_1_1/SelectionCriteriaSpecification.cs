@@ -364,7 +364,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                     new TenderingCriterionPropertyGroup()
                     {
                         _cardinality = CardinalityMetadata.ExactlyOne,
-                        ID = new CriteriaTaxonomyIdentifier("5ca58d66-3ef1-4145-957c-45d5b18a837f"),
+                        ID = new CriteriaTaxonomyIdentifier("19a68e37-d307-4a28-9061-c22cd767be58"),
                         PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                         TenderingCriterionProperties = new[]
                         {
