@@ -33,5 +33,17 @@ namespace Hilma.Espd.Tests
       Console.WriteLine( JsonConvert.SerializeObject(request, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DateFormatHandling = DateFormatHandling.IsoDateFormat }));
 
     }
-  }
+    
+    [TestMethod]
+    public void TestRequest()
+    {
+        var request = EspdDocumentHelper_v2_1_1.ScAbilitiesStaffSelfContainedRequest;
+        var result = request.Serialize();
+
+        Assert.IsNotNull(result);
+        Console.WriteLine(result);
+        Console.WriteLine(JsonConvert.SerializeObject(request, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DateFormatHandling = DateFormatHandling.IsoDateFormat }));
+
+    }
+    }
 }
