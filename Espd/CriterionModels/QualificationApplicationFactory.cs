@@ -29,8 +29,8 @@ namespace Hilma.Espd.EDM.CriterionModels
       {
         ID = identifier,
         UUID = new EuComGrowId(uuid),
-        ProfileExecutionID = ProfileExecutionId.Espd2_1_0SelfContained,
         QualificationApplicationTypeCode = QualificationApplicationType.SelfContained,
+        ProfileExecutionID = ProfileExecutionId.Espd2_1_1Extended,
         ContractFolderID = contractFolderId,
         IssueDate = DateTime.UtcNow.Date,
         IssueTime = DateTime.UtcNow,
