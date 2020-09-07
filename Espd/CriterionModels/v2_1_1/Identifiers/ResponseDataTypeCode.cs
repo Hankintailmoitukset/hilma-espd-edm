@@ -65,8 +65,11 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1.Identifiers
     /// Identifier
     /// </summary>
     public static CodeType Identifier => new ResponseDataTypeCode("IDENTIFIER");
-
-    public static CodeType QualIdeentifier => new ResponseDataTypeCode("QUAL_IDENTIFIER");
+    
+    /// <summary>
+    /// Qualification identifier
+    /// </summary>
+    public static CodeType QualificationIdentifier => new ResponseDataTypeCode("QUAL_IDENTIFIER");
 
     /// <summary>
     /// Economic operator identifier

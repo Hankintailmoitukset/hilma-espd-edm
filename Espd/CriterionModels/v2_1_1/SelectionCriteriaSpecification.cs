@@ -1240,7 +1240,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                                                       ID = EuComGrowId.Random(),
                                                       Description = "abilitiesEducation.qualificationNumber.description",
                                                       TypeCode = CriterionElementType.Question,
-                                                      ValueDataTypeCode = ResponseDataTypeCode.QualIdeentifier
+                                                      ValueDataTypeCode = ResponseDataTypeCode.QualificationIdentifier
                                                     },
                                                     new TenderingCriterionProperty()
                                                     {
