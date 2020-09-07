@@ -388,7 +388,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                           {
                             _cardinality= CardinalityMetadata.ExactlyOne,
                             ID = EuComGrowId.Random(),
-                            TypeCode = CriterionElementType.Question,
+                            TypeCode = CriterionElementType.Requirement,
                             Description = "common.minimumRequirement.description",
                             ValueDataTypeCode = ResponseDataTypeCode.Amount
                           }
@@ -572,10 +572,10 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                           }
                         }
                       
-                      }
+                      },
+                      CriterionHelper.IsThisInformationAvailableElectronically
                     }
-                  },
-                  CriterionHelper.IsThisInformationAvailableElectronically
+                  }
                 }
               }
             };
@@ -839,7 +839,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                                              {
                                                  _cardinality = CardinalityMetadata.ExactlyOne,
                                                  ID = new CriteriaTaxonomyIdentifier("9b3a04ff-e36d-4d4f-b47c-82ad402b9b02"),
-                                                 PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
+                                                 PropertyGroupTypeCode = PropertyGroupTypeCode.Empty,
                                                  TenderingCriterionProperties = new[]
                                                  {
                                                    new TenderingCriterionProperty()
@@ -886,7 +886,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                                              {
                                                  _cardinality = CardinalityMetadata.ExactlyOne,
                                                  ID = new CriteriaTaxonomyIdentifier("5fe93344-ed91-4f97-bcab-b6720a131798"),
-                                                 PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
+                                                 PropertyGroupTypeCode = PropertyGroupTypeCode.Empty,
                                                  TenderingCriterionProperties = new[]
                                                  {
                                                    new TenderingCriterionProperty()
@@ -1240,7 +1240,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                                                       ID = EuComGrowId.Random(),
                                                       Description = "abilitiesEducation.qualificationNumber.description",
                                                       TypeCode = CriterionElementType.Question,
-                                                      ValueDataTypeCode = ResponseDataTypeCode.Identifier
+                                                      ValueDataTypeCode = ResponseDataTypeCode.QualIdeentifier
                                                     },
                                                     new TenderingCriterionProperty()
                                                     {
@@ -1326,7 +1326,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                  Description = new[] {"abilitiesStaff.question1.description"},
                  ID = new CriteriaTaxonomyIdentifier("6346959b-e097-4ea1-89cd-d1b4c131ea4d"),
                  Legislations = new Legislation[] { },
-                 TenderingCriterionPropertyGroups = CriterionHelper.AbilitiesStaff
+                 TenderingCriterionPropertyGroups = CriterionHelper.AbilitiesManagerialStaff
             },
             new TenderingCriterion()
             {
@@ -1336,7 +1336,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                  Description = new[] {"abilitiesStaff.question2.description"},
                  ID = new CriteriaTaxonomyIdentifier("1f49b3f0-d50f-43f6-8b30-4bafab108b9b"),
                  Legislations = new Legislation[] { },
-                 TenderingCriterionPropertyGroups = CriterionHelper.AbilitiesStaff
+                 TenderingCriterionPropertyGroups = CriterionHelper.AbilitiesStaffManPower
             },
             new TenderingCriterion()
             {

@@ -4,9 +4,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1.Identifiers
 {
   public class ResponseDataTypeCode : CodeType
   {
-        
-
-        public ResponseDataTypeCode(string code): base(code)
+    public ResponseDataTypeCode(string code): base(code)
     {
       ListID = "ResponseDataType";
       ListAgencyID = "EU-COM-GROW";
@@ -67,6 +65,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1.Identifiers
     /// Identifier
     /// </summary>
     public static CodeType Identifier => new ResponseDataTypeCode("IDENTIFIER");
+
+    public static CodeType QualIdeentifier => new ResponseDataTypeCode("QUAL_IDENTIFIER");
 
     /// <summary>
     /// Economic operator identifier

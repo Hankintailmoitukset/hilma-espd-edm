@@ -20,5 +20,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1.Identifiers
         /// Visible when parent indicator value is false
         /// </summary>
         public static CodeType OnFalse => new PropertyGroupTypeCode("ONFALSE");
+
+        public static CodeType Empty => new PropertyGroupTypeCode(string.Empty);
     }
 }
