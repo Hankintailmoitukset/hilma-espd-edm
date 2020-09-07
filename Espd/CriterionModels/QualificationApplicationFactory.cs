@@ -8,7 +8,7 @@ namespace Hilma.Espd.EDM.CriterionModels
 {
   public class QualificationApplicationFactory
   {
-    public QualificationApplicationRequest CreateEspd2_1_0SelfContainedRequest(IdentifierType identifier, IdentifierType contractFolderId, Guid uuid, string[] lotIds, bool onlyMandatoryExclusionGrounds)
+    public QualificationApplicationRequest CreateEspd2_1_1ExtendedRequest(IdentifierType identifier, IdentifierType contractFolderId, Guid uuid, string[] lotIds, bool onlyMandatoryExclusionGrounds)
     {
       if (identifier == null) throw new ArgumentNullException(nameof(identifier));
       if (contractFolderId == null) throw new ArgumentNullException(nameof(contractFolderId));
@@ -29,7 +29,7 @@ namespace Hilma.Espd.EDM.CriterionModels
       {
         ID = identifier,
         UUID = new EuComGrowId(uuid),
-        QualificationApplicationTypeCode = QualificationApplicationType.SelfContained,
+        QualificationApplicationTypeCode = QualificationApplicationType.Extended,
         ProfileExecutionID = ProfileExecutionId.Espd2_1_1Extended,
         ContractFolderID = contractFolderId,
         IssueDate = DateTime.UtcNow.Date,

@@ -168,6 +168,44 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                       }
                  }
             };
+        public static TenderingCriterionPropertyGroup IsThisInformationAvailableElectronicallyAlternative =>
+            new TenderingCriterionPropertyGroup()
+            {
+                _cardinality = CardinalityMetadata.ExactlyOne,
+                ID = new CriteriaTaxonomyIdentifier("9026e403-3eb6-4705-a9e9-e21a1efc867d"),
+                PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
+                TenderingCriterionProperties = new[]
+                 {
+                     new TenderingCriterionProperty()
+                     {
+                       _cardinality = CardinalityMetadata.ExactlyOne,
+                       ID = EuComGrowId.Random(),
+                       TypeCode = CriterionElementType.Question,
+                       Description = "common.isThisInformationAvailableElectronically.description",
+                       ValueDataTypeCode = ResponseDataTypeCode.Indicator
+                     }
+                 },
+                SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
+                 {
+                     new TenderingCriterionPropertyGroup()
+                     {
+                         _cardinality = CardinalityMetadata.ZeroOrMore,
+                         ID = new CriteriaTaxonomyIdentifier("0a166f0a-0c5f-42b0-81e9-0fc9fa598a48"),
+                         PropertyGroupTypeCode = PropertyGroupTypeCode.OnTrue,
+                         TenderingCriterionProperties = new[]
+                         {
+                             new TenderingCriterionProperty()
+                             {
+                               _cardinality = CardinalityMetadata.OneOrMore,
+                               ID = EuComGrowId.Random(),
+                               TypeCode = CriterionElementType.Question,
+                               Description = "common.evidenceSupplied.description",
+                               ValueDataTypeCode = ResponseDataTypeCode.EvidenceIdentifier
+                             }
+                          }
+                      }
+                 }
+            };
         // ReSharper disable once InconsistentNaming
         public static TenderingCriterionPropertyGroup[] Social_LawCriterionPropertyGroups =>
             new[]
@@ -1013,7 +1051,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                                                  },
                                                  SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
                                                  {
-                                                     CriterionHelper.IsThisInformationAvailableElectronically
+                                                     CriterionHelper.IsThisInformationAvailableElectronicallyAlternative
                                                  }
                                              }
                                          }
@@ -1064,7 +1102,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                                                  },
                                                  SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
                                                  {
-                                                     CriterionHelper.IsThisInformationAvailableElectronically
+                                                     CriterionHelper.IsThisInformationAvailableElectronicallyAlternative
                                                  }
 
                                              }
