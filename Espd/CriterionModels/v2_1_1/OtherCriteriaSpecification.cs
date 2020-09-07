@@ -268,7 +268,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                                     Description = "otherEoGroups.whereApplicableNameOfTheParticipatingGroup.description",
                                     ValueDataTypeCode = ResponseDataTypeCode.Description
                                   }
-                              }
+                                }
                             }
                          }
                      },
