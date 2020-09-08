@@ -18,7 +18,7 @@ namespace Hilma.Espd.Tests
     {
       var factory = new QualificationApplicationFactory();
       var uuid = Guid.NewGuid();
-      var qar = factory.CreateEspd2_1_0SelfContainedRequest(new IdentifierType("TEST-123") {SchemeAgencyID = "TEST"},
+      var qar = factory.CreateEspd2_1_1ExtendedRequest(new IdentifierType("TEST-123") {SchemeAgencyID = "TEST"},
         new IdentifierType("TEST-REF-111") {SchemeAgencyID = "TEST"}, uuid, new string[0], false );
       var suitabilityCriterion = new CriterionSpecification().SelectionCriteria.Suitability.First();
       qar.TenderingCriteria = qar.TenderingCriteria.Union(new[] {suitabilityCriterion}).ToArray();
@@ -45,7 +45,7 @@ namespace Hilma.Espd.Tests
       var factory = new QualificationApplicationFactory();
       var uuid = Guid.NewGuid();
       var lotIds = new []{ "Lot 1", "Lot 2"};
-      var qar = factory.CreateEspd2_1_0SelfContainedRequest(
+      var qar = factory.CreateEspd2_1_1ExtendedRequest(
         new IdentifierType("TEST-123") {SchemeAgencyID = "TEST"},
         new IdentifierType("TEST-REF-111") {SchemeAgencyID = "TEST"},
         uuid,
@@ -72,7 +72,7 @@ namespace Hilma.Espd.Tests
     {
       var factory = new QualificationApplicationFactory();
       var uuid = Guid.NewGuid();
-      var qar = factory.CreateEspd2_1_0SelfContainedRequest(
+      var qar = factory.CreateEspd2_1_1ExtendedRequest(
         new IdentifierType("TEST-123") { SchemeAgencyID = "TEST" },
         new IdentifierType("TEST-REF-111") { SchemeAgencyID = "TEST" },
         uuid,

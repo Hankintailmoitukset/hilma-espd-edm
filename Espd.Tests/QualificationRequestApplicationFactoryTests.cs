@@ -15,7 +15,7 @@ namespace Hilma.Espd.Tests
     { 
       var factory = new QualificationApplicationFactory();
       var uuid = Guid.NewGuid();
-      var qar = factory.CreateEspd2_1_0SelfContainedRequest( new IdentifierType("TEST-123"){ SchemeAgencyID = "TEST" },
+      var qar = factory.CreateEspd2_1_1ExtendedRequest( new IdentifierType("TEST-123"){ SchemeAgencyID = "TEST" },
         new IdentifierType("TEST-REF-111"){ SchemeAgencyID = "TEST" },
         uuid,
         new string[0], false);
