@@ -337,7 +337,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                                     ID = EuComGrowId.Random(),
                                     TypeCode = CriterionElementType.Question,
                                     Description = "common.activityOfTheEntity.description",
-                                    ValueDataTypeCode = ResponseDataTypeCode.Code
+                                    ValueDataTypeCode = ResponseDataTypeCode.Code,
+                                    CodeListId = CodeListIds.CpvCodes
                                   }
                                 }
                             }
@@ -406,7 +407,8 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                                     ID = EuComGrowId.Random(),
                                     TypeCode = CriterionElementType.Question,
                                     Description = "common.activityOfTheEntity.description",
-                                    ValueDataTypeCode = ResponseDataTypeCode.Code
+                                    ValueDataTypeCode = ResponseDataTypeCode.Code,
+                                    CodeListId = CodeListIds.CpvCodes
                                   }
                                 }
                             }
