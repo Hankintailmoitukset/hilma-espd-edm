@@ -5,6 +5,7 @@ import criterionSpecificationData from './criterionSpecification.json'
 import currencyCodeListData from './currencyCode.json'
 import EORoleTypeListData from './eORoleType.json'
 import EOIDTypeListData from './eOIDType.json'
+import EOIndustryClassificationListData from './eOIndustryClassificationCode.json'
 import CountryCodeIdentifierData from './countryCodeIdentifier.json'
 import translationsDefaultData from './translations.default.json'
 import { TenderingCriterion } from './TenderingCriterion';
@@ -15,7 +16,8 @@ export class Resources {
   public static currencyCode: CodeListContract = currencyCodeListData
   public static eORoleType: CodeListContract = EORoleTypeListData
   public static eOIDType: CodeListContract = EOIDTypeListData
-  public static CountryCodeIdentifier: CodeListContract = CountryCodeIdentifierData
+  public static eOIndustryClassificationCode: CodeListContract = EOIndustryClassificationListData
+  public static countryCodeIdentifier: CodeListContract = CountryCodeIdentifierData
   public static criterionSpecification: TenderingCriterion[] = criterionSpecificationData
   public static translationsDefault: any = translationsDefaultData
 }

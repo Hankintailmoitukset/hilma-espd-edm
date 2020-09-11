@@ -1,6 +1,6 @@
 using System;
 using System.Xml.Linq;
-using Hilma.Espd.Tests;
+using Hilma.Espd.EDM.CriterionModels.v2_1_1.Examples;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Espd.Validator.Tests
@@ -9,9 +9,9 @@ namespace Espd.Validator.Tests
   public class EspdValidatorTests
   {
     [TestMethod]
-    public void ValidateSampleRequestDocument_Pass()
+    public void ValidateCriteriaTaxonomyExtended_Pass()
     {
-      var qar = EspdDocumentHelper.ScAbilitiesStaffSelfContainedRequest;
+      var qar = EspdDocumentHelper.CriteriaTaxonomyExtendedV2_1_1;
       var document = qar.Serialize();
       var validator = new EspdXmlValidator();
       var result = validator.ValidateQualificationApplicationRequest(document);
@@ -26,7 +26,7 @@ namespace Espd.Validator.Tests
     }
 
     [TestMethod]
-    public void ValidateInvalidSampleRequest_Fail()
+    public void ValidateInvalidIncompleteRequest_Fail()
     {
       var qar = EspdDocumentHelper.SimpleTest;
       var document = qar.Serialize();

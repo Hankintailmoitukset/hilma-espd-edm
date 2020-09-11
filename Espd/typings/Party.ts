@@ -16,7 +16,7 @@ export class Party {
     } 
     
     
-    partyIdentification?: PartyIdentification[]
+    partyIdentification?: PartyIdentification
     websiteURI?: IdentifierType
     endpointID?: IdentifierType
     partyName?: PartyName

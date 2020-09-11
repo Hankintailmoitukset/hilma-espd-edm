@@ -30,10 +30,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1.Examples
                     Party = new Party
                     {
                         WebsiteURI = new IdentifierType("www.__Procurer.com"),
-                        PartyIdentification = new[]
-                        {
-                            new PartyIdentification { ID = new IdentifierType("GR153301872") { SchemeAgencyID="VIES-AEAT" } }
-                        },
+                        PartyIdentification = new PartyIdentification { ID = new IdentifierType("GR153301872") { SchemeAgencyID="VIES-AEAT" }},
                         PartyName = new PartyName
                         {
                             Name = "__ProcurerName"
@@ -347,10 +344,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1.Examples
                     Party = new Party
                     {
                         WebsiteURI = new IdentifierType("www.Procurer.com"),
-                        PartyIdentification = new[]
-                        {
-                            new PartyIdentification { ID = new IdentifierType("AD123456789") { SchemeAgencyID="EU-COM-GROW" } }
-                        },
+                        PartyIdentification = new PartyIdentification { ID = new IdentifierType("AD123456789") { SchemeAgencyID="EU-COM-GROW" } },
                         PartyName = new PartyName
                         {
                             Name = "__ProcurerName"
