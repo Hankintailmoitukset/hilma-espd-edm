@@ -1,6 +1,7 @@
 ﻿
 
 
+import { CodeType } from './CodeType'
 import { PartyIdentification } from './PartyIdentification'
 import { IdentifierType } from './IdentifierType'
 import { PartyName } from './PartyName'
@@ -18,6 +19,7 @@ export class Party {
     } 
     
     
+    industryClassificationCode?: CodeType
     partyIdentification?: PartyIdentification
     websiteURI?: IdentifierType
     endpointID?: IdentifierType
@@ -27,4 +29,5 @@ export class Party {
     person?: Person
     serviceProviderParty?: ServiceProviderParty
     powerOfAttorneys?: PowerOfAttorney[]
+    agentParty?: Party
 }

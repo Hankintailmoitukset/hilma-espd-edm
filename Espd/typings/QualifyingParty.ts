@@ -4,9 +4,10 @@
 import { QuantityType } from './QuantityType'
 import { BusinessClassificationScheme } from './BusinessClassificationScheme'
 import { CompletedTask } from './CompletedTask'
-import { PartyIdentification } from './PartyIdentification'
+import { Party } from './Party'
 
 import assign from 'lodash.assign'
+import { FinancialCapability } from './FinancialCapability';
 
 export class QualifyingParty { 
     public constructor(init?:Partial<QualifyingParty>) {
@@ -18,5 +19,5 @@ export class QualifyingParty {
     businessClassificationScheme?: BusinessClassificationScheme
     financialCapability?: FinancialCapability
     completedTask?: CompletedTask
-    id?: PartyIdentification
+    party?: Party
 }
