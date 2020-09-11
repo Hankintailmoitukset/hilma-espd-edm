@@ -81,7 +81,7 @@ namespace Hilma.UBL.CommonAggregateComponents
       return new XElement(UblNames.Cac + (name ?? nameof(Party)),
         WebsiteURI?.Serialize(nameof(WebsiteURI)),
         EndpointID?.Serialize(nameof(EndpointID)),
-        IndustryClassificationCode.Serialize(nameof(IndustryClassificationCode))
+        IndustryClassificationCode.Serialize(nameof(IndustryClassificationCode)),
         PartyIdentification?.Serialize(),
         PartyName?.Serialize(),
         PostalAddress?.Serialize(nameof(PostalAddress)),
