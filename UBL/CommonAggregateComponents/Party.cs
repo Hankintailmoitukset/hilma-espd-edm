@@ -48,9 +48,21 @@ namespace Hilma.UBL.CommonAggregateComponents
     public Contact Contact { get; set; }
 
     /// <summary>
+    /// Referenced person information
+    /// </summary>
+    /// <value></value>
+    public Person Person { get; set; }
+    
+    /// <summary>
     /// The ESPD request may contain information of identification regarding an ESPD service provider: Name, Party Identification, Endpoint ID.
     /// </summary>
     public ServiceProviderParty ServiceProviderParty { get; set; }
+
+    /// <summary>
+    /// A power of attorney associated with this party.
+    /// </summary>
+    /// <value></value>
+    public PowerOfAttorney[] PowerOfAttorneys { get; set; }
 
     public XElement Serialize( string name = null )
     {

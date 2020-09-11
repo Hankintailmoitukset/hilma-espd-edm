@@ -3,7 +3,6 @@
 
 import { QuantityType } from './QuantityType'
 import { BusinessClassificationScheme } from './BusinessClassificationScheme'
-import { AmountType } from './AmountType'
 import { CompletedTask } from './CompletedTask'
 import { PartyIdentification } from './PartyIdentification'
 
@@ -17,7 +16,7 @@ export class QualifyingParty {
     
     employeeQuantity?: QuantityType
     businessClassificationScheme?: BusinessClassificationScheme
-    valueAmount?: AmountType
+    financialCapability?: FinancialCapability
     completedTask?: CompletedTask
     id?: PartyIdentification
 }
