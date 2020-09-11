@@ -14,7 +14,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// The national identifier of a contracting body as it is legally registered (e.g. VAT identification).
     /// </summary>
     /// <remarks>More than one identifier can be specified. When possible use the VAT identification of the contracting body (see the VIES platform for a EU cross-border national VAT number verification system). The code list EOIDType may be used to indicate the type of identifier used as a value of the schemeID attribute, e.g. schemeID="VAT").</remarks>
-    public PartyIdentification[] PartyIdentification { get; set; }
+    public PartyIdentification PartyIdentification { get; set; }
 
     /// <summary>
     /// The website of the contracting body.
@@ -57,7 +57,7 @@ namespace Hilma.UBL.CommonAggregateComponents
       return new XElement(UblNames.Cac + (name ?? nameof(Party)),
         WebsiteURI?.Serialize(nameof(WebsiteURI)),
         EndpointID?.Serialize(nameof(EndpointID)),
-        PartyIdentification?.Select( pi => pi.Serialize()),
+        PartyIdentification?.Serialize(),
         PartyName?.Serialize(),
         PostalAddress?.Serialize(nameof(PostalAddress)),
         Contact?.Serialize()

@@ -9,6 +9,7 @@
     public const string CountryCodeIdentifier = nameof(CountryCodeIdentifier);
     public const string EORoleType = nameof(EORoleType);
     public const string EOIDType = nameof(EOIDType);
+    public const string EOIndustryClassificationCode = nameof(EOIndustryClassificationCode);
 
     public static string[] All => new[]
     {
@@ -17,7 +18,8 @@
       CurrencyCode,
       CountryCodeIdentifier,
       EORoleType,
-      EOIDType
+      EOIDType,
+      EOIndustryClassificationCode
     };
   }
 }

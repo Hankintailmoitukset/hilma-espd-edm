@@ -16,12 +16,14 @@ namespace Hilma.UBL.CommonAggregateComponents
         /// </summary>
         public BusinessClassificationScheme BusinessClassificationScheme { get; set; }
 
-        /// <summary>
-        /// A monetary amount as a measure of this capability.
-        /// </summary>
-        public AmountType ValueAmount { get; set; }
 
         /// <summary>
+        /// Turnover: For statistical purposes the ESPD-EDM asks this datum to reflect the financial capability of the economic operator.
+        /// </summary>
+        /// <value></value>
+        public FinancialCapability FinancialCapability{ get; set; }
+
+                /// <summary>
         /// Text describing the works, supplies or services executed, delivered or performed in a procurement project (normally used as a reference for the classification of the economic operator.
         /// </summary>
         public CompletedTask CompletedTask { get; set; }

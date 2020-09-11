@@ -1,0 +1,28 @@
+{
+  "shortName": "EOIndustryClassificationCode",
+  "longName": "Economic Operator Industry Classification Code",
+  "codes": [
+    {
+      "code": "MICRO",
+      "name": "Micro Enterprise"
+    },
+    {
+      "code": "SMALL",
+      "name": "Small Enterprise"
+    },
+    {
+      "code": "MEDIUM",
+      "name": "Medium Enterprise"
+    },
+    {
+      "code": "SME",
+      "name": "Small or Medium Enterprise"
+    },
+    {
+      "code": "LARGE",
+      "name": "Non SME, Large Company"
+    }
+  ],
+  "agencyId": "EU-COM-GROW",
+  "version": "2.1.1"
+}
