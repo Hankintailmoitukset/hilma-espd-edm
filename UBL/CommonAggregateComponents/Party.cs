@@ -11,6 +11,12 @@ namespace Hilma.UBL.CommonAggregateComponents
   public class Party
   {
     /// <summary>
+    /// This party's Industry Classification Code.
+    /// </summary>
+    /// <value></value>
+    public CodeType IndustryClassificationCode { get; set; }
+
+    /// <summary>
     /// The national identifier of a contracting body as it is legally registered (e.g. VAT identification).
     /// </summary>
     /// <remarks>More than one identifier can be specified. When possible use the VAT identification of the contracting body (see the VIES platform for a EU cross-border national VAT number verification system). The code list EOIDType may be used to indicate the type of identifier used as a value of the schemeID attribute, e.g. schemeID="VAT").</remarks>
