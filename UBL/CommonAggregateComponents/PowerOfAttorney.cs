@@ -15,9 +15,16 @@ namespace Hilma.UBL.CommonAggregateComponents
         /// </summary>
         public Party AgentParty { get; set; }
 
+        /// <summary>
+        /// Text describing this power of attorney.
+        /// </summary>
+        /// <value></value>
+        public string[] Description { get; set;}
+
         public XElement Serialize() {
             return new XElement( UblNames.Cac + nameof(PowerOfAttorney),
-                AgentParty?.Serialize(nameof(AgentParty))
+                AgentParty?.Serialize(nameof(AgentParty)),
+                Description.Serialize(nameof(Description))
             );
         }
     }

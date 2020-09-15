@@ -12,4 +12,5 @@ export class PowerOfAttorney {
     
     
     agentParty?: Party
+    description?: string[]
 }
