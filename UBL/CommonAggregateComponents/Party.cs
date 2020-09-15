@@ -40,7 +40,6 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <summary>
     /// Mandatory. The PartyName class has an associated basic element "cbc:Name". See XML example below.
     /// </summary>
-    [Required]
     public PartyName PartyName { get; set; }
 
     /// <summary>
