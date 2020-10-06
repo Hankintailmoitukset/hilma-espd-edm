@@ -175,7 +175,7 @@ namespace Hilma.Espd.Tests
       Assert.IsNotNull(thresholdProperty, "thresholdProperty != null");
       Assert.IsNotNull(thresholdProperty.ExpectedAmount, "thresholdProperty.ExpectedAmount != null");
       Assert.AreEqual(0, thresholdProperty.ExpectedAmount.Value, "Expected 0 amount");
-      Assert.AreEqual(0, thresholdProperty.ExpectedAmount.Value, "Expected 0 amount");
+      Assert.AreEqual("EUR", thresholdProperty.ExpectedAmount.CurrencyID, "CurrencyId");
       Assert.IsNotNull(thresholdDescription, "thresholdDescription != null");
       Assert.IsNotNull(thresholdDescription.ExpectedDescription, "thresholdDescription.ExpectedDescription != null");
       Assert.AreEqual(string.Empty, thresholdDescription.ExpectedDescription, "Description");
