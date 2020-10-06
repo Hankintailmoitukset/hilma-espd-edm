@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using Hilma.Espd.EDM.CriterionModels.v2_1_1.Identifiers;
 using Hilma.UBL.CommonAggregateComponents;
@@ -81,48 +82,12 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
       IEnumerable<TenderingCriterionProperty> FilterAndFinalizeProperties(
         TenderingCriterionPropertyGroup group)
       {
-        var isRequirementLotGroup = group.TenderingCriterionProperties
-          .Any( p => IsLotIdentifier(p) && IsRequirementProperty(p));
-
-        IEnumerable<TenderingCriterionProperty> SetLotIdentifierValue(TenderingCriterionProperty property ) {
-          if (selectedLots.Any())
-          {
-            // Duplicate requirement lot property for each lot 
-            if (isRequirementLotGroup)
-            {
-              foreach (var projectLot in selectedLots)
-              {
-                yield return new TenderingCriterionProperty()
-                {
-                  _cardinality = property._cardinality,
-                  ID = EuComGrowId.Random(),
-                  Name = property.Name,
-                  Description = property.Description,
-                  ExpectedID = new EuComGrowId(projectLot),
-                  TypeCode = CriterionElementType.Requirement,
-                  ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
-                };
-              }
-            }
-            else
-            {
-              property.ID = EuComGrowId.Random();
-              yield return property;
-            }
-          }
-          else
-          {
-            property.ID = EuComGrowId.Random();
-            property.ExpectedID = new EuComGrowId(0.ToString());
-            yield return property;
-          }
-        } 
-
+       
         foreach (var property in group.TenderingCriterionProperties)
         { 
-          if (IsLotIdentifier(property))
+          if (IsLotIdentifier(property) && IsRequirementProperty(property))
           {
-            foreach( var lotProperty in SetLotIdentifierValue(property)) {
+            foreach( var lotProperty in SetRequirementLotIdentifierValue(property)) {
               yield return lotProperty;
             }
           }
@@ -147,6 +112,33 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
           }
         }
 
+        IEnumerable<TenderingCriterionProperty> SetRequirementLotIdentifierValue(TenderingCriterionProperty property )
+        {
+          if (procurementHasLots)
+          {
+            // Duplicate requirement lot property for each lot
+            foreach (var projectLot in selectedLots)
+            {
+              yield return new TenderingCriterionProperty()
+              {
+                _cardinality = property._cardinality,
+                ID = EuComGrowId.Random(),
+                Name = property.Name,
+                Description = property.Description,
+                ExpectedID = new EuComGrowId(projectLot),
+                TypeCode = CriterionElementType.Requirement,
+                ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
+              };
+            }
+          }
+          else
+          {
+            property.ID = EuComGrowId.Random();
+            property.ExpectedID = new EuComGrowId(0.ToString());
+            yield return property;
+          }
+        } 
+        
         bool IsLotIdentifier(TenderingCriterionProperty property)
         {
           return property.ValueDataTypeCode.Value == ResponseDataTypeCode.LotIdentifier.Value;

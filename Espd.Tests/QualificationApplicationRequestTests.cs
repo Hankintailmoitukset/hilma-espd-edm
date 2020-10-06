@@ -97,6 +97,34 @@ namespace Hilma.Espd.Tests
     }
 
     [TestMethod]
+    public void TestLotFinalize_SingleLot_QuestionLots_NoValuesSet()
+    {
+      var factory = new QualificationApplicationFactory();
+      var uuid = Guid.NewGuid();
+      var lotIds = new[] { "0" };
+      var qar = factory.CreateEspd2_1_1ExtendedRequest(
+        new IdentifierType("TEST-123") { SchemeAgencyID = "TEST" },
+        new IdentifierType("TEST-REF-111") { SchemeAgencyID = "TEST" },
+        uuid,
+        lotIds, false);
+
+      var referenceCriterion = new CriterionSpecification().SelectionCriteria.References.First();
+      qar.TenderingCriteria = qar.TenderingCriteria = new[] { referenceCriterion };
+
+      qar.FinalizeDocument();
+
+      var assertedCriteria = qar.TenderingCriteria.Last();
+      Assert.AreEqual(referenceCriterion.Name, assertedCriteria.Name);
+
+      var lotQuestionProperties =
+        assertedCriteria.DescendantProperties()
+          .Where(p => p.TypeCode.Equals(CriterionElementType.Question) &&
+                      Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier)).ToArray();
+      Assert.AreEqual(1, lotQuestionProperties.Length, "Should have one question lot property");
+      Assert.IsNull(lotQuestionProperties[0].ExpectedID, "lotQuestionProperties[0].ExpectedID == null");
+    }
+
+    [TestMethod]
     public void TestLotFinalize_SingleLotSelected()
     {
       var factory = new QualificationApplicationFactory();
