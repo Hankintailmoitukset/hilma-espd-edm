@@ -52,7 +52,7 @@ namespace Hilma.Espd.Tests
         lotIds, false);
  
       var suitabilityCriterion = new CriterionSpecification().SelectionCriteria.Suitability.First();
-      qar.TenderingCriteria = qar.TenderingCriteria.Union(new[] {suitabilityCriterion}).ToArray();
+      qar.TenderingCriteria = qar.TenderingCriteria = new[] {suitabilityCriterion};
 
       qar.FinalizeDocument(lotIds);
       
@@ -65,6 +65,63 @@ namespace Hilma.Espd.Tests
       Assert.AreEqual(2, lotProperties.Length, "Should have two lot properties");
       Assert.AreEqual("Lot 1", lotProperties[0].ExpectedID.Value);
       Assert.AreEqual("Lot 2", lotProperties[1].ExpectedID.Value);
+    }
+
+
+    [TestMethod]
+    public void TestLotFinalize_QuestionLots_NoValuesSet()
+    {
+      var factory = new QualificationApplicationFactory();
+      var uuid = Guid.NewGuid();
+      var lotIds = new[] {"Lot 1", "Lot 2"};
+      var qar = factory.CreateEspd2_1_1ExtendedRequest(
+        new IdentifierType("TEST-123") {SchemeAgencyID = "TEST"},
+        new IdentifierType("TEST-REF-111") {SchemeAgencyID = "TEST"},
+        uuid,
+        lotIds, false);
+
+      var referenceCriterion = new CriterionSpecification().SelectionCriteria.References.First();
+      qar.TenderingCriteria = qar.TenderingCriteria = new[] {referenceCriterion};
+
+      qar.FinalizeDocument(lotIds);
+
+      var assertedCriteria = qar.TenderingCriteria.Last();
+      Assert.AreEqual(referenceCriterion.Name, assertedCriteria.Name);
+
+      var lotQuestionProperties =
+        assertedCriteria.DescendantProperties()
+          .Where(p => p.TypeCode.Equals(CriterionElementType.Question) &&
+                      Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier)).ToArray();
+      Assert.AreEqual(1, lotQuestionProperties.Length, "Should have one question lot property");
+      Assert.IsNull(lotQuestionProperties[0].ExpectedID, "lotQuestionProperties[0].ExpectedID == null");
+    }
+
+    [TestMethod]
+    public void TestLotFinalize_SingleLot_QuestionLots_NoValuesSet()
+    {
+      var factory = new QualificationApplicationFactory();
+      var uuid = Guid.NewGuid();
+      var lotIds = new[] { "0" };
+      var qar = factory.CreateEspd2_1_1ExtendedRequest(
+        new IdentifierType("TEST-123") { SchemeAgencyID = "TEST" },
+        new IdentifierType("TEST-REF-111") { SchemeAgencyID = "TEST" },
+        uuid,
+        lotIds, false);
+
+      var referenceCriterion = new CriterionSpecification().SelectionCriteria.References.First();
+      qar.TenderingCriteria = qar.TenderingCriteria = new[] { referenceCriterion };
+
+      qar.FinalizeDocument();
+
+      var assertedCriteria = qar.TenderingCriteria.Last();
+      Assert.AreEqual(referenceCriterion.Name, assertedCriteria.Name);
+
+      var lotQuestionProperties =
+        assertedCriteria.DescendantProperties()
+          .Where(p => p.TypeCode.Equals(CriterionElementType.Question) &&
+                      Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier)).ToArray();
+      Assert.AreEqual(1, lotQuestionProperties.Length, "Should have one question lot property");
+      Assert.IsNull(lotQuestionProperties[0].ExpectedID, "lotQuestionProperties[0].ExpectedID == null");
     }
 
     [TestMethod]
@@ -91,6 +148,37 @@ namespace Hilma.Espd.Tests
           .Where(p => p.TypeCode.Equals(CriterionElementType.Requirement) && Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier)).ToArray();
       Assert.AreEqual(1, lotProperties.Length, "Should have one lot property");
       Assert.AreEqual("Lot 1", lotProperties[0].ExpectedID.Value);
+    }
+
+    [TestMethod]
+    public void TestThresholdFinalize()
+    {
+      var factory = new QualificationApplicationFactory();
+      var uuid = Guid.NewGuid();
+      var qar = factory.CreateEspd2_1_1ExtendedRequest(
+        new IdentifierType("TEST-123") { SchemeAgencyID = "TEST" },
+        new IdentifierType("TEST-REF-111") { SchemeAgencyID = "TEST" },
+        uuid,
+        new[] { "0" }, false);
+
+      var contributionsCriterion = new CriterionSpecification().ExclusionGrounds.Contributions.First();
+      qar.TenderingCriteria = qar.TenderingCriteria.Union(new[] { contributionsCriterion }).ToArray();
+
+      qar.FinalizeDocument( new []{ "0"});
+
+      var assertedCriteria = qar.TenderingCriteria.Last();
+      Assert.AreEqual(contributionsCriterion.Name, assertedCriteria.Name);
+      var thresholdGroup = assertedCriteria.DescendantGroups()
+          .Where( g => g.ID.Value == QualificationApplicationOperations.ContributionThresholdGroupId.ToString()).First();
+      var thresholdProperty = thresholdGroup.TenderingCriterionProperties[0];
+      var thresholdDescription = thresholdGroup.TenderingCriterionProperties[1];
+      Assert.IsNotNull(thresholdProperty, "thresholdProperty != null");
+      Assert.IsNotNull(thresholdProperty.ExpectedAmount, "thresholdProperty.ExpectedAmount != null");
+      Assert.AreEqual(0, thresholdProperty.ExpectedAmount.Value, "Expected 0 amount");
+      Assert.AreEqual("EUR", thresholdProperty.ExpectedAmount.CurrencyID, "CurrencyId");
+      Assert.IsNotNull(thresholdDescription, "thresholdDescription != null");
+      Assert.IsNotNull(thresholdDescription.ExpectedDescription, "thresholdDescription.ExpectedDescription != null");
+      Assert.AreEqual(string.Empty, thresholdDescription.ExpectedDescription, "Description");
     }
   }
 }

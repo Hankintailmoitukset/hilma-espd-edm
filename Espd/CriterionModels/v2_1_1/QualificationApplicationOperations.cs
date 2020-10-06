@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using Hilma.Espd.EDM.CriterionModels.v2_1_1.Identifiers;
 using Hilma.UBL.CommonAggregateComponents;
@@ -9,6 +10,13 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
 {
   public static class QualificationApplicationOperations
   {
+
+    /// <summary>
+    /// EG-Contribitions Threshold group id
+    /// </summary>
+    /// <returns></returns>
+    public static readonly Guid ContributionThresholdGroupId = new Guid("53c9aad8-dc80-48f8-85d9-755c2aab8e95");
+
     /// <summary>
     /// Finalize document properties
     /// </summary>
@@ -70,65 +78,77 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
 
         return propertyGroup;
       }
-
+      
       IEnumerable<TenderingCriterionProperty> FilterAndFinalizeProperties(
         TenderingCriterionPropertyGroup group)
       {
-        var isLotGroup = group.TenderingCriterionProperties
-          .Any(IsRequirementLotIdentifier);
-
+       
         foreach (var property in group.TenderingCriterionProperties)
-        {
-          if (IsRequirementLotIdentifier(property))
+        { 
+          if (IsLotIdentifier(property) && IsRequirementProperty(property))
           {
-            // Set default lot
-            if (selectedLots.Any())
-            {
-                // Duplicate lot property for each lot 
-                foreach (var projectLot in selectedLots)
-                {
-                    yield return new TenderingCriterionProperty()
-                    {
-                      _cardinality = property._cardinality,
-                      ID = EuComGrowId.Random(),
-                      Name = property.Name,
-                      Description = property.Description,
-                      ExpectedID = new EuComGrowId(projectLot),
-                      TypeCode = CriterionElementType.Requirement,
-                      ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
-                    };
-                }
-            }
-            else
-            {
-              yield return new TenderingCriterionProperty()
-              {
-                  _cardinality = property._cardinality,
-                  ID = EuComGrowId.Random(),
-                  Name = property.Name,
-                  Description = property.Description,
-                  ExpectedID = new EuComGrowId(0.ToString()),
-                  TypeCode = CriterionElementType.Requirement,
-                  ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
-              };
+            foreach( var lotProperty in SetRequirementLotIdentifierValue(property)) {
+              yield return lotProperty;
             }
           }
           else
           {
+            // Set default value to Contributions threshold value as per Comission suggestion
+            if(group.ID.Value == ContributionThresholdGroupId.ToString()) {
+              if( property.ValueDataTypeCode.Equals(ResponseDataTypeCode.Amount)) {
+                // Set default threshold to 0
+                property.ExpectedAmount = new AmountType { Value = 0, CurrencyID = "EUR" };
+              }
+              if (property.ValueDataTypeCode.Equals(ResponseDataTypeCode.Description))
+              {
+                // Set default threshold to 0
+                property.ExpectedDescription = string.Empty;
+              }
+            }
+
             // Generate new if for property
             property.ID = EuComGrowId.Random();
             yield return property;
           }
         }
 
-        bool IsRequirementLotIdentifier(TenderingCriterionProperty property)
+        IEnumerable<TenderingCriterionProperty> SetRequirementLotIdentifierValue(TenderingCriterionProperty property )
         {
-          if (property?.ValueDataTypeCode == null || (!property?.TypeCode?.Equals(CriterionElementType.Requirement) ?? false))
-            return false;
-
+          if (procurementHasLots)
+          {
+            // Duplicate requirement lot property for each lot
+            foreach (var projectLot in selectedLots)
+            {
+              yield return new TenderingCriterionProperty()
+              {
+                _cardinality = property._cardinality,
+                ID = EuComGrowId.Random(),
+                Name = property.Name,
+                Description = property.Description,
+                ExpectedID = new EuComGrowId(projectLot),
+                TypeCode = CriterionElementType.Requirement,
+                ValueDataTypeCode = ResponseDataTypeCode.LotIdentifier
+              };
+            }
+          }
+          else
+          {
+            property.ID = EuComGrowId.Random();
+            property.ExpectedID = new EuComGrowId(0.ToString());
+            yield return property;
+          }
+        } 
+        
+        bool IsLotIdentifier(TenderingCriterionProperty property)
+        {
           return property.ValueDataTypeCode.Value == ResponseDataTypeCode.LotIdentifier.Value;
         }
+
+        bool IsRequirementProperty( TenderingCriterionProperty property ) {
+          return (property?.TypeCode?.Equals(CriterionElementType.Requirement) ?? false);
+        }
       }
+      
     }
   }
 }
