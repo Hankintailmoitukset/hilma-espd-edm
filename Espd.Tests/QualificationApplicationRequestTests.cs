@@ -25,7 +25,7 @@ namespace Hilma.Espd.Tests
       var firstPropertyId = qar.TenderingCriteria[0].TenderingCriterionPropertyGroups[0].TenderingCriterionProperties[0]
         .ID.Value;
 
-      qar.FinalizeDocument();
+      qar.FinalizeDocument( new string[0]);
 
       var firstPropertyIdAfter = qar.TenderingCriteria[0].TenderingCriterionPropertyGroups[0]
         .TenderingCriterionProperties[0].ID.Value;
@@ -164,7 +164,7 @@ namespace Hilma.Espd.Tests
       var contributionsCriterion = new CriterionSpecification().ExclusionGrounds.Contributions.First();
       qar.TenderingCriteria = qar.TenderingCriteria.Union(new[] { contributionsCriterion }).ToArray();
 
-      qar.FinalizeDocument( new []{ "0"});
+      qar.FinalizeDocument();
 
       var assertedCriteria = qar.TenderingCriteria.Last();
       Assert.AreEqual(contributionsCriterion.Name, assertedCriteria.Name);
