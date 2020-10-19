@@ -1,7 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Xml.Linq;
+using Hilma.Espd.EDM.Serializers;
 using Hilma.UBL.Attributes;
 using Hilma.UBL.CommonAggregateComponents;
 using Hilma.UBL.CommonExtensionComponents;
+using Hilma.UBL.Serializers;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.Espd.EDM.CriterionModels
@@ -23,6 +28,37 @@ namespace Hilma.Espd.EDM.CriterionModels
     /// <remarks>For the ESPD we use the value “urn:www.cenbii.eu:transaction:biitrdm070:ver3.0”. Compulsory use of the value "CEN-BII" for the schemeAgencyID attribute.</remarks>
     [Required] 
     public IdentifierType CustomizationID { get; set; } = new IdentifierType("urn:www.cenbii.eu:transaction:biitrdm070:ver3.0") { SchemeAgencyID = "CEN-BII" };
+
+    public XDocument Serialize()
+    {
+      return new XDocument(new XElement(EspdNames.Qarp + nameof(QualificationApplicationResponse),
+        new XAttribute(XNamespace.Xmlns + "cbc", UblNames.Cbc),
+        new XAttribute(XNamespace.Xmlns + "cac", UblNames.Cac),
+        UBLVersionID.Serialize(nameof(UBLVersionID)),
+        CustomizationID.Serialize(nameof(CustomizationID)),
+        ProfileID.Serialize(nameof(ProfileID)),
+        //ProfileExecutionID.Serialize(nameof(ProfileExecutionID)),
+        ID?.Serialize(nameof(ID)),
+        CopyIndicator.Serialize(nameof(CopyIndicator)),
+        UUID.Serialize(nameof(UUID)),
+        ContractFolderID.Serialize(nameof(ContractFolderID)),
+        IssueDate.Serialize(nameof(IssueDate)),
+        IssueTime.Serialize(nameof(IssueTime)),
+        VersionID.Serialize(nameof(VersionID)),
+        PreviousVersionID.Serialize(nameof(PreviousVersionID)),
+        ProcedureCode.Serialize(nameof(ProcedureCode)),
+        QualificationApplicationTypeCode.Serialize(nameof(QualificationApplicationTypeCode)),
+        WeightScoringMethodologyNote.Serialize(nameof(WeightScoringMethodologyNote)),
+        WeightingTypeCode.Serialize(nameof(WeightingTypeCode)),
+        ContractingParty?.Serialize(),
+        ProcurementProject?.Serialize(),
+        ProcurementProjectLots?.Select(lot => lot.Serialize()),
+        TenderingCriteria?.Select(c => c.Serialize()),
+        //TenderingCriterionResponses.Select(),//TODO: Tendering Response values
+        AdditionalDocumentReferences?.Select(d => d.Serialize())
+          
+        ));
+      }
 
     /// <summary>
     /// An identification of the specification containing the total set of rules regarding semantic content, cardinalities and business rules to which the data contained in the instance document conforms. The identification may include the version of the specification as well as any customizations applied. 

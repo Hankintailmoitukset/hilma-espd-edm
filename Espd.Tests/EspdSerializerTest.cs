@@ -1,4 +1,5 @@
 using System;
+using Hilma.Espd.EDM.CriterionModels;
 using Hilma.Espd.EDM.Serializers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
@@ -33,7 +34,25 @@ namespace Hilma.Espd.Tests
       Console.WriteLine( JsonConvert.SerializeObject(request, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DateFormatHandling = DateFormatHandling.IsoDateFormat }));
 
     }
-    
+
+    [TestMethod]
+    public void TesSimpleResponseScAbilitiesStaffSelfContainedRequest()
+    {
+      var request = EspdDocumentHelper.ScAbilitiesStaffSelfContainedRequest;
+      var response = new QualificationApplicationResponse()
+      {
+        UBLVersionID = request.UBLVersionID,
+        
+      };
+
+      var result = response.Serialize();
+
+      Assert.IsNotNull(result);
+      Console.WriteLine(result);
+      //Console.WriteLine(JsonConvert.SerializeObject(request, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DateFormatHandling = DateFormatHandling.IsoDateFormat }));
+
+    }
+
     [TestMethod]
     public void TestRequest()
     {

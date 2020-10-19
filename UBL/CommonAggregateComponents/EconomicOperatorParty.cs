@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
 using Hilma.UBL.Attributes;
+using Hilma.UBL.Serializers;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
@@ -21,6 +23,11 @@ namespace Hilma.UBL.CommonAggregateComponents
         /// Main set of data used to identify and contact the economic operator, such as official identifiers, name, address, contact person, representatives, etc.
         /// </summary>
         public Party Party { get; set; }
+
+        public XElement Serilize(string name)
+        {
+          return new XElement(UblNames.Cac + name);
+        }
         
     }
 }
