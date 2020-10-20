@@ -4,12 +4,15 @@ using Hilma.Espd.EDM.Serializers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using Hilma.Espd.EDM.CriterionModels.v2_1_1.Examples;
+using Hilma.Espd.EDM.CriterionModels.v2_1_1.Identifiers;
+using Hilma.UBL.CommonAggregateComponents;
+using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.Espd.Tests
 {
   
   [TestClass]
-  public class EspdSerializerTest
+  public class SerializationTests
   {
     [TestMethod]
     public void TestSimpleRequest()
@@ -36,15 +39,17 @@ namespace Hilma.Espd.Tests
     }
 
     [TestMethod]
-    public void TesSimpleResponseScAbilitiesStaffSelfContainedRequest()
+    public void TestResponse()
     {
       // Arrange
       var request = EspdDocumentHelper.ScAbilitiesStaffSelfContainedRequest;
-      var response = new QualificationApplicationResponse()
-      {
-        UBLVersionID = request.UBLVersionID,
-        
-      };
+      var factory = new QualificationApplicationFactory();
+
+      var response = factory.CreateEspd2_1_1ExtendedResponse(request, new EconomicOperatorParty(), 
+        new EuComGrowId(Guid.NewGuid()),
+        new IdentifierType("TEST-REF-111") {SchemeAgencyID = "TEST"}, 
+        Guid.NewGuid(), 
+        new string[] { }, true);
 
       // Act
       var result = response.Serialize();

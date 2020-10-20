@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Linq;
+﻿using System.Linq;
 using System.Xml.Linq;
 using Hilma.UBL.Attributes;
 using Hilma.UBL.Serializers;
@@ -75,7 +74,8 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// <value></value>
     public Party AgentParty { get; private set; }
 
-        public XElement Serialize( string name = null )
+    
+    public XElement Serialize( string name = null )
     {
       return new XElement(UblNames.Cac + (name ?? nameof(Party)),
         WebsiteURI?.Serialize(nameof(WebsiteURI)),
@@ -87,6 +87,7 @@ namespace Hilma.UBL.CommonAggregateComponents
         Contact?.Serialize(),
         Person?.Serialize(),
         AgentParty?.Serialize(nameof(AgentParty)),
+        ServiceProviderParty?.Serialize(),
         PowerOfAttorneys?.Select( poa => poa?.Serialize())
       );
     }
