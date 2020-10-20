@@ -24,7 +24,7 @@ namespace Hilma.UBL.CommonAggregateComponents
         /// </summary>
         public Party Party { get; set; }
 
-        public XElement Serilize(string name)
+        public XElement Serialize(string name)
         {
           return new XElement(UblNames.Cac + name);
         }

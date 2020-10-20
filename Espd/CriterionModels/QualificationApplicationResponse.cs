@@ -37,13 +37,13 @@ namespace Hilma.Espd.EDM.CriterionModels
         UBLVersionID.Serialize(nameof(UBLVersionID)),
         CustomizationID.Serialize(nameof(CustomizationID)),
         ProfileID.Serialize(nameof(ProfileID)),
-        //ProfileExecutionID.Serialize(nameof(ProfileExecutionID)),
         ID?.Serialize(nameof(ID)),
         CopyIndicator.Serialize(nameof(CopyIndicator)),
         UUID.Serialize(nameof(UUID)),
         ContractFolderID.Serialize(nameof(ContractFolderID)),
         IssueDate.Serialize(nameof(IssueDate)),
         IssueTime.Serialize(nameof(IssueTime)),
+        EconomicOperatorGroupName.Serialize(nameof(EconomicOperatorGroupName)),
         VersionID.Serialize(nameof(VersionID)),
         PreviousVersionID.Serialize(nameof(PreviousVersionID)),
         ProcedureCode.Serialize(nameof(ProcedureCode)),
@@ -51,10 +51,11 @@ namespace Hilma.Espd.EDM.CriterionModels
         WeightScoringMethodologyNote.Serialize(nameof(WeightScoringMethodologyNote)),
         WeightingTypeCode.Serialize(nameof(WeightingTypeCode)),
         ContractingParty?.Serialize(),
+        EconomicOperatorParty?.Serialize(nameof (EconomicOperatorParty)),
         ProcurementProject?.Serialize(),
         ProcurementProjectLots?.Select(lot => lot.Serialize()),
         TenderingCriteria?.Select(c => c.Serialize()),
-        //TenderingCriterionResponses.Select(),//TODO: Tendering Response values
+        TenderingCriterionResponses?.Select(r => r.Serialize()),
         AdditionalDocumentReferences?.Select(d => d.Serialize())
           
         ));

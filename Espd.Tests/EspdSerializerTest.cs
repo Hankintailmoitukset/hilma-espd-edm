@@ -38,6 +38,7 @@ namespace Hilma.Espd.Tests
     [TestMethod]
     public void TesSimpleResponseScAbilitiesStaffSelfContainedRequest()
     {
+      // Arrange
       var request = EspdDocumentHelper.ScAbilitiesStaffSelfContainedRequest;
       var response = new QualificationApplicationResponse()
       {
@@ -45,12 +46,13 @@ namespace Hilma.Espd.Tests
         
       };
 
+      // Act
       var result = response.Serialize();
 
-      Assert.IsNotNull(result);
+      // Assert
+      Assert.IsNotNull(result, "Document was null");
       Console.WriteLine(result);
-      //Console.WriteLine(JsonConvert.SerializeObject(request, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DateFormatHandling = DateFormatHandling.IsoDateFormat }));
-
+      Assert.AreEqual(EspdNames.Qarp+"QualificationApplicationResponse", result.Root.Name, "Root element name incorrect");
     }
 
     [TestMethod]

@@ -1,6 +1,9 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Xml.Linq;
 using Hilma.UBL.Attributes;
+using Hilma.UBL.Serializers;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
@@ -39,5 +42,15 @@ namespace Hilma.UBL.CommonAggregateComponents
        /// </summary>
        public Evidence EvidenceSupplied { get; set; }
 
+    public XElement Serialize() {
+      return new XElement(UblNames.Cac + nameof (TenderingCriterionResponse),
+        ID.Serialize(nameof (ID)),
+        ValidatedCriterionPropertyID.Serialize(nameof (ValidatedCriterionPropertyID)),
+        ConfidentialityLevelCode.Serialize(nameof (ConfidentialityLevelCode)),
+        ResponseValue.Select( v => v.Serialize()),
+        ApplicablePeriod.Serialize(nameof (ApplicablePeriod)),
+        EvidenceSupplied.Serialize(nameof (EvidenceSupplied))
+        );
     }
+  }
 }

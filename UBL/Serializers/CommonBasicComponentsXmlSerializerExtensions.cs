@@ -63,6 +63,21 @@ namespace Hilma.UBL.Serializers
       );
     }
 
+    public static XElement Serialize(this QuantityType quantity, string name) {
+      if (quantity == null) {
+        return null;
+      }
+
+      return Element(name, quantity.Value.ToString(CultureInfo.InvariantCulture),
+        new[]
+        {
+          Attribute(nameof(quantity.UnitCode), quantity.UnitCode),
+          Attribute(nameof(quantity.UnitCodeListAgencyName), quantity.UnitCodeListAgencyName),
+          Attribute(nameof(quantity.UnitCodeListID), quantity.UnitCodeListID)
+        }
+      );
+    }
+
     public static XElement Serialize(this AmountType measure, string name)
     {
       if (measure?.Value == null)
