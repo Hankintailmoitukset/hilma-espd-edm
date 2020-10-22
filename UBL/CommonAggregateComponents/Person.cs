@@ -21,7 +21,7 @@ namespace Hilma.UBL.CommonAggregateComponents
         /// This person's family name.<
         /// </summary>
         /// <value></value>
-        public string LastName { get; set; }
+        public string FamilyName { get; set; }
         
         /// <summary>
         /// This person's date of birth.
@@ -49,9 +49,9 @@ namespace Hilma.UBL.CommonAggregateComponents
 
         public XElement Serialize()
         {
-            return new XElement(UblNames.Cac + nameof(Contact),
+            return new XElement(UblNames.Cac + nameof(Person),
                 FirstName.Serialize(nameof(FirstName)),
-                LastName.Serialize(nameof(LastName)),
+                FamilyName.Serialize(nameof(FamilyName)),
                 BirthPlaceName.Serialize(nameof(BirthPlaceName)),
                 Contact?.Serialize(),
                 ResidenceAddress?.Serialize(nameof(ResidenceAddress))

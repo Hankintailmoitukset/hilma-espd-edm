@@ -139,6 +139,11 @@ namespace Hilma.UBL.Serializers
       return text?.Select( t => new XElement(UblNames.Cbc + name, t));
     }
 
+    public static object Serialize(this IEnumerable<string> text, XName name)
+    {
+      return text?.Select(t => new XElement(name, t));
+    }
+
     public static XElement Element(string name, string value, XAttribute[] attributes)
     {
       return value != null ? new XElement(UblNames.Cbc + name, value, attributes) : null;

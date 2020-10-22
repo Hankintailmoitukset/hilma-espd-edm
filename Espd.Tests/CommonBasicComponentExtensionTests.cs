@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Linq;
+﻿using System.Xml.Linq;
 using Hilma.UBL.UnqualifiedDataTypes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Hilma.UBL.Serializers;

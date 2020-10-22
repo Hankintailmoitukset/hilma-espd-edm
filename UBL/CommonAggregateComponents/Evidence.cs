@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Xml.Linq;
 using Hilma.UBL.Attributes;
 using Hilma.UBL.Serializers;
@@ -6,7 +7,7 @@ using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
 {
-    [Contract]
+  [Contract]
     public class Evidence
     {
         public IdentifierType ID { get; set; }
@@ -19,7 +20,7 @@ namespace Hilma.UBL.CommonAggregateComponents
         public DocumentReference[] DocumentReference { get; set; }
         public Language Language { get; set; }
 
-        public XElement Serialize(string name)
+        public XElement Serialize(string name = null)
         {
           return new XElement(UblNames.Cac + ( name ?? nameof(Evidence)),
             ID.Serialize(nameof(ID)),

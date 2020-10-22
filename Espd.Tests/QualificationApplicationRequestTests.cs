@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Linq;
+using Espd.Test.Common;
 using Hilma.Espd.EDM.CriterionModels;
 using Hilma.Espd.EDM.CriterionModels.v2_1_1;
 using Hilma.Espd.EDM.CriterionModels.v2_1_1.Identifiers;
-using Hilma.Espd.Tests.Extensions;
-using Hilma.UBL.CommonAggregateComponents;
 using Hilma.UBL.UnqualifiedDataTypes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

@@ -1,12 +1,9 @@
 using System;
-using Hilma.Espd.EDM.CriterionModels;
+using Espd.Test.Common;
 using Hilma.Espd.EDM.Serializers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using Hilma.Espd.EDM.CriterionModels.v2_1_1.Examples;
-using Hilma.Espd.EDM.CriterionModels.v2_1_1.Identifiers;
-using Hilma.UBL.CommonAggregateComponents;
-using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.Espd.Tests
 {
@@ -14,6 +11,12 @@ namespace Hilma.Espd.Tests
   [TestClass]
   public class SerializationTests
   {
+
+    [TestInitialize]
+    public void Initialize()
+    {
+    }
+    
     [TestMethod]
     public void TestSimpleRequest()
     {
@@ -42,23 +45,18 @@ namespace Hilma.Espd.Tests
     public void TestResponse()
     {
       // Arrange
-      var request = EspdDocumentHelper.ScAbilitiesStaffSelfContainedRequest;
-      var factory = new QualificationApplicationFactory();
-
-      var response = factory.CreateEspd2_1_1ExtendedResponse(request, new EconomicOperatorParty(), 
-        new EuComGrowId(Guid.NewGuid()),
-        new IdentifierType("TEST-REF-111") {SchemeAgencyID = "TEST"}, 
-        Guid.NewGuid(), 
-        new string[] { }, true);
+      var response = Create.QualificationApplicationResponse();
 
       // Act
       var result = response.Serialize();
 
       // Assert
       Assert.IsNotNull(result, "Document was null");
+      Assert.IsNotNull(result.Root, "Document root was null");
       Console.WriteLine(result);
       Assert.AreEqual(EspdNames.Qarp+"QualificationApplicationResponse", result.Root.Name, "Root element name incorrect");
     }
+    
 
     [TestMethod]
     public void TestRequest()

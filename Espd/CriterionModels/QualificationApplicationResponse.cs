@@ -51,11 +51,12 @@ namespace Hilma.Espd.EDM.CriterionModels
         WeightScoringMethodologyNote.Serialize(nameof(WeightScoringMethodologyNote)),
         WeightingTypeCode.Serialize(nameof(WeightingTypeCode)),
         ContractingParty?.Serialize(),
-        EconomicOperatorParty?.Serialize(nameof (EconomicOperatorParty)),
+        EconomicOperatorParty?.Serialize(nameof(EconomicOperatorParty)),
         ProcurementProject?.Serialize(),
         ProcurementProjectLots?.Select(lot => lot.Serialize()),
         TenderingCriteria?.Select(c => c.Serialize()),
         TenderingCriterionResponses?.Select(r => r.Serialize()),
+        Evidences?.Select(e => e.Serialize()),
         AdditionalDocumentReferences?.Select(d => d.Serialize())
           
         ));

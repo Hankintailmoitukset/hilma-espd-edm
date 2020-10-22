@@ -1,6 +1,8 @@
 using System;
 using System.Xml.Linq;
+using Espd.Test.Common;
 using Hilma.Espd.EDM.CriterionModels.v2_1_1.Examples;
+using Hilma.Espd.EDM.Serializers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Espd.Validator.Tests
@@ -24,6 +26,28 @@ namespace Espd.Validator.Tests
       Assert.IsTrue( result.IsSuccess, "Validation should succeed" );
       
     }
+
+    [TestMethod]
+    public void ValidateCompleteResponse_Pass()
+    {
+      // Arrange
+      var response = Create.QualificationApplicationResponse();
+
+      // Act
+      var document = response.Serialize();
+      var validator = new EspdXmlValidator();
+      var result = validator.ValidateQualificationApplicationResponse(document);
+
+     
+      // Assert
+      foreach (var error in result.Errors)
+      {
+        Console.WriteLine("Error:" + error);
+      }
+      Console.WriteLine(document);
+      Assert.IsTrue(result.IsSuccess, "Validation should fail");
+    }
+
 
     [TestMethod]
     public void ValidateInvalidIncompleteRequest_Fail()

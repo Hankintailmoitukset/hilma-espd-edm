@@ -59,7 +59,7 @@ namespace Hilma.UBL.CommonAggregateComponents
         public IdentifierType ResponseURI {get; set; }
 
         public XElement Serialize() {
-          return new XElement(UblNames.Cac + nameof(TenderingCriterionResponse),
+          return new XElement(UblNames.Cac + nameof(ResponseValue),
             ID.Serialize(nameof(ID)),
             Description.Serialize(nameof (Description)),
             ResponseAmount.Serialize(nameof (ResponseAmount)),

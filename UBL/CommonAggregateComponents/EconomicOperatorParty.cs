@@ -27,10 +27,9 @@ namespace Hilma.UBL.CommonAggregateComponents
         public XElement Serialize(string name)
         {
           return new XElement(UblNames.Cac + name,
-            null, // TODO: Serialize other properties  
-            QualifyingParty.Serialize(),
-            EconomicOperatorRole.Serialize(),
-            Party.Serialize(nameof(Party))
+            QualifyingParty?.Serialize(),
+            EconomicOperatorRole?.Serialize(),
+            Party?.Serialize(nameof(Party))
             );
         }
         
