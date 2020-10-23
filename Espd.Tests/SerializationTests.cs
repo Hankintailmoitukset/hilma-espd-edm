@@ -3,7 +3,6 @@ using Espd.Test.Common;
 using Hilma.Espd.EDM.Serializers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
-using Hilma.Espd.EDM.CriterionModels.v2_1_1.Examples;
 
 namespace Hilma.Espd.Tests
 {
@@ -20,7 +19,7 @@ namespace Hilma.Espd.Tests
     [TestMethod]
     public void TestSimpleRequest()
     {
-      var request = EspdDocumentHelper.SimpleTest;
+      var request = Create.SimpleQualificationApplicationRequest;
       var result = request.Serialize();
 
       Assert.IsNotNull(result);
@@ -32,7 +31,7 @@ namespace Hilma.Espd.Tests
     [TestMethod]
     public void TestScAbilitiesStaffSelfContainedRequest()
     {
-      var request = EspdDocumentHelper.ScAbilitiesStaffSelfContainedRequest;
+      var request = Create.ScAbilitiesStaffSelfContainedRequest;
       var result = request.Serialize();
 
       Assert.IsNotNull(result);
@@ -61,7 +60,7 @@ namespace Hilma.Espd.Tests
     [TestMethod]
     public void TestRequest()
     {
-        var request = EspdDocumentHelper.CriteriaTaxonomyExtendedV2_1_1;
+        var request = Create.CriteriaTaxonomyExtendedV2_1_1;
         var result = request.Serialize();
 
         Assert.IsNotNull(result);

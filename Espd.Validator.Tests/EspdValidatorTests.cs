@@ -1,8 +1,7 @@
 using System;
+using System.IO;
 using System.Xml.Linq;
 using Espd.Test.Common;
-using Hilma.Espd.EDM.CriterionModels.v2_1_1.Examples;
-using Hilma.Espd.EDM.Serializers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Espd.Validator.Tests
@@ -13,7 +12,7 @@ namespace Espd.Validator.Tests
     [TestMethod]
     public void ValidateCriteriaTaxonomyExtended_Pass()
     {
-      var qar = EspdDocumentHelper.CriteriaTaxonomyExtendedV2_1_1;
+      var qar = Create.CriteriaTaxonomyExtendedV2_1_1;
       var document = qar.Serialize();
       var validator = new EspdXmlValidator();
       var result = validator.ValidateQualificationApplicationRequest(document);
@@ -24,7 +23,6 @@ namespace Espd.Validator.Tests
       }
 
       Assert.IsTrue( result.IsSuccess, "Validation should succeed" );
-      
     }
 
     [TestMethod]
@@ -48,11 +46,34 @@ namespace Espd.Validator.Tests
       Assert.IsTrue(result.IsSuccess, "Validation should fail");
     }
 
+    [TestMethod]
+    public void ExportCompleteResponse_Pass()
+    {
+      // Arrange
+      var response = Create.QualificationApplicationResponse();
+
+      // Act
+      var document = response.Serialize();
+      var validator = new EspdXmlValidator();
+      var result = validator.ValidateQualificationApplicationResponse(document);
+      var filePath = Path.Combine(Path.GetTempPath(), $"EspdResponse{DateTime.Now:yyyy-MM-dd}.xml");
+      Console.WriteLine("Write file to: " + filePath);
+      document.Save(filePath);
+
+      // Assert
+      foreach (var error in result.Errors)
+      {
+        Console.WriteLine("Error:" + error);
+      }
+      Assert.IsTrue(result.IsSuccess, "Validation should fail");
+
+    }
+
 
     [TestMethod]
     public void ValidateInvalidIncompleteRequest_Fail()
     {
-      var qar = EspdDocumentHelper.SimpleTest;
+      var qar = Create.SimpleQualificationApplicationRequest;
       var document = qar.Serialize();
       var validator = new EspdXmlValidator();
       var result = validator.ValidateQualificationApplicationRequest(document);
@@ -63,7 +84,6 @@ namespace Espd.Validator.Tests
       }
 
       Assert.IsFalse(result.IsSuccess, "Validation should fail");
-
     }
 
     [TestMethod]

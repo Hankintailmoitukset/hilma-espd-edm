@@ -32,7 +32,7 @@ namespace Hilma.Espd.EDM.CriterionModels
     /// </summary>
     /// <remarks>For the ESPD we use the value “urn:www.cenbii.eu:transaction:biitrdm070:ver3.0”. Compulsory use of the value "CEN-BII" for the schemeAgencyID attribute.</remarks>
     [Required] 
-    public IdentifierType CustomizationID { get; set; } = new IdentifierType("urn:www.cenbii.eu:transaction:biitrdm070:ver3.0") { SchemeAgencyID = "CEN-BII" };
+    public IdentifierType CustomizationID { get; set; } = new IdentifierType("urn:www.cenbii.eu:transaction:biitrdm092:ver3.0") { SchemeAgencyID = "CEN-BII" };
 
     /// <summary>
     /// An identification of the specification containing the total set of rules regarding semantic content, cardinalities and business rules to which the data contained in the instance document conforms. The identification may include the version of the specification as well as any customizations applied. 
