@@ -56,7 +56,7 @@ namespace Espd.Validator.Tests
       var document = response.Serialize();
       var validator = new EspdXmlValidator();
       var result = validator.ValidateQualificationApplicationResponse(document);
-      var filePath = Path.Combine(Path.GetTempPath(), $"EspdResponse{DateTime.Now:yyyy-MM-dd}.xml");
+      var filePath = Path.Combine(Path.GetTempPath(), $"EspdResponseTestResult.xml");
       Console.WriteLine("Write file to: " + filePath);
       document.Save(filePath);
 
