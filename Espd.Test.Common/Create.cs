@@ -17,7 +17,6 @@ namespace Espd.Test.Common
 
       var response = factory.CreateEspd2_1_1ExtendedResponse(request, EconomicOperatorParty(),
         new EuComGrowId(Guid.NewGuid()),
-        new IdentifierType("TEST-REF-111") {SchemeAgencyID = "TEST"},
         Guid.NewGuid());
 
       var evidences = new[]

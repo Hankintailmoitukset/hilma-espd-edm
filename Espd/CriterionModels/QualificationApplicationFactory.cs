@@ -43,19 +43,18 @@ namespace Hilma.Espd.EDM.CriterionModels
       };
     }
 
-    public QualificationApplicationResponse CreateEspd2_1_1ExtendedResponse(QualificationApplicationRequest request, EconomicOperatorParty economicOperator, IdentifierType identifier, IdentifierType contractFolderId, Guid uuid)
+    public QualificationApplicationResponse CreateEspd2_1_1ExtendedResponse(QualificationApplicationRequest request, EconomicOperatorParty economicOperator, IdentifierType identifier, Guid uuid)
     {
       if (request == null) throw new ArgumentNullException(nameof(request));
       if (identifier == null) throw new ArgumentNullException(nameof(identifier));
-      if (contractFolderId == null) throw new ArgumentNullException(nameof(contractFolderId));
-    
+
 
       return new QualificationApplicationResponse()
       {
         ID = identifier,
         UUID = new EuComGrowId(uuid),
-        QualificationApplicationTypeCode = QualificationApplicationType.Extended,
-        ContractFolderID = contractFolderId,
+        QualificationApplicationTypeCode = request.QualificationApplicationTypeCode,
+        ContractFolderID = request.ContractFolderID,
         IssueDate = DateTime.UtcNow.Date,
         IssueTime = DateTime.UtcNow,
         ContractingParty = request.ContractingParty,

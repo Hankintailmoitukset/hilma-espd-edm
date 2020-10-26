@@ -7,7 +7,7 @@ using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
 {
-  [Contract]
+    [Contract]
     public class Evidence
     {
         public IdentifierType ID { get; set; }
@@ -22,7 +22,7 @@ namespace Hilma.UBL.CommonAggregateComponents
 
         public XElement Serialize(string name = null)
         {
-          return new XElement(UblNames.Cac + ( name ?? nameof(Evidence)),
+          return new XElement(UblNames.Cac + (name ?? nameof(Evidence)),
             ID.Serialize(nameof(ID)),
             EvidenceTypeCode.Serialize(nameof(EvidenceTypeCode)),
             Name.Serialize(nameof(Name)),
@@ -30,7 +30,8 @@ namespace Hilma.UBL.CommonAggregateComponents
             CandidateStatement.Serialize(nameof(CandidateStatement)),
             ConfidentialityLevelCode.Serialize(nameof(ConfidentialityLevelCode)),
             EvidenceIssuingParty?.Serialize(nameof(EvidenceIssuingParty)),
-            DocumentReference?.Select( dr => dr.Serialize())
+            DocumentReference?.Select( dr => dr.Serialize()),
+            Language?.Serialize()
             );
         }
     }
