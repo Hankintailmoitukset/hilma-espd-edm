@@ -95,7 +95,7 @@ namespace Hilma.UBL.CommonAggregateComponents
         DocumentDescription.Serialize(nameof(DocumentDescription)),
         Attachment?.Serialize(),
         ValidityPeriod?.Serialize(nameof(ValidityPeriod)),
-        IssuerParty.Serialize(nameof(IssuerParty))
+        IssuerParty?.Serialize(nameof(IssuerParty))
         );
     }
   }

@@ -1,4 +1,6 @@
-﻿using Hilma.UBL.Attributes;
+﻿using System.Xml.Linq;
+using Hilma.UBL.Attributes;
+using Hilma.UBL.Serializers;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.CommonAggregateComponents
@@ -33,5 +35,15 @@ namespace Hilma.UBL.CommonAggregateComponents
         /// </summary>
         /// <value></value>
         public Party Party { get; set; }
+
+    public XElement Serialize() {
+      return new XElement(UblNames.Cac + nameof(QualifyingParty),
+         EmployeeQuantity.Serialize(nameof (EmployeeQuantity)),
+         BusinessClassificationScheme?.Serialize(),
+         FinancialCapability?.Serialize(),
+         CompletedTask?.Serialize(),
+         Party?.Serialize(nameof (Party))
+       );
+     }
     }
-}
+  }

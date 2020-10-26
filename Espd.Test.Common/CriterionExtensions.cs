@@ -2,7 +2,7 @@
 using System.Linq;
 using Hilma.UBL.CommonAggregateComponents;
 
-namespace Hilma.Espd.Tests.Extensions
+namespace Espd.Test.Common
 {
   public static class CriterionExtensions
   {

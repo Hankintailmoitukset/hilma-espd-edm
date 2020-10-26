@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Xml.Linq;
+using Hilma.UBL.CommonAggregateComponents;
 using Hilma.UBL.UnqualifiedDataTypes;
 
 namespace Hilma.UBL.Serializers
@@ -59,6 +60,21 @@ namespace Hilma.UBL.Serializers
           Attribute(nameof(measure.UnitCode), measure.UnitCode),
           Attribute(nameof(measure.UnitCodeListAgencyName), measure.UnitCodeListAgencyName),
           Attribute(nameof(measure.UnitCodeListID), measure.UnitCodeListID)
+        }
+      );
+    }
+
+    public static XElement Serialize(this QuantityType quantity, string name) {
+      if (quantity == null) {
+        return null;
+      }
+
+      return Element(name, quantity.Value.ToString(CultureInfo.InvariantCulture),
+        new[]
+        {
+          Attribute(nameof(quantity.UnitCode), quantity.UnitCode),
+          Attribute(nameof(quantity.UnitCodeListAgencyName), quantity.UnitCodeListAgencyName),
+          Attribute(nameof(quantity.UnitCodeListID), quantity.UnitCodeListID)
         }
       );
     }
@@ -121,6 +137,11 @@ namespace Hilma.UBL.Serializers
     public static object Serialize(this IEnumerable<string> text, string name)
     {
       return text?.Select( t => new XElement(UblNames.Cbc + name, t));
+    }
+
+    public static object Serialize(this IEnumerable<string> text, XName name)
+    {
+      return text?.Select(t => new XElement(name, t));
     }
 
     public static XElement Element(string name, string value, XAttribute[] attributes)

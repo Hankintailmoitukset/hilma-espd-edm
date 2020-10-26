@@ -14,7 +14,7 @@ export class Person {
     
     
     firstName?: string
-    lastName?: string
+    familyName?: string
     birthDate?: DateType
     birthPlaceName?: string
     contact?: Contact

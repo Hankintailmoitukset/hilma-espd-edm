@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Espd.Test.Common\Espd.Test.Common.csproj" />
     <ProjectReference Include="..\Espd\Espd.csproj" />
   </ItemGroup>
 

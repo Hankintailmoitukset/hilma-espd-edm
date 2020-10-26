@@ -5,7 +5,7 @@ import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
 import { ResponseValue } from './ResponseValue'
 import { Period } from './Period'
-import { Evidence } from './Evidence'
+import { EvidenceSupplied } from './EvidenceSupplied'
 
 import assign from 'lodash.assign'
 
@@ -20,5 +20,5 @@ export class TenderingCriterionResponse {
     confidentialityLevelCode?: CodeType
     responseValue?: ResponseValue[]
     applicablePeriod?: Period
-    evidenceSupplied?: Evidence
+    evidenceSupplied?: EvidenceSupplied
 }

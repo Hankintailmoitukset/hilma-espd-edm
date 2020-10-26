@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Xml.Linq;
 using Hilma.UBL.Attributes;
 using Hilma.UBL.Serializers;
@@ -19,9 +20,9 @@ namespace Hilma.UBL.CommonAggregateComponents
         public DocumentReference[] DocumentReference { get; set; }
         public Language Language { get; set; }
 
-        public XElement Serialize(string name)
+        public XElement Serialize(string name = null)
         {
-          return new XElement(UblNames.Cac + ( name ?? nameof(Evidence)),
+          return new XElement(UblNames.Cac + (name ?? nameof(Evidence)),
             ID.Serialize(nameof(ID)),
             EvidenceTypeCode.Serialize(nameof(EvidenceTypeCode)),
             Name.Serialize(nameof(Name)),
@@ -29,7 +30,8 @@ namespace Hilma.UBL.CommonAggregateComponents
             CandidateStatement.Serialize(nameof(CandidateStatement)),
             ConfidentialityLevelCode.Serialize(nameof(ConfidentialityLevelCode)),
             EvidenceIssuingParty?.Serialize(nameof(EvidenceIssuingParty)),
-            DocumentReference?.Select( dr => dr.Serialize())
+            DocumentReference?.Select( dr => dr.Serialize()),
+            Language?.Serialize()
             );
         }
     }

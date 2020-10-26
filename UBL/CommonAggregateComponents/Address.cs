@@ -84,7 +84,7 @@ namespace Hilma.UBL.CommonAggregateComponents
         Region.Serialize(nameof(Region)),
         District.Serialize(nameof(District)),
         TimezoneOffset.Serialize(nameof(TimezoneOffset)),
-        AddressLines.Serialize("AddressLine"),
+        AddressLines?.Select( line => new XElement(UblNames.Cac + "AddressLine", line.Serialize("Line"))),
         Country?.Serialize(),
         LocationCoordinates?.Select( lc => lc.Serialize()),
         Contact?.Serialize()

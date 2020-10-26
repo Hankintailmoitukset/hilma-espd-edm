@@ -42,6 +42,39 @@ namespace Hilma.Espd.EDM.CriterionModels
                                                           : criterionFactory.V2_1_1.ExclusionGrounds.ToArray()
       };
     }
-    
+
+    public QualificationApplicationResponse CreateEspd2_1_1ExtendedResponse(QualificationApplicationRequest request, EconomicOperatorParty economicOperator, IdentifierType identifier, Guid uuid)
+    {
+      if (request == null) throw new ArgumentNullException(nameof(request));
+      if (identifier == null) throw new ArgumentNullException(nameof(identifier));
+
+
+      return new QualificationApplicationResponse()
+      {
+        ID = identifier,
+        UUID = new EuComGrowId(uuid),
+        QualificationApplicationTypeCode = request.QualificationApplicationTypeCode,
+        ContractFolderID = request.ContractFolderID,
+        IssueDate = DateTime.UtcNow.Date,
+        IssueTime = DateTime.UtcNow,
+        ContractingParty = request.ContractingParty,
+        EconomicOperatorParty = economicOperator,
+        ProcurementProject = request.ProcurementProject,
+        ProcurementProjectLots = request.ProcurementProjectLots,
+        WeightingTypeCode = request.WeightingTypeCode,
+        WeightScoringMethodologyNote = request.WeightScoringMethodologyNote,
+        ProcedureCode = request.ProcedureCode,
+        AdditionalDocumentReferences = request.AdditionalDocumentReferences,
+        PreviousVersionID = request.PreviousVersionID,
+        EconomicOperatorGroupName = new CodeType(),
+        CopyIndicator = false,
+        UBLVersionID = request.UBLVersionID,
+        VersionID = request.VersionID,
+        Evidences = new Evidence[0],
+        TenderingCriteria = request.TenderingCriteria,
+        TenderingCriterionResponses = new TenderingCriterionResponse[]{},
+      };
+    }
+
   }
 }
