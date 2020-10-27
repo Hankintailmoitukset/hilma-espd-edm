@@ -115,30 +115,32 @@ namespace ResourceExporter
         LongName = identification.Element("LongName")?.Value,
         AgencyId = agency.Element("Identifier")?.Value,
         Version = identification.Element("Version")?.Value,
-        Codes = ParseCodes(simpleCodeList, lang)
+        Codes = ParseCodes(simpleCodeList, lang).ToArray()
       };
 
       return codeListContract;
     }
 
-    private static List<CodeContract> ParseCodes(XElement codeList, string lang)
+    private static IEnumerable<CodeContract> ParseCodes(XElement codeList, string lang)
     {
-      var listOfCodes = new List<CodeContract>();
-
       foreach (var row in codeList.Elements("Row"))
-      {
-        var code = new CodeContract()
+      { 
+        var status = ParseValueByType(row, "status");
+
+        if(status == "ACTIVE")
         {
-          Name = row.Elements("Value")
-            .FirstOrDefault(r => r.Attribute("ColumnRef")?.Value == lang)?.Element("SimpleValue")?.Value,
-          Code = row.Elements("Value")
-            .FirstOrDefault(r => r.Attribute("ColumnRef")?.Value == "code")?.Element("SimpleValue")?.Value
-        };
-
-        listOfCodes.Add(code);
+          yield return new CodeContract()
+          {
+            Name = ParseValueByType(row, lang),
+            Code = ParseValueByType(row,"code")
+          };
+        }
       }
+    }
 
-      return listOfCodes;
+    private static string ParseValueByType( XElement row, string type ) {
+      return row.Elements("Value")
+            .FirstOrDefault(r => r.Attribute("ColumnRef")?.Value == type)?.Value;
     }
   }
 }
