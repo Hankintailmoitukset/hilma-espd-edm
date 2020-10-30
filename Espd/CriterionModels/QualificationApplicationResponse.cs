@@ -58,7 +58,6 @@ namespace Hilma.Espd.EDM.CriterionModels
         TenderingCriterionResponses?.Select(r => r.Serialize()),
         Evidences?.Select(e => e.Serialize()),
         AdditionalDocumentReferences?.Select(d => d.Serialize())
-          
         ));
       }
 
@@ -216,5 +215,5 @@ namespace Hilma.Espd.EDM.CriterionModels
     
     public Evidence[] Evidences { get; set; }
 
-    }
+  }
 }

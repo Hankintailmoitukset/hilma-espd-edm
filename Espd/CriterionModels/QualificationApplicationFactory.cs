@@ -2,6 +2,7 @@
 using Hilma.UBL.CommonAggregateComponents;
 using Hilma.UBL.UnqualifiedDataTypes;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Hilma.Espd.EDM.CriterionModels
@@ -39,17 +40,17 @@ namespace Hilma.Espd.EDM.CriterionModels
         ProcurementProjectLots = procurementProjectLots.ToArray(),
         AdditionalDocumentReferences = new AdditionalDocumentReference[0],
         TenderingCriteria = onlyMandatoryExclusionGrounds ? criterionFactory.V2_1_1.ExclusionGrounds.MandatoryCriteria.ToArray()
-                                                          : criterionFactory.V2_1_1.ExclusionGrounds.ToArray()
+                                                          : criterionFactory.V2_1_1.ExclusionGrounds.ToArray(),
       };
     }
 
-    public QualificationApplicationResponse CreateEspd2_1_1ExtendedResponse(QualificationApplicationRequest request, EconomicOperatorParty economicOperator, IdentifierType identifier, Guid uuid)
+    public QualificationApplicationResponse CreateEspd2_1_1ExtendedResponse(QualificationApplicationRequest request, EconomicOperatorParty economicOperator, IdentifierType identifier, Guid uuid, string espdServiceUrl, string language)
     {
       if (request == null) throw new ArgumentNullException(nameof(request));
       if (identifier == null) throw new ArgumentNullException(nameof(identifier));
 
-
-      return new QualificationApplicationResponse()
+      var documentReferences = request.AdditionalDocumentReferences?.ToArray() ?? new AdditionalDocumentReference[0];
+      var response = new QualificationApplicationResponse()
       {
         ID = identifier,
         UUID = new EuComGrowId(uuid),
@@ -64,7 +65,7 @@ namespace Hilma.Espd.EDM.CriterionModels
         WeightingTypeCode = request.WeightingTypeCode,
         WeightScoringMethodologyNote = request.WeightScoringMethodologyNote,
         ProcedureCode = request.ProcedureCode,
-        AdditionalDocumentReferences = request.AdditionalDocumentReferences,
+        AdditionalDocumentReferences = documentReferences.Union( new []{ MapReferenceToEspdRequest(espdServiceUrl, language, request) }).ToArray(),
         PreviousVersionID = request.PreviousVersionID,
         EconomicOperatorGroupName = new CodeType(),
         CopyIndicator = false,
@@ -74,7 +75,66 @@ namespace Hilma.Espd.EDM.CriterionModels
         TenderingCriteria = request.TenderingCriteria,
         TenderingCriterionResponses = new TenderingCriterionResponse[]{},
       };
+
+      var procurementHasLots = request.ProcurementProjectLots?.Length > 1 ;
+
+      if( !procurementHasLots) {
+        PrePopulateNoLotResponses(response);
+      }
+
+      return response;
     }
 
+    private void PrePopulateNoLotResponses( QualificationApplicationResponse response ) {
+
+      var groups = response.TenderingCriteria.SelectMany( c=> c.TenderingCriterionPropertyGroups);
+      var responses = groups.SelectMany( g => PrePopulateNoLotResponses(g));
+      response.TenderingCriterionResponses = responses.ToArray();
+    }
+
+    private IEnumerable<TenderingCriterionResponse> PrePopulateNoLotResponses(TenderingCriterionPropertyGroup propertyGroup )
+    {
+      foreach(var lotProp in propertyGroup.TenderingCriterionProperties.Where( p => p.TypeCode.Equals( CriterionElementType.Question ) && p.ValueDataTypeCode.Equals(ResponseDataTypeCode.LotIdentifier)) )
+      {
+          yield return new TenderingCriterionResponse() {
+            ID = EuComGrowId.Random(),
+            ResponseValue = new ResponseValue[] { 
+              new ResponseValue() { 
+                ResponseID = new IdentifierType("0")
+              }
+            },
+            ValidatedCriterionPropertyID = lotProp.ID,
+
+          };
+      }
+      if( propertyGroup.SubsidiaryTenderingCriterionPropertyGroups != null ) {
+        var subEvidences = propertyGroup.SubsidiaryTenderingCriterionPropertyGroups.SelectMany(PrePopulateNoLotResponses);
+        foreach( var evidence in subEvidences) {
+          yield return evidence;
+        }
+      }
+    }
+
+    public AdditionalDocumentReference MapReferenceToEspdRequest(string espdServiceUrl, string language, QualificationApplicationRequest request)
+    {
+        return new AdditionalDocumentReference
+        {
+            ID = request.ID,
+            UUID = request.UUID,
+            DocumentTypeCode = new EuComGrowCodeType("ESPD_REQUEST"){ ListID = "DocRefContentType" },
+            IssueDate = request.IssueDate,
+            IssueTime = request.IssueTime,
+            Attachment = new Attachment
+            {
+                ExternalReference = new ExternalReference
+                {
+                    URI = new IdentifierType($"{espdServiceUrl}{language}/qualificationapplicatiorequest/{request.UUID}")
+                }
+            },
+        };
+    }
   }
+
+ 
+
 }

@@ -10,14 +10,58 @@ namespace Espd.Test.Common
 {
   public class Create
   {
-    public static QualificationApplicationResponse QualificationApplicationResponse()
+    public static QualificationApplicationResponse QualificationApplicationResponse( IEnumerable<TenderingCriterion> additionalCriteria = null )
     {
       var request = CriteriaTaxonomyExtendedV2_1_1;
-      var factory = new QualificationApplicationFactory();
+      request.AdditionalDocumentReferences = new AdditionalDocumentReference[]{
+        new AdditionalDocumentReference
+        {
+          ID = new IdentifierType
+          {
+            Value = "2020/S 100-000001",
+            SchemeAgencyID = "EU-COM-OP"
+          },
+          DocumentTypeCode = new EuComGrowCodeType
+          {
+            ListID = "DocRefContentType",
+            ListAgencyID = "EU-COM-GROW",
+            ListVersionID = "2.1.1",
+            Value = "TED_CN"
+          },
+          Attachment = new Attachment
+          {
+            ExternalReference = new ExternalReference
+            {
+              URI = new IdentifierType
+              {
+                Value = "http://ted.europa.eu"
+              },
+              FileName = "Hankinta X",
+              Description = new[]
+              {
+               "Hankinta X",
+               "0000/S 000-000000",
+             }
+            }
+          }
+        }
+      };
 
-      var response = factory.CreateEspd2_1_1ExtendedResponse(request, EconomicOperatorParty(),
+      if( additionalCriteria != null )
+      {
+        request.TenderingCriteria = request.TenderingCriteria.Union( additionalCriteria).ToArray();
+      }
+
+      var factory = new QualificationApplicationFactory();
+      var espdUrl = "http://localhost/espd/";
+      var response = factory.CreateEspd2_1_1ExtendedResponse(
+        request, 
+        EconomicOperatorParty(),
         new EuComGrowId(Guid.NewGuid()),
-        Guid.NewGuid());
+        Guid.NewGuid(),
+        espdUrl, 
+        "FI"
+      );
 
       var evidences = new[]
       {
@@ -43,7 +87,7 @@ namespace Espd.Test.Common
       };
       response.Evidences = evidences;
       response.TenderingCriterionResponses = CreateResponses(response).ToArray();
-
+      
       return response;
     }
 
@@ -568,6 +612,15 @@ namespace Espd.Test.Common
             Value = "Extended", ListID = "QualificationApplicationType", ListAgencyID = "EU-COM-GROW",
             ListVersionID = "2.1.1"
           },
+          ProcurementProject = new ProcurementProject() {
+            Name = "Procurement",
+            Description = "Foo"
+          },
+          ProcurementProjectLots = new ProcurementProjectLot[]{ 
+            new ProcurementProjectLot() {
+              ID = new IdentifierType("0")
+            }
+          },
           ContractingParty = new ContractingParty
           {
             Party = new Party
@@ -609,7 +662,41 @@ namespace Espd.Test.Common
           {
             criterionSpecification.ExclusionGrounds.Convictions[0],
             criterionSpecification.SelectionCriteria.Abilities[0],
-            criterionSpecification.SelectionCriteria.SpecificAverageTurnover[0]
+            criterionSpecification.SelectionCriteria.SpecificAverageTurnover[0],
+            criterionSpecification.SelectionCriteria.References[0],
+          },
+          AdditionalDocumentReferences = new [] { 
+            new AdditionalDocumentReference
+            {
+              ID = new IdentifierType
+              {
+                Value = "0000/S 000-000000",
+                SchemeAgencyID = "EU-COM-OP"
+              },
+              DocumentTypeCode = new EuComGrowCodeType
+              {
+                ListID = "DocRefContentType",
+                ListAgencyID = "EU-COM-GROW",
+                ListVersionID = "2.1.1",
+                Value = "TED_CN"
+              },
+              Attachment = new Attachment
+              {
+                ExternalReference = new ExternalReference
+                {
+                  URI = new IdentifierType
+                  {
+                    Value = "http://ted.europa.eu"
+                  },
+                  FileName = "Procurement",
+                  Description = new[]
+                  {
+                    "Procurement",
+                    "0000/S 000-000000",
+                  }
+                }
+              }
+            }
           }
         };
       }
