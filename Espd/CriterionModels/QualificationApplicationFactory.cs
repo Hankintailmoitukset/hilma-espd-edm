@@ -76,8 +76,8 @@ namespace Hilma.Espd.EDM.CriterionModels
         TenderingCriterionResponses = new TenderingCriterionResponse[]{},
       };
 
-      var procurementHasLots = request.ProcurementProjectLots?.Length > 1 ;
-
+      var procurementHasLots = request.IsProcurementDividedIntoLots;
+      
       if( !procurementHasLots) {
         PrePopulateNoLotResponses(response);
       }
@@ -91,7 +91,7 @@ namespace Hilma.Espd.EDM.CriterionModels
       var responses = groups.SelectMany( g => PrePopulateNoLotResponses(g));
       response.TenderingCriterionResponses = responses.ToArray();
     }
-
+  
     private IEnumerable<TenderingCriterionResponse> PrePopulateNoLotResponses(TenderingCriterionPropertyGroup propertyGroup )
     {
       foreach(var lotProp in propertyGroup.TenderingCriterionProperties.Where( p => p.TypeCode.Equals( CriterionElementType.Question ) && p.ValueDataTypeCode.Equals(ResponseDataTypeCode.LotIdentifier)) )

@@ -70,5 +70,31 @@ namespace Espd.Tests
             // Test Lot responses no init
             Assert.AreEqual(0, response.TenderingCriterionResponses.Length, "Should have no responses initialized because of lots");
         }
+
+        
+        [TestMethod]
+        public void CreateResponseFromRequest_WithSingleLotSelected() {
+
+            var model = new CriterionFactory();
+            var request = Create.CriteriaTaxonomyExtendedV2_1_1;
+            request.ProcurementProjectLots = new [] {
+                new ProcurementProjectLot() { 
+                    ID = new Hilma.UBL.UnqualifiedDataTypes.IdentifierType("2"),
+                }
+            };
+            var factory = new QualificationApplicationFactory();
+            var espdUrl = "http://localhost/espd/";
+            var response = factory.CreateEspd2_1_1ExtendedResponse(
+                request, 
+                Create.EconomicOperatorParty(),
+                new EuComGrowId(Guid.NewGuid()),
+                Guid.NewGuid(),
+                espdUrl, 
+                "FI"
+            );
+                       
+            // Test Lot responses no init
+            Assert.AreEqual(0, response.TenderingCriterionResponses.Length, "Should have no responses initialized because of single lot");
+        }
     }
 }

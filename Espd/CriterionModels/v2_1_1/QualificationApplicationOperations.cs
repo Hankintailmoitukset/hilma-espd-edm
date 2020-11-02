@@ -33,7 +33,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
     private static void FinalizeCriterion(TenderingCriterion criterion, QualificationApplicationRequest request,
       string[] selectedLots)
     {
-      var procurementHasLots = request.ProcurementProjectLots.Length > 1;
+      var procurementHasLots = request.IsProcurementDividedIntoLots;
 
       criterion.TenderingCriterionPropertyGroups = FinalizeGroups(criterion.TenderingCriterionPropertyGroups).ToArray();
 
