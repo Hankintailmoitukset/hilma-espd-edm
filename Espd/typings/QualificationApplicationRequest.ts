@@ -42,4 +42,5 @@ export class QualificationApplicationRequest {
     procurementProjectLots?: ProcurementProjectLot[]
     tenderingCriteria?: TenderingCriterion[]
     additionalDocumentReferences?: AdditionalDocumentReference[]
+    isProcurementDividedIntoLots?: boolean
 }

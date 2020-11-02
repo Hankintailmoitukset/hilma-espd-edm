@@ -90,7 +90,7 @@ namespace Espd.Validator.Tests
       {
         Console.WriteLine("Error:" + error);
       }
-      Assert.IsTrue(result.IsSuccess, "Validation should fail");
+      Assert.IsTrue(result.IsSuccess, "Validation should pass");
 
     }
 
