@@ -20,8 +20,16 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
     /// <summary>
     /// Finalize document properties
     /// </summary>
-    public static QualificationApplicationRequest FinalizeDocument(this QualificationApplicationRequest request, string[] selectedLots = null)
-    {
+    public static QualificationApplicationRequest FinalizeDocument(this QualificationApplicationRequest request, string[] selectedLots)
+    { 
+      if(request == null){
+        throw new ArgumentNullException(nameof(request));
+      }
+
+      if(selectedLots == null){
+        throw new ArgumentNullException(nameof( selectedLots));
+      }
+
       foreach (var criterion in request.TenderingCriteria ?? Enumerable.Empty<TenderingCriterion>())
       {
         FinalizeCriterion(criterion, request, selectedLots ?? new string[0]);

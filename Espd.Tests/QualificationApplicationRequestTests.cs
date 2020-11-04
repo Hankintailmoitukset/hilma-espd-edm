@@ -24,7 +24,7 @@ namespace Hilma.Espd.Tests
       var firstPropertyId = qar.TenderingCriteria[0].TenderingCriterionPropertyGroups[0].TenderingCriterionProperties[0]
         .ID.Value;
 
-      qar.FinalizeDocument( new string[0]);
+      qar.FinalizeDocument( new [] { "0" });
 
       var firstPropertyIdAfter = qar.TenderingCriteria[0].TenderingCriterionPropertyGroups[0]
         .TenderingCriterionProperties[0].ID.Value;
@@ -110,7 +110,7 @@ namespace Hilma.Espd.Tests
       var referenceCriterion = new CriterionSpecification().SelectionCriteria.References.First();
       qar.TenderingCriteria = qar.TenderingCriteria = new[] { referenceCriterion };
 
-      qar.FinalizeDocument();
+      qar.FinalizeDocument(lotIds);
 
       var assertedCriteria = qar.TenderingCriteria.Last();
       Assert.AreEqual(referenceCriterion.Name, assertedCriteria.Name);
@@ -154,16 +154,17 @@ namespace Hilma.Espd.Tests
     {
       var factory = new QualificationApplicationFactory();
       var uuid = Guid.NewGuid();
+      var lotIds = new[] { "0" };
       var qar = factory.CreateEspd2_1_1ExtendedRequest(
         new IdentifierType("TEST-123") { SchemeAgencyID = "TEST" },
         new IdentifierType("TEST-REF-111") { SchemeAgencyID = "TEST" },
         uuid,
-        new[] { "0" }, false);
+        lotIds, false);
 
       var contributionsCriterion = new CriterionSpecification().ExclusionGrounds.Contributions.First();
       qar.TenderingCriteria = qar.TenderingCriteria.Union(new[] { contributionsCriterion }).ToArray();
 
-      qar.FinalizeDocument();
+      qar.FinalizeDocument(lotIds);
 
       var assertedCriteria = qar.TenderingCriteria.Last();
       Assert.AreEqual(contributionsCriterion.Name, assertedCriteria.Name);
