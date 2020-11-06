@@ -1,4 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using System.Xml.Linq;
 using Hilma.UBL.Attributes;
 using Hilma.UBL.Serializers;
@@ -20,8 +23,12 @@ namespace Hilma.UBL.CommonAggregateComponents
 
     public XElement Serialize()
     {
+      if (string.IsNullOrEmpty(Name)) {
+        return null;
+      }
+
       return new XElement(UblNames.Cac + nameof(PartyName),
-        this.Name?.Serialize(nameof(Name))
+        this.Name.Serialize(nameof(Name))
         );
     }
   }

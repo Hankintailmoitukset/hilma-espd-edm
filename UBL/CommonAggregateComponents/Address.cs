@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Xml.Linq;
 using Hilma.UBL.Attributes;
@@ -84,12 +85,27 @@ namespace Hilma.UBL.CommonAggregateComponents
         Region.Serialize(nameof(Region)),
         District.Serialize(nameof(District)),
         TimezoneOffset.Serialize(nameof(TimezoneOffset)),
-        AddressLines?.Select( line => new XElement(UblNames.Cac + "AddressLine", line.Serialize("Line"))),
+        SerializeAddressLines(),
         Country?.Serialize(),
         LocationCoordinates?.Select( lc => lc.Serialize()),
         Contact?.Serialize()
         );
     }
-                 
+
+    public IEnumerable<XElement> SerializeAddressLines() {
+
+      var list = new List<XElement>();
+      var lines = AddressLines;
+      if (lines != null) {
+        foreach (var line in lines) {
+          if (!string.IsNullOrEmpty(line)) {
+            list.Add(new XElement(UblNames.Cac + "AddressLine",
+                                 line.Serialize("Line")));
+          }
+        }
+      }
+      return list;
+    }
+
   }
 }

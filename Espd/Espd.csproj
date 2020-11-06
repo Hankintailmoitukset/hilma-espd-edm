@@ -45,6 +45,9 @@
     <None Update="typings\BusinessClassificationScheme.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\BusinessClassificationScheme.cs</CustomToolNamespace>
     </None>
+    <None Update="typings\ClassificationCategory.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\ClassificationCategory.cs</CustomToolNamespace>
+    </None>
     <None Update="typings\CodeContract.ts">
       <CustomToolNamespace>CodeLists\CodeContract.cs</CustomToolNamespace>
     </None>
@@ -116,6 +119,9 @@
     </None>
     <None Update="typings\Evidence.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\Evidence.cs</CustomToolNamespace>
+    </None>
+    <None Update="typings\EvidenceSupplied.ts">
+      <CustomToolNamespace>..\UBL\CommonAggregateComponents\EvidenceSupplied.cs</CustomToolNamespace>
     </None>
     <None Update="typings\EvidenceType.ts">
       <CustomToolNamespace>..\UBL\CommonAggregateComponents\EvidenceType.cs</CustomToolNamespace>
