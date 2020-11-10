@@ -52,11 +52,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     public Country Country { get; set; }
     public LocationCoordinate[] LocationCoordinates { get; set; }
 
-    /// <summary>
-    /// Contact of the contracting body
-    /// </summary>
-    public Contact Contact { get; set; }
-
+    
     public XElement Serialize( string name )
     {
       return new XElement(UblNames.Cac + name,
@@ -86,8 +82,7 @@ namespace Hilma.UBL.CommonAggregateComponents
         TimezoneOffset.Serialize(nameof(TimezoneOffset)),
         AddressLines?.Select( line => new XElement(UblNames.Cac + "AddressLine", line.Serialize("Line"))),
         Country?.Serialize(),
-        LocationCoordinates?.Select( lc => lc.Serialize()),
-        Contact?.Serialize()
+        LocationCoordinates?.Select( lc => lc.Serialize())
         );
     }
                  
