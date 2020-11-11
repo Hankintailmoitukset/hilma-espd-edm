@@ -9,7 +9,8 @@ using Hilma.UBL.UnqualifiedDataTypes;
 namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
 {
   public static class QualificationApplicationOperations
-  {
+  { 
+    
 
     /// <summary>
     /// EG-Contribitions Threshold group id

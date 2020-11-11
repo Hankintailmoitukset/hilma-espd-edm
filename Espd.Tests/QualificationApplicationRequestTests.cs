@@ -13,7 +13,7 @@ namespace Hilma.Espd.Tests
   public class QualificationApplicationOperationsTests
   {
     [TestMethod]
-    public void TestFinalize()
+    public void TestFinalize_OnlyZeroSelectedLot()
     {
       var factory = new QualificationApplicationFactory();
       var uuid = Guid.NewGuid();
@@ -25,6 +25,31 @@ namespace Hilma.Espd.Tests
         .ID.Value;
 
       qar.FinalizeDocument( new [] { "0" });
+
+      var firstPropertyIdAfter = qar.TenderingCriteria[0].TenderingCriterionPropertyGroups[0]
+        .TenderingCriterionProperties[0].ID.Value;
+      var assertedCriteria = qar.TenderingCriteria.Last();
+      Assert.AreEqual(suitabilityCriterion.Name, assertedCriteria.Name);
+      Assert.AreNotEqual(firstPropertyId, firstPropertyIdAfter, "Id, should not be the same");
+
+      var lotIds = assertedCriteria.DescendantProperties()
+          .Where(p => p.TypeCode.Equals(CriterionElementType.Requirement) && Equals(p.ValueDataTypeCode, ResponseDataTypeCode.LotIdentifier));
+
+      Assert.IsTrue( lotIds.All( id => id.ExpectedID == "0"), "Lot id:s should have been set to \"0\"");
+    }
+
+    public void TestFinalize_NoSelecedLots()
+    {
+      var factory = new QualificationApplicationFactory();
+      var uuid = Guid.NewGuid();
+      var qar = factory.CreateEspd2_1_1ExtendedRequest(new IdentifierType("TEST-123") {SchemeAgencyID = "TEST"},
+        new IdentifierType("TEST-REF-111") {SchemeAgencyID = "TEST"}, uuid, new string[0], false );
+      var suitabilityCriterion = new CriterionSpecification().SelectionCriteria.Suitability.First();
+      qar.TenderingCriteria = qar.TenderingCriteria.Union(new[] {suitabilityCriterion}).ToArray();
+      var firstPropertyId = qar.TenderingCriteria[0].TenderingCriterionPropertyGroups[0].TenderingCriterionProperties[0]
+        .ID.Value;
+
+      qar.FinalizeDocument(new string[0]);
 
       var firstPropertyIdAfter = qar.TenderingCriteria[0].TenderingCriterionPropertyGroups[0]
         .TenderingCriterionProperties[0].ID.Value;

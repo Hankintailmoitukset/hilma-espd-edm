@@ -72,7 +72,7 @@ namespace Hilma.UBL.CommonAggregateComponents
     /// A party who acts as an agent for this party.
     /// </summary>
     /// <value></value>
-    public Party AgentParty { get; private set; }
+    public Party AgentParty { get; set; }
 
     
     public XElement Serialize( string name = null )
