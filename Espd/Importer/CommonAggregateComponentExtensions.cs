@@ -33,8 +33,8 @@ namespace Hilma.Espd.EDM.Importer
         EconomicOperatorParty = root.Cac("EconomicOperatorParty").ParseEconomicOperatorParty(),
         ProcurementProject = root.Cac("ProcurementProject").ParseProcurementProject(),
         ProcurementProjectLots = root.Cacs("ProcurementProjectLot").Select(ParseProcurementProjectLot).ToArray(),
-        TenderingCriteria = root.Cacs("TenderingCriterion").Select( c => c.ParseTenderingCriterion()).ToArray(),
-        TenderingCriterionResponses = root.Cacs("TenderingCriterionResponse").Select( ParseTenderingCriterionResponse).ToArray(),
+        TenderingCriteria = root.Cacs("TenderingCriterion").Select(ParseTenderingCriterion).ToArray(),
+        TenderingCriterionResponses = root.Cacs("TenderingCriterionResponse").Select(ParseTenderingCriterionResponse).ToArray(),
         Evidences = root.Cacs("Evidence").Select( ParseEvidence).ToArray()
 
       };
@@ -80,7 +80,7 @@ namespace Hilma.Espd.EDM.Importer
 
     private static ResponseValue ParseResponseValue(XElement element)
     {
-      return new ResponseValue()
+      return element != null ? new ResponseValue()
       {
          ID = element.Cbc("ID").ParseIdentifier(),
          Description = element.Cbcs("Description").ParseDescription(),
@@ -96,7 +96,7 @@ namespace Hilma.Espd.EDM.Importer
          ResponseURI = element.Cbc("ResponseURI").ParseIdentifier()
          
 
-      };
+      } : null;
     }
 
     public static TenderingCriterion ParseTenderingCriterion(this XElement criterion)
@@ -357,20 +357,20 @@ namespace Hilma.Espd.EDM.Importer
         AddressTypeCode = address.Cbc("AddressTypeCode").ParseCode(),
         BlockName = address.Cbc("BlockName")?.Value,
         BuildingNumber = address.Cbc("BuildingNumber")?.Value,
-        CitySubdivisionName = address.Cbc("BuildingNumber")?.Value,
-        CountrySubentity = address.Cbc("BuildingNumber")?.Value,
-        CountrySubentityCode = address.Cbc("BuildingNumber").ParseCode(),
-        Department = address.Cbc("BuildingNumber")?.Value,
-        District = address.Cbc("BuildingNumber")?.Value,
-        Floor = address.Cbc("BuildingNumber")?.Value,
-        InhouseMail = address.Cbc("BuildingNumber")?.Value,
-        MarkAttention = address.Cbc("BuildingNumber")?.Value,
-        MarkCare = address.Cbc("BuildingNumber")?.Value,
-        PlotIdentification = address.Cbc("BuildingNumber")?.Value,
-        Postbox = address.Cbc("BuildingNumber")?.Value,
-        Region = address.Cbc("BuildingNumber")?.Value,
-        Room = address.Cbc("BuildingNumber")?.Value,
-        TimezoneOffset = address.Cbc("BuildingNumber")?.Value
+        CitySubdivisionName = address.Cbc("CitySubdivisionName")?.Value,
+        CountrySubentity = address.Cbc("CountrySubentity")?.Value,
+        CountrySubentityCode = address.Cbc("CountrySubentityCode").ParseCode(),
+        Department = address.Cbc("Department")?.Value,
+        District = address.Cbc("District")?.Value,
+        Floor = address.Cbc("Floor")?.Value,
+        InhouseMail = address.Cbc("InhouseMail")?.Value,
+        MarkAttention = address.Cbc("MarkAttention")?.Value,
+        MarkCare = address.Cbc("MarkCare")?.Value,
+        PlotIdentification = address.Cbc("PlotIdentification")?.Value,
+        Postbox = address.Cbc("Postbox")?.Value,
+        Region = address.Cbc("Region")?.Value,
+        Room = address.Cbc("Room")?.Value,
+        TimezoneOffset = address.Cbc("TimezoneOffset")?.Value
       };
 
     }
@@ -535,8 +535,29 @@ namespace Hilma.Espd.EDM.Importer
       return new QualifyingParty()
       {
         BusinessClassificationScheme =
-          qualifyingParty.Cac("BusinessClassificationScheme").ParseBusinessClassificationScheme()
+          qualifyingParty.Cac("BusinessClassificationScheme").ParseBusinessClassificationScheme(),
+        CompletedTask = qualifyingParty.Cac("CompletedTask").ParseCompletedTask(),
+        EmployeeQuantity = qualifyingParty.Cbc("EmployeeQuantity").ParseQuantity(),
+        FinancialCapability = qualifyingParty.Cac("CompletedTask").ParseFinancialCapability(),
+        Party = qualifyingParty.Cac("Party").ParseParty()
       };
+    }
+
+    private static CompletedTask ParseCompletedTask(this XElement element)
+    {
+      return element != null ? new CompletedTask()
+      {
+        Description = element.Cbc("Description")?.Value
+
+      } : null;
+    }
+
+    private static FinancialCapability ParseFinancialCapability(this XElement element)
+    {
+      return element != null ? new FinancialCapability()
+      {
+        ValueAmount = element.Cbc("ValueAmount").ParseAmount()
+      } : null;
     }
 
     public static BusinessClassificationScheme ParseBusinessClassificationScheme(this XElement bcScheme)

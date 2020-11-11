@@ -316,12 +316,6 @@ namespace Hilma.Espd.Tests
       AssertIdentifier(id, expectedId, schemeAgencyId: "EU-COM-GROW", expectedSchemeID, "2.1.1");
     }
 
-    public void ParseParty_Full()
-    {
-      var xml = @"";
-
-    }
-
     private void AssertTimeType(TimeType time, string expectedValue, string message)
     {
       Assert.IsNotNull(time, message);
