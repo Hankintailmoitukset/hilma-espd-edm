@@ -66,7 +66,7 @@ namespace Hilma.Espd.EDM.Importer
       if (element.Name.Namespace != UblNames.Cbc)
         throw new ArgumentOutOfRangeException(nameof(element), $"Element should be in namespace: {UblNames.Cbc}");
 
-      if (!DateTime.TryParse(element.Value, out DateTime date))
+      if (!DateTime.TryParse(element.Value.Substring(0,10), out DateTime date))
         return null;
 
       return new DateType(date);
