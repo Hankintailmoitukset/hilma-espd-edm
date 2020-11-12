@@ -160,8 +160,6 @@ namespace Hilma.Espd.EDM.Importer
         TranslationTypeCode = property.Cbc("TranslationTypeCode")?.Value,
         ValueCurrencyCode = property.Cbc("ValueCurrencyCode")?.ParseCode(),
         ValueUnitCode = property.Cbc("ValueUnitCode")?.ParseCode(),
-
-
       };
     }
 
@@ -226,7 +224,7 @@ namespace Hilma.Espd.EDM.Importer
       {
         ID = documentRef.Cbc("ID").ParseIdentifier(),
         IssueTime = documentRef.Cbc("IssueTime").ParseTime(),
-        IssueDate = documentRef.Cbc("IssueTime").ParseDate(),
+        IssueDate = documentRef.Cbc("IssueDate").ParseDate(),
         VersionID = documentRef.Cbc("VersionID").ParseIdentifier(),
         LanguageID = documentRef.Cbc("LanguageID").ParseIdentifier(),
         LocaleCode = documentRef.Cbc("LocaleCode").ParseCode(),
@@ -256,7 +254,7 @@ namespace Hilma.Espd.EDM.Importer
       {
         ID = documentRef.Cbc("ID").ParseIdentifier(),
         IssueTime = documentRef.Cbc("IssueTime").ParseTime(),
-        IssueDate = documentRef.Cbc("IssueTime").ParseDate(),
+        IssueDate = documentRef.Cbc("IssueDate").ParseDate(),
         Attachment = documentRef.Cac("Attachment").ParseAttachment(),
         UUID = documentRef.Cbc("UUID").ParseIdentifier(),
         DocumentType = documentRef.Cbc("DocumentType")?.ParseCode(),
