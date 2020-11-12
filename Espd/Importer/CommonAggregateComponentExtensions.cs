@@ -35,8 +35,8 @@ namespace Hilma.Espd.EDM.Importer
         ProcurementProjectLots = root.Cacs("ProcurementProjectLot").Select(ParseProcurementProjectLot).ToArray(),
         TenderingCriteria = root.Cacs("TenderingCriterion").Select(ParseTenderingCriterion).ToArray(),
         TenderingCriterionResponses = root.Cacs("TenderingCriterionResponse").Select(ParseTenderingCriterionResponse).ToArray(),
-        Evidences = root.Cacs("Evidence").Select( ParseEvidence).ToArray()
-
+        Evidences = root.Cacs("Evidence").Select( ParseEvidence).ToArray(),
+        AdditionalDocumentReferences = root.Cacs("AdditionalDocumentReference").Select(ParseAdditionalDocumentReference).ToArray()
       };
       return response;
     }
@@ -46,7 +46,6 @@ namespace Hilma.Espd.EDM.Importer
       if (element == null)
       {
         return null;
-
       }
 
       var response =  new TenderingCriterionResponse()
@@ -94,8 +93,6 @@ namespace Hilma.Espd.EDM.Importer
          ResponseNumeric = element.Cbc("ResponseNumeric").ParseDecimal(),
          ResponseTime = element.Cbc("ResponseTime").ParseTime(),
          ResponseURI = element.Cbc("ResponseURI").ParseIdentifier()
-         
-
       } : null;
     }
 
@@ -244,6 +241,26 @@ namespace Hilma.Espd.EDM.Importer
         DocumentType = documentRef.Cbc("DocumentType")?.Value,
         DocumentTypeCode = documentRef.Cbc("DocumentTypeCode").ParseCode(),
         ResultOfVerification = documentRef.Cac("ResultOfVerification").ParseResultOfVerification(),
+        
+      };
+    }
+
+    public static AdditionalDocumentReference ParseAdditionalDocumentReference(this XElement documentRef)
+    {
+      if (documentRef == null)
+      {
+        return null;
+      }
+
+      return new AdditionalDocumentReference()
+      {
+        ID = documentRef.Cbc("ID").ParseIdentifier(),
+        IssueTime = documentRef.Cbc("IssueTime").ParseTime(),
+        IssueDate = documentRef.Cbc("IssueTime").ParseDate(),
+        Attachment = documentRef.Cac("Attachment").ParseAttachment(),
+        UUID = documentRef.Cbc("UUID").ParseIdentifier(),
+        DocumentType = documentRef.Cbc("DocumentType")?.ParseCode(),
+        DocumentTypeCode = documentRef.Cbc("DocumentTypeCode").ParseCode(),
         
       };
     }
