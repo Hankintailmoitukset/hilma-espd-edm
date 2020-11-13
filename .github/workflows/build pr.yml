@@ -17,22 +17,20 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Set env
-        run: echo ::set-env name=workspace::$GITHUB_WORKSPACE
-      
+       
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
       - name: Fetch all history for all tags and branches
         run: git fetch --prune --unshallow
     
-      - uses: gittools/actions/gitversion/setup@v0.9.2
+      - uses: gittools/actions/gitversion/setup@v0.9.5
         with:
-          versionSpec: '5.1.x'  
+          versionSpec: '5.5.x'  
       
       - name: Use GitVersion
         id: gitversion # step id used as reference for output values
-        uses: gittools/actions/gitversion/execute@v0.9.2
+        uses: gittools/actions/gitversion/execute@v0.9.5
       
       - name: Replace tokens
         uses: cschleiden/replace-tokens@v1.0
@@ -41,7 +39,7 @@ jobs:
         env: 
           PACKAGE_VERSION: '${{steps.gitversion.outputs.semVer}}'
 
-      - uses: actions/setup-dotnet@v1.4.0
+      - uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '3.1.200'
           source-url: https://api.nuget.org/v3/index.json
