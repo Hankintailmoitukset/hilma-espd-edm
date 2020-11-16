@@ -360,7 +360,7 @@ namespace Hilma.Espd.Tests
       using var fileStream = File.OpenText(Path.Combine("Resources", "Document.xml"));
       var xml = XDocument.Load(fileStream);
       var importer = new QualificationApplicationResponseImporter();
-      Assert.ThrowsException<ArgumentOutOfRangeException>(() => importer.Parse(xml), "Should fail if invalid xml");
+      Assert.ThrowsException<EspdImportException>(() => importer.Parse(xml), "Should fail if invalid xml");
     }
   }
 }
