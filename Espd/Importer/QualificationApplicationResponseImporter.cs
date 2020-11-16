@@ -16,7 +16,7 @@ namespace Hilma.Espd.EDM.Importer
       var root = xml.Element(rootName);
       if (root == null)
       {
-        throw new ArgumentOutOfRangeException(nameof(xml), $"Could not locate element: {rootName}");
+        throw new EspdImportException( $"Could not locate element: {rootName}");
       }
 
       return root.ParseQualificationApplicationResponse();

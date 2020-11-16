@@ -366,7 +366,7 @@ namespace Hilma.Espd.EDM.Importer
         PostalZone = address.Cbc("PostalZone")?.Value,
         Country = address.Cac("Country").ParseCountry(),
         StreetName = address.Cbc("StreetName")?.Value,
-        AddressLines = address.Cbcs("AddressLine").SelectMany( a => a.Cbcs("Line"), ((addressLine, line) => line.Value )).ToArray(),
+        AddressLines = address.Cacs("AddressLine").SelectMany( a => a.Cbcs("Line"), ((addressLine, line) => line.Value )).ToArray(),
         AdditionalStreetName = address.Cbc("AdditionalStreetName")?.Value,
         AddressFormatCode = address.Cbc("AddressFormatCode").ParseCode(),
         AddressTypeCode = address.Cbc("AddressTypeCode").ParseCode(),
