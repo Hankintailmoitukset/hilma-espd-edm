@@ -53,14 +53,13 @@ namespace Espd.Test.Common
       }
 
       var factory = new QualificationApplicationFactory();
-      var espdUrl = "http://localhost/espd/";
+      var espdUrl = "http://localhost/espd/request/12345";
       var response = factory.CreateEspd2_1_1ExtendedResponse(
         request, 
         EconomicOperatorParty(),
         new EuComGrowId(Guid.NewGuid()),
         Guid.NewGuid(),
-        espdUrl, 
-        "FI"
+        espdUrl
       );
 
       var evidences = new[]

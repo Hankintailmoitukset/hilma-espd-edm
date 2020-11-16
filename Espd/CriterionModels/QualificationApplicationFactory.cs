@@ -44,7 +44,7 @@ namespace Hilma.Espd.EDM.CriterionModels
       };
     }
 
-    public QualificationApplicationResponse CreateEspd2_1_1ExtendedResponse(QualificationApplicationRequest request, EconomicOperatorParty economicOperator, IdentifierType identifier, Guid uuid, string espdServiceUrl, string language)
+    public QualificationApplicationResponse CreateEspd2_1_1ExtendedResponse(QualificationApplicationRequest request, EconomicOperatorParty economicOperator, IdentifierType identifier, Guid uuid, string espdReferenceUrl)
     {
       if (request == null) throw new ArgumentNullException(nameof(request));
       if (identifier == null) throw new ArgumentNullException(nameof(identifier));
@@ -65,7 +65,7 @@ namespace Hilma.Espd.EDM.CriterionModels
         WeightingTypeCode = request.WeightingTypeCode,
         WeightScoringMethodologyNote = request.WeightScoringMethodologyNote,
         ProcedureCode = request.ProcedureCode,
-        AdditionalDocumentReferences = documentReferences.Union( new []{ MapReferenceToEspdRequest(espdServiceUrl, language, request) }).ToArray(),
+        AdditionalDocumentReferences = documentReferences.Union( new []{ MapReferenceToEspdRequest(request, espdReferenceUrl ) }).ToArray(),
         PreviousVersionID = request.PreviousVersionID,
         EconomicOperatorGroupName = new CodeType(),
         CopyIndicator = false,

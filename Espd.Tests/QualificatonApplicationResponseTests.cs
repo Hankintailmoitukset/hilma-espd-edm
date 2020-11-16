@@ -17,14 +17,14 @@ namespace Espd.Tests
             var request = Create.CriteriaTaxonomyExtendedV2_1_1;
 
             var factory = new QualificationApplicationFactory();
-            var espdUrl = "http://localhost/espd/";
+            var espdUrl = "http://localhost/espd/request/12345";
+
             var response = factory.CreateEspd2_1_1ExtendedResponse(
                 request, 
                 Create.EconomicOperatorParty(),
                 new EuComGrowId(Guid.NewGuid()),
                 Guid.NewGuid(),
-                espdUrl, 
-                "FI"
+                espdUrl
             );
             
             // Test references
@@ -57,14 +57,14 @@ namespace Espd.Tests
                 }
             };
             var factory = new QualificationApplicationFactory();
-            var espdUrl = "http://localhost/espd/";
+            var espdUrl = "http://localhost/espd/request/12345";
+
             var response = factory.CreateEspd2_1_1ExtendedResponse(
                 request, 
                 Create.EconomicOperatorParty(),
                 new EuComGrowId(Guid.NewGuid()),
                 Guid.NewGuid(),
-                espdUrl, 
-                "FI"
+                espdUrl
             );
                        
             // Test Lot responses no init
@@ -83,14 +83,13 @@ namespace Espd.Tests
                 }
             };
             var factory = new QualificationApplicationFactory();
-            var espdUrl = "http://localhost/espd/";
+            var espdUrl = "http://localhost/espd/request/12345";
             var response = factory.CreateEspd2_1_1ExtendedResponse(
                 request, 
                 Create.EconomicOperatorParty(),
                 new EuComGrowId(Guid.NewGuid()),
                 Guid.NewGuid(),
-                espdUrl, 
-                "FI"
+                espdUrl
             );
                        
             // Test Lot responses no init
