@@ -115,7 +115,7 @@ namespace Hilma.Espd.EDM.CriterionModels
       }
     }
 
-    public AdditionalDocumentReference MapReferenceToEspdRequest(string espdServiceUrl, string language, QualificationApplicationRequest request)
+    public AdditionalDocumentReference MapReferenceToEspdRequest(QualificationApplicationRequest request, string espdRequestUrl)
     {
         return new AdditionalDocumentReference
         {
@@ -128,7 +128,7 @@ namespace Hilma.Espd.EDM.CriterionModels
             {
                 ExternalReference = new ExternalReference
                 {
-                    URI = new IdentifierType($"{espdServiceUrl}{language}/qualificationapplicatiorequest/{request.UUID}")
+                    URI = new IdentifierType(espdRequestUrl)
                 }
             },
         };
