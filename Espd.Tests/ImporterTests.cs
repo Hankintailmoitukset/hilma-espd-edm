@@ -214,6 +214,8 @@ namespace Hilma.Espd.Tests
         "DESCRIPTION"
       );
 
+   
+
       // Responses
 
       var responses = result.TenderingCriterionResponses;
@@ -361,6 +363,50 @@ namespace Hilma.Espd.Tests
       var xml = XDocument.Load(fileStream);
       var importer = new QualificationApplicationResponseImporter();
       Assert.ThrowsException<EspdImportException>(() => importer.Parse(xml), "Should fail if invalid xml");
+    }
+
+    [TestMethod]
+    public void ParseAmountProperty_AllFieldsInitialized()
+    {
+      var propertyXML = @"<cac:TenderingCriterionProperty xmlns:cac='urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2'
+                                                          xmlns:cbc='urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2'>
+                                <cbc:ID schemeID='CriteriaTaxonomy' schemeAgencyID='EU-COM-GROW' schemeVersionID='2.1.1'>f39e3914-f740-47ee-8632-60486db20c35</cbc:ID>
+                                <cbc:Description>Threshold</cbc:Description>
+                                <cbc:TypeCode listID='CriterionElementType' listAgencyID='EU-COM-GROW' listVersionID='2.1.1'>REQUIREMENT</cbc:TypeCode>
+                                <cbc:ValueDataTypeCode listID='ResponseDataType' listAgencyID='EU-COM-GROW' listVersionID='2.1.1'>AMOUNT</cbc:ValueDataTypeCode>
+                                <cbc:ExpectedAmount currencyID='EUR'>500000</cbc:ExpectedAmount>
+                        </cac:TenderingCriterionProperty>";
+      var element = XElement.Parse(propertyXML);
+      var property = element.ParseProperty();
+
+      AssertProperty(property, "f39e3914-f740-47ee-8632-60486db20c35", "Threshold", "REQUIREMENT", "AMOUNT");
+    
+      Assert.IsNotNull(property.ExpectedAmount);
+      Assert.AreEqual("EUR", property.ExpectedAmount.CurrencyID);
+      Assert.AreEqual(500000, property.ExpectedAmount.Value);
+
+    }
+
+    [TestMethod]
+    public void ParseCodeProperty_AllFieldsInitialized()
+    {
+      var propertyXML = @" <cac:TenderingCriterionProperty xmlns:cac='urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2'
+                                                          xmlns:cbc='urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2'>
+                                        <cbc:ID schemeID='CriteriaTaxonomy' schemeAgencyID='EU-COM-GROW' schemeVersionID='2.1.1'>80ce8733-1080-4a67-9540-736eafb2f04c</cbc:ID>
+                                        <cbc:Description>Please indicate the role of the economic operator in the group (leader, responsible for specific tasks...)</cbc:Description>
+                                        <cbc:TypeCode listID='CriterionElementType' listAgencyID='EU-COM-GROW' listVersionID='2.1.1'>QUESTION</cbc:TypeCode>
+                                        <cbc:ValueDataTypeCode listID='ResponseDataType' listAgencyID='EU-COM-GROW' listVersionID='2.1.1'>CODE</cbc:ValueDataTypeCode>
+                          </cac:TenderingCriterionProperty>";
+      var element = XElement.Parse(propertyXML);
+      var property = element.ParseProperty();
+
+      AssertProperty(
+        property, 
+        "80ce8733-1080-4a67-9540-736eafb2f04c", 
+        "Please indicate the role of the economic operator in the group (leader, responsible for specific tasks...)",
+        "QUESTION",
+        "CODE"
+      );
     }
   }
 }

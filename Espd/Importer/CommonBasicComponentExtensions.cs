@@ -117,7 +117,7 @@ namespace Hilma.Espd.EDM.Importer
 
       return decimal.TryParse(amount.Value, out var value) ? new AmountType(value)
       {
-        CurrencyID = amount.Attribute("currencyId")?.Value,
+        CurrencyID = amount.Attribute("currencyID")?.Value,
         CurrencyCodeListVersionID = amount.Attribute("currentyCodeListVersionID")?.Value
       } : null;
     }
