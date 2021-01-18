@@ -14,7 +14,6 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
 
             OtherCaLots,
             OtherEoSheltered,
-            OtherEoPqs,
             OtherEoGroups,
             OtherEoReliedOnEntities,
             OtherEoNotReliedOnEntities,
@@ -308,7 +307,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                          {
                             new TenderingCriterionPropertyGroup()
                             {
-                                _cardinality = CardinalityMetadata.ZeroOrMore,
+                                _cardinality = CardinalityMetadata.OneOrMore,
                                 ID = new CriteriaTaxonomyIdentifier("50e9a74e-969e-4d79-8e19-8af71cb7c54a"),
                                 PropertyGroupTypeCode = PropertyGroupTypeCode.OnTrue,
                                 TenderingCriterionProperties = new[]
@@ -380,7 +379,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                          {
                             new TenderingCriterionPropertyGroup()
                             {
-                                _cardinality = CardinalityMetadata.ZeroOrMore,
+                                _cardinality = CardinalityMetadata.OneOrMore,
                                 ID = new CriteriaTaxonomyIdentifier("50e9a74e-969e-4d79-8e19-8af71cb7c54a"),
                                 PropertyGroupTypeCode = PropertyGroupTypeCode.OnTrue,
                                 TenderingCriterionProperties = new[]
@@ -403,7 +402,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                                   },
                                   new TenderingCriterionProperty()
                                   {
-                                    _cardinality = CardinalityMetadata.ZeroOrMore,
+                                    _cardinality = CardinalityMetadata.ExactlyOne,
                                     ID = EuComGrowId.Random(),
                                     TypeCode = CriterionElementType.Question,
                                     Description = "common.activityOfTheEntity.description",

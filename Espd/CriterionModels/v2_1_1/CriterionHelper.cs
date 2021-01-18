@@ -602,7 +602,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                     {
                       new TenderingCriterionProperty
                       {
-                        _cardinality = CardinalityMetadata.ExactlyOne,
+                        _cardinality = CardinalityMetadata.Optional,
                         ID = EuComGrowId.Random(),
                         TypeCode = CriterionElementType.Requirement,
                         Description = "common.registerName.description",
@@ -611,7 +611,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                       },
                       new TenderingCriterionProperty
                       {
-                        _cardinality = CardinalityMetadata.ExactlyOne,
+                        _cardinality = CardinalityMetadata.Optional,
                         ID = EuComGrowId.Random(),
                         TypeCode = CriterionElementType.Requirement,
                         Description = "common.url.description",
@@ -701,7 +701,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
           new[]
           {
             new TenderingCriterionPropertyGroup(){
-                         _cardinality = CardinalityMetadata.OneOrMore,
+                         _cardinality = CardinalityMetadata.Optional,
                          ID = new CriteriaTaxonomyIdentifier("381bea15-9460-49f7-a6d0-15d13059de29"),
                          PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                          TenderingCriterionProperties = new[]
