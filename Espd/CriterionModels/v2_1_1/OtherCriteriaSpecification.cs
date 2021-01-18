@@ -14,7 +14,6 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
 
             OtherCaLots,
             OtherEoSheltered,
-            OtherEoPqs,
             OtherEoGroups,
             OtherEoReliedOnEntities,
             OtherEoNotReliedOnEntities,
