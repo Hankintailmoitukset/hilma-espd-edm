@@ -19,7 +19,7 @@
         }
 
         if(type.IsGuid) {
-            return "= '00000000-0000-0000-0000-000000000000'";  
+            return "= '00000000-0000-0000-0000-000000000000'";
         }
 
         if (type.ClassName() == nameof(String).ToLowerInvariant()) {
