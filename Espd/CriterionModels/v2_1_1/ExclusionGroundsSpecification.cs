@@ -121,14 +121,6 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                     _cardinality = CardinalityMetadata.Optional,
                     ID = EuComGrowId.Random(),
                     TypeCode = CriterionElementType.Requirement,
-                    Description = "contributions.threshold.description",
-                    ValueDataTypeCode = ResponseDataTypeCode.Amount
-                  },
-                  new TenderingCriterionProperty
-                  {
-                    _cardinality = CardinalityMetadata.Optional,
-                    ID = EuComGrowId.Random(),
-                    TypeCode = CriterionElementType.Requirement,
                     Description = "contributions.additionalInformation.description",
                     ValueDataTypeCode = ResponseDataTypeCode.Description
                   }
@@ -291,14 +283,6 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                                         TypeCode = CriterionElementType.Question,
                                         Description = "contributions.pleaseIindicateTheDateOfConvictionOrDecision.description",
                                         ValueDataTypeCode = ResponseDataTypeCode.Date
-                                      },
-                                      new TenderingCriterionProperty
-                                      {
-                                        _cardinality = CardinalityMetadata.ExactlyOne,
-                                        ID = EuComGrowId.Random(),
-                                        TypeCode = CriterionElementType.Question,
-                                        Description = "contributions.inCaseOfAConviction.description",
-                                        ValueDataTypeCode = ResponseDataTypeCode.Period
                                       }
                                     }
                                   }
@@ -353,14 +337,6 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                     PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
                     TenderingCriterionProperties = new[]
                     {
-                      new TenderingCriterionProperty
-                      {
-                        _cardinality = CardinalityMetadata.Optional,
-                        ID = EuComGrowId.Random(),
-                        TypeCode = CriterionElementType.Requirement,
-                        Description = "contributions.threshold.description",
-                        ValueDataTypeCode = ResponseDataTypeCode.Amount
-                      },
                       new TenderingCriterionProperty
                       {
                         _cardinality = CardinalityMetadata.Optional,
@@ -528,14 +504,6 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                                             TypeCode = CriterionElementType.Question,
                                             Description = "contributions.pleaseIindicateTheDateOfConvictionOrDecision.description",
                                             ValueDataTypeCode = ResponseDataTypeCode.Date
-                                          },
-                                          new TenderingCriterionProperty
-                                          {
-                                            _cardinality = CardinalityMetadata.ExactlyOne,
-                                            ID = EuComGrowId.Random(),
-                                            TypeCode = CriterionElementType.Question,
-                                            Description = "contributions.inCaseOfAConviction.description",
-                                            ValueDataTypeCode = ResponseDataTypeCode.Period
                                           }
                                         }
                                       }

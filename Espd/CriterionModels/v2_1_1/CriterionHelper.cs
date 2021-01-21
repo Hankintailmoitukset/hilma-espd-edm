@@ -57,14 +57,6 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                                      TypeCode = CriterionElementType.Question,
                                      Description ="convictions.whoHasBeenConvicted.description",
                                      ValueDataTypeCode = ResponseDataTypeCode.Description
-                                   },
-                                   new TenderingCriterionProperty
-                                   {
-                                     _cardinality = CardinalityMetadata.ExactlyOne,
-                                     ID = EuComGrowId.Random(),
-                                     TypeCode = CriterionElementType.Question,
-                                     Description ="convictions.lengthOfThePeriodOfExclusion.description",
-                                     ValueDataTypeCode = ResponseDataTypeCode.Period
                                    }
                                 },
                                 SubsidiaryTenderingCriterionPropertyGroups = new[]
