@@ -42,15 +42,6 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
          {
           new TenderingCriterion
           {
-            CriterionTypeCode = new CriterionTypeCode("CRITERION.SELECTION.SUITABILITY.PROFESSIONAL_REGISTER_ENROLMENT"),
-            Name = "suitability.enrolmentInRelevantProfessionalRegister.name",
-            Description = new[] {"suitability.enrolmentInRelevantProfessionalRegister.description"},
-            ID = new CriteriaTaxonomyIdentifier("6ee55a59-6adb-4c3a-b89f-e62a7ad7be7f"),
-            Legislations = new Legislation[] { },
-            TenderingCriterionPropertyGroups =  CriterionHelper.SuitabilityRegisterQuestionsGroups
-          },
-          new TenderingCriterion
-          {
             CriterionTypeCode = new CriterionTypeCode("CRITERION.SELECTION.SUITABILITY.TRADE_REGISTER_ENROLMENT"),
             Name = "suitability.tradeRegisterEnrolment.name",
             Description = new[] {"suitability.tradeRegisterEnrolment.description"},
