@@ -61,8 +61,6 @@ namespace Hilma.Espd.Tests
 
             Assert.AreEqual("Payment of taxes", criterion.Name);
             AssertDescription("Has the economic operator breached its obligations relating to the payment of taxes, both in the country in which it is established and in Member State of the contracting authority or contracting entity if other than the country of establishment?",  translatedCriterion.Description);
-            
-            Assert.AreEqual("Threshold", criterion.TenderingCriterionPropertyGroups.First().TenderingCriterionProperties.First().Description);
 
 
             Assert.AreEqual("Your answer?", criterion.TenderingCriterionPropertyGroups.First().SubsidiaryTenderingCriterionPropertyGroups.First().TenderingCriterionProperties.First().Description);
