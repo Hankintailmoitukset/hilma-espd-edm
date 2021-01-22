@@ -114,19 +114,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                 _cardinality = CardinalityMetadata.ExactlyOne,
                 ID = new CriteriaTaxonomyIdentifier("53c9aad8-dc80-48f8-85d9-755c2aab8e95"),
                 PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
-                TenderingCriterionProperties = new[]
-                {
-                  new TenderingCriterionProperty
-                  {
-                    _cardinality = CardinalityMetadata.Optional,
-                    ID = EuComGrowId.Random(),
-                    TypeCode = CriterionElementType.Requirement,
-                    Description = "contributions.additionalInformation.description",
-                    ValueDataTypeCode = ResponseDataTypeCode.Description
-                  }
-
-
-                },
+                TenderingCriterionProperties = new TenderingCriterionProperty[0],
                 SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
                 {
                     new TenderingCriterionPropertyGroup
@@ -335,19 +323,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                     _cardinality = CardinalityMetadata.ExactlyOne,
                     ID = new CriteriaTaxonomyIdentifier("53c9aad8-dc80-48f8-85d9-755c2aab8e95"),
                     PropertyGroupTypeCode = PropertyGroupTypeCode.OnAlways,
-                    TenderingCriterionProperties = new[]
-                    {
-                      new TenderingCriterionProperty
-                      {
-                        _cardinality = CardinalityMetadata.Optional,
-                        ID = EuComGrowId.Random(),
-                        TypeCode = CriterionElementType.Requirement,
-                        Description = "contributions.additionalInformation.description",
-                        ValueDataTypeCode = ResponseDataTypeCode.Description
-                      }
-
-
-                    },
+                    TenderingCriterionProperties = new TenderingCriterionProperty[0],
                     SubsidiaryTenderingCriterionPropertyGroups = new TenderingCriterionPropertyGroup[]
                     {
                         new TenderingCriterionPropertyGroup
