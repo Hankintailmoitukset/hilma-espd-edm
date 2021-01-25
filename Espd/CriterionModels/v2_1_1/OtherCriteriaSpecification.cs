@@ -454,7 +454,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
             new TenderingCriterion()
             {
                  CriterionTypeCode =
-                   new CriterionTypeCode(""),
+                   new CriterionTypeCode("CRITERION.OTHER.EO_DATA.REDUCTION_OF_CANDIDATES"),
                  Name = "eoReductionOfCandidates.question.name",
                  Description = new[] {"eoReductionOfCandidates.question.description"},
                  ID = new CriteriaTaxonomyIdentifier("51c39ba9-0444-4967-afe9-36f753b30175"),
