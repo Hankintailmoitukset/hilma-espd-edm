@@ -139,7 +139,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                 CriterionTypeCode =
                   new CriterionTypeCode("CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.AVERAGE_YEARLY"),
                 Name = "economicFinancialStanding.averageTurnoverYearly.name",
-                Description = new[] {"economicFinancialStanding.specificTurnoverYearly.description"},
+                Description = new[] {"economicFinancialStanding.averageTurnoverYearly.description"},
                 ID = new CriteriaTaxonomyIdentifier("b16cb9fc-6cb7-4585-9302-9533b415cf48"),
                 Legislations = new Legislation[] { },
                 TenderingCriterionPropertyGroups = new[]
