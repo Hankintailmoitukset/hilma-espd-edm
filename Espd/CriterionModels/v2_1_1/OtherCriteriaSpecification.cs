@@ -335,7 +335,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                                     _cardinality = CardinalityMetadata.ExactlyOne,
                                     ID = EuComGrowId.Random(),
                                     TypeCode = CriterionElementType.Question,
-                                    Description = "common.activityOfTheEntity.description",
+                                    Description = "otherEoReliedOnEntities.activityOfTheEntity.description",
                                     ValueDataTypeCode = ResponseDataTypeCode.Code,
                                     CodeListId = CodeListIds.CpvCodes
                                   }
@@ -405,7 +405,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                                     _cardinality = CardinalityMetadata.ExactlyOne,
                                     ID = EuComGrowId.Random(),
                                     TypeCode = CriterionElementType.Question,
-                                    Description = "common.activityOfTheEntity.description",
+                                    Description = "otherEoNotReliedOnEntities.activityOfTheEntity.description",
                                     ValueDataTypeCode = ResponseDataTypeCode.Code,
                                     CodeListId = CodeListIds.CpvCodes
                                   }
