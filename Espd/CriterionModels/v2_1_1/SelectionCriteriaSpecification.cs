@@ -860,7 +860,7 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                                              ID = EuComGrowId.Random(),
                                              TypeCode = CriterionElementType.Requirement,
                                              Description = "otherEconomicOrFinancial.minimumRating.description",
-                                             ValueDataTypeCode = ResponseDataTypeCode.Quantity
+                                             ValueDataTypeCode = ResponseDataTypeCode.Description
                                            },
                                            new TenderingCriterionProperty()
                                            {
@@ -886,10 +886,9 @@ namespace Hilma.Espd.EDM.CriterionModels.v2_1_1
                                                      ID = EuComGrowId.Random(),
                                                      TypeCode = CriterionElementType.Question,
                                                      Description = "otherEconomicOrFinancial.rating.description",
-                                                     ValueDataTypeCode = ResponseDataTypeCode.Quantity
+                                                     ValueDataTypeCode = ResponseDataTypeCode.Description
                                                    }
                                                  }
-
                                              }
                                          }
                                      }
