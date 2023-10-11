@@ -36,9 +36,9 @@ jobs:
       env: 
         PACKAGE_VERSION: '${{steps.gitversion.outputs.semVer}}'
     
-    - uses: actions/setup-dotnet@v1
+    - uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '3.1.200'
+        dotnet-version: 6.x
         source-url: https://api.nuget.org/v3/index.json
       env:
         NUGET_AUTH_TOKEN: ${{secrets.NUGET_AUTH_TOKEN}} # Note, create a secret with this name in Settings
