@@ -59,7 +59,7 @@ jobs:
       run: dotnet pack --no-build --configuration Release -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersion }} $GITHUB_WORKSPACE/UBL/UBL.csproj     
   
     - name: Publish the package to Nuget.org
-      run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg -k ${{secrets.NUGET_AUTH_TOKEN}} -n true --skip-duplicate true
+      run: dotnet nuget push $GITHUB_WORKSPACE/**/*.nupkg -k ${{secrets.NUGET_AUTH_TOKEN}} -n --skip-duplicate
 
     - name: Publish code lists
       run: dotnet run --project $GITHUB_WORKSPACE/ResourceExporter/ResourceExporter.csproj 
