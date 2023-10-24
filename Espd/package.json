@@ -13,7 +13,7 @@
     "tsbuild": "tsc --project tsconfig.json"
   },
   "dependencies": {
-    "@types/lodash.assign": "^4.2.6",
+    "@types/lodash.assign": "^4.2.8",
     "lodash.assign": "^4.2.0"
   }
 }
