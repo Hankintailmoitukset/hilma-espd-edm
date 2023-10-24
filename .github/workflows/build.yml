@@ -45,7 +45,10 @@ jobs:
         source-url: https://api.nuget.org/v3/index.json
       env:
         NUGET_AUTH_TOKEN: ${{secrets.NUGET_AUTH_TOKEN}} # Note, create a secret with this name in Settings
-         
+
+    - name: show GithubWorkSpace
+      run: echo $GITHUB_WORKSPACE
+
     - name: Dotnet build and test
       run: dotnet test --configuration Release $GITHUB_WORKSPACE        
     
