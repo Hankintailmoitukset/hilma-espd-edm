@@ -1,7 +1,4 @@
-﻿
-
-
-import { CodeType } from './CodeType'
+﻿import { CodeType } from './CodeType'
 import { PartyIdentification } from './PartyIdentification'
 import { IdentifierType } from './IdentifierType'
 import { PartyName } from './PartyName'
@@ -10,7 +7,6 @@ import { Contact } from './Contact'
 import { Person } from './Person'
 import { ServiceProviderParty } from './ServiceProviderParty'
 import { PowerOfAttorney } from './PowerOfAttorney'
-
 import assign from 'lodash.assign'
 
 export class Party { 

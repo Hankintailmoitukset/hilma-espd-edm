@@ -1,8 +1,4 @@
-﻿
-
-
-import { CodeContract } from './CodeContract'
-
+﻿import { CodeContract } from './CodeContract'
 import assign from 'lodash.assign'
 
 export class CodeListContract { 

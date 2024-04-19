@@ -1,7 +1,4 @@
-﻿
-
-
-import { IdentifierType } from './IdentifierType'
+﻿import { IdentifierType } from './IdentifierType'
 import { DateType } from './DateType'
 import { TimeType } from './TimeType'
 import { CodeType } from './CodeType'
@@ -13,7 +10,6 @@ import { TenderingCriterion } from './TenderingCriterion'
 import { TenderingCriterionResponse } from './TenderingCriterionResponse'
 import { AdditionalDocumentReference } from './AdditionalDocumentReference'
 import { Evidence } from './Evidence'
-
 import assign from 'lodash.assign'
 
 export class QualificationApplicationResponse { 
@@ -26,7 +22,7 @@ export class QualificationApplicationResponse {
     customizationID?: IdentifierType
     profileID?: IdentifierType
     id?: IdentifierType
-    copyIndicator?: boolean
+    copyIndicator?: boolean | null
     uuid?: IdentifierType
     contractFolderID?: IdentifierType
     issueDate?: DateType

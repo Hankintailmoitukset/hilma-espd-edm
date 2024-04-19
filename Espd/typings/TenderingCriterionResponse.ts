@@ -1,12 +1,8 @@
-﻿
-
-
-import { IdentifierType } from './IdentifierType'
+﻿import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
 import { ResponseValue } from './ResponseValue'
 import { Period } from './Period'
 import { EvidenceSupplied } from './EvidenceSupplied'
-
 import assign from 'lodash.assign'
 
 export class TenderingCriterionResponse { 

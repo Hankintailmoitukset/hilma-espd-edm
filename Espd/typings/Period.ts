@@ -1,8 +1,4 @@
-﻿
-
-
-
-import assign from 'lodash.assign'
+﻿import assign from 'lodash.assign'
 
 export class Period { 
     public constructor(init?:Partial<Period>) {

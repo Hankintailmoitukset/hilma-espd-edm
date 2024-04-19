@@ -1,8 +1,4 @@
-﻿
-
-
-
-import assign from 'lodash.assign'
+﻿import assign from 'lodash.assign'
 
 export class DateType { 
     public constructor(init?:Partial<DateType>) {

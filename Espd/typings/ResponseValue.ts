@@ -1,14 +1,10 @@
-﻿
-
-
-import { IdentifierType } from './IdentifierType'
+﻿import { IdentifierType } from './IdentifierType'
 import { AmountType } from './AmountType'
 import { CodeType } from './CodeType'
 import { DateType } from './DateType'
 import { TimeType } from './TimeType'
 import { MeasureType } from './MeasureType'
 import { QuantityType } from './QuantityType'
-
 import assign from 'lodash.assign'
 
 export class ResponseValue { 
@@ -26,7 +22,7 @@ export class ResponseValue {
     responseID?: IdentifierType
     responseIndicator?: boolean
     responseMeasure?: MeasureType
-    responseNumeric?: number
+    responseNumeric?: number | null
     responseQuantity?: QuantityType
     responseURI?: IdentifierType
 }

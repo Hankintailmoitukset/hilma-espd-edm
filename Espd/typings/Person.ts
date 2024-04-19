@@ -1,10 +1,6 @@
-﻿
-
-
-import { DateType } from './DateType'
+﻿import { DateType } from './DateType'
 import { Contact } from './Contact'
 import { Address } from './Address'
-
 import assign from 'lodash.assign'
 
 export class Person { 

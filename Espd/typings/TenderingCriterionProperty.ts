@@ -1,12 +1,8 @@
-﻿
-
-
-import { IdentifierType } from './IdentifierType'
+﻿import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
 import { AmountType } from './AmountType'
 import { Period } from './Period'
 import { Evidence } from './Evidence'
-
 import assign from 'lodash.assign'
 
 export class TenderingCriterionProperty { 
@@ -26,12 +22,12 @@ export class TenderingCriterionProperty {
     expectedAmount?: AmountType
     expectedID?: IdentifierType
     expectedCode?: CodeType
-    expectedValueNumeric?: number
+    expectedValueNumeric?: number | null
     expectedDescription?: string
     maximumAmount?: AmountType
     minimumAmount?: AmountType
-    maximumValueNumeric?: number
-    minimumValueNumeric?: number
+    maximumValueNumeric?: number | null
+    minimumValueNumeric?: number | null
     translationTypeCode?: string
     certificationLevelDescription?: string[]
     copyQualityTypeCode?: CodeType

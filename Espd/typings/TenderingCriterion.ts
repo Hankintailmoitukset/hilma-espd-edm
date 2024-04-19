@@ -1,12 +1,8 @@
-﻿
-
-
-import { IdentifierType } from './IdentifierType'
+﻿import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
 import { Legislation } from './Legislation'
 import { TenderingCriterionPropertyGroup } from './TenderingCriterionPropertyGroup'
 import { ContractType } from './ContractType'
-
 import assign from 'lodash.assign'
 
 export class TenderingCriterion { 
@@ -20,7 +16,7 @@ export class TenderingCriterion {
     criterionTypeCode?: CodeType
     name?: string
     description?: string[]
-    weightNumeric?: number
+    weightNumeric?: number | null
     evaluationMethodTypeCode?: CodeType
     weightingConsiderationDescription?: string
     subTenderingCriteria?: TenderingCriterion[]

@@ -1,7 +1,4 @@
-﻿
-
-
-import { UBLExtension } from './UBLExtension'
+﻿import { UBLExtension } from './UBLExtension'
 import { IdentifierType } from './IdentifierType'
 import { DateType } from './DateType'
 import { TimeType } from './TimeType'
@@ -11,7 +8,6 @@ import { ProcurementProject } from './ProcurementProject'
 import { ProcurementProjectLot } from './ProcurementProjectLot'
 import { TenderingCriterion } from './TenderingCriterion'
 import { AdditionalDocumentReference } from './AdditionalDocumentReference'
-
 import assign from 'lodash.assign'
 
 export class QualificationApplicationRequest { 
@@ -26,7 +22,7 @@ export class QualificationApplicationRequest {
     profileID?: IdentifierType
     profileExecutionID?: IdentifierType
     id?: IdentifierType
-    copyIndicator?: boolean
+    copyIndicator?: boolean | null
     uuid?: IdentifierType
     contractFolderID?: IdentifierType
     issueDate?: DateType

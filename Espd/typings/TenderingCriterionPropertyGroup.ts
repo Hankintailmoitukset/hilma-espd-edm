@@ -1,10 +1,6 @@
-﻿
-
-
-import { IdentifierType } from './IdentifierType'
+﻿import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
 import { TenderingCriterionProperty } from './TenderingCriterionProperty'
-
 import assign from 'lodash.assign'
 
 export class TenderingCriterionPropertyGroup { 
@@ -14,7 +10,7 @@ export class TenderingCriterionPropertyGroup {
     
     
     _cardinality?: string
-    _maxOccurrence?: number
+    _maxOccurrence?: number | null
     id?: IdentifierType
     description?: string[]
     propertyGroupTypeCode?: CodeType

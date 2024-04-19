@@ -1,8 +1,4 @@
-﻿
-
-
-import { ExternalReference } from './ExternalReference'
-
+﻿import { ExternalReference } from './ExternalReference'
 import assign from 'lodash.assign'
 
 export class Attachment { 

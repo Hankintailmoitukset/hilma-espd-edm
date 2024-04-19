@@ -1,7 +1,4 @@
-﻿
-
-
-import { IdentifierType } from './IdentifierType'
+﻿import { IdentifierType } from './IdentifierType'
 import { DateType } from './DateType'
 import { TimeType } from './TimeType'
 import { CodeType } from './CodeType'
@@ -9,7 +6,6 @@ import { Attachment } from './Attachment'
 import { Period } from './Period'
 import { Party } from './Party'
 import { ResultOfVerification } from './ResultOfVerification'
-
 import assign from 'lodash.assign'
 
 export class DocumentReference { 

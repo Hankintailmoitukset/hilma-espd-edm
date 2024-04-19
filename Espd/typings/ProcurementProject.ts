@@ -1,9 +1,5 @@
-﻿
-
-
-import { CodeType } from './CodeType'
+﻿import { CodeType } from './CodeType'
 import { CommodityClassification } from './CommodityClassification'
-
 import assign from 'lodash.assign'
 
 export class ProcurementProject { 

@@ -1,9 +1,5 @@
-﻿
-
-
-import { CodeType } from './CodeType'
+﻿import { CodeType } from './CodeType'
 import { MeasureType } from './MeasureType'
-
 import assign from 'lodash.assign'
 
 export class LocationCoordinate { 

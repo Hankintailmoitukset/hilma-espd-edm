@@ -1,12 +1,8 @@
-﻿
-
-
-import { IdentifierType } from './IdentifierType'
+﻿import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
 import { DateType } from './DateType'
 import { TimeType } from './TimeType'
 import { Attachment } from './Attachment'
-
 import assign from 'lodash.assign'
 
 export class AdditionalDocumentReference { 

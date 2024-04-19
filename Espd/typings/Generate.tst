@@ -73,11 +73,7 @@
         ImportedTypes.Clear();
         return string.Empty;
     }
-}
-$Classes([Contract])[
-$Name[$RegisterTypeName]
-$Properties[$Type[$ImportType]]
-import assign from 'lodash.assign'
+}$Classes([Contract])[$Name[$RegisterTypeName]$Properties[$Type[$ImportType]]import assign from 'lodash.assign'
 
 export class $Name { 
     public constructor(init?:Partial<$Name>) {

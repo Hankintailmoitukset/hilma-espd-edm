@@ -1,8 +1,4 @@
-﻿
-
-
-import { CodeType } from './CodeType'
-
+﻿import { CodeType } from './CodeType'
 import assign from 'lodash.assign'
 
 export class ContractingPartyType { 

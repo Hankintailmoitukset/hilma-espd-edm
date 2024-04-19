@@ -1,8 +1,4 @@
-﻿
-
-
-import { Party } from './Party'
-
+﻿import { Party } from './Party'
 import assign from 'lodash.assign'
 
 export class PowerOfAttorney { 

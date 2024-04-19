@@ -1,9 +1,5 @@
-﻿
-
-
-import { IdentifierType } from './IdentifierType'
+﻿import { IdentifierType } from './IdentifierType'
 import { Party } from './Party'
-
 import assign from 'lodash.assign'
 
 export class ContractingParty { 

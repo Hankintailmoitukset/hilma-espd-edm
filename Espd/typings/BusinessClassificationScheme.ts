@@ -1,9 +1,5 @@
-﻿
-
-
-import { IdentifierType } from './IdentifierType'
+﻿import { IdentifierType } from './IdentifierType'
 import { ClassificationCategory } from './ClassificationCategory'
-
 import assign from 'lodash.assign'
 
 export class BusinessClassificationScheme { 

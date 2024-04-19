@@ -1,10 +1,6 @@
-﻿
-
-
-import { IdentifierType } from './IdentifierType'
+﻿import { IdentifierType } from './IdentifierType'
 import { Language } from './Language'
 import { Address } from './Address'
-
 import assign from 'lodash.assign'
 
 export class Legislation { 

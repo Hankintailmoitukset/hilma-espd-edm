@@ -1,11 +1,7 @@
-﻿
-
-
-import { IdentifierType } from './IdentifierType'
+﻿import { IdentifierType } from './IdentifierType'
 import { DateType } from './DateType'
 import { TimeType } from './TimeType'
 import { CodeType } from './CodeType'
-
 import assign from 'lodash.assign'
 
 export class ExternalReference { 
