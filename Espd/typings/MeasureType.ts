@@ -1,13 +1,17 @@
 ﻿import assign from 'lodash.assign'
 
-export class MeasureType { 
-    public constructor(init?:Partial<MeasureType>) {
-        assign(this, init)
-    } 
-    
-    value?: number
-    
-    unitCode?: string
-    unitCodeListID?: string
-    unitCodeListAgencyName?: string
+interface RequiredArgsMeasureType {
+  unitCode: string
+}
+
+export class MeasureType {
+  public constructor(init?:Partial<MeasureType> & RequiredArgsMeasureType) {
+    assign(this, init)
+  }
+  public value?: number
+  
+  public unitCode!: string
+  public unitCodeListID?: string
+  public unitCodeListAgencyName?: string
+  
 }

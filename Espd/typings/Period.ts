@@ -1,11 +1,13 @@
 ﻿import assign from 'lodash.assign'
 
-export class Period { 
-    public constructor(init?:Partial<Period>) {
-        assign(this, init)
-    } 
-    
-    
-    startDate?: Date
-    endDate?: Date
+interface RequiredArgsPeriod {
+}
+
+export class Period {
+  public constructor(init?:Partial<Period> & RequiredArgsPeriod) {
+    assign(this, init)
+  }
+  public startDate?: Date
+  public endDate?: Date
+  
 }

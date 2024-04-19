@@ -12,34 +12,48 @@ import { AdditionalDocumentReference } from './AdditionalDocumentReference'
 import { Evidence } from './Evidence'
 import assign from 'lodash.assign'
 
-export class QualificationApplicationResponse { 
-    public constructor(init?:Partial<QualificationApplicationResponse>) {
-        assign(this, init)
-    } 
-    
-    
-    ublVersionID?: IdentifierType
-    customizationID?: IdentifierType
-    profileID?: IdentifierType
-    id?: IdentifierType
-    copyIndicator?: boolean | null
-    uuid?: IdentifierType
-    contractFolderID?: IdentifierType
-    issueDate?: DateType
-    issueTime?: TimeType
-    economicOperatorGroupName?: CodeType
-    versionID?: IdentifierType
-    previousVersionID?: IdentifierType
-    procedureCode?: CodeType
-    qualificationApplicationTypeCode?: CodeType
-    weightScoringMethodologyNote?: string[]
-    weightingTypeCode?: CodeType
-    contractingParty?: ContractingParty
-    economicOperatorParty?: EconomicOperatorParty
-    procurementProject?: ProcurementProject
-    procurementProjectLots?: ProcurementProjectLot[]
-    tenderingCriteria?: TenderingCriterion[]
-    tenderingCriterionResponses?: TenderingCriterionResponse[]
-    additionalDocumentReferences?: AdditionalDocumentReference[]
-    evidences?: Evidence[]
+interface RequiredArgsQualificationApplicationResponse {
+  ublVersionID: IdentifierType
+  customizationID: IdentifierType
+  profileID: IdentifierType
+  id: IdentifierType
+  uuid: IdentifierType
+  contractFolderID: IdentifierType
+  issueDate: DateType
+  qualificationApplicationTypeCode: CodeType
+  contractingParty: ContractingParty
+  procurementProject: ProcurementProject
+  procurementProjectLots: ProcurementProjectLot[]
+  tenderingCriteria: TenderingCriterion[]
+}
+
+export class QualificationApplicationResponse {
+  public constructor(init?:Partial<QualificationApplicationResponse> & RequiredArgsQualificationApplicationResponse) {
+    assign(this, init)
+  }
+  public ublVersionID!: IdentifierType
+  public customizationID!: IdentifierType
+  public profileID!: IdentifierType
+  public id!: IdentifierType
+  public copyIndicator?: boolean | null
+  public uuid!: IdentifierType
+  public contractFolderID!: IdentifierType
+  public issueDate!: DateType
+  public issueTime?: TimeType
+  public economicOperatorGroupName?: CodeType
+  public versionID?: IdentifierType
+  public previousVersionID?: IdentifierType
+  public procedureCode?: CodeType
+  public qualificationApplicationTypeCode!: CodeType
+  public weightScoringMethodologyNote?: string[]
+  public weightingTypeCode?: CodeType
+  public contractingParty!: ContractingParty
+  public economicOperatorParty?: EconomicOperatorParty
+  public procurementProject!: ProcurementProject
+  public procurementProjectLots!: ProcurementProjectLot[]
+  public tenderingCriteria!: TenderingCriterion[]
+  public tenderingCriterionResponses?: TenderingCriterionResponse[]
+  public additionalDocumentReferences?: AdditionalDocumentReference[]
+  public evidences?: Evidence[]
+  
 }

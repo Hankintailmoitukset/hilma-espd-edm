@@ -1,10 +1,12 @@
 ﻿import assign from 'lodash.assign'
 
-export class DecimalType { 
-    public constructor(init?:Partial<DecimalType>) {
-        assign(this, init)
-    } 
-    
-    
-    value?: number
+interface RequiredArgsDecimalType {
+}
+
+export class DecimalType {
+  public constructor(init?:Partial<DecimalType> & RequiredArgsDecimalType) {
+    assign(this, init)
+  }
+  public value?: number
+  
 }

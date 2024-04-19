@@ -5,16 +5,19 @@ import { Period } from './Period'
 import { EvidenceSupplied } from './EvidenceSupplied'
 import assign from 'lodash.assign'
 
-export class TenderingCriterionResponse { 
-    public constructor(init?:Partial<TenderingCriterionResponse>) {
-        assign(this, init)
-    } 
-    
-    
-    id?: IdentifierType
-    validatedCriterionPropertyID?: IdentifierType
-    confidentialityLevelCode?: CodeType
-    responseValue?: ResponseValue[]
-    applicablePeriod?: Period
-    evidenceSupplied?: EvidenceSupplied
+interface RequiredArgsTenderingCriterionResponse {
+  validatedCriterionPropertyID: IdentifierType
+}
+
+export class TenderingCriterionResponse {
+  public constructor(init?:Partial<TenderingCriterionResponse> & RequiredArgsTenderingCriterionResponse) {
+    assign(this, init)
+  }
+  public id?: IdentifierType
+  public validatedCriterionPropertyID!: IdentifierType
+  public confidentialityLevelCode?: CodeType
+  public responseValue?: ResponseValue[]
+  public applicablePeriod?: Period
+  public evidenceSupplied?: EvidenceSupplied
+  
 }

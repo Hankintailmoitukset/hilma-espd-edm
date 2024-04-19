@@ -86,14 +86,8 @@
     <None Update="typings\CountryIdentificationCodeType.ts">
       <CustomToolNamespace>..\UBL\QualifiedDataType\CountryIdentificationCodeType.cs</CustomToolNamespace>
     </None>
-    <None Update="typings\CountryType.ts">
-      <CustomToolNamespace>..\UBL\CommonAggregateComponents\CountryType.cs</CustomToolNamespace>
-    </None>
     <None Update="typings\CurrencyCodeType.ts">
       <CustomToolNamespace>..\UBL\QualifiedDataType\CurrencyCodeType.cs</CustomToolNamespace>
-    </None>
-    <None Update="typings\DateTimeType.ts">
-      <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\DateTimeType.cs</CustomToolNamespace>
     </None>
     <None Update="typings\DateType.ts">
       <CustomToolNamespace>..\UBL\UnqualifiedDataTypes\DateType.cs</CustomToolNamespace>

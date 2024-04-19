@@ -9,21 +9,23 @@ import { ServiceProviderParty } from './ServiceProviderParty'
 import { PowerOfAttorney } from './PowerOfAttorney'
 import assign from 'lodash.assign'
 
-export class Party { 
-    public constructor(init?:Partial<Party>) {
-        assign(this, init)
-    } 
-    
-    
-    industryClassificationCode?: CodeType
-    partyIdentification?: PartyIdentification
-    websiteURI?: IdentifierType
-    endpointID?: IdentifierType
-    partyName?: PartyName
-    postalAddress?: Address
-    contact?: Contact
-    person?: Person
-    serviceProviderParty?: ServiceProviderParty
-    powerOfAttorneys?: PowerOfAttorney[]
-    agentParty?: Party
+interface RequiredArgsParty {
+}
+
+export class Party {
+  public constructor(init?:Partial<Party> & RequiredArgsParty) {
+    assign(this, init)
+  }
+  public industryClassificationCode?: CodeType
+  public partyIdentification?: PartyIdentification
+  public websiteURI?: IdentifierType
+  public endpointID?: IdentifierType
+  public partyName?: PartyName
+  public postalAddress?: Address
+  public contact?: Contact
+  public person?: Person
+  public serviceProviderParty?: ServiceProviderParty
+  public powerOfAttorneys?: PowerOfAttorney[]
+  public agentParty?: Party
+  
 }

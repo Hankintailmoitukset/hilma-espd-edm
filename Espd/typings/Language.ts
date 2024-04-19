@@ -2,13 +2,16 @@
 import { CodeType } from './CodeType'
 import assign from 'lodash.assign'
 
-export class Language { 
-    public constructor(init?:Partial<Language>) {
-        assign(this, init)
-    } 
-    
-    
-    id?: IdentifierType
-    name?: string
-    localeCode?: CodeType
+interface RequiredArgsLanguage {
+  id: IdentifierType
+}
+
+export class Language {
+  public constructor(init?:Partial<Language> & RequiredArgsLanguage) {
+    assign(this, init)
+  }
+  public id!: IdentifierType
+  public name?: string
+  public localeCode?: CodeType
+  
 }

@@ -12,41 +12,28 @@
     
         ImportedTypes.Add( name );
     }
+
+    string GenerateProperties(Property prop) {
+        var propType = prop.Type;
+        var propTypeName = propType.Name;
+        string propName = prop.name;
+        bool isRequired = prop.Attributes.Any(x => x.Name == "Required");
+
+        return $"\n  public {propName}{(isRequired ? "!" : "?")}: {propTypeName}";
+    }
     
-    string ConvertDefault(Type type) {
-        if (type.IsEnumerable) {
-            return "= []";
+    string GenerateRequiredInterfaceProperties(Property prop) {
+        bool isRequired = prop.Attributes.Any(x => x.Name == "Required");
+
+        if (!isRequired) {
+            return string.Empty;
         }
 
-        if(type.IsGuid) {
-            return "= '00000000-0000-0000-0000-000000000000'";
-        }
+        var propType = prop.Type;
+        var propTypeName = propType.Name;
+        string propName = prop.name;
 
-        if (type.ClassName() == nameof(String).ToLowerInvariant()) {
-            return "= ''";
-        }
-
-        if (type.Name == nameof(Boolean).ToLowerInvariant()) {
-            return "= false";
-        }
-
-        if (type.IsNullable) {
-            return "| null = null";
-        }
-
-        if (type.ClassName() == "number") {
-            return "= 0";
-        }
-
-        if (type.Attributes.Any(x => x.Name == "Contract")) {
-            return $"= new {type.Name}()";
-        }
-
-        if (type.Attributes.Any(x => x.Name == "EnumContract")) {
-            return $"= 0";
-        }
-          
-        return "| undefined";
+        return $"\n  {propName}: {propTypeName}";
     }
 
     string ImportType(Type type) {
@@ -75,12 +62,13 @@
     }
 }$Classes([Contract])[$Name[$RegisterTypeName]$Properties[$Type[$ImportType]]import assign from 'lodash.assign'
 
-export class $Name { 
-    public constructor(init?:Partial<$Name>) {
-        assign(this, init)
-    } 
-    $BaseClass[$Properties[
-    $name?: $Type]]
-    $Properties[
-    $name?: $Type]
-}$Name[$Clear]]
+interface RequiredArgs$Name {$Properties[$GenerateRequiredInterfaceProperties]
+}
+
+export class $Name {
+  public constructor(init?:Partial<$Name> & RequiredArgs$Name) {
+    assign(this, init)
+  }$BaseClass[$Properties[$GenerateProperties]
+  ]$Properties[$GenerateProperties]
+  ]
+}$Name[$Clear]

@@ -1,10 +1,13 @@
 ﻿import assign from 'lodash.assign'
 
-export class StringType { 
-    public constructor(init?:Partial<StringType>) {
-        assign(this, init)
-    } 
-    
-    
-    value?: string
+interface RequiredArgsStringType {
+  value: string
+}
+
+export class StringType {
+  public constructor(init?:Partial<StringType> & RequiredArgsStringType) {
+    assign(this, init)
+  }
+  public value!: string
+  
 }

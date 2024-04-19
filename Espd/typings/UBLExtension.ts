@@ -2,19 +2,21 @@
 import { CodeType } from './CodeType'
 import assign from 'lodash.assign'
 
-export class UBLExtension { 
-    public constructor(init?:Partial<UBLExtension>) {
-        assign(this, init)
-    } 
-    
-    
-    id?: IdentifierType
-    name?: string
-    extensionAgencyID?: IdentifierType
-    extensionAgencyName?: string
-    extensionVersionID?: IdentifierType
-    extensionAgencyURI?: IdentifierType
-    extensionReasonCode?: CodeType
-    extensionReason?: string
-    extensionContent?: any
+interface RequiredArgsUBLExtension {
+}
+
+export class UBLExtension {
+  public constructor(init?:Partial<UBLExtension> & RequiredArgsUBLExtension) {
+    assign(this, init)
+  }
+  public id?: IdentifierType
+  public name?: string
+  public extensionAgencyID?: IdentifierType
+  public extensionAgencyName?: string
+  public extensionVersionID?: IdentifierType
+  public extensionAgencyURI?: IdentifierType
+  public extensionReasonCode?: CodeType
+  public extensionReason?: string
+  public extensionContent?: any
+  
 }

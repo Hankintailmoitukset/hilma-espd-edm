@@ -7,6 +7,6 @@ ${
     }
 }
 $Enums([EnumContract])[export enum $Name {
-    $Values[
-    $Name = $Value][,]
+  $Values[
+  $Name = $Value][,]
 }]

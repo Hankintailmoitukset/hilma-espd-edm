@@ -1,12 +1,14 @@
 ﻿import assign from 'lodash.assign'
 
-export class TimeType { 
-    public constructor(init?:Partial<TimeType>) {
-        assign(this, init)
-    } 
-    
-    
-    hour?: number
-    minute?: number
-    second?: number
+interface RequiredArgsTimeType {
+}
+
+export class TimeType {
+  public constructor(init?:Partial<TimeType> & RequiredArgsTimeType) {
+    assign(this, init)
+  }
+  public hour?: number
+  public minute?: number
+  public second?: number
+  
 }

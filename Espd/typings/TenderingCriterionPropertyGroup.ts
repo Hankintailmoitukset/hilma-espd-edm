@@ -3,18 +3,22 @@ import { CodeType } from './CodeType'
 import { TenderingCriterionProperty } from './TenderingCriterionProperty'
 import assign from 'lodash.assign'
 
-export class TenderingCriterionPropertyGroup { 
-    public constructor(init?:Partial<TenderingCriterionPropertyGroup>) {
-        assign(this, init)
-    } 
-    
-    
-    _cardinality?: string
-    _maxOccurrence?: number | null
-    id?: IdentifierType
-    description?: string[]
-    propertyGroupTypeCode?: CodeType
-    fulfilmentIndicatorTypeCode?: CodeType
-    tenderingCriterionProperties?: TenderingCriterionProperty[]
-    subsidiaryTenderingCriterionPropertyGroups?: TenderingCriterionPropertyGroup[]
+interface RequiredArgsTenderingCriterionPropertyGroup {
+  propertyGroupTypeCode: CodeType
+  tenderingCriterionProperties: TenderingCriterionProperty[]
+}
+
+export class TenderingCriterionPropertyGroup {
+  public constructor(init?:Partial<TenderingCriterionPropertyGroup> & RequiredArgsTenderingCriterionPropertyGroup) {
+    assign(this, init)
+  }
+  public _cardinality?: string
+  public _maxOccurrence?: number | null
+  public id?: IdentifierType
+  public description?: string[]
+  public propertyGroupTypeCode!: CodeType
+  public fulfilmentIndicatorTypeCode?: CodeType
+  public tenderingCriterionProperties!: TenderingCriterionProperty[]
+  public subsidiaryTenderingCriterionPropertyGroups?: TenderingCriterionPropertyGroup[]
+  
 }

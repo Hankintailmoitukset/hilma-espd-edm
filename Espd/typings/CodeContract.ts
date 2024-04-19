@@ -1,11 +1,13 @@
 ﻿import assign from 'lodash.assign'
 
-export class CodeContract { 
-    public constructor(init?:Partial<CodeContract>) {
-        assign(this, init)
-    } 
-    
-    
-    code?: string
-    name?: string
+interface RequiredArgsCodeContract {
+}
+
+export class CodeContract {
+  public constructor(init?:Partial<CodeContract> & RequiredArgsCodeContract) {
+    assign(this, init)
+  }
+  public code?: string
+  public name?: string
+  
 }

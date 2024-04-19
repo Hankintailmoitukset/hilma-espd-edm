@@ -1,13 +1,16 @@
 ﻿import assign from 'lodash.assign'
 
-export class QuantityType { 
-    public constructor(init?:Partial<QuantityType>) {
-        assign(this, init)
-    } 
-    
-    value?: number
-    
-    unitCode?: string
-    unitCodeListID?: string
-    unitCodeListAgencyName?: string
+interface RequiredArgsQuantityType {
+}
+
+export class QuantityType {
+  public constructor(init?:Partial<QuantityType> & RequiredArgsQuantityType) {
+    assign(this, init)
+  }
+  public value?: number
+  
+  public unitCode?: string
+  public unitCodeListID?: string
+  public unitCodeListAgencyName?: string
+  
 }

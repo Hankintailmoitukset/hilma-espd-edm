@@ -2,18 +2,20 @@
 import { MeasureType } from './MeasureType'
 import assign from 'lodash.assign'
 
-export class LocationCoordinate { 
-    public constructor(init?:Partial<LocationCoordinate>) {
-        assign(this, init)
-    } 
-    
-    
-    coordinateSystemCode?: CodeType
-    latitudeDegreesMeasure?: MeasureType
-    latitudeMinutesMeasure?: MeasureType
-    latitudeDirectionCode?: CodeType
-    longitudeDegreesMeasure?: MeasureType
-    longitudeMinutesMeasure?: MeasureType
-    longitudeDirectionCode?: CodeType
-    altitudeMeasure?: MeasureType
+interface RequiredArgsLocationCoordinate {
+}
+
+export class LocationCoordinate {
+  public constructor(init?:Partial<LocationCoordinate> & RequiredArgsLocationCoordinate) {
+    assign(this, init)
+  }
+  public coordinateSystemCode?: CodeType
+  public latitudeDegreesMeasure?: MeasureType
+  public latitudeMinutesMeasure?: MeasureType
+  public latitudeDirectionCode?: CodeType
+  public longitudeDegreesMeasure?: MeasureType
+  public longitudeMinutesMeasure?: MeasureType
+  public longitudeDirectionCode?: CodeType
+  public altitudeMeasure?: MeasureType
+  
 }

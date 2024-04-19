@@ -3,16 +3,18 @@ import { Contact } from './Contact'
 import { Address } from './Address'
 import assign from 'lodash.assign'
 
-export class Person { 
-    public constructor(init?:Partial<Person>) {
-        assign(this, init)
-    } 
-    
-    
-    firstName?: string
-    familyName?: string
-    birthDate?: DateType
-    birthPlaceName?: string
-    contact?: Contact
-    residenceAddress?: Address
+interface RequiredArgsPerson {
+}
+
+export class Person {
+  public constructor(init?:Partial<Person> & RequiredArgsPerson) {
+    assign(this, init)
+  }
+  public firstName?: string
+  public familyName?: string
+  public birthDate?: DateType
+  public birthPlaceName?: string
+  public contact?: Contact
+  public residenceAddress?: Address
+  
 }
