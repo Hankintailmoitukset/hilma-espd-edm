@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <AssemblyName>Hilma.UBL</AssemblyName>
     <RootNamespace>Hilma.UBL</RootNamespace>
     <Version>0.6.0</Version>
@@ -10,10 +10,6 @@
     <PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
     <Description>Open project for EU procurements related UBL data model</Description>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
-  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="CommonBasicComponents\" />

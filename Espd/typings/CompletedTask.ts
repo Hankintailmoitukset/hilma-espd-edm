@@ -1,14 +1,12 @@
-﻿
+﻿import assign from 'lodash.assign'
 
+interface RequiredArgsCompletedTask {
+}
 
-
-import assign from 'lodash.assign'
-
-export class CompletedTask { 
-    public constructor(init?:Partial<CompletedTask>) {
-        assign(this, init)
-    } 
-    
-    
-    description?: string
+export class CompletedTask {
+  public constructor(init?:Partial<CompletedTask> & RequiredArgsCompletedTask) {
+    assign(this, init)
+  }
+  public description?: string
+  
 }

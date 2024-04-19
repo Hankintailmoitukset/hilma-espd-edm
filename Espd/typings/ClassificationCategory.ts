@@ -1,18 +1,16 @@
-﻿
-
-
-import { CodeType } from './CodeType'
-
+﻿import { CodeType } from './CodeType'
 import assign from 'lodash.assign'
 
-export class ClassificationCategory { 
-    public constructor(init?:Partial<ClassificationCategory>) {
-        assign(this, init)
-    } 
-    
-    
-    name?: string
-    codeValue?: CodeType
-    description?: string[]
-    categorizesClassificationCategories?: ClassificationCategory[]
+interface RequiredArgsClassificationCategory {
+}
+
+export class ClassificationCategory {
+  public constructor(init?:Partial<ClassificationCategory> & RequiredArgsClassificationCategory) {
+    assign(this, init)
+  }
+  public name?: string
+  public codeValue?: CodeType
+  public description?: string[]
+  public categorizesClassificationCategories?: ClassificationCategory[]
+  
 }

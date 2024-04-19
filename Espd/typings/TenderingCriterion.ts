@@ -1,32 +1,35 @@
-﻿
-
-
-import { IdentifierType } from './IdentifierType'
+﻿import { IdentifierType } from './IdentifierType'
 import { CodeType } from './CodeType'
 import { Legislation } from './Legislation'
 import { TenderingCriterionPropertyGroup } from './TenderingCriterionPropertyGroup'
 import { ContractType } from './ContractType'
-
 import assign from 'lodash.assign'
 
-export class TenderingCriterion { 
-    public constructor(init?:Partial<TenderingCriterion>) {
-        assign(this, init)
-    } 
-    
-    
-    _mandatory?: boolean
-    id?: IdentifierType
-    criterionTypeCode?: CodeType
-    name?: string
-    description?: string[]
-    weightNumeric?: number
-    evaluationMethodTypeCode?: CodeType
-    weightingConsiderationDescription?: string
-    subTenderingCriteria?: TenderingCriterion[]
-    legislations?: Legislation[]
-    tenderingCriterionPropertyGroups?: TenderingCriterionPropertyGroup[]
-    fulfilmentIndicator?: boolean
-    fulfilmentIndicatorTypeCode?: string
-    applicableContractType?: ContractType
+interface RequiredArgsTenderingCriterion {
+  id: IdentifierType
+  criterionTypeCode: CodeType
+  name: string
+  description: string[]
+  tenderingCriterionPropertyGroups: TenderingCriterionPropertyGroup[]
+}
+
+export class TenderingCriterion {
+  public constructor(init?:Partial<TenderingCriterion> & RequiredArgsTenderingCriterion) {
+    assign(this, init)
+  }
+  public _mandatory?: boolean
+  public id!: IdentifierType
+  public criterionTypeCode!: CodeType
+  public name!: string
+  public description!: string[]
+  public weightNumeric?: number | null
+  public evaluationMethodTypeCode?: CodeType
+  public weightingConsiderationDescription?: string
+  public subTenderingCriteria?: TenderingCriterion[]
+  public legislations?: Legislation[]
+  public tenderingCriterionPropertyGroups!: TenderingCriterionPropertyGroup[]
+  public fulfilmentIndicator?: boolean
+  public fulfilmentIndicatorTypeCode?: string
+  public applicableContractType?: ContractType
+  
 }

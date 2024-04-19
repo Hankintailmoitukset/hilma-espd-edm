@@ -1,19 +1,17 @@
-﻿
-
-
-import { CodeType } from './CodeType'
+﻿import { CodeType } from './CodeType'
 import { CommodityClassification } from './CommodityClassification'
-
 import assign from 'lodash.assign'
 
-export class ProcurementProject { 
-    public constructor(init?:Partial<ProcurementProject>) {
-        assign(this, init)
-    } 
-    
-    
-    name?: string
-    description?: string
-    procurementTypeCode?: CodeType
-    mainCommodityClassifications?: CommodityClassification[]
+interface RequiredArgsProcurementProject {
+}
+
+export class ProcurementProject {
+  public constructor(init?:Partial<ProcurementProject> & RequiredArgsProcurementProject) {
+    assign(this, init)
+  }
+  public name?: string
+  public description?: string
+  public procurementTypeCode?: CodeType
+  public mainCommodityClassifications?: CommodityClassification[]
+  
 }

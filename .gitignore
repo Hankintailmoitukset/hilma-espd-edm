@@ -351,3 +351,4 @@ MigrationBackup/
 Espd/lib
 test
 *.js
+.idea

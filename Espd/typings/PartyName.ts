@@ -1,14 +1,12 @@
-﻿
+﻿import assign from 'lodash.assign'
 
+interface RequiredArgsPartyName {
+}
 
-
-import assign from 'lodash.assign'
-
-export class PartyName { 
-    public constructor(init?:Partial<PartyName>) {
-        assign(this, init)
-    } 
-    
-    
-    name?: string
+export class PartyName {
+  public constructor(init?:Partial<PartyName> & RequiredArgsPartyName) {
+    assign(this, init)
+  }
+  public name?: string
+  
 }

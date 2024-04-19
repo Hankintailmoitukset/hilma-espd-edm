@@ -1,15 +1,13 @@
-﻿
-
-
-import { CodeType } from './CodeType'
-
+﻿import { CodeType } from './CodeType'
 import assign from 'lodash.assign'
 
-export class CommodityClassification { 
-    public constructor(init?:Partial<CommodityClassification>) {
-        assign(this, init)
-    } 
-    
-    
-    itemClassificationCode?: CodeType
+interface RequiredArgsCommodityClassification {
+}
+
+export class CommodityClassification {
+  public constructor(init?:Partial<CommodityClassification> & RequiredArgsCommodityClassification) {
+    assign(this, init)
+  }
+  public itemClassificationCode?: CodeType
+  
 }

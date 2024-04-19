@@ -1,17 +1,15 @@
-﻿
+﻿import assign from 'lodash.assign'
 
+interface RequiredArgsContact {
+}
 
-
-import assign from 'lodash.assign'
-
-export class Contact { 
-    public constructor(init?:Partial<Contact>) {
-        assign(this, init)
-    } 
-    
-    
-    name?: string
-    telephone?: string
-    telefax?: string
-    electronicMail?: string
+export class Contact {
+  public constructor(init?:Partial<Contact> & RequiredArgsContact) {
+    assign(this, init)
+  }
+  public name?: string
+  public telephone?: string
+  public telefax?: string
+  public electronicMail?: string
+  
 }

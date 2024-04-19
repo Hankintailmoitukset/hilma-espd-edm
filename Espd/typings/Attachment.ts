@@ -1,17 +1,15 @@
-﻿
-
-
-import { ExternalReference } from './ExternalReference'
-
+﻿import { ExternalReference } from './ExternalReference'
 import assign from 'lodash.assign'
 
-export class Attachment { 
-    public constructor(init?:Partial<Attachment>) {
-        assign(this, init)
-    } 
-    
-    
-    embeddedDocumentBinaryObject?: number[]
-    embeddedDocument?: string
-    externalReference?: ExternalReference
+interface RequiredArgsAttachment {
+}
+
+export class Attachment {
+  public constructor(init?:Partial<Attachment> & RequiredArgsAttachment) {
+    assign(this, init)
+  }
+  public embeddedDocumentBinaryObject?: number[]
+  public embeddedDocument?: string
+  public externalReference?: ExternalReference
+  
 }

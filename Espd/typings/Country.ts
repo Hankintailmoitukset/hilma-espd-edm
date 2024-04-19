@@ -1,16 +1,15 @@
-﻿
-
-
-import { CodeType } from './CodeType'
-
+﻿import { CodeType } from './CodeType'
 import assign from 'lodash.assign'
 
-export class Country { 
-    public constructor(init?:Partial<Country>) {
-        assign(this, init)
-    } 
-    
-    
-    identificationCode?: CodeType
-    name?: string
+interface RequiredArgsCountry {
+  identificationCode: CodeType
+}
+
+export class Country {
+  public constructor(init?:Partial<Country> & RequiredArgsCountry) {
+    assign(this, init)
+  }
+  public identificationCode!: CodeType
+  public name?: string
+  
 }

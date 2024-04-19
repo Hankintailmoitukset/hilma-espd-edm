@@ -1,16 +1,14 @@
-﻿
-
-
-import { CodeType } from './CodeType'
-
+﻿import { CodeType } from './CodeType'
 import assign from 'lodash.assign'
 
-export class EconomicOperatorRole { 
-    public constructor(init?:Partial<EconomicOperatorRole>) {
-        assign(this, init)
-    } 
-    
-    
-    roleCode?: CodeType
-    roleDescription?: string[]
+interface RequiredArgsEconomicOperatorRole {
+}
+
+export class EconomicOperatorRole {
+  public constructor(init?:Partial<EconomicOperatorRole> & RequiredArgsEconomicOperatorRole) {
+    assign(this, init)
+  }
+  public roleCode?: CodeType
+  public roleDescription?: string[]
+  
 }

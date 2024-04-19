@@ -1,14 +1,13 @@
-﻿
+﻿import assign from 'lodash.assign'
 
+interface RequiredArgsNormalizedString {
+  value: string
+}
 
-
-import assign from 'lodash.assign'
-
-export class NormalizedString { 
-    public constructor(init?:Partial<NormalizedString>) {
-        assign(this, init)
-    } 
-    
-    
-    value?: string
+export class NormalizedString {
+  public constructor(init?:Partial<NormalizedString> & RequiredArgsNormalizedString) {
+    assign(this, init)
+  }
+  public value!: string
+  
 }
