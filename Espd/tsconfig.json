@@ -1,6 +1,6 @@
 {
   "generationSpecs": [ "TypingsGenerationSpec" ],
-  "assemblies": [ "bin/Debug/net6.0/Hilma.Espd.EDM.dll", "bin/Debug/net6.0/Hilma.UBL.dll" ],
+  "assemblies": [ "bin/Debug/net8.0/Hilma.Espd.EDM.dll", "bin/Debug/net8.0/Hilma.UBL.dll" ],
   "outputPath": "typings/",
   "clearOutputDirectory": true,
   "compilerOptions": {
