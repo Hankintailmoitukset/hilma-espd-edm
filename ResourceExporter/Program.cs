@@ -14,7 +14,9 @@ namespace ResourceExporter
 {
   class Program
   {
-    const string RootUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.1/docs/src/main/asciidoc/dist/cl/gc/{0}.gc";
+    //URL updated, old pointed to raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.1/docs/src/main/asciidoc/dist/cl/gc/{0}.gc which is a different repo.
+    //regenerating from the new url removes RoleType "Sole contractor / Lead entity" for some reason. 
+    const string RootUrl = "https://raw.githubusercontent.com/OP-TED/ESPD-EDM/refs/tags/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/cl/gc/{0}.gc";
    
     static void Main(string[] args)
     {
