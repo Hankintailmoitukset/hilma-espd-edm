@@ -14,7 +14,9 @@ namespace ResourceExporter
 {
   class Program
   {
-    const string RootUrl = "https://raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.1/docs/src/main/asciidoc/dist/cl/gc/{0}.gc";
+        //URL updated, old pointed to raw.githubusercontent.com/ESPD/ESPD-EDM/2.1.1/docs/src/main/asciidoc/dist/cl/gc/EORoleType.gc which is a different repo.
+        //regenerating from the new url removes RoleType "Sole contractor / Lead entity" for some reason. 
+        const string RootUrl = "https://raw.githubusercontent.com/OP-TED/ESPD-EDM/refs/tags/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/cl/gc/{0}.gc";
    
     static void Main(string[] args)
     {
@@ -126,8 +128,10 @@ namespace ResourceExporter
       foreach (var row in codeList.Elements("Row"))
       { 
         var status = ParseValueByType(row, "status");
+        var code = ParseValueByType(row, "code");
 
-        if(status == "ACTIVE")
+        /* hotfix role removal https://github.com/OP-TED/ESPD-EDM/issues/431 */
+        if (status == "ACTIVE" || (code.ToUpperInvariant() == "SCLE" && status == "DEPRECATED"))
         {
           yield return new CodeContract()
           {
