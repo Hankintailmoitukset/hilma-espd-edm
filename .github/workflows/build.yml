@@ -7,6 +7,10 @@ name: Main CI and publish
 on: 
   push:
     branches: [ master, develop ]
+
+permissions:
+  id-token: write
+  contents: read    
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -19,7 +23,7 @@ jobs:
     steps:
      
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Fetch all history for all tags and branches
       run: git fetch --prune --unshallow
     
@@ -64,11 +68,12 @@ jobs:
     - name: Publish code lists
       run: dotnet run --project $GITHUB_WORKSPACE/ResourceExporter/ResourceExporter.csproj 
     
-    - uses: actions/setup-node@v1
+    - uses: actions/setup-node@v4
       with:
-        node-version: 10
-    - uses: JS-DevTools/npm-publish@v1
-      with:
-        token: ${{ secrets.NPM_AUTH_TOKEN }}
-        package: "${{github.workspace}}/Espd/package.json" 
+        node-version: 24
+        registry-url: 'https://registry.npmjs.org'
+    - name: Publish
+      working-directory: Espd
+      run: npm publish --provenance
+
  
